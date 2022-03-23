@@ -1,0 +1,35 @@
+{
+	"name": "5etools-utils",
+	"version": "0.1.4",
+	"description": "Shared utilities for the 5etools ecosystem.",
+	"type": "module",
+	"main": "lib/Api.js",
+	"files": [
+		"lib"
+	],
+	"directories": {
+		"lib": "./lib"
+	},
+	"scripts": {
+		"test": "npm run test:js",
+		"test:js": "eslint lib",
+		"lint:js": "eslint lib --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TheGiddyLimit/5etools-utils.git"
+	},
+	"author": "Giddy",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/TheGiddyLimit/5etools-utils/issues"
+	},
+	"homepage": "https://github.com/TheGiddyLimit/5etools-utils#readme",
+	"dependencies": {
+		"ajv": "^8.11.0",
+		"json-source-map": "^0.6.1"
+	},
+	"devDependencies": {
+		"eslint": "^8.11.0"
+	}
+}
