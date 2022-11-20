@@ -11,9 +11,9 @@
 		"lib": "./lib"
 	},
 	"scripts": {
-		"test": "npm run test:js",
-		"test:js": "eslint lib",
-		"lint:js": "eslint lib --fix"
+		"test": "npm run test:js && npm run lint:js",
+		"test:js": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+		"lint:js": "eslint lib test --fix"
 	},
 	"repository": {
 		"type": "git",
@@ -27,10 +27,11 @@
 	"homepage": "https://github.com/TheGiddyLimit/5etools-utils#readme",
 	"dependencies": {
 		"ajv": "^8.11.2",
-		"json-source-map": "^0.6.1",
-		"ajv-formats": "^2.1.1"
+		"ajv-formats": "^2.1.1",
+		"json-source-map": "^0.6.1"
 	},
 	"devDependencies": {
-		"eslint": "^8.11.0"
+		"eslint": "^8.11.0",
+		"jest": "^29.3.1"
 	}
 }

@@ -1,0 +1,17 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "schema.json",
+
+	"type": "object",
+
+	"properties": {
+		"a": {"const": "a"},
+		"A": {"const": "A"},
+		"b": {"const": "b"},
+		"B": {"const": "B"},
+		"c": {"const": "c"},
+		"d": {"const": "d"}
+	},
+	"additionalProperties": false,
+	"minProperties": 1
+}
