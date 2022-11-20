@@ -11,7 +11,7 @@
 		"lib": "./lib"
 	},
 	"scripts": {
-		"test": "npm run test:js && npm run lint:js",
+		"test": "npm run lint:js && npm run test:js",
 		"test:js": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
 		"lint:js": "eslint lib test --fix"
 	},
