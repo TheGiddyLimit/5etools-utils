@@ -1,0 +1,35 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "changelog.json",
+	"version": "1.0.0",
+	"type": "array",
+	"minItems": 1,
+	"uniqueItems": true,
+	"items": {
+		"type": "object",
+		"properties": {
+			"ver": {
+				"type": "string"
+			},
+			"date": {
+				"type": "string",
+				"format": "date"
+			},
+			"title": {
+				"type": "string"
+			},
+			"titleAlt": {
+				"type": "string"
+			},
+			"txt": {
+				"type": "string"
+			}
+		},
+		"required": [
+			"ver",
+			"date",
+			"txt"
+		],
+		"additionalProperties": false
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "life.json",
+	"version": "1.0.0",
+	"type": "object",
+	"properties": {
+		"lifeClass": true,
+		"lifeBackground": true,
+		"lifeTrinket": true
+	},
+	"required": [
+		"lifeClass",
+		"lifeBackground",
+		"lifeTrinket"
+	],
+	"additionalProperties": false
+}
