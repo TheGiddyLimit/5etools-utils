@@ -288,8 +288,8 @@
 			"examples": [
 				"../_schema-fast/homebrew.json",
 				"../_schema/homebrew.json",
-				"https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_schema-fast/homebrew.json",
-				"https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_schema/homebrew.json"
+				"https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json",
+				"https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew/homebrew.json"
 			]
 		},
 		"blocklist": {
