@@ -1,0 +1,80 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "charcreationoptions.json",
+	"version": "1.2.0",
+	"title": "Character Creation Options",
+	"type": "object",
+	"$defs": {
+		"optionType": {
+			"type": "string",
+			"description": "CS: Character Secret\nDG: Dark Gift\n OF: Optional Feature\n RF:B Replacement Feature: Background\n SG: Supernatural Gift",
+			"enum": [
+				"CS",
+				"DG",
+				"OF",
+				"RF:B",
+				"SG"
+			]
+		},
+		"charoption": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"source": {
+					"type": "string"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"optionType": {
+					"$comment": "Note that this field supports arbitrary strings for homebrew usage.",
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/optionType"
+					}
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"prerequisite": {
+					"$ref": "util.json#/$defs/prerequisite"
+				}
+			},
+			"required": [
+				"name",
+				"entries",
+				"source",
+				"optionType"
+			],
+			"additionalProperties": false
+		}
+	},
+	"properties": {
+		"charoption": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/charoption"
+			}
+		}
+	},
+	"additionalProperties": false
+}

@@ -1,0 +1,82 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "conditionsdiseases.json",
+	"version": "1.2.0",
+	"type": "object",
+	"$defs": {
+		"conditionDisease": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"source": {
+					"type": "string"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"name",
+				"entries",
+				"source",
+				"page"
+			],
+			"additionalProperties": false
+		}
+	},
+	"properties": {
+		"condition": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/conditionDisease"
+			}
+		},
+		"disease": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/conditionDisease"
+			}
+		},
+		"status": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/conditionDisease"
+			}
+		}
+	},
+	"required": [
+		"condition",
+		"disease",
+		"status"
+	],
+	"additionalProperties": false
+}

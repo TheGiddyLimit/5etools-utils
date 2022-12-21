@@ -1,0 +1,12 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "book.json",
+	"version": "1.2.0",
+	"type": "object",
+	"properties": {
+		"data": {
+			"$ref": "../util.json#/$defs/adventureBookData"
+		}
+	},
+	"additionalProperties": false
+}

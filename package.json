@@ -5,7 +5,8 @@
 	"type": "module",
 	"main": "lib/Api.js",
 	"files": [
-		"lib"
+		"lib",
+		"schema"
 	],
 	"directories": {
 		"lib": "./lib"
