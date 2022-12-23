@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.9",
+	"version": "1.10.10",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -29,7 +29,7 @@
 					"group": {
 						"description": "The group under which this adventure should be listed in the navbar.",
 						"type": "string",
-						"enum": ["supplement", "supplement-alt", "homebrew", "other"]
+						"enum": ["supplement", "supplement-alt", "prerelease", "homebrew", "other"]
 					},
 					"$$ifBrew": {
 						"alAveragePlayerLevel": {

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "books.json",
-	"version": "1.2.7",
+	"version": "1.2.8",
 	"type": "object",
 	"properties": {
 		"book": {
@@ -25,7 +25,7 @@
 					"group": {
 						"description": "The group under which this book should be listed in the navbar.",
 						"type": "string",
-						"enum": ["core", "supplement", "supplement-alt", "setting", "homebrew", "screen", "other"]
+						"enum": ["core", "supplement", "supplement-alt", "setting", "prerelease", "homebrew", "screen", "other"]
 					},
 					"author": {
 						"type": "string"
