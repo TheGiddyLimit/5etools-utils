@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.1",
+	"version": "1.5.2",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -231,6 +231,15 @@
 					},
 					"scfType": {
 						"$ref": "items-shared.json#/$defs/itemScfType"
+					},
+					"vulnerable": {
+						"$ref": "util.json#/$defs/damageVulnerabilityArray"
+					},
+					"resist": {
+						"$ref": "util.json#/$defs/damageResistArray"
+					},
+					"immune": {
+						"$ref": "util.json#/$defs/damageImmunityArray"
 					},
 					"stealth": {
 						"type": "boolean"
