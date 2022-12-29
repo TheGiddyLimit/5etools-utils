@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.3",
+	"version": "1.5.4",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -455,6 +455,9 @@
 				"type": "object",
 				"properties": {
 					"appliesTo": {
+						"type": "string"
+					},
+					"source": {
 						"type": "string"
 					},
 					"entries": {
