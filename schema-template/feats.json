@@ -27,77 +27,7 @@
 						"$ref": "entry.json"
 					}
 				},
-				"ability": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"str": {
-								"type": "integer"
-							},
-							"dex": {
-								"type": "integer"
-							},
-							"con": {
-								"type": "integer"
-							},
-							"int": {
-								"type": "integer"
-							},
-							"wis": {
-								"type": "integer"
-							},
-							"cha": {
-								"type": "integer"
-							},
-							"choose": {
-								"type": "object",
-								"properties": {
-									"from": {
-										"type": "array",
-										"items": {
-											"enum": ["str", "dex", "con", "int", "wis", "cha"]
-										},
-										"uniqueItems": true
-									},
-									"count": {
-										"type": "integer"
-									},
-									"amount": {
-										"type": "integer"
-									},
-									"weighted": {
-										"type": "object",
-										"properties": {
-											"from": {
-												"type": "array",
-												"items": {
-													"enum": ["str", "dex", "con", "int", "wis", "cha"]
-												},
-												"uniqueItems": true
-											},
-											"weights": {
-												"type": "array",
-												"items": {
-													"type": "integer"
-												}
-											}
-										}
-									},
-									"entry": {
-										"$ref": "entry.json"
-									}
-								},
-								"additionalProperties": false
-							},
-							"hidden": {
-								"type": "boolean"
-							}
-						},
-						"additionalProperties": false
-					}
-				},
+				"ability": {"$ref": "util.json#/$defs/abilityScores"},
 				"srd": {
 					"$ref": "util.json#/$defs/srd"
 				},

@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.4",
+	"version": "1.13.5",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -1190,6 +1190,91 @@
 			},
 			"uniqueItems": true,
 			"minItems": 1
+		},
+		"abilityScores": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"properties": {
+					"str": {
+						"type": "integer"
+					},
+					"dex": {
+						"type": "integer"
+					},
+					"con": {
+						"type": "integer"
+					},
+					"int": {
+						"type": "integer"
+					},
+					"wis": {
+						"type": "integer"
+					},
+					"cha": {
+						"type": "integer"
+					},
+					"choose": {
+						"type": "object",
+						"properties": {
+							"from": {
+								"type": "array",
+								"items": {
+									"enum": [
+										"str",
+										"dex",
+										"con",
+										"int",
+										"wis",
+										"cha"
+									]
+								},
+								"uniqueItems": true
+							},
+							"count": {
+								"type": "integer"
+							},
+							"amount": {
+								"type": "integer"
+							},
+							"weighted": {
+								"type": "object",
+								"properties": {
+									"from": {
+										"type": "array",
+										"items": {
+											"enum": [
+												"str",
+												"dex",
+												"con",
+												"int",
+												"wis",
+												"cha"
+											]
+										},
+										"uniqueItems": true
+									},
+									"weights": {
+										"type": "array",
+										"items": {
+											"type": "integer"
+										}
+									}
+								}
+							},
+							"entry": {
+								"$ref": "entry.json"
+							}
+						},
+						"additionalProperties": false
+					},
+					"hidden": {
+						"type": "boolean"
+					}
+				},
+				"additionalProperties": false
+			}
 		},
 		"additionalFeatsArray": {
 			"type": "array",

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.1",
+	"version": "1.12.2",
 	"type": "object",
 
 	"$defs": {
@@ -15,7 +15,7 @@
 				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
 				"additionalSources": {"$ref": "util.json#/$defs/additionalSources"},
 				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
-				"ability": {"$ref": "#/$defs/abilityScores"},
+				"ability": {"$ref": "util.json#/$defs/abilityScores"},
 				"size": {
 					"type": "array",
 					"items": {"$ref": "util.json#/$defs/size"}
@@ -213,69 +213,6 @@
 					]
 				}
 			]
-		},
-
-		"abilityScores": {
-			"type": "array",
-			"items": {
-				"type": "object",
-				"properties": {
-					"str": {
-						"type": "integer"
-					},
-					"dex": {
-						"type": "integer"
-					},
-					"con": {
-						"type": "integer"
-					},
-					"int": {
-						"type": "integer"
-					},
-					"wis": {
-						"type": "integer"
-					},
-					"cha": {
-						"type": "integer"
-					},
-					"choose": {
-						"type": "object",
-						"properties": {
-							"from": {
-								"type": "array",
-								"items": {
-									"enum": ["str", "dex", "con", "int", "wis", "cha"]
-								},
-								"uniqueItems": true
-							},
-							"count": {
-								"type": "integer"
-							},
-							"amount": {
-								"type": "integer"
-							},
-							"weighted": {
-								"type": "object",
-								"properties": {
-									"from": {
-										"type": "array",
-										"items": {
-											"enum": ["str", "dex", "con", "int", "wis", "cha"]
-										},
-										"uniqueItems": true
-									},
-									"weights": {
-										"type": "array",
-										"items": {
-											"type": "integer"
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
 		},
 
 		"heightAndWeight": {
