@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.0",
+	"version": "2.11.1",
 	"$id": "class.json",
 
 	"type": "object",
@@ -457,7 +457,7 @@
 					"subclassSpells": {
 						"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
 						"type": "array",
-						"items": {"$ref": "#/$defs/spellRef"}
+						"items": {"$ref": "../util.json#/$defs/spellListSpellRef"}
 					},
 					"subSubclassSpells": {
 						"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
@@ -466,7 +466,7 @@
 							".*": {
 								"type": "array",
 								"description": "For example, a druid circle, religious order, or other sub-subclass name",
-								"items": {"$ref": "#/$defs/spellRef"}
+								"items": {"$ref": "../util.json#/$defs/spellListSpellRef"}
 							}
 						}
 					},
@@ -804,7 +804,7 @@
 					"classSpells": {
 						"description": "Homebrew use only",
 						"type": "array",
-						"items": {"$ref": "#/$defs/spellRef"}
+						"items": {"$ref": "../util.json#/$defs/spellListSpellRef"}
 					},
 					"requirementsSpecial": {
 						"description": "For homebrew use.",
@@ -825,32 +825,6 @@
 				}
 			},
 			"additionalProperties": false
-		},
-
-		"spellRef": {
-			"description": "A reference to a spell or an existing spell list, linked by name and source. Assumes PHB as the source, if none is provided.",
-			"oneOf": [
-				{
-					"description": "Another class/subclass/subsubclass's spell list",
-					"type": "object",
-					"properties": {
-						"className": {"type": "string"},
-						"classSource": {"type": "string"},
-						"subclassName": {"type": "string"},
-						"subclassSource": {"type": "string"},
-						"subSubclassName": {"type": "string"},
-						"subSubclassSource": {"type": "string"}
-					},
-					"required": [
-						"className", "classSource"
-					],
-					"additionalProperties": false
-				},
-				{
-					"description": "A spell UID of the form \"fireball\" (PHB source assumed by default) or \"shape water|xge\"",
-					"type": "string"
-				}
-			]
 		}
 	},
 

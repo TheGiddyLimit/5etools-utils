@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.5",
+	"version": "1.10.6",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -26,9 +26,7 @@
 			},
 			"minItems": 1,
 			"uniqueItems": true
-		}
-	},
-	"properties": {
+		},
 		"_meta": {
 			"description": "Metadata for the included data arrays",
 			"type": "object",
@@ -288,6 +286,51 @@
 				"dateLastModified"
 			],
 			"additionalProperties": false
+		},
+		"spellList": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/_spellListItem"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		},
+		"_spellListItem": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"type": "string"
+				},
+				"spellListType": {
+					"type": "string",
+					"enum": [
+						"groups"
+					]
+				},
+				"spells": {
+					"type": "array",
+					"items": {
+						"$ref": "util.json#/$defs/spellListSpellRef"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				}
+			},
+			"required": [
+				"name",
+				"source",
+				"spellListType",
+				"spells"
+			],
+			"additionalProperties": false
+		}
+	},
+	"properties": {
+		"_meta": {
+			"$ref": "#/$defs/_meta"
 		},
 		"$schema": {
 			"description": "An optional key that allows you specify the schema you want to verify against in compatible IDEs.\nIt is  advised that you leave this key out when submitting to the repo.",
@@ -553,6 +596,9 @@
 		},
 		"sense": {
 			"$ref": "senses.json#/properties/sense"
+		},
+		"spellList": {
+			"$ref": "#/$defs/spellList"
 		}
 	},
 	"additionalProperties": false,

@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.5",
+	"version": "1.13.6",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -3789,6 +3789,90 @@
 					"progression"
 				]
 			}
+		},
+		"spellListSpellRef": {
+			"description": "A reference to a spell or an existing spell list, linked by name and source. Assumes PHB as the source, if none is provided.",
+			"oneOf": [
+				{
+					"description": "Another class's spell list",
+					"type": "object",
+					"properties": {
+						"className": {
+							"type": "string"
+						},
+						"classSource": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"className",
+						"classSource"
+					],
+					"additionalProperties": false
+				},
+				{
+					"description": "Another subclass's spell list",
+					"type": "object",
+					"properties": {
+						"className": {
+							"type": "string"
+						},
+						"classSource": {
+							"type": "string"
+						},
+						"subclassName": {
+							"type": "string"
+						},
+						"subclassSource": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"className",
+						"classSource",
+						"subclassName",
+						"subclassSource"
+					],
+					"additionalProperties": false
+				},
+				{
+					"description": "Another sub-subclass's spell list",
+					"type": "object",
+					"properties": {
+						"className": {
+							"type": "string"
+						},
+						"classSource": {
+							"type": "string"
+						},
+						"subclassName": {
+							"type": "string"
+						},
+						"subclassSource": {
+							"type": "string"
+						},
+						"subSubclassName": {
+							"type": "string"
+						},
+						"subSubclassSource": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"className",
+						"classSource",
+						"subclassName",
+						"subclassSource",
+						"subSubclassName",
+						"subSubclassSource"
+					],
+					"additionalProperties": false
+				},
+				{
+					"description": "A spell UID of the form \"fireball\" (PHB source assumed by default) or \"shape water|xge\"",
+					"type": "string"
+				}
+			]
 		},
 		"foundrySystemObject": {
 			"type": "object"
