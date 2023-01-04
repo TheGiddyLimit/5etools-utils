@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.6",
+	"version": "1.10.7",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -515,6 +515,9 @@
 		},
 		"makebrewCreatureTrait": {
 			"$ref": "makebrew-creature.json#/properties/makebrewCreatureTrait"
+		},
+		"makebrewCreatureAction": {
+			"$ref": "makebrew-creature.json#/properties/makebrewCreatureAction"
 		},
 		"reducedItemProperty": {
 			"$ref": "makecards.json#/properties/reducedItemProperty"
