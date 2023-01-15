@@ -928,6 +928,7 @@
 									]
 								},
 								"size": {
+									"description": "The size of a single grid square/hex, in pixels.",
 									"type": "integer",
 									"min": 50
 								},
@@ -938,9 +939,11 @@
 									"type": "number"
 								},
 								"units": {
+									"description": "A unit of measurement (e.g. \"ft\", \"mi\") in which the grid should be presented.",
 									"type": "string"
 								},
 								"distance": {
+									"description": "The number of units (e.g. feet) per grid square/hex.",
 									"type": "number"
 								}
 							},
