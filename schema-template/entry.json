@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.3",
+	"version": "1.8.4",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -927,11 +927,20 @@
 										"hexColsEven"
 									]
 								},
-								"size": {"type": "integer"},
+								"size": {
+									"type": "integer",
+									"min": 50
+								},
 								"offsetX": {"type": "integer"},
 								"offsetY": {"type": "integer"},
 								"scale": {
 									"description": "Map image scaling. Where possible, avoid using this, and use size/offset instead.",
+									"type": "number"
+								},
+								"units": {
+									"type": "string"
+								},
+								"distance": {
 									"type": "number"
 								}
 							},
