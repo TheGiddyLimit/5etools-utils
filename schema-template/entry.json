@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.4",
+	"version": "1.8.5",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -930,7 +930,7 @@
 								"size": {
 									"description": "The size of a single grid square/hex, in pixels.",
 									"type": "integer",
-									"min": 50
+									"minimum": 50
 								},
 								"offsetX": {"type": "integer"},
 								"offsetY": {"type": "integer"},
