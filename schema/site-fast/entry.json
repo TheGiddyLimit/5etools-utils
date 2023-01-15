@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.4",
+	"version": "1.8.5",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -1668,8 +1668,9 @@
 							]
 						},
 						"size": {
+							"description": "The size of a single grid square/hex, in pixels.",
 							"type": "integer",
-							"min": 50
+							"minimum": 50
 						},
 						"offsetX": {
 							"type": "integer"
@@ -1682,9 +1683,11 @@
 							"type": "number"
 						},
 						"units": {
+							"description": "A unit of measurement (e.g. \"ft\", \"mi\") in which the grid should be presented.",
 							"type": "string"
 						},
 						"distance": {
+							"description": "The number of units (e.g. feet) per grid square/hex.",
 							"type": "number"
 						}
 					},
