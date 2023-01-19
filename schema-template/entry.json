@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.5",
+	"version": "1.8.6",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -1020,6 +1020,21 @@
 						"maxHeightUnits": {"type": "string"},
 						"style": {
 							"enum": ["comic-speaker-left", "comic-speaker-right", "deity-symbol"]
+						},
+						"$$ifBrew": {
+							"foundrySceneRoot": {
+								"description": "Additional data to be applied if/when the image is used to create a scene in Foundry.\nSome properties are forbidden, as they should be provided/are implicit in non-Foundry-specific data on the entry.",
+								"type": "object",
+								"properties": {
+									"name": false,
+									"width": false,
+									"height": false,
+									"background": false,
+									"grid": false,
+									"flags": false
+								}
+							},
+							"foundrySceneFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"}
 						}
 					},
 					"required": ["href"],
