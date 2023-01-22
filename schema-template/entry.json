@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.6",
+	"version": "1.8.7",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -939,8 +939,17 @@
 									"type": "number"
 								},
 								"units": {
-									"description": "A unit of measurement (e.g. \"ft\", \"mi\") in which the grid should be presented.",
-									"type": "string"
+									"description": "A unit of measurement (e.g. \"feet\", \"miles\") in which the grid should be presented.",
+									"type": "string",
+									"$$ifSiteElse_key": {
+										"keySite": "enum",
+										"keyBrew": "examples",
+										"value": [
+											"feet",
+											"yards",
+											"miles"
+										]
+									}
 								},
 								"distance": {
 									"description": "The number of units (e.g. feet) per grid square/hex.",

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.2",
+	"version": "1.9.3",
 	"title": "Spells",
 	"type": "object",
 
@@ -78,6 +78,7 @@
 										"keyBrew": "examples",
 										"value": [
 											"feet",
+											"yards",
 											"miles",
 											"self",
 											"touch",
@@ -96,6 +97,7 @@
 										"type": "string",
 										"examples": [
 											"feet",
+											"yards",
 											"miles",
 											"self",
 											"touch",
