@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.6",
+	"version": "1.13.7",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -172,6 +172,7 @@
 				"dwarvish",
 				"elvish",
 				"giant",
+				"gith",
 				"gnomish",
 				"goblin",
 				"halfling",
