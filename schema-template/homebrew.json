@@ -583,6 +583,12 @@
 		},
 		"spellList": {
 			"$ref": "#/$defs/spellList"
+		},
+		"deck": {
+			"$ref": "decks.json#/properties/deck"
+		},
+		"card": {
+			"$ref": "decks.json#/properties/card"
 		}
 	},
 	"additionalProperties": false,

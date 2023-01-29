@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.13.0",
+	"version": "1.13.1",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -438,6 +438,13 @@
 					"type": "boolean"
 				},
 				"spellScrollLevel": {"type": "integer"},
+				"seeAlsoDeck": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
+					}
+				},
 				"seeAlsoVehicle": {
 					"type": "array",
 					"items": {

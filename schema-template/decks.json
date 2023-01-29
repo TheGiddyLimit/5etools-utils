@@ -1,0 +1,173 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "decks.json",
+	"version": "1.0.0",
+	"type": "object",
+
+	"$defs": {
+		"deckData": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"source": {"type": "string"},
+
+				"page": {"$ref": "util.json#/$defs/page"},
+				"srd": {"$ref": "util.json#/$defs/srd"},
+
+				"cards": {
+					"type": "array",
+					"$comment": "Non-unique entries are permitted, to allow explicit ordering of duplicate cards.",
+					"items": {
+						"oneOf": [
+							{"type": "string"},
+							{
+								"type": "object",
+								"properties": {
+									"uid": {"type": "string"},
+									"count": {"type": "integer"}
+								},
+								"required": [
+									"uid",
+									"count"
+								],
+								"additionalProperties": false
+							}
+						]
+					},
+					"minItems": 1
+				},
+
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"back": {"$ref": "entry.json#/$defs/entryImage"},
+
+				"hasCardArt": {
+					"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+
+		"deck": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/deckData"
+						},
+						{
+							"required": [
+								"name",
+								"source",
+								"cards"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/deckData"
+						},
+						{
+							"$ref": "util.json#/$defs/copyBlock"
+						}
+					]
+				}
+			]
+		},
+
+		"cardData": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"source": {"type": "string"},
+				"set": {"type": "string"},
+
+				"page": {"$ref": "util.json#/$defs/page"},
+				"srd": {"$ref": "util.json#/$defs/srd"},
+
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"face": {"$ref": "entry.json#/$defs/entryImage"},
+
+				"suit": {"type": "string"},
+				"value": {"type": "integer"}
+			},
+			"additionalProperties": false
+		},
+
+		"card": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/cardData"
+						},
+						{
+							"required": [
+								"name",
+								"source",
+								"set"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/cardData"
+						},
+						{
+							"$ref": "util.json#/$defs/copyBlock"
+						}
+					]
+				}
+			]
+		}
+	},
+
+	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
+
+		"deck": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/deck"
+			}
+		},
+
+		"card": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/card"
+			}
+		}
+	},
+
+	"required": [
+		"deck",
+		"card"
+	],
+
+	"additionalProperties": false
+}

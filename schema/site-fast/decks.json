@@ -1,0 +1,459 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "decks.json",
+	"version": "1.0.0",
+	"type": "object",
+	"$defs": {
+		"deckData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"type": "string"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"cards": {
+					"type": "array",
+					"$comment": "Non-unique entries are permitted, to allow explicit ordering of duplicate cards.",
+					"items": {
+						"oneOf": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "object",
+								"properties": {
+									"uid": {
+										"type": "string"
+									},
+									"count": {
+										"type": "integer"
+									}
+								},
+								"required": [
+									"uid",
+									"count"
+								],
+								"additionalProperties": false
+							}
+						]
+					},
+					"minItems": 1
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"back": {
+					"$ref": "entry.json#/$defs/entryImage"
+				},
+				"hasCardArt": {
+					"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"deck": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"type": "string"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"cards": {
+							"type": "array",
+							"$comment": "Non-unique entries are permitted, to allow explicit ordering of duplicate cards.",
+							"items": {
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "object",
+										"properties": {
+											"uid": {
+												"type": "string"
+											},
+											"count": {
+												"type": "integer"
+											}
+										},
+										"required": [
+											"uid",
+											"count"
+										],
+										"additionalProperties": false
+									}
+								]
+							},
+							"minItems": 1
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"back": {
+							"$ref": "entry.json#/$defs/entryImage"
+						},
+						"hasCardArt": {
+							"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"cards"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"type": "string"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"cards": {
+							"type": "array",
+							"$comment": "Non-unique entries are permitted, to allow explicit ordering of duplicate cards.",
+							"items": {
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "object",
+										"properties": {
+											"uid": {
+												"type": "string"
+											},
+											"count": {
+												"type": "integer"
+											}
+										},
+										"required": [
+											"uid",
+											"count"
+										],
+										"additionalProperties": false
+									}
+								]
+							},
+							"minItems": 1
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"back": {
+							"$ref": "entry.json#/$defs/entryImage"
+						},
+						"hasCardArt": {
+							"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
+							"type": "boolean"
+						},
+						"_copy": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"source": {
+									"type": "string"
+								},
+								"pantheon": {
+									"description": "Used in deity data",
+									"type": "string"
+								},
+								"shortName": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"className": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"classSource": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"_mod": {
+									"$ref": "util.json#/$defs/_modObject"
+								},
+								"_trait": {
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"source": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"name",
+										"source"
+									]
+								},
+								"_preserve": {
+									"type": "object",
+									"patternProperties": {
+										".*": {
+											"const": true
+										}
+									}
+								}
+							},
+							"required": [
+								"name",
+								"source"
+							],
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
+		},
+		"cardData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"type": "string"
+				},
+				"set": {
+					"type": "string"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"face": {
+					"$ref": "entry.json#/$defs/entryImage"
+				},
+				"suit": {
+					"type": "string"
+				},
+				"value": {
+					"type": "integer"
+				}
+			},
+			"additionalProperties": false
+		},
+		"card": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"type": "string"
+						},
+						"set": {
+							"type": "string"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"face": {
+							"$ref": "entry.json#/$defs/entryImage"
+						},
+						"suit": {
+							"type": "string"
+						},
+						"value": {
+							"type": "integer"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"set"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"type": "string"
+						},
+						"set": {
+							"type": "string"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"face": {
+							"$ref": "entry.json#/$defs/entryImage"
+						},
+						"suit": {
+							"type": "string"
+						},
+						"value": {
+							"type": "integer"
+						},
+						"_copy": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"source": {
+									"type": "string"
+								},
+								"pantheon": {
+									"description": "Used in deity data",
+									"type": "string"
+								},
+								"shortName": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"className": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"classSource": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"_mod": {
+									"$ref": "util.json#/$defs/_modObject"
+								},
+								"_trait": {
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"source": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"name",
+										"source"
+									]
+								},
+								"_preserve": {
+									"type": "object",
+									"patternProperties": {
+										".*": {
+											"const": true
+										}
+									}
+								}
+							},
+							"required": [
+								"name",
+								"source"
+							],
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
+		}
+	},
+	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
+		"deck": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/deck"
+			}
+		},
+		"card": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/card"
+			}
+		}
+	},
+	"required": [
+		"deck",
+		"card"
+	],
+	"additionalProperties": false
+}
