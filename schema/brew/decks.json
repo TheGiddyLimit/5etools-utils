@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "decks.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "object",
 	"$defs": {
 		"deckData": {
@@ -35,12 +35,15 @@
 									},
 									"count": {
 										"type": "integer"
+									},
+									"replacement": {
+										"const": true
 									}
 								},
 								"required": [
-									"uid",
-									"count"
+									"uid"
 								],
+								"minProperties": 2,
 								"additionalProperties": false
 							}
 						]
@@ -96,12 +99,15 @@
 											},
 											"count": {
 												"type": "integer"
+											},
+											"replacement": {
+												"const": true
 											}
 										},
 										"required": [
-											"uid",
-											"count"
+											"uid"
 										],
+										"minProperties": 2,
 										"additionalProperties": false
 									}
 								]
@@ -160,12 +166,15 @@
 											},
 											"count": {
 												"type": "integer"
+											},
+											"replacement": {
+												"const": true
 											}
 										},
 										"required": [
-											"uid",
-											"count"
+											"uid"
 										],
+										"minProperties": 2,
 										"additionalProperties": false
 									}
 								]
@@ -278,6 +287,9 @@
 				"face": {
 					"$ref": "entry.json#/$defs/entryImage"
 				},
+				"back": {
+					"$ref": "entry.json#/$defs/entryImage"
+				},
 				"suit": {
 					"type": "string"
 				},
@@ -314,6 +326,9 @@
 							}
 						},
 						"face": {
+							"$ref": "entry.json#/$defs/entryImage"
+						},
+						"back": {
 							"$ref": "entry.json#/$defs/entryImage"
 						},
 						"suit": {
@@ -355,6 +370,9 @@
 							}
 						},
 						"face": {
+							"$ref": "entry.json#/$defs/entryImage"
+						},
+						"back": {
 							"$ref": "entry.json#/$defs/entryImage"
 						},
 						"suit": {
