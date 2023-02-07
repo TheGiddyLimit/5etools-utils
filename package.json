@@ -15,7 +15,8 @@
 		"build": "node node/compile-schemas.js",
 		"test": "npm run lint:js && npm run test:js",
 		"test:js": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-		"lint:js": "eslint lib node test --fix"
+		"lint:js": "eslint lib node test --fix",
+		"preversion": "npm t"
 	},
 	"repository": {
 		"type": "git",
