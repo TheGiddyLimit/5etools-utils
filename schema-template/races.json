@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.2",
+	"version": "1.12.3",
 	"type": "object",
 
 	"$defs": {
@@ -54,6 +54,7 @@
 				"armorProficiencies": {"$ref": "util.json#/$defs/armorProficiencies"},
 				"srd": {"$ref": "util.json#/$defs/srd"},
 				"basicRules": {"$ref": "util.json#/$defs/basicRules"},
+				"legacy": {"$ref": "util.json#/$defs/legacy"},
 				"lineage": {
 					"oneOf": [
 						{"$ref": "#/$defs/lineage"},

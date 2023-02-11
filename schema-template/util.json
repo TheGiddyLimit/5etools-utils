@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.7",
+	"version": "1.13.8",
 
 	"$defs" : {
 		"metaBlock": {
@@ -2277,6 +2277,10 @@
 		},
 
 		"basicRules": {
+			"const": true
+		},
+
+		"legacy": {
 			"const": true
 		},
 

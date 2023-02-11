@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "cultsboons.json",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"type": "object",
 	"$defs": {
 		"cult": {
@@ -21,6 +21,9 @@
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
 				},
 				"type": {
 					"type": "string",

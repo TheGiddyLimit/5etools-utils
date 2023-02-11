@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.0",
+	"version": "1.7.1",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -88,6 +88,9 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
+				},
 				"upgradeType": {
 					"type": "array",
 					"items": {
@@ -125,6 +128,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
 				},
 				"vehicleType": {
 					"const": "SHIP"
@@ -463,6 +469,9 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
+				},
 				"vehicleType": {
 					"const": "SPELLJAMMER"
 				},
@@ -619,6 +628,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
 				},
 				"vehicleType": {
 					"const": "INFWAR"

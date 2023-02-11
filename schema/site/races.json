@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.2",
+	"version": "1.12.3",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -104,6 +104,9 @@
 				},
 				"basicRules": {
 					"$ref": "util.json#/$defs/basicRules"
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
 				},
 				"lineage": {
 					"oneOf": [
@@ -323,6 +326,9 @@
 				},
 				"basicRules": {
 					"$ref": "util.json#/$defs/basicRules"
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
 				},
 				"lineage": {
 					"oneOf": [
@@ -634,6 +640,9 @@
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
 						"lineage": {
 							"oneOf": [
 								{
@@ -856,6 +865,9 @@
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
 						},
 						"lineage": {
 							"oneOf": [
@@ -1141,6 +1153,9 @@
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
 						"lineage": {
 							"oneOf": [
 								{
@@ -1374,6 +1389,9 @@
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
 						},
 						"lineage": {
 							"oneOf": [
