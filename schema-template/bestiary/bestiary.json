@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.10",
+	"version": "1.21.11",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -745,6 +745,20 @@
 							],
 							"additionalProperties": false
 						}
+					},
+					"resource": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"value": {"type": "integer"},
+								"formula": {"type": "string"}
+							},
+							"required": ["value"],
+							"additionalProperties": false
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"fluff": {
 						"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
