@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import {listJsonFiles, readJSON} from "../lib/UtilFs.js";
+import {listJsonFiles, readJsonSync} from "../lib/UtilFs.js";
 import MiscUtil from "../lib/UtilMisc.js";
 
 const DIR_IN = "./schema-template/";
@@ -150,7 +150,7 @@ class SchemaPreprocessor {
 			return this._getResolvedRefJson({root, toMerge: MiscUtil.copyFast(refData), dirSource});
 		}
 
-		const externalSchema = readJSON(path.join(dirSource, file));
+		const externalSchema = readJsonSync(path.join(dirSource, file));
 		const refData = MiscUtil.copyFast(MiscUtil.get(externalSchema, ...pathParts), {safe: true});
 
 		const directoryTranslation = this._getDirectoryTranslation({file});
@@ -222,7 +222,7 @@ class SchemaCompiler {
 						fs.mkdirSync(dirPathOut, {recursive: true});
 
 						const compiled = SchemaPreprocessor.preprocess({
-							schema: readJSON(filePath),
+							schema: readJsonSync(filePath),
 							isBrew,
 							isFast,
 							dirSource: path.dirname(filePath),
