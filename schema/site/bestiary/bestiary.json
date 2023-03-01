@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.11",
+	"version": "1.21.12",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -645,27 +645,34 @@
 					}
 				},
 				"bonus": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string"
-							},
-							"entries": {
-								"type": "array",
-								"items": {
-									"$ref": "../entry.json"
-								}
+					"oneOf": [
+						{
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"entries": {
+										"type": "array",
+										"items": {
+											"$ref": "../entry.json"
+										}
+									}
+								},
+								"required": [
+									"name",
+									"entries"
+								],
+								"additionalProperties": false
 							}
 						},
-						"required": [
-							"name",
-							"entries"
-						],
-						"additionalProperties": false
-					}
+						{
+							"type": "null"
+						}
+					]
 				},
 				"reactionNote": {
 					"type": "string"
@@ -678,27 +685,34 @@
 					}
 				},
 				"reaction": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string"
-							},
-							"entries": {
-								"type": "array",
-								"items": {
-									"$ref": "../entry.json"
-								}
+					"oneOf": [
+						{
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"entries": {
+										"type": "array",
+										"items": {
+											"$ref": "../entry.json"
+										}
+									}
+								},
+								"required": [
+									"name",
+									"entries"
+								],
+								"additionalProperties": false
 							}
 						},
-						"required": [
-							"name",
-							"entries"
-						],
-						"additionalProperties": false
-					}
+						{
+							"type": "null"
+						}
+					]
 				},
 				"legendaryGroup": {
 					"type": "object",
@@ -758,32 +772,46 @@
 					}
 				},
 				"mythic": {
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string"
-							},
-							"entries": {
-								"type": "array",
-								"items": {
-									"$ref": "../entry.json"
-								}
+					"oneOf": [
+						{
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"entries": {
+										"type": "array",
+										"items": {
+											"$ref": "../entry.json"
+										}
+									}
+								},
+								"required": [
+									"entries"
+								],
+								"additionalProperties": false
 							}
 						},
-						"required": [
-							"entries"
-						],
-						"additionalProperties": false
-					}
+						{
+							"type": "null"
+						}
+					]
 				},
 				"variant": {
-					"type": "array",
-					"items": {
-						"$ref": "#/$defs/entryVariantBestiary"
-					}
+					"oneOf": [
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/entryVariantBestiary"
+							}
+						},
+						{
+							"type": "null"
+						}
+					]
 				},
 				"page": {
 					"$ref": "../util.json#/$defs/page"
@@ -1671,27 +1699,34 @@
 							}
 						},
 						"bonus": {
-							"type": "array",
-							"minItems": 1,
-							"items": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"entries": {
-										"type": "array",
-										"items": {
-											"$ref": "../entry.json"
-										}
+							"oneOf": [
+								{
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"entries": {
+												"type": "array",
+												"items": {
+													"$ref": "../entry.json"
+												}
+											}
+										},
+										"required": [
+											"name",
+											"entries"
+										],
+										"additionalProperties": false
 									}
 								},
-								"required": [
-									"name",
-									"entries"
-								],
-								"additionalProperties": false
-							}
+								{
+									"type": "null"
+								}
+							]
 						},
 						"reactionNote": {
 							"type": "string"
@@ -1704,27 +1739,34 @@
 							}
 						},
 						"reaction": {
-							"type": "array",
-							"minItems": 1,
-							"items": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"entries": {
-										"type": "array",
-										"items": {
-											"$ref": "../entry.json"
-										}
+							"oneOf": [
+								{
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"entries": {
+												"type": "array",
+												"items": {
+													"$ref": "../entry.json"
+												}
+											}
+										},
+										"required": [
+											"name",
+											"entries"
+										],
+										"additionalProperties": false
 									}
 								},
-								"required": [
-									"name",
-									"entries"
-								],
-								"additionalProperties": false
-							}
+								{
+									"type": "null"
+								}
+							]
 						},
 						"legendaryGroup": {
 							"type": "object",
@@ -1784,32 +1826,46 @@
 							}
 						},
 						"mythic": {
-							"type": "array",
-							"minItems": 1,
-							"items": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"entries": {
-										"type": "array",
-										"items": {
-											"$ref": "../entry.json"
-										}
+							"oneOf": [
+								{
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"entries": {
+												"type": "array",
+												"items": {
+													"$ref": "../entry.json"
+												}
+											}
+										},
+										"required": [
+											"entries"
+										],
+										"additionalProperties": false
 									}
 								},
-								"required": [
-									"entries"
-								],
-								"additionalProperties": false
-							}
+								{
+									"type": "null"
+								}
+							]
 						},
 						"variant": {
-							"type": "array",
-							"items": {
-								"$ref": "#/$defs/entryVariantBestiary"
-							}
+							"oneOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "#/$defs/entryVariantBestiary"
+									}
+								},
+								{
+									"type": "null"
+								}
+							]
 						},
 						"page": {
 							"$ref": "../util.json#/$defs/page"
@@ -2712,27 +2768,34 @@
 							}
 						},
 						"bonus": {
-							"type": "array",
-							"minItems": 1,
-							"items": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"entries": {
-										"type": "array",
-										"items": {
-											"$ref": "../entry.json"
-										}
+							"oneOf": [
+								{
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"entries": {
+												"type": "array",
+												"items": {
+													"$ref": "../entry.json"
+												}
+											}
+										},
+										"required": [
+											"name",
+											"entries"
+										],
+										"additionalProperties": false
 									}
 								},
-								"required": [
-									"name",
-									"entries"
-								],
-								"additionalProperties": false
-							}
+								{
+									"type": "null"
+								}
+							]
 						},
 						"reactionNote": {
 							"type": "string"
@@ -2745,27 +2808,34 @@
 							}
 						},
 						"reaction": {
-							"type": "array",
-							"minItems": 1,
-							"items": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"entries": {
-										"type": "array",
-										"items": {
-											"$ref": "../entry.json"
-										}
+							"oneOf": [
+								{
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"entries": {
+												"type": "array",
+												"items": {
+													"$ref": "../entry.json"
+												}
+											}
+										},
+										"required": [
+											"name",
+											"entries"
+										],
+										"additionalProperties": false
 									}
 								},
-								"required": [
-									"name",
-									"entries"
-								],
-								"additionalProperties": false
-							}
+								{
+									"type": "null"
+								}
+							]
 						},
 						"legendaryGroup": {
 							"type": "object",
@@ -2825,32 +2895,46 @@
 							}
 						},
 						"mythic": {
-							"type": "array",
-							"minItems": 1,
-							"items": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"entries": {
-										"type": "array",
-										"items": {
-											"$ref": "../entry.json"
-										}
+							"oneOf": [
+								{
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"entries": {
+												"type": "array",
+												"items": {
+													"$ref": "../entry.json"
+												}
+											}
+										},
+										"required": [
+											"entries"
+										],
+										"additionalProperties": false
 									}
 								},
-								"required": [
-									"entries"
-								],
-								"additionalProperties": false
-							}
+								{
+									"type": "null"
+								}
+							]
 						},
 						"variant": {
-							"type": "array",
-							"items": {
-								"$ref": "#/$defs/entryVariantBestiary"
-							}
+							"oneOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "#/$defs/entryVariantBestiary"
+									}
+								},
+								{
+									"type": "null"
+								}
+							]
 						},
 						"page": {
 							"$ref": "../util.json#/$defs/page"
