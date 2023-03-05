@@ -37,9 +37,16 @@
 			"minLength": 3
 		},
 		"page": {
-			"type": [
-				"integer",
-				"string"
+			"oneOf": [
+				{
+					"type": "string",
+					"not": {
+						"pattern": "^\\d+$"
+					}
+				},
+				{
+					"type": "integer"
+				}
 			]
 		},
 		"otherSources": {

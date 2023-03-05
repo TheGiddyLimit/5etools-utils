@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.8",
+	"version": "1.13.9",
 
 	"$defs" : {
 		"metaBlock": {
@@ -41,7 +41,19 @@
 
 		"page": {
 			"$$ifSite": {"type": "integer"},
-			"$$ifBrew": {"type": ["integer", "string"]}
+			"$$ifBrew": {
+				"oneOf": [
+					{
+						"type": "string",
+						"not": {
+							"pattern": "^\\d+$"
+						}
+					},
+					{
+						"type": "integer"
+					}
+				]
+			}
 		},
 
 		"otherSources": {
