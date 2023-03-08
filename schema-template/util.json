@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.9",
+	"version": "1.13.10",
 
 	"$defs" : {
 		"metaBlock": {
@@ -1306,18 +1306,31 @@
 		"size": {
 			"type": "string",
 			"description": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
-			"enum": [
-				"F",
-				"D",
-				"T",
-				"S",
-				"M",
-				"L",
-				"H",
-				"G",
-				"C",
-				"V"
-			]
+			"$$ifSite": {
+				"enum": [
+					"T",
+					"S",
+					"M",
+					"L",
+					"H",
+					"G",
+					"V"
+				]
+			},
+			"$$ifBrew": {
+				"enum": [
+					"F",
+					"D",
+					"T",
+					"S",
+					"M",
+					"L",
+					"H",
+					"G",
+					"C",
+					"V"
+				]
+			}
 		},
 
 		"dataCondition": {

@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.8",
+	"version": "1.13.10",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
