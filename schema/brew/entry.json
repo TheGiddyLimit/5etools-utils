@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.7",
+	"version": "1.8.8",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -3025,7 +3025,8 @@
 					"type": "string"
 				},
 				"type": {
-					"type": "string"
+					"type": "string",
+					"const": "spellcasting"
 				},
 				"source": {
 					"type": "string"

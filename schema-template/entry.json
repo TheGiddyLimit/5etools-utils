@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.7",
+	"version": "1.8.8",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2034,6 +2034,7 @@
 				{"$ref" : "#/$defs/entry"},
 				{
 					"properties": {
+						"type": {"const": "spellcasting"},
 						"headerEntries": {
 							"type": "array",
 							"items": {
