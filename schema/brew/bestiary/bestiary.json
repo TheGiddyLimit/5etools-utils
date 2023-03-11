@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.12",
+	"version": "1.21.13",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -134,7 +134,26 @@
 							"type": "object",
 							"properties": {
 								"type": {
-									"$ref": "../util.json#/$defs/creatureType"
+									"oneOf": [
+										{
+											"$ref": "../util.json#/$defs/creatureType"
+										},
+										{
+											"type": "object",
+											"properties": {
+												"choose": {
+													"type": "array",
+													"items": {
+														"$ref": "../util.json#/$defs/creatureType"
+													}
+												}
+											},
+											"additionalProperties": false,
+											"required": [
+												"choose"
+											]
+										}
+									]
 								},
 								"swarmSize": {
 									"$ref": "../util.json#/$defs/size",
@@ -204,6 +223,9 @@
 								},
 								"sidekickHidden": {
 									"const": true
+								},
+								"note": {
+									"type": "string"
 								}
 							},
 							"required": [
@@ -1284,7 +1306,26 @@
 									"type": "object",
 									"properties": {
 										"type": {
-											"$ref": "../util.json#/$defs/creatureType"
+											"oneOf": [
+												{
+													"$ref": "../util.json#/$defs/creatureType"
+												},
+												{
+													"type": "object",
+													"properties": {
+														"choose": {
+															"type": "array",
+															"items": {
+																"$ref": "../util.json#/$defs/creatureType"
+															}
+														}
+													},
+													"additionalProperties": false,
+													"required": [
+														"choose"
+													]
+												}
+											]
 										},
 										"swarmSize": {
 											"$ref": "../util.json#/$defs/size",
@@ -1354,6 +1395,9 @@
 										},
 										"sidekickHidden": {
 											"const": true
+										},
+										"note": {
+											"type": "string"
 										}
 									},
 									"required": [
@@ -2449,7 +2493,26 @@
 									"type": "object",
 									"properties": {
 										"type": {
-											"$ref": "../util.json#/$defs/creatureType"
+											"oneOf": [
+												{
+													"$ref": "../util.json#/$defs/creatureType"
+												},
+												{
+													"type": "object",
+													"properties": {
+														"choose": {
+															"type": "array",
+															"items": {
+																"$ref": "../util.json#/$defs/creatureType"
+															}
+														}
+													},
+													"additionalProperties": false,
+													"required": [
+														"choose"
+													]
+												}
+											]
 										},
 										"swarmSize": {
 											"$ref": "../util.json#/$defs/size",
@@ -2519,6 +2582,9 @@
 										},
 										"sidekickHidden": {
 											"const": true
+										},
+										"note": {
+											"type": "string"
 										}
 									},
 									"required": [
