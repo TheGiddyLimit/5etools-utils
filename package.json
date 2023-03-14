@@ -11,6 +11,9 @@
 	"directories": {
 		"lib": "./lib"
 	},
+	"bin": {
+		"test-json-brew": "bin/test-json-brew.js"
+	},
 	"scripts": {
 		"build": "node node/compile-schemas.js",
 		"test": "npm run lint:js && npm run test:js",
