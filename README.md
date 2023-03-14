@@ -3,5 +3,5 @@
 Available commands:
 
 ```
-test-json-brew [file] [--dir <dir>]
+npx test-json-brew [file] [--dir <dir>]
 ```
