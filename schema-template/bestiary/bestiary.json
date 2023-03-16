@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.14",
+	"version": "1.21.15",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -77,6 +77,22 @@
 				},
 				{
 					"type": "integer"
+				}
+			]
+		},
+
+		"abilityScore": {
+			"oneOf": [
+				{"type": ["integer", "null"]},
+				{
+					"type": "object",
+					"properties": {
+						"special": {
+							"type": "string"
+						}
+					},
+					"required": ["special"],
+					"additionalProperties": false
 				}
 			]
 		},
@@ -271,12 +287,12 @@
 				"speed": {
 					"$ref": "../util.json#/$defs/speed"
 				},
-				"str": {"type": ["integer", "null"]},
-				"dex": {"type": ["integer", "null"]},
-				"con": {"type": ["integer", "null"]},
-				"int": {"type": ["integer", "null"]},
-				"wis": {"type": ["integer", "null"]},
-				"cha": {"type": ["integer", "null"]},
+				"str": {"$ref": "#/$defs/abilityScore"},
+				"dex": {"$ref": "#/$defs/abilityScore"},
+				"con": {"$ref": "#/$defs/abilityScore"},
+				"int": {"$ref": "#/$defs/abilityScore"},
+				"wis": {"$ref": "#/$defs/abilityScore"},
+				"cha": {"$ref": "#/$defs/abilityScore"},
 				"save": {
 					"type": "object",
 					"properties": {

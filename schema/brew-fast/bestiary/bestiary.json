@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.14",
+	"version": "1.21.15",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -85,6 +85,28 @@
 				},
 				{
 					"type": "integer"
+				}
+			]
+		},
+		"abilityScore": {
+			"oneOf": [
+				{
+					"type": [
+						"integer",
+						"null"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"special": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"special"
+					],
+					"additionalProperties": false
 				}
 			]
 		},
@@ -299,40 +321,22 @@
 					"$ref": "../util.json#/$defs/speed"
 				},
 				"str": {
-					"type": [
-						"integer",
-						"null"
-					]
+					"$ref": "#/$defs/abilityScore"
 				},
 				"dex": {
-					"type": [
-						"integer",
-						"null"
-					]
+					"$ref": "#/$defs/abilityScore"
 				},
 				"con": {
-					"type": [
-						"integer",
-						"null"
-					]
+					"$ref": "#/$defs/abilityScore"
 				},
 				"int": {
-					"type": [
-						"integer",
-						"null"
-					]
+					"$ref": "#/$defs/abilityScore"
 				},
 				"wis": {
-					"type": [
-						"integer",
-						"null"
-					]
+					"$ref": "#/$defs/abilityScore"
 				},
 				"cha": {
-					"type": [
-						"integer",
-						"null"
-					]
+					"$ref": "#/$defs/abilityScore"
 				},
 				"save": {
 					"type": "object",
@@ -1472,40 +1476,22 @@
 							"$ref": "../util.json#/$defs/speed"
 						},
 						"str": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"dex": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"con": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"int": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"wis": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"cha": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"save": {
 							"type": "object",
@@ -2660,40 +2646,22 @@
 							"$ref": "../util.json#/$defs/speed"
 						},
 						"str": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"dex": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"con": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"int": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"wis": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"cha": {
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "#/$defs/abilityScore"
 						},
 						"save": {
 							"type": "object",
