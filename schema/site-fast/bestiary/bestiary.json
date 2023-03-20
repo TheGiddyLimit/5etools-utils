@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.15",
+	"version": "1.21.16",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -2238,8 +2238,7 @@
 						"con",
 						"int",
 						"wis",
-						"cha",
-						"passive"
+						"cha"
 					]
 				},
 				{
