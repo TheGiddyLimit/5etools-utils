@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.10",
+	"version": "1.13.11",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -159,7 +159,10 @@
 				"table",
 				"recipe",
 				"skill",
-				"sense"
+				"sense",
+				"legroup",
+				"deck",
+				"card"
 			]
 		},
 		"propNameStats": {

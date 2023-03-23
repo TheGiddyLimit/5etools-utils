@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.10",
+	"version": "1.13.11",
 
 	"$defs" : {
 		"metaBlock": {
@@ -167,7 +167,10 @@
 				"table",
 				"recipe",
 				"skill",
-				"sense"
+				"sense",
+				"legroup",
+				"deck",
+				"card"
 			]
 		},
 
