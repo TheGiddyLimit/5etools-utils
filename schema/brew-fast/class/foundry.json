@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-class.json",
-	"version": "1.4.1",
+	"version": "1.4.2",
 	"type": "object",
 	"$defs": {
 		"entryDataObject": {
@@ -96,6 +96,9 @@
 					"isIgnored": {
 						"const": true
 					},
+					"ignoreSrdEffects": {
+						"const": true
+					},
 					"actorDataMod": {
 						"type": "object"
 					},
@@ -169,6 +172,9 @@
 						"type": "boolean"
 					},
 					"isIgnored": {
+						"const": true
+					},
+					"ignoreSrdEffects": {
 						"const": true
 					},
 					"actorDataMod": {
@@ -246,6 +252,9 @@
 						"type": "boolean"
 					},
 					"isIgnored": {
+						"const": true
+					},
+					"ignoreSrdEffects": {
 						"const": true
 					},
 					"actorDataMod": {
@@ -330,6 +339,9 @@
 						"type": "boolean"
 					},
 					"isIgnored": {
+						"const": true
+					},
+					"ignoreSrdEffects": {
 						"const": true
 					},
 					"actorDataMod": {

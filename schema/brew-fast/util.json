@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.11",
+	"version": "1.13.12",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -4024,6 +4024,9 @@
 						}
 					},
 					"isIgnored": {
+						"const": true
+					},
+					"ignoreSrdEffects": {
 						"const": true
 					},
 					"system": {

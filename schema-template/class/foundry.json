@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-class.json",
-	"version": "1.4.1",
+	"version": "1.4.2",
 
 	"type": "object",
 
@@ -73,6 +73,7 @@
 					"isChooseSystemRenderEntries": {"type": "boolean"},
 					"isChooseFlagsRenderEntries": {"type": "boolean"},
 					"isIgnored": {"const": true},
+					"ignoreSrdEffects": {"const": true},
 					"actorDataMod": {"type": "object"},
 					"actorTokenMod": {"type": "object"},
 					"effects": {"$ref": "../util.json#/$defs/foundryEffectsArray"},
@@ -109,6 +110,7 @@
 					"isChooseSystemRenderEntries": {"type": "boolean"},
 					"isChooseFlagsRenderEntries": {"type": "boolean"},
 					"isIgnored": {"const": true},
+					"ignoreSrdEffects": {"const": true},
 					"actorDataMod": {"type": "object"},
 					"actorTokenMod": {"type": "object"},
 					"effects": {"$ref": "../util.json#/$defs/foundryEffectsArray"},
@@ -147,6 +149,7 @@
 					"isChooseSystemRenderEntries": {"type": "boolean"},
 					"isChooseFlagsRenderEntries": {"type": "boolean"},
 					"isIgnored": {"const": true},
+					"ignoreSrdEffects": {"const": true},
 					"actorDataMod": {"type": "object"},
 					"actorTokenMod": {"type": "object"},
 					"effects": {"$ref": "../util.json#/$defs/foundryEffectsArray"},
@@ -189,6 +192,7 @@
 					"isChooseSystemRenderEntries": {"type": "boolean"},
 					"isChooseFlagsRenderEntries": {"type": "boolean"},
 					"isIgnored": {"const": true},
+					"ignoreSrdEffects": {"const": true},
 					"actorDataMod": {"type": "object"},
 					"actorTokenMod": {"type": "object"},
 					"effects": {"$ref": "../util.json#/$defs/foundryEffectsArray"},
