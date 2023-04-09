@@ -12,7 +12,9 @@
 		"lib": "./lib"
 	},
 	"bin": {
-		"test-json-brew": "bin/test-json-brew.js"
+		"test-json-brew": "bin/test-json-brew.js",
+		"test-file-extensions": "bin/test-file-extensions.js",
+		"test-file-locations": "bin/test-file-locations.js"
 	},
 	"scripts": {
 		"build": "node node/compile-schemas.js",
