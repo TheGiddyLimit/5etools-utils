@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.8",
+	"version": "1.8.9",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -705,9 +705,13 @@
 						"list-hang",
 						"list-hang-notitle",
 						"list-lower-roman",
+						"list-upper-roman",
 						"list-name",
 						"list-no-bullets"
 					]
+				},
+				"start": {
+					"type": "integer"
 				},
 				"items": {
 					"type": "array",
