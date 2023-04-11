@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.1",
+	"version": "2.11.2",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {

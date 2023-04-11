@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.1",
+	"version": "2.11.2",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -518,6 +518,8 @@
 						"subclassSpells": {
 							"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
 							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
 							}
@@ -529,6 +531,8 @@
 								".*": {
 									"type": "array",
 									"description": "For example, a druid circle, religious order, or other sub-subclass name",
+									"minItems": 1,
+									"uniqueItems": true,
 									"items": {
 										"$ref": "../util.json#/$defs/spellListSpellRef"
 									}
@@ -675,6 +679,8 @@
 						"subclassSpells": {
 							"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
 							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
 							}
@@ -686,6 +692,8 @@
 								".*": {
 									"type": "array",
 									"description": "For example, a druid circle, religious order, or other sub-subclass name",
+									"minItems": 1,
+									"uniqueItems": true,
 									"items": {
 										"$ref": "../util.json#/$defs/spellListSpellRef"
 									}
@@ -887,6 +895,8 @@
 				"subclassSpells": {
 					"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
 					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
 					"items": {
 						"$ref": "../util.json#/$defs/spellListSpellRef"
 					}
@@ -898,6 +908,8 @@
 						".*": {
 							"type": "array",
 							"description": "For example, a druid circle, religious order, or other sub-subclass name",
+							"minItems": 1,
+							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
 							}
@@ -1266,6 +1278,8 @@
 						"classSpells": {
 							"description": "Homebrew use only",
 							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
 							}
@@ -1582,6 +1596,8 @@
 						"classSpells": {
 							"description": "Homebrew use only",
 							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
 							}
@@ -1956,6 +1972,8 @@
 				"classSpells": {
 					"description": "Homebrew use only",
 					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
 					"items": {
 						"$ref": "../util.json#/$defs/spellListSpellRef"
 					}
