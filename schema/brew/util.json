@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.12",
+	"version": "1.13.13",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -1251,7 +1251,8 @@
 										"cha"
 									]
 								},
-								"uniqueItems": true
+								"uniqueItems": true,
+								"minItems": 1
 							},
 							"count": {
 								"type": "integer"
@@ -1274,13 +1275,15 @@
 												"cha"
 											]
 										},
-										"uniqueItems": true
+										"uniqueItems": true,
+										"minItems": 1
 									},
 									"weights": {
 										"type": "array",
 										"items": {
 											"type": "integer"
-										}
+										},
+										"minItems": 1
 									}
 								}
 							},

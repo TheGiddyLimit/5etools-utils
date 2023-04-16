@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.12",
+	"version": "1.13.13",
 
 	"$defs" : {
 		"metaBlock": {
@@ -805,7 +805,8 @@
 								"items": {
 									"enum": ["str", "dex", "con", "int", "wis", "cha"]
 								},
-								"uniqueItems": true
+								"uniqueItems": true,
+								"minItems": 1
 							},
 							"count": {
 								"type": "integer"
@@ -821,13 +822,15 @@
 										"items": {
 											"enum": ["str", "dex", "con", "int", "wis", "cha"]
 										},
-										"uniqueItems": true
+										"uniqueItems": true,
+										"minItems": 1
 									},
 									"weights": {
 										"type": "array",
 										"items": {
 											"type": "integer"
-										}
+										},
+										"minItems": 1
 									}
 								}
 							},
