@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.5",
+	"version": "1.5.6",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -401,6 +401,33 @@
 						}
 					}
 				},
+				"additionalProperties": false
+			}
+		},
+		"itemMastery": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {"type": "string"},
+					"source": {"type": "string"},
+					"page": {"$ref": "util.json#/$defs/page"},
+					"prerequisite": {
+						"$ref": "util.json#/$defs/prerequisite"
+					},
+					"entries": {
+						"type": "array",
+						"items": {
+							"$ref": "entry.json"
+						}
+					}
+				},
+				"required": [
+					"name",
+					"source",
+					"entries"
+				],
 				"additionalProperties": false
 			}
 		}

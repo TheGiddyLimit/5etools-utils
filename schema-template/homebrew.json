@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.7",
+	"version": "1.10.8",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -433,6 +433,9 @@
 		},
 		"itemTypeAdditionalEntries": {
 			"$ref": "items-base.json#/properties/itemTypeAdditionalEntries"
+		},
+		"itemMastery": {
+			"$ref": "items-base.json#/properties/itemMastery"
 		},
 		"magicvariant": {
 			"$ref": "magicvariants.json#/properties/magicvariant"
