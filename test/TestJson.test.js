@@ -1,4 +1,4 @@
-import {JsonTester } from "../lib/TestJson.js";
+import {JsonTester} from "../lib/TestJson.js";
 
 test(
 	"Test JSON schema tester",
