@@ -1,4 +1,5 @@
 import {ObjectWalker} from "../lib/ObjectWalker.js";
+import MiscUtil from "../lib/UtilMisc.js";
 
 test(
 	"Test object walker",
@@ -17,6 +18,7 @@ test(
 				},
 			],
 		};
+		const cpyObj = MiscUtil.copyFast(obj);
 
 		const handlers = {
 			[null]: () => undefined,
@@ -29,15 +31,22 @@ test(
 		};
 
 		const walked1 = ObjectWalker.walk({obj, primitiveHandlers: {}});
+		expect(obj).toEqual(cpyObj);
 		expect(walked1).toBe(obj);
+		expect(walked1).toEqual(cpyObj);
 
 		const walked2 = ObjectWalker.walk({obj, primitiveHandlers: handlers});
+		expect(obj).toEqual(cpyObj);
 		expect(walked2).toBe(obj);
+		expect(walked2).toEqual(cpyObj);
 
 		const walked3 = ObjectWalker.walk({obj, primitiveHandlers: {}, isModify: true});
-		expect(walked3).toBe(obj);
+		expect(obj).toEqual(cpyObj);
+		expect(walked3).not.toBe(obj);
+		expect(walked2).toEqual(cpyObj);
 
 		const walked4 = ObjectWalker.walk({obj, primitiveHandlers: handlers, isModify: true});
+		expect(obj).toEqual(cpyObj);
 		expect(walked4).not.toBe(obj);
 		expect(walked4).toEqual({
 			a: 2,
@@ -57,5 +66,61 @@ test(
 			],
 			h: -4,
 		});
+	},
+);
+
+test(
+	"Test multiple handlers",
+	() => {
+		const obj = {
+			a: "foo",
+			b: 2,
+		};
+		const cpyObj = MiscUtil.copyFast(obj);
+
+		const handlers1 = {
+			number: [
+				num => num * 2,
+				num => num - 1,
+			],
+			string: [
+				() => {},
+				() => {},
+			],
+		};
+
+		const walked1 = ObjectWalker.walk({obj, primitiveHandlers: handlers1});
+		expect(obj).toEqual(cpyObj);
+		expect(walked1).toBe(obj);
+		expect(walked1).toEqual(cpyObj);
+
+		const walked2 = ObjectWalker.walk({obj, primitiveHandlers: handlers1, isModify: true});
+		expect(obj).toEqual(cpyObj);
+		expect(walked2).toEqual({
+			a: undefined,
+			b: 3,
+		});
+
+		const handlers2 = {
+			string: [
+				// region Throw error when `isModify`, as we do not return a `str`
+				str => {
+					void str.length;
+				},
+				str => {
+					void str.length;
+				},
+				// endregion
+			],
+		};
+
+		const walked3 = ObjectWalker.walk({obj, primitiveHandlers: handlers2});
+		expect(obj).toEqual(cpyObj);
+		expect(walked3).toBe(obj);
+		expect(walked3).toEqual(cpyObj);
+
+		expect(() => {
+			ObjectWalker.walk({obj, primitiveHandlers: handlers2, isModify: true});
+		}).toThrow(TypeError);
 	},
 );
