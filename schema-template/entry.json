@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.10",
+	"version": "1.8.11",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -923,9 +923,8 @@
 							"title": "A thumbnail image used in rare cases, e.g. when loading a wall of maps to choose from in the DM Screen.",
 							"$ref": "#/$defs/mediaHref"
 						},
-						"title": {
-							"type": "string"
-						},
+						"title": {"type": "string"},
+						"credit": {"type": "string"},
 						"altText": {
 							"description": "For accessibility purposes",
 							"type": "string"

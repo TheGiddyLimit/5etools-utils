@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.10",
+	"version": "1.8.11",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -1770,6 +1770,9 @@
 					"$ref": "#/$defs/mediaHref"
 				},
 				"title": {
+					"type": "string"
+				},
+				"credit": {
 					"type": "string"
 				},
 				"altText": {
