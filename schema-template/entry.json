@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.9",
+	"version": "1.8.10",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -240,77 +240,99 @@
 				}
 			]
 		},
-		"entryTable": {
-			"type": "object",
-			"$$merge": [
-				{"$ref" : "#/$defs/entry"},
-				{
-					"properties": {
-						"type": {"const": "table"},
-						"caption": {"type" : "string"},
-						"$$ifBrew": {
-							"intro": {
-								"description": "Primarily for homebrew use.",
+		"entryTableBase": {
+			"properties": {
+				"caption": {"type" : "string"},
+				"$$ifBrew": {
+					"intro": {
+						"description": "Primarily for homebrew use.",
+						"type": "array",
+						"items": {
+							"$ref": "#"
+						}
+					},
+					"outro": {
+						"description": "Primarily for homebrew use.",
+						"type": "array",
+						"items": {
+							"$ref": "#"
+						}
+					}
+				},
+				"isStriped": {"type": "boolean"},
+				"isNameGenerator": {
+					"type": "boolean",
+					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
+				},
+				"style": {"type" : "string"},
+				"colLabels": {
+					"type": "array",
+					"items": {"type" : "string"}
+				},
+				"colLabelGroups": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"colLabels": {
+								"type": "array",
+								"items": {"type" : "string"}
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"colStyles": {
+					"type": "array",
+					"items": {"type" : "string"}
+				},
+				"rowLabels": {
+					"type": "array",
+					"items": {"type": "string"}
+				},
+				"rowStyles": {
+					"type": "array",
+					"items": {"type": "string"}
+				},
+				"rows": {
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
 								"type": "array",
 								"items": {
 									"$ref": "#"
 								}
 							},
-							"outro": {
-								"description": "Primarily for homebrew use.",
-								"type": "array",
-								"items": {
-									"$ref": "#"
-								}
+							{
+								"$ref": "#/$defs/entryTableRow"
 							}
-						},
-						"isStriped": {"type": "boolean"},
-						"isNameGenerator": {
-							"type": "boolean",
-							"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
-						},
-						"style": {"type" : "string"},
-						"colLabels": {
-							"type": "array",
-							"items": {"type" : "string"}
-						},
-						"colStyles": {
-							"type": "array",
-							"items": {"type" : "string"}
-						},
-						"rowLabels": {
-							"type": "array",
-							"items": {"type": "string"}
-						},
-						"rowStyles": {
-							"type": "array",
-							"items": {"type": "string"}
-						},
-						"rows": {
-							"type": "array",
-							"items": {
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#"
-										}
-									},
-									{
-										"$ref": "#/$defs/entryTableRow"
-									}
-								]
-							}
-						},
-						"footnotes": {
-							"type": "array",
-							"items": {
-								"$ref": "#"
-							}
-						}
+						]
+					}
+				},
+				"footnotes": {
+					"type": "array",
+					"items": {
+						"$ref": "#"
+					}
+				}
+			},
+			"dependencies": {
+				"colLabels": {"not": {"required": ["colLabelGroups"]}},
+				"colLabelGroups": {"not": {"required": ["colLabels"]}}
+			},
+			"additionalProperties": false
+		},
+		"entryTable": {
+			"type": "object",
+			"$$merge": [
+				{"$ref" : "#/$defs/entry"},
+				{"$ref" : "#/$defs/entryTableBase"},
+				{
+					"properties": {
+						"type": {"const": "table"}
 					},
-					"required": ["rows"],
-					"additionalProperties": false
+					"required": ["rows"]
 				}
 			]
 		},

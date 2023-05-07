@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.9",
+	"version": "1.8.10",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -388,6 +388,101 @@
 			],
 			"additionalProperties": false
 		},
+		"entryTableBase": {
+			"properties": {
+				"caption": {
+					"type": "string"
+				},
+				"isStriped": {
+					"type": "boolean"
+				},
+				"isNameGenerator": {
+					"type": "boolean",
+					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
+				},
+				"style": {
+					"type": "string"
+				},
+				"colLabels": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"colLabelGroups": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"colLabels": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"colStyles": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"rowLabels": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"rowStyles": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"rows": {
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"type": "array",
+								"items": {
+									"$ref": "#"
+								}
+							},
+							{
+								"$ref": "#/$defs/entryTableRow"
+							}
+						]
+					}
+				},
+				"footnotes": {
+					"type": "array",
+					"items": {
+						"$ref": "#"
+					}
+				}
+			},
+			"dependencies": {
+				"colLabels": {
+					"not": {
+						"required": [
+							"colLabelGroups"
+						]
+					}
+				},
+				"colLabelGroups": {
+					"not": {
+						"required": [
+							"colLabels"
+						]
+					}
+				}
+			},
+			"additionalProperties": false
+		},
 		"entryTable": {
 			"type": "object",
 			"properties": {
@@ -436,6 +531,21 @@
 						"type": "string"
 					}
 				},
+				"colLabelGroups": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"colLabels": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						},
+						"additionalProperties": false
+					}
+				},
 				"colStyles": {
 					"type": "array",
 					"items": {
@@ -481,6 +591,22 @@
 				"type",
 				"rows"
 			],
+			"dependencies": {
+				"colLabels": {
+					"not": {
+						"required": [
+							"colLabelGroups"
+						]
+					}
+				},
+				"colLabelGroups": {
+					"not": {
+						"required": [
+							"colLabels"
+						]
+					}
+				}
+			},
 			"additionalProperties": false
 		},
 		"entryTableGroup": {

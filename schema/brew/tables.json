@@ -1,14 +1,124 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "tables.json",
-	"version": "1.1.5",
+	"version": "1.1.6",
 	"type": "object",
 	"$defs": {
 		"tableData": {
 			"type": "object",
 			"properties": {
+				"tables": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/tableData"
+					}
+				},
 				"name": {
 					"type": "string"
+				},
+				"source": {
+					"type": "string"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"data": {
+					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
+					"type": "object"
+				},
+				"caption": {
+					"type": "string"
+				},
+				"isStriped": {
+					"type": "boolean"
+				},
+				"isNameGenerator": {
+					"type": "boolean",
+					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
+				},
+				"style": {
+					"type": "string"
+				},
+				"colLabels": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"colLabelGroups": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"colLabels": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"colStyles": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"rowLabels": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"rowStyles": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"rows": {
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"type": "array",
+								"items": {
+									"$ref": "entry.json"
+								}
+							},
+							{
+								"$ref": "entry.json#/$defs/entryTableRow"
+							}
+						]
+					}
+				},
+				"footnotes": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"intro": {
+					"description": "Primarily for homebrew use.",
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"outro": {
+					"description": "Primarily for homebrew use.",
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
 				},
 				"type": {
 					"type": "string",
@@ -18,20 +128,8 @@
 						"tableGroup"
 					]
 				},
-				"source": {
-					"type": "string"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
-				},
-				"page": {
-					"$ref": "util.json#/$defs/page"
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
@@ -72,90 +170,24 @@
 						}
 					}
 				},
-				"caption": {
-					"type": "string"
-				},
-				"style": {
-					"type": "string"
-				},
+				"foundryImg": {
+					"$ref": "util.json#/$defs/foundryImg"
+				}
+			},
+			"dependencies": {
 				"colLabels": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
-				},
-				"colStyles": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
-				},
-				"rowLabels": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
-				},
-				"rowStyles": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
-				},
-				"rows": {
-					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"type": "array",
-								"items": {
-									"$ref": "entry.json"
-								}
-							},
-							{
-								"$ref": "entry.json#/$defs/entryTableRow"
-							}
+					"not": {
+						"required": [
+							"colLabelGroups"
 						]
 					}
 				},
-				"tables": {
-					"type": "array",
-					"items": {
-						"$ref": "#/$defs/tableData"
+				"colLabelGroups": {
+					"not": {
+						"required": [
+							"colLabels"
+						]
 					}
-				},
-				"footnotes": {
-					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
-				},
-				"data": {
-					"type": "object"
-				},
-				"isNameGenerator": {
-					"type": "boolean",
-					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
-				},
-				"isStriped": {
-					"type": "boolean"
-				},
-				"intro": {
-					"description": "Primarily for homebrew use.",
-					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
-				},
-				"outro": {
-					"description": "Primarily for homebrew use.",
-					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
-				},
-				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
 				}
 			},
 			"additionalProperties": false,
