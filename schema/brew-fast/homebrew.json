@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.8",
+	"version": "1.10.9",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -264,6 +264,16 @@
 					},
 					"minItems": 1,
 					"uniqueItems": true
+				},
+				"fonts": {
+					"description": "A map of \"font family\" to font URL.",
+					"type": "object",
+					"patternProperties": {
+						"^[a-zA-Z0-9]+$": {
+							"type": "string",
+							"minLength": 3
+						}
+					}
 				},
 				"unlisted": {
 					"description": "If this homebrew file should be ignored/hidden by any indexer.",
