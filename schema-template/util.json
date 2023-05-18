@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.14",
+	"version": "1.13.15",
 
 	"$defs" : {
 		"metaBlock": {
@@ -1748,7 +1748,7 @@
 			"uniqueItems": true
 		},
 
-		"consumesObject": {
+		"_consumesObjectBase": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -1757,20 +1757,50 @@
 						"keySite": "enum",
 						"keyBrew": "examples",
 						"value": [
-							"Superiority Dice",
+							"Superiority Die",
 							"Ki",
 							"Channel Divinity",
-							"Psionic Energy Dice",
+							"Psionic Energy Die",
 							"Wild Shape",
-							"Sorcery Points",
+							"Sorcery Point",
 							"Arcane Shot"
 						]
 					}
-				},
-				"amount": {"type": "integer"}
+				}
 			},
-			"required": ["name"],
 			"additionalProperties": false
+		},
+
+		"consumesObject": {
+			"oneOf": [
+				{
+					"$$merge": [
+						{
+							"$ref": "#/$defs/_consumesObjectBase"
+						},
+						{
+							"properties": {
+								"amount": {"type": "integer"}
+							},
+							"required": ["name"]
+						}
+					]
+				},
+				{
+					"$$merge": [
+						{
+							"$ref": "#/$defs/_consumesObjectBase"
+						},
+						{
+							"properties": {
+								"amountMin": {"type": "integer"},
+								"amountMax": {"type": "integer"}
+							},
+							"required": ["name", "amountMin", "amountMax"]
+						}
+					]
+				}
+			]
 		},
 
 		"dataDamageTags": {

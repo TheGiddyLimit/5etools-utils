@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.14",
+	"version": "1.13.15",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -2242,29 +2242,80 @@
 			},
 			"uniqueItems": true
 		},
-		"consumesObject": {
+		"_consumesObjectBase": {
 			"type": "object",
 			"properties": {
 				"name": {
 					"type": "string",
 					"enum": [
-						"Superiority Dice",
+						"Superiority Die",
 						"Ki",
 						"Channel Divinity",
-						"Psionic Energy Dice",
+						"Psionic Energy Die",
 						"Wild Shape",
-						"Sorcery Points",
+						"Sorcery Point",
 						"Arcane Shot"
 					]
-				},
-				"amount": {
-					"type": "integer"
 				}
 			},
-			"required": [
-				"name"
-			],
 			"additionalProperties": false
+		},
+		"consumesObject": {
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string",
+							"enum": [
+								"Superiority Die",
+								"Ki",
+								"Channel Divinity",
+								"Psionic Energy Die",
+								"Wild Shape",
+								"Sorcery Point",
+								"Arcane Shot"
+							]
+						},
+						"amount": {
+							"type": "integer"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string",
+							"enum": [
+								"Superiority Die",
+								"Ki",
+								"Channel Divinity",
+								"Psionic Energy Die",
+								"Wild Shape",
+								"Sorcery Point",
+								"Arcane Shot"
+							]
+						},
+						"amountMin": {
+							"type": "integer"
+						},
+						"amountMax": {
+							"type": "integer"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"amountMin",
+						"amountMax"
+					]
+				}
+			]
 		},
 		"dataDamageTags": {
 			"type": "string",
