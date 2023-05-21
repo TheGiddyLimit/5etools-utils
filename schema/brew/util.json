@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.15",
+	"version": "1.13.16",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -1592,17 +1592,14 @@
 						}
 					},
 					"itemProperty": {
-						"type": "array",
-						"items": {
-							"oneOf": [
-								{
-									"$ref": "items-shared.json#/$defs/itemProperty"
-								},
-								{
-									"type": "null"
-								}
-							]
-						}
+						"oneOf": [
+							{
+								"$ref": "items-shared.json#/$defs/itemProperty"
+							},
+							{
+								"type": "null"
+							}
+						]
 					},
 					"other": {
 						"description": "A free text prerequisite",
