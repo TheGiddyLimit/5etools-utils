@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.16",
+	"version": "1.13.17",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -1948,6 +1948,9 @@
 								"properties": {
 									"from": {
 										"$ref": "#/$defs/damageImmunityArrayPlayer"
+									},
+									"count": {
+										"type": "integer"
 									}
 								},
 								"additionalProperties": false,
@@ -2028,6 +2031,9 @@
 								"properties": {
 									"from": {
 										"$ref": "#/$defs/damageResistArrayPlayer"
+									},
+									"count": {
+										"type": "integer"
 									}
 								},
 								"additionalProperties": false,
@@ -2108,6 +2114,9 @@
 								"properties": {
 									"from": {
 										"$ref": "#/$defs/damageVulnerabilityArrayPlayer"
+									},
+									"count": {
+										"type": "integer"
 									}
 								},
 								"additionalProperties": false,
@@ -2186,6 +2195,9 @@
 								"properties": {
 									"from": {
 										"$ref": "#/$defs/conditionImmunityArrayPlayer"
+									},
+									"count": {
+										"type": "integer"
 									}
 								},
 								"additionalProperties": false,
