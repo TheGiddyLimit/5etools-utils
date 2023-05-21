@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.13.2",
+	"version": "1.13.3",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -536,6 +536,9 @@
 							"CF/W"
 						]
 					}
+				},
+				"mastery": {
+					"$ref": "items-shared.json#/$defs/itemMastery"
 				},
 				"hasFluff": {
 					"type": "boolean"
@@ -1084,6 +1087,9 @@
 									"CF/W"
 								]
 							}
+						},
+						"mastery": {
+							"$ref": "items-shared.json#/$defs/itemMastery"
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -1635,6 +1641,9 @@
 									"CF/W"
 								]
 							}
+						},
+						"mastery": {
+							"$ref": "items-shared.json#/$defs/itemMastery"
 						},
 						"hasFluff": {
 							"type": "boolean"

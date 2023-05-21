@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -254,6 +254,14 @@
 				"renaissance bullet",
 				"sling bullet|phb"
 			]
+		},
+		"itemMastery": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"minItems": 1,
+			"uniqueItems": true
 		},
 		"fluff": {
 			"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source.",

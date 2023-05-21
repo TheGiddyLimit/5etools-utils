@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.6",
+	"version": "1.5.7",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -372,6 +372,9 @@
 						"items": {
 							"type": "string"
 						}
+					},
+					"mastery": {
+						"$ref": "items-shared.json#/$defs/itemMastery"
 					},
 					"hasFluff": {
 						"type": "boolean"
