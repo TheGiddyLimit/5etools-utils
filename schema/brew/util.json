@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.17",
+	"version": "1.13.18",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -1295,6 +1295,10 @@
 					},
 					"hidden": {
 						"type": "boolean"
+					},
+					"max": {
+						"description": "The max ability score this ASI allows (otherwise assumed to be 20).",
+						"type": "integer"
 					}
 				},
 				"additionalProperties": false
