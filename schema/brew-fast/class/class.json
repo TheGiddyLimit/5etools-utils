@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.2",
+	"version": "2.11.3",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -1129,6 +1129,14 @@
 							"type": "string",
 							"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\""
 						},
+						"preparedSpellsProgression": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							},
+							"minItems": 20,
+							"maxItems": 20
+						},
 						"spellcastingAbility": {
 							"enum": [
 								"str",
@@ -1446,6 +1454,14 @@
 						"preparedSpells": {
 							"type": "string",
 							"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\""
+						},
+						"preparedSpellsProgression": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							},
+							"minItems": 20,
+							"maxItems": 20
 						},
 						"spellcastingAbility": {
 							"enum": [
@@ -1822,6 +1838,14 @@
 				"preparedSpells": {
 					"type": "string",
 					"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\""
+				},
+				"preparedSpellsProgression": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					},
+					"minItems": 20,
+					"maxItems": 20
 				},
 				"spellcastingAbility": {
 					"enum": [
