@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.13",
+	"version": "1.8.14",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2173,7 +2173,7 @@
 						"displayAs": {
 							"description": "Implicitly \"trait\"",
 							"type": "string",
-							"enum": ["trait", "action", "bonus"]
+							"enum": ["trait", "action", "bonus", "reaction"]
 						},
 						"chargesItem": {
 							"type": "string",

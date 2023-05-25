@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.13",
+	"version": "1.8.14",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -3323,7 +3323,8 @@
 					"enum": [
 						"trait",
 						"action",
-						"bonus"
+						"bonus",
+						"reaction"
 					]
 				},
 				"chargesItem": {
