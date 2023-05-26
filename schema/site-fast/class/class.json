@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.3",
+	"version": "2.11.4",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -303,6 +303,10 @@
 					"items": {
 						"type": "string"
 					}
+				},
+				"toolProficiencies": {
+					"description": "Well-structured tool proficiency data, used by e.g. Plutonium.",
+					"$ref": "../util.json#/$defs/toolProficiencies"
 				},
 				"skills": {
 					"$ref": "../util.json#/$defs/skillProficiencies"

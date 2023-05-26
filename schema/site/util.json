@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.18",
+	"version": "1.13.19",
 	"$defs": {
 		"metaBlock": {
 			"type": "object",
@@ -282,11 +282,26 @@
 				"disguise kit",
 				"forgery kit",
 				"gaming set",
+				"dragonchess set",
+				"dice set",
+				"three-dragon ante set",
 				"herbalism kit",
 				"musical instrument",
+				"bagpipes",
+				"drum",
+				"dulcimer",
+				"flute",
+				"horn",
+				"lute",
+				"lyre",
+				"pan flute",
+				"shawm",
+				"viol",
 				"navigator's tools",
 				"thieves' tools",
 				"poisoner's kit",
+				"vehicles",
+				"vehicles (air)",
 				"vehicles (land)",
 				"vehicles (water)",
 				"vehicles (space)"
@@ -366,10 +381,52 @@
 					"gaming set": {
 						"const": true
 					},
+					"dragonchess set": {
+						"const": true
+					},
+					"dice set": {
+						"const": true
+					},
+					"three-dragon ante set": {
+						"const": true
+					},
 					"herbalism kit": {
 						"const": true
 					},
+					"anyMusicalInstrument": {
+						"type": "integer"
+					},
 					"musical instrument": {
+						"const": true
+					},
+					"bagpipes": {
+						"const": true
+					},
+					"drum": {
+						"const": true
+					},
+					"dulcimer": {
+						"const": true
+					},
+					"flute": {
+						"const": true
+					},
+					"horn": {
+						"const": true
+					},
+					"lute": {
+						"const": true
+					},
+					"lyre": {
+						"const": true
+					},
+					"pan flute": {
+						"const": true
+					},
+					"shawm": {
+						"const": true
+					},
+					"viol": {
 						"const": true
 					},
 					"navigator's tools": {
@@ -379,6 +436,12 @@
 						"const": true
 					},
 					"poisoner's kit": {
+						"const": true
+					},
+					"vehicles": {
+						"const": true
+					},
+					"vehicles (air)": {
 						"const": true
 					},
 					"vehicles (land)": {
@@ -403,7 +466,8 @@
 										{
 											"type": "string",
 											"enum": [
-												"anyArtisansTool"
+												"anyArtisansTool",
+												"anyMusicalInstrument"
 											]
 										}
 									]
@@ -644,10 +708,52 @@
 					"gaming set": {
 						"const": true
 					},
+					"dragonchess set": {
+						"const": true
+					},
+					"dice set": {
+						"const": true
+					},
+					"three-dragon ante set": {
+						"const": true
+					},
 					"herbalism kit": {
 						"const": true
 					},
+					"anyMusicalInstrument": {
+						"type": "integer"
+					},
 					"musical instrument": {
+						"const": true
+					},
+					"bagpipes": {
+						"const": true
+					},
+					"drum": {
+						"const": true
+					},
+					"dulcimer": {
+						"const": true
+					},
+					"flute": {
+						"const": true
+					},
+					"horn": {
+						"const": true
+					},
+					"lute": {
+						"const": true
+					},
+					"lyre": {
+						"const": true
+					},
+					"pan flute": {
+						"const": true
+					},
+					"shawm": {
+						"const": true
+					},
+					"viol": {
 						"const": true
 					},
 					"navigator's tools": {
@@ -657,6 +763,12 @@
 						"const": true
 					},
 					"poisoner's kit": {
+						"const": true
+					},
+					"vehicles": {
+						"const": true
+					},
+					"vehicles (air)": {
 						"const": true
 					},
 					"vehicles (land)": {
@@ -751,6 +863,7 @@
 															"anySkill",
 															"anyTool",
 															"anyArtisansTool",
+															"anyMusicalInstrument",
 															"anyLanguage",
 															"anyStandardLanguage"
 														]
@@ -1166,16 +1279,61 @@
 					"gaming set": {
 						"const": true
 					},
+					"dragonchess set": {
+						"const": true
+					},
+					"dice set": {
+						"const": true
+					},
+					"three-dragon ante set": {
+						"const": true
+					},
 					"herbalism kit": {
 						"const": true
 					},
 					"musical instrument": {
 						"const": true
 					},
+					"bagpipes": {
+						"const": true
+					},
+					"drum": {
+						"const": true
+					},
+					"dulcimer": {
+						"const": true
+					},
+					"flute": {
+						"const": true
+					},
+					"horn": {
+						"const": true
+					},
+					"lute": {
+						"const": true
+					},
+					"lyre": {
+						"const": true
+					},
+					"pan flute": {
+						"const": true
+					},
+					"shawm": {
+						"const": true
+					},
+					"viol": {
+						"const": true
+					},
 					"navigator's tools": {
 						"const": true
 					},
 					"thieves' tools": {
+						"const": true
+					},
+					"vehicles": {
+						"const": true
+					},
+					"vehicles (air)": {
 						"const": true
 					},
 					"vehicles (land)": {
