@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.5",
+	"version": "1.9.6",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -15,18 +15,7 @@
 					"type": "integer"
 				},
 				"school": {
-					"type": "string",
-					"enum": [
-						"A",
-						"V",
-						"E",
-						"I",
-						"D",
-						"N",
-						"T",
-						"C",
-						"P"
-					]
+					"$ref": "../util.json#/$defs/spellSchool"
 				},
 				"meta": {
 					"type": "object",
@@ -362,18 +351,7 @@
 							"type": "integer"
 						},
 						"school": {
-							"type": "string",
-							"enum": [
-								"A",
-								"V",
-								"E",
-								"I",
-								"D",
-								"N",
-								"T",
-								"C",
-								"P"
-							]
+							"$ref": "../util.json#/$defs/spellSchool"
 						},
 						"meta": {
 							"type": "object",
@@ -717,18 +695,7 @@
 							"type": "integer"
 						},
 						"school": {
-							"type": "string",
-							"enum": [
-								"A",
-								"V",
-								"E",
-								"I",
-								"D",
-								"N",
-								"T",
-								"C",
-								"P"
-							]
+							"$ref": "../util.json#/$defs/spellSchool"
 						},
 						"meta": {
 							"type": "object",

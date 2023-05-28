@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.19",
+	"version": "1.13.20",
 
 	"$defs" : {
 		"metaBlock": {
@@ -1902,6 +1902,25 @@
 			]
 		},
 
+		"spellSchool": {
+			"type": "string",
+			"$$ifSiteElse_key": {
+				"keySite": "enum",
+				"keyBrew": "examples",
+				"value": [
+					"A",
+					"V",
+					"E",
+					"I",
+					"D",
+					"N",
+					"T",
+					"C",
+					"P"
+				]
+			}
+		},
+
 		"genericFluffArrayItemData": {
 			"type": "object",
 			"properties": {
@@ -2884,6 +2903,24 @@
 		"spellListSpellRef": {
 			"description": "A reference to a spell or an existing spell list, linked by name and source. Assumes PHB as the source, if none is provided.",
 			"oneOf": [
+				{
+					"description": "A group spell list",
+					"type": "object",
+					"properties": {
+						"groupName": {"type": "string"},
+						"groupSource": {"type": "string"},
+						"spellSchools": {
+							"type": "array",
+							"items": {"$ref": "#/$defs/spellSchool"},
+							"minItems": 1,
+							"uniqueItems": true
+						}
+					},
+					"required": [
+						"groupName", "groupSource"
+					],
+					"additionalProperties": false
+				},
 				{
 					"description": "Another class's spell list",
 					"type": "object",
