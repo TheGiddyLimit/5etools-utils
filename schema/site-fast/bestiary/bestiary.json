@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.16",
+	"version": "1.21.17",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1111,6 +1111,15 @@
 						]
 					}
 				},
+				"attachedItems": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"description": "A UID, e.g. \"longsword|phb\"",
+						"type": "string"
+					}
+				},
 				"conditionInflict": {
 					"$ref": "../util.json#/$defs/tagsConditions"
 				},
@@ -2168,6 +2177,15 @@
 									"RNG",
 									"THW"
 								]
+							}
+						},
+						"attachedItems": {
+							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
+							"items": {
+								"description": "A UID, e.g. \"longsword|phb\"",
+								"type": "string"
 							}
 						},
 						"conditionInflict": {
@@ -3241,6 +3259,15 @@
 									"RNG",
 									"THW"
 								]
+							}
+						},
+						"attachedItems": {
+							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
+							"items": {
+								"description": "A UID, e.g. \"longsword|phb\"",
+								"type": "string"
 							}
 						},
 						"conditionInflict": {

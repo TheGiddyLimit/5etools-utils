@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.13.3",
+	"version": "1.13.4",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -227,6 +227,8 @@
 				},
 				"attachedSpells": {
 					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
 					"items": {
 						"type": "string"
 					}
