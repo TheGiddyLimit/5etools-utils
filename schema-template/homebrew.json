@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.9",
+	"version": "1.10.10",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -236,7 +236,9 @@
 							"type": "array",
 							"items": {
 								"type": "string"
-							}
+							},
+							"minItems": 1,
+							"uniqueItems": true
 						}
 					}
 				},

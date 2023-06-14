@@ -1214,6 +1214,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "monster"
 						},
@@ -1239,6 +1242,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "legendaryGroup"
@@ -1266,6 +1272,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "spell"
 						},
@@ -1291,6 +1300,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "action"
@@ -1318,6 +1330,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "item"
 						},
@@ -1343,6 +1358,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "background"
@@ -1370,6 +1388,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "charoption"
 						},
@@ -1395,6 +1416,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "condition"
@@ -1422,6 +1446,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "disease"
 						},
@@ -1447,6 +1474,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "status"
@@ -1474,6 +1504,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "cult"
 						},
@@ -1499,6 +1532,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "boon"
@@ -1526,6 +1562,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "deity"
 						},
@@ -1551,6 +1590,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "feat"
@@ -1578,6 +1620,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "language"
 						},
@@ -1603,6 +1648,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "object"
@@ -1630,6 +1678,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "optionalfeature"
 						},
@@ -1655,6 +1706,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "psionic"
@@ -1682,6 +1736,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "race"
 						},
@@ -1707,6 +1764,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "recipe"
@@ -1734,6 +1794,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "reward"
 						},
@@ -1759,6 +1822,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "table"
@@ -1786,6 +1852,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "trap"
 						},
@@ -1811,6 +1880,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "hazard"
@@ -1838,6 +1910,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "variantrule"
 						},
@@ -1863,6 +1938,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "vehicle"
@@ -1890,6 +1968,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "vehicleUpgrade"
 						},
@@ -1916,6 +1997,9 @@
 						"type": {
 							"const": "statblockInline"
 						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
 						"dataType": {
 							"const": "skill"
 						},
@@ -1941,6 +2025,9 @@
 					"properties": {
 						"type": {
 							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
 						},
 						"dataType": {
 							"const": "sense"

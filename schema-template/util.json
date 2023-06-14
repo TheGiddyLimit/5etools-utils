@@ -4,19 +4,26 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.20",
+	"version": "1.13.21",
 
 	"$defs" : {
+		"metaDependenciesArray": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		},
+
 		"metaBlock": {
 			"type": "object",
 			"properties": {
 				"dependencies": {
 					"type": "object",
-					"properties": {
-						"monster": {
-							"type": "array",
-							"items": {"type": "string"},
-							"uniqueItems": true
+					"patternProperties": {
+						"^[a-zA-Z]+$": {
+							"$ref": "#/$defs/metaDependenciesArray"
 						}
 					}
 				},
