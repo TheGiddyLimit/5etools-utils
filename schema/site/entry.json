@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.14",
+	"version": "1.8.15",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -3278,6 +3278,9 @@
 				"charges": {
 					"$ref": "#/$defs/entrySpellcasting_frequency"
 				},
+				"recharge": {
+					"$ref": "#/$defs/entrySpellcasting_recharge"
+				},
 				"spells": {
 					"type": "object",
 					"properties": {
@@ -3340,7 +3343,9 @@
 							"weekly",
 							"yearly",
 							"ritual",
-							"spells"
+							"spells",
+							"charges",
+							"recharge"
 						]
 					}
 				},
@@ -3459,6 +3464,30 @@
 					"$ref": "#/$defs/_arrayOfSpell"
 				},
 				"1e": {
+					"$ref": "#/$defs/_arrayOfSpell"
+				}
+			},
+			"additionalProperties": false
+		},
+		"entrySpellcasting_recharge": {
+			"type": "object",
+			"properties": {
+				"1": {
+					"$ref": "#/$defs/_arrayOfSpell"
+				},
+				"2": {
+					"$ref": "#/$defs/_arrayOfSpell"
+				},
+				"3": {
+					"$ref": "#/$defs/_arrayOfSpell"
+				},
+				"4": {
+					"$ref": "#/$defs/_arrayOfSpell"
+				},
+				"5": {
+					"$ref": "#/$defs/_arrayOfSpell"
+				},
+				"6": {
 					"$ref": "#/$defs/_arrayOfSpell"
 				}
 			},
