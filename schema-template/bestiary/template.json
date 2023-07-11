@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.0.2",
-	"$id": "traits.json",
+	"version": "2.0.0",
+	"$id": "template.json",
 	"type": "object",
 	"$defs": {
-		"trait": {
+		"monsterTemplateData": {
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
@@ -51,18 +51,51 @@
 					}
 				}
 			},
-			"additionalProperties": false,
-			"required": ["name", "source", "apply"]
+			"additionalProperties": false
+		},
+
+		"monsterTemplate": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/monsterTemplateData"
+						},
+						{
+							"required": [
+								"name",
+								"source",
+								"apply"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/monsterTemplateData"
+						},
+						{
+							"$ref": "../util.json#/$defs/copyBlock"
+						}
+					]
+				}
+			]
 		}
 	},
 
 	"properties": {
-		"trait": {
+		"_meta": {
+			"$ref": "../util.json#/$defs/metaBlock"
+		},
+		"monsterTemplate": {
 			"type": "array",
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {
-				"$ref": "#/$defs/trait"
+				"$ref": "#/$defs/monsterTemplate"
 			}
 		}
 	},
