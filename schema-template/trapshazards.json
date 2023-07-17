@@ -22,9 +22,7 @@
 								"MAG"
 							]
 						},
-						"source": {
-							"type": "string"
-						},
+						"source": {"$ref": "util.json#/$defs/source"},
 						"page": {"$ref": "util.json#/$defs/page"},
 						"entries": {
 							"type": "array",
@@ -62,9 +60,7 @@
 								"CMPX"
 							]
 						},
-						"source": {
-							"type": "string"
-						},
+						"source": {"$ref": "util.json#/$defs/source"},
 						"page": {"$ref": "util.json#/$defs/page"},
 						"entries": {
 							"type": "array",
@@ -186,9 +182,7 @@
 						]
 					}
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"

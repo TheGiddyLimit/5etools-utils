@@ -19,9 +19,7 @@
 						"type": "string",
 						"description": "An ID that will be used to refer to this book in tags."
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"legacy": {"$ref": "util.json#/$defs/legacy"},
 					"group": {
 						"description": "The group under which this book should be listed in the navbar.",

@@ -64,9 +64,7 @@
 						"$ref": "entry.json"
 					}
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
 				"legacy": {"$ref": "util.json#/$defs/legacy"},
@@ -98,9 +96,7 @@
 				"name": {
 					"type": "string"
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
 				"legacy": {"$ref": "util.json#/$defs/legacy"},
@@ -409,7 +405,7 @@
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
-				"source": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
 				"legacy": {"$ref": "util.json#/$defs/legacy"},
@@ -522,9 +518,7 @@
 				"name": {
 					"type": "string"
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
 				"legacy": {"$ref": "util.json#/$defs/legacy"},

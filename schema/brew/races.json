@@ -14,7 +14,7 @@
 					"$ref": "util.json#/$defs/alias"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -251,7 +251,7 @@
 					"$ref": "util.json#/$defs/alias"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -479,7 +479,7 @@
 					"type": "string"
 				},
 				"raceSource": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"overwrite": {
 					"description": "Map of 'property' -> true where 'property' is a property on the base race which should be overwritten by that of the subrace",
@@ -579,7 +579,7 @@
 							"$ref": "util.json#/$defs/alias"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -820,7 +820,7 @@
 							"$ref": "util.json#/$defs/alias"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -1051,7 +1051,7 @@
 									"type": "string"
 								},
 								"source": {
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								},
 								"pantheon": {
 									"description": "Used in deity data",
@@ -1067,7 +1067,7 @@
 								},
 								"classSource": {
 									"description": "Used in subclass data",
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								},
 								"_mod": {
 									"$ref": "util.json#/$defs/_modObject"
@@ -1079,7 +1079,7 @@
 											"type": "string"
 										},
 										"source": {
-											"type": "string"
+											"$ref": "util.json#/$defs/source"
 										}
 									},
 									"required": [
@@ -1122,7 +1122,7 @@
 							"$ref": "util.json#/$defs/alias"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -1350,7 +1350,7 @@
 							"type": "string"
 						},
 						"raceSource": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"overwrite": {
 							"description": "Map of 'property' -> true where 'property' is a property on the base race which should be overwritten by that of the subrace",
@@ -1375,7 +1375,7 @@
 							"$ref": "util.json#/$defs/alias"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -1603,7 +1603,7 @@
 							"type": "string"
 						},
 						"raceSource": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"overwrite": {
 							"description": "Map of 'property' -> true where 'property' is a property on the base race which should be overwritten by that of the subrace",
@@ -1616,7 +1616,7 @@
 									"type": "string"
 								},
 								"source": {
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								},
 								"pantheon": {
 									"description": "Used in deity data",
@@ -1632,7 +1632,7 @@
 								},
 								"classSource": {
 									"description": "Used in subclass data",
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								},
 								"_mod": {
 									"$ref": "util.json#/$defs/_modObject"
@@ -1644,7 +1644,7 @@
 											"type": "string"
 										},
 										"source": {
-											"type": "string"
+											"$ref": "util.json#/$defs/source"
 										}
 									},
 									"required": [
@@ -1692,7 +1692,7 @@
 									"type": "string"
 								},
 								"source": {
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								}
 							}
 						},
@@ -1703,7 +1703,7 @@
 									"type": "string"
 								},
 								"source": {
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								}
 							}
 						}

@@ -36,7 +36,7 @@
 								"weapon": {"type": "boolean"},
 								"dmgType": {"$ref": "util.json#/$defs/dataDamageTags"},
 								"name": {"type": "string"},
-								"source": {"type": "string"},
+								"source": {"$ref": "util.json#/$defs/source"},
 								"type": {"$ref": "items-shared.json#/$defs/itemType"},
 								"scfType": {"$ref": "items-shared.json#/$defs/itemScfType"},
 								"net": {"type": "boolean"},
@@ -100,9 +100,7 @@
 							"rarity": {
 								"$ref": "items-shared.json#/$defs/itemRarity"
 							},
-							"source": {
-								"type": "string"
-							},
+							"source": {"$ref": "util.json#/$defs/source"},
 							"page": {"$ref": "util.json#/$defs/page"},
 							"namePrefix": {
 								"type": "string"
@@ -174,9 +172,7 @@
 												"name": {
 													"type": "string"
 												},
-												"source": {
-													"type": "string"
-												}
+												"source": {"$ref": "util.json#/$defs/source"}
 											}
 										}
 									]

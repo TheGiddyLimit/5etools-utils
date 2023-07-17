@@ -46,6 +46,12 @@
 			"$$ifBrew": {"minLength": 3}
 		},
 
+		"source": {
+			"type": "string",
+			"description": "An identifying string, as seen in the JSON in \"source\" fields.",
+			"pattern": "^[-a-zA-Z0-9 :&+!]+$"
+		},
+
 		"page": {
 			"$$ifSite": {"type": "integer"},
 			"$$ifBrew": {
@@ -68,9 +74,7 @@
 			"items": {
 				"type": "object",
 				"properties": {
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {
 						"$ref": "#/$defs/page"
 					}
@@ -89,9 +93,7 @@
 			"items": {
 				"type": "object",
 				"properties": {
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {
 						"$ref": "#/$defs/page"
 					}
@@ -1132,9 +1134,7 @@
 											"name": {
 												"type": "string"
 											},
-											"source": {
-												"type": "string"
-											},
+											"source": {"$ref": "util.json#/$defs/source"},
 											"visible": {
 												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
 												"const": true
@@ -1149,9 +1149,7 @@
 											"name": {
 												"type": "string"
 											},
-											"source": {
-												"type": "string"
-											},
+											"source": {"$ref": "util.json#/$defs/source"},
 											"visible": {
 												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
 												"const": true
@@ -1934,9 +1932,7 @@
 				"name": {
 					"type": "string"
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"images": {
 					"oneOf": [
 						{
@@ -2357,13 +2353,13 @@
 					"type": "object",
 					"properties": {
 						"name": {"type": "string"},
-						"source": {"type": "string"},
+						"source": {"$ref": "util.json#/$defs/source"},
 
 						"pantheon": {"description": "Used in deity data", "type": "string"},
 
 						"shortName": {"description": "Used in subclass data", "type": "string"},
 						"className": {"description": "Used in subclass data", "type": "string"},
-						"classSource": {"description": "Used in subclass data", "type": "string"},
+						"classSource": {"description": "Used in subclass data", "$ref": "util.json#/$defs/source"},
 
 						"_mod": {
 							"$ref": "#/$defs/_modObject"
@@ -2372,7 +2368,7 @@
 							"type": "object",
 							"properties": {
 								"name": {"type": "string"},
-								"source": {"type": "string"}
+								"source": {"$ref": "util.json#/$defs/source"}
 							},
 							"required": ["name", "source"]
 						},
@@ -2400,7 +2396,7 @@
 					"type": "object",
 					"properties": {
 						"name": {"type": "string"},
-						"source": {"type": "string"},
+						"source": {"$ref": "util.json#/$defs/source"},
 
 						"_mod": {"$ref": "#/$defs/_modObject"}
 					},
@@ -2413,7 +2409,7 @@
 							"type": "object",
 							"properties": {
 								"name": {"type": "string"},
-								"source": {"type": "string"},
+								"source": {"$ref": "util.json#/$defs/source"},
 
 								"_mod": {"$ref": "#/$defs/_modObject"}
 							},
@@ -2925,7 +2921,7 @@
 					"type": "object",
 					"properties": {
 						"groupName": {"type": "string"},
-						"groupSource": {"type": "string"},
+						"groupSource": {"$ref": "util.json#/$defs/source"},
 						"spellSchools": {
 							"type": "array",
 							"items": {"$ref": "#/$defs/spellSchool"},
@@ -2943,7 +2939,7 @@
 					"type": "object",
 					"properties": {
 						"className": {"type": "string"},
-						"classSource": {"type": "string"}
+						"classSource": {"$ref": "util.json#/$defs/source"}
 					},
 					"required": [
 						"className", "classSource"
@@ -2955,9 +2951,9 @@
 					"type": "object",
 					"properties": {
 						"className": {"type": "string"},
-						"classSource": {"type": "string"},
+						"classSource": {"$ref": "util.json#/$defs/source"},
 						"subclassName": {"type": "string"},
-						"subclassSource": {"type": "string"}
+						"subclassSource": {"$ref": "util.json#/$defs/source"}
 					},
 					"required": [
 						"className", "classSource", "subclassName", "subclassSource"
@@ -2969,9 +2965,9 @@
 					"type": "object",
 					"properties": {
 						"className": {"type": "string"},
-						"classSource": {"type": "string"},
+						"classSource": {"$ref": "util.json#/$defs/source"},
 						"subclassName": {"type": "string"},
-						"subclassSource": {"type": "string"},
+						"subclassSource": {"$ref": "util.json#/$defs/source"},
 						"subSubclassName": {"type": "string"},
 						"subSubclassSource": {"type": "string"}
 					},
@@ -3057,7 +3053,7 @@
 				"type": "object",
 				"properties": {
 					"name": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "util.json#/$defs/source"},
 
 					"system": {"$ref": "#/$defs/foundrySystemObject"},
 
@@ -3079,7 +3075,7 @@
 				"type": "object",
 				"properties": {
 					"name": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "util.json#/$defs/source"},
 
 					"entries": {"type": "array", "items": {"$ref": "entry.json"}},
 					"isIgnored": {"const": true},

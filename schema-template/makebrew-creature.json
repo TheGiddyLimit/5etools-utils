@@ -18,9 +18,7 @@
 					"name": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"entries": {
 						"type": "array",
 						"items": {
@@ -46,9 +44,7 @@
 					"name": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"entries": {
 						"type": "array",
 						"items": {

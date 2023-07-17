@@ -196,7 +196,7 @@
 															"type": "string"
 														},
 														"baseSource": {
-															"type": "string"
+															"$ref": "../util.json#/$defs/source"
 														}
 													},
 													"required": [

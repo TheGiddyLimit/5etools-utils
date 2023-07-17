@@ -28,9 +28,7 @@
 						"$ref": "entry.json"
 					}
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"optionType": {
 					"$comment": "Note that this field supports arbitrary strings for homebrew usage.",

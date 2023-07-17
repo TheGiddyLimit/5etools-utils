@@ -14,9 +14,7 @@
 				"prerequisite": {
 					"$ref": "util.json#/$defs/prerequisite"
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"additionalSources": {
 					"$ref": "util.json#/$defs/additionalSources"
 				},

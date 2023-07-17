@@ -80,7 +80,7 @@
 					}
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -120,7 +120,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -477,7 +477,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -653,7 +653,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"

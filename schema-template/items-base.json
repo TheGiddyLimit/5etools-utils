@@ -21,9 +21,7 @@
 				"abbreviation": {
 					"type": "string"
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"name": {
 					"type": "string"
@@ -149,9 +147,7 @@
 					"rarity": {
 						"$ref": "items-shared.json#/$defs/itemRarity"
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {"$ref": "util.json#/$defs/page"},
 					"ac": {
 						"type": "integer"
@@ -377,7 +373,7 @@
 				"type": "object",
 				"properties": {
 					"name": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"entriesTemplate": {
 						"type": "array",
 						"items": {"$ref": "entry.json"}
@@ -394,7 +390,7 @@
 					"appliesTo": {
 						"type": "string"
 					},
-					"source": {"type": "string"},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"entries": {
 						"type": "array",
 						"items": {
@@ -412,7 +408,7 @@
 				"type": "object",
 				"properties": {
 					"name": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {"$ref": "util.json#/$defs/page"},
 					"prerequisite": {
 						"$ref": "util.json#/$defs/prerequisite"

@@ -61,7 +61,7 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "../util.json#/$defs/source"
 					},
 					"entries": {
 						"type": "array",
@@ -133,13 +133,13 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "../util.json#/$defs/source"
 					},
 					"className": {
 						"type": "string"
 					},
 					"classSource": {
-						"type": "string"
+						"$ref": "../util.json#/$defs/source"
 					},
 					"entries": {
 						"type": "array",
@@ -213,13 +213,13 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "../util.json#/$defs/source"
 					},
 					"className": {
 						"type": "string"
 					},
 					"classSource": {
-						"type": "string"
+						"$ref": "../util.json#/$defs/source"
 					},
 					"level": {
 						"type": "integer"
@@ -294,13 +294,13 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "../util.json#/$defs/source"
 					},
 					"className": {
 						"type": "string"
 					},
 					"classSource": {
-						"type": "string"
+						"$ref": "../util.json#/$defs/source"
 					},
 					"level": {
 						"type": "integer"
@@ -309,7 +309,7 @@
 						"type": "string"
 					},
 					"subclassSource": {
-						"type": "string"
+						"$ref": "../util.json#/$defs/source"
 					},
 					"entries": {
 						"type": "array",

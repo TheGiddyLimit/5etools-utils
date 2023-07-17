@@ -31,9 +31,7 @@
 						"$ref": "entry.json"
 					}
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"ruleType": {
 					"description": "O: Optional\n V: Variant\n VO: Variant Optional\n VV: Variant Variant",

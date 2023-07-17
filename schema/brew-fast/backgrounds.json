@@ -11,7 +11,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -126,7 +126,7 @@
 							"type": "string"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -244,7 +244,7 @@
 							"type": "string"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -354,7 +354,7 @@
 									"type": "string"
 								},
 								"source": {
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								},
 								"pantheon": {
 									"description": "Used in deity data",
@@ -370,7 +370,7 @@
 								},
 								"classSource": {
 									"description": "Used in subclass data",
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								},
 								"_mod": {
 									"$ref": "util.json#/$defs/_modObject"
@@ -382,7 +382,7 @@
 											"type": "string"
 										},
 										"source": {
-											"type": "string"
+											"$ref": "util.json#/$defs/source"
 										}
 									},
 									"required": [

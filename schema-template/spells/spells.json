@@ -173,9 +173,7 @@
 						"$ref": "../entry.json"
 					}
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "../util.json#/$defs/source"},
 				"page": {"$ref": "../util.json#/$defs/page"},
 				"additionalSources": {
 					"$ref": "../util.json#/$defs/additionalSources"
@@ -342,9 +340,7 @@
 												"shortName": {
 													"type": "string"
 												},
-												"source": {
-													"type": "string"
-												},
+												"source": {"$ref": "../util.json#/$defs/source"},
 												"subSubclass": {
 													"type": "string"
 												}
@@ -377,15 +373,11 @@
 								"name": {
 									"type": "string"
 								},
-								"source": {
-									"type": "string"
-								},
+								"source": {"$ref": "../util.json#/$defs/source"},
 								"baseName": {
 									"type": "string"
 								},
-								"baseSource": {
-									"type": "string"
-								}
+								"baseSource": {"$ref": "../util.json#/$defs/source"}
 							},
 							"required": ["name", "source"]
 						},
@@ -400,9 +392,7 @@
 								"name": {
 									"type": "string"
 								},
-								"source": {
-									"type": "string"
-								}
+								"source": {"$ref": "../util.json#/$defs/source"}
 							},
 							"required": ["name", "source"]
 						},
@@ -417,9 +407,7 @@
 								"name": {
 									"type": "string"
 								},
-								"source": {
-									"type": "string"
-								},
+								"source": {"$ref": "../util.json#/$defs/source"},
 								"featureType": {
 									"type": "array",
 									"items": {"$ref": "../util.json#/$defs/dataOptionalfeatureType"},
@@ -439,9 +427,7 @@
 								"name": {
 									"type": "string"
 								},
-								"source": {
-									"type": "string"
-								}
+								"source": {"$ref": "../util.json#/$defs/source"}
 							},
 							"required": ["name", "source"]
 						},
@@ -456,9 +442,7 @@
 								"name": {
 									"type": "string"
 								},
-								"source": {
-									"type": "string"
-								}
+								"source": {"$ref": "../util.json#/$defs/source"}
 							},
 							"required": ["name", "source"]
 						},
@@ -635,12 +619,8 @@
 				"name": {
 					"type": "string"
 				},
-				"source": {
-					"type": "string"
-				},
-				"definedInSource": {
-					"type": "string"
-				}
+				"source": {"$ref": "../util.json#/$defs/source"},
+				"definedInSource": {"$ref": "../util.json#/$defs/source"}
 			},
 			"required": [
 				"name",

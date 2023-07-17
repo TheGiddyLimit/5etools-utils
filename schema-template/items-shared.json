@@ -215,9 +215,7 @@
 									"name": {
 										"type": "string"
 									},
-									"source": {
-										"type": "string"
-									}
+									"source": {"$ref": "util.json#/$defs/source"}
 								}
 							},
 							"_appendItemFluff": {
@@ -226,9 +224,7 @@
 									"name": {
 										"type": "string"
 									},
-									"source": {
-										"type": "string"
-									}
+									"source": {"$ref": "util.json#/$defs/source"}
 								}
 							}
 						}

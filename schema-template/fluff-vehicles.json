@@ -14,9 +14,7 @@
 					"name": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"images": {
 						"type": "array",
 						"items": {
@@ -35,9 +33,7 @@
 							"name": {
 								"type": "string"
 							},
-							"source": {
-								"type": "string"
-							}
+							"source": {"$ref": "util.json#/$defs/source"}
 						}
 					},
 					"_appendCopy": {
@@ -46,9 +42,7 @@
 							"name": {
 								"type": "string"
 							},
-							"source": {
-								"type": "string"
-							}
+							"source": {"$ref": "util.json#/$defs/source"}
 						}
 					}
 				},

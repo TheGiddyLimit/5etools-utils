@@ -40,6 +40,11 @@
 			"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)",
 			"format": "uri-reference"
 		},
+		"source": {
+			"type": "string",
+			"description": "An identifying string, as seen in the JSON in \"source\" fields.",
+			"pattern": "^[-a-zA-Z0-9 :&+!]+$"
+		},
 		"page": {
 			"type": "integer"
 		},
@@ -49,7 +54,7 @@
 				"type": "object",
 				"properties": {
 					"source": {
-						"type": "string"
+						"$ref": "util.json#/$defs/source"
 					},
 					"page": {
 						"$ref": "#/$defs/page"
@@ -69,7 +74,7 @@
 				"type": "object",
 				"properties": {
 					"source": {
-						"type": "string"
+						"$ref": "util.json#/$defs/source"
 					},
 					"page": {
 						"$ref": "#/$defs/page"
@@ -1647,7 +1652,7 @@
 												"type": "string"
 											},
 											"source": {
-												"type": "string"
+												"$ref": "util.json#/$defs/source"
 											},
 											"visible": {
 												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
@@ -1666,7 +1671,7 @@
 												"type": "string"
 											},
 											"source": {
-												"type": "string"
+												"$ref": "util.json#/$defs/source"
 											},
 											"visible": {
 												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
@@ -2532,7 +2537,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"images": {
 					"oneOf": [
@@ -2569,7 +2574,7 @@
 								"type": "string"
 							},
 							"source": {
-								"type": "string"
+								"$ref": "util.json#/$defs/source"
 							},
 							"images": {
 								"oneOf": [
@@ -2605,7 +2610,7 @@
 								"type": "string"
 							},
 							"source": {
-								"type": "string"
+								"$ref": "util.json#/$defs/source"
 							},
 							"images": {
 								"oneOf": [
@@ -2633,7 +2638,7 @@
 										"type": "string"
 									},
 									"source": {
-										"type": "string"
+										"$ref": "util.json#/$defs/source"
 									},
 									"pantheon": {
 										"description": "Used in deity data",
@@ -2649,7 +2654,7 @@
 									},
 									"classSource": {
 										"description": "Used in subclass data",
-										"type": "string"
+										"$ref": "util.json#/$defs/source"
 									},
 									"_mod": {
 										"$ref": "#/$defs/_modObject"
@@ -2661,7 +2666,7 @@
 												"type": "string"
 											},
 											"source": {
-												"type": "string"
+												"$ref": "util.json#/$defs/source"
 											}
 										},
 										"required": [
@@ -3349,7 +3354,7 @@
 							"type": "string"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"pantheon": {
 							"description": "Used in deity data",
@@ -3365,7 +3370,7 @@
 						},
 						"classSource": {
 							"description": "Used in subclass data",
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"_mod": {
 							"$ref": "#/$defs/_modObject"
@@ -3377,7 +3382,7 @@
 									"type": "string"
 								},
 								"source": {
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								}
 							},
 							"required": [
@@ -3414,7 +3419,7 @@
 							"type": "string"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"_mod": {
 							"$ref": "#/$defs/_modObject"
@@ -3435,7 +3440,7 @@
 									"type": "string"
 								},
 								"source": {
-									"type": "string"
+									"$ref": "util.json#/$defs/source"
 								},
 								"_mod": {
 									"$ref": "#/$defs/_modObject"
@@ -4074,7 +4079,7 @@
 							"type": "string"
 						},
 						"groupSource": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"spellSchools": {
 							"type": "array",
@@ -4099,7 +4104,7 @@
 							"type": "string"
 						},
 						"classSource": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						}
 					},
 					"required": [
@@ -4116,13 +4121,13 @@
 							"type": "string"
 						},
 						"classSource": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"subclassName": {
 							"type": "string"
 						},
 						"subclassSource": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						}
 					},
 					"required": [
@@ -4141,13 +4146,13 @@
 							"type": "string"
 						},
 						"classSource": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"subclassName": {
 							"type": "string"
 						},
 						"subclassSource": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"subSubclassName": {
 							"type": "string"
@@ -4269,7 +4274,7 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "util.json#/$defs/source"
 					},
 					"system": {
 						"$ref": "#/$defs/foundrySystemObject"
@@ -4299,7 +4304,7 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "util.json#/$defs/source"
 					},
 					"entries": {
 						"type": "array",

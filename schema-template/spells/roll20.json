@@ -12,9 +12,7 @@
 				"name": {
 					"type": "string"
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "../util.json#/$defs/source"},
 				"data": {
 					"description": "Based on the Roll20 data, available e.g. here: https://app.roll20.net/compendium/dnd5e/Spells:Fireball.json",
 					"type": "object",

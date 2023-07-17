@@ -19,9 +19,7 @@
 				"rarity": {
 					"$ref": "items-shared.json#/$defs/itemRarity"
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"additionalSources": {
 					"$ref": "util.json#/$defs/additionalSources"

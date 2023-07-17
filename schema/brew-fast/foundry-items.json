@@ -18,7 +18,7 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "util.json#/$defs/source"
 					},
 					"system": {
 						"$ref": "util.json#/$defs/foundrySystemObject"

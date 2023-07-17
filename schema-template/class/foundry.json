@@ -61,7 +61,7 @@
 				"type": "object",
 				"properties": {
 					"name": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "../util.json#/$defs/source"},
 
 					"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
 					"entryData": {"$ref": "#/$defs/entryDataObject"},
@@ -96,9 +96,9 @@
 				"type": "object",
 				"properties": {
 					"name": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "../util.json#/$defs/source"},
 					"className":  {"type": "string"},
-					"classSource": {"type": "string"},
+					"classSource": {"$ref": "../util.json#/$defs/source"},
 
 					"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
 					"entryData": {"$ref": "#/$defs/entryDataObject"},
@@ -135,9 +135,9 @@
 				"type": "object",
 				"properties": {
 					"name": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "../util.json#/$defs/source"},
 					"className":  {"type": "string"},
-					"classSource": {"type": "string"},
+					"classSource": {"$ref": "../util.json#/$defs/source"},
 					"level":  {"type": "integer"},
 
 					"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
@@ -175,13 +175,13 @@
 				"type": "object",
 				"properties": {
 					"name": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "../util.json#/$defs/source"},
 					"className":  {"type": "string"},
-					"classSource": {"type": "string"},
+					"classSource": {"$ref": "../util.json#/$defs/source"},
 					"level":  {"type": "integer"},
 
 					"subclassShortName": {"type": "string"},
-					"subclassSource":{"type": "string"},
+					"subclassSource": {"$ref": "../util.json#/$defs/source"},
 
 					"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
 					"entryData": {"$ref": "#/$defs/entryDataObject"},

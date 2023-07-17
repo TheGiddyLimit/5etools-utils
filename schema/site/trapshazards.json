@@ -22,7 +22,7 @@
 							]
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -63,7 +63,7 @@
 							]
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -185,7 +185,7 @@
 					]
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"

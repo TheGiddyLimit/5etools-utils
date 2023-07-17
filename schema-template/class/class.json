@@ -14,9 +14,7 @@
 					"name": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					}
+					"source": {"$ref": "../util.json#/$defs/source"}
 				},
 				"required": ["name", "source"],
 				"additionalProperties": false
@@ -95,11 +93,11 @@
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
-				"source": {"type": "string"},
+				"source": {"$ref": "../util.json#/$defs/source"},
 				"srd": {"$ref": "../util.json#/$defs/srd"},
 				"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
 				"className":  {"type": "string"},
-				"classSource": {"type": "string"},
+				"classSource": {"$ref": "../util.json#/$defs/source"},
 				"level":  {"type": "integer"},
 				"header":  {"type": "integer"},
 				"page": {"$ref": "../util.json#/$defs/page"},
@@ -178,13 +176,13 @@
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
-				"source": {"type": "string"},
+				"source": {"$ref": "../util.json#/$defs/source"},
 				"srd": {"$ref": "../util.json#/$defs/srd"},
 				"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
 				"className":  {"type": "string"},
-				"classSource": {"type": "string"},
+				"classSource": {"$ref": "../util.json#/$defs/source"},
 				"subclassShortName":  {"type": "string"},
-				"subclassSource": {"type": "string"},
+				"subclassSource": {"$ref": "../util.json#/$defs/source"},
 				"level":  {"type": "integer"},
 				"header":  {"type": "integer"},
 				"page": {"$ref": "../util.json#/$defs/page"},
@@ -375,16 +373,14 @@
 				"shortName": {
 					"type": "string"
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "../util.json#/$defs/source"},
 				"className": {
 					"description": "The name of the class this subclass belongs to.",
 					"type": "string"
 				},
 				"classSource": {
 					"description": "The source of the class this subclass belongs to (defaults to PHB).",
-					"type": "string"
+					"$ref": "../util.json#/$defs/source"
 				},
 				"isReprinted": {
 					"type": "boolean"
@@ -592,9 +588,7 @@
 				"name": {
 					"type": "string"
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "../util.json#/$defs/source"},
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
 				},
@@ -804,9 +798,7 @@
 								"items": {"$ref": "../entry.json"}
 							},
 							"page": {"$ref": "../util.json#/$defs/page"},
-							"source": {
-								"type": "string"
-							},
+							"source": {"$ref": "../util.json#/$defs/source"},
 							"type": {
 								"type": "string"
 							}

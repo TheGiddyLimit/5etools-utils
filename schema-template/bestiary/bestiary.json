@@ -236,9 +236,7 @@
 						}
 					]
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "../util.json#/$defs/source"},
 				"sourceSub": {
 					"type": "string",
 					"description": "Sub-source text that is shown when hovered."
@@ -656,9 +654,7 @@
 						"name": {
 							"type": "string"
 						},
-						"source": {
-							"type": "string"
-						}
+						"source": {"$ref": "../util.json#/$defs/source"}
 					}
 				},
 				"legendaryActions": {
@@ -770,9 +766,7 @@
 									"name": {
 										"type": "string"
 									},
-									"source": {
-										"type": "string"
-									},
+									"source": {"$ref": "../util.json#/$defs/source"},
 									"page": {"$ref": "../util.json#/$defs/page"}
 								},
 								"required": ["name", "source"]
@@ -840,9 +834,7 @@
 											"name": {
 												"type": "string"
 											},
-											"source": {
-												"type": "string"
-											}
+											"source": {"$ref": "../util.json#/$defs/source"}
 										}
 									},
 									"_appendMonsterFluff": {
@@ -851,9 +843,7 @@
 											"name": {
 												"type": "string"
 											},
-											"source": {
-												"type": "string"
-											}
+											"source": {"$ref": "../util.json#/$defs/source"}
 										}
 									}
 								}
@@ -1150,7 +1140,7 @@
 							"type": "object",
 							"properties": {
 								"name": {"type": "string"},
-								"source": {"type": "string"},
+								"source": {"$ref": "../util.json#/$defs/source"},
 								"addAs": {"type": "string"}
 							},
 							"required": ["addAs"],
@@ -1160,7 +1150,7 @@
 							"type": "object",
 							"properties": {
 								"name": {"type": "string"},
-								"source": {"type": "string"},
+								"source": {"$ref": "../util.json#/$defs/source"},
 								"addHeadersAs": {"type": "string"}
 							},
 							"required": ["addHeadersAs"],
@@ -1178,7 +1168,7 @@
 					"type": "object",
 					"properties": {
 						"name": {"type": "string"},
-						"source": {"type": "string"},
+						"source": {"$ref": "../util.json#/$defs/source"},
 						"page": {"$ref": "../util.json#/$defs/page"}
 					},
 					"required": ["name", "source"]

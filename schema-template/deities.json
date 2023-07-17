@@ -90,9 +90,7 @@
 						"$ref": "util.json#/$defs/foundryImg"
 					}
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"entries": {
 					"type": "array",
 					"items": {

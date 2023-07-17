@@ -10,7 +10,7 @@
 			"properties": {
 				"name": {"type": "string"},
 				"alias": {"$ref": "util.json#/$defs/alias"},
-				"source": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
 				"additionalSources": {"$ref": "util.json#/$defs/additionalSources"},
@@ -176,7 +176,7 @@
 					"type": "object",
 					"properties": {
 						"raceName": {"type": "string"},
-						"raceSource": {"type": "string"},
+						"raceSource": {"$ref": "util.json#/$defs/source"},
 						"overwrite": {
 							"description": "Map of 'property' -> true where 'property' is a property on the base race which should be overwritten by that of the subrace",
 							"type": "object"
@@ -342,9 +342,7 @@
 								"name": {
 									"type": "string"
 								},
-								"source": {
-									"type": "string"
-								}
+								"source": {"$ref": "util.json#/$defs/source"}
 							}
 						},
 						"_appendRaceFluff": {
@@ -353,9 +351,7 @@
 								"name": {
 									"type": "string"
 								},
-								"source": {
-									"type": "string"
-								}
+								"source": {"$ref": "util.json#/$defs/source"}
 							}
 						}
 					}

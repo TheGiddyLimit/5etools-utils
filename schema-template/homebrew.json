@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.10",
+	"version": "1.10.11",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -11,7 +11,7 @@
 				"type": "object",
 				"properties": {
 					"id": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"data": {
 						"$$ifNotFast": {
 							"$ref": "util.json#/$defs/adventureBookData"
@@ -36,8 +36,7 @@
 						"description": "A set of properties describing a \"source.\" A source could be, for example, a homebrew PDF, book, or blog post.",
 						"properties": {
 							"json": {
-								"type": "string",
-								"description": "An identifying string, as seen in the JSON in \"source\" fields."
+								"$ref": "util.json#/$defs/source"
 							},
 							"abbreviation": {
 								"type": "string",
@@ -304,7 +303,7 @@
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
-				"source": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"spellListType": {
 					"type": "string",
 					"enum": ["groups"]
@@ -351,9 +350,7 @@
 					"category": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					}
+					"source": {"$ref": "util.json#/$defs/source"}
 				},
 				"required": [
 					"displayName",

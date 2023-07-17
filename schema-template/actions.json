@@ -17,9 +17,7 @@
 						"$ref": "entry.json"
 					}
 				},
-				"source": {
-					"type": "string"
-				},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"fromVariant": {
 					"type": "string",

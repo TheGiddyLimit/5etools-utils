@@ -59,7 +59,7 @@
 			"properties": {
 				"name": {"type": "string"},
 				"type": {"type": "string"},
-				"source": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"srd": {"$ref": "util.json#/$defs/srd"},
 				"basicRules": {"$ref": "util.json#/$defs/basicRules"},
@@ -678,9 +678,7 @@
 											"type": "object",
 											"properties": {
 												"page": {"$ref": "util.json#/$defs/page"},
-												"source": {
-													"type": "string"
-												},
+												"source": {"$ref": "util.json#/$defs/source"},
 												"hash": {
 													"description": "Optional; overrides the href hash for hover handlers.",
 													"type": "string"
@@ -2063,7 +2061,7 @@
 								"tag": {"$ref": "util.json#/$defs/tagNameStats"},
 								"name": {"type": "string"},
 								"displayName": {"type": "string"},
-								"source": {"type": "string"},
+								"source": {"$ref": "util.json#/$defs/source"},
 								"hash": {"type": "string"},
 								"style": {"$ref": "#/$defs/_entryDataStyle"},
 								"collapsed": {"const": true}
@@ -2083,7 +2081,7 @@
 								"prop": {"$ref": "util.json#/$defs/propNameStats"},
 								"name": {"type": "string"},
 								"displayName": {"type": "string"},
-								"source": {"type": "string"},
+								"source": {"$ref": "util.json#/$defs/source"},
 								"hash": {"type": "string"},
 								"style": {"$ref": "#/$defs/_entryDataStyle"},
 								"collapsed": {"const": true}

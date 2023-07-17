@@ -13,7 +13,7 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "../util.json#/$defs/source"
 					}
 				},
 				"required": [
@@ -99,7 +99,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "../util.json#/$defs/source"
 				},
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
@@ -111,7 +111,7 @@
 					"type": "string"
 				},
 				"classSource": {
-					"type": "string"
+					"$ref": "../util.json#/$defs/source"
 				},
 				"level": {
 					"type": "integer"
@@ -162,7 +162,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "../util.json#/$defs/source"
 				},
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
@@ -174,13 +174,13 @@
 					"type": "string"
 				},
 				"classSource": {
-					"type": "string"
+					"$ref": "../util.json#/$defs/source"
 				},
 				"subclassShortName": {
 					"type": "string"
 				},
 				"subclassSource": {
-					"type": "string"
+					"$ref": "../util.json#/$defs/source"
 				},
 				"level": {
 					"type": "integer"
@@ -325,7 +325,7 @@
 							"type": "string"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "../util.json#/$defs/source"
 						},
 						"className": {
 							"description": "The name of the class this subclass belongs to.",
@@ -333,7 +333,7 @@
 						},
 						"classSource": {
 							"description": "The source of the class this subclass belongs to (defaults to PHB).",
-							"type": "string"
+							"$ref": "../util.json#/$defs/source"
 						},
 						"isReprinted": {
 							"type": "boolean"
@@ -450,7 +450,7 @@
 							"type": "string"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "../util.json#/$defs/source"
 						},
 						"className": {
 							"description": "The name of the class this subclass belongs to.",
@@ -458,7 +458,7 @@
 						},
 						"classSource": {
 							"description": "The source of the class this subclass belongs to (defaults to PHB).",
-							"type": "string"
+							"$ref": "../util.json#/$defs/source"
 						},
 						"isReprinted": {
 							"type": "boolean"
@@ -561,7 +561,7 @@
 									"type": "string"
 								},
 								"source": {
-									"type": "string"
+									"$ref": "../util.json#/$defs/source"
 								},
 								"pantheon": {
 									"description": "Used in deity data",
@@ -577,7 +577,7 @@
 								},
 								"classSource": {
 									"description": "Used in subclass data",
-									"type": "string"
+									"$ref": "../util.json#/$defs/source"
 								},
 								"_mod": {
 									"$ref": "../util.json#/$defs/_modObject"
@@ -589,7 +589,7 @@
 											"type": "string"
 										},
 										"source": {
-											"type": "string"
+											"$ref": "../util.json#/$defs/source"
 										}
 									},
 									"required": [
@@ -630,7 +630,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "../util.json#/$defs/source"
 				},
 				"className": {
 					"description": "The name of the class this subclass belongs to.",
@@ -638,7 +638,7 @@
 				},
 				"classSource": {
 					"description": "The source of the class this subclass belongs to (defaults to PHB).",
-					"type": "string"
+					"$ref": "../util.json#/$defs/source"
 				},
 				"isReprinted": {
 					"type": "boolean"
@@ -804,7 +804,7 @@
 							"type": "string"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "../util.json#/$defs/source"
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
@@ -1069,7 +1069,7 @@
 										"$ref": "../util.json#/$defs/page"
 									},
 									"source": {
-										"type": "string"
+										"$ref": "../util.json#/$defs/source"
 									},
 									"type": {
 										"type": "string"
@@ -1101,7 +1101,7 @@
 							"type": "string"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "../util.json#/$defs/source"
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
@@ -1366,7 +1366,7 @@
 										"$ref": "../util.json#/$defs/page"
 									},
 									"source": {
-										"type": "string"
+										"$ref": "../util.json#/$defs/source"
 									},
 									"type": {
 										"type": "string"
@@ -1389,7 +1389,7 @@
 									"type": "string"
 								},
 								"source": {
-									"type": "string"
+									"$ref": "../util.json#/$defs/source"
 								},
 								"pantheon": {
 									"description": "Used in deity data",
@@ -1405,7 +1405,7 @@
 								},
 								"classSource": {
 									"description": "Used in subclass data",
-									"type": "string"
+									"$ref": "../util.json#/$defs/source"
 								},
 								"_mod": {
 									"$ref": "../util.json#/$defs/_modObject"
@@ -1417,7 +1417,7 @@
 											"type": "string"
 										},
 										"source": {
-											"type": "string"
+											"$ref": "../util.json#/$defs/source"
 										}
 									},
 									"required": [
@@ -1456,7 +1456,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "../util.json#/$defs/source"
 				},
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
@@ -1721,7 +1721,7 @@
 								"$ref": "../util.json#/$defs/page"
 							},
 							"source": {
-								"type": "string"
+								"$ref": "../util.json#/$defs/source"
 							},
 							"type": {
 								"type": "string"

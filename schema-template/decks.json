@@ -10,7 +10,7 @@
 			"properties": {
 				"name": {"type": "string"},
 				"alias": {"$ref": "util.json#/$defs/alias"},
-				"source": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
 
 				"page": {"$ref": "util.json#/$defs/page"},
 				"srd": {"$ref": "util.json#/$defs/srd"},
@@ -92,7 +92,7 @@
 			"properties": {
 				"name": {"type": "string"},
 				"alias": {"$ref": "util.json#/$defs/alias"},
-				"source": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"set": {"type": "string"},
 
 				"page": {"$ref": "util.json#/$defs/page"},

@@ -15,7 +15,7 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "util.json#/$defs/source"
 					},
 					"images": {
 						"type": "array",

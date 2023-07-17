@@ -146,9 +146,7 @@
 					"name": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {"$ref": "util.json#/$defs/page"},
 					"type": {
 						"type": "integer"
@@ -251,9 +249,7 @@
 					"name": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {"$ref": "util.json#/$defs/page"},
 					"crMin": {
 						"$ref": "#/$defs/cr"
@@ -306,9 +302,7 @@
 					"name": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {"$ref": "util.json#/$defs/page"},
 					"crMin": {
 						"$ref": "#/$defs/cr"
@@ -376,9 +370,7 @@
 					"name": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {"$ref": "util.json#/$defs/page"},
 					"type": {
 						"type": "string"
@@ -409,9 +401,7 @@
 					"name": {
 						"type": "string"
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {"$ref": "util.json#/$defs/page"},
 					"coins": {
 						"$ref": "#/$defs/coin"

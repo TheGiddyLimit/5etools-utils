@@ -15,7 +15,7 @@
 						"type": "string"
 					},
 					"source": {
-						"type": "string"
+						"$ref": "util.json#/$defs/source"
 					},
 					"raceName": {
 						"description": "The full name of the race, with subrace parts/etc. applied.",
@@ -23,7 +23,7 @@
 					},
 					"raceSource": {
 						"description": "The source of the subrace or race.",
-						"type": "string"
+						"$ref": "util.json#/$defs/source"
 					},
 					"system": {
 						"$ref": "util.json#/$defs/foundrySystemObject"

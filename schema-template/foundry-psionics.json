@@ -16,10 +16,10 @@
 				"type": "object",
 				"properties": {
 					"name": {"type": "string"},
-					"source": {"type": "string"},
+					"source": {"$ref": "util.json#/$defs/source"},
 
 					"psionicName": {"type": "string"},
-					"psionicSource": {"type": "string"},
+					"psionicSource": {"$ref": "util.json#/$defs/source"},
 
 					"system": {"$ref": "util.json#/$defs/foundrySystemObject"},
 

@@ -81,7 +81,7 @@
 					"type": "string"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -115,7 +115,7 @@
 					"const": "section"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -163,7 +163,7 @@
 					"const": "entries"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -211,7 +211,7 @@
 					"const": "quote"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -276,7 +276,7 @@
 					"const": "inline"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -318,7 +318,7 @@
 					"const": "inlineBlock"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -360,7 +360,7 @@
 					"const": "options"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -504,7 +504,7 @@
 					"const": "table"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -631,7 +631,7 @@
 					"const": "tableGroup"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -673,7 +673,7 @@
 					"const": "row"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -718,7 +718,7 @@
 					"const": "cell"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -797,7 +797,7 @@
 					"const": "list"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -859,7 +859,7 @@
 					"const": "bonus"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -898,7 +898,7 @@
 					"const": "bonusSpeed"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -937,7 +937,7 @@
 					"const": "dice"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1001,7 +1001,7 @@
 					"const": "abilityDc"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1053,7 +1053,7 @@
 					"const": "abilityAttackMod"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1105,7 +1105,7 @@
 					"const": "abilityGeneric"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1158,7 +1158,7 @@
 					"const": "link"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1251,7 +1251,7 @@
 											"$ref": "util.json#/$defs/page"
 										},
 										"source": {
-											"type": "string"
+											"$ref": "util.json#/$defs/source"
 										},
 										"hash": {
 											"description": "Optional; overrides the href hash for hover handlers.",
@@ -1310,7 +1310,7 @@
 					"const": "optfeature"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1355,7 +1355,7 @@
 					"const": "inset"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1400,7 +1400,7 @@
 					"const": "insetReadaloud"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1445,7 +1445,7 @@
 					"const": "variant"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1488,7 +1488,7 @@
 					"const": "variantInner"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1531,7 +1531,7 @@
 					"const": "variantSub"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1576,7 +1576,7 @@
 							"const": "item"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -1621,7 +1621,7 @@
 							"const": "item"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -1671,7 +1671,7 @@
 					"const": "itemSub"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1714,7 +1714,7 @@
 					"const": "itemSpell"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1754,7 +1754,7 @@
 					"const": "image"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1945,7 +1945,7 @@
 					"const": "gallery"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -1987,7 +1987,7 @@
 					"const": "actions"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -2030,7 +2030,7 @@
 					"const": "attack"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -2088,7 +2088,7 @@
 					"const": "flowchart"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -2130,7 +2130,7 @@
 					"const": "flowBlock"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -2171,7 +2171,7 @@
 					"const": "ingredient"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -3062,7 +3062,7 @@
 							"const": "statblock"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -3114,7 +3114,7 @@
 							"const": "statblock"
 						},
 						"source": {
-							"type": "string"
+							"$ref": "util.json#/$defs/source"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -3230,7 +3230,7 @@
 					"const": "spellcasting"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -3504,7 +3504,7 @@
 					"const": "wrapper"
 				},
 				"source": {
-					"type": "string"
+					"$ref": "util.json#/$defs/source"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"

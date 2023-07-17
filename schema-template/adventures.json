@@ -19,12 +19,11 @@
 						"type": "string",
 						"description": "An ID that will be used to refer to this adventure in tags."
 					},
-					"source": {
-						"type": "string"
-					},
+					"source": {"$ref": "util.json#/$defs/source"},
 					"parentSource": {
 						"type": "string",
-						"description": "Used for books that contain multiple adventures, e.g. TftYP"
+						"description": "Used for books that contain multiple adventures, e.g. TftYP",
+						"$ref": "util.json#/$defs/source"
 					},
 					"group": {
 						"description": "The group under which this adventure should be listed in the navbar.",

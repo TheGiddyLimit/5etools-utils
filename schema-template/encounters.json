@@ -52,7 +52,7 @@
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
-				"source": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
 				"tables": {
 					"type": "array",
 					"items": {
