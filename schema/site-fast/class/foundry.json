@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-class.json",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"type": "object",
 	"$defs": {
 		"entryDataObject": {
@@ -56,12 +56,28 @@
 			"type": "array",
 			"items": {
 				"type": "object",
+				"additionalProperties": false,
 				"properties": {
 					"name": {
 						"type": "string"
 					},
 					"source": {
 						"$ref": "../util.json#/$defs/source"
+					},
+					"system": {
+						"$ref": "../util.json#/$defs/foundrySystemObject"
+					},
+					"effects": {
+						"type": "array",
+						"items": {
+							"$ref": "../util.json#/$defs/foundryEffectObject"
+						}
+					},
+					"flags": {
+						"$ref": "../util.json#/$defs/foundryFlagsObject"
+					},
+					"img": {
+						"type": "string"
 					},
 					"entries": {
 						"type": "array",
@@ -71,12 +87,6 @@
 					},
 					"entryData": {
 						"$ref": "#/$defs/entryDataObject"
-					},
-					"system": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
-					},
-					"flags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
 					},
 					"advancement": {
 						"$ref": "../util.json#/$defs/foundryAdvancementsArray"
@@ -105,12 +115,6 @@
 					"actorTokenMod": {
 						"type": "object"
 					},
-					"effects": {
-						"$ref": "../util.json#/$defs/foundryEffectsArray"
-					},
-					"img": {
-						"type": "string"
-					},
 					"subEntities": {
 						"$ref": "../util.json#/$defs/foundrySubEntitiesObject"
 					}
@@ -118,8 +122,7 @@
 				"required": [
 					"name",
 					"source"
-				],
-				"additionalProperties": false
+				]
 			},
 			"minItems": 1,
 			"uniqueItems": true
@@ -128,12 +131,34 @@
 			"type": "array",
 			"items": {
 				"type": "object",
+				"required": [
+					"name",
+					"source",
+					"className",
+					"classSource"
+				],
+				"additionalProperties": false,
 				"properties": {
 					"name": {
 						"type": "string"
 					},
 					"source": {
 						"$ref": "../util.json#/$defs/source"
+					},
+					"system": {
+						"$ref": "../util.json#/$defs/foundrySystemObject"
+					},
+					"effects": {
+						"type": "array",
+						"items": {
+							"$ref": "../util.json#/$defs/foundryEffectObject"
+						}
+					},
+					"flags": {
+						"$ref": "../util.json#/$defs/foundryFlagsObject"
+					},
+					"img": {
+						"type": "string"
 					},
 					"className": {
 						"type": "string"
@@ -150,12 +175,6 @@
 					"entryData": {
 						"$ref": "#/$defs/entryDataObject"
 					},
-					"system": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
-					},
-					"flags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
-					},
 					"advancement": {
 						"$ref": "../util.json#/$defs/foundryAdvancementsArray"
 					},
@@ -183,23 +202,10 @@
 					"actorTokenMod": {
 						"type": "object"
 					},
-					"effects": {
-						"$ref": "../util.json#/$defs/foundryEffectsArray"
-					},
-					"img": {
-						"type": "string"
-					},
 					"subEntities": {
 						"$ref": "../util.json#/$defs/foundrySubEntitiesObject"
 					}
-				},
-				"required": [
-					"name",
-					"source",
-					"className",
-					"classSource"
-				],
-				"additionalProperties": false
+				}
 			},
 			"minItems": 1,
 			"uniqueItems": true
@@ -208,12 +214,35 @@
 			"type": "array",
 			"items": {
 				"type": "object",
+				"required": [
+					"name",
+					"source",
+					"className",
+					"classSource",
+					"level"
+				],
+				"additionalProperties": false,
 				"properties": {
 					"name": {
 						"type": "string"
 					},
 					"source": {
 						"$ref": "../util.json#/$defs/source"
+					},
+					"system": {
+						"$ref": "../util.json#/$defs/foundrySystemObject"
+					},
+					"effects": {
+						"type": "array",
+						"items": {
+							"$ref": "../util.json#/$defs/foundryEffectObject"
+						}
+					},
+					"flags": {
+						"$ref": "../util.json#/$defs/foundryFlagsObject"
+					},
+					"img": {
+						"type": "string"
 					},
 					"className": {
 						"type": "string"
@@ -233,12 +262,6 @@
 					"entryData": {
 						"$ref": "#/$defs/entryDataObject"
 					},
-					"system": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
-					},
-					"flags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
-					},
 					"chooseSystem": {
 						"type": "array",
 						"items": {
@@ -263,24 +286,10 @@
 					"actorTokenMod": {
 						"type": "object"
 					},
-					"effects": {
-						"$ref": "../util.json#/$defs/foundryEffectsArray"
-					},
-					"img": {
-						"type": "string"
-					},
 					"subEntities": {
 						"$ref": "../util.json#/$defs/foundrySubEntitiesObject"
 					}
-				},
-				"required": [
-					"name",
-					"source",
-					"className",
-					"classSource",
-					"level"
-				],
-				"additionalProperties": false
+				}
 			},
 			"minItems": 1,
 			"uniqueItems": true
@@ -289,12 +298,37 @@
 			"type": "array",
 			"items": {
 				"type": "object",
+				"required": [
+					"name",
+					"source",
+					"className",
+					"classSource",
+					"level",
+					"subclassShortName",
+					"subclassSource"
+				],
+				"additionalProperties": false,
 				"properties": {
 					"name": {
 						"type": "string"
 					},
 					"source": {
 						"$ref": "../util.json#/$defs/source"
+					},
+					"system": {
+						"$ref": "../util.json#/$defs/foundrySystemObject"
+					},
+					"effects": {
+						"type": "array",
+						"items": {
+							"$ref": "../util.json#/$defs/foundryEffectObject"
+						}
+					},
+					"flags": {
+						"$ref": "../util.json#/$defs/foundryFlagsObject"
+					},
+					"img": {
+						"type": "string"
 					},
 					"className": {
 						"type": "string"
@@ -320,12 +354,6 @@
 					"entryData": {
 						"$ref": "#/$defs/entryDataObject"
 					},
-					"system": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
-					},
-					"flags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
-					},
 					"chooseSystem": {
 						"type": "array",
 						"items": {
@@ -350,26 +378,10 @@
 					"actorTokenMod": {
 						"type": "object"
 					},
-					"effects": {
-						"$ref": "../util.json#/$defs/foundryEffectsArray"
-					},
-					"img": {
-						"type": "string"
-					},
 					"subEntities": {
 						"$ref": "../util.json#/$defs/foundrySubEntitiesObject"
 					}
-				},
-				"required": [
-					"name",
-					"source",
-					"className",
-					"classSource",
-					"level",
-					"subclassShortName",
-					"subclassSource"
-				],
-				"additionalProperties": false
+				}
 			},
 			"minItems": 1,
 			"uniqueItems": true

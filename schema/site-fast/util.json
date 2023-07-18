@@ -4263,34 +4263,43 @@
 			"minItems": 1,
 			"uniqueItems": true
 		},
+		"foundrySideDataGenericObject": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"system": {
+					"$ref": "#/$defs/foundrySystemObject"
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/foundryEffectObject"
+					}
+				},
+				"flags": {
+					"$ref": "util.json#/$defs/foundryFlagsObject"
+				},
+				"img": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"name",
+				"source"
+			],
+			"additionalProperties": false
+		},
 		"foundrySideDataGenericArray": {
 			"type": "array",
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {
-				"type": "object",
-				"properties": {
-					"name": {
-						"type": "string"
-					},
-					"source": {
-						"$ref": "util.json#/$defs/source"
-					},
-					"system": {
-						"$ref": "#/$defs/foundrySystemObject"
-					},
-					"effects": {
-						"type": "array",
-						"items": {
-							"$ref": "#/$defs/foundryEffectObject"
-						}
-					}
-				},
-				"required": [
-					"name",
-					"source"
-				],
-				"additionalProperties": false
+				"$ref": "#/$defs/foundrySideDataGenericObject"
 			}
 		},
 		"foundrySideDataGenericFeatureArray": {

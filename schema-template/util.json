@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.22",
+	"version": "1.13.23",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -3045,26 +3045,29 @@
 			"uniqueItems": true
 		},
 
+		"foundrySideDataGenericObject": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
+
+				"system": {"$ref": "#/$defs/foundrySystemObject"},
+				"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}},
+				"flags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
+				"img": {"type": "string"}
+			},
+			"required": [
+				"name",
+				"source"
+			],
+			"additionalProperties": false
+		},
+
 		"foundrySideDataGenericArray": {
 			"type": "array",
 			"minItems": 1,
 			"uniqueItems": true,
-			"items": {
-				"type": "object",
-				"properties": {
-					"name": {"type": "string"},
-					"source": {"$ref": "util.json#/$defs/source"},
-
-					"system": {"$ref": "#/$defs/foundrySystemObject"},
-
-					"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}}
-				},
-				"required": [
-					"name",
-					"source"
-				],
-				"additionalProperties": false
-			}
+			"items": {"$ref": "#/$defs/foundrySideDataGenericObject"}
 		},
 
 		"foundrySideDataGenericFeatureArray": {

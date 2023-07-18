@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-items.json",
-	"version": "1.2.0",
+	"version": "1.2.1",
 
 	"type": "object",
 
@@ -13,31 +13,25 @@
 			"uniqueItems": true,
 			"items": {
 				"type": "object",
-				"properties": {
-					"name": {"type": "string"},
-					"source": {"$ref": "util.json#/$defs/source"},
-
-					"system": {"$ref": "util.json#/$defs/foundrySystemObject"},
-
-					"flags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
-
-					"effects": {"$ref": "util.json#/$defs/foundryEffectsArray"},
-
-					"type": {
-						"type": "string",
-						"enum": [
-							"weapon",
-							"tool",
-							"consumable",
-							"equipment",
-							"container",
-							"loot"
-						]
+				"$$merge": [
+					{
+						"$ref": "util.json#/$defs/foundrySideDataGenericObject"
+					},
+					{
+						"properties": {
+							"type": {
+								"type": "string",
+								"enum": [
+									"weapon",
+									"tool",
+									"consumable",
+									"equipment",
+									"container",
+									"loot"
+								]
+							}
+						}
 					}
-				},
-				"required": [
-					"name",
-					"source"
 				],
 				"additionalProperties": false
 			}
