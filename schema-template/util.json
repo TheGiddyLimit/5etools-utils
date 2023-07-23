@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.26",
+	"version": "1.13.27",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -235,11 +235,11 @@
 					"deep speech": {"const": true},
 					"draconic": {"const": true},
 					"infernal": {"const": true},
-					"gith": true,
-					"gnomish":  true,
-					"goblin": true,
-					"halfling":  true,
-					"orc": true,
+					"gith": {"const": true},
+					"gnomish":  {"const": true},
+					"goblin": {"const": true},
+					"halfling":  {"const": true},
+					"orc": {"const": true},
 					"primordial": {"const": true},
 					"aquan": {"const": true},
 					"auran": {"const": true},
