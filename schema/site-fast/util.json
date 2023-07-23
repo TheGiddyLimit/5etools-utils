@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.25",
+	"version": "1.13.26",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -208,6 +208,9 @@
 						"type": "integer"
 					},
 					"anyStandard": {
+						"type": "integer"
+					},
+					"anyExotic": {
 						"type": "integer"
 					},
 					"abyssal": {
@@ -640,6 +643,9 @@
 					"anyStandardLanguage": {
 						"type": "integer"
 					},
+					"anyExoticLanguage": {
+						"type": "integer"
+					},
 					"abyssal": {
 						"const": true
 					},
@@ -902,7 +908,8 @@
 															"anyArtisansTool",
 															"anyMusicalInstrument",
 															"anyLanguage",
-															"anyStandardLanguage"
+															"anyStandardLanguage",
+															"anyExoticLanguage"
 														]
 													}
 												]
