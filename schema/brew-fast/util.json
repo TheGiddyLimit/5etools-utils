@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.26",
+	"version": "1.13.28",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -44,6 +44,11 @@
 			"type": "string",
 			"description": "An identifying string, as seen in the JSON in \"source\" fields.",
 			"pattern": "^[-a-zA-Z0-9 :&+!]+$"
+		},
+		"sourceJson": {
+			"type": "string",
+			"description": "An identifying string, as seen in the JSON in \"source\" fields.",
+			"pattern": "^(?!UA|XUA)[-a-zA-Z0-9 :&+!]+$"
 		},
 		"page": {
 			"oneOf": [
@@ -241,11 +246,21 @@
 					"infernal": {
 						"const": true
 					},
-					"gith": true,
-					"gnomish": true,
-					"goblin": true,
-					"halfling": true,
-					"orc": true,
+					"gith": {
+						"const": true
+					},
+					"gnomish": {
+						"const": true
+					},
+					"goblin": {
+						"const": true
+					},
+					"halfling": {
+						"const": true
+					},
+					"orc": {
+						"const": true
+					},
 					"primordial": {
 						"const": true
 					},

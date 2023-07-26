@@ -38,7 +38,7 @@
 						"description": "A set of properties describing a \"source.\" A source could be, for example, a homebrew PDF, book, or blog post.",
 						"properties": {
 							"json": {
-								"$ref": "util.json#/$defs/source"
+								"$ref": "util.json#/$defs/sourceJson"
 							},
 							"abbreviation": {
 								"type": "string",

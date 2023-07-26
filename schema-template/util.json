@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.27",
+	"version": "1.13.28",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -50,6 +50,17 @@
 			"type": "string",
 			"description": "An identifying string, as seen in the JSON in \"source\" fields.",
 			"pattern": "^[-a-zA-Z0-9 :&+!]+$"
+		},
+
+		"sourceJson": {
+			"$$merge": [
+				{
+					"$ref": "#/$defs/source"
+				},
+				{
+					"pattern": "^(?!UA|XUA)[-a-zA-Z0-9 :&+!]+$"
+				}
+			]
 		},
 
 		"page": {
