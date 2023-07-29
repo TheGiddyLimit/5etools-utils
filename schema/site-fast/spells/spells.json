@@ -204,20 +204,7 @@
 					"$ref": "../util.json#/$defs/tagsConditions"
 				},
 				"savingThrow": {
-					"type": "array",
-					"minItems": 1,
-					"uniqueItems": true,
-					"items": {
-						"type": "string",
-						"enum": [
-							"strength",
-							"constitution",
-							"dexterity",
-							"intelligence",
-							"wisdom",
-							"charisma"
-						]
-					}
+					"$ref": "../util.json#/$defs/tagsSavingThrow"
 				},
 				"abilityCheck": {
 					"type": "array",
@@ -540,20 +527,7 @@
 							"$ref": "../util.json#/$defs/tagsConditions"
 						},
 						"savingThrow": {
-							"type": "array",
-							"minItems": 1,
-							"uniqueItems": true,
-							"items": {
-								"type": "string",
-								"enum": [
-									"strength",
-									"constitution",
-									"dexterity",
-									"intelligence",
-									"wisdom",
-									"charisma"
-								]
-							}
+							"$ref": "../util.json#/$defs/tagsSavingThrow"
 						},
 						"abilityCheck": {
 							"type": "array",
@@ -884,20 +858,7 @@
 							"$ref": "../util.json#/$defs/tagsConditions"
 						},
 						"savingThrow": {
-							"type": "array",
-							"minItems": 1,
-							"uniqueItems": true,
-							"items": {
-								"type": "string",
-								"enum": [
-									"strength",
-									"constitution",
-									"dexterity",
-									"intelligence",
-									"wisdom",
-									"charisma"
-								]
-							}
+							"$ref": "../util.json#/$defs/tagsSavingThrow"
 						},
 						"abilityCheck": {
 							"type": "array",

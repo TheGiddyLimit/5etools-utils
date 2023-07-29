@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.28",
+	"version": "1.13.29",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -2050,6 +2050,18 @@
 						"unconscious"
 					]
 				}
+			}
+		},
+
+		"tagsSavingThrow": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"type": "string",
+				"enum": [
+					"strength", "constitution", "dexterity", "intelligence", "wisdom", "charisma"
+				]
 			}
 		},
 

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.17",
+	"version": "1.21.18",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -757,7 +757,12 @@
 						"source": {
 							"$ref": "../util.json#/$defs/source"
 						}
-					}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source"
+					]
 				},
 				"legendaryActions": {
 					"type": "number"
@@ -1149,6 +1154,15 @@
 				},
 				"conditionInflictSpell": {
 					"$ref": "../util.json#/$defs/tagsConditions"
+				},
+				"savingThrowForced": {
+					"$ref": "../util.json#/$defs/tagsSavingThrow"
+				},
+				"savingThrowForcedLegendary": {
+					"$ref": "../util.json#/$defs/tagsSavingThrow"
+				},
+				"savingThrowForcedSpell": {
+					"$ref": "../util.json#/$defs/tagsSavingThrow"
 				},
 				"footer": {
 					"description": "Intended for homebrew use only.",
@@ -1921,7 +1935,12 @@
 								"source": {
 									"$ref": "../util.json#/$defs/source"
 								}
-							}
+							},
+							"additionalProperties": false,
+							"required": [
+								"name",
+								"source"
+							]
 						},
 						"legendaryActions": {
 							"type": "number"
@@ -2313,6 +2332,15 @@
 						},
 						"conditionInflictSpell": {
 							"$ref": "../util.json#/$defs/tagsConditions"
+						},
+						"savingThrowForced": {
+							"$ref": "../util.json#/$defs/tagsSavingThrow"
+						},
+						"savingThrowForcedLegendary": {
+							"$ref": "../util.json#/$defs/tagsSavingThrow"
+						},
+						"savingThrowForcedSpell": {
+							"$ref": "../util.json#/$defs/tagsSavingThrow"
 						},
 						"footer": {
 							"description": "Intended for homebrew use only.",
@@ -3099,7 +3127,12 @@
 								"source": {
 									"$ref": "../util.json#/$defs/source"
 								}
-							}
+							},
+							"additionalProperties": false,
+							"required": [
+								"name",
+								"source"
+							]
 						},
 						"legendaryActions": {
 							"type": "number"
@@ -3491,6 +3524,15 @@
 						},
 						"conditionInflictSpell": {
 							"$ref": "../util.json#/$defs/tagsConditions"
+						},
+						"savingThrowForced": {
+							"$ref": "../util.json#/$defs/tagsSavingThrow"
+						},
+						"savingThrowForcedLegendary": {
+							"$ref": "../util.json#/$defs/tagsSavingThrow"
+						},
+						"savingThrowForcedSpell": {
+							"$ref": "../util.json#/$defs/tagsSavingThrow"
 						},
 						"footer": {
 							"description": "Intended for homebrew use only.",
