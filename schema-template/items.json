@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.13.4",
+	"version": "1.13.5",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -462,8 +462,8 @@
 				"miscTags": {
 					"type": "array",
 					"items": {
-						"description": "CF/W: Creates Food/Water",
-						"enum": ["CF/W"]
+						"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
+						"enum": ["CF/W", "TT"]
 					}
 				},
 				"mastery": {"$ref": "items-shared.json#/$defs/itemMastery"},
