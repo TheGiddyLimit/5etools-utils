@@ -137,10 +137,12 @@ class SchemaPreprocessor {
 	}
 
 	static _recurse_$$ifBase ({root, obj, k, v, compileMode, isFast, dirSource}) {
-		Object.entries(v)
-			.forEach(([kCond, vCond]) => {
+		const keysCond = Object.keys(v);
+
+		keysCond
+			.forEach(kCond => {
 				if (obj[kCond] === undefined) {
-					obj[kCond] = vCond;
+					obj[kCond] = v[kCond];
 					return;
 				}
 
@@ -151,7 +153,10 @@ class SchemaPreprocessor {
 
 		delete obj[k];
 
-		this._recurse({root, obj, compileMode, isFast, dirSource});
+		keysCond
+			.forEach(kCond => {
+				this._recurse({root, obj: obj[kCond], compileMode, isFast, dirSource});
+			});
 	}
 
 	static _recurse_$$switch_key ({root, obj, k, v, compileMode, isFast, dirSource}) {
