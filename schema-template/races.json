@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.3",
+	"version": "1.12.4",
 	"type": "object",
 
 	"$defs": {
@@ -156,8 +156,13 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"},
 				"_versions": {"$ref": "util.json#/$defs/versionsArray"},
+				"$$if": {
+					"modes": ["brew", "ua"],
+					"value": {
+						"fluff": {"$ref": "#/$defs/fluff"}
+					}
+				},
 				"$$ifBrew": {
-					"fluff": {"$ref": "#/$defs/fluff"},
 					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
 					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
 					"foundryEffects": {"$ref": "util.json#/$defs/foundryEffectsArray"},

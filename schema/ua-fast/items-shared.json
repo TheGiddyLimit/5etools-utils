@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -201,7 +201,7 @@
 			"description": "2H: Two-Handed\n A: Ammunition\n AF: Ammunition (futuristic)\n BF: Burst Fire\n EM: Eldritch Machine\n F: Finesse\n H: Heavy\n L: Light\n LD: Loading\n OTH: Other\n R: Reach\n RLD: Reload\n S: Special\n T: Thrown\n V: Versatile",
 			"items": {
 				"type": "string",
-				"enum": [
+				"examples": [
 					"2H",
 					"A",
 					"AF",

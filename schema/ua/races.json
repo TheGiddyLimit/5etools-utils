@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.3",
+	"version": "1.12.4",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -222,6 +222,9 @@
 				},
 				"_versions": {
 					"$ref": "util.json#/$defs/versionsArray"
+				},
+				"fluff": {
+					"$ref": "#/$defs/fluff"
 				}
 			},
 			"additionalProperties": false
@@ -444,6 +447,9 @@
 				},
 				"_versions": {
 					"$ref": "util.json#/$defs/versionsArray"
+				},
+				"fluff": {
+					"$ref": "#/$defs/fluff"
 				},
 				"raceName": {
 					"type": "string"
@@ -757,6 +763,9 @@
 						},
 						"_versions": {
 							"$ref": "util.json#/$defs/versionsArray"
+						},
+						"fluff": {
+							"$ref": "#/$defs/fluff"
 						}
 					},
 					"additionalProperties": false,
@@ -983,6 +992,9 @@
 						},
 						"_versions": {
 							"$ref": "util.json#/$defs/versionsArray"
+						},
+						"fluff": {
+							"$ref": "#/$defs/fluff"
 						},
 						"_copy": {
 							"type": "object",
@@ -1271,6 +1283,9 @@
 						"_versions": {
 							"$ref": "util.json#/$defs/versionsArray"
 						},
+						"fluff": {
+							"$ref": "#/$defs/fluff"
+						},
 						"raceName": {
 							"type": "string"
 						},
@@ -1507,6 +1522,9 @@
 						},
 						"_versions": {
 							"$ref": "util.json#/$defs/versionsArray"
+						},
+						"fluff": {
+							"$ref": "#/$defs/fluff"
 						},
 						"raceName": {
 							"type": "string"

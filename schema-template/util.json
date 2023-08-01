@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.29",
+	"version": "1.13.30",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -224,6 +224,7 @@
 				"auran",
 				"celestial",
 				"common",
+				"common sign language",
 				"deep speech",
 				"draconic",
 				"druidic",
@@ -258,6 +259,7 @@
 					"abyssal": {"const": true},
 					"celestial": {"const": true},
 					"common": {"const": true},
+					"common sign language": {"const": true},
 					"deep speech": {"const": true},
 					"draconic": {"const": true},
 					"infernal": {"const": true},
@@ -566,15 +568,29 @@
 
 					"abyssal": {"const": true},
 					"celestial": {"const": true},
+					"common": {"const": true},
+					"common sign language": {"const": true},
 					"deep speech": {"const": true},
 					"draconic": {"const": true},
 					"infernal": {"const": true},
+					"gith": {"const": true},
+					"gnomish":  {"const": true},
+					"goblin": {"const": true},
+					"halfling":  {"const": true},
+					"orc": {"const": true},
 					"primordial": {"const": true},
+					"aquan": {"const": true},
+					"auran": {"const": true},
+					"ignan": {"const": true},
+					"terran": {"const": true},
 					"sylvan": {"const": true},
 					"undercommon": {"const": true},
 					"dwarvish": {"const": true},
 					"elvish": {"const": true},
 					"giant": {"const": true},
+					"other": {"const": true},
+					"druidic": {"const": true},
+					"thieves' cant": {"const": true},
 					"otherLanguage": {"const": true},
 
 
@@ -1448,7 +1464,7 @@
 			"type": "string",
 			"$$switch_key": {
 				"key_site": "enum",
-				"key_ua": "enum",
+				"key_ua": "examples",
 				"key_brew": "examples",
 				"value": [
 					"aberration",

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.4",
+	"version": "2.11.5",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -428,6 +428,30 @@
 						},
 						"additionalSpells": {
 							"$ref": "../util.json#/$defs/additionalSpellsArray"
+						},
+						"subclassSpells": {
+							"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
+							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
+							"items": {
+								"$ref": "../util.json#/$defs/spellListSpellRef"
+							}
+						},
+						"subSubclassSpells": {
+							"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
+							"type": "object",
+							"patternProperties": {
+								".*": {
+									"type": "array",
+									"description": "For example, a druid circle, religious order, or other sub-subclass name",
+									"minItems": 1,
+									"uniqueItems": true,
+									"items": {
+										"$ref": "../util.json#/$defs/spellListSpellRef"
+									}
+								}
+							}
 						}
 					},
 					"additionalProperties": false,
@@ -553,6 +577,30 @@
 						},
 						"additionalSpells": {
 							"$ref": "../util.json#/$defs/additionalSpellsArray"
+						},
+						"subclassSpells": {
+							"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
+							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
+							"items": {
+								"$ref": "../util.json#/$defs/spellListSpellRef"
+							}
+						},
+						"subSubclassSpells": {
+							"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
+							"type": "object",
+							"patternProperties": {
+								".*": {
+									"type": "array",
+									"description": "For example, a druid circle, religious order, or other sub-subclass name",
+									"minItems": 1,
+									"uniqueItems": true,
+									"items": {
+										"$ref": "../util.json#/$defs/spellListSpellRef"
+									}
+								}
+							}
 						},
 						"_copy": {
 							"type": "object",
@@ -733,6 +781,30 @@
 				},
 				"additionalSpells": {
 					"$ref": "../util.json#/$defs/additionalSpellsArray"
+				},
+				"subclassSpells": {
+					"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "../util.json#/$defs/spellListSpellRef"
+					}
+				},
+				"subSubclassSpells": {
+					"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
+					"type": "object",
+					"patternProperties": {
+						".*": {
+							"type": "array",
+							"description": "For example, a druid circle, religious order, or other sub-subclass name",
+							"minItems": 1,
+							"uniqueItems": true,
+							"items": {
+								"$ref": "../util.json#/$defs/spellListSpellRef"
+							}
+						}
+					}
 				}
 			},
 			"additionalProperties": false
@@ -1084,6 +1156,15 @@
 						},
 						"additionalSpells": {
 							"$ref": "../util.json#/$defs/additionalSpellsArray"
+						},
+						"classSpells": {
+							"description": "Homebrew use only",
+							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
+							"items": {
+								"$ref": "../util.json#/$defs/spellListSpellRef"
+							}
 						}
 					},
 					"additionalProperties": false,
@@ -1381,6 +1462,15 @@
 						},
 						"additionalSpells": {
 							"$ref": "../util.json#/$defs/additionalSpellsArray"
+						},
+						"classSpells": {
+							"description": "Homebrew use only",
+							"type": "array",
+							"minItems": 1,
+							"uniqueItems": true,
+							"items": {
+								"$ref": "../util.json#/$defs/spellListSpellRef"
+							}
 						},
 						"_copy": {
 							"type": "object",
@@ -1736,6 +1826,15 @@
 				},
 				"additionalSpells": {
 					"$ref": "../util.json#/$defs/additionalSpellsArray"
+				},
+				"classSpells": {
+					"description": "Homebrew use only",
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "../util.json#/$defs/spellListSpellRef"
+					}
 				}
 			},
 			"additionalProperties": false

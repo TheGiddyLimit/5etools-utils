@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.6",
+	"version": "1.9.7",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -322,6 +322,26 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"groups": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"source": {
+								"$ref": "../util.json#/$defs/source"
+							}
+						},
+						"required": [
+							"name",
+							"source"
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				}
 			},
 			"additionalProperties": false
@@ -645,6 +665,26 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"groups": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"source": {
+										"$ref": "../util.json#/$defs/source"
+									}
+								},
+								"required": [
+									"name",
+									"source"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
 						}
 					},
 					"additionalProperties": false,
@@ -977,6 +1017,26 @@
 						"hasFluffImages": {
 							"type": "boolean"
 						},
+						"groups": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"source": {
+										"$ref": "../util.json#/$defs/source"
+									}
+								},
+								"required": [
+									"name",
+									"source"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
 						"_copy": {
 							"type": "object",
 							"properties": {
@@ -1051,7 +1111,7 @@
 				},
 				"unit": {
 					"type": "string",
-					"enum": [
+					"examples": [
 						"action",
 						"bonus",
 						"reaction",

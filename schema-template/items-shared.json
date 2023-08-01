@@ -4,7 +4,7 @@
 
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.0.2",
+	"version": "1.0.3",
 
 	"$defs" : {
 		"_itemModifySpeedEqual": {
@@ -153,7 +153,7 @@
 				"type": "string",
 				"$$switch_key": {
 					"key_site": "enum",
-					"key_ua": "enum",
+					"key_ua": "examples",
 					"key_brew": "examples",
 					"value": ["2H", "A", "AF", "BF", "EM", "F", "H", "L", "LD", "OTH", "R", "RLD", "S", "T", "V"]
 				}
