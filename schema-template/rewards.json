@@ -16,9 +16,10 @@
 				"legacy": {"$ref": "util.json#/$defs/legacy"},
 				"type": {
 					"type": "string",
-					"$$ifSiteElse_key": {
-						"keySite": "enum",
-						"keyBrew": "examples",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
 						"value": ["Blessing", "Boon", "Charm", "Draconic Gift", "Inhabitation", "Fragment of Suffering", "Other", "Piety Trait"]
 					}
 				},

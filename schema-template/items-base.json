@@ -27,12 +27,15 @@
 					"type": "string"
 				}
 			},
-			"$$ifSite": {
-				"required": [
-					"abbreviation",
-					"source",
-					"page"
-				]
+			"$$if": {
+				"modes": ["site", "ua"],
+				"value": {
+					"required": [
+						"abbreviation",
+						"source",
+						"page"
+					]
+				}
 			},
 			"$$ifBrew": {
 				"required": [
@@ -333,8 +336,11 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
-			"$$ifSite": {
-				"additionalProperties": false
+			"$$if": {
+				"modes": ["site", "ua"],
+				"value": {
+					"additionalProperties": false
+				}
 			},
 			"$$ifBrew": {
 				"additionalProperties": {

@@ -16,9 +16,10 @@
 				"type": {
 					"description": "D: Discipline\nT: Talent",
 					"type": "string",
-					"$$ifSiteElse_key": {
-						"keySite": "enum",
-						"keyBrew": "examples",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
 						"value": ["D", "T"]
 					}
 				},
@@ -27,9 +28,10 @@
 				},
 				"order": {
 					"type": "string",
-					"$$ifSiteElse_key": {
-						"keySite": "enum",
-						"keyBrew": "examples",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
 						"value": ["Avatar", "Awakened", "Immortal", "Nomad", "Wu Jen"]
 					}
 				},
@@ -64,9 +66,10 @@
 									},
 									"unit": {
 										"type": "string",
-										"$$ifSiteElse_key": {
-											"keySite": "enum",
-											"keyBrew": "examples",
+										"$$switch_key": {
+											"key_site": "enum",
+											"key_ua": "enum",
+											"key_brew": "examples",
 											"value": [
 												"hr",
 												"min",

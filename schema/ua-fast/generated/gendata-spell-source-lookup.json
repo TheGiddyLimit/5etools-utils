@@ -1,0 +1,230 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "gendata-spell-source-lookup.json",
+	"version": "1.0.0",
+	"type": "object",
+	"description": "Keys are lowercase'd source identifiers.",
+	"$defs": {
+		"leafDefinedInSources": {
+			"type": "object",
+			"properties": {
+				"definedInSources": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"uniqueItems": true
+				}
+			},
+			"required": [
+				"definedInSources"
+			],
+			"additionalProperties": false,
+			"minProperties": 1
+		},
+		"basicEntityMap": {
+			"type": "object",
+			"description": "Keys are source identifiers.",
+			"patternProperties": {
+				"^[-A-Za-z0-9]+$": {
+					"type": "object",
+					"description": "Keys are entity names.",
+					"patternProperties": {
+						"^[-A-Za-z0-9 '()/;]+$": {
+							"oneOf": [
+								{
+									"const": true
+								},
+								{
+									"$ref": "#/$defs/leafDefinedInSources"
+								}
+							]
+						}
+					},
+					"additionalProperties": false,
+					"minProperties": 1
+				}
+			},
+			"additionalProperties": false,
+			"minProperties": 1
+		}
+	},
+	"patternProperties": {
+		"^[-a-z0-9]+$": {
+			"type": "object",
+			"description": "Keys are lowercase'd spell names.",
+			"patternProperties": {
+				"^[-a-z0-9 '()/;]+$": {
+					"type": "object",
+					"properties": {
+						"class": {
+							"$ref": "#/$defs/basicEntityMap"
+						},
+						"feat": {
+							"$ref": "#/$defs/basicEntityMap"
+						},
+						"reward": {
+							"$ref": "#/$defs/basicEntityMap"
+						},
+						"background": {
+							"$ref": "#/$defs/basicEntityMap"
+						},
+						"charoption": {
+							"$ref": "#/$defs/basicEntityMap"
+						},
+						"subclass": {
+							"type": "object",
+							"description": "Keys are source identifiers.",
+							"patternProperties": {
+								"^[-A-Za-z0-9]+$": {
+									"type": "object",
+									"description": "Keys are class names.",
+									"patternProperties": {
+										"^[-A-Za-z0-9 '()/;]+$": {
+											"type": "object",
+											"description": "Keys are source identifiers.",
+											"patternProperties": {
+												"^[-A-Za-z0-9]+$": {
+													"type": "object",
+													"description": "Keys are subclass names.",
+													"patternProperties": {
+														"^[-A-Za-z0-9 '()/;]+$": {
+															"type": "object",
+															"properties": {
+																"name": {
+																	"type": "string"
+																},
+																"subSubclasses": {
+																	"type": "array",
+																	"items": {
+																		"type": "string"
+																	},
+																	"uniqueItems": true
+																}
+															},
+															"required": [
+																"name"
+															],
+															"additionalProperties": false,
+															"minProperties": 1
+														}
+													},
+													"additionalProperties": false,
+													"minProperties": 1
+												}
+											},
+											"additionalProperties": false,
+											"minProperties": 1
+										}
+									},
+									"additionalProperties": false,
+									"minProperties": 1
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						},
+						"classVariant": {
+							"type": "object",
+							"description": "Keys are source identifiers.",
+							"patternProperties": {
+								"^[-A-Za-z0-9]+$": {
+									"type": "object",
+									"description": "Keys are class names.",
+									"patternProperties": {
+										"^[-A-Za-z0-9 '()/;]+$": {
+											"$ref": "#/$defs/leafDefinedInSources"
+										}
+									},
+									"additionalProperties": false,
+									"minProperties": 1
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						},
+						"optionalfeature": {
+							"type": "object",
+							"description": "Keys are source identifiers.",
+							"patternProperties": {
+								"^[-A-Za-z0-9]+$": {
+									"type": "object",
+									"description": "Keys are optional feature names.",
+									"patternProperties": {
+										"^[-A-Za-z0-9 '()/;]+$": {
+											"type": "object",
+											"properties": {
+												"featureType": {
+													"type": "array",
+													"items": {
+														"$ref": "../util.json#/$defs/dataOptionalfeatureType"
+													},
+													"uniqueItems": true
+												}
+											},
+											"required": [
+												"featureType"
+											],
+											"additionalProperties": false,
+											"minProperties": 1
+										}
+									},
+									"additionalProperties": false,
+									"minProperties": 1
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						},
+						"race": {
+							"type": "object",
+							"description": "Keys are source identifiers.",
+							"patternProperties": {
+								"^[-A-Za-z0-9]+$": {
+									"type": "object",
+									"description": "Keys are race names.",
+									"patternProperties": {
+										"^[-A-Za-z0-9 '()/;]+$": {
+											"oneOf": [
+												{
+													"const": true
+												},
+												{
+													"type": "object",
+													"properties": {
+														"baseName": {
+															"type": "string"
+														},
+														"baseSource": {
+															"$ref": "../util.json#/$defs/source"
+														}
+													},
+													"required": [
+														"baseName",
+														"baseSource"
+													],
+													"additionalProperties": false,
+													"minProperties": 1
+												}
+											]
+										}
+									},
+									"additionalProperties": false,
+									"minProperties": 1
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						}
+					},
+					"additionalProperties": false,
+					"minProperties": 1
+				}
+			},
+			"additionalProperties": false,
+			"minProperties": 1
+		}
+	},
+	"additionalProperties": false,
+	"minProperties": 1
+}

@@ -1,0 +1,214 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "adventures.json",
+	"version": "1.10.11",
+	"type": "object",
+	"properties": {
+		"adventure": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"alias": {
+						"$ref": "util.json#/$defs/alias"
+					},
+					"id": {
+						"type": "string",
+						"description": "An ID that will be used to refer to this adventure in tags."
+					},
+					"source": {
+						"$ref": "util.json#/$defs/source"
+					},
+					"parentSource": {
+						"type": "string",
+						"description": "Used for books that contain multiple adventures, e.g. TftYP",
+						"$ref": "util.json#/$defs/source"
+					},
+					"group": {
+						"description": "The group under which this adventure should be listed in the navbar.",
+						"type": "string",
+						"enum": [
+							"supplement",
+							"supplement-alt",
+							"prerelease",
+							"homebrew",
+							"other"
+						]
+					},
+					"contents": {
+						"description": "The linked Table of Contents of the adventure.",
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"headers": {
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"oneOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "object",
+												"properties": {
+													"depth": {
+														"type": "integer"
+													},
+													"header": {
+														"type": "string"
+													},
+													"index": {
+														"description": "The relative index of this header in the current chapter, i.e. if \"Treasure\" appears twice and you wish the contents entry to link to the second instance, set the \"index\" to 1.",
+														"type": "integer"
+													}
+												},
+												"required": [
+													"header"
+												]
+											}
+										]
+									}
+								},
+								"ordinal": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string",
+											"enum": [
+												"chapter",
+												"appendix",
+												"part",
+												"episode",
+												"level"
+											]
+										},
+										"identifier": {
+											"type": [
+												"integer",
+												"string"
+											]
+										}
+									},
+									"additionalProperties": false,
+									"required": [
+										"type",
+										"identifier"
+									]
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"name"
+							]
+						}
+					},
+					"level": {
+						"description": "The character levels that the adventure ranges across.",
+						"oneOf": [
+							{
+								"type": "object",
+								"properties": {
+									"start": {
+										"type": "integer"
+									},
+									"end": {
+										"type": "integer"
+									}
+								},
+								"additionalProperties": false,
+								"required": [
+									"start",
+									"end"
+								]
+							},
+							{
+								"type": "object",
+								"properties": {
+									"custom": {
+										"type": "string"
+									}
+								},
+								"additionalProperties": false,
+								"required": [
+									"custom"
+								]
+							}
+						]
+					},
+					"published": {
+						"type": "string",
+						"format": "date",
+						"description": "The date of publication of the adventure, in the format YYYY-MM-DD (RFC3339)."
+					},
+					"publishedOrder": {
+						"description": "A sorting order for adventures within a single source.",
+						"type": "integer"
+					},
+					"coverUrl": {
+						"description": "A direct link to an image which should be 300 x 300px in size. Larger images will be centred and cropped.",
+						"type": "string"
+					},
+					"storyline": {
+						"type": "string",
+						"enum": [
+							"Starter Set",
+							"Tyranny of Dragons",
+							"Elemental Evil",
+							"Rage of Demons",
+							"Ravenloft",
+							"Storm King's Thunder",
+							"Tales from the Yawning Portal",
+							"Tomb of Annihilation",
+							"Waterdeep",
+							"Ravnica",
+							"Extra Life",
+							"Ghosts of Saltmarsh",
+							"Acquisitions Incorporated",
+							"Essentials Kit",
+							"Stranger Things",
+							"Baldur's Gate",
+							"Eberron",
+							"Rick and Morty",
+							"Wildemount",
+							"Icewind Dale",
+							"Mythic Odysseys of Theros",
+							"Candlekeep Mysteries",
+							"Adventures in the Forgotten Realms",
+							"The Wild Beyond the Witchlight",
+							"Ixalan",
+							"NERDS Restoring Harmony",
+							"Strixhaven",
+							"Critical Role",
+							"Journeys through the Radiant Citadel",
+							"Spelljammer",
+							"Dragonlance",
+							"Keys from the Golden Vault"
+						]
+					}
+				},
+				"additionalProperties": false,
+				"required": [
+					"name",
+					"id",
+					"source",
+					"contents",
+					"level",
+					"published",
+					"storyline",
+					"group"
+				]
+			}
+		}
+	},
+	"additionalProperties": false
+}

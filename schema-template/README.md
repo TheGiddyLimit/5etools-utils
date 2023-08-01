@@ -4,7 +4,7 @@ This directory contains extended pseudo JSON-schema files, designed to be compil
 
 ## Preprocessor Properties
 
-### `$$ifSite`/`$$ifBrew`
+### `$$ifSite`/`$$ifBrew`/`$$ifUa`
 
 The value will be merged into its parent iff the compilation mode matches the key, for example:
 
@@ -55,7 +55,7 @@ Outputs the following when compiled in "homebrew" mode:
 
 ---
 
-### `$$ifSite_item`/`$$ifBrew_item`
+### `$$ifSite_item`/`$$ifBrew_item`/`$$ifUa_item`
 
 Usable only in an array. The value will be included in the array iff the compilation mode matches the key, for example:
 
@@ -96,7 +96,7 @@ Outputs the following when compiled in "homebrew" mode:
 
 ---
 
-### `$$ifSiteElse_key`
+### `$$switch_key`
 
 The key/value will be merged into its parent with a key decided by the compilation mode, for example:
 
@@ -104,9 +104,10 @@ The key/value will be merged into its parent with a key decided by the compilati
 
 ```json
 {
-	"$$ifSiteElse_key": {
-		"keySite": "enum",
-		"keyBrew": "examples",
+	"$$switch_key": {
+		"key_site": "enum",
+		"key_ua": "enum",
+		"key_brew": "examples",
 		"value": [1]
 	}
 }
@@ -129,3 +130,35 @@ Outputs the following when compiled in "homebrew" mode:
 ```
 
 ---
+
+
+### `$$switch_if`
+
+The `value` will be merged into its parent iff the compilation mode matches one of the values in the `modes` array, for example:
+
+---
+
+```json
+{
+	"$$if": {
+		"modes": ["site", "ua"],
+		"value": {
+			"a": 1
+        }
+	}
+}
+```
+
+Outputs the following when compiled in "site" mode or "ua" mode:
+
+```json
+{
+  "a": 1
+}
+```
+
+and the following when compiled in "brew" mode:
+
+```json
+{}
+```

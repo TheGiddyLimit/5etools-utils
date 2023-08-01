@@ -294,12 +294,15 @@
 							"$ref": "#/$defs/subraceData"
 						},
 						{
-							"$$ifSite": {
-								"required": [
-									"source",
-									"raceName",
-									"raceSource"
-								]
+							"$$if": {
+								"modes": ["site", "ua"],
+								"value": {
+									"required": [
+										"source",
+										"raceName",
+										"raceSource"
+									]
+								}
 							},
 							"$$ifBrew": {
 								"required": [

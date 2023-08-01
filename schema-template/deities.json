@@ -26,9 +26,10 @@
 				},
 				"pantheon": {
 					"type": "string",
-					"$$ifSiteElse_key": {
-						"keySite": "enum",
-						"keyBrew": "examples",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
 						"value": [
 							"Celtic",
 							"Dawn War",
@@ -65,9 +66,10 @@
 					"uniqueItems": true,
 					"items": {
 						"type": "string",
-						"$$ifSiteElse_key": {
-							"keySite": "enum",
-							"keyBrew": "examples",
+						"$$switch_key": {
+							"key_site": "enum",
+							"key_ua": "enum",
+							"key_brew": "examples",
 							"value": [
 								"Arcana", "Death", "Knowledge", "Life", "Light", "Nature", "Tempest", "Trickery", "War", "Forge", "Grave", "Order", "Peace", "Twilight", "Unknown"
 							]

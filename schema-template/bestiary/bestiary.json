@@ -866,9 +866,10 @@
 					"minItems": 1,
 					"items": {
 						"type": "string",
-						"$$ifSiteElse_key": {
-							"keySite": "enum",
-							"keyBrew": "examples",
+						"$$switch_key": {
+							"key_site": "enum",
+							"key_ua": "enum",
+							"key_brew": "examples",
 							"value": [
 								"underwater",
 								"coastal",
@@ -890,17 +891,19 @@
 				},
 				"dragonCastingColor": {
 					"type": "string",
-					"$$ifSiteElse_key": {
-						"keySite": "enum",
-						"keyBrew": "examples",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
 						"value": ["black", "blue", "green", "red", "white", "brass", "bronze", "copper", "gold", "silver", "deep"]
 					}
 				},
 				"dragonAge": {
 					"type": "string",
-					"$$ifSiteElse_key": {
-						"keySite": "enum",
-						"keyBrew": "examples",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
 						"value": [
 							"young",
 							"adult",

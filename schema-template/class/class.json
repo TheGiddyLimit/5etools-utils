@@ -605,9 +605,10 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"$$ifSiteElse_key": {
-							"keySite": "enum",
-							"keyBrew": "examples",
+						"$$switch_key": {
+							"key_site": "enum",
+							"key_ua": "enum",
+							"key_brew": "examples",
 							"value": ["expert", "mage", "priest", "warrior"]
 						}
 					}

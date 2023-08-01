@@ -43,8 +43,11 @@
 								"weaponCategory": {"$ref": "items-shared.json#/$defs/itemWeaponCategory"},
 								"property": {"type": "string"}
 							},
-							"$$ifSite": {
-								"additionalProperties": false
+							"$$if": {
+								"modes": ["site", "ua"],
+								"value": {
+									"additionalProperties": false
+								}
 							},
 							"$$ifBrew": {
 								"additionalProperties": {"type": "boolean"}
@@ -227,8 +230,11 @@
 							"source",
 							"page"
 						],
-						"$$ifSite": {
-							"additionalProperties": false
+						"$$if": {
+							"modes": ["site", "ua"],
+							"value": {
+								"additionalProperties": false
+							}
 						},
 						"$$ifBrew": {
 							"additionalProperties": {
@@ -274,8 +280,11 @@
 								"type": "boolean"
 							}
 						},
-						"$$ifSite": {
-							"additionalProperties": false
+						"$$if": {
+							"modes": ["site", "ua"],
+							"value": {
+								"additionalProperties": false
+							}
 						},
 						"$$ifBrew": {
 							"additionalProperties": {
@@ -332,10 +341,13 @@
 		},
 		"linkedLootTables": {
 			"type": "object",
-			"$$ifSite": {
-				"properties": {
-					"DMG": {
-						"type": "object"
+			"$$if": {
+				"modes": ["site", "ua"],
+				"value": {
+					"properties": {
+						"DMG": {
+							"type": "object"
+						}
 					}
 				}
 			},

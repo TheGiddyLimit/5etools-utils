@@ -1,0 +1,105 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "encounters.json",
+	"version": "1.3.1",
+	"title": "EncounterArray",
+	"type": "object",
+	"$defs": {
+		"encounterTableRow": {
+			"type": "object",
+			"properties": {
+				"min": {
+					"type": "integer"
+				},
+				"max": {
+					"type": "integer"
+				},
+				"result": {
+					"$ref": "entry.json"
+				},
+				"resultAttitude": {
+					"$ref": "entry.json"
+				}
+			},
+			"required": [
+				"min",
+				"max",
+				"result"
+			],
+			"additionalProperties": false
+		},
+		"encounterTable": {
+			"type": "object",
+			"properties": {
+				"minlvl": {
+					"type": "integer"
+				},
+				"maxlvl": {
+					"type": "integer"
+				},
+				"diceExpression": {
+					"type": "string"
+				},
+				"rollAttitude": {
+					"type": "boolean"
+				},
+				"table": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/encounterTableRow"
+					}
+				},
+				"footnotes": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				}
+			},
+			"required": [
+				"table"
+			],
+			"additionalProperties": false
+		},
+		"encounter": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"tables": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/encounterTable"
+					}
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				}
+			},
+			"required": [
+				"name",
+				"source",
+				"tables"
+			],
+			"additionalProperties": false
+		}
+	},
+	"properties": {
+		"encounter": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/encounter"
+			}
+		}
+	},
+	"required": [
+		"encounter"
+	],
+	"additionalProperties": false
+}

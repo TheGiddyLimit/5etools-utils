@@ -10,9 +10,10 @@
 			"type": "array",
 			"items": {
 				"type": "string",
-				"$$ifSiteElse_key": {
-					"keySite": "enum",
-					"keyBrew": "examples",
+				"$$switch_key": {
+					"key_site": "enum",
+					"key_ua": "enum",
+					"key_brew": "examples",
 					"value": [
 						"land",
 						"sea",
@@ -73,8 +74,11 @@
 					"items": {
 						"$ref": "util.json#/$defs/dataOptionalfeatureType",
 						"type": "string",
-						"$$ifSite": {
-							"pattern": "^(SHP|IWM):.*"
+						"$$if": {
+							"modes": ["site", "ua"],
+							"value": {
+								"pattern": "^(SHP|IWM):.*"
+							}
 						}
 					}
 				},
@@ -103,8 +107,11 @@
 				"vehicleType": {"const": "SHIP"},
 				"terrain": {"$ref": "#/$defs/vehicleTerrain"},
 				"size": {
-					"$$ifSite": {
-						"$ref": "util.json#/$defs/size"
+					"$$if": {
+						"modes": ["site", "ua"],
+						"value": {
+							"$ref": "util.json#/$defs/size"
+						}
 					},
 					"$$ifBrew": {
 						"type": "string"
@@ -525,8 +532,11 @@
 				"vehicleType": {"const": "INFWAR"},
 				"terrain": {"$ref": "#/$defs/vehicleTerrain"},
 				"size": {
-					"$$ifSite": {
-						"$ref": "util.json#/$defs/size"
+					"$$if": {
+						"modes": ["site", "ua"],
+						"value": {
+							"$ref": "util.json#/$defs/size"
+						}
 					},
 					"$$ifBrew": {
 						"type": "string"

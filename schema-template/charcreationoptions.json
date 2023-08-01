@@ -9,9 +9,10 @@
 		"optionType": {
 			"type": "string",
 			"description": "CS: Character Secret\nDG: Dark Gift\n OF: Optional Feature\n RF:B Replacement Feature: Background\n SG: Supernatural Gift",
-			"$$ifSiteElse_key": {
-				"keySite": "enum",
-				"keyBrew": "examples",
+			"$$switch_key": {
+				"key_site": "enum",
+				"key_ua": "enum",
+				"key_brew": "examples",
 				"value": ["CS", "DG", "OF", "RF:B", "SG"]
 			}
 		},

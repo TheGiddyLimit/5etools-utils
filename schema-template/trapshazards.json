@@ -170,9 +170,10 @@
 				"trapHazType": {
 					"type": "string",
 					"description": "ENV: Environmental Hazard\n EST: Eldritch Storm\n GEN: Generic\n WTH: Weather\n WLD: Wilderness Hazard",
-					"$$ifSiteElse_key": {
-						"keySite": "enum",
-						"keyBrew": "examples",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
 						"value": [
 							"ENV",
 							"EST",

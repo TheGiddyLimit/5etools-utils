@@ -48,7 +48,7 @@
 		"sourceJson": {
 			"type": "string",
 			"description": "An identifying string, as seen in the JSON in \"source\" fields.",
-			"pattern": "^(?!UA|XUA)[-a-zA-Z0-9 :&+!]+$"
+			"pattern": "^[-a-zA-Z0-9 :&+!]+$"
 		},
 		"page": {
 			"type": "integer"

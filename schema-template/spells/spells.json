@@ -56,9 +56,10 @@
 							"properties": {
 								"type": {
 									"type": "string",
-									"$$ifSiteElse_key": {
-										"keySite": "enum",
-										"keyBrew": "examples",
+									"$$switch_key": {
+										"key_site": "enum",
+										"key_ua": "enum",
+										"key_brew": "examples",
 										"value": [
 											"feet",
 											"yards",
@@ -510,9 +511,10 @@
 				},
 				"unit": {
 					"type": "string",
-					"$$ifSiteElse_key": {
-						"keySite": "enum",
-						"keyBrew": "examples",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
 						"value": [
 							"action",
 							"bonus",
@@ -550,9 +552,10 @@
 					"properties": {
 						"type": {
 							"type": "string",
-							"$$ifSiteElse_key": {
-								"keySite": "enum",
-								"keyBrew": "examples",
+							"$$switch_key": {
+								"key_site": "enum",
+								"key_ua": "enum",
+								"key_brew": "examples",
 								"value": [
 									"hour",
 									"minute",
@@ -584,9 +587,10 @@
 					"items": {
 						"type": "string",
 						"description": "The examples given are short forms that are automatically expanded to \"discharged\", \"dispelled\" & \"triggered\".\nHomebrew files should state custom end conditions in full.",
-						"$$ifSiteElse_key": {
-							"keySite": "enum",
-							"keyBrew": "examples",
+						"$$switch_key": {
+							"key_site": "enum",
+							"key_ua": "enum",
+							"key_brew": "examples",
 							"value": [
 								"dispel",
 								"trigger",

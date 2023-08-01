@@ -1,0 +1,58 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "foundry-races.json",
+	"version": "1.1.1",
+	"type": "object",
+	"properties": {
+		"raceFeature": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"type": "object",
+				"required": [
+					"name",
+					"source",
+					"raceName",
+					"raceSource"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"source": {
+						"$ref": "util.json#/$defs/source"
+					},
+					"system": {
+						"$ref": "util.json#/$defs/foundrySystemObject"
+					},
+					"effects": {
+						"type": "array",
+						"items": {
+							"$ref": "util.json#/$defs/foundryEffectObject"
+						}
+					},
+					"flags": {
+						"$ref": "util.json#/$defs/foundryFlagsObject"
+					},
+					"img": {
+						"type": "string"
+					},
+					"raceName": {
+						"description": "The full name of the race, with subrace parts/etc. applied.",
+						"type": "string"
+					},
+					"raceSource": {
+						"description": "The source of the subrace or race.",
+						"$ref": "util.json#/$defs/source"
+					}
+				}
+			}
+		}
+	},
+	"required": [
+		"raceFeature"
+	],
+	"additionalProperties": false
+}

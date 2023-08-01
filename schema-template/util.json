@@ -42,7 +42,12 @@
 		"url": {
 			"type": "string",
 			"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)",
-			"$$ifSite": {"format": "uri-reference"},
+			"$$if": {
+				"modes": ["site", "ua"],
+				"value": {
+					"format": "uri-reference"
+				}
+			},
 			"$$ifBrew": {"minLength": 3}
 		},
 
@@ -58,13 +63,23 @@
 					"$ref": "#/$defs/source"
 				},
 				{
-					"pattern": "^(?!UA|XUA)[-a-zA-Z0-9 :&+!]+$"
+					"$$ifBrew": {
+						"pattern": "^(?!UA|XUA)[-a-zA-Z0-9 :&+!]+$"
+					},
+					"$$ifUa": {
+						"pattern": "^(?:UA|XUA)[-a-zA-Z0-9 :&+!]+$"
+					}
 				}
 			]
 		},
 
 		"page": {
-			"$$ifSite": {"type": "integer"},
+			"$$if": {
+				"modes": ["site", "ua"],
+				"value": {
+					"type": "integer"
+				}
+			},
 			"$$ifBrew": {
 				"oneOf": [
 					{
@@ -283,8 +298,11 @@
 						"additionalProperties": false
 					}
 				},
-				"$$ifSite": {
-					"additionalProperties": false
+				"$$if": {
+					"modes": ["site", "ua"],
+					"value": {
+						"additionalProperties": false
+					}
 				},
 				"$$ifBrew": {
 					"additionalProperties": {"const": true}
@@ -296,9 +314,10 @@
 
 		"toolNameLower": {
 			"type": "string",
-			"$$ifSiteElse_key": {
-				"keySite": "enum",
-				"keyBrew": "examples",
+			"$$switch_key": {
+				"key_site": "enum",
+				"key_ua": "enum",
+				"key_brew": "examples",
 				"value": [
 					"artisan's tools",
 
@@ -437,8 +456,11 @@
 						"additionalProperties": false
 					}
 				},
-				"$$ifSite": {
-					"additionalProperties": false
+				"$$if": {
+					"modes": ["site", "ua"],
+					"value": {
+						"additionalProperties": false
+					}
 				},
 				"$$ifBrew": {
 					"additionalProperties": {"const": true}
@@ -450,9 +472,10 @@
 
 		"skillNameLower": {
 			"type": "string",
-			"$$ifSiteElse_key": {
-				"keySite": "enum",
-				"keyBrew": "examples",
+			"$$switch_key": {
+				"key_site": "enum",
+				"key_ua": "enum",
+				"key_brew": "examples",
 				"value": [
 					"athletics",
 					"acrobatics",
@@ -520,8 +543,11 @@
 						"additionalProperties": false
 					}
 				},
-				"$$ifSite": {
-					"additionalProperties": false
+				"$$if": {
+					"modes": ["site", "ua"],
+					"value": {
+						"additionalProperties": false
+					}
 				},
 				"$$ifBrew": {
 					"additionalProperties": {"const": true}
@@ -674,8 +700,11 @@
 						"minItems": 1
 					}
 				},
-				"$$ifSite": {
-					"additionalProperties": false
+				"$$if": {
+					"modes": ["site", "ua"],
+					"value": {
+						"additionalProperties": false
+					}
 				},
 				"$$ifBrew": {
 					"additionalProperties": {"const": true}
@@ -1205,17 +1234,19 @@
 					},
 					"pact": {
 						"type": "string",
-						"$$ifSiteElse_key": {
-							"keySite": "enum",
-							"keyBrew": "examples",
+						"$$switch_key": {
+							"key_site": "enum",
+							"key_ua": "enum",
+							"key_brew": "examples",
 							"value": ["Chain", "Tome", "Blade", "Talisman"]
 						}
 					},
 					"patron": {
 						"type": "string",
-						"$$ifSiteElse_key": {
-							"keySite": "enum",
-							"keyBrew": "examples",
+						"$$switch_key": {
+							"key_site": "enum",
+							"key_ua": "enum",
+							"key_brew": "examples",
 							"value": [
 								"The Archfey", "The Fiend", "The Great Old One", "The Hexblade", "The Raven Queen", "The Seeker"
 							]
@@ -1380,9 +1411,10 @@
 						"type": "array",
 						"items": {
 							"type": "string",
-							"$$ifSiteElse_key": {
-								"keySite": "enum",
-								"keyBrew": "examples",
+							"$$switch_key": {
+								"key_site": "enum",
+								"key_ua": "enum",
+								"key_brew": "examples",
 								"value": [
 									"Dragonlance"
 								]
@@ -1393,9 +1425,10 @@
 						"type": "array",
 						"items": {
 							"type": "string",
-							"$$ifSiteElse_key": {
-								"keySite": "enum",
-								"keyBrew": "examples",
+							"$$switch_key": {
+								"key_site": "enum",
+								"key_ua": "enum",
+								"key_brew": "examples",
 								"value": [
 									"expert", "mage", "priest", "warrior"
 								]
@@ -1413,9 +1446,10 @@
 
 		"creatureType": {
 			"type": "string",
-			"$$ifSiteElse_key": {
-				"keySite": "enum",
-				"keyBrew": "examples",
+			"$$switch_key": {
+				"key_site": "enum",
+				"key_ua": "enum",
+				"key_brew": "examples",
 				"value": [
 					"aberration",
 					"beast",
@@ -1454,16 +1488,19 @@
 		"size": {
 			"type": "string",
 			"description": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
-			"$$ifSite": {
-				"enum": [
-					"T",
-					"S",
-					"M",
-					"L",
-					"H",
-					"G",
-					"V"
-				]
+			"$$if": {
+				"modes": ["site", "ua"],
+				"value": {
+					"enum": [
+						"T",
+						"S",
+						"M",
+						"L",
+						"H",
+						"G",
+						"V"
+					]
+				}
 			},
 			"$$ifBrew": {
 				"enum": [
@@ -1483,9 +1520,10 @@
 
 		"dataCondition": {
 			"type": "string",
-			"$$ifSiteElse_key": {
-				"keySite": "enum",
-				"keyBrew": "examples",
+			"$$switch_key": {
+				"key_site": "enum",
+				"key_ua": "enum",
+				"key_brew": "examples",
 				"value": [
 					"blinded",
 					"charmed",
@@ -1530,9 +1568,10 @@
 		"dataOptionalfeatureType": {
 			"type": "string",
 			"description": "AF: Alchemical Formula\n AI: Artificer Infusion\n AS: Arcane Shot\n AS:V1-UA: Arcane Shot, V1 (UA)\n AS:V2-UA: Arcane Shot, V2 (UA)\n ED: Elemental Discipline\n EI: Eldritch Invocation\n FS:B: Fighting Style; Bard\n FS:F: Fighting Style; Fighter\n FS:P: Fighting Style; Paladin\n FS:R: Fighting Style; Ranger\n IWM:A: Infernal War Machine Upgrade, Armor\n IWM:G: Infernal War Machine Upgrade, Gadget\n IWM:W: Infernal War Machine Variant, Weapon\n MM: Metamagic\n MV: Maneuver\n MV:B: Maneuver, Battle Master\n MV:C2-UA: Maneuver, Cavalier V2 (UA)\n OR: Onomancy Resonant\n OTH: Other\n PB: Pact Boon\n RN: Rune Knight Rune\n SHP:F: Ship Upgrade, Figurehead\n SHP:H: Ship Upgrade, Hull\n SHP:M: Ship Upgrade, Movement\n SHP:O: Ship Upgrade, Miscellaneous\n SHP:W: Ship Upgrade, Weapon",
-			"$$ifSiteElse_key": {
-				"keySite": "enum",
-				"keyBrew": "examples",
+			"$$switch_key": {
+				"key_site": "enum",
+				"key_ua": "enum",
+				"key_brew": "examples",
 				"value": [
 					"ED", "EI", "MM", "MV", "MV:B", "OTH", "FS:F", "FS:B", "FS:R", "FS:P", "MV:C2-UA", "AS:V1-UA", "AS:V2-UA", "AS", "PB", "AI", "SHP:H", "SHP:M", "SHP:W", "SHP:F", "SHP:O", "IWM:W", "IWM:A", "IWM:G", "OR", "RN", "AF"
 				]
@@ -1872,9 +1911,10 @@
 			"properties": {
 				"name": {
 					"type": "string",
-					"$$ifSiteElse_key": {
-						"keySite": "enum",
-						"keyBrew": "examples",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
 						"value": [
 							"Superiority Die",
 							"Ki",
@@ -1944,9 +1984,10 @@
 
 		"spellSchool": {
 			"type": "string",
-			"$$ifSiteElse_key": {
-				"keySite": "enum",
-				"keyBrew": "examples",
+			"$$switch_key": {
+				"key_site": "enum",
+				"key_ua": "enum",
+				"key_brew": "examples",
 				"value": [
 					"A",
 					"V",
@@ -2029,9 +2070,10 @@
 			"uniqueItems": true,
 			"items": {
 				"type": "string",
-				"$$ifSiteElse_key": {
-					"keySite": "enum",
-					"keyBrew": "examples",
+				"$$switch_key": {
+					"key_site": "enum",
+					"key_ua": "enum",
+					"key_brew": "examples",
 					"value": [
 						"blinded",
 						"charmed",

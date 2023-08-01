@@ -1,0 +1,56 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "foundry-psionics.json",
+	"version": "1.1.1",
+	"type": "object",
+	"properties": {
+		"psionicDisciplineFocus": {
+			"$ref": "util.json#/$defs/foundrySideDataGenericFeatureArray"
+		},
+		"psionicDisciplineActive": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"type": "object",
+				"required": [
+					"name",
+					"source",
+					"psionicName",
+					"psionicSource"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"source": {
+						"$ref": "util.json#/$defs/source"
+					},
+					"system": {
+						"$ref": "util.json#/$defs/foundrySystemObject"
+					},
+					"effects": {
+						"type": "array",
+						"items": {
+							"$ref": "util.json#/$defs/foundryEffectObject"
+						}
+					},
+					"flags": {
+						"$ref": "util.json#/$defs/foundryFlagsObject"
+					},
+					"img": {
+						"type": "string"
+					},
+					"psionicName": {
+						"type": "string"
+					},
+					"psionicSource": {
+						"$ref": "util.json#/$defs/source"
+					}
+				}
+			}
+		}
+	},
+	"additionalProperties": false
+}

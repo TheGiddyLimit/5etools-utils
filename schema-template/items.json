@@ -164,9 +164,10 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"$$ifSiteElse_key": {
-							"keySite": "enum",
-							"keyBrew": "examples",
+						"$$switch_key": {
+							"key_site": "enum",
+							"key_ua": "enum",
+							"key_brew": "examples",
 							"value": ["contact", "ingested", "injury", "inhaled"]
 						}
 					}
@@ -300,9 +301,10 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"$$ifSiteElse_key": {
-									"keySite": "enum",
-									"keyBrew": "examples",
+								"$$switch_key": {
+									"key_site": "enum",
+									"key_ua": "enum",
+									"key_brew": "examples",
 									"value": ["Artificer", "Bard", "Cleric", "Druid", "Paladin", "Ranger", "Sorcerer", "Warlock", "Wizard"]
 								}
 							}
@@ -501,8 +503,11 @@
 					}
 				}
 			},
-			"$$ifSite": {
-				"additionalProperties": false
+			"$$if": {
+				"modes": ["site", "ua"],
+				"value": {
+					"additionalProperties": false
+				}
 			},
 			"$$ifBrew": {
 				"additionalProperties": {

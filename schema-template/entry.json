@@ -547,9 +547,10 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"$$ifSiteElse_key": {
-									"keySite": "enum",
-									"keyBrew": "examples",
+								"$$switch_key": {
+									"key_site": "enum",
+									"key_ua": "enum",
+									"key_brew": "examples",
 									"value": ["str", "dex", "con", "int", "wis", "cha", "spellcasting"]
 								}
 							}
@@ -571,9 +572,10 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"$$ifSiteElse_key": {
-									"keySite": "enum",
-									"keyBrew": "examples",
+								"$$switch_key": {
+									"key_site": "enum",
+									"key_ua": "enum",
+									"key_brew": "examples",
 									"value": ["str", "dex", "con", "int", "wis", "cha", "spellcasting"]
 								}
 							}
@@ -968,9 +970,10 @@
 								"units": {
 									"description": "A unit of measurement (e.g. \"feet\", \"miles\") in which the grid should be presented.",
 									"type": "string",
-									"$$ifSiteElse_key": {
-										"keySite": "enum",
-										"keyBrew": "examples",
+									"$$switch_key": {
+										"key_site": "enum",
+										"key_ua": "enum",
+										"key_brew": "examples",
 										"value": [
 											"feet",
 											"yards",
