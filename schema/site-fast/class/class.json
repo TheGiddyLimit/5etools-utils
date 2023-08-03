@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.5",
+	"version": "2.11.6",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -91,6 +91,105 @@
 					"additionalProperties": false
 				}
 			]
+		},
+		"casterProgression": {
+			"enum": [
+				"full",
+				"1/2",
+				"1/3",
+				"pact",
+				"artificer"
+			]
+		},
+		"spellcastingAbility": {
+			"enum": [
+				"str",
+				"dex",
+				"con",
+				"int",
+				"wis",
+				"cha"
+			]
+		},
+		"cantripProgression": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			},
+			"minItems": 20,
+			"maxItems": 20
+		},
+		"preparedSpells": {
+			"type": "string",
+			"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\""
+		},
+		"preparedSpellsProgression": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			},
+			"minItems": 20,
+			"maxItems": 20
+		},
+		"spellsKnownProgression": {
+			"type": "array",
+			"items": {
+				"type": "integer"
+			},
+			"minItems": 20,
+			"maxItems": 20
+		},
+		"spellsKnownProgressionFixed": {
+			"description": "For e.g. Wizard, where the spells taken at each level must be <= the max spellcasting level, and cannot be swapped out afterward.",
+			"type": "array",
+			"items": {
+				"type": "integer"
+			},
+			"minItems": 20,
+			"maxItems": 20
+		},
+		"spellsKnownProgressionFixedAllowLowerLevel": {
+			"type": "boolean"
+		},
+		"spellsKnownProgressionFixedByLevel": {
+			"description": "For e.g. Warlock Mystic Arcanum. A map of <class level> -> <spell level> -> <number of spells known>",
+			"type": "object",
+			"patternProperties": {
+				"^\\d+$": {
+					"type": "object",
+					"properties": {
+						"1": {
+							"type": "integer"
+						},
+						"2": {
+							"type": "integer"
+						},
+						"3": {
+							"type": "integer"
+						},
+						"4": {
+							"type": "integer"
+						},
+						"5": {
+							"type": "integer"
+						},
+						"6": {
+							"type": "integer"
+						},
+						"7": {
+							"type": "integer"
+						},
+						"8": {
+							"type": "integer"
+						},
+						"9": {
+							"type": "integer"
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"additionalProperties": false
 		},
 		"classFeature": {
 			"type": "object",
@@ -348,39 +447,34 @@
 							"$ref": "../util.json#/$defs/page"
 						},
 						"casterProgression": {
-							"enum": [
-								"full",
-								"1/2",
-								"1/3",
-								"pact",
-								"artificer"
-							]
+							"$ref": "#/$defs/casterProgression"
 						},
 						"spellcastingAbility": {
-							"enum": [
-								"str",
-								"dex",
-								"con",
-								"int",
-								"wis",
-								"cha"
-							]
+							"$ref": "#/$defs/spellcastingAbility"
 						},
 						"cantripProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/cantripProgression"
+						},
+						"preparedSpells": {
+							"$ref": "#/$defs/preparedSpells"
+						},
+						"preparedSpellsProgression": {
+							"$ref": "#/$defs/preparedSpellsProgression"
 						},
 						"spellsKnownProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/spellsKnownProgression"
+						},
+						"spellsKnownProgressionFixed": {
+							"$ref": "#/$defs/spellsKnownProgressionFixed"
+						},
+						"spellsKnownProgressionFixedAllowLowerLevel": {
+							"$ref": "#/$defs/spellsKnownProgressionFixedAllowLowerLevel"
+						},
+						"spellsKnownProgressionFixedByLevel": {
+							"$ref": "#/$defs/spellsKnownProgressionFixedByLevel"
+						},
+						"optionalfeatureProgression": {
+							"$ref": "../util.json#/$defs/optionalfeatureProgression"
 						},
 						"subclassFeatures": {
 							"type": "array",
@@ -413,9 +507,6 @@
 									}
 								]
 							}
-						},
-						"optionalfeatureProgression": {
-							"$ref": "../util.json#/$defs/optionalfeatureProgression"
 						},
 						"subclassTableGroups": {
 							"type": "array",
@@ -473,39 +564,34 @@
 							"$ref": "../util.json#/$defs/page"
 						},
 						"casterProgression": {
-							"enum": [
-								"full",
-								"1/2",
-								"1/3",
-								"pact",
-								"artificer"
-							]
+							"$ref": "#/$defs/casterProgression"
 						},
 						"spellcastingAbility": {
-							"enum": [
-								"str",
-								"dex",
-								"con",
-								"int",
-								"wis",
-								"cha"
-							]
+							"$ref": "#/$defs/spellcastingAbility"
 						},
 						"cantripProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/cantripProgression"
+						},
+						"preparedSpells": {
+							"$ref": "#/$defs/preparedSpells"
+						},
+						"preparedSpellsProgression": {
+							"$ref": "#/$defs/preparedSpellsProgression"
 						},
 						"spellsKnownProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/spellsKnownProgression"
+						},
+						"spellsKnownProgressionFixed": {
+							"$ref": "#/$defs/spellsKnownProgressionFixed"
+						},
+						"spellsKnownProgressionFixedAllowLowerLevel": {
+							"$ref": "#/$defs/spellsKnownProgressionFixedAllowLowerLevel"
+						},
+						"spellsKnownProgressionFixedByLevel": {
+							"$ref": "#/$defs/spellsKnownProgressionFixedByLevel"
+						},
+						"optionalfeatureProgression": {
+							"$ref": "../util.json#/$defs/optionalfeatureProgression"
 						},
 						"subclassFeatures": {
 							"type": "array",
@@ -538,9 +624,6 @@
 									}
 								]
 							}
-						},
-						"optionalfeatureProgression": {
-							"$ref": "../util.json#/$defs/optionalfeatureProgression"
 						},
 						"subclassTableGroups": {
 							"type": "array",
@@ -653,39 +736,34 @@
 					"$ref": "../util.json#/$defs/page"
 				},
 				"casterProgression": {
-					"enum": [
-						"full",
-						"1/2",
-						"1/3",
-						"pact",
-						"artificer"
-					]
+					"$ref": "#/$defs/casterProgression"
 				},
 				"spellcastingAbility": {
-					"enum": [
-						"str",
-						"dex",
-						"con",
-						"int",
-						"wis",
-						"cha"
-					]
+					"$ref": "#/$defs/spellcastingAbility"
 				},
 				"cantripProgression": {
-					"type": "array",
-					"items": {
-						"type": "integer"
-					},
-					"minItems": 20,
-					"maxItems": 20
+					"$ref": "#/$defs/cantripProgression"
+				},
+				"preparedSpells": {
+					"$ref": "#/$defs/preparedSpells"
+				},
+				"preparedSpellsProgression": {
+					"$ref": "#/$defs/preparedSpellsProgression"
 				},
 				"spellsKnownProgression": {
-					"type": "array",
-					"items": {
-						"type": "integer"
-					},
-					"minItems": 20,
-					"maxItems": 20
+					"$ref": "#/$defs/spellsKnownProgression"
+				},
+				"spellsKnownProgressionFixed": {
+					"$ref": "#/$defs/spellsKnownProgressionFixed"
+				},
+				"spellsKnownProgressionFixedAllowLowerLevel": {
+					"$ref": "#/$defs/spellsKnownProgressionFixedAllowLowerLevel"
+				},
+				"spellsKnownProgressionFixedByLevel": {
+					"$ref": "#/$defs/spellsKnownProgressionFixedByLevel"
+				},
+				"optionalfeatureProgression": {
+					"$ref": "../util.json#/$defs/optionalfeatureProgression"
 				},
 				"subclassFeatures": {
 					"type": "array",
@@ -718,9 +796,6 @@
 							}
 						]
 					}
-				},
-				"optionalfeatureProgression": {
-					"$ref": "../util.json#/$defs/optionalfeatureProgression"
 				},
 				"subclassTableGroups": {
 					"type": "array",
@@ -919,103 +994,31 @@
 							"additionalProperties": false
 						},
 						"casterProgression": {
-							"enum": [
-								"full",
-								"1/2",
-								"1/3",
-								"pact",
-								"artificer"
-							]
-						},
-						"preparedSpells": {
-							"type": "string",
-							"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\""
-						},
-						"preparedSpellsProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/casterProgression"
 						},
 						"spellcastingAbility": {
-							"enum": [
-								"str",
-								"dex",
-								"con",
-								"int",
-								"wis",
-								"cha"
-							]
+							"$ref": "#/$defs/spellcastingAbility"
 						},
 						"cantripProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/cantripProgression"
+						},
+						"preparedSpells": {
+							"$ref": "#/$defs/preparedSpells"
+						},
+						"preparedSpellsProgression": {
+							"$ref": "#/$defs/preparedSpellsProgression"
 						},
 						"spellsKnownProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/spellsKnownProgression"
 						},
 						"spellsKnownProgressionFixed": {
-							"description": "For e.g. Wizard, where the spells taken at each level must be <= the max spellcasting level, and cannot be swapped out afterward.",
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/spellsKnownProgressionFixed"
 						},
 						"spellsKnownProgressionFixedAllowLowerLevel": {
-							"type": "boolean"
+							"$ref": "#/$defs/spellsKnownProgressionFixedAllowLowerLevel"
 						},
 						"spellsKnownProgressionFixedByLevel": {
-							"description": "For e.g. Warlock Mystic Arcanum. A map of <class level> -> <spell level> -> <number of spells known>",
-							"type": "object",
-							"patternProperties": {
-								"^\\d+$": {
-									"type": "object",
-									"properties": {
-										"1": {
-											"type": "integer"
-										},
-										"2": {
-											"type": "integer"
-										},
-										"3": {
-											"type": "integer"
-										},
-										"4": {
-											"type": "integer"
-										},
-										"5": {
-											"type": "integer"
-										},
-										"6": {
-											"type": "integer"
-										},
-										"7": {
-											"type": "integer"
-										},
-										"8": {
-											"type": "integer"
-										},
-										"9": {
-											"type": "integer"
-										}
-									},
-									"additionalProperties": false
-								}
-							},
-							"additionalProperties": false
+							"$ref": "#/$defs/spellsKnownProgressionFixedByLevel"
 						},
 						"optionalfeatureProgression": {
 							"$ref": "../util.json#/$defs/optionalfeatureProgression"
@@ -1216,103 +1219,31 @@
 							"additionalProperties": false
 						},
 						"casterProgression": {
-							"enum": [
-								"full",
-								"1/2",
-								"1/3",
-								"pact",
-								"artificer"
-							]
-						},
-						"preparedSpells": {
-							"type": "string",
-							"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\""
-						},
-						"preparedSpellsProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/casterProgression"
 						},
 						"spellcastingAbility": {
-							"enum": [
-								"str",
-								"dex",
-								"con",
-								"int",
-								"wis",
-								"cha"
-							]
+							"$ref": "#/$defs/spellcastingAbility"
 						},
 						"cantripProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/cantripProgression"
+						},
+						"preparedSpells": {
+							"$ref": "#/$defs/preparedSpells"
+						},
+						"preparedSpellsProgression": {
+							"$ref": "#/$defs/preparedSpellsProgression"
 						},
 						"spellsKnownProgression": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/spellsKnownProgression"
 						},
 						"spellsKnownProgressionFixed": {
-							"description": "For e.g. Wizard, where the spells taken at each level must be <= the max spellcasting level, and cannot be swapped out afterward.",
-							"type": "array",
-							"items": {
-								"type": "integer"
-							},
-							"minItems": 20,
-							"maxItems": 20
+							"$ref": "#/$defs/spellsKnownProgressionFixed"
 						},
 						"spellsKnownProgressionFixedAllowLowerLevel": {
-							"type": "boolean"
+							"$ref": "#/$defs/spellsKnownProgressionFixedAllowLowerLevel"
 						},
 						"spellsKnownProgressionFixedByLevel": {
-							"description": "For e.g. Warlock Mystic Arcanum. A map of <class level> -> <spell level> -> <number of spells known>",
-							"type": "object",
-							"patternProperties": {
-								"^\\d+$": {
-									"type": "object",
-									"properties": {
-										"1": {
-											"type": "integer"
-										},
-										"2": {
-											"type": "integer"
-										},
-										"3": {
-											"type": "integer"
-										},
-										"4": {
-											"type": "integer"
-										},
-										"5": {
-											"type": "integer"
-										},
-										"6": {
-											"type": "integer"
-										},
-										"7": {
-											"type": "integer"
-										},
-										"8": {
-											"type": "integer"
-										},
-										"9": {
-											"type": "integer"
-										}
-									},
-									"additionalProperties": false
-								}
-							},
-							"additionalProperties": false
+							"$ref": "#/$defs/spellsKnownProgressionFixedByLevel"
 						},
 						"optionalfeatureProgression": {
 							"$ref": "../util.json#/$defs/optionalfeatureProgression"
@@ -1571,103 +1502,31 @@
 					"additionalProperties": false
 				},
 				"casterProgression": {
-					"enum": [
-						"full",
-						"1/2",
-						"1/3",
-						"pact",
-						"artificer"
-					]
-				},
-				"preparedSpells": {
-					"type": "string",
-					"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\""
-				},
-				"preparedSpellsProgression": {
-					"type": "array",
-					"items": {
-						"type": "integer"
-					},
-					"minItems": 20,
-					"maxItems": 20
+					"$ref": "#/$defs/casterProgression"
 				},
 				"spellcastingAbility": {
-					"enum": [
-						"str",
-						"dex",
-						"con",
-						"int",
-						"wis",
-						"cha"
-					]
+					"$ref": "#/$defs/spellcastingAbility"
 				},
 				"cantripProgression": {
-					"type": "array",
-					"items": {
-						"type": "integer"
-					},
-					"minItems": 20,
-					"maxItems": 20
+					"$ref": "#/$defs/cantripProgression"
+				},
+				"preparedSpells": {
+					"$ref": "#/$defs/preparedSpells"
+				},
+				"preparedSpellsProgression": {
+					"$ref": "#/$defs/preparedSpellsProgression"
 				},
 				"spellsKnownProgression": {
-					"type": "array",
-					"items": {
-						"type": "integer"
-					},
-					"minItems": 20,
-					"maxItems": 20
+					"$ref": "#/$defs/spellsKnownProgression"
 				},
 				"spellsKnownProgressionFixed": {
-					"description": "For e.g. Wizard, where the spells taken at each level must be <= the max spellcasting level, and cannot be swapped out afterward.",
-					"type": "array",
-					"items": {
-						"type": "integer"
-					},
-					"minItems": 20,
-					"maxItems": 20
+					"$ref": "#/$defs/spellsKnownProgressionFixed"
 				},
 				"spellsKnownProgressionFixedAllowLowerLevel": {
-					"type": "boolean"
+					"$ref": "#/$defs/spellsKnownProgressionFixedAllowLowerLevel"
 				},
 				"spellsKnownProgressionFixedByLevel": {
-					"description": "For e.g. Warlock Mystic Arcanum. A map of <class level> -> <spell level> -> <number of spells known>",
-					"type": "object",
-					"patternProperties": {
-						"^\\d+$": {
-							"type": "object",
-							"properties": {
-								"1": {
-									"type": "integer"
-								},
-								"2": {
-									"type": "integer"
-								},
-								"3": {
-									"type": "integer"
-								},
-								"4": {
-									"type": "integer"
-								},
-								"5": {
-									"type": "integer"
-								},
-								"6": {
-									"type": "integer"
-								},
-								"7": {
-									"type": "integer"
-								},
-								"8": {
-									"type": "integer"
-								},
-								"9": {
-									"type": "integer"
-								}
-							},
-							"additionalProperties": false
-						}
-					},
-					"additionalProperties": false
+					"$ref": "#/$defs/spellsKnownProgressionFixedByLevel"
 				},
 				"optionalfeatureProgression": {
 					"$ref": "../util.json#/$defs/optionalfeatureProgression"
