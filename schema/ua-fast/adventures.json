@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.11",
+	"version": "1.10.12",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -192,7 +192,8 @@
 							"Journeys through the Radiant Citadel",
 							"Spelljammer",
 							"Dragonlance",
-							"Keys from the Golden Vault"
+							"Keys from the Golden Vault",
+							"Giants of the Star Forge"
 						]
 					}
 				},
