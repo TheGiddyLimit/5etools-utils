@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.18",
+	"version": "1.21.19",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1229,6 +1229,9 @@
 					"items": {
 						"type": "object",
 						"properties": {
+							"name": {
+								"type": "string"
+							},
 							"value": {
 								"type": "integer"
 							},
@@ -2407,6 +2410,9 @@
 							"items": {
 								"type": "object",
 								"properties": {
+									"name": {
+										"type": "string"
+									},
 									"value": {
 										"type": "integer"
 									},
@@ -3599,6 +3605,9 @@
 							"items": {
 								"type": "object",
 								"properties": {
+									"name": {
+										"type": "string"
+									},
 									"value": {
 										"type": "integer"
 									},
