@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.30",
+	"version": "1.13.31",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1847,6 +1847,9 @@
 									},
 									"note": {
 										"type": "string"
+									},
+									"cond": {
+										"const": true
 									}
 								},
 								"additionalProperties": false,
