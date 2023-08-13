@@ -809,6 +809,7 @@
 						"items": {
 							"type": "object",
 							"properties": {
+								"name": {"type": "string"},
 								"value": {"type": "integer"},
 								"formula": {"type": "string"}
 							},
