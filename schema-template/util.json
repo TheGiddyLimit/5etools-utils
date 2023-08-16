@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.31",
+	"version": "1.13.32",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1397,6 +1397,10 @@
 						"description": "Renders with the updated text found in UA2020: Feats",
 						"const": true
 					},
+					"spellcastingFeature": {
+						"description": "A more restrictive spellcasting variant; specifically \"Spellcasting Feature\"",
+						"const": true
+					},
 					"psionics": {
 						"const": true
 					},
@@ -1410,6 +1414,12 @@
 									"enum": ["light", "medium", "heavy"]
 								},
 								"weapon": {
+									"description": "Any <simple|martial> weapon.",
+									"type": "string",
+									"enum": ["simple", "martial"]
+								},
+								"weaponGroup": {
+									"description": "All <simple|martial> weapons.",
 									"type": "string",
 									"enum": ["simple", "martial"]
 								}
