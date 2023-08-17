@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.8",
+	"version": "1.5.9",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -151,13 +151,6 @@
 				"age": {
 					"$ref": "items-shared.json#/$defs/itemAge"
 				},
-				"armor": {
-					"description": "Flag used when merging generic variants",
-					"type": "boolean"
-				},
-				"axe": {
-					"type": "boolean"
-				},
 				"dmg1": {
 					"type": "string"
 				},
@@ -203,33 +196,56 @@
 				"strength": {
 					"type": "string"
 				},
+
+				"armor": {
+					"description": "Flag used when merging generic variants",
+					"type": "boolean"
+				},
+				"axe": {
+					"description": "Flag used when merging generic variants",
+					"type": "boolean"
+				},
 				"sword": {
+					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
 				"mace": {
+					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
 				"spear": {
+					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
 				"hammer": {
+					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
 				"bow": {
+					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
 				"crossbow": {
+					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
 				"club": {
+					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
 				"dagger": {
+					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
 				"net": {
+					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
+				"weapon": {
+					"description": "Flag used when merging generic variants",
+					"type": "boolean"
+				},
+
 				"firearm": {
 					"type": "boolean"
 				},
@@ -261,9 +277,6 @@
 				},
 				"valueMult": {
 					"type": "number"
-				},
-				"weapon": {
-					"type": "boolean"
 				},
 				"weaponCategory": {
 					"$ref": "items-shared.json#/$defs/itemWeaponCategory"

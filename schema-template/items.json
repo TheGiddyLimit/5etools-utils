@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.13.5",
+	"version": "1.14.0",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -32,9 +32,6 @@
 				},
 				"age": {
 					"$ref": "items-shared.json#/$defs/itemAge"
-				},
-				"axe": {
-					"type": "boolean"
 				},
 				"carryingCapacity": {
 					"type": "integer",
@@ -113,9 +110,6 @@
 					"description": "Maximum dexterity modifier for medium armor.",
 					"type": ["integer", "null"]
 				},
-				"sword": {
-					"type": "boolean"
-				},
 				"firearm": {
 					"type": "boolean"
 				},
@@ -132,9 +126,6 @@
 				},
 				"valueMult": {
 					"type": "number"
-				},
-				"weapon": {
-					"type": "boolean"
 				},
 				"weaponCategory": {
 					"$ref": "items-shared.json#/$defs/itemWeaponCategory"
