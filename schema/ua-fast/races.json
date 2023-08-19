@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.4",
+	"version": "1.12.5",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -20,7 +20,14 @@
 					"$ref": "util.json#/$defs/page"
 				},
 				"otherSources": {
-					"$ref": "util.json#/$defs/otherSources"
+					"oneOf": [
+						{
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						{
+							"type": "null"
+						}
+					]
 				},
 				"additionalSources": {
 					"$ref": "util.json#/$defs/additionalSources"
@@ -245,7 +252,14 @@
 					"$ref": "util.json#/$defs/page"
 				},
 				"otherSources": {
-					"$ref": "util.json#/$defs/otherSources"
+					"oneOf": [
+						{
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						{
+							"type": "null"
+						}
+					]
 				},
 				"additionalSources": {
 					"$ref": "util.json#/$defs/additionalSources"
@@ -561,7 +575,14 @@
 							"$ref": "util.json#/$defs/page"
 						},
 						"otherSources": {
-							"$ref": "util.json#/$defs/otherSources"
+							"oneOf": [
+								{
+									"$ref": "util.json#/$defs/otherSources"
+								},
+								{
+									"type": "null"
+								}
+							]
 						},
 						"additionalSources": {
 							"$ref": "util.json#/$defs/additionalSources"
@@ -790,7 +811,14 @@
 							"$ref": "util.json#/$defs/page"
 						},
 						"otherSources": {
-							"$ref": "util.json#/$defs/otherSources"
+							"oneOf": [
+								{
+									"$ref": "util.json#/$defs/otherSources"
+								},
+								{
+									"type": "null"
+								}
+							]
 						},
 						"additionalSources": {
 							"$ref": "util.json#/$defs/additionalSources"
@@ -1080,7 +1108,14 @@
 							"$ref": "util.json#/$defs/page"
 						},
 						"otherSources": {
-							"$ref": "util.json#/$defs/otherSources"
+							"oneOf": [
+								{
+									"$ref": "util.json#/$defs/otherSources"
+								},
+								{
+									"type": "null"
+								}
+							]
 						},
 						"additionalSources": {
 							"$ref": "util.json#/$defs/additionalSources"
@@ -1320,7 +1355,14 @@
 							"$ref": "util.json#/$defs/page"
 						},
 						"otherSources": {
-							"$ref": "util.json#/$defs/otherSources"
+							"oneOf": [
+								{
+									"$ref": "util.json#/$defs/otherSources"
+								},
+								{
+									"type": "null"
+								}
+							]
 						},
 						"additionalSources": {
 							"$ref": "util.json#/$defs/additionalSources"
