@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.33",
+	"version": "1.13.34",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1399,6 +1399,10 @@
 					},
 					"spellcastingFeature": {
 						"description": "A more restrictive spellcasting variant; specifically \"Spellcasting Feature\"",
+						"const": true
+					},
+					"spellcastingPrepared": {
+						"description": "A more restrictive spellcasting variant; specifically \"Spellcasting feature from a class that prepares spells\"",
 						"const": true
 					},
 					"psionics": {
