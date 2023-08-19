@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "deities.json",
-	"version": "1.2.6",
+	"version": "1.2.7",
 	"type": "object",
 	"$defs": {
 		"deityData": {
@@ -63,19 +63,20 @@
 						"examples": [
 							"Arcana",
 							"Death",
+							"Forge",
+							"Grave",
 							"Knowledge",
 							"Life",
 							"Light",
+							"Moon",
 							"Nature",
-							"Tempest",
-							"Trickery",
-							"War",
-							"Forge",
-							"Grave",
 							"Order",
 							"Peace",
+							"Tempest",
+							"Trickery",
 							"Twilight",
-							"Unknown"
+							"Unknown",
+							"War"
 						]
 					}
 				},
@@ -199,19 +200,20 @@
 								"examples": [
 									"Arcana",
 									"Death",
+									"Forge",
+									"Grave",
 									"Knowledge",
 									"Life",
 									"Light",
+									"Moon",
 									"Nature",
-									"Tempest",
-									"Trickery",
-									"War",
-									"Forge",
-									"Grave",
 									"Order",
 									"Peace",
+									"Tempest",
+									"Trickery",
 									"Twilight",
-									"Unknown"
+									"Unknown",
+									"War"
 								]
 							}
 						},
@@ -338,19 +340,20 @@
 								"examples": [
 									"Arcana",
 									"Death",
+									"Forge",
+									"Grave",
 									"Knowledge",
 									"Life",
 									"Light",
+									"Moon",
 									"Nature",
-									"Tempest",
-									"Trickery",
-									"War",
-									"Forge",
-									"Grave",
 									"Order",
 									"Peace",
+									"Tempest",
+									"Trickery",
 									"Twilight",
-									"Unknown"
+									"Unknown",
+									"War"
 								]
 							}
 						},
