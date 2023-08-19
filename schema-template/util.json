@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.32",
+	"version": "1.13.33",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -3205,7 +3205,9 @@
 
 					"system": {"$ref": "#/$defs/foundrySystemObject"},
 					"actorDataMod": {"type": "object"},
-					"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}}
+					"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}},
+
+					"img": {"type": "string"}
 				},
 				"required": [
 					"name",

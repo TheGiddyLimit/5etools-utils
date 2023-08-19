@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.11",
+	"version": "1.10.12",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -586,6 +586,9 @@
 		},
 		"reward": {
 			"$ref": "rewards.json#/properties/reward"
+		},
+		"rewardFluff": {
+			"$ref": "fluff-rewards.json#/properties/rewardFluff"
 		},
 		"table": {
 			"$ref": "tables.json#/properties/table"
