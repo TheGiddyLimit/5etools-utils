@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.9",
+	"version": "1.5.10",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -300,6 +300,12 @@
 					"description": "In copper pieces.",
 					"type": "number"
 				},
+				"carryingCapacity": {
+					"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
+				},
+				"speed": {
+					"$ref": "items-shared.json#/$defs/itemSpeed"
+				},
 				"valueMult": {
 					"type": "number"
 				},
@@ -379,6 +385,9 @@
 				},
 				"mastery": {
 					"$ref": "items-shared.json#/$defs/itemMastery"
+				},
+				"reach": {
+					"$ref": "items-shared.json#/$defs/itemReach"
 				},
 				"hasFluff": {
 					"type": "boolean"
@@ -519,6 +528,12 @@
 							"description": "In copper pieces.",
 							"type": "number"
 						},
+						"carryingCapacity": {
+							"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
+						},
+						"speed": {
+							"$ref": "items-shared.json#/$defs/itemSpeed"
+						},
 						"valueMult": {
 							"type": "number"
 						},
@@ -598,6 +613,9 @@
 						},
 						"mastery": {
 							"$ref": "items-shared.json#/$defs/itemMastery"
+						},
+						"reach": {
+							"$ref": "items-shared.json#/$defs/itemReach"
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -742,6 +760,12 @@
 							"description": "In copper pieces.",
 							"type": "number"
 						},
+						"carryingCapacity": {
+							"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
+						},
+						"speed": {
+							"$ref": "items-shared.json#/$defs/itemSpeed"
+						},
 						"valueMult": {
 							"type": "number"
 						},
@@ -821,6 +845,9 @@
 						},
 						"mastery": {
 							"$ref": "items-shared.json#/$defs/itemMastery"
+						},
+						"reach": {
+							"$ref": "items-shared.json#/$defs/itemReach"
 						},
 						"hasFluff": {
 							"type": "boolean"

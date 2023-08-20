@@ -4,7 +4,7 @@
 
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.0.3",
+	"version": "1.0.4",
 
 	"$defs" : {
 		"_itemModifySpeedEqual": {
@@ -93,7 +93,7 @@
 		"itemType": {
 			"type": "string",
 			"$comment": "Dumped from `Object(Parser.ITEM_TYPE_JSON_TO_ABV)`",
-			"description": "$: Treasure\n A: Ammunition\n AF: Ammunition (futuristic)\n AIR: Vehicle (air)\n AT: Artisan Tool\n EM: Eldritch Machine\n EXP: Explosive\n FD: Food and Drink\n G: Adventuring Gear\n GS: Gaming Set\n GV: Generic Variant\n HA: Heavy Armor\n INS: Instrument\n LA: Light Armor\n M: Melee Weapon\n MA: Medium Armor\n MNT: Mount\n MR: Master Rune \n OTH: Other\n P: Potion\n R: Ranged Weapon\n RD: Rod\n RG: Ring\n S: Shield\n SC: Scroll\n SCF: Spellcasting Focus\n SHP: Vehicle (water)\n SPC: Vehicle (space)\n T: Tool\n TAH: Tack and Harness\n TG: Trade Good\n VEH: Vehicle (land)\n WD: Wand",
+			"description": "$: Treasure\n A: Ammunition\n AF: Ammunition (futuristic)\n AIR: Vehicle (air)\n AT: Artisan Tool\n EM: Eldritch Machine\n EXP: Explosive\n FD: Food and Drink\n G: Adventuring Gear\n GS: Gaming Set\n GV: Generic Variant\n HA: Heavy Armor\n IDG: Illegal Drug\n INS: Instrument\n LA: Light Armor\n M: Melee Weapon\n MA: Medium Armor\n MNT: Mount\n MR: Master Rune \n OTH: Other\n P: Potion\n R: Ranged Weapon\n RD: Rod\n RG: Ring\n S: Shield\n SC: Scroll\n SCF: Spellcasting Focus\n SHP: Vehicle (water)\n SPC: Vehicle (space)\n T: Tool\n TAH: Tack and Harness\n TG: Trade Good\n VEH: Vehicle (land)\n WD: Wand",
 			"$$switch_key": {
 				"key_site": "enum",
 				"key_ua": "enum",
@@ -111,6 +111,7 @@
 					"GS",
 					"GV",
 					"HA",
+					"IDG",
 					"INS",
 					"LA",
 					"M",
@@ -148,14 +149,14 @@
 
 		"itemProperty": {
 			"type": "array",
-			"description": "2H: Two-Handed\n A: Ammunition\n AF: Ammunition (futuristic)\n BF: Burst Fire\n EM: Eldritch Machine\n F: Finesse\n H: Heavy\n L: Light\n LD: Loading\n OTH: Other\n R: Reach\n RLD: Reload\n S: Special\n T: Thrown\n V: Versatile",
+			"description": "2H: Two-Handed\n A: Ammunition\n AF: Ammunition (futuristic)\n BF: Burst Fire\n EM: Eldritch Machine\n ER: Extended Reach\n F: Finesse\n H: Heavy\n L: Light\n LD: Loading\n OTH: Other\n R: Reach\n RLD: Reload\n S: Special\n T: Thrown\n V: Versatile\n Vst: Vestige of Divergence",
 			"items": {
 				"type": "string",
 				"$$switch_key": {
 					"key_site": "enum",
 					"key_ua": "examples",
 					"key_brew": "examples",
-					"value": ["2H", "A", "AF", "BF", "EM", "F", "H", "L", "LD", "OTH", "R", "RLD", "S", "T", "V"]
+					"value": ["2H", "A", "AF", "BF", "EM", "ER", "F", "H", "L", "LD", "OTH", "R", "RLD", "S", "T", "V", "Vst"]
 				}
 			}
 		},
@@ -206,6 +207,19 @@
 			"items": {"type": "string"},
 			"minItems": 1,
 			"uniqueItems": true
+		},
+
+		"itemCarryingCapacity": {
+			"type": "integer",
+			"description": "Of a mount/beast, not a container."
+		},
+
+		"itemSpeed": {
+			"type": "integer"
+		},
+
+		"itemReach": {
+			"type": "integer"
 		},
 
 		"$$ifBrew": {

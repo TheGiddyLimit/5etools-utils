@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.0",
+	"version": "1.14.1",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -38,8 +38,7 @@
 					"$ref": "items-shared.json#/$defs/itemAge"
 				},
 				"carryingCapacity": {
-					"type": "integer",
-					"description": "Of a mount/beast, not a container."
+					"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
 				},
 				"dmg1": {
 					"type": "string"
@@ -111,7 +110,7 @@
 					"$ref": "items-shared.json#/$defs/itemScfType"
 				},
 				"speed": {
-					"type": "integer"
+					"$ref": "items-shared.json#/$defs/itemSpeed"
 				},
 				"stealth": {
 					"type": "boolean"
@@ -534,6 +533,9 @@
 				"mastery": {
 					"$ref": "items-shared.json#/$defs/itemMastery"
 				},
+				"reach": {
+					"$ref": "items-shared.json#/$defs/itemReach"
+				},
 				"hasFluff": {
 					"type": "boolean"
 				},
@@ -631,8 +633,7 @@
 							"$ref": "items-shared.json#/$defs/itemAge"
 						},
 						"carryingCapacity": {
-							"type": "integer",
-							"description": "Of a mount/beast, not a container."
+							"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
 						},
 						"dmg1": {
 							"type": "string"
@@ -704,7 +705,7 @@
 							"$ref": "items-shared.json#/$defs/itemScfType"
 						},
 						"speed": {
-							"type": "integer"
+							"$ref": "items-shared.json#/$defs/itemSpeed"
 						},
 						"stealth": {
 							"type": "boolean"
@@ -1126,6 +1127,9 @@
 						},
 						"mastery": {
 							"$ref": "items-shared.json#/$defs/itemMastery"
+						},
+						"reach": {
+							"$ref": "items-shared.json#/$defs/itemReach"
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -1227,8 +1231,7 @@
 							"$ref": "items-shared.json#/$defs/itemAge"
 						},
 						"carryingCapacity": {
-							"type": "integer",
-							"description": "Of a mount/beast, not a container."
+							"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
 						},
 						"dmg1": {
 							"type": "string"
@@ -1300,7 +1303,7 @@
 							"$ref": "items-shared.json#/$defs/itemScfType"
 						},
 						"speed": {
-							"type": "integer"
+							"$ref": "items-shared.json#/$defs/itemSpeed"
 						},
 						"stealth": {
 							"type": "boolean"
@@ -1722,6 +1725,9 @@
 						},
 						"mastery": {
 							"$ref": "items-shared.json#/$defs/itemMastery"
+						},
+						"reach": {
+							"$ref": "items-shared.json#/$defs/itemReach"
 						},
 						"hasFluff": {
 							"type": "boolean"
