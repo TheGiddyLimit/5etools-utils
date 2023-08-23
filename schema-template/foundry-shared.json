@@ -1,0 +1,56 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "foundry-shared.json",
+	"version": "1.0.0",
+
+	"type": "object",
+
+	"$defs": {
+		"entryDataObject": {
+			"description": "Additional \"5etools-type\" data to be stored on the entry.",
+			"type": "object",
+			"properties": {
+				"languageProficiencies": {
+					"$ref": "util.json#/$defs/languageProficiencies"
+				},
+				"skillProficiencies": {
+					"$ref": "util.json#/$defs/skillProficiencies"
+				},
+				"weaponProficiencies": {
+					"$ref": "util.json#/$defs/weaponProficiencies"
+				},
+				"armorProficiencies": {
+					"$ref": "util.json#/$defs/armorProficiencies"
+				},
+				"toolProficiencies": {
+					"$ref": "util.json#/$defs/toolProficiencies"
+				},
+				"savingThrowProficiencies": {
+					"$ref": "util.json#/$defs/savingThrowProficiencies"
+				},
+				"expertise": {
+					"$ref": "util.json#/$defs/expertise"
+				},
+				"resist": {
+					"$ref": "util.json#/$defs/damageResistArrayPlayer"
+				},
+				"immune": {
+					"$ref": "util.json#/$defs/damageImmunityArrayPlayer"
+				},
+				"vulnerable": {
+					"$ref": "util.json#/$defs/damageVulnerabilityArrayPlayer"
+				},
+				"conditionImmune": {
+					"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+				},
+				"resources": {
+					"$ref": "util.json#/$defs/resourcesArray"
+				},
+				"senses": {
+					"$ref": "util.json#/$defs/sensesArray"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.12",
+	"version": "1.10.13",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -570,6 +570,9 @@
 		},
 		"subrace": {
 			"$ref": "races.json#/properties/subrace"
+		},
+		"foundryRace": {
+			"$ref": "foundry-races.json#/properties/race"
 		},
 		"foundryRaceFeature": {
 			"$ref": "foundry-races.json#/properties/raceFeature"

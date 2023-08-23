@@ -1,58 +1,9 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-class.json",
-	"version": "1.4.3",
+	"version": "1.4.4",
 
 	"type": "object",
-
-	"$defs": {
-		"entryDataObject": {
-			"description": "Additional \"5etools-type\" data to be stored on the entry.",
-			"type": "object",
-			"properties": {
-				"languageProficiencies": {
-					"$ref": "../util.json#/$defs/languageProficiencies"
-				},
-				"skillProficiencies": {
-					"$ref": "../util.json#/$defs/skillProficiencies"
-				},
-				"weaponProficiencies": {
-					"$ref": "../util.json#/$defs/weaponProficiencies"
-				},
-				"armorProficiencies": {
-					"$ref": "../util.json#/$defs/armorProficiencies"
-				},
-				"toolProficiencies": {
-					"$ref": "../util.json#/$defs/toolProficiencies"
-				},
-				"savingThrowProficiencies": {
-					"$ref": "../util.json#/$defs/savingThrowProficiencies"
-				},
-				"expertise": {
-					"$ref": "../util.json#/$defs/expertise"
-				},
-				"resist": {
-					"$ref": "../util.json#/$defs/damageResistArrayPlayer"
-				},
-				"immune": {
-					"$ref": "../util.json#/$defs/damageImmunityArrayPlayer"
-				},
-				"vulnerable": {
-					"$ref": "../util.json#/$defs/damageVulnerabilityArrayPlayer"
-				},
-				"conditionImmune": {
-					"$ref": "../util.json#/$defs/conditionImmunityArrayPlayer"
-				},
-				"resources": {
-					"$ref": "../util.json#/$defs/resourcesArray"
-				},
-				"senses": {
-					"$ref": "../util.json#/$defs/sensesArray"
-				}
-			},
-			"additionalProperties": false
-		}
-	},
 
 	"properties": {
 		"class": {
@@ -66,7 +17,7 @@
 					{
 						"properties": {
 							"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
-							"entryData": {"$ref": "#/$defs/entryDataObject"},
+							"entryData": {"$ref": "../foundry-shared.json#/$defs/entryDataObject"},
 
 							"advancement": {"$ref": "../util.json#/$defs/foundryAdvancementsArray"},
 							"chooseSystem": {"type": "array", "items": {"$ref": "../util.json#/$defs/foundrySystemObject"}},
@@ -100,7 +51,7 @@
 							"classSource": {"$ref": "../util.json#/$defs/source"},
 
 							"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
-							"entryData": {"$ref": "#/$defs/entryDataObject"},
+							"entryData": {"$ref": "../foundry-shared.json#/$defs/entryDataObject"},
 
 							"advancement": {"$ref": "../util.json#/$defs/foundryAdvancementsArray"},
 							"chooseSystem": {"type": "array", "items": {"$ref": "../util.json#/$defs/foundrySystemObject"}},
@@ -141,7 +92,7 @@
 							"level":  {"type": "integer"},
 
 							"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
-							"entryData": {"$ref": "#/$defs/entryDataObject"},
+							"entryData": {"$ref": "../foundry-shared.json#/$defs/entryDataObject"},
 
 							"chooseSystem": {"type": "array", "items": {"$ref": "../util.json#/$defs/foundrySystemObject"}},
 							"isChooseSystemRenderEntries": {"type": "boolean"},
@@ -185,7 +136,7 @@
 							"subclassSource": {"$ref": "../util.json#/$defs/source"},
 
 							"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
-							"entryData": {"$ref": "#/$defs/entryDataObject"},
+							"entryData": {"$ref": "../foundry-shared.json#/$defs/entryDataObject"},
 
 							"chooseSystem": {"type": "array", "items": {"$ref": "../util.json#/$defs/foundrySystemObject"}},
 							"isChooseSystemRenderEntries": {"type": "boolean"},

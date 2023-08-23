@@ -271,6 +271,14 @@
 									"description": "Used in subclass data",
 									"$ref": "util.json#/$defs/source"
 								},
+								"raceName": {
+									"description": "Used in race feature data",
+									"type": "string"
+								},
+								"raceSource": {
+									"description": "Used in race feature data",
+									"$ref": "util.json#/$defs/source"
+								},
 								"_mod": {
 									"$ref": "util.json#/$defs/_modObject"
 								},

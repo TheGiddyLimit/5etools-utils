@@ -1,57 +1,365 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-races.json",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"type": "object",
+	"$defs": {
+		"raceData": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"system": {
+					"$ref": "util.json#/$defs/foundrySystemObject"
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"$ref": "util.json#/$defs/foundryEffectObject"
+					}
+				},
+				"flags": {
+					"$ref": "util.json#/$defs/foundryFlagsObject"
+				},
+				"img": {
+					"type": "string"
+				},
+				"entryData": {
+					"$ref": "foundry-shared.json#/$defs/entryDataObject"
+				}
+			},
+			"required": [
+				"name",
+				"source"
+			]
+		},
+		"race": {
+			"anyOf": [
+				{
+					"$ref": "#/$defs/raceData"
+				},
+				{
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"system": {
+							"$ref": "util.json#/$defs/foundrySystemObject"
+						},
+						"effects": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/foundryEffectObject"
+							}
+						},
+						"flags": {
+							"$ref": "util.json#/$defs/foundryFlagsObject"
+						},
+						"img": {
+							"type": "string"
+						},
+						"entryData": {
+							"$ref": "foundry-shared.json#/$defs/entryDataObject"
+						},
+						"_copy": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"source": {
+									"$ref": "util.json#/$defs/source"
+								},
+								"pantheon": {
+									"description": "Used in deity data",
+									"type": "string"
+								},
+								"shortName": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"className": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"classSource": {
+									"description": "Used in subclass data",
+									"$ref": "util.json#/$defs/source"
+								},
+								"raceName": {
+									"description": "Used in race feature data",
+									"type": "string"
+								},
+								"raceSource": {
+									"description": "Used in race feature data",
+									"$ref": "util.json#/$defs/source"
+								},
+								"_mod": {
+									"$ref": "util.json#/$defs/_modObject"
+								},
+								"_trait": {
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"source": {
+											"$ref": "util.json#/$defs/source"
+										}
+									},
+									"required": [
+										"name",
+										"source"
+									]
+								},
+								"_preserve": {
+									"type": "object",
+									"patternProperties": {
+										".*": {
+											"const": true
+										}
+									}
+								}
+							},
+							"required": [
+								"name",
+								"source"
+							],
+							"additionalProperties": false
+						}
+					},
+					"required": [
+						"name",
+						"source",
+						"_copy"
+					]
+				}
+			]
+		},
+		"raceFeatureData": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"system": {
+					"$ref": "util.json#/$defs/foundrySystemObject"
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"$ref": "util.json#/$defs/foundryEffectObject"
+					}
+				},
+				"flags": {
+					"$ref": "util.json#/$defs/foundryFlagsObject"
+				},
+				"img": {
+					"type": "string"
+				},
+				"raceName": {
+					"description": "The full name of the race, with subrace parts/etc. applied.",
+					"type": "string"
+				},
+				"raceSource": {
+					"description": "The source of the subrace or race.",
+					"$ref": "util.json#/$defs/source"
+				}
+			},
+			"required": [
+				"name",
+				"source"
+			]
+		},
+		"raceFeature": {
+			"anyOf": [
+				{
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"system": {
+							"$ref": "util.json#/$defs/foundrySystemObject"
+						},
+						"effects": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/foundryEffectObject"
+							}
+						},
+						"flags": {
+							"$ref": "util.json#/$defs/foundryFlagsObject"
+						},
+						"img": {
+							"type": "string"
+						},
+						"raceName": {
+							"description": "The full name of the race, with subrace parts/etc. applied.",
+							"type": "string"
+						},
+						"raceSource": {
+							"description": "The source of the subrace or race.",
+							"$ref": "util.json#/$defs/source"
+						}
+					},
+					"required": [
+						"name",
+						"source",
+						"raceName",
+						"raceSource"
+					]
+				},
+				{
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"system": {
+							"$ref": "util.json#/$defs/foundrySystemObject"
+						},
+						"effects": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/foundryEffectObject"
+							}
+						},
+						"flags": {
+							"$ref": "util.json#/$defs/foundryFlagsObject"
+						},
+						"img": {
+							"type": "string"
+						},
+						"raceName": {
+							"description": "The full name of the race, with subrace parts/etc. applied.",
+							"type": "string"
+						},
+						"raceSource": {
+							"description": "The source of the subrace or race.",
+							"$ref": "util.json#/$defs/source"
+						},
+						"_copy": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"source": {
+									"$ref": "util.json#/$defs/source"
+								},
+								"pantheon": {
+									"description": "Used in deity data",
+									"type": "string"
+								},
+								"shortName": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"className": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"classSource": {
+									"description": "Used in subclass data",
+									"$ref": "util.json#/$defs/source"
+								},
+								"raceName": {
+									"description": "Used in race feature data",
+									"type": "string"
+								},
+								"raceSource": {
+									"description": "Used in race feature data",
+									"$ref": "util.json#/$defs/source"
+								},
+								"_mod": {
+									"$ref": "util.json#/$defs/_modObject"
+								},
+								"_trait": {
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"source": {
+											"$ref": "util.json#/$defs/source"
+										}
+									},
+									"required": [
+										"name",
+										"source"
+									]
+								},
+								"_preserve": {
+									"type": "object",
+									"patternProperties": {
+										".*": {
+											"const": true
+										}
+									}
+								}
+							},
+							"required": [
+								"name",
+								"source"
+							],
+							"additionalProperties": false
+						}
+					},
+					"required": [
+						"name",
+						"source",
+						"_copy"
+					]
+				}
+			]
+		}
+	},
 	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
+		"race": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/race"
+			}
+		},
 		"raceFeature": {
 			"type": "array",
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {
-				"type": "object",
-				"required": [
-					"name",
-					"source",
-					"raceName",
-					"raceSource"
-				],
-				"additionalProperties": false,
-				"properties": {
-					"name": {
-						"type": "string"
-					},
-					"source": {
-						"$ref": "util.json#/$defs/source"
-					},
-					"system": {
-						"$ref": "util.json#/$defs/foundrySystemObject"
-					},
-					"effects": {
-						"type": "array",
-						"items": {
-							"$ref": "util.json#/$defs/foundryEffectObject"
-						}
-					},
-					"flags": {
-						"$ref": "util.json#/$defs/foundryFlagsObject"
-					},
-					"img": {
-						"type": "string"
-					},
-					"raceName": {
-						"description": "The full name of the race, with subrace parts/etc. applied.",
-						"type": "string"
-					},
-					"raceSource": {
-						"description": "The source of the subrace or race.",
-						"$ref": "util.json#/$defs/source"
-					}
-				}
+				"$ref": "#/$defs/raceFeature"
 			}
 		}
 	},
 	"required": [
+		"race",
 		"raceFeature"
 	],
 	"additionalProperties": false

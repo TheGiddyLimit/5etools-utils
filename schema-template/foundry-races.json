@@ -1,46 +1,122 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-races.json",
-	"version": "1.1.1",
+	"version": "1.2.0",
 
 	"type": "object",
 
+	"$defs": {
+		"raceData": {
+			"type": "object",
+			"$$merge": [
+				{
+					"$ref": "util.json#/$defs/foundrySideDataGenericObject"
+				},
+				{
+					"properties": {
+						"entryData": {"$ref": "foundry-shared.json#/$defs/entryDataObject"}
+					}
+				}
+			],
+			"additionalProperties": false
+		},
+
+		"race": {
+			"anyOf": [
+				{
+					"$ref": "#/$defs/raceData"
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/raceData"
+						},
+						{
+							"$ref": "util.json#/$defs/copyBlock"
+						}
+					]
+				}
+			]
+		},
+
+		"raceFeatureData": {
+			"type": "object",
+			"$$merge": [
+				{
+					"$ref": "util.json#/$defs/foundrySideDataGenericObject"
+				},
+				{
+					"properties": {
+						"raceName": {
+							"description": "The full name of the race, with subrace parts/etc. applied.",
+							"type": "string"
+						},
+						"raceSource": {
+							"description": "The source of the subrace or race.",
+							"$ref": "util.json#/$defs/source"
+						}
+					}
+				}
+			],
+			"additionalProperties": false
+		},
+
+		"raceFeature": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/raceFeatureData"
+						},
+						{
+							"required": [
+								"raceName",
+								"raceSource"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/raceFeatureData"
+						},
+						{
+							"$ref": "util.json#/$defs/copyBlock"
+						}
+					]
+				}
+			]
+		}
+	},
+
 	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
+
+		"race": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/race"
+			}
+		},
+
 		"raceFeature": {
 			"type": "array",
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {
-				"type": "object",
-				"$$merge": [
-					{
-						"$ref": "util.json#/$defs/foundrySideDataGenericObject"
-					},
-					{
-						"properties": {
-							"raceName": {
-								"description": "The full name of the race, with subrace parts/etc. applied.",
-								"type": "string"
-							},
-							"raceSource": {
-								"description": "The source of the subrace or race.",
-								"$ref": "util.json#/$defs/source"
-							}
-						}
-					}
-				],
-				"required": [
-					"name",
-					"source",
-					"raceName",
-					"raceSource"
-				],
-				"additionalProperties": false
+				"$ref": "#/$defs/raceFeature"
 			}
 		}
 	},
 
 	"required": [
+		"race",
 		"raceFeature"
 	],
 	"additionalProperties": false

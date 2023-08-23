@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.34",
+	"version": "1.13.35",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2772,6 +2772,14 @@
 										"description": "Used in subclass data",
 										"$ref": "util.json#/$defs/source"
 									},
+									"raceName": {
+										"description": "Used in race feature data",
+										"type": "string"
+									},
+									"raceSource": {
+										"description": "Used in race feature data",
+										"$ref": "util.json#/$defs/source"
+									},
 									"_mod": {
 										"$ref": "#/$defs/_modObject"
 									},
@@ -3502,6 +3510,14 @@
 						},
 						"classSource": {
 							"description": "Used in subclass data",
+							"$ref": "util.json#/$defs/source"
+						},
+						"raceName": {
+							"description": "Used in race feature data",
+							"type": "string"
+						},
+						"raceSource": {
+							"description": "Used in race feature data",
 							"$ref": "util.json#/$defs/source"
 						},
 						"_mod": {
