@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "decks.json",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"type": "object",
 
 	"$defs": {
@@ -11,6 +11,7 @@
 				"name": {"type": "string"},
 				"alias": {"$ref": "util.json#/$defs/alias"},
 				"source": {"$ref": "util.json#/$defs/source"},
+				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
 
 				"page": {"$ref": "util.json#/$defs/page"},
 				"srd": {"$ref": "util.json#/$defs/srd"},
@@ -93,6 +94,7 @@
 				"name": {"type": "string"},
 				"alias": {"$ref": "util.json#/$defs/alias"},
 				"source": {"$ref": "util.json#/$defs/source"},
+				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
 				"set": {"type": "string"},
 
 				"page": {"$ref": "util.json#/$defs/page"},
