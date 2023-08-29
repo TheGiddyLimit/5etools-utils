@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-time.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"title": "Util: Time",
 	"$defs": {
 		"time": {
@@ -29,6 +29,9 @@
 				"unit"
 			],
 			"additionalProperties": false
+		},
+		"timeMinutes": {
+			"type": "integer"
 		}
 	}
 }
