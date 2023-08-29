@@ -32,7 +32,7 @@
 				"time": {
 					"type": "array",
 					"items": {
-						"$ref": "#/$defs/time"
+						"$ref": "../util-time.json#/$defs/time"
 					}
 				},
 				"range": {
@@ -355,7 +355,7 @@
 						"time": {
 							"type": "array",
 							"items": {
-								"$ref": "#/$defs/time"
+								"$ref": "../util-time.json#/$defs/time"
 							}
 						},
 						"range": {
@@ -686,7 +686,7 @@
 						"time": {
 							"type": "array",
 							"items": {
-								"$ref": "#/$defs/time"
+								"$ref": "../util-time.json#/$defs/time"
 							}
 						},
 						"range": {
@@ -1050,32 +1050,6 @@
 					]
 				}
 			]
-		},
-		"time": {
-			"type": "object",
-			"properties": {
-				"number": {
-					"type": "integer"
-				},
-				"unit": {
-					"type": "string",
-					"enum": [
-						"action",
-						"bonus",
-						"reaction",
-						"round",
-						"minute",
-						"hour"
-					]
-				},
-				"condition": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"unit"
-			],
-			"additionalProperties": false
 		},
 		"duration": {
 			"type": "object",

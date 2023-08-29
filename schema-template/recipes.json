@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.2.5",
+	"version": "1.2.6",
 	"type": "object",
 
 	"$defs": {
@@ -21,6 +21,15 @@
 					"foundryImg": {
 						"$ref": "util.json#/$defs/foundryImg"
 					}
+				},
+				"time": {
+					"type": "object",
+					"properties": {
+						"cooking": {"$ref": "util-time.json#/$defs/time"},
+						"preparation": {"$ref": "util-time.json#/$defs/time"}
+					},
+					"additionalProperties": false,
+					"minProperties": 2
 				},
 				"serves": {
 					"oneOf": [

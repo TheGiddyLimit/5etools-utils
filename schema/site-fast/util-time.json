@@ -1,0 +1,34 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "util-time.json",
+	"version": "1.0.0",
+	"title": "Util: Time",
+	"$defs": {
+		"time": {
+			"type": "object",
+			"properties": {
+				"number": {
+					"type": "integer"
+				},
+				"unit": {
+					"type": "string",
+					"enum": [
+						"action",
+						"bonus",
+						"reaction",
+						"round",
+						"minute",
+						"hour"
+					]
+				},
+				"condition": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"unit"
+			],
+			"additionalProperties": false
+		}
+	}
+}
