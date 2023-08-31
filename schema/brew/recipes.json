@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.3.0",
+	"version": "1.4.0",
 	"type": "object",
 	"$defs": {
-		"recipe": {
+		"recipeData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -19,6 +19,9 @@
 				"time": {
 					"type": "object",
 					"properties": {
+						"total": {
+							"$ref": "util-time.json#/$defs/timeMinutes"
+						},
 						"cooking": {
 							"$ref": "util-time.json#/$defs/timeMinutes"
 						},
@@ -178,16 +181,450 @@
 					"$ref": "util.json#/$defs/foundryImg"
 				}
 			},
-			"required": [
-				"name",
-				"source",
-				"instructions",
-				"ingredients"
-			],
 			"additionalProperties": false
+		},
+		"recipe": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"time": {
+							"type": "object",
+							"properties": {
+								"total": {
+									"$ref": "util-time.json#/$defs/timeMinutes"
+								},
+								"cooking": {
+									"$ref": "util-time.json#/$defs/timeMinutes"
+								},
+								"preparation": {
+									"$ref": "util-time.json#/$defs/timeMinutes"
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						},
+						"serves": {
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"min": {
+											"type": "integer"
+										},
+										"max": {
+											"type": "integer"
+										},
+										"note": {
+											"$ref": "entry.json"
+										}
+									},
+									"required": [
+										"min",
+										"max"
+									],
+									"additionalProperties": false
+								},
+								{
+									"type": "object",
+									"properties": {
+										"exact": {
+											"type": "integer"
+										},
+										"note": {
+											"$ref": "entry.json"
+										}
+									},
+									"required": [
+										"exact"
+									],
+									"additionalProperties": false
+								}
+							]
+						},
+						"makes": {
+							"$ref": "entry.json"
+						},
+						"ingredients": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"equipment": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"instructions": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"noteCook": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"type": {
+							"type": "string",
+							"examples": [
+								"Dwarven",
+								"Elven",
+								"Elixir/Ale",
+								"Human",
+								"Halfling",
+								"Uncommon Cuisine"
+							]
+						},
+						"diet": {
+							"type": "string",
+							"description": "C: Vegetarian [aka \"cheese\"]\n V: Vegan\n X: Omnivorous",
+							"enum": [
+								"C",
+								"V",
+								"X"
+							]
+						},
+						"miscTags": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"alcohol"
+								]
+							}
+						},
+						"allergenGroups": {
+							"type": "array",
+							"description": "One of the 14 major food allergens; see https://erudus.com/food-allergens for more information.",
+							"items": {
+								"type": "string",
+								"enum": [
+									"celery",
+									"crustaceans",
+									"eggs",
+									"fish",
+									"gluten",
+									"lupin",
+									"milk",
+									"molluscs",
+									"mustard",
+									"nuts",
+									"peanuts",
+									"sesame",
+									"soya",
+									"sulphites"
+								]
+							}
+						},
+						"dishTypes": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"examples": [
+									"appetizer",
+									"bread",
+									"cocktail",
+									"dessert",
+									"drink",
+									"entree",
+									"pastry",
+									"salad",
+									"side",
+									"snack",
+									"soup"
+								]
+							}
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"fluff": {
+							"$ref": "util.json#/$defs/fluffObject"
+						},
+						"foundryImg": {
+							"$ref": "util.json#/$defs/foundryImg"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"instructions",
+						"ingredients"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"time": {
+							"type": "object",
+							"properties": {
+								"total": {
+									"$ref": "util-time.json#/$defs/timeMinutes"
+								},
+								"cooking": {
+									"$ref": "util-time.json#/$defs/timeMinutes"
+								},
+								"preparation": {
+									"$ref": "util-time.json#/$defs/timeMinutes"
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						},
+						"serves": {
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"min": {
+											"type": "integer"
+										},
+										"max": {
+											"type": "integer"
+										},
+										"note": {
+											"$ref": "entry.json"
+										}
+									},
+									"required": [
+										"min",
+										"max"
+									],
+									"additionalProperties": false
+								},
+								{
+									"type": "object",
+									"properties": {
+										"exact": {
+											"type": "integer"
+										},
+										"note": {
+											"$ref": "entry.json"
+										}
+									},
+									"required": [
+										"exact"
+									],
+									"additionalProperties": false
+								}
+							]
+						},
+						"makes": {
+							"$ref": "entry.json"
+						},
+						"ingredients": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"equipment": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"instructions": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"noteCook": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"type": {
+							"type": "string",
+							"examples": [
+								"Dwarven",
+								"Elven",
+								"Elixir/Ale",
+								"Human",
+								"Halfling",
+								"Uncommon Cuisine"
+							]
+						},
+						"diet": {
+							"type": "string",
+							"description": "C: Vegetarian [aka \"cheese\"]\n V: Vegan\n X: Omnivorous",
+							"enum": [
+								"C",
+								"V",
+								"X"
+							]
+						},
+						"miscTags": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"alcohol"
+								]
+							}
+						},
+						"allergenGroups": {
+							"type": "array",
+							"description": "One of the 14 major food allergens; see https://erudus.com/food-allergens for more information.",
+							"items": {
+								"type": "string",
+								"enum": [
+									"celery",
+									"crustaceans",
+									"eggs",
+									"fish",
+									"gluten",
+									"lupin",
+									"milk",
+									"molluscs",
+									"mustard",
+									"nuts",
+									"peanuts",
+									"sesame",
+									"soya",
+									"sulphites"
+								]
+							}
+						},
+						"dishTypes": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"examples": [
+									"appetizer",
+									"bread",
+									"cocktail",
+									"dessert",
+									"drink",
+									"entree",
+									"pastry",
+									"salad",
+									"side",
+									"snack",
+									"soup"
+								]
+							}
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"fluff": {
+							"$ref": "util.json#/$defs/fluffObject"
+						},
+						"foundryImg": {
+							"$ref": "util.json#/$defs/foundryImg"
+						},
+						"_copy": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"source": {
+									"$ref": "util.json#/$defs/source"
+								},
+								"pantheon": {
+									"description": "Used in deity data",
+									"type": "string"
+								},
+								"shortName": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"className": {
+									"description": "Used in subclass data",
+									"type": "string"
+								},
+								"classSource": {
+									"description": "Used in subclass data",
+									"$ref": "util.json#/$defs/source"
+								},
+								"raceName": {
+									"description": "Used in race feature data",
+									"type": "string"
+								},
+								"raceSource": {
+									"description": "Used in race feature data",
+									"$ref": "util.json#/$defs/source"
+								},
+								"_mod": {
+									"$ref": "util.json#/$defs/_modObject"
+								},
+								"_trait": {
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"source": {
+											"$ref": "util.json#/$defs/source"
+										}
+									},
+									"required": [
+										"name",
+										"source"
+									]
+								},
+								"_preserve": {
+									"type": "object",
+									"patternProperties": {
+										".*": {
+											"const": true
+										}
+									}
+								}
+							},
+							"required": [
+								"name",
+								"source"
+							],
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		}
 	},
 	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
 		"recipe": {
 			"type": "array",
 			"uniqueItems": true,

@@ -1,11 +1,11 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.3.0",
+	"version": "1.4.0",
 	"type": "object",
 
 	"$defs": {
-		"recipe": {
+		"recipeData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -153,12 +153,41 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
-			"required": ["name", "source", "instructions", "ingredients"],
 			"additionalProperties": false
+		},
+
+		"recipe": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/recipeData"
+						},
+						{
+							"required": ["name", "source", "instructions", "ingredients"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/recipeData"
+						},
+						{
+							"$ref": "util.json#/$defs/copyBlock"
+						}
+					]
+				}
+			]
 		}
 	},
 
 	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
 		"recipe": {
 			"type": "array",
 			"uniqueItems": true,
