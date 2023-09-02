@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.4.0",
+	"version": "1.5.0",
 	"type": "object",
 	"$defs": {
 		"recipeData": {
@@ -18,19 +18,13 @@
 				},
 				"time": {
 					"type": "object",
-					"properties": {
-						"total": {
-							"$ref": "util-time.json#/$defs/timeMinutes"
-						},
-						"cooking": {
-							"$ref": "util-time.json#/$defs/timeMinutes"
-						},
-						"preparation": {
+					"additionalProperties": false,
+					"minProperties": 1,
+					"patternProperties": {
+						"^[a-zA-Z ]+$": {
 							"$ref": "util-time.json#/$defs/timeMinutes"
 						}
-					},
-					"additionalProperties": false,
-					"minProperties": 1
+					}
 				},
 				"serves": {
 					"oneOf": [
@@ -199,19 +193,13 @@
 						},
 						"time": {
 							"type": "object",
-							"properties": {
-								"total": {
-									"$ref": "util-time.json#/$defs/timeMinutes"
-								},
-								"cooking": {
-									"$ref": "util-time.json#/$defs/timeMinutes"
-								},
-								"preparation": {
+							"additionalProperties": false,
+							"minProperties": 1,
+							"patternProperties": {
+								"^[a-zA-Z ]+$": {
 									"$ref": "util-time.json#/$defs/timeMinutes"
 								}
-							},
-							"additionalProperties": false,
-							"minProperties": 1
+							}
 						},
 						"serves": {
 							"oneOf": [
@@ -384,19 +372,13 @@
 						},
 						"time": {
 							"type": "object",
-							"properties": {
-								"total": {
-									"$ref": "util-time.json#/$defs/timeMinutes"
-								},
-								"cooking": {
-									"$ref": "util-time.json#/$defs/timeMinutes"
-								},
-								"preparation": {
+							"additionalProperties": false,
+							"minProperties": 1,
+							"patternProperties": {
+								"^[a-zA-Z ]+$": {
 									"$ref": "util-time.json#/$defs/timeMinutes"
 								}
-							},
-							"additionalProperties": false,
-							"minProperties": 1
+							}
 						},
 						"serves": {
 							"oneOf": [
