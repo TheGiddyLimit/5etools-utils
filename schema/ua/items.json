@@ -545,6 +545,10 @@
 				"hasRefs": {
 					"type": "boolean",
 					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+				},
+				"customProperties": {
+					"description": "An unrestricted area for custom properties to be stored.",
+					"type": "object"
 				}
 			},
 			"additionalProperties": false
@@ -1092,6 +1096,10 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"customProperties": {
+							"description": "An unrestricted area for custom properties to be stored.",
+							"type": "object"
 						}
 					},
 					"additionalProperties": false,
@@ -1642,6 +1650,10 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"customProperties": {
+							"description": "An unrestricted area for custom properties to be stored.",
+							"type": "object"
 						},
 						"_copy": {
 							"type": "object",

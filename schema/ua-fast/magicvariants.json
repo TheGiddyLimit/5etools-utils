@@ -69,6 +69,13 @@
 								},
 								"property": {
 									"type": "string"
+								},
+								"customProperties": {
+									"description": "An unrestricted area for custom properties to be stored.",
+									"type": "object",
+									"items": {
+										"type": "boolean"
+									}
 								}
 							},
 							"additionalProperties": false
@@ -263,6 +270,10 @@
 							"hasRefs": {
 								"type": "boolean",
 								"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							},
+							"customProperties": {
+								"description": "An unrestricted area for custom properties to be stored.",
+								"type": "object"
 							}
 						},
 						"required": [
@@ -306,6 +317,10 @@
 							},
 							"net": {
 								"type": "boolean"
+							},
+							"customProperties": {
+								"description": "An unrestricted area for custom properties to be stored.",
+								"type": "object"
 							}
 						},
 						"additionalProperties": false
@@ -342,6 +357,10 @@
 					},
 					"hasFluffImages": {
 						"type": "boolean"
+					},
+					"customProperties": {
+						"description": "An unrestricted area for custom properties to be stored.",
+						"type": "object"
 					}
 				},
 				"required": [

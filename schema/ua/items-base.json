@@ -394,6 +394,10 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"customProperties": {
+					"description": "An unrestricted area for custom properties to be stored.",
+					"type": "object"
 				}
 			},
 			"additionalProperties": false
@@ -622,6 +626,10 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"customProperties": {
+							"description": "An unrestricted area for custom properties to be stored.",
+							"type": "object"
 						}
 					},
 					"additionalProperties": false,
@@ -854,6 +862,10 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"customProperties": {
+							"description": "An unrestricted area for custom properties to be stored.",
+							"type": "object"
 						},
 						"_copy": {
 							"type": "object",
