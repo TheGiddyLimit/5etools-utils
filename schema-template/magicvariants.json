@@ -42,12 +42,15 @@
 								"net": {"type": "boolean"},
 								"weaponCategory": {"$ref": "items-shared.json#/$defs/itemWeaponCategory"},
 								"property": {"type": "string"},
-								"$$ifBrew": {
-									"customProperties": {
-										"description": "An unrestricted area for custom properties to be stored.",
-										"type": "object",
-										"items": {
-											"type": "boolean"
+								"$$if": {
+									"modes": ["brew", "ua"],
+									"value": {
+										"customProperties": {
+											"description": "An unrestricted area for custom properties to be stored.",
+											"type": "object",
+											"items": {
+												"type": "boolean"
+											}
 										}
 									}
 								}
@@ -220,11 +223,16 @@
 							},
 							"mastery": {"$ref": "items-shared.json#/$defs/itemMastery"},
 							"reach": {"$ref": "items-shared.json#/$defs/itemReach"},
+							"$$if": {
+								"modes": ["brew", "ua"],
+								"value": {
+									"customProperties": {
+										"description": "An unrestricted area for custom properties to be stored.",
+										"type": "object"
+									}
+								}
+							},
 							"$$ifBrew": {
-								"customProperties": {
-									"description": "An unrestricted area for custom properties to be stored.",
-									"type": "object"
-								},
 								"fluff": {
 									"$ref": "items-shared.json#/$defs/fluff"
 								}
@@ -274,10 +282,13 @@
 							"net": {
 								"type": "boolean"
 							},
-							"$$ifBrew": {
-								"customProperties": {
-									"description": "An unrestricted area for custom properties to be stored.",
-									"type": "object"
+							"$$if": {
+								"modes": ["brew", "ua"],
+								"value": {
+									"customProperties": {
+										"description": "An unrestricted area for custom properties to be stored.",
+										"type": "object"
+									}
 								}
 							}
 						},
@@ -309,11 +320,16 @@
 					},
 					"hasFluff": {"type": "boolean"},
 					"hasFluffImages": {"type": "boolean"},
+					"$$if": {
+						"modes": ["brew", "ua"],
+						"value": {
+							"customProperties": {
+								"description": "An unrestricted area for custom properties to be stored.",
+								"type": "object"
+							}
+						}
+					},
 					"$$ifBrew": {
-						"customProperties": {
-							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
-						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"
 						},

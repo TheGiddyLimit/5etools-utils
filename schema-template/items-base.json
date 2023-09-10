@@ -263,11 +263,16 @@
 				"speed": {
 					"$ref": "items-shared.json#/$defs/itemSpeed"
 				},
+				"$$if": {
+					"modes": ["brew", "ua"],
+					"value": {
+						"customProperties": {
+							"description": "An unrestricted area for custom properties to be stored.",
+							"type": "object"
+						}
+					}
+				},
 				"$$ifBrew": {
-					"customProperties": {
-						"description": "An unrestricted area for custom properties to be stored.",
-						"type": "object"
-					},
 					"currencyConversion": {
 						"description": "ID of a value conversion table. Homebrew only.",
 						"type": "string"

@@ -467,11 +467,16 @@
 					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 				},
 
+				"$$if": {
+					"modes": ["brew", "ua"],
+					"value": {
+						"customProperties": {
+							"description": "An unrestricted area for custom properties to be stored.",
+							"type": "object"
+						}
+					}
+				},
 				"$$ifBrew": {
-					"customProperties": {
-						"description": "An unrestricted area for custom properties to be stored.",
-						"type": "object"
-					},
 					"acSpecial": {
 						"description": "Free text field for homebrew use.",
 						"type": "string"
