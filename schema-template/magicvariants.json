@@ -41,17 +41,18 @@
 								"scfType": {"$ref": "items-shared.json#/$defs/itemScfType"},
 								"net": {"type": "boolean"},
 								"weaponCategory": {"$ref": "items-shared.json#/$defs/itemWeaponCategory"},
-								"property": {"type": "string"}
-							},
-							"$$if": {
-								"modes": ["site", "ua"],
-								"value": {
-									"additionalProperties": false
+								"property": {"type": "string"},
+								"$$ifBrew": {
+									"homebrew": {
+										"description": "An unrestricted area for custom homebrew properties to be stored.",
+										"type": "object",
+										"items": {
+											"type": "boolean"
+										}
+									}
 								}
 							},
-							"$$ifBrew": {
-								"additionalProperties": {"type": "boolean"}
-							}
+							"additionalProperties": false
 						}
 					},
 					"inherits": {
@@ -220,6 +221,10 @@
 							"mastery": {"$ref": "items-shared.json#/$defs/itemMastery"},
 							"reach": {"$ref": "items-shared.json#/$defs/itemReach"},
 							"$$ifBrew": {
+								"homebrew": {
+									"description": "An unrestricted area for custom homebrew properties to be stored.",
+									"type": "object"
+								},
 								"fluff": {
 									"$ref": "items-shared.json#/$defs/fluff"
 								}
@@ -234,21 +239,7 @@
 							"source",
 							"page"
 						],
-						"$$if": {
-							"modes": ["site", "ua"],
-							"value": {
-								"additionalProperties": false
-							}
-						},
-						"$$ifBrew": {
-							"additionalProperties": {
-								"type": [
-									"boolean",
-									"integer",
-									"string"
-								]
-							}
-						}
+						"additionalProperties": false
 					},
 					"excludes": {
 						"type": "object",
@@ -282,23 +273,15 @@
 							},
 							"net": {
 								"type": "boolean"
+							},
+							"$$ifBrew": {
+								"homebrew": {
+									"description": "An unrestricted area for custom homebrew properties to be stored.",
+									"type": "object"
+								}
 							}
 						},
-						"$$if": {
-							"modes": ["site", "ua"],
-							"value": {
-								"additionalProperties": false
-							}
-						},
-						"$$ifBrew": {
-							"additionalProperties": {
-								"type": [
-									"boolean",
-									"integer",
-									"string"
-								]
-							}
-						}
+						"additionalProperties": false
 					},
 					"noDisplay": {
 						"type": "boolean"
@@ -327,6 +310,10 @@
 					"hasFluff": {"type": "boolean"},
 					"hasFluffImages": {"type": "boolean"},
 					"$$ifBrew": {
+						"homebrew": {
+							"description": "An unrestricted area for custom homebrew properties to be stored.",
+							"type": "object"
+						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"
 						},

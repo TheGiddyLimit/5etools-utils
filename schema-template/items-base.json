@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.10",
+	"version": "1.5.11",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -264,6 +264,10 @@
 					"$ref": "items-shared.json#/$defs/itemSpeed"
 				},
 				"$$ifBrew": {
+					"homebrew": {
+						"description": "An unrestricted area for custom homebrew properties to be stored.",
+						"type": "object"
+					},
 					"currencyConversion": {
 						"description": "ID of a value conversion table. Homebrew only.",
 						"type": "string"
@@ -356,21 +360,7 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
-			"$$if": {
-				"modes": ["site", "ua"],
-				"value": {
-					"additionalProperties": false
-				}
-			},
-			"$$ifBrew": {
-				"additionalProperties": {
-					"type": [
-						"boolean",
-						"integer",
-						"string"
-					]
-				}
-			}
+			"additionalProperties": false
 		},
 
 		"baseitem": {
