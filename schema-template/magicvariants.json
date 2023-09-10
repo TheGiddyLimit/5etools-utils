@@ -43,8 +43,8 @@
 								"weaponCategory": {"$ref": "items-shared.json#/$defs/itemWeaponCategory"},
 								"property": {"type": "string"},
 								"$$ifBrew": {
-									"homebrew": {
-										"description": "An unrestricted area for custom homebrew properties to be stored.",
+									"customProperties": {
+										"description": "An unrestricted area for custom properties to be stored.",
 										"type": "object",
 										"items": {
 											"type": "boolean"
@@ -221,8 +221,8 @@
 							"mastery": {"$ref": "items-shared.json#/$defs/itemMastery"},
 							"reach": {"$ref": "items-shared.json#/$defs/itemReach"},
 							"$$ifBrew": {
-								"homebrew": {
-									"description": "An unrestricted area for custom homebrew properties to be stored.",
+								"customProperties": {
+									"description": "An unrestricted area for custom properties to be stored.",
 									"type": "object"
 								},
 								"fluff": {
@@ -275,8 +275,8 @@
 								"type": "boolean"
 							},
 							"$$ifBrew": {
-								"homebrew": {
-									"description": "An unrestricted area for custom homebrew properties to be stored.",
+								"customProperties": {
+									"description": "An unrestricted area for custom properties to be stored.",
 									"type": "object"
 								}
 							}
@@ -310,8 +310,8 @@
 					"hasFluff": {"type": "boolean"},
 					"hasFluffImages": {"type": "boolean"},
 					"$$ifBrew": {
-						"homebrew": {
-							"description": "An unrestricted area for custom homebrew properties to be stored.",
+						"customProperties": {
+							"description": "An unrestricted area for custom properties to be stored.",
 							"type": "object"
 						},
 						"fluff": {
