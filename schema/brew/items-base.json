@@ -390,8 +390,8 @@
 				"hasFluffImages": {
 					"type": "boolean"
 				},
-				"homebrew": {
-					"description": "An unrestricted area for custom homebrew properties to be stored.",
+				"customProperties": {
+					"description": "An unrestricted area for custom properties to be stored.",
 					"type": "object"
 				},
 				"currencyConversion": {
@@ -656,8 +656,8 @@
 						"hasFluffImages": {
 							"type": "boolean"
 						},
-						"homebrew": {
-							"description": "An unrestricted area for custom homebrew properties to be stored.",
+						"customProperties": {
+							"description": "An unrestricted area for custom properties to be stored.",
 							"type": "object"
 						},
 						"currencyConversion": {
@@ -926,8 +926,8 @@
 						"hasFluffImages": {
 							"type": "boolean"
 						},
-						"homebrew": {
-							"description": "An unrestricted area for custom homebrew properties to be stored.",
+						"customProperties": {
+							"description": "An unrestricted area for custom properties to be stored.",
 							"type": "object"
 						},
 						"currencyConversion": {

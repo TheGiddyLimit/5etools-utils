@@ -70,8 +70,8 @@
 								"property": {
 									"type": "string"
 								},
-								"homebrew": {
-									"description": "An unrestricted area for custom homebrew properties to be stored.",
+								"customProperties": {
+									"description": "An unrestricted area for custom properties to be stored.",
 									"type": "object",
 									"items": {
 										"type": "boolean"
@@ -271,8 +271,8 @@
 								"type": "boolean",
 								"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 							},
-							"homebrew": {
-								"description": "An unrestricted area for custom homebrew properties to be stored.",
+							"customProperties": {
+								"description": "An unrestricted area for custom properties to be stored.",
 								"type": "object"
 							},
 							"fluff": {
@@ -321,8 +321,8 @@
 							"net": {
 								"type": "boolean"
 							},
-							"homebrew": {
-								"description": "An unrestricted area for custom homebrew properties to be stored.",
+							"customProperties": {
+								"description": "An unrestricted area for custom properties to be stored.",
 								"type": "object"
 							}
 						},
@@ -361,8 +361,8 @@
 					"hasFluffImages": {
 						"type": "boolean"
 					},
-					"homebrew": {
-						"description": "An unrestricted area for custom homebrew properties to be stored.",
+					"customProperties": {
+						"description": "An unrestricted area for custom properties to be stored.",
 						"type": "object"
 					},
 					"fluff": {
