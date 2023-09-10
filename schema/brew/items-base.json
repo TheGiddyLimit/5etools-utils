@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.10",
+	"version": "1.5.11",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -390,6 +390,10 @@
 				"hasFluffImages": {
 					"type": "boolean"
 				},
+				"homebrew": {
+					"description": "An unrestricted area for custom homebrew properties to be stored.",
+					"type": "object"
+				},
 				"currencyConversion": {
 					"description": "ID of a value conversion table. Homebrew only.",
 					"type": "string"
@@ -425,13 +429,7 @@
 					"$ref": "items-shared.json#/$defs/fluff"
 				}
 			},
-			"additionalProperties": {
-				"type": [
-					"boolean",
-					"integer",
-					"string"
-				]
-			}
+			"additionalProperties": false
 		},
 		"baseitem": {
 			"anyOf": [
@@ -658,6 +656,10 @@
 						"hasFluffImages": {
 							"type": "boolean"
 						},
+						"homebrew": {
+							"description": "An unrestricted area for custom homebrew properties to be stored.",
+							"type": "object"
+						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
 							"type": "string"
@@ -693,13 +695,7 @@
 							"$ref": "items-shared.json#/$defs/fluff"
 						}
 					},
-					"additionalProperties": {
-						"type": [
-							"boolean",
-							"integer",
-							"string"
-						]
-					},
+					"additionalProperties": false,
 					"required": [
 						"name",
 						"type",
@@ -930,6 +926,10 @@
 						"hasFluffImages": {
 							"type": "boolean"
 						},
+						"homebrew": {
+							"description": "An unrestricted area for custom homebrew properties to be stored.",
+							"type": "object"
+						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
 							"type": "string"
@@ -1031,13 +1031,7 @@
 							"additionalProperties": false
 						}
 					},
-					"additionalProperties": {
-						"type": [
-							"boolean",
-							"integer",
-							"string"
-						]
-					},
+					"additionalProperties": false,
 					"required": [
 						"_copy"
 					]

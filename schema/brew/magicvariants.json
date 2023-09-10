@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.8.4",
+	"version": "1.8.5",
 	"type": "object",
 	"properties": {
 		"magicvariant": {
@@ -69,11 +69,16 @@
 								},
 								"property": {
 									"type": "string"
+								},
+								"homebrew": {
+									"description": "An unrestricted area for custom homebrew properties to be stored.",
+									"type": "object",
+									"items": {
+										"type": "boolean"
+									}
 								}
 							},
-							"additionalProperties": {
-								"type": "boolean"
-							}
+							"additionalProperties": false
 						}
 					},
 					"inherits": {
@@ -266,6 +271,10 @@
 								"type": "boolean",
 								"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 							},
+							"homebrew": {
+								"description": "An unrestricted area for custom homebrew properties to be stored.",
+								"type": "object"
+							},
 							"fluff": {
 								"$ref": "items-shared.json#/$defs/fluff"
 							}
@@ -275,13 +284,7 @@
 							"source",
 							"page"
 						],
-						"additionalProperties": {
-							"type": [
-								"boolean",
-								"integer",
-								"string"
-							]
-						}
+						"additionalProperties": false
 					},
 					"excludes": {
 						"type": "object",
@@ -317,15 +320,13 @@
 							},
 							"net": {
 								"type": "boolean"
+							},
+							"homebrew": {
+								"description": "An unrestricted area for custom homebrew properties to be stored.",
+								"type": "object"
 							}
 						},
-						"additionalProperties": {
-							"type": [
-								"boolean",
-								"integer",
-								"string"
-							]
-						}
+						"additionalProperties": false
 					},
 					"noDisplay": {
 						"type": "boolean"
@@ -359,6 +360,10 @@
 					},
 					"hasFluffImages": {
 						"type": "boolean"
+					},
+					"homebrew": {
+						"description": "An unrestricted area for custom homebrew properties to be stored.",
+						"type": "object"
 					},
 					"fluff": {
 						"$ref": "items-shared.json#/$defs/fluff"
