@@ -4,7 +4,7 @@
 
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.0.4",
+	"version": "1.0.5",
 
 	"$defs" : {
 		"_itemModifySpeedEqual": {
@@ -220,6 +220,24 @@
 
 		"itemReach": {
 			"type": "integer"
+		},
+
+		"$$if": {
+			"modes": ["brew", "ua"],
+			"value": {
+				"customProperties": {
+					"description": "An unrestricted area for custom properties to be stored.",
+					"type": "object",
+					"additionalProperties": {
+						"type": [
+							"boolean",
+							"string",
+							"number",
+							"integer"
+						]
+					}
+				}
+			}
 		},
 
 		"$$ifBrew": {

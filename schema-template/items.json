@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.2",
+	"version": "1.14.3",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -470,10 +470,7 @@
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {
-						"customProperties": {
-							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
-						}
+						"customProperties": {"$ref": "items-shared.json#/$defs/customProperties"}
 					}
 				},
 				"$$ifBrew": {
