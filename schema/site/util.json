@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.35",
+	"version": "1.13.36",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -3571,6 +3571,10 @@
 						},
 						"_mod": {
 							"$ref": "#/$defs/_modObject"
+						},
+						"_preserve": {
+							"description": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`.",
+							"$ref": "#/$defs/_preserveObject"
 						}
 					},
 					"required": [
@@ -3592,6 +3596,10 @@
 								},
 								"_mod": {
 									"$ref": "#/$defs/_modObject"
+								},
+								"_preserve": {
+									"description": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`.",
+									"$ref": "#/$defs/_preserveObject"
 								}
 							},
 							"required": [
@@ -3647,6 +3655,14 @@
 							}
 						}
 					]
+				}
+			}
+		},
+		"_preserveObject": {
+			"type": "object",
+			"patternProperties": {
+				".*": {
+					"const": true
 				}
 			}
 		},
