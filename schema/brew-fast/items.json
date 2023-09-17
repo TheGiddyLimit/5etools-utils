@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.2",
+	"version": "1.14.3",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -547,8 +547,7 @@
 					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 				},
 				"customProperties": {
-					"description": "An unrestricted area for custom properties to be stored.",
-					"type": "object"
+					"$ref": "items-shared.json#/$defs/customProperties"
 				},
 				"acSpecial": {
 					"description": "Free text field for homebrew use.",
@@ -1140,8 +1139,7 @@
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 						},
 						"customProperties": {
-							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"$ref": "items-shared.json#/$defs/customProperties"
 						},
 						"acSpecial": {
 							"description": "Free text field for homebrew use.",
@@ -1736,8 +1734,7 @@
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 						},
 						"customProperties": {
-							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"$ref": "items-shared.json#/$defs/customProperties"
 						},
 						"acSpecial": {
 							"description": "Free text field for homebrew use.",

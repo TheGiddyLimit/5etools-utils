@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.11",
+	"version": "1.5.12",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -181,6 +181,9 @@
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
 				},
+				"typeAlt": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
 				"rarity": {
 					"$ref": "items-shared.json#/$defs/itemRarity"
 				},
@@ -190,11 +193,17 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
+				"baseItem": {
+					"type": "string"
+				},
 				"ac": {
 					"type": "integer"
 				},
 				"age": {
 					"$ref": "items-shared.json#/$defs/itemAge"
+				},
+				"bonusWeapon": {
+					"type": "string"
 				},
 				"dmg1": {
 					"type": "string"
@@ -306,6 +315,18 @@
 				"speed": {
 					"$ref": "items-shared.json#/$defs/itemSpeed"
 				},
+				"charges": {
+					"type": [
+						"string",
+						"integer"
+					]
+				},
+				"recharge": {
+					"$ref": "items-shared.json#/$defs/itemRecharge"
+				},
+				"rechargeAmount": {
+					"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+				},
 				"valueMult": {
 					"type": "number"
 				},
@@ -396,8 +417,7 @@
 					"type": "boolean"
 				},
 				"customProperties": {
-					"description": "An unrestricted area for custom properties to be stored.",
-					"type": "object"
+					"$ref": "items-shared.json#/$defs/customProperties"
 				}
 			},
 			"additionalProperties": false
@@ -413,6 +433,9 @@
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
+						"typeAlt": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
 						"rarity": {
 							"$ref": "items-shared.json#/$defs/itemRarity"
 						},
@@ -422,11 +445,17 @@
 						"page": {
 							"$ref": "util.json#/$defs/page"
 						},
+						"baseItem": {
+							"type": "string"
+						},
 						"ac": {
 							"type": "integer"
 						},
 						"age": {
 							"$ref": "items-shared.json#/$defs/itemAge"
+						},
+						"bonusWeapon": {
+							"type": "string"
 						},
 						"dmg1": {
 							"type": "string"
@@ -538,6 +567,18 @@
 						"speed": {
 							"$ref": "items-shared.json#/$defs/itemSpeed"
 						},
+						"charges": {
+							"type": [
+								"string",
+								"integer"
+							]
+						},
+						"recharge": {
+							"$ref": "items-shared.json#/$defs/itemRecharge"
+						},
+						"rechargeAmount": {
+							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+						},
 						"valueMult": {
 							"type": "number"
 						},
@@ -628,8 +669,7 @@
 							"type": "boolean"
 						},
 						"customProperties": {
-							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"$ref": "items-shared.json#/$defs/customProperties"
 						}
 					},
 					"additionalProperties": false,
@@ -649,6 +689,9 @@
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
+						"typeAlt": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
 						"rarity": {
 							"$ref": "items-shared.json#/$defs/itemRarity"
 						},
@@ -658,11 +701,17 @@
 						"page": {
 							"$ref": "util.json#/$defs/page"
 						},
+						"baseItem": {
+							"type": "string"
+						},
 						"ac": {
 							"type": "integer"
 						},
 						"age": {
 							"$ref": "items-shared.json#/$defs/itemAge"
+						},
+						"bonusWeapon": {
+							"type": "string"
 						},
 						"dmg1": {
 							"type": "string"
@@ -774,6 +823,18 @@
 						"speed": {
 							"$ref": "items-shared.json#/$defs/itemSpeed"
 						},
+						"charges": {
+							"type": [
+								"string",
+								"integer"
+							]
+						},
+						"recharge": {
+							"$ref": "items-shared.json#/$defs/itemRecharge"
+						},
+						"rechargeAmount": {
+							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+						},
 						"valueMult": {
 							"type": "number"
 						},
@@ -864,8 +925,7 @@
 							"type": "boolean"
 						},
 						"customProperties": {
-							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"$ref": "items-shared.json#/$defs/customProperties"
 						},
 						"_copy": {
 							"type": "object",
