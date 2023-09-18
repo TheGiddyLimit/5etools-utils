@@ -148,9 +148,6 @@
 				},
 				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
-				"baseItem": {
-					"type": "string"
-				},
 				"ac": {
 					"type": "integer"
 				},
