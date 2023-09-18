@@ -188,9 +188,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"baseItem": {
-					"type": "string"
-				},
 				"ac": {
 					"type": "integer"
 				},
@@ -473,9 +470,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"baseItem": {
-							"type": "string"
 						},
 						"ac": {
 							"type": "integer"
@@ -763,9 +757,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"baseItem": {
-							"type": "string"
 						},
 						"ac": {
 							"type": "integer"
