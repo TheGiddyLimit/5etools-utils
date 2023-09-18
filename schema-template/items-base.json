@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.10",
+	"version": "1.5.12",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -140,6 +140,9 @@
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
 				},
+				"typeAlt": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
 				"rarity": {
 					"$ref": "items-shared.json#/$defs/itemRarity"
 				},
@@ -150,6 +153,9 @@
 				},
 				"age": {
 					"$ref": "items-shared.json#/$defs/itemAge"
+				},
+				"bonusWeapon": {
+					"type": "string"
 				},
 				"dmg1": {
 					"type": "string"
@@ -263,6 +269,23 @@
 				"speed": {
 					"$ref": "items-shared.json#/$defs/itemSpeed"
 				},
+
+				"charges": {
+					"type": ["string", "integer"]
+				},
+				"recharge": {
+					"$ref": "items-shared.json#/$defs/itemRecharge"
+				},
+				"rechargeAmount": {
+					"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+				},
+
+				"$$if": {
+					"modes": ["brew", "ua"],
+					"value": {
+						"customProperties": {"$ref": "items-shared.json#/$defs/customProperties"}
+					}
+				},
 				"$$ifBrew": {
 					"currencyConversion": {
 						"description": "ID of a value conversion table. Homebrew only.",
@@ -356,21 +379,7 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
-			"$$if": {
-				"modes": ["site", "ua"],
-				"value": {
-					"additionalProperties": false
-				}
-			},
-			"$$ifBrew": {
-				"additionalProperties": {
-					"type": [
-						"boolean",
-						"integer",
-						"string"
-					]
-				}
-			}
+			"additionalProperties": false
 		},
 
 		"baseitem": {

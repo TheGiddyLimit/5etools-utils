@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.10",
+	"version": "1.5.12",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -176,6 +176,9 @@
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
 				},
+				"typeAlt": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
 				"rarity": {
 					"$ref": "items-shared.json#/$defs/itemRarity"
 				},
@@ -190,6 +193,9 @@
 				},
 				"age": {
 					"$ref": "items-shared.json#/$defs/itemAge"
+				},
+				"bonusWeapon": {
+					"type": "string"
 				},
 				"dmg1": {
 					"type": "string"
@@ -301,6 +307,18 @@
 				"speed": {
 					"$ref": "items-shared.json#/$defs/itemSpeed"
 				},
+				"charges": {
+					"type": [
+						"string",
+						"integer"
+					]
+				},
+				"recharge": {
+					"$ref": "items-shared.json#/$defs/itemRecharge"
+				},
+				"rechargeAmount": {
+					"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+				},
 				"valueMult": {
 					"type": "number"
 				},
@@ -390,6 +408,9 @@
 				"hasFluffImages": {
 					"type": "boolean"
 				},
+				"customProperties": {
+					"$ref": "items-shared.json#/$defs/customProperties"
+				},
 				"currencyConversion": {
 					"description": "ID of a value conversion table. Homebrew only.",
 					"type": "string"
@@ -425,13 +446,7 @@
 					"$ref": "items-shared.json#/$defs/fluff"
 				}
 			},
-			"additionalProperties": {
-				"type": [
-					"boolean",
-					"integer",
-					"string"
-				]
-			}
+			"additionalProperties": false
 		},
 		"baseitem": {
 			"anyOf": [
@@ -442,6 +457,9 @@
 							"type": "string"
 						},
 						"type": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"typeAlt": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
 						"rarity": {
@@ -458,6 +476,9 @@
 						},
 						"age": {
 							"$ref": "items-shared.json#/$defs/itemAge"
+						},
+						"bonusWeapon": {
+							"type": "string"
 						},
 						"dmg1": {
 							"type": "string"
@@ -569,6 +590,18 @@
 						"speed": {
 							"$ref": "items-shared.json#/$defs/itemSpeed"
 						},
+						"charges": {
+							"type": [
+								"string",
+								"integer"
+							]
+						},
+						"recharge": {
+							"$ref": "items-shared.json#/$defs/itemRecharge"
+						},
+						"rechargeAmount": {
+							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+						},
 						"valueMult": {
 							"type": "number"
 						},
@@ -657,6 +690,9 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"customProperties": {
+							"$ref": "items-shared.json#/$defs/customProperties"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
@@ -693,13 +729,7 @@
 							"$ref": "items-shared.json#/$defs/fluff"
 						}
 					},
-					"additionalProperties": {
-						"type": [
-							"boolean",
-							"integer",
-							"string"
-						]
-					},
+					"additionalProperties": false,
 					"required": [
 						"name",
 						"type",
@@ -716,6 +746,9 @@
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
+						"typeAlt": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
 						"rarity": {
 							"$ref": "items-shared.json#/$defs/itemRarity"
 						},
@@ -730,6 +763,9 @@
 						},
 						"age": {
 							"$ref": "items-shared.json#/$defs/itemAge"
+						},
+						"bonusWeapon": {
+							"type": "string"
 						},
 						"dmg1": {
 							"type": "string"
@@ -841,6 +877,18 @@
 						"speed": {
 							"$ref": "items-shared.json#/$defs/itemSpeed"
 						},
+						"charges": {
+							"type": [
+								"string",
+								"integer"
+							]
+						},
+						"recharge": {
+							"$ref": "items-shared.json#/$defs/itemRecharge"
+						},
+						"rechargeAmount": {
+							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+						},
 						"valueMult": {
 							"type": "number"
 						},
@@ -929,6 +977,9 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"customProperties": {
+							"$ref": "items-shared.json#/$defs/customProperties"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
@@ -1031,13 +1082,7 @@
 							"additionalProperties": false
 						}
 					},
-					"additionalProperties": {
-						"type": [
-							"boolean",
-							"integer",
-							"string"
-						]
-					},
+					"additionalProperties": false,
 					"required": [
 						"_copy"
 					]
