@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.12",
+	"version": "1.5.13",
 	"$defs": {
 		"itemPropertyLookupArray": {
 			"type": "array",
@@ -148,6 +148,7 @@
 				},
 				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
+				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
 				"ac": {
 					"type": "integer"
 				},

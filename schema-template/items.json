@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.3",
+	"version": "1.14.4",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -24,6 +24,7 @@
 				"additionalSources": {
 					"$ref": "util.json#/$defs/additionalSources"
 				},
+				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
 				"baseItem": {
 					"type": "string"
 				},
