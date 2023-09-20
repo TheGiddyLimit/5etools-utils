@@ -53,6 +53,8 @@ class SchemaPreprocessor {
 		if (obj instanceof Array) {
 			return obj
 				.filter(d => {
+					if (d.$$if_item) return d.$$if_item.modes.includes(compileMode);
+
 					return d.$$ifBrew_item
 						? compileMode === COMPILE_MODE.BREW
 						: d.$$ifSite_item
@@ -62,6 +64,7 @@ class SchemaPreprocessor {
 								: true;
 				})
 				.map(d => {
+					if (d.$$if_item) return this._recurse({root, obj: d.$$if_item.value, compileMode, isFast, dirSource});
 					if (d.$$ifBrew_item) return this._recurse({root, obj: d.$$ifBrew_item, compileMode, isFast, dirSource});
 					if (d.$$ifSite_item) return this._recurse({root, obj: d.$$ifSite_item, compileMode, isFast, dirSource});
 					if (d.$$ifUa_item) return this._recurse({root, obj: d.$$ifUa_item, compileMode, isFast, dirSource});

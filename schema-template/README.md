@@ -132,7 +132,7 @@ Outputs the following when compiled in "homebrew" mode:
 ---
 
 
-### `$$switch_if`
+### `$$if`
 
 The `value` will be merged into its parent iff the compilation mode matches one of the values in the `modes` array, for example:
 
@@ -144,7 +144,7 @@ The `value` will be merged into its parent iff the compilation mode matches one 
 		"modes": ["site", "ua"],
 		"value": {
 			"a": 1
-        }
+		}
 	}
 }
 ```
@@ -161,4 +161,53 @@ and the following when compiled in "brew" mode:
 
 ```json
 {}
+```
+
+
+---
+
+
+### `$$if_item`
+
+
+Usable only in an array. The value will be included in the array iff the compilation mode matches a mode in `modes`, for example:
+
+---
+
+```json
+{
+	"myArray": [
+		{
+			"$$if_item": {
+				"modes": ["site", "ua"],
+				"value": 1
+			}
+		},
+		2,
+		3
+	]
+}
+```
+
+Outputs the following when compiled in "site" or "ua" mode:
+
+```json
+{
+	"myArray": [
+		1,
+		2,
+		3
+	]
+}
+```
+
+Outputs the following when compiled in "homebrew" mode:
+
+```json
+{
+	"myArray": [
+		2,
+		3
+	]
+}
 ```
