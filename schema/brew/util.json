@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.36",
+	"version": "1.13.37",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -145,6 +145,7 @@
 			"enum": [
 				"spell",
 				"item",
+				"itemMastery",
 				"creature",
 				"condition",
 				"disease",
