@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.20",
+	"version": "1.21.21",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -867,6 +867,9 @@
 				"tokenUrl": {
 					"type": "string"
 				},
+				"foundryTokenScale": {
+					"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
+				},
 				"altArt": {
 					"type": "array",
 					"items": {
@@ -895,6 +898,9 @@
 								"properties": {
 									"tokenUrl": {
 										"type": "string"
+									},
+									"foundryTokenScale": {
+										"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
 									}
 								},
 								"required": [
@@ -2049,6 +2055,9 @@
 						"tokenUrl": {
 							"type": "string"
 						},
+						"foundryTokenScale": {
+							"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
+						},
 						"altArt": {
 							"type": "array",
 							"items": {
@@ -2077,6 +2086,9 @@
 										"properties": {
 											"tokenUrl": {
 												"type": "string"
+											},
+											"foundryTokenScale": {
+												"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
 											}
 										},
 										"required": [
@@ -3245,6 +3257,9 @@
 						"tokenUrl": {
 							"type": "string"
 						},
+						"foundryTokenScale": {
+							"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
+						},
 						"altArt": {
 							"type": "array",
 							"items": {
@@ -3273,6 +3288,9 @@
 										"properties": {
 											"tokenUrl": {
 												"type": "string"
+											},
+											"foundryTokenScale": {
+												"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
 											}
 										},
 										"required": [

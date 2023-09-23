@@ -4140,7 +4140,8 @@
 						"const": true
 					}
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 		"adventureBookData": {
 			"type": "array",
