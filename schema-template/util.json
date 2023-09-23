@@ -2986,7 +2986,8 @@
 					"spellcasting":{"const": true},
 					"psionics": {"const": true}
 				}
-			}
+			},
+			"uniqueItems": true
 		},
 
 		"adventureBookData": {
