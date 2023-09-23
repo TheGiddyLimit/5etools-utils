@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.2",
+	"version": "1.7.3",
 	"type": "object",
 
 	"$defs": {
@@ -391,9 +391,8 @@
 						"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
 						"$ref": "util.json#/$defs/fluffObject"
 					},
-					"tokenUrl": {
-						"type": "string"
-					},
+					"tokenUrl": {"type": "string"},
+					"foundryTokenScale": {"$ref": "foundry-shared.json#/$defs/foundryTokenScale"},
 					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
 					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
 					"foundryImg": {
@@ -502,9 +501,8 @@
 						"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
 						"$ref": "util.json#/$defs/fluffObject"
 					},
-					"tokenUrl": {
-						"type": "string"
-					},
+					"tokenUrl": {"type": "string"},
+					"foundryTokenScale": {"$ref": "foundry-shared.json#/$defs/foundryTokenScale"},
 					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
 					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
 					"foundryImg": {
@@ -660,9 +658,8 @@
 						"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
 						"$ref": "util.json#/$defs/fluffObject"
 					},
-					"tokenUrl": {
-						"type": "string"
-					},
+					"tokenUrl": {"type": "string"},
+					"foundryTokenScale": {"$ref": "foundry-shared.json#/$defs/foundryTokenScale"},
 					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
 					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
 					"foundryImg": {

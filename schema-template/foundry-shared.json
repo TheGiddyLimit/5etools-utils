@@ -51,6 +51,13 @@
 				}
 			},
 			"additionalProperties": false
+		},
+
+		"foundryTokenScale": {
+			"type": "number",
+			"minimum": 0.2,
+			"maximum": 3,
+			"multipleOf" : 0.1
 		}
 	}
 }

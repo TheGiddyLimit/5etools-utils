@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.20",
+	"version": "1.21.21",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -753,9 +753,8 @@
 				"hasToken": {
 					"type": "boolean"
 				},
-				"tokenUrl": {
-					"type": "string"
-				},
+				"tokenUrl": {"type": "string"},
+				"foundryTokenScale": {"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"},
 				"altArt": {
 					"type": "array",
 					"items": {
@@ -776,9 +775,8 @@
 									"type": "object",
 									"description": "An URL pointing to an alternative token for the creature.",
 									"properties": {
-										"tokenUrl": {
-											"type": "string"
-										}
+										"tokenUrl": {"type": "string"},
+										"foundryTokenScale": {"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"}
 									},
 									"required": ["tokenUrl"],
 									"additionalProperties": false
