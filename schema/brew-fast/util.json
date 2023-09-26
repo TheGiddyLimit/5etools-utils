@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.13.37",
+	"version": "1.14.0",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -1833,25 +1833,50 @@
 					"spell": {
 						"type": "array",
 						"items": {
-							"$ref": "entry.json"
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"choose": {
+											"type": "string",
+											"description": "A range prerequisite spells, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\""
+										},
+										"entry": {
+											"type": "string"
+										},
+										"entrySummary": {
+											"description": "Used in short/list displays",
+											"type": "string"
+										}
+									},
+									"required": [
+										"choose",
+										"entry"
+									],
+									"additionalProperties": false
+								}
+							]
 						}
 					},
 					"feat": {
 						"type": "array",
 						"items": {
-							"$ref": "entry.json"
+							"type": "string"
 						}
 					},
 					"feature": {
 						"type": "array",
 						"items": {
-							"$ref": "entry.json"
+							"type": "string"
 						}
 					},
 					"item": {
 						"type": "array",
 						"items": {
-							"$ref": "entry.json"
+							"type": "string"
 						}
 					},
 					"itemType": {
