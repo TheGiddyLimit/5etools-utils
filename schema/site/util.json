@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.14.0",
+	"version": "1.14.1",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -4042,8 +4042,10 @@
 												"weapon",
 												"weaponSimple",
 												"weaponSimpleMelee",
+												"weaponSimpleRanged",
 												"weaponMartial",
 												"weaponMartialMelee",
+												"weaponMartialRanged",
 												"instrumentMusical",
 												"armorLight",
 												"armorMedium",
