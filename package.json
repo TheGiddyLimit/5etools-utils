@@ -35,11 +35,12 @@
 	},
 	"homepage": "https://github.com/TheGiddyLimit/5etools-utils#readme",
 	"dependencies": {
-		"ajv": "^8.11.2",
+		"ajv": "^8.12.0",
 		"ajv-formats": "^2.1.1",
 		"commander": "^9.4.1",
 		"hasha": "^5.2.2",
-		"json-source-map": "^0.6.1"
+		"json-source-map": "^0.6.1",
+		"number-precision": "^1.6.0"
 	},
 	"devDependencies": {
 		"eslint": "^8.11.0",
