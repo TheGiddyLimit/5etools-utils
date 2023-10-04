@@ -1,0 +1,73 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "sources.json",
+	"version": "1.0.0",
+	"type": "object",
+	"description": "Keys are source identifiers.",
+	"patternProperties": {
+		"^[-a-zA-Z0-9]+$": {
+			"type": "object",
+			"description": "Keys are spell names.",
+			"patternProperties": {
+				"^[-a-zA-Z0-9 '()/;]+$": {
+					"type": "object",
+					"properties": {
+						"class": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"source": {
+										"type": "string"
+									},
+									"definedInSource": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"name",
+									"source"
+								],
+								"additionalProperties": false
+							},
+							"minItems": 1
+						},
+						"classVariant": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"source": {
+										"type": "string"
+									},
+									"definedInSource": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"name",
+									"source",
+									"definedInSource"
+								],
+								"additionalProperties": false
+							},
+							"minItems": 1
+						}
+					},
+					"additionalProperties": false,
+					"minProperties": 1
+				}
+			},
+			"additionalProperties": false,
+			"minProperties": 1
+		}
+	},
+	"additionalProperties": false,
+	"minProperties": 1
+}
