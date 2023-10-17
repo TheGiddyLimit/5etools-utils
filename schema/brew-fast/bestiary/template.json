@@ -192,70 +192,7 @@
 							}
 						},
 						"_copy": {
-							"type": "object",
-							"properties": {
-								"name": {
-									"type": "string"
-								},
-								"source": {
-									"$ref": "../util.json#/$defs/source"
-								},
-								"pantheon": {
-									"description": "Used in deity data",
-									"type": "string"
-								},
-								"shortName": {
-									"description": "Used in subclass data",
-									"type": "string"
-								},
-								"className": {
-									"description": "Used in subclass data",
-									"type": "string"
-								},
-								"classSource": {
-									"description": "Used in subclass data",
-									"$ref": "../util.json#/$defs/source"
-								},
-								"raceName": {
-									"description": "Used in race feature data",
-									"type": "string"
-								},
-								"raceSource": {
-									"description": "Used in race feature data",
-									"$ref": "../util.json#/$defs/source"
-								},
-								"_mod": {
-									"$ref": "../util.json#/$defs/_modObject"
-								},
-								"_trait": {
-									"type": "object",
-									"properties": {
-										"name": {
-											"type": "string"
-										},
-										"source": {
-											"$ref": "../util.json#/$defs/source"
-										}
-									},
-									"required": [
-										"name",
-										"source"
-									]
-								},
-								"_preserve": {
-									"type": "object",
-									"patternProperties": {
-										".*": {
-											"const": true
-										}
-									}
-								}
-							},
-							"required": [
-								"name",
-								"source"
-							],
-							"additionalProperties": false
+							"$ref": "../util.json#/$defs/copyBlock_copy_generic"
 						}
 					},
 					"additionalProperties": false,

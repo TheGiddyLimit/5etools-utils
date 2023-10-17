@@ -81,7 +81,7 @@
 							"$ref": "#/$defs/deckData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlock"
+							"$ref": "util.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}
@@ -141,7 +141,7 @@
 							"$ref": "#/$defs/cardData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlock"
+							"$ref": "util.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

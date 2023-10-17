@@ -501,7 +501,7 @@
 							"$ref": "#/$defs/spellData"
 						},
 						{
-							"$ref": "../util.json#/$defs/copyBlock"
+							"$ref": "../util.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

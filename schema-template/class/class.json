@@ -432,7 +432,7 @@
 							"$ref": "#/$defs/subclassData"
 						},
 						{
-							"$ref": "../util.json#/$defs/copyBlock"
+							"$ref": "../util.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}
@@ -640,7 +640,7 @@
 							"$ref": "#/$defs/classData"
 						},
 						{
-							"$ref": "../util.json#/$defs/copyBlock"
+							"$ref": "../util.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

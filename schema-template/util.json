@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.14.1",
+	"version": "1.14.2",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1467,7 +1467,8 @@
 								"key_ua": "enum",
 								"key_brew": "examples",
 								"value": [
-									"Dragonlance"
+									"Dragonlance",
+									"Planescape"
 								]
 							}
 						}
@@ -2111,7 +2112,7 @@
 								"$ref": "#/$defs/genericFluffArrayItemData"
 							},
 							{
-								"$ref": "#/$defs/copyBlock"
+								"$ref": "#/$defs/copyBlockGeneric"
 							}
 						]
 					}
@@ -2489,11 +2490,39 @@
 			]
 		},
 
-		"copyBlock": {
+		"copyBlock_copy_base": {
 			"type": "object",
 			"properties": {
-				"_copy": {
+				"_mod": {
+					"$ref": "#/$defs/_modObject"
+				},
+				"_trait": {
 					"type": "object",
+					"properties": {
+						"name": {"type": "string"},
+						"source": {"$ref": "util.json#/$defs/source"}
+					},
+					"required": ["name", "source"]
+				},
+				"_preserve": {
+					"type": "object",
+					"patternProperties": {
+						".*": {
+							"const": true
+						}
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+
+		"copyBlock_copy_generic": {
+			"type": "object",
+			"$$merge": [
+				{
+					"$ref": "#/$defs/copyBlock_copy_base"
+				},
+				{
 					"properties": {
 						"name": {"type": "string"},
 						"source": {"$ref": "util.json#/$defs/source"},
@@ -2505,30 +2534,18 @@
 						"classSource": {"description": "Used in subclass data", "$ref": "util.json#/$defs/source"},
 
 						"raceName": {"description": "Used in race feature data", "type": "string"},
-						"raceSource": {"description": "Used in race feature data", "$ref": "util.json#/$defs/source"},
-
-						"_mod": {
-							"$ref": "#/$defs/_modObject"
-						},
-						"_trait": {
-							"type": "object",
-							"properties": {
-								"name": {"type": "string"},
-								"source": {"$ref": "util.json#/$defs/source"}
-							},
-							"required": ["name", "source"]
-						},
-						"_preserve": {
-							"type": "object",
-							"patternProperties": {
-								".*": {
-									"const": true
-								}
-							}
-						}
+						"raceSource": {"description": "Used in race feature data", "$ref": "util.json#/$defs/source"}
 					},
-					"required": ["name", "source"],
-					"additionalProperties": false
+					"required": ["name", "source"]
+				}
+			]
+		},
+
+		"copyBlockGeneric": {
+			"type": "object",
+			"properties": {
+				"_copy": {
+					"$ref": "#/$defs/copyBlock_copy_generic"
 				}
 			},
 			"required": [

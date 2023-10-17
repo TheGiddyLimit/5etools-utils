@@ -183,7 +183,7 @@
 							"$ref": "#/$defs/recipeData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlock"
+							"$ref": "util.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

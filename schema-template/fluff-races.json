@@ -62,7 +62,7 @@
 							"$ref": "#/$defs/raceFluffData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlock"
+							"$ref": "util.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}
