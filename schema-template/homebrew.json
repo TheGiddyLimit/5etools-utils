@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.14",
+	"version": "1.10.15",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -350,7 +350,12 @@
 					"category": {
 						"type": "string"
 					},
-					"source": {"$ref": "util.json#/$defs/source"}
+					"source": {
+						"anyOf": [
+							{"$ref": "util.json#/$defs/source"},
+							{"const": "*"}
+						]
+					}
 				},
 				"required": [
 					"displayName",
