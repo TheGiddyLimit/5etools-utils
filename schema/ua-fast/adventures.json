@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.13",
+	"version": "1.10.14",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -194,7 +194,9 @@
 							"Dragonlance",
 							"Keys from the Golden Vault",
 							"Giants of the Star Forge",
-							"Minecraft"
+							"Minecraft",
+							"Planescape",
+							"Adventure Atlas"
 						]
 					}
 				},
