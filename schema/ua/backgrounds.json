@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "backgrounds.json",
-	"version": "1.3.4",
+	"version": "1.3.5",
 	"type": "object",
 	"$defs": {
 		"backgroundData": {
@@ -27,6 +27,9 @@
 				},
 				"languageProficiencies": {
 					"$ref": "util.json#/$defs/languageProficiencies"
+				},
+				"skillToolLanguageProficiencies": {
+					"$ref": "util.json#/$defs/skillToolLanguageProficiencies"
 				},
 				"weaponProficiencies": {
 					"$ref": "util.json#/$defs/weaponProficiencies"
@@ -112,6 +115,9 @@
 						},
 						"languageProficiencies": {
 							"$ref": "util.json#/$defs/languageProficiencies"
+						},
+						"skillToolLanguageProficiencies": {
+							"$ref": "util.json#/$defs/skillToolLanguageProficiencies"
 						},
 						"weaponProficiencies": {
 							"$ref": "util.json#/$defs/weaponProficiencies"
@@ -200,6 +206,9 @@
 						},
 						"languageProficiencies": {
 							"$ref": "util.json#/$defs/languageProficiencies"
+						},
+						"skillToolLanguageProficiencies": {
+							"$ref": "util.json#/$defs/skillToolLanguageProficiencies"
 						},
 						"weaponProficiencies": {
 							"$ref": "util.json#/$defs/weaponProficiencies"
