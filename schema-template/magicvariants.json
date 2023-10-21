@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.8.9",
+	"version": "1.8.10",
 	"type": "object",
 	"properties": {
 		"magicvariant": {
@@ -73,6 +73,9 @@
 								"description": "Generally this should be omitted, as the type of the base item will be used.",
 								"$ref": "items-shared.json#/$defs/itemType"
 							},
+							"typeAlt": {
+								"$ref": "items-shared.json#/$defs/itemType"
+							},
 							"property": {
 								"description": "Generally this should be omitted, as the properties of the base item will be used.",
 								"$ref": "items-shared.json#/$defs/itemProperty"
@@ -84,6 +87,9 @@
 							"propertyRemove": {
 								"description": "Properties to remove from the specific variant, if present on the base item.",
 								"$ref": "items-shared.json#/$defs/itemProperty"
+							},
+							"range": {
+								"type": "string"
 							},
 							"ac": {
 								"type": "integer"

@@ -1,0 +1,48 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "citations.json",
+	"version": "1.0.0",
+	"type": "object",
+	"$defs": {
+		"citation": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				}
+			},
+			"required": [
+				"name",
+				"source",
+				"entries"
+			],
+			"additionalProperties": false
+		}
+	},
+	"properties": {
+		"citation": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/citation"
+			}
+		}
+	},
+	"required": [
+		"citation"
+	],
+	"additionalProperties": false
+}
