@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.15",
+	"version": "1.10.16",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -643,6 +643,9 @@
 		},
 		"card": {
 			"$ref": "decks.json#/properties/card"
+		},
+		"citation": {
+			"$ref": "citations.json#/properties/citation"
 		}
 	},
 	"additionalProperties": false,
