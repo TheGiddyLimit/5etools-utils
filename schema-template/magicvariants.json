@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.8.10",
+	"version": "1.8.11",
 	"type": "object",
 	"properties": {
 		"magicvariant": {
@@ -28,6 +28,9 @@
 						"items": {
 							"type": "object",
 							"properties": {
+								"name": {"type": "string"},
+								"property": {"type": "string"},
+
 								"armor": {"type": "boolean"},
 								"axe": {"type": "boolean"},
 								"bow": {"type": "boolean"},
@@ -41,13 +44,13 @@
 								"club": {"type": "boolean"},
 								"dagger": {"type": "boolean"},
 								"dmgType": {"$ref": "util.json#/$defs/dataDamageTags"},
-								"name": {"type": "string"},
 								"source": {"$ref": "util.json#/$defs/source"},
 								"type": {"$ref": "items-shared.json#/$defs/itemType"},
 								"scfType": {"$ref": "items-shared.json#/$defs/itemScfType"},
 								"net": {"type": "boolean"},
+								"polearm": {"type": "boolean"},
 								"weaponCategory": {"$ref": "items-shared.json#/$defs/itemWeaponCategory"},
-								"property": {"type": "string"},
+
 								"$$if": {
 									"modes": ["brew", "ua"],
 									"value": {
@@ -323,7 +326,7 @@
 									}
 								]
 							},
-							"net": {"type": "boolean"},
+
 							"armor": {"type": "boolean"},
 							"axe": {"type": "boolean"},
 							"bow": {"type": "boolean"},
@@ -336,6 +339,14 @@
 							"hammer": {"type": "boolean"},
 							"club": {"type": "boolean"},
 							"dagger": {"type": "boolean"},
+							"dmgType": {"$ref": "util.json#/$defs/dataDamageTags"},
+							"source": {"$ref": "util.json#/$defs/source"},
+							"type": {"$ref": "items-shared.json#/$defs/itemType"},
+							"scfType": {"$ref": "items-shared.json#/$defs/itemScfType"},
+							"net": {"type": "boolean"},
+							"polearm": {"type": "boolean"},
+							"weaponCategory": {"$ref": "items-shared.json#/$defs/itemWeaponCategory"},
+
 							"$$if": {
 								"modes": ["brew", "ua"],
 								"value": {

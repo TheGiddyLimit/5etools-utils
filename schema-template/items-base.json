@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.14",
+	"version": "1.5.15",
 	"type": "object",
 
 	"$defs": {
@@ -186,6 +186,10 @@
 					"type": "boolean"
 				},
 				"net": {
+					"description": "Flag used when merging generic variants",
+					"type": "boolean"
+				},
+				"polearm": {
 					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
