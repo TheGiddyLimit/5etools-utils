@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.21",
+	"version": "1.21.22",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -867,6 +867,9 @@
 				"tokenUrl": {
 					"type": "string"
 				},
+				"tokenCredit": {
+					"type": "string"
+				},
 				"foundryTokenScale": {
 					"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
 				},
@@ -885,6 +888,9 @@
 									},
 									"page": {
 										"$ref": "../util.json#/$defs/page"
+									},
+									"tokenCredit": {
+										"type": "string"
 									}
 								},
 								"required": [
@@ -897,6 +903,9 @@
 								"description": "An URL pointing to an alternative token for the creature.",
 								"properties": {
 									"tokenUrl": {
+										"type": "string"
+									},
+									"tokenCredit": {
 										"type": "string"
 									},
 									"foundryTokenScale": {
@@ -2055,6 +2064,9 @@
 						"tokenUrl": {
 							"type": "string"
 						},
+						"tokenCredit": {
+							"type": "string"
+						},
 						"foundryTokenScale": {
 							"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
 						},
@@ -2073,6 +2085,9 @@
 											},
 											"page": {
 												"$ref": "../util.json#/$defs/page"
+											},
+											"tokenCredit": {
+												"type": "string"
 											}
 										},
 										"required": [
@@ -2085,6 +2100,9 @@
 										"description": "An URL pointing to an alternative token for the creature.",
 										"properties": {
 											"tokenUrl": {
+												"type": "string"
+											},
+											"tokenCredit": {
 												"type": "string"
 											},
 											"foundryTokenScale": {
@@ -3257,6 +3275,9 @@
 						"tokenUrl": {
 							"type": "string"
 						},
+						"tokenCredit": {
+							"type": "string"
+						},
 						"foundryTokenScale": {
 							"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
 						},
@@ -3275,6 +3296,9 @@
 											},
 											"page": {
 												"$ref": "../util.json#/$defs/page"
+											},
+											"tokenCredit": {
+												"type": "string"
 											}
 										},
 										"required": [
@@ -3287,6 +3311,9 @@
 										"description": "An URL pointing to an alternative token for the creature.",
 										"properties": {
 											"tokenUrl": {
+												"type": "string"
+											},
+											"tokenCredit": {
 												"type": "string"
 											},
 											"foundryTokenScale": {

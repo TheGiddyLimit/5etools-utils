@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.3",
+	"version": "1.7.4",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -438,6 +438,9 @@
 						}
 					]
 				},
+				"tokenCredit": {
+					"type": "string"
+				},
 				"hasToken": {
 					"type": "boolean"
 				},
@@ -617,6 +620,9 @@
 						"additionalProperties": false
 					}
 				},
+				"tokenCredit": {
+					"type": "string"
+				},
 				"hasToken": {
 					"type": "boolean"
 				},
@@ -795,6 +801,9 @@
 							}
 						}
 					}
+				},
+				"tokenCredit": {
+					"type": "string"
 				},
 				"hasToken": {
 					"type": "boolean"
