@@ -107,7 +107,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": ["alcohol"]
+						"enum": ["alcohol", "feast"]
 					}
 				},
 				"allergenGroups": {
