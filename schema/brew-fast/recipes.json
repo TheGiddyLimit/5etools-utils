@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.5.0",
+	"version": "1.5.1",
 	"type": "object",
 	"$defs": {
 		"recipeData": {
@@ -116,7 +116,8 @@
 					"items": {
 						"type": "string",
 						"enum": [
-							"alcohol"
+							"alcohol",
+							"feast"
 						]
 					}
 				},
@@ -291,7 +292,8 @@
 							"items": {
 								"type": "string",
 								"enum": [
-									"alcohol"
+									"alcohol",
+									"feast"
 								]
 							}
 						},
@@ -470,7 +472,8 @@
 							"items": {
 								"type": "string",
 								"enum": [
-									"alcohol"
+									"alcohol",
+									"feast"
 								]
 							}
 						},
