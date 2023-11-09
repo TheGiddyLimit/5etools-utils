@@ -1,16 +1,15 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.5.2",
+	"version": "1.5.3",
 	"type": "object",
 
 	"$defs": {
 		"recipeData": {
 			"type": "object",
 			"properties": {
-				"name": {
-					"type": "string"
-				},
+				"name": {"type": "string"},
+				"alias": {"$ref": "util.json#/$defs/alias"},
 				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 
