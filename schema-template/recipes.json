@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.5.1",
+	"version": "1.5.2",
 	"type": "object",
 
 	"$defs": {
@@ -95,7 +95,22 @@
 						"key_site": "enum",
 						"key_ua": "enum",
 						"key_brew": "examples",
-						"value": ["Dwarven", "Elven","Elixir/Ale", "Human", "Halfling", "Uncommon Cuisine"]
+						"value": [
+							"Dwarven",
+							"Elixir/Ale",
+							"Elven",
+							"Halfling",
+							"Human",
+							"Uncommon Cuisine",
+
+							"Lost in Realmspace",
+							"Ravenloft",
+							"Sigil",
+							"Solamnia",
+							"The Feywild",
+							"The Rock of Bral",
+							"The Yawning Portal"
+						]
 					}
 				},
 				"diet": {
