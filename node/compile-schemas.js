@@ -106,7 +106,7 @@ class SchemaPreprocessor {
 			this._mutMergeObjects(merged, toMerge);
 		});
 
-		if (merged.type && ["anyOf", "allOf", "oneOf", "not"].some(prop => merged[prop])) {
+		if (merged.type && ["anyOf", "allOf", "oneOf"].some(prop => merged[prop])) {
 			throw new Error(`Merged schema had both "type" and a combining/compositing property!`);
 		}
 

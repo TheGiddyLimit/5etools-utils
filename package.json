@@ -18,6 +18,7 @@
 		"test-file-locations": "bin/test-file-locations.js"
 	},
 	"scripts": {
+		"build:dangerous:sources": "node node/fetch-5etools-sources.js",
 		"build": "node node/compile-schemas.js",
 		"test": "npm run lint:js && npm run test:js",
 		"test:js": "node --experimental-vm-modules node_modules/jest/bin/jest.js",

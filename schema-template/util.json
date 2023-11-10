@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.14.2",
+	"version": "1.14.3",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -64,10 +64,16 @@
 				},
 				{
 					"$$ifBrew": {
-						"pattern": "^(?!UA|XUA)[-a-zA-Z0-9 :&+!]+$"
+						"pattern": "^(?!UA|XUA)[-a-zA-Z0-9 :&+!]+$",
+						"not": {
+							"$ref": "sources-5etools.json#/$defs/sources"
+						}
 					},
 					"$$ifUa": {
-						"pattern": "^(?:UA|XUA)[-a-zA-Z0-9 :&+!]+$"
+						"pattern": "^(?:UA|XUA)[-a-zA-Z0-9 :&+!]+$",
+						"not": {
+							"$ref": "sources-5etools.json#/$defs/sources"
+						}
 					}
 				}
 			]
