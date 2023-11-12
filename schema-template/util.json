@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.14.3",
+	"version": "1.14.4",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -83,7 +83,16 @@
 			"$$if": {
 				"modes": ["site", "ua"],
 				"value": {
-					"type": "integer"
+					"oneOf": [
+						{
+							"description": "(Roman numerals)",
+							"type": "string",
+							"pattern": "^[ivx]+$"
+						},
+						{
+							"type": "integer"
+						}
+					]
 				}
 			},
 			"$$ifBrew": {
