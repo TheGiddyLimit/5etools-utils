@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.14.3",
+	"version": "1.14.4",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -54,7 +54,16 @@
 			}
 		},
 		"page": {
-			"type": "integer"
+			"oneOf": [
+				{
+					"description": "(Roman numerals)",
+					"type": "string",
+					"pattern": "^[ivx]+$"
+				},
+				{
+					"type": "integer"
+				}
+			]
 		},
 		"otherSources": {
 			"type": "array",
