@@ -1,11 +1,12 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "fluff-languages.json",
-	"version": "1.2.0",
+	"$id": "fluff-trapshazards.json",
+	"version": "1.0.0",
 	"type": "object",
 	"properties": {
 		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
-		"languageFluff": {"$ref": "util.json#/$defs/genericFluffArray"}
+		"trapFluff": {"$ref": "util.json#/$defs/genericFluffArray"},
+		"hazardFluff": {"$ref": "util.json#/$defs/genericFluffArray"}
 	},
 	"additionalProperties": false
 }

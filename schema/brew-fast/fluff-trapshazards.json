@@ -1,19 +1,16 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "fluff-conditionsdiseases.json",
-	"version": "1.3.0",
+	"$id": "fluff-trapshazards.json",
+	"version": "1.0.0",
 	"type": "object",
 	"properties": {
 		"_meta": {
 			"$ref": "util.json#/$defs/metaBlock"
 		},
-		"conditionFluff": {
+		"trapFluff": {
 			"$ref": "util.json#/$defs/genericFluffArray"
 		},
-		"diseaseFluff": {
-			"$ref": "util.json#/$defs/genericFluffArray"
-		},
-		"statusFluff": {
+		"hazardFluff": {
 			"$ref": "util.json#/$defs/genericFluffArray"
 		}
 	},

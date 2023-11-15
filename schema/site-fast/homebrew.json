@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.16",
+	"version": "1.10.17",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -612,8 +612,14 @@
 		"trap": {
 			"$ref": "trapshazards.json#/properties/trap"
 		},
+		"trapFluff": {
+			"$ref": "fluff-trapshazards.json#/properties/trapFluff"
+		},
 		"hazard": {
 			"$ref": "trapshazards.json#/properties/hazard"
+		},
+		"hazardFluff": {
+			"$ref": "fluff-trapshazards.json#/properties/hazardFluff"
 		},
 		"variantrule": {
 			"$ref": "variantrules.json#/properties/variantrule"

@@ -1,9 +1,35 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.3.1",
+	"version": "1.3.2",
 	"type": "object",
 	"$defs": {
+		"_trapTier": {
+			"type": "integer",
+			"minimum": 1,
+			"maximum": 4
+		},
+		"_trapLevel": {
+			"description": "Alternative to \"tier\" which allows for non-standard level ranges.",
+			"type": "object",
+			"properties": {
+				"min": {
+					"type": "integer"
+				},
+				"max": {
+					"type": "integer"
+				}
+			}
+		},
+		"_trapThreat": {
+			"type": "string",
+			"enum": [
+				"setback",
+				"moderate",
+				"dangerous",
+				"deadly"
+			]
+		},
 		"trap": {
 			"oneOf": [
 				{
@@ -33,11 +59,29 @@
 								"$ref": "entry.json"
 							}
 						},
+						"tier": {
+							"$ref": "#/$defs/_trapTier"
+						},
+						"level": {
+							"$ref": "#/$defs/_trapLevel"
+						},
+						"threat": {
+							"$ref": "#/$defs/_trapThreat"
+						},
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"fluff": {
+							"$ref": "util.json#/$defs/fluffObject"
 						},
 						"foundryImg": {
 							"$ref": "util.json#/$defs/foundryImg"
@@ -78,29 +122,13 @@
 							}
 						},
 						"tier": {
-							"type": "integer",
-							"minimum": 1,
-							"maximum": 4
+							"$ref": "#/$defs/_trapTier"
 						},
 						"level": {
-							"description": "Alternative to \"tier\" which allows for non-standard level ranges.",
-							"type": "object",
-							"properties": {
-								"min": {
-									"type": "integer"
-								},
-								"max": {
-									"type": "integer"
-								}
-							}
+							"$ref": "#/$defs/_trapLevel"
 						},
 						"threat": {
-							"type": "string",
-							"enum": [
-								"moderate",
-								"dangerous",
-								"deadly"
-							]
+							"$ref": "#/$defs/_trapThreat"
 						},
 						"trigger": {
 							"type": "array",
@@ -160,6 +188,15 @@
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"fluff": {
+							"$ref": "util.json#/$defs/fluffObject"
+						},
 						"foundryImg": {
 							"$ref": "util.json#/$defs/foundryImg"
 						}
@@ -214,6 +251,12 @@
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
 				},
 				"foundrySystem": {
 					"$ref": "util.json#/$defs/foundrySystemObject"
