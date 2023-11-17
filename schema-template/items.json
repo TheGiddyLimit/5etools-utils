@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.5",
+	"version": "1.14.6",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -428,9 +428,8 @@
 				"ammoType": {
 					"$ref": "items-shared.json#/$defs/itemAmmoType"
 				},
-				"grantsProficiency": {
-					"type": "boolean"
-				},
+				"grantsProficiency": {"type": "boolean"},
+				"grantsLanguage": {"type": "boolean"},
 				"spellScrollLevel": {"type": "integer"},
 				"seeAlsoDeck": {
 					"type": "array",
