@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.17",
+	"version": "1.10.18",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -300,25 +300,52 @@
 		},
 
 		"_spellListItem": {
-			"type": "object",
-			"properties": {
-				"name": {"type": "string"},
-				"source": {"$ref": "util.json#/$defs/source"},
-				"spellListType": {
-					"type": "string",
-					"enum": ["groups"]
-				},
-				"spells": {
-					"type": "array",
-					"items": {
-						"$ref": "util.json#/$defs/spellListSpellRef"
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {"type": "string"},
+						"source": {"$ref": "util.json#/$defs/source"},
+						"spellListType": {
+							"type": "string",
+							"enum": ["groups"]
+						},
+						"spells": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/spellListSpellRef"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						}
 					},
-					"minItems": 1,
-					"uniqueItems": true
+					"required": ["name", "source", "spellListType", "spells"],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {"type": "string"},
+						"source": {"$ref": "util.json#/$defs/source"},
+						"spellListType": {
+							"type": "string",
+							"const": "variantClass"
+						},
+						"className":  {"type": "string"},
+						"classSource": {"$ref": "util.json#/$defs/source"},
+						"spells": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/spellListSpellRef"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						}
+					},
+					"required": ["name", "source", "spellListType", "className", "classSource", "spells"],
+					"additionalProperties": false
 				}
-			},
-			"required": ["name", "source", "spellListType", "spells"],
-			"additionalProperties": false
+			]
 		}
 	},
 

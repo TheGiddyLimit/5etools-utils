@@ -309,36 +309,78 @@
 			"uniqueItems": true
 		},
 		"_spellListItem": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string"
-				},
-				"source": {
-					"$ref": "util.json#/$defs/source"
-				},
-				"spellListType": {
-					"type": "string",
-					"enum": [
-						"groups"
-					]
-				},
-				"spells": {
-					"type": "array",
-					"items": {
-						"$ref": "util.json#/$defs/spellListSpellRef"
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"spellListType": {
+							"type": "string",
+							"enum": [
+								"groups"
+							]
+						},
+						"spells": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/spellListSpellRef"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						}
 					},
-					"minItems": 1,
-					"uniqueItems": true
+					"required": [
+						"name",
+						"source",
+						"spellListType",
+						"spells"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"spellListType": {
+							"type": "string",
+							"const": "variantClass"
+						},
+						"className": {
+							"type": "string"
+						},
+						"classSource": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"spells": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/spellListSpellRef"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						}
+					},
+					"required": [
+						"name",
+						"source",
+						"spellListType",
+						"className",
+						"classSource",
+						"spells"
+					],
+					"additionalProperties": false
 				}
-			},
-			"required": [
-				"name",
-				"source",
-				"spellListType",
-				"spells"
-			],
-			"additionalProperties": false
+			]
 		}
 	},
 	"properties": {
