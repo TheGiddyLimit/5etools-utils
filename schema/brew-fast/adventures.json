@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.15",
+	"version": "1.10.16",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -198,7 +198,8 @@
 							"Planescape",
 							"Adventure Atlas",
 							"Heroes' Feast",
-							"Family Friendly"
+							"Family Friendly",
+							"Grim Hollow"
 						]
 					},
 					"alAveragePlayerLevel": {
