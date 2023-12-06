@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.15",
+	"version": "1.8.16",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -176,6 +176,12 @@
 						},
 						"skipItalics": {
 							"type": "boolean"
+						},
+						"style": {
+							"type": "string",
+							"enum": [
+								"quote-pull"
+							]
 						}
 					},
 					"required": ["entries"],
