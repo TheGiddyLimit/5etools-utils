@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.9",
+	"version": "1.9.10",
 	"title": "Spells",
 	"type": "object",
 
@@ -16,6 +16,22 @@
 					"type": "integer"
 				},
 				"school": {"$ref": "../util.json#/$defs/spellSchool"},
+				"subschools": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"$$switch_key": {
+							"key_site": "enum",
+							"key_ua": "enum",
+							"key_brew": "examples",
+							"value": [
+								"contaminated"
+							]
+						}
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
 				"meta": {
 					"type": "object",
 					"properties": {
@@ -440,15 +456,6 @@
 									"source": {"$ref": "../util.json#/$defs/source"}
 								},
 								"required": ["name", "source"]
-							},
-							"minItems": 1,
-							"uniqueItems": true
-						},
-						"subschools": {
-							"description": "For homebrew use only.",
-							"type": "array",
-							"items": {
-								"type": "string"
 							},
 							"minItems": 1,
 							"uniqueItems": true
