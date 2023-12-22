@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -139,6 +139,11 @@
 				"dawn",
 				"dusk",
 				"midnight",
+				"week",
+				"month",
+				"year",
+				"decade",
+				"century",
 				"special"
 			]
 		},

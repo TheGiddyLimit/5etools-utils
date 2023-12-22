@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.9",
+	"version": "1.9.10",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -16,6 +16,17 @@
 				},
 				"school": {
 					"$ref": "../util.json#/$defs/spellSchool"
+				},
+				"subschools": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"contaminated"
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"meta": {
 					"type": "object",
@@ -340,6 +351,17 @@
 						},
 						"school": {
 							"$ref": "../util.json#/$defs/spellSchool"
+						},
+						"subschools": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"contaminated"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
 						},
 						"meta": {
 							"type": "object",
@@ -672,6 +694,17 @@
 						},
 						"school": {
 							"$ref": "../util.json#/$defs/spellSchool"
+						},
+						"subschools": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"contaminated"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
 						},
 						"meta": {
 							"type": "object",

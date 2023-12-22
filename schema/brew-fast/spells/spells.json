@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.9",
+	"version": "1.9.10",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -16,6 +16,17 @@
 				},
 				"school": {
 					"$ref": "../util.json#/$defs/spellSchool"
+				},
+				"subschools": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"examples": [
+							"contaminated"
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"meta": {
 					"type": "object",
@@ -518,15 +529,6 @@
 					"minItems": 1,
 					"uniqueItems": true
 				},
-				"subschools": {
-					"description": "For homebrew use only.",
-					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"minItems": 1,
-					"uniqueItems": true
-				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
 					"$ref": "../util.json#/$defs/fluffObject"
@@ -562,6 +564,17 @@
 						},
 						"school": {
 							"$ref": "../util.json#/$defs/spellSchool"
+						},
+						"subschools": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"examples": [
+									"contaminated"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
 						},
 						"meta": {
 							"type": "object",
@@ -1060,15 +1073,6 @@
 									"name",
 									"source"
 								]
-							},
-							"minItems": 1,
-							"uniqueItems": true
-						},
-						"subschools": {
-							"description": "For homebrew use only.",
-							"type": "array",
-							"items": {
-								"type": "string"
 							},
 							"minItems": 1,
 							"uniqueItems": true
@@ -1117,6 +1121,17 @@
 						"school": {
 							"$ref": "../util.json#/$defs/spellSchool"
 						},
+						"subschools": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"examples": [
+									"contaminated"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
 						"meta": {
 							"type": "object",
 							"properties": {
@@ -1614,15 +1629,6 @@
 									"name",
 									"source"
 								]
-							},
-							"minItems": 1,
-							"uniqueItems": true
-						},
-						"subschools": {
-							"description": "For homebrew use only.",
-							"type": "array",
-							"items": {
-								"type": "string"
 							},
 							"minItems": 1,
 							"uniqueItems": true
