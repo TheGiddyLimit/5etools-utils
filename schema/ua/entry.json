@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.16",
+	"version": "1.8.17",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -1837,7 +1837,9 @@
 							"enum": [
 								"feet",
 								"yards",
-								"miles"
+								"miles",
+								"meters",
+								"kilometers"
 							]
 						},
 						"distance": {
