@@ -1548,7 +1548,8 @@
 								}
 							}
 						}
-					}
+					},
+					"additionalProperties": false
 				}
 			]
 		}

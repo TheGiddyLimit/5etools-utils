@@ -367,7 +367,8 @@
 								"source": {"$ref": "util.json#/$defs/source"}
 							}
 						}
-					}
+					},
+					"additionalProperties": false
 				}
 			]
 		}

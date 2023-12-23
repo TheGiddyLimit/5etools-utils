@@ -266,7 +266,8 @@
 									"source": {"$ref": "util.json#/$defs/source"}
 								}
 							}
-						}
+						},
+						"additionalProperties": false
 					},
 					{
 						"$ref": "util.json#/$defs/fluffObject"

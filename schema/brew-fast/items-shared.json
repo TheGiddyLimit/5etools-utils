@@ -322,7 +322,8 @@
 								}
 							}
 						}
-					}
+					},
+					"additionalProperties": false
 				},
 				{
 					"$ref": "util.json#/$defs/fluffObject"

@@ -1639,7 +1639,8 @@
 								}
 							}
 						}
-					}
+					},
+					"additionalProperties": false
 				}
 			]
 		}
