@@ -17,19 +17,40 @@
 						"$ref": "../util.json#/$defs/source"
 					},
 					"system": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
 					"effects": {
 						"type": "array",
 						"items": {
-							"$ref": "../util.json#/$defs/foundryEffectObject"
+							"$ref": "../util-foundry.json#/$defs/foundryEffectObject"
 						}
 					},
 					"flags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
+						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
 					},
 					"img": {
 						"type": "string"
+					},
+					"_merge": {
+						"type": "object",
+						"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
+						"properties": {
+							"system": {
+								"const": true
+							},
+							"chooseSystem": {
+								"const": true
+							},
+							"effects": {
+								"const": true
+							},
+							"flags": {
+								"const": true
+							},
+							"chooseFlags": {
+								"const": true
+							}
+						}
 					},
 					"entries": {
 						"type": "array",
@@ -38,15 +59,15 @@
 						}
 					},
 					"entryData": {
-						"$ref": "../foundry-shared.json#/$defs/entryDataObject"
+						"$ref": "../util-foundry.json#/$defs/entryDataObject"
 					},
 					"advancement": {
-						"$ref": "../util.json#/$defs/foundryAdvancementsArray"
+						"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"
 					},
 					"chooseSystem": {
 						"type": "array",
 						"items": {
-							"$ref": "../util.json#/$defs/foundrySystemObject"
+							"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 						}
 					},
 					"isChooseSystemRenderEntries": {
@@ -68,7 +89,7 @@
 						"type": "object"
 					},
 					"subEntities": {
-						"$ref": "../util.json#/$defs/foundrySubEntitiesObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySubEntitiesObject"
 					}
 				},
 				"required": [
@@ -98,19 +119,40 @@
 						"$ref": "../util.json#/$defs/source"
 					},
 					"system": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
 					"effects": {
 						"type": "array",
 						"items": {
-							"$ref": "../util.json#/$defs/foundryEffectObject"
+							"$ref": "../util-foundry.json#/$defs/foundryEffectObject"
 						}
 					},
 					"flags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
+						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
 					},
 					"img": {
 						"type": "string"
+					},
+					"_merge": {
+						"type": "object",
+						"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
+						"properties": {
+							"system": {
+								"const": true
+							},
+							"chooseSystem": {
+								"const": true
+							},
+							"effects": {
+								"const": true
+							},
+							"flags": {
+								"const": true
+							},
+							"chooseFlags": {
+								"const": true
+							}
+						}
 					},
 					"className": {
 						"type": "string"
@@ -125,15 +167,15 @@
 						}
 					},
 					"entryData": {
-						"$ref": "../foundry-shared.json#/$defs/entryDataObject"
+						"$ref": "../util-foundry.json#/$defs/entryDataObject"
 					},
 					"advancement": {
-						"$ref": "../util.json#/$defs/foundryAdvancementsArray"
+						"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"
 					},
 					"chooseSystem": {
 						"type": "array",
 						"items": {
-							"$ref": "../util.json#/$defs/foundrySystemObject"
+							"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 						}
 					},
 					"isChooseSystemRenderEntries": {
@@ -155,7 +197,7 @@
 						"type": "object"
 					},
 					"subEntities": {
-						"$ref": "../util.json#/$defs/foundrySubEntitiesObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySubEntitiesObject"
 					}
 				}
 			},
@@ -182,19 +224,40 @@
 						"$ref": "../util.json#/$defs/source"
 					},
 					"system": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
 					"effects": {
 						"type": "array",
 						"items": {
-							"$ref": "../util.json#/$defs/foundryEffectObject"
+							"$ref": "../util-foundry.json#/$defs/foundryEffectObject"
 						}
 					},
 					"flags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
+						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
 					},
 					"img": {
 						"type": "string"
+					},
+					"_merge": {
+						"type": "object",
+						"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
+						"properties": {
+							"system": {
+								"const": true
+							},
+							"chooseSystem": {
+								"const": true
+							},
+							"effects": {
+								"const": true
+							},
+							"flags": {
+								"const": true
+							},
+							"chooseFlags": {
+								"const": true
+							}
+						}
 					},
 					"className": {
 						"type": "string"
@@ -212,12 +275,12 @@
 						}
 					},
 					"entryData": {
-						"$ref": "../foundry-shared.json#/$defs/entryDataObject"
+						"$ref": "../util-foundry.json#/$defs/entryDataObject"
 					},
 					"chooseSystem": {
 						"type": "array",
 						"items": {
-							"$ref": "../util.json#/$defs/foundrySystemObject"
+							"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 						}
 					},
 					"isChooseSystemRenderEntries": {
@@ -239,7 +302,7 @@
 						"type": "object"
 					},
 					"subEntities": {
-						"$ref": "../util.json#/$defs/foundrySubEntitiesObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySubEntitiesObject"
 					}
 				}
 			},
@@ -268,19 +331,40 @@
 						"$ref": "../util.json#/$defs/source"
 					},
 					"system": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
 					"effects": {
 						"type": "array",
 						"items": {
-							"$ref": "../util.json#/$defs/foundryEffectObject"
+							"$ref": "../util-foundry.json#/$defs/foundryEffectObject"
 						}
 					},
 					"flags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
+						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
 					},
 					"img": {
 						"type": "string"
+					},
+					"_merge": {
+						"type": "object",
+						"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
+						"properties": {
+							"system": {
+								"const": true
+							},
+							"chooseSystem": {
+								"const": true
+							},
+							"effects": {
+								"const": true
+							},
+							"flags": {
+								"const": true
+							},
+							"chooseFlags": {
+								"const": true
+							}
+						}
 					},
 					"className": {
 						"type": "string"
@@ -304,12 +388,12 @@
 						}
 					},
 					"entryData": {
-						"$ref": "../foundry-shared.json#/$defs/entryDataObject"
+						"$ref": "../util-foundry.json#/$defs/entryDataObject"
 					},
 					"chooseSystem": {
 						"type": "array",
 						"items": {
-							"$ref": "../util.json#/$defs/foundrySystemObject"
+							"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 						}
 					},
 					"isChooseSystemRenderEntries": {
@@ -331,7 +415,7 @@
 						"type": "object"
 					},
 					"subEntities": {
-						"$ref": "../util.json#/$defs/foundrySubEntitiesObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySubEntitiesObject"
 					}
 				}
 			},

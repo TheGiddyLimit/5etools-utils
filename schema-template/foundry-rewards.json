@@ -6,7 +6,7 @@
 	"type": "object",
 
 	"properties": {
-		"reward": {"$ref": "util.json#/$defs/foundrySideDataGenericFeatureArray"}
+		"reward": {"$ref": "util-foundry.json#/$defs/foundrySideDataGenericFeatureArray"}
 	},
 
 	"required": [

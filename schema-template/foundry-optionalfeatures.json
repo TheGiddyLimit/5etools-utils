@@ -6,7 +6,7 @@
 	"type": "object",
 
 	"properties": {
-		"optionalfeature": {"$ref": "util.json#/$defs/foundrySideDataGenericFeatureArray"}
+		"optionalfeature": {"$ref": "util-foundry.json#/$defs/foundrySideDataGenericFeatureArray"}
 	},
 
 	"required": [

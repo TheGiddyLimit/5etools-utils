@@ -108,7 +108,7 @@
 				},
 				"tokenUrl": {"type": "string"},
 				"tokenCredit": {"type": "string"},
-				"foundryTokenScale": {"$ref": "foundry-shared.json#/$defs/foundryTokenScale"},
+				"foundryTokenScale": {"$ref": "util-foundry.json#/$defs/foundryTokenScale"},
 				"srd": {
 					"$ref": "util.json#/$defs/srd"
 				},
@@ -126,7 +126,7 @@
 						"$ref": "util.json#/$defs/fluffObject"
 					},
 					"foundryImg": {
-						"$ref": "util.json#/$defs/foundryImg"
+						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				}
 			},

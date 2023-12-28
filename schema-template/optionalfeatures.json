@@ -79,10 +79,10 @@
 				"vulnerable": 	{"$ref": "util.json#/$defs/damageVulnerabilityArrayPlayer"},
 				"conditionImmune": {"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"},
 				"$$ifBrew": {
-					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
-					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
-					"foundryEffects": {"$ref": "util.json#/$defs/foundryEffectsArray"},
-					"foundryImg": {"$ref": "util.json#/$defs/foundryImg"}
+					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
+					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
 				}
 			},
 			"required": [

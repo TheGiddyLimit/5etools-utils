@@ -1,0 +1,188 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "util-foundry.json",
+
+	"title": "Util: Foundry",
+	"version": "1.0.0",
+
+	"$defs" : {
+		"entryDataObject": {
+			"description": "Additional \"5etools-type\" data to be stored on the entry.",
+			"type": "object",
+			"properties": {
+				"languageProficiencies": {
+					"$ref": "util.json#/$defs/languageProficiencies"
+				},
+				"skillProficiencies": {
+					"$ref": "util.json#/$defs/skillProficiencies"
+				},
+				"weaponProficiencies": {
+					"$ref": "util.json#/$defs/weaponProficiencies"
+				},
+				"armorProficiencies": {
+					"$ref": "util.json#/$defs/armorProficiencies"
+				},
+				"toolProficiencies": {
+					"$ref": "util.json#/$defs/toolProficiencies"
+				},
+				"savingThrowProficiencies": {
+					"$ref": "util.json#/$defs/savingThrowProficiencies"
+				},
+				"expertise": {
+					"$ref": "util.json#/$defs/expertise"
+				},
+				"resist": {
+					"$ref": "util.json#/$defs/damageResistArrayPlayer"
+				},
+				"immune": {
+					"$ref": "util.json#/$defs/damageImmunityArrayPlayer"
+				},
+				"vulnerable": {
+					"$ref": "util.json#/$defs/damageVulnerabilityArrayPlayer"
+				},
+				"conditionImmune": {
+					"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+				},
+				"resources": {
+					"$ref": "util.json#/$defs/resourcesArray"
+				},
+				"senses": {
+					"$ref": "util.json#/$defs/sensesArray"
+				}
+			},
+			"additionalProperties": false
+		},
+
+		"foundryTokenScale": {
+			"type": "number",
+			"minimum": 0.2,
+			"maximum": 3,
+			"multipleOf" : 0.1
+		},
+
+		"foundrySystemObject": {
+			"type": "object"
+		},
+
+		"foundryFlagsObject": {
+			"type": "object"
+		},
+
+		"foundryAdvancementObject": {
+			"type": "object"
+		},
+
+		"foundryAdvancementsArray": {
+			"type": "array",
+			"minItems": 1,
+			"items": {"$ref": "#/$defs/foundryAdvancementObject"},
+			"uniqueItems": true
+		},
+
+		"foundryImg": {
+			"type": "string"
+		},
+
+		"foundrySubEntitiesObject": {
+			"description": "A 5etools-data-like object of additional entities to import.",
+			"type": "object"
+		},
+
+		"foundryEffectObject": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"img": {"type": "string"},
+				"changes": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"key": {"type": "string"},
+							"mode": {"type": ["string", "integer"]},
+							"value": true,
+							"priority": {"type": ["string", "integer"]}
+						},
+						"required": ["key", "mode", "value"],
+						"additionalProperties": false
+					}
+				},
+				"flags": {"type": "object"},
+				"duration": {"type": "object"},
+				"disabled": {"const": true},
+				"transfer": {"const": true}
+			},
+			"required": ["changes"],
+			"additionalProperties": false
+		},
+
+		"foundryEffectsArray": {
+			"type": "array",
+			"items": {"$ref": "#/$defs/foundryEffectObject"},
+			"minItems": 1,
+			"uniqueItems": true
+		},
+
+		"foundrySideDataGenericObject": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
+
+				"system": {"$ref": "#/$defs/foundrySystemObject"},
+				"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}},
+				"flags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
+				"img": {"type": "string"},
+
+				"_merge": {
+					"type": "object",
+					"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
+					"properties": {
+						"system": {"const": true},
+						"chooseSystem": {"const": true},
+						"effects": {"const": true},
+						"flags": {"const": true},
+						"chooseFlags": {"const": true}
+					}
+				}
+			},
+			"required": [
+				"name",
+				"source"
+			],
+			"additionalProperties": false
+		},
+
+		"foundrySideDataGenericArray": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {"$ref": "#/$defs/foundrySideDataGenericObject"}
+		},
+
+		"foundrySideDataGenericFeatureObject": {
+			"$$merge": [
+				{
+					"$ref": "#/$defs/foundrySideDataGenericObject"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"entries": {"type": "array", "items": {"$ref": "entry.json"}},
+						"isIgnored": {"const": true},
+						"ignoreSrdEffects": {"const": true},
+
+						"actorDataMod": {"type": "object"}
+					}
+				}
+			]
+		},
+
+		"foundrySideDataGenericFeatureArray": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {"$ref": "#/$defs/foundrySideDataGenericFeatureObject"}
+		}
+	}
+}

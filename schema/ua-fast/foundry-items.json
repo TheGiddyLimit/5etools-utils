@@ -5,7 +5,7 @@
 	"type": "object",
 	"properties": {
 		"magicvariant": {
-			"$ref": "util.json#/$defs/foundrySideDataGenericArray"
+			"$ref": "util-foundry.json#/$defs/foundrySideDataGenericArray"
 		},
 		"item": {
 			"type": "array",
@@ -22,19 +22,40 @@
 						"$ref": "util.json#/$defs/source"
 					},
 					"system": {
-						"$ref": "util.json#/$defs/foundrySystemObject"
+						"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 					},
 					"effects": {
 						"type": "array",
 						"items": {
-							"$ref": "util.json#/$defs/foundryEffectObject"
+							"$ref": "util-foundry.json#/$defs/foundryEffectObject"
 						}
 					},
 					"flags": {
-						"$ref": "util.json#/$defs/foundryFlagsObject"
+						"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 					},
 					"img": {
 						"type": "string"
+					},
+					"_merge": {
+						"type": "object",
+						"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
+						"properties": {
+							"system": {
+								"const": true
+							},
+							"chooseSystem": {
+								"const": true
+							},
+							"effects": {
+								"const": true
+							},
+							"flags": {
+								"const": true
+							},
+							"chooseFlags": {
+								"const": true
+							}
+						}
 					},
 					"type": {
 						"type": "string",

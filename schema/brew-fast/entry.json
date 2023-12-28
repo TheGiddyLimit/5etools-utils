@@ -1976,7 +1976,7 @@
 					}
 				},
 				"foundrySceneFlags": {
-					"$ref": "util.json#/$defs/foundryFlagsObject"
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				}
 			},
 			"required": [

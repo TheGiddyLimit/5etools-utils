@@ -6,7 +6,7 @@
 	"type": "object",
 
 	"properties": {
-		"action": {"$ref": "util.json#/$defs/foundrySideDataGenericArray"}
+		"action": {"$ref": "util-foundry.json#/$defs/foundrySideDataGenericArray"}
 	},
 
 	"required": [

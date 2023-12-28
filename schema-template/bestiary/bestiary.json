@@ -755,7 +755,7 @@
 				},
 				"tokenUrl": {"type": "string"},
 				"tokenCredit": {"type": "string"},
-				"foundryTokenScale": {"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"},
+				"foundryTokenScale": {"$ref": "../util-foundry.json#/$defs/foundryTokenScale"},
 				"altArt": {
 					"type": "array",
 					"items": {
@@ -779,7 +779,7 @@
 									"properties": {
 										"tokenUrl": {"type": "string"},
 										"tokenCredit": {"type": "string"},
-										"foundryTokenScale": {"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"}
+										"foundryTokenScale": {"$ref": "../util-foundry.json#/$defs/foundryTokenScale"}
 									},
 									"required": ["tokenUrl"],
 									"additionalProperties": false
@@ -854,7 +854,7 @@
 						]
 					},
 					"foundryImg": {
-						"$ref": "../util.json#/$defs/foundryImg"
+						"$ref": "../util-foundry.json#/$defs/foundryImg"
 					}
 				},
 				"isNamedCreature": {

@@ -64,7 +64,7 @@
 					"$ref": "util.json#/$defs/otherSources"
 				},
 				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
+					"$ref": "util-foundry.json#/$defs/foundryImg"
 				}
 			},
 			"required": [

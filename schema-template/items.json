@@ -491,10 +491,10 @@
 						"type": "string",
 						"enum": ["weapon", "equipment", "consumable", "tool", "loot", "class", "spell", "feat", "backpack"]
 					},
-					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
-					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
-					"foundryEffects": {"$ref": "util.json#/$defs/foundryEffectsArray"},
-					"foundryImg": {"$ref": "util.json#/$defs/foundryImg"},
+					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
+					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
 					"fluff": {
 						"$ref": "items-shared.json#/$defs/fluff"
 					}

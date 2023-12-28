@@ -6,7 +6,7 @@
 	"type": "object",
 
 	"properties": {
-		"vehicleUpgrade": {"$ref": "util.json#/$defs/foundrySideDataGenericFeatureArray"}
+		"vehicleUpgrade": {"$ref": "util-foundry.json#/$defs/foundrySideDataGenericFeatureArray"}
 	},
 
 	"required": [

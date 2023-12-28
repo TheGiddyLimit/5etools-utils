@@ -47,16 +47,16 @@
 					"$ref": "util.json#/$defs/fluffObject"
 				},
 				"foundrySystem": {
-					"$ref": "util.json#/$defs/foundrySystemObject"
+					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
 				"foundryFlags": {
-					"$ref": "util.json#/$defs/foundryFlagsObject"
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				},
 				"foundryEffects": {
-					"$ref": "util.json#/$defs/foundryEffectsArray"
+					"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
 				},
 				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
+					"$ref": "util-foundry.json#/$defs/foundryImg"
 				}
 			},
 			"required": [

@@ -60,7 +60,7 @@
 								"$ref": "util.json#/$defs/fluffObject"
 							},
 							"foundryImg": {
-								"$ref": "util.json#/$defs/foundryImg"
+								"$ref": "util-foundry.json#/$defs/foundryImg"
 							}
 						}
 					},
@@ -160,7 +160,7 @@
 								"$ref": "util.json#/$defs/fluffObject"
 							},
 							"foundryImg": {
-								"$ref": "util.json#/$defs/foundryImg"
+								"$ref": "util-foundry.json#/$defs/foundryImg"
 							}
 						}
 					},
@@ -216,10 +216,10 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"},
 				"$$ifBrew": {
-					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
-					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
-					"foundryEffects": {"$ref": "util.json#/$defs/foundryEffectsArray"},
-					"foundryImg": {"$ref": "util.json#/$defs/foundryImg"}
+					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
+					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
 				}
 			},
 			"additionalProperties": false,

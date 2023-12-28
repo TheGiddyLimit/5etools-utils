@@ -10,11 +10,11 @@
 			"type": "object",
 			"$$merge": [
 				{
-					"$ref": "util.json#/$defs/foundrySideDataGenericObject"
+					"$ref": "util-foundry.json#/$defs/foundrySideDataGenericObject"
 				},
 				{
 					"properties": {
-						"entryData": {"$ref": "foundry-shared.json#/$defs/entryDataObject"}
+						"entryData": {"$ref": "util-foundry.json#/$defs/entryDataObject"}
 					}
 				}
 			],
@@ -44,7 +44,7 @@
 			"type": "object",
 			"$$merge": [
 				{
-					"$ref": "util.json#/$defs/foundrySideDataGenericObject"
+					"$ref": "util-foundry.json#/$defs/foundrySideDataGenericObject"
 				},
 				{
 					"properties": {

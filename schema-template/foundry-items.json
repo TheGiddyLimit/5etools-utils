@@ -6,7 +6,7 @@
 	"type": "object",
 
 	"properties": {
-		"magicvariant": {"$ref": "util.json#/$defs/foundrySideDataGenericArray"},
+		"magicvariant": {"$ref": "util-foundry.json#/$defs/foundrySideDataGenericArray"},
 		"item": {
 			"type": "array",
 			"minItems": 1,
@@ -15,7 +15,7 @@
 				"type": "object",
 				"$$merge": [
 					{
-						"$ref": "util.json#/$defs/foundrySideDataGenericObject"
+						"$ref": "util-foundry.json#/$defs/foundrySideDataGenericObject"
 					},
 					{
 						"properties": {

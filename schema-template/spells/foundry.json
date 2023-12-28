@@ -6,7 +6,7 @@
 	"type": "object",
 
 	"properties": {
-		"spell": {"$ref": "../util.json#/$defs/foundrySideDataGenericArray"}
+		"spell": {"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericArray"}
 	},
 
 	"required": [

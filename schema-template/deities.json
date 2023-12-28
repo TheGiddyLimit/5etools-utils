@@ -104,7 +104,7 @@
 						"type": "object"
 					},
 					"foundryImg": {
-						"$ref": "util.json#/$defs/foundryImg"
+						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
 				"source": {"$ref": "util.json#/$defs/source"},

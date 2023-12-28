@@ -5,7 +5,7 @@
 	"type": "object",
 	"properties": {
 		"monster": {
-			"$ref": "../util.json#/$defs/foundrySideDataGenericArray"
+			"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericArray"
 		}
 	},
 	"required": [

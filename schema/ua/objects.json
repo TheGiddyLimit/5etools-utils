@@ -132,7 +132,7 @@
 					"type": "string"
 				},
 				"foundryTokenScale": {
-					"$ref": "foundry-shared.json#/$defs/foundryTokenScale"
+					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
 				},
 				"srd": {
 					"$ref": "util.json#/$defs/srd"

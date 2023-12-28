@@ -234,16 +234,16 @@
 					"$ref": "#/$defs/fluff"
 				},
 				"foundrySystem": {
-					"$ref": "util.json#/$defs/foundrySystemObject"
+					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
 				"foundryFlags": {
-					"$ref": "util.json#/$defs/foundryFlagsObject"
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				},
 				"foundryEffects": {
-					"$ref": "util.json#/$defs/foundryEffectsArray"
+					"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
 				},
 				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
+					"$ref": "util-foundry.json#/$defs/foundryImg"
 				}
 			},
 			"additionalProperties": false
@@ -478,16 +478,16 @@
 					"$ref": "#/$defs/fluff"
 				},
 				"foundrySystem": {
-					"$ref": "util.json#/$defs/foundrySystemObject"
+					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
 				"foundryFlags": {
-					"$ref": "util.json#/$defs/foundryFlagsObject"
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				},
 				"foundryEffects": {
-					"$ref": "util.json#/$defs/foundryEffectsArray"
+					"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
 				},
 				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
+					"$ref": "util-foundry.json#/$defs/foundryImg"
 				},
 				"raceName": {
 					"type": "string"
@@ -813,16 +813,16 @@
 							"$ref": "#/$defs/fluff"
 						},
 						"foundrySystem": {
-							"$ref": "util.json#/$defs/foundrySystemObject"
+							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 						},
 						"foundryFlags": {
-							"$ref": "util.json#/$defs/foundryFlagsObject"
+							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 						},
 						"foundryEffects": {
-							"$ref": "util.json#/$defs/foundryEffectsArray"
+							"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
 						},
 						"foundryImg": {
-							"$ref": "util.json#/$defs/foundryImg"
+							"$ref": "util-foundry.json#/$defs/foundryImg"
 						}
 					},
 					"additionalProperties": false,
@@ -1061,16 +1061,16 @@
 							"$ref": "#/$defs/fluff"
 						},
 						"foundrySystem": {
-							"$ref": "util.json#/$defs/foundrySystemObject"
+							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 						},
 						"foundryFlags": {
-							"$ref": "util.json#/$defs/foundryFlagsObject"
+							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 						},
 						"foundryEffects": {
-							"$ref": "util.json#/$defs/foundryEffectsArray"
+							"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
 						},
 						"foundryImg": {
-							"$ref": "util.json#/$defs/foundryImg"
+							"$ref": "util-foundry.json#/$defs/foundryImg"
 						},
 						"_copy": {
 							"$ref": "util.json#/$defs/copyBlock_copy_generic"
@@ -1315,16 +1315,16 @@
 							"$ref": "#/$defs/fluff"
 						},
 						"foundrySystem": {
-							"$ref": "util.json#/$defs/foundrySystemObject"
+							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 						},
 						"foundryFlags": {
-							"$ref": "util.json#/$defs/foundryFlagsObject"
+							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 						},
 						"foundryEffects": {
-							"$ref": "util.json#/$defs/foundryEffectsArray"
+							"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
 						},
 						"foundryImg": {
-							"$ref": "util.json#/$defs/foundryImg"
+							"$ref": "util-foundry.json#/$defs/foundryImg"
 						},
 						"raceName": {
 							"type": "string"
@@ -1575,16 +1575,16 @@
 							"$ref": "#/$defs/fluff"
 						},
 						"foundrySystem": {
-							"$ref": "util.json#/$defs/foundrySystemObject"
+							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 						},
 						"foundryFlags": {
-							"$ref": "util.json#/$defs/foundryFlagsObject"
+							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 						},
 						"foundryEffects": {
-							"$ref": "util.json#/$defs/foundryEffectsArray"
+							"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
 						},
 						"foundryImg": {
-							"$ref": "util.json#/$defs/foundryImg"
+							"$ref": "util-foundry.json#/$defs/foundryImg"
 						},
 						"raceName": {
 							"type": "string"

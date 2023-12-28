@@ -458,16 +458,16 @@
 					"type": "string"
 				},
 				"foundryTokenScale": {
-					"$ref": "foundry-shared.json#/$defs/foundryTokenScale"
+					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
 				},
 				"foundrySystem": {
-					"$ref": "util.json#/$defs/foundrySystemObject"
+					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
 				"foundryFlags": {
-					"$ref": "util.json#/$defs/foundryFlagsObject"
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				},
 				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
+					"$ref": "util-foundry.json#/$defs/foundryImg"
 				}
 			},
 			"required": [
@@ -640,16 +640,16 @@
 					"type": "string"
 				},
 				"foundryTokenScale": {
-					"$ref": "foundry-shared.json#/$defs/foundryTokenScale"
+					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
 				},
 				"foundrySystem": {
-					"$ref": "util.json#/$defs/foundrySystemObject"
+					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
 				"foundryFlags": {
-					"$ref": "util.json#/$defs/foundryFlagsObject"
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				},
 				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
+					"$ref": "util-foundry.json#/$defs/foundryImg"
 				}
 			},
 			"required": [
@@ -822,16 +822,16 @@
 					"type": "string"
 				},
 				"foundryTokenScale": {
-					"$ref": "foundry-shared.json#/$defs/foundryTokenScale"
+					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
 				},
 				"foundrySystem": {
-					"$ref": "util.json#/$defs/foundrySystemObject"
+					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
 				"foundryFlags": {
-					"$ref": "util.json#/$defs/foundryFlagsObject"
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				},
 				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
+					"$ref": "util-foundry.json#/$defs/foundryImg"
 				}
 			},
 			"required": [

@@ -6,7 +6,7 @@
 	"type": "object",
 
 	"properties": {
-		"psionicDisciplineFocus": {"$ref": "util.json#/$defs/foundrySideDataGenericFeatureArray"},
+		"psionicDisciplineFocus": {"$ref": "util-foundry.json#/$defs/foundrySideDataGenericFeatureArray"},
 
 		"psionicDisciplineActive": {
 			"type": "array",
@@ -16,7 +16,7 @@
 				"type": "object",
 				"$$merge": [
 					{
-						"$ref": "util.json#/$defs/foundrySideDataGenericObject"
+						"$ref": "util-foundry.json#/$defs/foundrySideDataGenericObject"
 					},
 					{
 						"properties": {

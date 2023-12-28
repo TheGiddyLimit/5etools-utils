@@ -12,15 +12,15 @@
 				"type": "object",
 				"$$merge": [
 					{
-						"$ref": "../util.json#/$defs/foundrySideDataGenericObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericObject"
 					},
 					{
 						"properties": {
 							"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
-							"entryData": {"$ref": "../foundry-shared.json#/$defs/entryDataObject"},
+							"entryData": {"$ref": "../util-foundry.json#/$defs/entryDataObject"},
 
-							"advancement": {"$ref": "../util.json#/$defs/foundryAdvancementsArray"},
-							"chooseSystem": {"type": "array", "items": {"$ref": "../util.json#/$defs/foundrySystemObject"}},
+							"advancement": {"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"},
+							"chooseSystem": {"type": "array", "items": {"$ref": "../util-foundry.json#/$defs/foundrySystemObject"}},
 							"isChooseSystemRenderEntries": {"type": "boolean"},
 							"isChooseFlagsRenderEntries": {"type": "boolean"},
 							"isIgnored": {"const": true},
@@ -28,7 +28,7 @@
 							"actorDataMod": {"type": "object"},
 							"actorTokenMod": {"type": "object"},
 
-							"subEntities": {"$ref": "../util.json#/$defs/foundrySubEntitiesObject"}
+							"subEntities": {"$ref": "../util-foundry.json#/$defs/foundrySubEntitiesObject"}
 						}
 					}
 				],
@@ -43,7 +43,7 @@
 				"type": "object",
 				"$$merge": [
 					{
-						"$ref": "../util.json#/$defs/foundrySideDataGenericObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericObject"
 					},
 					{
 						"properties": {
@@ -51,10 +51,10 @@
 							"classSource": {"$ref": "../util.json#/$defs/source"},
 
 							"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
-							"entryData": {"$ref": "../foundry-shared.json#/$defs/entryDataObject"},
+							"entryData": {"$ref": "../util-foundry.json#/$defs/entryDataObject"},
 
-							"advancement": {"$ref": "../util.json#/$defs/foundryAdvancementsArray"},
-							"chooseSystem": {"type": "array", "items": {"$ref": "../util.json#/$defs/foundrySystemObject"}},
+							"advancement": {"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"},
+							"chooseSystem": {"type": "array", "items": {"$ref": "../util-foundry.json#/$defs/foundrySystemObject"}},
 							"isChooseSystemRenderEntries": {"type": "boolean"},
 							"isChooseFlagsRenderEntries": {"type": "boolean"},
 							"isIgnored": {"const": true},
@@ -62,7 +62,7 @@
 							"actorDataMod": {"type": "object"},
 							"actorTokenMod": {"type": "object"},
 
-							"subEntities": {"$ref": "../util.json#/$defs/foundrySubEntitiesObject"}
+							"subEntities": {"$ref": "../util-foundry.json#/$defs/foundrySubEntitiesObject"}
 						}
 					}
 				],
@@ -83,7 +83,7 @@
 				"type": "object",
 				"$$merge": [
 					{
-						"$ref": "../util.json#/$defs/foundrySideDataGenericObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericObject"
 					},
 					{
 						"properties": {
@@ -92,9 +92,9 @@
 							"level":  {"type": "integer"},
 
 							"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
-							"entryData": {"$ref": "../foundry-shared.json#/$defs/entryDataObject"},
+							"entryData": {"$ref": "../util-foundry.json#/$defs/entryDataObject"},
 
-							"chooseSystem": {"type": "array", "items": {"$ref": "../util.json#/$defs/foundrySystemObject"}},
+							"chooseSystem": {"type": "array", "items": {"$ref": "../util-foundry.json#/$defs/foundrySystemObject"}},
 							"isChooseSystemRenderEntries": {"type": "boolean"},
 							"isChooseFlagsRenderEntries": {"type": "boolean"},
 							"isIgnored": {"const": true},
@@ -102,7 +102,7 @@
 							"actorDataMod": {"type": "object"},
 							"actorTokenMod": {"type": "object"},
 
-							"subEntities": {"$ref": "../util.json#/$defs/foundrySubEntitiesObject"}
+							"subEntities": {"$ref": "../util-foundry.json#/$defs/foundrySubEntitiesObject"}
 						}
 					}
 				],
@@ -124,7 +124,7 @@
 				"type": "object",
 				"$$merge": [
 					{
-						"$ref": "../util.json#/$defs/foundrySideDataGenericObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericObject"
 					},
 					{
 						"properties": {
@@ -136,9 +136,9 @@
 							"subclassSource": {"$ref": "../util.json#/$defs/source"},
 
 							"entries": {"type": "array", "items": {"$ref": "../entry.json"}},
-							"entryData": {"$ref": "../foundry-shared.json#/$defs/entryDataObject"},
+							"entryData": {"$ref": "../util-foundry.json#/$defs/entryDataObject"},
 
-							"chooseSystem": {"type": "array", "items": {"$ref": "../util.json#/$defs/foundrySystemObject"}},
+							"chooseSystem": {"type": "array", "items": {"$ref": "../util-foundry.json#/$defs/foundrySystemObject"}},
 							"isChooseSystemRenderEntries": {"type": "boolean"},
 							"isChooseFlagsRenderEntries": {"type": "boolean"},
 							"isIgnored": {"const": true},
@@ -146,7 +146,7 @@
 							"actorDataMod": {"type": "object"},
 							"actorTokenMod": {"type": "object"},
 
-							"subEntities": {"$ref": "../util.json#/$defs/foundrySubEntitiesObject"}
+							"subEntities": {"$ref": "../util-foundry.json#/$defs/foundrySubEntitiesObject"}
 						}
 					}
 				],

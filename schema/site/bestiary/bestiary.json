@@ -863,7 +863,7 @@
 					"type": "string"
 				},
 				"foundryTokenScale": {
-					"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
+					"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
 				},
 				"altArt": {
 					"type": "array",
@@ -1955,7 +1955,7 @@
 							"type": "string"
 						},
 						"foundryTokenScale": {
-							"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
+							"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
 						},
 						"altArt": {
 							"type": "array",
@@ -3061,7 +3061,7 @@
 							"type": "string"
 						},
 						"foundryTokenScale": {
-							"$ref": "../foundry-shared.json#/$defs/foundryTokenScale"
+							"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
 						},
 						"altArt": {
 							"type": "array",

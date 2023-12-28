@@ -99,7 +99,7 @@
 				},
 				"$$ifBrew": {
 					"foundryImg": {
-						"$ref": "util.json#/$defs/foundryImg"
+						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				}
 			}

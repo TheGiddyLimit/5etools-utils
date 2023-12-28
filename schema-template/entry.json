@@ -1081,7 +1081,7 @@
 									"flags": false
 								}
 							},
-							"foundrySceneFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"}
+							"foundrySceneFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"}
 						}
 					},
 					"required": ["href"],

@@ -97,11 +97,11 @@
 						"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
 					},
 
-					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
-					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
-					"foundryEffects": {"$ref": "util.json#/$defs/foundryEffectsArray"},
-					"foundryImg": {"$ref": "util.json#/$defs/foundryImg"},
-					"foundryAdvancement": {"$ref": "util.json#/$defs/foundryAdvancementsArray"}
+					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
+					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvancement": {"$ref": "util-foundry.json#/$defs/foundryAdvancementsArray"}
 				}
 			},
 			"additionalProperties": false

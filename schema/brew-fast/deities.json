@@ -134,7 +134,7 @@
 					"type": "object"
 				},
 				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
+					"$ref": "util-foundry.json#/$defs/foundryImg"
 				}
 			},
 			"additionalProperties": false
@@ -271,7 +271,7 @@
 							"type": "object"
 						},
 						"foundryImg": {
-							"$ref": "util.json#/$defs/foundryImg"
+							"$ref": "util-foundry.json#/$defs/foundryImg"
 						}
 					},
 					"additionalProperties": false,
@@ -411,7 +411,7 @@
 							"type": "object"
 						},
 						"foundryImg": {
-							"$ref": "util.json#/$defs/foundryImg"
+							"$ref": "util-foundry.json#/$defs/foundryImg"
 						},
 						"_copy": {
 							"$ref": "util.json#/$defs/copyBlock_copy_generic"

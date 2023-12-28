@@ -393,11 +393,11 @@
 						"$ref": "util.json#/$defs/fluffObject"
 					},
 					"tokenUrl": {"type": "string"},
-					"foundryTokenScale": {"$ref": "foundry-shared.json#/$defs/foundryTokenScale"},
-					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
-					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
+					"foundryTokenScale": {"$ref": "util-foundry.json#/$defs/foundryTokenScale"},
+					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
 					"foundryImg": {
-						"$ref": "util.json#/$defs/foundryImg"
+						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
 				"hasToken": {"type": "boolean"},
@@ -504,11 +504,11 @@
 						"$ref": "util.json#/$defs/fluffObject"
 					},
 					"tokenUrl": {"type": "string"},
-					"foundryTokenScale": {"$ref": "foundry-shared.json#/$defs/foundryTokenScale"},
-					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
-					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
+					"foundryTokenScale": {"$ref": "util-foundry.json#/$defs/foundryTokenScale"},
+					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
 					"foundryImg": {
-						"$ref": "util.json#/$defs/foundryImg"
+						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
 				"hasToken": {"type": "boolean"},
@@ -662,11 +662,11 @@
 						"$ref": "util.json#/$defs/fluffObject"
 					},
 					"tokenUrl": {"type": "string"},
-					"foundryTokenScale": {"$ref": "foundry-shared.json#/$defs/foundryTokenScale"},
-					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
-					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
+					"foundryTokenScale": {"$ref": "util-foundry.json#/$defs/foundryTokenScale"},
+					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
 					"foundryImg": {
-						"$ref": "util.json#/$defs/foundryImg"
+						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
 				"hasToken": {"type": "boolean"},

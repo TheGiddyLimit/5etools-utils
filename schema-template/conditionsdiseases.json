@@ -37,10 +37,10 @@
 						"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
 						"$ref": "util.json#/$defs/fluffObject"
 					},
-					"foundrySystem": {"$ref": "util.json#/$defs/foundrySystemObject"},
-					"foundryFlags": {"$ref": "util.json#/$defs/foundryFlagsObject"},
-					"foundryEffects": {"$ref": "util.json#/$defs/foundryEffectsArray"},
-					"foundryImg": {"$ref": "util.json#/$defs/foundryImg"}
+					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
+					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
 				},
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}

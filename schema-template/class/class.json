@@ -190,13 +190,13 @@
 				"consumes": {"$ref": "../util.json#/$defs/consumesObject"},
 				"$$ifBrew": {
 					"foundrySystem": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
 					"foundryFlags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
+						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
 					},
 					"foundryImg": {
-						"$ref": "../util.json#/$defs/foundryImg"
+						"$ref": "../util-foundry.json#/$defs/foundryImg"
 					},
 					"languageProficiencies": {
 						"$ref": "../util.json#/$defs/languageProficiencies"
@@ -279,13 +279,13 @@
 				"consumes": {"$ref": "../util.json#/$defs/consumesObject"},
 				"$$ifBrew": {
 					"foundrySystem": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
 					"foundryFlags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
+						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
 					},
 					"foundryImg": {
-						"$ref": "../util.json#/$defs/foundryImg"
+						"$ref": "../util-foundry.json#/$defs/foundryImg"
 					},
 					"languageProficiencies": {
 						"$ref": "../util.json#/$defs/languageProficiencies"
@@ -542,16 +542,16 @@
 				},
 				"$$ifBrew": {
 					"foundrySystem": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
 					"foundryFlags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
+						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
 					},
 					"foundryAdvancement": {
-						"$ref": "../util.json#/$defs/foundryAdvancementsArray"
+						"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"
 					},
 					"foundryImg": {
-						"$ref": "../util.json#/$defs/foundryImg"
+						"$ref": "../util-foundry.json#/$defs/foundryImg"
 					}
 				}
 			},
@@ -837,16 +837,16 @@
 						"type": "string"
 					},
 					"foundrySystem": {
-						"$ref": "../util.json#/$defs/foundrySystemObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
 					"foundryFlags": {
-						"$ref": "../util.json#/$defs/foundryFlagsObject"
+						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
 					},
 					"foundryAdvancement": {
-						"$ref": "../util.json#/$defs/foundryAdvancementsArray"
+						"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"
 					},
 					"foundryImg": {
-						"$ref": "../util.json#/$defs/foundryImg"
+						"$ref": "../util-foundry.json#/$defs/foundryImg"
 					}
 				}
 			},

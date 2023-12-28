@@ -186,7 +186,7 @@
 					"$ref": "util.json#/$defs/fluffObject"
 				},
 				"foundryImg": {
-					"$ref": "util.json#/$defs/foundryImg"
+					"$ref": "util-foundry.json#/$defs/foundryImg"
 				}
 			},
 			"additionalProperties": false
@@ -375,7 +375,7 @@
 							"$ref": "util.json#/$defs/fluffObject"
 						},
 						"foundryImg": {
-							"$ref": "util.json#/$defs/foundryImg"
+							"$ref": "util-foundry.json#/$defs/foundryImg"
 						}
 					},
 					"additionalProperties": false,
@@ -568,7 +568,7 @@
 							"$ref": "util.json#/$defs/fluffObject"
 						},
 						"foundryImg": {
-							"$ref": "util.json#/$defs/foundryImg"
+							"$ref": "util-foundry.json#/$defs/foundryImg"
 						},
 						"_copy": {
 							"$ref": "util.json#/$defs/copyBlock_copy_generic"
