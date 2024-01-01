@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.15.0",
+	"version": "1.15.1",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -985,23 +985,8 @@
 						"type": "integer"
 					},
 					"choose": {
-						"type": "object",
-						"properties": {
-							"from": {
-								"type": "array",
-								"items": {
-									"enum": ["str", "dex", "con", "int", "wis", "cha"]
-								},
-								"uniqueItems": true,
-								"minItems": 1
-							},
-							"count": {
-								"type": "integer"
-							},
-							"amount": {
-								"type": "integer"
-							},
-							"weighted": {
+						"oneOf": [
+							{
 								"type": "object",
 								"properties": {
 									"from": {
@@ -1012,20 +997,46 @@
 										"uniqueItems": true,
 										"minItems": 1
 									},
-									"weights": {
-										"type": "array",
-										"items": {
-											"type": "integer"
-										},
-										"minItems": 1
-									}
-								}
+									"count": {
+										"type": "integer"
+									},
+									"amount": {
+										"type": "integer"
+									},
+									"entry": {"$ref": "entry.json"}
+								},
+								"required": ["from"],
+								"additionalProperties": false
 							},
-							"entry": {
-								"$ref": "entry.json"
+							{
+								"type": "object",
+								"properties": {
+									"weighted": {
+										"type": "object",
+										"properties": {
+											"from": {
+												"type": "array",
+												"items": {
+													"enum": ["str", "dex", "con", "int", "wis", "cha"]
+												},
+												"uniqueItems": true,
+												"minItems": 1
+											},
+											"weights": {
+												"type": "array",
+												"items": {
+													"type": "integer"
+												},
+												"minItems": 1
+											}
+										}
+									},
+									"entry": {"$ref": "entry.json"}
+								},
+								"required": ["weighted"],
+								"additionalProperties": false
 							}
-						},
-						"additionalProperties": false
+						]
 					},
 					"hidden": {
 						"type": "boolean"
