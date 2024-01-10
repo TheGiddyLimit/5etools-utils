@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.10",
+	"version": "1.9.11",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -1042,12 +1042,13 @@
 						"type": {
 							"type": "string",
 							"enum": [
-								"hour",
-								"minute",
 								"turn",
 								"round",
-								"week",
+								"minute",
+								"hour",
 								"day",
+								"week",
+								"month",
 								"year"
 							]
 						},

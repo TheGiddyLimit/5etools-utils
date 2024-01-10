@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.15.1",
+	"version": "1.15.2",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -3269,6 +3269,9 @@
 							"type": "object"
 						},
 						"weekly": {
+							"type": "object"
+						},
+						"monthly": {
 							"type": "object"
 						},
 						"yearly": {

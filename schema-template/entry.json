@@ -2184,6 +2184,9 @@
 						"weekly": {
 							"$ref": "#/$defs/entrySpellcasting_frequency"
 						},
+						"monthly": {
+							"$ref": "#/$defs/entrySpellcasting_frequency"
+						},
 						"yearly": {
 							"$ref": "#/$defs/entrySpellcasting_frequency"
 						},
@@ -2253,6 +2256,7 @@
 									"rest",
 									"daily",
 									"weekly",
+									"monthly",
 									"yearly",
 									"ritual",
 									"spells",
