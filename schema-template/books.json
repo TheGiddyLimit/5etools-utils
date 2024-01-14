@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "books.json",
-	"version": "1.2.11",
+	"version": "1.2.12",
 	"type": "object",
 	"properties": {
 		"book": {
@@ -35,8 +35,13 @@
 						"description": "The date of publication of the book, in the format YYYY-MM-DD (RFC3339)."
 					},
 					"coverUrl": {
+						"deprecated": true,
 						"description": "A direct link to an image which should be 300 x 300px in size. Larger images will be centred and cropped.",
 						"type": "string"
+					},
+					"cover": {
+						"description": "A link to an image which should be 300 x 300px in size. Larger images will be centred and cropped.",
+						"$ref": "entry.json#/$defs/mediaHref"
 					},
 					"contents": {
 						"description": "The linked Table of Contents of the rulebook.",
