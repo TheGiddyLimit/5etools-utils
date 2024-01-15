@@ -1117,18 +1117,9 @@
 						{
 							"required": [
 								"name",
-								"size",
-								"type",
 								"source",
-								"ac",
-								"hp",
-								"speed",
-								"str",
-								"dex",
-								"con",
-								"int",
-								"wis",
-								"cha"
+								"size",
+								"type"
 							]
 						}
 					]
