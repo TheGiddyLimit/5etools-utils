@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.15.2",
+	"version": "1.15.3",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -4056,7 +4056,9 @@
 												"armorHeavy",
 												"weaponMelee",
 												"weaponRanged",
-												"focusSpellcasting",
+												"focusSpellcastingArcane",
+												"focusSpellcastingDruidic",
+												"focusSpellcastingHoly",
 												"setGaming",
 												"toolArtisan"
 											]
