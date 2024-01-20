@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.15.3",
+	"version": "1.15.4",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -2065,20 +2065,34 @@
 
 		"spellSchool": {
 			"type": "string",
+			"description": "A: Abjuration\n C: Conjuration\n D: Divination\n E: Enchantment\n V: Evocation\n I: Illusion\n N: Necromancy\n T: Transmutation\n P: Psychic",
 			"$$switch_key": {
 				"key_site": "enum",
 				"key_ua": "enum",
 				"key_brew": "examples",
 				"value": [
 					"A",
-					"V",
-					"E",
-					"I",
+					"C",
 					"D",
+					"E",
+					"V",
+					"I",
 					"N",
 					"T",
-					"C",
 					"P"
+				]
+			},
+			"not": {
+				"enum": [
+					"Abjuration",
+					"Conjuration",
+					"Divination",
+					"Enchantment",
+					"Evocation",
+					"Illusion",
+					"Necromancy",
+					"Transmutation",
+					"Psychic"
 				]
 			}
 		},
