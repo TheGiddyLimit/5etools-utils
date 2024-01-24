@@ -153,6 +153,9 @@
 							"bonusWeaponDamage": {
 								"type": "string"
 							},
+							"bonusWeaponCritDamage": {
+								"type": "string"
+							},
 							"bonusSpellAttack": {
 								"type": "string"
 							},
@@ -166,6 +169,9 @@
 								"type": "string"
 							},
 							"bonusAbilityCheck": {
+								"type": "string"
+							},
+							"bonusProficiencyBonus": {
 								"type": "string"
 							},
 							"dmg1": {

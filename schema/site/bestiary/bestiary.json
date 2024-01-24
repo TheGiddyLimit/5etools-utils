@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.23",
+	"version": "1.21.24",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -856,9 +856,6 @@
 				"hasToken": {
 					"type": "boolean"
 				},
-				"tokenUrl": {
-					"type": "string"
-				},
 				"tokenCredit": {
 					"type": "string"
 				},
@@ -866,33 +863,7 @@
 					"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
 				},
 				"altArt": {
-					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"source": {
-										"$ref": "../util.json#/$defs/source"
-									},
-									"page": {
-										"$ref": "../util.json#/$defs/page"
-									},
-									"tokenCredit": {
-										"type": "string"
-									}
-								},
-								"required": [
-									"name",
-									"source"
-								],
-								"additionalProperties": false
-							}
-						]
-					}
+					"$ref": "../util-token.json#/$defs/altArt"
 				},
 				"isNamedCreature": {
 					"type": "boolean"
@@ -1949,9 +1920,6 @@
 						"hasToken": {
 							"type": "boolean"
 						},
-						"tokenUrl": {
-							"type": "string"
-						},
 						"tokenCredit": {
 							"type": "string"
 						},
@@ -1959,33 +1927,7 @@
 							"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
 						},
 						"altArt": {
-							"type": "array",
-							"items": {
-								"anyOf": [
-									{
-										"type": "object",
-										"properties": {
-											"name": {
-												"type": "string"
-											},
-											"source": {
-												"$ref": "../util.json#/$defs/source"
-											},
-											"page": {
-												"$ref": "../util.json#/$defs/page"
-											},
-											"tokenCredit": {
-												"type": "string"
-											}
-										},
-										"required": [
-											"name",
-											"source"
-										],
-										"additionalProperties": false
-									}
-								]
-							}
+							"$ref": "../util-token.json#/$defs/altArt"
 						},
 						"isNamedCreature": {
 							"type": "boolean"
@@ -3047,9 +2989,6 @@
 						"hasToken": {
 							"type": "boolean"
 						},
-						"tokenUrl": {
-							"type": "string"
-						},
 						"tokenCredit": {
 							"type": "string"
 						},
@@ -3057,33 +2996,7 @@
 							"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
 						},
 						"altArt": {
-							"type": "array",
-							"items": {
-								"anyOf": [
-									{
-										"type": "object",
-										"properties": {
-											"name": {
-												"type": "string"
-											},
-											"source": {
-												"$ref": "../util.json#/$defs/source"
-											},
-											"page": {
-												"$ref": "../util.json#/$defs/page"
-											},
-											"tokenCredit": {
-												"type": "string"
-											}
-										},
-										"required": [
-											"name",
-											"source"
-										],
-										"additionalProperties": false
-									}
-								]
-							}
+							"$ref": "../util-token.json#/$defs/altArt"
 						},
 						"isNamedCreature": {
 							"type": "boolean"

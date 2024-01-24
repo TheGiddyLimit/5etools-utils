@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.16",
+	"version": "1.5.17",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -120,7 +120,37 @@
 				"age": {
 					"$ref": "items-shared.json#/$defs/itemAge"
 				},
+				"bonusAc": {
+					"type": "string"
+				},
 				"bonusWeapon": {
+					"type": "string"
+				},
+				"bonusWeaponAttack": {
+					"type": "string"
+				},
+				"bonusWeaponDamage": {
+					"type": "string"
+				},
+				"bonusWeaponCritDamage": {
+					"type": "string"
+				},
+				"bonusSpellAttack": {
+					"type": "string"
+				},
+				"bonusSpellDamage": {
+					"type": "string"
+				},
+				"bonusSpellSaveDc": {
+					"type": "string"
+				},
+				"bonusSavingThrow": {
+					"type": "string"
+				},
+				"bonusAbilityCheck": {
+					"type": "string"
+				},
+				"bonusProficiencyBonus": {
 					"type": "string"
 				},
 				"dmg1": {
@@ -381,7 +411,37 @@
 						"age": {
 							"$ref": "items-shared.json#/$defs/itemAge"
 						},
+						"bonusAc": {
+							"type": "string"
+						},
 						"bonusWeapon": {
+							"type": "string"
+						},
+						"bonusWeaponAttack": {
+							"type": "string"
+						},
+						"bonusWeaponDamage": {
+							"type": "string"
+						},
+						"bonusWeaponCritDamage": {
+							"type": "string"
+						},
+						"bonusSpellAttack": {
+							"type": "string"
+						},
+						"bonusSpellDamage": {
+							"type": "string"
+						},
+						"bonusSpellSaveDc": {
+							"type": "string"
+						},
+						"bonusSavingThrow": {
+							"type": "string"
+						},
+						"bonusAbilityCheck": {
+							"type": "string"
+						},
+						"bonusProficiencyBonus": {
 							"type": "string"
 						},
 						"dmg1": {
@@ -646,7 +706,37 @@
 						"age": {
 							"$ref": "items-shared.json#/$defs/itemAge"
 						},
+						"bonusAc": {
+							"type": "string"
+						},
 						"bonusWeapon": {
+							"type": "string"
+						},
+						"bonusWeaponAttack": {
+							"type": "string"
+						},
+						"bonusWeaponDamage": {
+							"type": "string"
+						},
+						"bonusWeaponCritDamage": {
+							"type": "string"
+						},
+						"bonusSpellAttack": {
+							"type": "string"
+						},
+						"bonusSpellDamage": {
+							"type": "string"
+						},
+						"bonusSpellSaveDc": {
+							"type": "string"
+						},
+						"bonusSavingThrow": {
+							"type": "string"
+						},
+						"bonusAbilityCheck": {
+							"type": "string"
+						},
+						"bonusProficiencyBonus": {
 							"type": "string"
 						},
 						"dmg1": {

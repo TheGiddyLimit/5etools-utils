@@ -1,0 +1,161 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "util-token.json",
+	"version": "1.0.0",
+	"title": "Util: Token",
+	"$defs": {
+		"tokenUrl": {
+			"deprecated": true,
+			"description": "A full token URL for the entity. Prefer \"tokenHref\" instead.",
+			"$ref": "util.json#/$defs/url"
+		},
+		"token": {
+			"description": "A name/source pair used to construct a token URL for the entity. For example `\"name\": \"Goblin\", \"source\": \"MM\"` for a creature token would refer to the MM Goblin's token.",
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				}
+			},
+			"required": [
+				"name",
+				"source"
+			],
+			"additionalProperties": false
+		},
+		"tokenHref": {
+			"$ref": "entry.json#/$defs/mediaHref"
+		},
+		"_altArtItemSite": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"tokenCredit": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"name",
+				"source"
+			],
+			"additionalProperties": false
+		},
+		"_altArtItemHomebrewTokenUrl": {
+			"deprecated": true,
+			"type": "object",
+			"properties": {
+				"tokenUrl": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"tokenCredit": {
+					"type": "string"
+				},
+				"foundryTokenScale": {
+					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
+				}
+			},
+			"required": [
+				"tokenUrl"
+			],
+			"additionalProperties": false
+		},
+		"_altArtItemHomebrewToken": {
+			"type": "object",
+			"properties": {
+				"token": {
+					"$ref": "#/$defs/token"
+				},
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"tokenCredit": {
+					"type": "string"
+				},
+				"foundryTokenScale": {
+					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
+				}
+			},
+			"required": [
+				"token"
+			],
+			"additionalProperties": false
+		},
+		"_altArtItemHomebrewTokenHref": {
+			"type": "object",
+			"properties": {
+				"tokenHref": {
+					"$ref": "#/$defs/tokenHref"
+				},
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"tokenCredit": {
+					"type": "string"
+				},
+				"foundryTokenScale": {
+					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
+				}
+			},
+			"required": [
+				"tokenHref"
+			],
+			"additionalProperties": false
+		},
+		"_altArtItem": {
+			"oneOf": [
+				{
+					"$ref": "#/$defs/_altArtItemSite"
+				},
+				{
+					"$ref": "#/$defs/_altArtItemHomebrewTokenUrl"
+				},
+				{
+					"$ref": "#/$defs/_altArtItemHomebrewToken"
+				},
+				{
+					"$ref": "#/$defs/_altArtItemHomebrewTokenHref"
+				}
+			]
+		},
+		"altArt": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/_altArtItem"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		}
+	}
+}

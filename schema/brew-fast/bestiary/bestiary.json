@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.23",
+	"version": "1.21.24",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -864,9 +864,6 @@
 				"hasToken": {
 					"type": "boolean"
 				},
-				"tokenUrl": {
-					"type": "string"
-				},
 				"tokenCredit": {
 					"type": "string"
 				},
@@ -874,61 +871,7 @@
 					"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
 				},
 				"altArt": {
-					"type": "array",
-					"items": {
-						"anyOf": [
-							{
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"source": {
-										"$ref": "../util.json#/$defs/source"
-									},
-									"page": {
-										"$ref": "../util.json#/$defs/page"
-									},
-									"tokenCredit": {
-										"type": "string"
-									}
-								},
-								"required": [
-									"name",
-									"source"
-								],
-								"additionalProperties": false
-							},
-							{
-								"type": "object",
-								"description": "An URL pointing to an alternative token for the creature.",
-								"properties": {
-									"tokenUrl": {
-										"type": "string"
-									},
-									"name": {
-										"type": "string"
-									},
-									"source": {
-										"$ref": "../util.json#/$defs/source"
-									},
-									"page": {
-										"$ref": "../util.json#/$defs/page"
-									},
-									"tokenCredit": {
-										"type": "string"
-									},
-									"foundryTokenScale": {
-										"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
-									}
-								},
-								"required": [
-									"tokenUrl"
-								],
-								"additionalProperties": false
-							}
-						]
-					}
+					"$ref": "../util-token.json#/$defs/altArt"
 				},
 				"isNamedCreature": {
 					"type": "boolean"
@@ -1312,6 +1255,15 @@
 				},
 				"foundryImg": {
 					"$ref": "../util-foundry.json#/$defs/foundryImg"
+				},
+				"tokenUrl": {
+					"$ref": "../util-token.json#/$defs/tokenUrl"
+				},
+				"token": {
+					"$ref": "../util-token.json#/$defs/token"
+				},
+				"tokenHref": {
+					"$ref": "../util-token.json#/$defs/tokenHref"
 				}
 			},
 			"additionalProperties": false
@@ -2072,9 +2024,6 @@
 						"hasToken": {
 							"type": "boolean"
 						},
-						"tokenUrl": {
-							"type": "string"
-						},
 						"tokenCredit": {
 							"type": "string"
 						},
@@ -2082,61 +2031,7 @@
 							"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
 						},
 						"altArt": {
-							"type": "array",
-							"items": {
-								"anyOf": [
-									{
-										"type": "object",
-										"properties": {
-											"name": {
-												"type": "string"
-											},
-											"source": {
-												"$ref": "../util.json#/$defs/source"
-											},
-											"page": {
-												"$ref": "../util.json#/$defs/page"
-											},
-											"tokenCredit": {
-												"type": "string"
-											}
-										},
-										"required": [
-											"name",
-											"source"
-										],
-										"additionalProperties": false
-									},
-									{
-										"type": "object",
-										"description": "An URL pointing to an alternative token for the creature.",
-										"properties": {
-											"tokenUrl": {
-												"type": "string"
-											},
-											"name": {
-												"type": "string"
-											},
-											"source": {
-												"$ref": "../util.json#/$defs/source"
-											},
-											"page": {
-												"$ref": "../util.json#/$defs/page"
-											},
-											"tokenCredit": {
-												"type": "string"
-											},
-											"foundryTokenScale": {
-												"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
-											}
-										},
-										"required": [
-											"tokenUrl"
-										],
-										"additionalProperties": false
-									}
-								]
-							}
+							"$ref": "../util-token.json#/$defs/altArt"
 						},
 						"isNamedCreature": {
 							"type": "boolean"
@@ -2520,6 +2415,15 @@
 						},
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"
+						},
+						"tokenUrl": {
+							"$ref": "../util-token.json#/$defs/tokenUrl"
+						},
+						"token": {
+							"$ref": "../util-token.json#/$defs/token"
+						},
+						"tokenHref": {
+							"$ref": "../util-token.json#/$defs/tokenHref"
 						}
 					},
 					"additionalProperties": false,
@@ -3285,9 +3189,6 @@
 						"hasToken": {
 							"type": "boolean"
 						},
-						"tokenUrl": {
-							"type": "string"
-						},
 						"tokenCredit": {
 							"type": "string"
 						},
@@ -3295,61 +3196,7 @@
 							"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
 						},
 						"altArt": {
-							"type": "array",
-							"items": {
-								"anyOf": [
-									{
-										"type": "object",
-										"properties": {
-											"name": {
-												"type": "string"
-											},
-											"source": {
-												"$ref": "../util.json#/$defs/source"
-											},
-											"page": {
-												"$ref": "../util.json#/$defs/page"
-											},
-											"tokenCredit": {
-												"type": "string"
-											}
-										},
-										"required": [
-											"name",
-											"source"
-										],
-										"additionalProperties": false
-									},
-									{
-										"type": "object",
-										"description": "An URL pointing to an alternative token for the creature.",
-										"properties": {
-											"tokenUrl": {
-												"type": "string"
-											},
-											"name": {
-												"type": "string"
-											},
-											"source": {
-												"$ref": "../util.json#/$defs/source"
-											},
-											"page": {
-												"$ref": "../util.json#/$defs/page"
-											},
-											"tokenCredit": {
-												"type": "string"
-											},
-											"foundryTokenScale": {
-												"$ref": "../util-foundry.json#/$defs/foundryTokenScale"
-											}
-										},
-										"required": [
-											"tokenUrl"
-										],
-										"additionalProperties": false
-									}
-								]
-							}
+							"$ref": "../util-token.json#/$defs/altArt"
 						},
 						"isNamedCreature": {
 							"type": "boolean"
@@ -3733,6 +3580,15 @@
 						},
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"
+						},
+						"tokenUrl": {
+							"$ref": "../util-token.json#/$defs/tokenUrl"
+						},
+						"token": {
+							"$ref": "../util-token.json#/$defs/token"
+						},
+						"tokenHref": {
+							"$ref": "../util-token.json#/$defs/tokenHref"
 						},
 						"_copy": {
 							"$ref": "../util.json#/$defs/copyBlock_copy_generic"

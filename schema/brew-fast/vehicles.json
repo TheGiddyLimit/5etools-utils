@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.4",
+	"version": "1.7.5",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -454,9 +454,6 @@
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
 					"$ref": "util.json#/$defs/fluffObject"
 				},
-				"tokenUrl": {
-					"type": "string"
-				},
 				"foundryTokenScale": {
 					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
 				},
@@ -468,6 +465,15 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"tokenUrl": {
+					"$ref": "util-token.json#/$defs/tokenUrl"
+				},
+				"token": {
+					"$ref": "util-token.json#/$defs/token"
+				},
+				"tokenHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
 				}
 			},
 			"required": [
@@ -636,9 +642,6 @@
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
 					"$ref": "util.json#/$defs/fluffObject"
 				},
-				"tokenUrl": {
-					"type": "string"
-				},
 				"foundryTokenScale": {
 					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
 				},
@@ -650,6 +653,15 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"tokenUrl": {
+					"$ref": "util-token.json#/$defs/tokenUrl"
+				},
+				"token": {
+					"$ref": "util-token.json#/$defs/token"
+				},
+				"tokenHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
 				}
 			},
 			"required": [
@@ -818,9 +830,6 @@
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
 					"$ref": "util.json#/$defs/fluffObject"
 				},
-				"tokenUrl": {
-					"type": "string"
-				},
 				"foundryTokenScale": {
 					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
 				},
@@ -832,6 +841,15 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"tokenUrl": {
+					"$ref": "util-token.json#/$defs/tokenUrl"
+				},
+				"token": {
+					"$ref": "util-token.json#/$defs/token"
+				},
+				"tokenHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
 				}
 			},
 			"required": [

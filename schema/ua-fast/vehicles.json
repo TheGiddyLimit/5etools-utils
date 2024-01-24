@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.4",
+	"version": "1.7.5",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -450,6 +450,15 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"tokenUrl": {
+					"$ref": "util-token.json#/$defs/tokenUrl"
+				},
+				"token": {
+					"$ref": "util-token.json#/$defs/token"
+				},
+				"tokenHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
 				}
 			},
 			"required": [
@@ -613,6 +622,15 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"tokenUrl": {
+					"$ref": "util-token.json#/$defs/tokenUrl"
+				},
+				"token": {
+					"$ref": "util-token.json#/$defs/token"
+				},
+				"tokenHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
 				}
 			},
 			"required": [
@@ -776,6 +794,15 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"tokenUrl": {
+					"$ref": "util-token.json#/$defs/tokenUrl"
+				},
+				"token": {
+					"$ref": "util-token.json#/$defs/token"
+				},
+				"tokenHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
 				}
 			},
 			"required": [
