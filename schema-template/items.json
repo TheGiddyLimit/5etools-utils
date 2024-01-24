@@ -311,39 +311,17 @@
 				"critThreshold": {
 					"type": "integer"
 				},
-				"bonusAc": {
-					"type": "string"
-				},
-				"bonusWeapon": {
-					"type": "string"
-				},
-				"bonusWeaponAttack": {
-					"type": "string"
-				},
-				"bonusWeaponDamage": {
-					"type": "string"
-				},
-				"bonusWeaponCritDamage": {
-					"type": "string"
-				},
-				"bonusSpellAttack": {
-					"type": "string"
-				},
-				"bonusSpellDamage": {
-					"type": "string"
-				},
-				"bonusSpellSaveDc": {
-					"type": "string"
-				},
-				"bonusSavingThrow": {
-					"type": "string"
-				},
-				"bonusAbilityCheck": {
-					"type": "string"
-				},
-				"bonusProficiencyBonus": {
-					"type": "string"
-				},
+				"bonusAc": {"type": "string"},
+				"bonusWeapon": {"type": "string"},
+				"bonusWeaponAttack": {"type": "string"},
+				"bonusWeaponDamage": {"type": "string"},
+				"bonusWeaponCritDamage": {"type": "string"},
+				"bonusSpellAttack": {"type": "string"},
+				"bonusSpellDamage": {"type": "string"},
+				"bonusSpellSaveDc": {"type": "string"},
+				"bonusSavingThrow": {"type": "string"},
+				"bonusAbilityCheck": {"type": "string"},
+				"bonusProficiencyBonus": {"type": "string"},
 				"modifySpeed": {
 					"$ref": "items-shared.json#/$defs/itemModifySpeed"
 				},
