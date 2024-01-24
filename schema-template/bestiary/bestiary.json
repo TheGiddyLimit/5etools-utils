@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.23",
+	"version": "1.21.24",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -750,46 +750,10 @@
 				"additionalSources": {
 					"$ref": "../util.json#/$defs/additionalSources"
 				},
-				"hasToken": {
-					"type": "boolean"
-				},
-				"tokenUrl": {"type": "string"},
+				"hasToken": {"type": "boolean"},
 				"tokenCredit": {"type": "string"},
 				"foundryTokenScale": {"$ref": "../util-foundry.json#/$defs/foundryTokenScale"},
-				"altArt": {
-					"type": "array",
-					"items": {
-						"anyOf":[
-							{
-								"type": "object",
-								"properties": {
-									"name": {"type": "string"},
-									"source": {"$ref": "../util.json#/$defs/source"},
-									"page": {"$ref": "../util.json#/$defs/page"},
-									"tokenCredit": {"type": "string"}
-								},
-								"required": ["name", "source"],
-								"additionalProperties": false
-							},
-							{
-								"$$ifBrew_item": {
-									"type": "object",
-									"description": "An URL pointing to an alternative token for the creature.",
-									"properties": {
-										"tokenUrl": {"type": "string"},
-										"name": {"type": "string"},
-										"source": {"$ref": "../util.json#/$defs/source"},
-										"page": {"$ref": "../util.json#/$defs/page"},
-										"tokenCredit": {"type": "string"},
-										"foundryTokenScale": {"$ref": "../util-foundry.json#/$defs/foundryTokenScale"}
-									},
-									"required": ["tokenUrl"],
-									"additionalProperties": false
-								}
-							}
-						]
-					}
-				},
+				"altArt": {"$ref": "../util-token.json#/$defs/altArt"},
 				"$$ifBrew": {
 					"externalSources": {
 						"description": "For homebrew use only.",
@@ -857,6 +821,14 @@
 					},
 					"foundryImg": {
 						"$ref": "../util-foundry.json#/$defs/foundryImg"
+					}
+				},
+				"$$if": {
+					"modes": ["brew", "ua"],
+					"value": {
+						"tokenUrl": {"$ref": "../util-token.json#/$defs/tokenUrl"},
+						"token": {"$ref": "../util-token.json#/$defs/token"},
+						"tokenHref": {"$ref": "../util-token.json#/$defs/tokenHref"}
 					}
 				},
 				"isNamedCreature": {
