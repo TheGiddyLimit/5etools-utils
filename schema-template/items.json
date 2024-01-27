@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.6",
+	"version": "1.14.7",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -216,15 +216,6 @@
 					}
 				},
 				"attachedSpells": {
-					"type": "array",
-					"minItems": 1,
-					"uniqueItems": true,
-					"items": {
-						"type": "string"
-					}
-				},
-				"items": {
-					"description": "This is required for itemGroup entries.",
 					"type": "array",
 					"minItems": 1,
 					"uniqueItems": true,
@@ -481,6 +472,15 @@
 			"additionalProperties": false
 		},
 
+		"_itemGroupItems": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"type": "string"
+			}
+		},
+
 		"item": {
 			"anyOf": [
 				{
@@ -510,6 +510,46 @@
 					]
 				}
 			]
+		},
+
+		"itemGroup": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/itemData"
+						},
+						{
+							"properties": {
+								"items": {"$ref": "#/$defs/_itemGroupItems"}
+							},
+							"required": [
+								"name",
+								"rarity",
+								"source",
+								"items"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/itemData"
+						},
+						{
+							"properties": {
+								"items": {"$ref": "#/$defs/_itemGroupItems"}
+							}
+						},
+						{
+							"$ref": "util.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 	"properties": {
@@ -525,20 +565,7 @@
 			"description": "Used to create fake item entries for groups of related items, often referred to as a single item (e.g. arcane foci)",
 			"type": "array",
 			"items": {
-				"type":"object",
-				"$ref": "#/$defs/item",
-				"oneOf": [
-					{
-						"required": [
-							"items"
-						]
-					},
-					{
-						"required": [
-							"_copy"
-						]
-					}
-				]
+				"$ref": "#/$defs/itemGroup"
 			},
 			"uniqueItems": true,
 			"minItems": 1
