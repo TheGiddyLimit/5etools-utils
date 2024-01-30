@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "decks.json",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"type": "object",
 	"$defs": {
 		"deckData": {
@@ -64,6 +64,9 @@
 				},
 				"back": {
 					"$ref": "entry.json#/$defs/entryImage"
+				},
+				"creditBack": {
+					"type": "string"
 				},
 				"hasCardArt": {
 					"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
@@ -134,6 +137,9 @@
 						},
 						"back": {
 							"$ref": "entry.json#/$defs/entryImage"
+						},
+						"creditBack": {
+							"type": "string"
 						},
 						"hasCardArt": {
 							"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
@@ -208,6 +214,9 @@
 						"back": {
 							"$ref": "entry.json#/$defs/entryImage"
 						},
+						"creditBack": {
+							"type": "string"
+						},
 						"hasCardArt": {
 							"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
 							"type": "boolean"
@@ -256,8 +265,14 @@
 				"face": {
 					"$ref": "entry.json#/$defs/entryImage"
 				},
+				"creditFace": {
+					"type": "string"
+				},
 				"back": {
 					"$ref": "entry.json#/$defs/entryImage"
+				},
+				"creditBack": {
+					"type": "string"
 				},
 				"suit": {
 					"type": "string"
@@ -306,8 +321,14 @@
 						"face": {
 							"$ref": "entry.json#/$defs/entryImage"
 						},
+						"creditFace": {
+							"type": "string"
+						},
 						"back": {
 							"$ref": "entry.json#/$defs/entryImage"
+						},
+						"creditBack": {
+							"type": "string"
 						},
 						"suit": {
 							"type": "string"
@@ -359,8 +380,14 @@
 						"face": {
 							"$ref": "entry.json#/$defs/entryImage"
 						},
+						"creditFace": {
+							"type": "string"
+						},
 						"back": {
 							"$ref": "entry.json#/$defs/entryImage"
+						},
+						"creditBack": {
+							"type": "string"
 						},
 						"suit": {
 							"type": "string"
