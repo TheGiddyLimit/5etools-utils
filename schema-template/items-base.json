@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.17",
+	"version": "1.5.18",
 	"type": "object",
 
 	"$defs": {
@@ -152,6 +152,7 @@
 				"strength": {
 					"type": "string"
 				},
+				"dexterityMax": {"$ref": "items-shared.json#/$defs/itemDexterityMax"},
 
 				"armor": {
 					"description": "Flag used when merging generic variants",
@@ -249,6 +250,7 @@
 					}
 				},
 				"$$ifBrew": {
+					"acSpecial": {"$ref": "items-shared.json#/$defs/itemAcSpecial"},
 					"currencyConversion": {
 						"description": "ID of a value conversion table. Homebrew only.",
 						"type": "string"

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.7",
+	"version": "1.14.8",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -106,10 +106,7 @@
 				"strength": {
 					"type": ["string", "null"]
 				},
-				"dexterityMax": {
-					"description": "Maximum dexterity modifier for medium armor.",
-					"type": ["integer", "null"]
-				},
+				"dexterityMax": {"$ref": "items-shared.json#/$defs/itemDexterityMax"},
 				"firearm": {
 					"type": "boolean"
 				},
@@ -443,10 +440,7 @@
 					}
 				},
 				"$$ifBrew": {
-					"acSpecial": {
-						"description": "Free text field for homebrew use.",
-						"type": "string"
-					},
+					"acSpecial": {"$ref": "items-shared.json#/$defs/itemAcSpecial"},
 					"currencyConversion": {
 						"description": "ID of a value conversion table. Homebrew only.",
 						"type": "string"

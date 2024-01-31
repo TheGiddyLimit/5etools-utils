@@ -280,6 +280,13 @@
 		},
 		"itemReach": {
 			"type": "integer"
+		},
+		"itemDexterityMax": {
+			"description": "Maximum dexterity modifier for medium armor.",
+			"type": [
+				"integer",
+				"null"
+			]
 		}
 	}
 }

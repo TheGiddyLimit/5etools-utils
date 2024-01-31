@@ -281,6 +281,13 @@
 		"itemReach": {
 			"type": "integer"
 		},
+		"itemDexterityMax": {
+			"description": "Maximum dexterity modifier for medium armor.",
+			"type": [
+				"integer",
+				"null"
+			]
+		},
 		"customProperties": {
 			"description": "An unrestricted area for custom properties to be stored.",
 			"type": "object",
@@ -292,6 +299,10 @@
 					"integer"
 				]
 			}
+		},
+		"itemAcSpecial": {
+			"description": "Free text field for homebrew use.",
+			"type": "string"
 		},
 		"fluff": {
 			"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source.",

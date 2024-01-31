@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.7",
+	"version": "1.14.8",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -125,11 +125,7 @@
 					]
 				},
 				"dexterityMax": {
-					"description": "Maximum dexterity modifier for medium armor.",
-					"type": [
-						"integer",
-						"null"
-					]
+					"$ref": "items-shared.json#/$defs/itemDexterityMax"
 				},
 				"firearm": {
 					"type": "boolean"
@@ -680,11 +676,7 @@
 							]
 						},
 						"dexterityMax": {
-							"description": "Maximum dexterity modifier for medium armor.",
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
 						},
 						"firearm": {
 							"type": "boolean"
@@ -1230,11 +1222,7 @@
 							]
 						},
 						"dexterityMax": {
-							"description": "Maximum dexterity modifier for medium armor.",
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
 						},
 						"firearm": {
 							"type": "boolean"
@@ -1785,11 +1773,7 @@
 							]
 						},
 						"dexterityMax": {
-							"description": "Maximum dexterity modifier for medium armor.",
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
 						},
 						"firearm": {
 							"type": "boolean"
@@ -2339,11 +2323,7 @@
 							]
 						},
 						"dexterityMax": {
-							"description": "Maximum dexterity modifier for medium armor.",
-							"type": [
-								"integer",
-								"null"
-							]
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
 						},
 						"firearm": {
 							"type": "boolean"

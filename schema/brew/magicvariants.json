@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.8.13",
+	"version": "1.8.14",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -243,6 +243,9 @@
 								"null"
 							]
 						},
+						"dexterityMax": {
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
+						},
 						"wondrous": {
 							"type": "boolean"
 						},
@@ -342,6 +345,9 @@
 						"customProperties": {
 							"description": "An unrestricted area for custom properties to be stored.",
 							"type": "object"
+						},
+						"acSpecial": {
+							"$ref": "items-shared.json#/$defs/itemAcSpecial"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
@@ -748,6 +754,9 @@
 								"null"
 							]
 						},
+						"dexterityMax": {
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
+						},
 						"wondrous": {
 							"type": "boolean"
 						},
@@ -847,6 +856,9 @@
 						"customProperties": {
 							"description": "An unrestricted area for custom properties to be stored.",
 							"type": "object"
+						},
+						"acSpecial": {
+							"$ref": "items-shared.json#/$defs/itemAcSpecial"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
@@ -1262,6 +1274,9 @@
 								"null"
 							]
 						},
+						"dexterityMax": {
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
+						},
 						"wondrous": {
 							"type": "boolean"
 						},
@@ -1361,6 +1376,9 @@
 						"customProperties": {
 							"description": "An unrestricted area for custom properties to be stored.",
 							"type": "object"
+						},
+						"acSpecial": {
+							"$ref": "items-shared.json#/$defs/itemAcSpecial"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
