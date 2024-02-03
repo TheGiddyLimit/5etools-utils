@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.8.14",
+	"version": "1.8.15",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -88,6 +88,12 @@
 								"type": "boolean"
 							},
 							"bolt": {
+								"type": "boolean"
+							},
+							"bulletSling": {
+								"type": "boolean"
+							},
+							"needleBlowgun": {
 								"type": "boolean"
 							},
 							"weaponCategory": {
@@ -428,6 +434,12 @@
 						"bolt": {
 							"type": "boolean"
 						},
+						"bulletSling": {
+							"type": "boolean"
+						},
+						"needleBlowgun": {
+							"type": "boolean"
+						},
 						"weaponCategory": {
 							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
 						}
@@ -555,6 +567,12 @@
 								"type": "boolean"
 							},
 							"bolt": {
+								"type": "boolean"
+							},
+							"bulletSling": {
+								"type": "boolean"
+							},
+							"needleBlowgun": {
 								"type": "boolean"
 							},
 							"weaponCategory": {
@@ -900,6 +918,12 @@
 						"bolt": {
 							"type": "boolean"
 						},
+						"bulletSling": {
+							"type": "boolean"
+						},
+						"needleBlowgun": {
+							"type": "boolean"
+						},
 						"weaponCategory": {
 							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
 						}
@@ -1031,6 +1055,12 @@
 								"type": "boolean"
 							},
 							"bolt": {
+								"type": "boolean"
+							},
+							"bulletSling": {
+								"type": "boolean"
+							},
+							"needleBlowgun": {
 								"type": "boolean"
 							},
 							"weaponCategory": {
@@ -1373,6 +1403,12 @@
 							"type": "boolean"
 						},
 						"bolt": {
+							"type": "boolean"
+						},
+						"bulletSling": {
+							"type": "boolean"
+						},
+						"needleBlowgun": {
 							"type": "boolean"
 						},
 						"weaponCategory": {
