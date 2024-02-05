@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.24",
+	"version": "1.21.25",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -313,6 +313,9 @@
 									"type": "string"
 								}
 							},
+							"required": [
+								"special"
+							],
 							"additionalProperties": false
 						}
 					]
@@ -360,7 +363,8 @@
 							"type": "string"
 						}
 					},
-					"additionalProperties": false
+					"additionalProperties": false,
+					"minProperties": 1
 				},
 				"skill": {
 					"type": "object",
@@ -487,7 +491,8 @@
 							}
 						}
 					},
-					"additionalProperties": false
+					"additionalProperties": false,
+					"minProperties": 1
 				},
 				"senses": {
 					"oneOf": [
@@ -495,7 +500,8 @@
 							"type": "array",
 							"items": {
 								"type": "string"
-							}
+							},
+							"minItems": 1
 						},
 						{
 							"type": "null"
@@ -1386,6 +1392,9 @@
 											"type": "string"
 										}
 									},
+									"required": [
+										"special"
+									],
 									"additionalProperties": false
 								}
 							]
@@ -1433,7 +1442,8 @@
 									"type": "string"
 								}
 							},
-							"additionalProperties": false
+							"additionalProperties": false,
+							"minProperties": 1
 						},
 						"skill": {
 							"type": "object",
@@ -1560,7 +1570,8 @@
 									}
 								}
 							},
-							"additionalProperties": false
+							"additionalProperties": false,
+							"minProperties": 1
 						},
 						"senses": {
 							"oneOf": [
@@ -1568,7 +1579,8 @@
 									"type": "array",
 									"items": {
 										"type": "string"
-									}
+									},
+									"minItems": 1
 								},
 								{
 									"type": "null"
@@ -2464,6 +2476,9 @@
 											"type": "string"
 										}
 									},
+									"required": [
+										"special"
+									],
 									"additionalProperties": false
 								}
 							]
@@ -2511,7 +2526,8 @@
 									"type": "string"
 								}
 							},
-							"additionalProperties": false
+							"additionalProperties": false,
+							"minProperties": 1
 						},
 						"skill": {
 							"type": "object",
@@ -2638,7 +2654,8 @@
 									}
 								}
 							},
-							"additionalProperties": false
+							"additionalProperties": false,
+							"minProperties": 1
 						},
 						"senses": {
 							"oneOf": [
@@ -2646,7 +2663,8 @@
 									"type": "array",
 									"items": {
 										"type": "string"
-									}
+									},
+									"minItems": 1
 								},
 								{
 									"type": "null"
