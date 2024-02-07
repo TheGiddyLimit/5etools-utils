@@ -614,6 +614,9 @@
 		"optionalfeature": {
 			"$ref": "optionalfeatures.json#/properties/optionalfeature"
 		},
+		"optionalfeatureFluff": {
+			"$ref": "fluff-optionalfeatures.json#/properties/optionalfeatureFluff"
+		},
 		"psionic": {
 			"$ref": "psionics.json#/properties/psionic"
 		},
