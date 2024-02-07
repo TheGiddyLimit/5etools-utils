@@ -1,11 +1,11 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "optionalfeatures.json",
-	"version": "1.12.2",
+	"version": "1.12.3",
 	"title": "Optional Features",
 	"type": "object",
 	"$defs": {
-		"optionalfeature": {
+		"optionalfeatureData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -113,16 +113,249 @@
 					"const": true
 				}
 			},
-			"required": [
-				"name",
-				"entries",
-				"source",
-				"featureType"
-			],
 			"additionalProperties": false
+		},
+		"optionalfeature": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"previousVersion": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"source": {
+									"$ref": "util.json#/$defs/source"
+								}
+							},
+							"required": [
+								"name",
+								"source"
+							],
+							"additionalProperties": false
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"featureType": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/dataOptionalfeatureType"
+							},
+							"uniqueItems": true
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"isClassFeatureVariant": {
+							"type": "boolean"
+						},
+						"additionalSpells": {
+							"$ref": "util.json#/$defs/additionalSpellsArray"
+						},
+						"languageProficiencies": {
+							"$ref": "util.json#/$defs/languageProficiencies"
+						},
+						"skillProficiencies": {
+							"$ref": "util.json#/$defs/skillProficiencies"
+						},
+						"weaponProficiencies": {
+							"$ref": "util.json#/$defs/weaponProficiencies"
+						},
+						"armorProficiencies": {
+							"$ref": "util.json#/$defs/armorProficiencies"
+						},
+						"toolProficiencies": {
+							"$ref": "util.json#/$defs/toolProficiencies"
+						},
+						"skillToolLanguageProficiencies": {
+							"$ref": "util.json#/$defs/skillToolLanguageProficiencies"
+						},
+						"consumes": {
+							"$ref": "util.json#/$defs/consumesObject"
+						},
+						"senses": {
+							"$ref": "util.json#/$defs/sensesArray"
+						},
+						"optionalfeatureProgression": {
+							"$ref": "util.json#/$defs/optionalfeatureProgression"
+						},
+						"expertise": {
+							"$ref": "util.json#/$defs/expertise"
+						},
+						"resist": {
+							"$ref": "util.json#/$defs/damageResistArrayPlayer"
+						},
+						"immune": {
+							"$ref": "util.json#/$defs/damageImmunityArrayPlayer"
+						},
+						"vulnerable": {
+							"$ref": "util.json#/$defs/damageVulnerabilityArrayPlayer"
+						},
+						"conditionImmune": {
+							"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+						},
+						"hasFluff": {
+							"const": true
+						},
+						"hasFluffImages": {
+							"const": true
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"entries",
+						"source",
+						"featureType"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"previousVersion": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"source": {
+									"$ref": "util.json#/$defs/source"
+								}
+							},
+							"required": [
+								"name",
+								"source"
+							],
+							"additionalProperties": false
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"featureType": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/dataOptionalfeatureType"
+							},
+							"uniqueItems": true
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"isClassFeatureVariant": {
+							"type": "boolean"
+						},
+						"additionalSpells": {
+							"$ref": "util.json#/$defs/additionalSpellsArray"
+						},
+						"languageProficiencies": {
+							"$ref": "util.json#/$defs/languageProficiencies"
+						},
+						"skillProficiencies": {
+							"$ref": "util.json#/$defs/skillProficiencies"
+						},
+						"weaponProficiencies": {
+							"$ref": "util.json#/$defs/weaponProficiencies"
+						},
+						"armorProficiencies": {
+							"$ref": "util.json#/$defs/armorProficiencies"
+						},
+						"toolProficiencies": {
+							"$ref": "util.json#/$defs/toolProficiencies"
+						},
+						"skillToolLanguageProficiencies": {
+							"$ref": "util.json#/$defs/skillToolLanguageProficiencies"
+						},
+						"consumes": {
+							"$ref": "util.json#/$defs/consumesObject"
+						},
+						"senses": {
+							"$ref": "util.json#/$defs/sensesArray"
+						},
+						"optionalfeatureProgression": {
+							"$ref": "util.json#/$defs/optionalfeatureProgression"
+						},
+						"expertise": {
+							"$ref": "util.json#/$defs/expertise"
+						},
+						"resist": {
+							"$ref": "util.json#/$defs/damageResistArrayPlayer"
+						},
+						"immune": {
+							"$ref": "util.json#/$defs/damageImmunityArrayPlayer"
+						},
+						"vulnerable": {
+							"$ref": "util.json#/$defs/damageVulnerabilityArrayPlayer"
+						},
+						"conditionImmune": {
+							"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+						},
+						"hasFluff": {
+							"const": true
+						},
+						"hasFluffImages": {
+							"const": true
+						},
+						"_copy": {
+							"$ref": "util.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		}
 	},
 	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
 		"optionalfeature": {
 			"type": "array",
 			"uniqueItems": true,
@@ -132,5 +365,8 @@
 			}
 		}
 	},
+	"required": [
+		"optionalfeature"
+	],
 	"additionalProperties": false
 }

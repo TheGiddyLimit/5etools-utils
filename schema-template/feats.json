@@ -1,11 +1,11 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.6.3",
+	"version": "1.6.4",
 	"type": "object",
 
 	"$defs": {
-		"feat": {
+		"featData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -91,12 +91,39 @@
 					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
 				}
 			},
-			"required": ["name", "source", "entries"],
 			"additionalProperties": false
+		},
+
+		"feat": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/featData"
+						},
+						{
+							"required": ["name", "source", "entries"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/featData"
+						},
+						{
+							"$ref": "util.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 
 	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
 		"feat": {
 			"type": "array",
 			"minItems": 1,

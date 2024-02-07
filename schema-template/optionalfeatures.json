@@ -1,12 +1,12 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "optionalfeatures.json",
-	"version": "1.12.2",
+	"version": "1.12.3",
 	"title": "Optional Features",
 	"type": "object",
 
 	"$defs": {
-		"optionalfeature": {
+		"optionalfeatureData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -88,17 +88,44 @@
 					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
 				}
 			},
-			"required": [
-				"name",
-				"entries",
-				"source",
-				"featureType"
-			],
 			"additionalProperties": false
+		},
+
+		"optionalfeature": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/optionalfeatureData"
+						},
+						{
+							"required": [
+								"name",
+								"entries",
+								"source",
+								"featureType"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/optionalfeatureData"
+						},
+						{
+							"$ref": "util.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 
 	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
 		"optionalfeature": {
 			"type": "array",
 			"uniqueItems": true,
@@ -106,5 +133,6 @@
 			"items": {"$ref": "#/$defs/optionalfeature"}
 		}
 	},
+	"required": ["optionalfeature"],
 	"additionalProperties": false
 }
