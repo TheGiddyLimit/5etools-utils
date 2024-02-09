@@ -1012,20 +1012,26 @@
 				"_mod": {
 					"$ref": "util.json#/$defs/_modObject"
 				},
-				"_trait": {
-					"type": "object",
-					"properties": {
-						"name": {
-							"type": "string"
+				"_templates": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"source": {
+								"$ref": "util.json#/$defs/source"
+							}
 						},
-						"source": {
-							"$ref": "util.json#/$defs/source"
-						}
+						"required": [
+							"name",
+							"source"
+						],
+						"additionalProperties": false
 					},
-					"required": [
-						"name",
-						"source"
-					]
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"_preserve": {
 					"type": "object",
