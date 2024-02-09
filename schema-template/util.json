@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.15.4",
+	"version": "1.16.0",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -2537,13 +2537,19 @@
 				"_mod": {
 					"$ref": "#/$defs/_modObject"
 				},
-				"_trait": {
-					"type": "object",
-					"properties": {
-						"name": {"type": "string"},
-						"source": {"$ref": "util.json#/$defs/source"}
+				"_templates": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {"type": "string"},
+							"source": {"$ref": "util.json#/$defs/source"}
+						},
+						"required": ["name", "source"],
+						"additionalProperties": false
 					},
-					"required": ["name", "source"]
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"_preserve": {
 					"type": "object",
@@ -2613,7 +2619,7 @@
 				{
 					"type": "object",
 					"properties": {
-						"_template": {
+						"_abstract": {
 							"type": "object",
 							"properties": {
 								"name": {"type": "string"},
@@ -2640,7 +2646,7 @@
 							}
 						}
 					},
-					"required": ["_template", "_implementations"]
+					"required": ["_abstract", "_implementations"]
 				}
 			]
 		},
