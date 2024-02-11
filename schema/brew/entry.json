@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.17",
+	"version": "1.8.18",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -37,37 +37,46 @@
 				"inset"
 			]
 		},
+		"mediaHrefInternal": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"const": "internal"
+				},
+				"path": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"path"
+			],
+			"additionalProperties": false
+		},
+		"mediaHrefExternal": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"const": "external"
+				},
+				"url": {
+					"type": "string",
+					"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)",
+					"minLength": 3,
+					"pattern": "^https?://"
+				}
+			},
+			"required": [
+				"url"
+			],
+			"additionalProperties": false
+		},
 		"mediaHref": {
 			"oneOf": [
 				{
-					"type": "object",
-					"properties": {
-						"type": {
-							"const": "internal"
-						},
-						"path": {
-							"type": "string"
-						}
-					},
-					"required": [
-						"path"
-					],
-					"additionalProperties": false
+					"$ref": "#/$defs/mediaHrefInternal"
 				},
 				{
-					"type": "object",
-					"properties": {
-						"type": {
-							"const": "external"
-						},
-						"url": {
-							"$ref": "util.json#/$defs/url"
-						}
-					},
-					"required": [
-						"url"
-					],
-					"additionalProperties": false
+					"$ref": "#/$defs/mediaHrefExternal"
 				}
 			]
 		},
@@ -1308,19 +1317,7 @@
 							"additionalProperties": false
 						},
 						{
-							"type": "object",
-							"properties": {
-								"type": {
-									"const": "external"
-								},
-								"url": {
-									"$ref": "util.json#/$defs/url"
-								}
-							},
-							"required": [
-								"url"
-							],
-							"additionalProperties": false
+							"$ref": "#/$defs/mediaHrefExternal"
 						}
 					]
 				}

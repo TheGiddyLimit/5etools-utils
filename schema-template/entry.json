@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.17",
+	"version": "1.8.18",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -29,28 +29,37 @@
 			"type": "string", "enum":  ["inset"]
 		},
 
+		"mediaHrefInternal": {
+			"type": "object",
+			"properties": {
+				"type": {"const": "internal"},
+				"path": {
+					"type": "string"
+				}
+			},
+			"required": ["path"],
+			"additionalProperties": false
+		},
+
+		"mediaHrefExternal": {
+			"type": "object",
+			"properties": {
+				"type": {"const": "external"},
+				"url": {
+					"$$merge": [
+						{"$ref": "util.json#/$defs/url"},
+						{"pattern": "^https?://"}
+					]
+				}
+			},
+			"required": ["url"],
+			"additionalProperties": false
+		},
+
 		"mediaHref": {
 			"oneOf": [
-				{
-					"type": "object",
-					"properties": {
-						"type": {"const": "internal"},
-						"path": {
-							"type": "string"
-						}
-					},
-					"required": ["path"],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"type": {"const": "external"},
-						"url": {"$ref": "util.json#/$defs/url"}
-					},
-					"required": ["url"],
-					"additionalProperties": false
-				}
+				{"$ref": "#/$defs/mediaHrefInternal"},
+				{"$ref": "#/$defs/mediaHrefExternal"}
 			]
 		},
 
@@ -702,15 +711,7 @@
 									"required": ["path"],
 									"additionalProperties": false
 								},
-								{
-									"type": "object",
-									"properties": {
-										"type": {"const": "external"},
-										"url": {"$ref": "util.json#/$defs/url"}
-									},
-									"required": ["url"],
-									"additionalProperties": false
-								}
+								{"$ref": "#/$defs/mediaHrefExternal"}
 							]
 						}
 					},
