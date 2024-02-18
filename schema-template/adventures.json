@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.18",
+	"version": "1.10.19",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -29,6 +29,9 @@
 						"description": "The group under which this adventure should be listed in the navbar.",
 						"type": "string",
 						"enum": ["supplement", "supplement-alt", "prerelease", "homebrew", "other"]
+					},
+					"author": {
+						"type": "string"
 					},
 					"$$ifBrew": {
 						"alAveragePlayerLevel": {
@@ -219,7 +222,8 @@
 								"Heroes' Feast",
 								"Family Friendly",
 								"Grim Hollow",
-								"Drakkenheim"
+								"Drakkenheim",
+								"Humblewood"
 							]
 						}
 					}
