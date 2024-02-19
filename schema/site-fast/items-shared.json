@@ -156,7 +156,7 @@
 		"itemType": {
 			"type": "string",
 			"$comment": "Dumped from `Object(Parser.ITEM_TYPE_JSON_TO_ABV)`",
-			"description": "$: Treasure\n $A: Treasure (Art Object)\n $A: Treasure (Coinage)\n $G: Treasure (Gemstone)\n A: Ammunition\n AF: Ammunition (futuristic)\n AIR: Vehicle (air)\n AT: Artisan Tool\n EM: Eldritch Machine\n EXP: Explosive\n FD: Food and Drink\n G: Adventuring Gear\n GS: Gaming Set\n GV: Generic Variant\n HA: Heavy Armor\n IDG: Illegal Drug\n INS: Instrument\n LA: Light Armor\n M: Melee Weapon\n MA: Medium Armor\n MNT: Mount\n MR: Master Rune \n OTH: Other\n P: Potion\n R: Ranged Weapon\n RD: Rod\n RG: Ring\n S: Shield\n SC: Scroll\n SCF: Spellcasting Focus\n SHP: Vehicle (water)\n SPC: Vehicle (space)\n T: Tool\n TAH: Tack and Harness\n TG: Trade Good\n VEH: Vehicle (land)\n WD: Wand",
+			"description": "$: Treasure\n $A: Treasure (Art Object)\n $C: Treasure (Coinage)\n $G: Treasure (Gemstone)\n A: Ammunition\n AF: Ammunition (futuristic)\n AIR: Vehicle (air)\n AT: Artisan Tool\n EM: Eldritch Machine\n EXP: Explosive\n FD: Food and Drink\n G: Adventuring Gear\n GS: Gaming Set\n GV: Generic Variant\n HA: Heavy Armor\n IDG: Illegal Drug\n INS: Instrument\n LA: Light Armor\n M: Melee Weapon\n MA: Medium Armor\n MNT: Mount\n MR: Master Rune \n OTH: Other\n P: Potion\n R: Ranged Weapon\n RD: Rod\n RG: Ring\n S: Shield\n SC: Scroll\n SCF: Spellcasting Focus\n SHP: Vehicle (water)\n SPC: Vehicle (space)\n T: Tool\n TAH: Tack and Harness\n TG: Trade Good\n VEH: Vehicle (land)\n WD: Wand",
 			"enum": [
 				"$",
 				"$A",

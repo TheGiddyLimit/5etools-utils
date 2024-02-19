@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "deities.json",
-	"version": "1.2.7",
+	"version": "1.2.8",
 	"type": "object",
 	"$defs": {
 		"deityData": {
@@ -26,6 +26,7 @@
 				"pantheon": {
 					"type": "string",
 					"examples": [
+						"Amaranthine",
 						"Celtic",
 						"Dawn War",
 						"Dragonlance",
@@ -62,6 +63,7 @@
 						"type": "string",
 						"examples": [
 							"Arcana",
+							"Community",
 							"Death",
 							"Forge",
 							"Grave",
@@ -70,6 +72,7 @@
 							"Light",
 							"Moon",
 							"Nature",
+							"Night",
 							"Order",
 							"Peace",
 							"Tempest",
@@ -85,6 +88,9 @@
 					"type": "string"
 				},
 				"symbol": {
+					"type": "string"
+				},
+				"dogma": {
 					"type": "string"
 				},
 				"source": {
@@ -163,6 +169,7 @@
 						"pantheon": {
 							"type": "string",
 							"examples": [
+								"Amaranthine",
 								"Celtic",
 								"Dawn War",
 								"Dragonlance",
@@ -199,6 +206,7 @@
 								"type": "string",
 								"examples": [
 									"Arcana",
+									"Community",
 									"Death",
 									"Forge",
 									"Grave",
@@ -207,6 +215,7 @@
 									"Light",
 									"Moon",
 									"Nature",
+									"Night",
 									"Order",
 									"Peace",
 									"Tempest",
@@ -222,6 +231,9 @@
 							"type": "string"
 						},
 						"symbol": {
+							"type": "string"
+						},
+						"dogma": {
 							"type": "string"
 						},
 						"source": {
@@ -303,6 +315,7 @@
 						"pantheon": {
 							"type": "string",
 							"examples": [
+								"Amaranthine",
 								"Celtic",
 								"Dawn War",
 								"Dragonlance",
@@ -339,6 +352,7 @@
 								"type": "string",
 								"examples": [
 									"Arcana",
+									"Community",
 									"Death",
 									"Forge",
 									"Grave",
@@ -347,6 +361,7 @@
 									"Light",
 									"Moon",
 									"Nature",
+									"Night",
 									"Order",
 									"Peace",
 									"Tempest",
@@ -362,6 +377,9 @@
 							"type": "string"
 						},
 						"symbol": {
+							"type": "string"
+						},
+						"dogma": {
 							"type": "string"
 						},
 						"source": {
