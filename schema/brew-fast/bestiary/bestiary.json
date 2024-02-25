@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.25",
+	"version": "1.21.26",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -210,7 +210,7 @@
 								},
 								"sidekickType": {
 									"type": "string",
-									"enum": [
+									"examples": [
 										"expert",
 										"spellcaster",
 										"warrior"
@@ -1377,7 +1377,7 @@
 										},
 										"sidekickType": {
 											"type": "string",
-											"enum": [
+											"examples": [
 												"expert",
 												"spellcaster",
 												"warrior"
@@ -2549,7 +2549,7 @@
 										},
 										"sidekickType": {
 											"type": "string",
-											"enum": [
+											"examples": [
 												"expert",
 												"spellcaster",
 												"warrior"
