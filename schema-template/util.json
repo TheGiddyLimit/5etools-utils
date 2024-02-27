@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.16.0",
+	"version": "1.16.1",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -58,23 +58,32 @@
 		},
 
 		"sourceJson": {
-			"$$merge": [
+			"oneOf": [
 				{
-					"$ref": "#/$defs/source"
+					"$$merge": [
+						{
+							"$ref": "#/$defs/source"
+						},
+						{
+							"$$ifBrew": {
+								"pattern": "^(?!UA|XUA)[-a-zA-Z0-9 :&+!]+$",
+								"minLength": 6,
+								"not": {
+									"$ref": "sources-5etools.json#/$defs/sources"
+								}
+							},
+							"$$ifUa": {
+								"pattern": "^(?:UA|XUA)[-a-zA-Z0-9 :&+!]+$",
+								"minLength": 6,
+								"not": {
+									"$ref": "sources-5etools.json#/$defs/sources"
+								}
+							}
+						}
+					]
 				},
 				{
-					"$$ifBrew": {
-						"pattern": "^(?!UA|XUA)[-a-zA-Z0-9 :&+!]+$",
-						"not": {
-							"$ref": "sources-5etools.json#/$defs/sources"
-						}
-					},
-					"$$ifUa": {
-						"pattern": "^(?:UA|XUA)[-a-zA-Z0-9 :&+!]+$",
-						"not": {
-							"$ref": "sources-5etools.json#/$defs/sources"
-						}
-					}
+					"$ref": "sources-homebrew-legacy.json#/$defs/sources"
 				}
 			]
 		},

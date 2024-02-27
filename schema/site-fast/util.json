@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.16.0",
+	"version": "1.16.1",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -46,9 +46,16 @@
 			"pattern": "^[-a-zA-Z0-9 :&+!]+$"
 		},
 		"sourceJson": {
-			"type": "string",
-			"description": "An identifying string, as seen in the JSON in \"source\" fields.",
-			"pattern": "^[-a-zA-Z0-9 :&+!]+$"
+			"oneOf": [
+				{
+					"type": "string",
+					"description": "An identifying string, as seen in the JSON in \"source\" fields.",
+					"pattern": "^[-a-zA-Z0-9 :&+!]+$"
+				},
+				{
+					"$ref": "sources-homebrew-legacy.json#/$defs/sources"
+				}
+			]
 		},
 		"page": {
 			"oneOf": [
