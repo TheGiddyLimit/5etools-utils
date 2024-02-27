@@ -34,7 +34,8 @@
 			"properties": {
 				"type": {"const": "internal"},
 				"path": {
-					"type": "string"
+					"type": "string",
+					"pattern": "\\.(webp|mp3)$"
 				}
 			},
 			"required": ["path"],
