@@ -62,7 +62,6 @@
 				"url": {
 					"type": "string",
 					"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)",
-					"format": "uri-reference",
 					"pattern": "^https?://"
 				}
 			},

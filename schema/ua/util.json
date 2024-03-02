@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.16.1",
+	"version": "1.16.2",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -37,8 +37,7 @@
 		},
 		"url": {
 			"type": "string",
-			"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)",
-			"format": "uri-reference"
+			"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)"
 		},
 		"source": {
 			"type": "string",
