@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.19",
+	"version": "1.5.20",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -95,6 +95,9 @@
 			"properties": {
 				"name": {
 					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -400,6 +403,9 @@
 					"properties": {
 						"name": {
 							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
 						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
@@ -709,6 +715,9 @@
 					"properties": {
 						"name": {
 							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
 						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"

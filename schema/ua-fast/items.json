@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.8",
+	"version": "1.14.9",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -9,6 +9,9 @@
 			"properties": {
 				"name": {
 					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -561,6 +564,9 @@
 						"name": {
 							"type": "string"
 						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
@@ -1106,6 +1112,9 @@
 					"properties": {
 						"name": {
 							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
 						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
@@ -1658,6 +1667,9 @@
 						"name": {
 							"type": "string"
 						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
@@ -2207,6 +2219,9 @@
 					"properties": {
 						"name": {
 							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
 						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
