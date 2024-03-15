@@ -215,7 +215,7 @@ class SchemaPreprocessor {
 			const [otherFile, otherPath] = obj.split("#");
 			if (otherFile) {
 				if (state.directoryTranslation && state.directoryTranslation !== this._getDirectoryTranslation({file: otherFile})) {
-					return `${state.directoryTranslation}${otherFile}#${otherPath}`;
+					return [`${state.directoryTranslation}${otherFile}`, otherPath].filter(Boolean).join("#");
 				}
 				return obj;
 			}
