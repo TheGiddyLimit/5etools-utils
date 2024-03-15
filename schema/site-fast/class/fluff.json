@@ -1,0 +1,155 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "fluff-class.json",
+	"version": "1.0.0",
+	"type": "object",
+	"$defs": {
+		"_subclassFluffItemData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "../util.json#/$defs/source"
+				},
+				"images": {
+					"oneOf": [
+						{
+							"type": "array",
+							"items": {
+								"$ref": "../entry.json#/$defs/entryImage"
+							}
+						},
+						{
+							"type": "null"
+						}
+					]
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "../entry.json"
+					}
+				},
+				"className": {
+					"type": "string"
+				},
+				"classSource": {
+					"$ref": "../util.json#/$defs/source"
+				}
+			},
+			"additionalProperties": false
+		},
+		"subclassFluffArray": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"anyOf": [
+					{
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"source": {
+								"$ref": "../util.json#/$defs/source"
+							},
+							"images": {
+								"oneOf": [
+									{
+										"type": "array",
+										"items": {
+											"$ref": "../entry.json#/$defs/entryImage"
+										}
+									},
+									{
+										"type": "null"
+									}
+								]
+							},
+							"entries": {
+								"type": "array",
+								"items": {
+									"$ref": "../entry.json"
+								}
+							},
+							"className": {
+								"type": "string"
+							},
+							"classSource": {
+								"$ref": "../util.json#/$defs/source"
+							}
+						},
+						"additionalProperties": false,
+						"required": [
+							"name",
+							"source",
+							"className",
+							"classSource"
+						]
+					},
+					{
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"source": {
+								"$ref": "../util.json#/$defs/source"
+							},
+							"images": {
+								"oneOf": [
+									{
+										"type": "array",
+										"items": {
+											"$ref": "../entry.json#/$defs/entryImage"
+										}
+									},
+									{
+										"type": "null"
+									},
+									{
+										"type": "array",
+										"items": {
+											"$ref": "../entry.json#/$defs/entryImage"
+										}
+									},
+									{
+										"type": "null"
+									}
+								]
+							},
+							"entries": {
+								"type": "array",
+								"items": {
+									"$ref": "../entry.json"
+								}
+							},
+							"className": {
+								"type": "string"
+							},
+							"classSource": {
+								"$ref": "../util.json#/$defs/source"
+							}
+						},
+						"additionalProperties": false
+					}
+				]
+			}
+		}
+	},
+	"properties": {
+		"_meta": {
+			"$ref": "../util.json#/$defs/metaBlock"
+		},
+		"classFluff": {
+			"$ref": "../util.json#/$defs/genericFluffArray"
+		},
+		"subclassFluff": {
+			"$ref": "#/$defs/subclassFluffArray"
+		}
+	},
+	"additionalProperties": false
+}
