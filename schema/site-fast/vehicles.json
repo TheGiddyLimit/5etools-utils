@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.5",
+	"version": "1.7.9",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -182,17 +182,17 @@
 				"cha": {
 					"type": "integer"
 				},
+				"resist": {
+					"$ref": "util.json#/$defs/damageResistArray"
+				},
 				"conditionImmune": {
-					"type": "array",
-					"items": {
-						"$ref": "entry.json#/$defs/dataCondImmune"
-					}
+					"$ref": "util.json#/$defs/conditionImmunityArray"
 				},
 				"immune": {
-					"type": "array",
-					"items": {
-						"$ref": "entry.json#/$defs/dataDamImmune"
-					}
+					"$ref": "util.json#/$defs/damageImmunityArray"
+				},
+				"vulnerable": {
+					"$ref": "util.json#/$defs/damageVulnerabilityArray"
 				},
 				"actionThresholds": {
 					"type": "object",
@@ -701,17 +701,17 @@
 						"mt"
 					]
 				},
+				"resist": {
+					"$ref": "util.json#/$defs/damageResistArray"
+				},
 				"conditionImmune": {
-					"type": "array",
-					"items": {
-						"$ref": "entry.json#/$defs/dataCondImmune"
-					}
+					"$ref": "util.json#/$defs/conditionImmunityArray"
 				},
 				"immune": {
-					"type": "array",
-					"items": {
-						"$ref": "entry.json#/$defs/dataDamImmune"
-					}
+					"$ref": "util.json#/$defs/damageImmunityArray"
+				},
+				"vulnerable": {
+					"$ref": "util.json#/$defs/damageVulnerabilityArray"
 				},
 				"trait": {
 					"type": "array",
