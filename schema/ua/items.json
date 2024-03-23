@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.9",
+	"version": "1.14.10",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -394,6 +394,9 @@
 					"type": "string"
 				},
 				"bonusProficiencyBonus": {
+					"type": "string"
+				},
+				"bonusSavingThrowConcentration": {
 					"type": "string"
 				},
 				"modifySpeed": {
@@ -950,6 +953,9 @@
 						"bonusProficiencyBonus": {
 							"type": "string"
 						},
+						"bonusSavingThrowConcentration": {
+							"type": "string"
+						},
 						"modifySpeed": {
 							"$ref": "items-shared.json#/$defs/itemModifySpeed"
 						},
@@ -1497,6 +1503,9 @@
 							"type": "string"
 						},
 						"bonusProficiencyBonus": {
+							"type": "string"
+						},
+						"bonusSavingThrowConcentration": {
 							"type": "string"
 						},
 						"modifySpeed": {
@@ -2053,6 +2062,9 @@
 						"bonusProficiencyBonus": {
 							"type": "string"
 						},
+						"bonusSavingThrowConcentration": {
+							"type": "string"
+						},
 						"modifySpeed": {
 							"$ref": "items-shared.json#/$defs/itemModifySpeed"
 						},
@@ -2604,6 +2616,9 @@
 							"type": "string"
 						},
 						"bonusProficiencyBonus": {
+							"type": "string"
+						},
+						"bonusSavingThrowConcentration": {
 							"type": "string"
 						},
 						"modifySpeed": {
