@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.20",
+	"version": "1.10.21",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -85,7 +85,12 @@
 								"description": "A direct link to the source, if available in web form or on a store.",
 								"minLength": 3
 							},
+							"partnered": {
+								"description": "If this is a \"partnered\" source; usually one which is available and similarly marked on D&D Beyond.",
+								"type": "boolean"
+							},
 							"targetSchema": {
+								"deprecated": true,
 								"type": "string",
 								"description": "The target schema version in 5etools, e.g. \"1.2.3\"."
 							}
