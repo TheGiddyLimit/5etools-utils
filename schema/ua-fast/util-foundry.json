@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -72,6 +72,9 @@
 				"$ref": "#/$defs/foundryAdvancementObject"
 			},
 			"uniqueItems": true
+		},
+		"foundryPrototypeTokenObject": {
+			"type": "object"
 		},
 		"foundryImg": {
 			"type": "string"
@@ -278,6 +281,69 @@
 			"uniqueItems": true,
 			"items": {
 				"$ref": "#/$defs/foundrySideDataGenericFeatureObject"
+			}
+		},
+		"foundrySideDataGenericActorObject": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"system": {
+					"$ref": "#/$defs/foundrySystemObject"
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/foundryEffectObject"
+					}
+				},
+				"flags": {
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
+				},
+				"img": {
+					"type": "string"
+				},
+				"_merge": {
+					"type": "object",
+					"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
+					"properties": {
+						"system": {
+							"const": true
+						},
+						"chooseSystem": {
+							"const": true
+						},
+						"effects": {
+							"const": true
+						},
+						"flags": {
+							"const": true
+						},
+						"chooseFlags": {
+							"const": true
+						}
+					}
+				},
+				"prototypeToken": {
+					"$ref": "util-foundry.json#/$defs/foundryPrototypeTokenObject"
+				}
+			},
+			"required": [
+				"name",
+				"source"
+			],
+			"additionalProperties": false
+		},
+		"foundrySideDataGenericActorArray": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/foundrySideDataGenericActorObject"
 			}
 		}
 	}

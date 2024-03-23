@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.0",
+	"version": "1.0.1",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -77,6 +77,10 @@
 			"minItems": 1,
 			"items": {"$ref": "#/$defs/foundryAdvancementObject"},
 			"uniqueItems": true
+		},
+
+		"foundryPrototypeTokenObject": {
+			"type": "object"
 		},
 
 		"foundryImg": {
@@ -183,6 +187,27 @@
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {"$ref": "#/$defs/foundrySideDataGenericFeatureObject"}
+		},
+
+		"foundrySideDataGenericActorObject": {
+			"$$merge": [
+				{
+					"$ref": "#/$defs/foundrySideDataGenericObject"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"prototypeToken": {"$ref": "util-foundry.json#/$defs/foundryPrototypeTokenObject"}
+					}
+				}
+			]
+		},
+
+		"foundrySideDataGenericActorArray": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {"$ref": "#/$defs/foundrySideDataGenericActorObject"}
 		}
 	}
 }

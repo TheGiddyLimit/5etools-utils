@@ -1,12 +1,12 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-bestiary.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 
 	"type": "object",
 
 	"properties": {
-		"monster": {"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericArray"}
+		"monster": {"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericActorArray"}
 	},
 
 	"required": [
