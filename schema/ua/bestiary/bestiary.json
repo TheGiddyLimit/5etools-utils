@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.26",
+	"version": "1.21.28",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -894,7 +894,11 @@
 							"forest",
 							"swamp",
 							"underdark",
-							"desert"
+							"desert",
+							"any",
+							"badlands",
+							"farmland",
+							"planar"
 						]
 					}
 				},
@@ -1973,7 +1977,11 @@
 									"forest",
 									"swamp",
 									"underdark",
-									"desert"
+									"desert",
+									"any",
+									"badlands",
+									"farmland",
+									"planar"
 								]
 							}
 						},
@@ -3057,7 +3065,11 @@
 									"forest",
 									"swamp",
 									"underdark",
-									"desert"
+									"desert",
+									"any",
+									"badlands",
+									"farmland",
+									"planar"
 								]
 							}
 						},
