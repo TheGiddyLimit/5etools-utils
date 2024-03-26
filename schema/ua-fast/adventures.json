@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.19",
+	"version": "1.10.20",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -209,7 +209,9 @@
 							"Family Friendly",
 							"Grim Hollow",
 							"Drakkenheim",
-							"Humblewood"
+							"Humblewood",
+							"Vecna",
+							"Quests from the Infinite Staircase"
 						]
 					}
 				},
