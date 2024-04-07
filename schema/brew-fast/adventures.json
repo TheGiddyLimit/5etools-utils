@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.20",
+	"version": "1.10.21",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -211,7 +211,8 @@
 							"Drakkenheim",
 							"Humblewood",
 							"Vecna",
-							"Quests from the Infinite Staircase"
+							"Quests from the Infinite Staircase",
+							"LEGO"
 						]
 					},
 					"alAveragePlayerLevel": {
