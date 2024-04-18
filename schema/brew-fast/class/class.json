@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.6",
+	"version": "2.11.7",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -610,6 +610,12 @@
 						"additionalSpells": {
 							"$ref": "../util.json#/$defs/additionalSpellsArray"
 						},
+						"hasFluff": {
+							"const": true
+						},
+						"hasFluffImages": {
+							"const": true
+						},
 						"subclassSpells": {
 							"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
 							"type": "array",
@@ -633,6 +639,9 @@
 									}
 								}
 							}
+						},
+						"fluff": {
+							"$ref": "../util.json#/$defs/fluffObject"
 						},
 						"foundrySystem": {
 							"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
@@ -763,6 +772,12 @@
 						"additionalSpells": {
 							"$ref": "../util.json#/$defs/additionalSpellsArray"
 						},
+						"hasFluff": {
+							"const": true
+						},
+						"hasFluffImages": {
+							"const": true
+						},
 						"subclassSpells": {
 							"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
 							"type": "array",
@@ -786,6 +801,9 @@
 									}
 								}
 							}
+						},
+						"fluff": {
+							"$ref": "../util.json#/$defs/fluffObject"
 						},
 						"foundrySystem": {
 							"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
@@ -916,6 +934,12 @@
 				"additionalSpells": {
 					"$ref": "../util.json#/$defs/additionalSpellsArray"
 				},
+				"hasFluff": {
+					"const": true
+				},
+				"hasFluffImages": {
+					"const": true
+				},
 				"subclassSpells": {
 					"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
 					"type": "array",
@@ -939,6 +963,9 @@
 							}
 						}
 					}
+				},
+				"fluff": {
+					"$ref": "../util.json#/$defs/fluffObject"
 				},
 				"foundrySystem": {
 					"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
@@ -1202,38 +1229,52 @@
 							"$ref": "../util.json#/$defs/page"
 						},
 						"fluff": {
-							"type": "array",
-							"items": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"entries": {
-										"type": "array",
-										"items": {
-											"$ref": "../entry.json"
-										}
-									},
-									"page": {
-										"$ref": "../util.json#/$defs/page"
-									},
-									"source": {
-										"$ref": "../util.json#/$defs/source"
-									},
-									"type": {
-										"type": "string"
-									}
+							"oneOf": [
+								{
+									"$ref": "../util.json#/$defs/fluffObject"
 								},
-								"required": [
-									"entries",
-									"source"
-								],
-								"additionalProperties": false
-							}
+								{
+									"deprecated": true,
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"entries": {
+												"type": "array",
+												"items": {
+													"$ref": "../entry.json"
+												}
+											},
+											"page": {
+												"$ref": "../util.json#/$defs/page"
+											},
+											"source": {
+												"$ref": "../util.json#/$defs/source"
+											},
+											"type": {
+												"type": "string"
+											}
+										},
+										"required": [
+											"entries",
+											"source"
+										],
+										"additionalProperties": false
+									}
+								}
+							]
 						},
 						"additionalSpells": {
 							"$ref": "../util.json#/$defs/additionalSpellsArray"
+						},
+						"hasFluff": {
+							"const": true
+						},
+						"hasFluffImages": {
+							"const": true
 						},
 						"classSpells": {
 							"description": "Homebrew use only",
@@ -1456,38 +1497,52 @@
 							"$ref": "../util.json#/$defs/page"
 						},
 						"fluff": {
-							"type": "array",
-							"items": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"entries": {
-										"type": "array",
-										"items": {
-											"$ref": "../entry.json"
-										}
-									},
-									"page": {
-										"$ref": "../util.json#/$defs/page"
-									},
-									"source": {
-										"$ref": "../util.json#/$defs/source"
-									},
-									"type": {
-										"type": "string"
-									}
+							"oneOf": [
+								{
+									"$ref": "../util.json#/$defs/fluffObject"
 								},
-								"required": [
-									"entries",
-									"source"
-								],
-								"additionalProperties": false
-							}
+								{
+									"deprecated": true,
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"entries": {
+												"type": "array",
+												"items": {
+													"$ref": "../entry.json"
+												}
+											},
+											"page": {
+												"$ref": "../util.json#/$defs/page"
+											},
+											"source": {
+												"$ref": "../util.json#/$defs/source"
+											},
+											"type": {
+												"type": "string"
+											}
+										},
+										"required": [
+											"entries",
+											"source"
+										],
+										"additionalProperties": false
+									}
+								}
+							]
 						},
 						"additionalSpells": {
 							"$ref": "../util.json#/$defs/additionalSpellsArray"
+						},
+						"hasFluff": {
+							"const": true
+						},
+						"hasFluffImages": {
+							"const": true
 						},
 						"classSpells": {
 							"description": "Homebrew use only",
@@ -1713,38 +1768,52 @@
 					"$ref": "../util.json#/$defs/page"
 				},
 				"fluff": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string"
-							},
-							"entries": {
-								"type": "array",
-								"items": {
-									"$ref": "../entry.json"
-								}
-							},
-							"page": {
-								"$ref": "../util.json#/$defs/page"
-							},
-							"source": {
-								"$ref": "../util.json#/$defs/source"
-							},
-							"type": {
-								"type": "string"
-							}
+					"oneOf": [
+						{
+							"$ref": "../util.json#/$defs/fluffObject"
 						},
-						"required": [
-							"entries",
-							"source"
-						],
-						"additionalProperties": false
-					}
+						{
+							"deprecated": true,
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"entries": {
+										"type": "array",
+										"items": {
+											"$ref": "../entry.json"
+										}
+									},
+									"page": {
+										"$ref": "../util.json#/$defs/page"
+									},
+									"source": {
+										"$ref": "../util.json#/$defs/source"
+									},
+									"type": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"entries",
+									"source"
+								],
+								"additionalProperties": false
+							}
+						}
+					]
 				},
 				"additionalSpells": {
 					"$ref": "../util.json#/$defs/additionalSpellsArray"
+				},
+				"hasFluff": {
+					"const": true
+				},
+				"hasFluffImages": {
+					"const": true
 				},
 				"classSpells": {
 					"description": "Homebrew use only",

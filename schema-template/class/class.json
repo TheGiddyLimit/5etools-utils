@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.6",
+	"version": "2.11.7",
 	"$id": "class.json",
 
 	"type": "object",
@@ -515,6 +515,8 @@
 					"$ref": "../util.json#/$defs/otherSources"
 				},
 				"additionalSpells": { "$ref": "../util.json#/$defs/additionalSpellsArray" },
+				"hasFluff": {"const": true},
+				"hasFluffImages": {"const": true},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {
@@ -541,6 +543,9 @@
 					}
 				},
 				"$$ifBrew": {
+					"fluff": {
+						"$ref": "../util.json#/$defs/fluffObject"
+					},
 					"foundrySystem": {
 						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
@@ -797,28 +802,36 @@
 				},
 				"page": {"$ref": "../util.json#/$defs/page"},
 				"fluff": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string"
-							},
-							"entries": {
-								"type": "array",
-								"items": {"$ref": "../entry.json"}
-							},
-							"page": {"$ref": "../util.json#/$defs/page"},
-							"source": {"$ref": "../util.json#/$defs/source"},
-							"type": {
-								"type": "string"
+					"oneOf": [
+						{"$ref": "../util.json#/$defs/fluffObject"},
+						{
+							"deprecated": true,
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"entries": {
+										"type": "array",
+										"items": {"$ref": "../entry.json"}
+									},
+									"page": {"$ref": "../util.json#/$defs/page"},
+									"source": {"$ref": "../util.json#/$defs/source"},
+									"type": {
+										"type": "string"
+									}
+								},
+								"required": ["entries", "source"],
+								"additionalProperties": false
 							}
-						},
-						"required": ["entries", "source"],
-						"additionalProperties": false
-					}
+						}
+					]
 				},
 				"additionalSpells": { "$ref": "../util.json#/$defs/additionalSpellsArray" },
+				"hasFluff": {"const": true},
+				"hasFluffImages": {"const": true},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {
