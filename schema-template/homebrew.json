@@ -428,7 +428,7 @@
 			"$ref": "class/class.json#/properties/class"
 		},
 		"classFluff": {
-			"$ref": "class/fluff.json#/properties/classFluff"
+			"$ref": "class/fluff-class.json#/properties/classFluff"
 		},
 		"foundryClass": {
 			"$ref": "class/foundry.json#/properties/class"
@@ -437,7 +437,7 @@
 			"$ref": "class/class.json#/properties/subclass"
 		},
 		"subclassFluff": {
-			"$ref": "class/fluff.json#/properties/subclassFluff"
+			"$ref": "class/fluff-class.json#/properties/subclassFluff"
 		},
 		"foundrySubclass": {
 			"$ref": "class/foundry.json#/properties/subclass"
