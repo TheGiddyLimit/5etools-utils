@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.11",
+	"version": "1.9.12",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -289,7 +289,7 @@
 				},
 				"miscTags": {
 					"type": "array",
-					"description": "AAD: Additional Attack Damage\n ADV: Grants Advantage\n DFT: Difficult Terrain\n FMV: Forced Movement\n HL: Healing\n LGT: Creates Light\n LGTS: Creates Sunlight\n MAC: Modifies AC\n OBJ: Affects Objects\n OBS: Obscures Vision\n PRM: Permanent Effects\n PS: Plane Shifting\nRO: Rollable Effects\n SCL: Scaling Effects\n  SMN: Summons Creature\n SGT: Requires Sight\n THP: Grants Temporary Hit Points\n TP: Teleportation\n UBA: Uses Bonus Action",
+					"description": "AAD: Additional Attack Damage\n ADV: Grants Advantage\n DFT: Difficult Terrain\n FMV: Forced Movement\n HL: Healing\n LGT: Creates Light\n LGTS: Creates Sunlight\n MAC: Modifies AC\n OBJ: Affects Objects\n OBS: Obscures Vision\n PIR: Permanent If Repeated\n PRM: Permanent Effects\n PS: Plane Shifting\nRO: Rollable Effects\n SCL: Scaling Effects\n  SMN: Summons Creature\n SGT: Requires Sight\n THP: Grants Temporary Hit Points\n TP: Teleportation\n UBA: Uses Bonus Action",
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
@@ -305,6 +305,7 @@
 							"MAC",
 							"OBJ",
 							"OBS",
+							"PIR",
 							"PRM",
 							"PS",
 							"RO",
@@ -837,7 +838,7 @@
 						},
 						"miscTags": {
 							"type": "array",
-							"description": "AAD: Additional Attack Damage\n ADV: Grants Advantage\n DFT: Difficult Terrain\n FMV: Forced Movement\n HL: Healing\n LGT: Creates Light\n LGTS: Creates Sunlight\n MAC: Modifies AC\n OBJ: Affects Objects\n OBS: Obscures Vision\n PRM: Permanent Effects\n PS: Plane Shifting\nRO: Rollable Effects\n SCL: Scaling Effects\n  SMN: Summons Creature\n SGT: Requires Sight\n THP: Grants Temporary Hit Points\n TP: Teleportation\n UBA: Uses Bonus Action",
+							"description": "AAD: Additional Attack Damage\n ADV: Grants Advantage\n DFT: Difficult Terrain\n FMV: Forced Movement\n HL: Healing\n LGT: Creates Light\n LGTS: Creates Sunlight\n MAC: Modifies AC\n OBJ: Affects Objects\n OBS: Obscures Vision\n PIR: Permanent If Repeated\n PRM: Permanent Effects\n PS: Plane Shifting\nRO: Rollable Effects\n SCL: Scaling Effects\n  SMN: Summons Creature\n SGT: Requires Sight\n THP: Grants Temporary Hit Points\n TP: Teleportation\n UBA: Uses Bonus Action",
 							"minItems": 1,
 							"uniqueItems": true,
 							"items": {
@@ -853,6 +854,7 @@
 									"MAC",
 									"OBJ",
 									"OBS",
+									"PIR",
 									"PRM",
 									"PS",
 									"RO",
@@ -1393,7 +1395,7 @@
 						},
 						"miscTags": {
 							"type": "array",
-							"description": "AAD: Additional Attack Damage\n ADV: Grants Advantage\n DFT: Difficult Terrain\n FMV: Forced Movement\n HL: Healing\n LGT: Creates Light\n LGTS: Creates Sunlight\n MAC: Modifies AC\n OBJ: Affects Objects\n OBS: Obscures Vision\n PRM: Permanent Effects\n PS: Plane Shifting\nRO: Rollable Effects\n SCL: Scaling Effects\n  SMN: Summons Creature\n SGT: Requires Sight\n THP: Grants Temporary Hit Points\n TP: Teleportation\n UBA: Uses Bonus Action",
+							"description": "AAD: Additional Attack Damage\n ADV: Grants Advantage\n DFT: Difficult Terrain\n FMV: Forced Movement\n HL: Healing\n LGT: Creates Light\n LGTS: Creates Sunlight\n MAC: Modifies AC\n OBJ: Affects Objects\n OBS: Obscures Vision\n PIR: Permanent If Repeated\n PRM: Permanent Effects\n PS: Plane Shifting\nRO: Rollable Effects\n SCL: Scaling Effects\n  SMN: Summons Creature\n SGT: Requires Sight\n THP: Grants Temporary Hit Points\n TP: Teleportation\n UBA: Uses Bonus Action",
 							"minItems": 1,
 							"uniqueItems": true,
 							"items": {
@@ -1409,6 +1411,7 @@
 									"MAC",
 									"OBJ",
 									"OBS",
+									"PIR",
 									"PRM",
 									"PS",
 									"RO",
