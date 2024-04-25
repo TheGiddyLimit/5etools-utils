@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.18",
+	"version": "1.8.19",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -49,7 +49,12 @@
 				"url": {
 					"$$merge": [
 						{"$ref": "util.json#/$defs/url"},
-						{"pattern": "^https?://"}
+						{
+							"pattern": "^https?://",
+							"not": {
+								"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io)/"
+							}
+						}
 					]
 				}
 			},
