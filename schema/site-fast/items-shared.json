@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -290,6 +290,50 @@
 				"integer",
 				"null"
 			]
+		},
+		"packContents": {
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"type": "string"
+					},
+					{
+						"type": "object",
+						"properties": {
+							"special": {
+								"type": "string"
+							},
+							"quantity": {
+								"type": "integer"
+							}
+						},
+						"additionalProperties": false,
+						"required": [
+							"special"
+						]
+					},
+					{
+						"type": "object",
+						"properties": {
+							"item": {
+								"type": "string"
+							},
+							"quantity": {
+								"type": "integer"
+							},
+							"displayName": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false,
+						"required": [
+							"item"
+						],
+						"minProperties": 2
+					}
+				]
+			}
 		}
 	}
 }

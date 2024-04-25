@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.10",
+	"version": "1.14.11",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -414,47 +414,6 @@
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
-				"packContents": {
-					"type": "array",
-					"items": {
-						"oneOf": [
-							{
-								"type": "string"
-							},
-							{
-								"type": "object",
-								"properties": {
-									"special": {
-										"type": "string"
-									},
-									"quantity": {
-										"type": "integer"
-									}
-								},
-								"additionalProperties": false,
-								"required": [
-									"special"
-								]
-							},
-							{
-								"type": "object",
-								"properties": {
-									"item": {
-										"type": "string"
-									},
-									"quantity": {
-										"type": "integer"
-									}
-								},
-								"additionalProperties": false,
-								"required": [
-									"item",
-									"quantity"
-								]
-							}
-						]
-					}
-				},
 				"atomicPackContents": {
 					"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
 					"type": "boolean"
@@ -489,6 +448,9 @@
 				},
 				"ammoType": {
 					"$ref": "items-shared.json#/$defs/itemAmmoType"
+				},
+				"packContents": {
+					"$ref": "items-shared.json#/$defs/packContents"
 				},
 				"grantsProficiency": {
 					"type": "boolean"
@@ -971,47 +933,6 @@
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
-						"packContents": {
-							"type": "array",
-							"items": {
-								"oneOf": [
-									{
-										"type": "string"
-									},
-									{
-										"type": "object",
-										"properties": {
-											"special": {
-												"type": "string"
-											},
-											"quantity": {
-												"type": "integer"
-											}
-										},
-										"additionalProperties": false,
-										"required": [
-											"special"
-										]
-									},
-									{
-										"type": "object",
-										"properties": {
-											"item": {
-												"type": "string"
-											},
-											"quantity": {
-												"type": "integer"
-											}
-										},
-										"additionalProperties": false,
-										"required": [
-											"item",
-											"quantity"
-										]
-									}
-								]
-							}
-						},
 						"atomicPackContents": {
 							"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
 							"type": "boolean"
@@ -1046,6 +967,9 @@
 						},
 						"ammoType": {
 							"$ref": "items-shared.json#/$defs/itemAmmoType"
+						},
+						"packContents": {
+							"$ref": "items-shared.json#/$defs/packContents"
 						},
 						"grantsProficiency": {
 							"type": "boolean"
@@ -1523,47 +1447,6 @@
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
-						"packContents": {
-							"type": "array",
-							"items": {
-								"oneOf": [
-									{
-										"type": "string"
-									},
-									{
-										"type": "object",
-										"properties": {
-											"special": {
-												"type": "string"
-											},
-											"quantity": {
-												"type": "integer"
-											}
-										},
-										"additionalProperties": false,
-										"required": [
-											"special"
-										]
-									},
-									{
-										"type": "object",
-										"properties": {
-											"item": {
-												"type": "string"
-											},
-											"quantity": {
-												"type": "integer"
-											}
-										},
-										"additionalProperties": false,
-										"required": [
-											"item",
-											"quantity"
-										]
-									}
-								]
-							}
-						},
 						"atomicPackContents": {
 							"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
 							"type": "boolean"
@@ -1598,6 +1481,9 @@
 						},
 						"ammoType": {
 							"$ref": "items-shared.json#/$defs/itemAmmoType"
+						},
+						"packContents": {
+							"$ref": "items-shared.json#/$defs/packContents"
 						},
 						"grantsProficiency": {
 							"type": "boolean"
@@ -2080,47 +1966,6 @@
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
-						"packContents": {
-							"type": "array",
-							"items": {
-								"oneOf": [
-									{
-										"type": "string"
-									},
-									{
-										"type": "object",
-										"properties": {
-											"special": {
-												"type": "string"
-											},
-											"quantity": {
-												"type": "integer"
-											}
-										},
-										"additionalProperties": false,
-										"required": [
-											"special"
-										]
-									},
-									{
-										"type": "object",
-										"properties": {
-											"item": {
-												"type": "string"
-											},
-											"quantity": {
-												"type": "integer"
-											}
-										},
-										"additionalProperties": false,
-										"required": [
-											"item",
-											"quantity"
-										]
-									}
-								]
-							}
-						},
 						"atomicPackContents": {
 							"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
 							"type": "boolean"
@@ -2155,6 +2000,9 @@
 						},
 						"ammoType": {
 							"$ref": "items-shared.json#/$defs/itemAmmoType"
+						},
+						"packContents": {
+							"$ref": "items-shared.json#/$defs/packContents"
 						},
 						"grantsProficiency": {
 							"type": "boolean"
@@ -2636,47 +2484,6 @@
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
-						"packContents": {
-							"type": "array",
-							"items": {
-								"oneOf": [
-									{
-										"type": "string"
-									},
-									{
-										"type": "object",
-										"properties": {
-											"special": {
-												"type": "string"
-											},
-											"quantity": {
-												"type": "integer"
-											}
-										},
-										"additionalProperties": false,
-										"required": [
-											"special"
-										]
-									},
-									{
-										"type": "object",
-										"properties": {
-											"item": {
-												"type": "string"
-											},
-											"quantity": {
-												"type": "integer"
-											}
-										},
-										"additionalProperties": false,
-										"required": [
-											"item",
-											"quantity"
-										]
-									}
-								]
-							}
-						},
 						"atomicPackContents": {
 							"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
 							"type": "boolean"
@@ -2711,6 +2518,9 @@
 						},
 						"ammoType": {
 							"$ref": "items-shared.json#/$defs/itemAmmoType"
+						},
+						"packContents": {
+							"$ref": "items-shared.json#/$defs/packContents"
 						},
 						"grantsProficiency": {
 							"type": "boolean"
