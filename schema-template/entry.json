@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.19",
+	"version": "1.8.20",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -1088,6 +1088,8 @@
 									"flags": false
 								}
 							},
+							"foundrySceneWalls": {"$ref": "https://raw.githubusercontent.com/TheGiddyLimit/plutonium-scenes/main/test/schema/shared.json#/$defs/wallArray"},
+							"foundrySceneLights": {"$ref": "https://raw.githubusercontent.com/TheGiddyLimit/plutonium-scenes/main/test/schema/shared.json#/$defs/lightArray"},
 							"foundrySceneFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"}
 						}
 					},
