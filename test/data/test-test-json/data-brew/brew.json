@@ -1,0 +1,31 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "5etools",
+				"abbreviation": "Brew",
+				"full": "5etools",
+				"authors": [
+					"5etools"
+				],
+				"version": "1.0.0",
+				"url": "https://github.com/TheGiddyLimit/homebrew",
+				"targetSchema": "1.0.0"
+			}
+		],
+		"dateAdded": 1537874753,
+		"dateLastModified": 1537874753,
+		"_dateLastModifiedHash": "751ee07570"
+	},
+	"item": [
+		{
+			"name": "Adder's Stomach",
+			"type": "SCF",
+			"rarity": "none",
+			"source": "5etools",
+			"entries": [
+				"A spell component used in {@spell Melf's Acid Arrow|PHB}."
+			]
+		}
+	]
+}
