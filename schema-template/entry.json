@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.20",
+	"version": "1.8.21",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -1074,6 +1074,16 @@
 						"maxHeightUnits": {"type": "string"},
 						"style": {
 							"enum": ["comic-speaker-left", "comic-speaker-right", "deity-symbol"]
+						},
+						"expectsLightBackground": {
+							"description": "If this image is largely transparent, and expects to be rendered atop a light background.",
+							"type": "boolean",
+							"const": true
+						},
+						"expectsDarkBackground": {
+							"description": "If this image is largely transparent, and expects to be rendered atop a dark background.",
+							"type": "boolean",
+							"const": true
 						},
 						"$$ifBrew": {
 							"foundrySceneRoot": {
