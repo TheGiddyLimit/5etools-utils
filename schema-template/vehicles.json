@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.9",
+	"version": "1.7.10",
 	"type": "object",
 
 	"$defs": {
@@ -603,8 +603,9 @@
 						}
 					},
 					"additionalProperties": false,
-					"required": ["hp", "dt", "mt"]
+					"required": ["hp", "dt"]
 				},
+				"ac": {"type": "integer"},
 				"resist": {
 					"$ref": "util.json#/$defs/damageResistArray"
 				},
