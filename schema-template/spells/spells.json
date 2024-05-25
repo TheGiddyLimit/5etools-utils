@@ -12,7 +12,7 @@
 				"name": {
 					"type": "string"
 				},
-				"alias": {"$ref": "util.json#/$defs/alias"},
+				"alias": {"$ref": "../util.json#/$defs/alias"},
 				"level": {
 					"type": "integer"
 				},

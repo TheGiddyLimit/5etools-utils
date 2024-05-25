@@ -12,7 +12,7 @@
 					"type": "string"
 				},
 				"alias": {
-					"$ref": "util.json#/$defs/alias"
+					"$ref": "../util.json#/$defs/alias"
 				},
 				"level": {
 					"type": "integer"
@@ -564,7 +564,7 @@
 							"type": "string"
 						},
 						"alias": {
-							"$ref": "util.json#/$defs/alias"
+							"$ref": "../util.json#/$defs/alias"
 						},
 						"level": {
 							"type": "integer"
@@ -1124,7 +1124,7 @@
 							"type": "string"
 						},
 						"alias": {
-							"$ref": "util.json#/$defs/alias"
+							"$ref": "../util.json#/$defs/alias"
 						},
 						"level": {
 							"type": "integer"
