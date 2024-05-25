@@ -23,7 +23,7 @@ test(
 		const noExe = (
 			await Promise.all(
 				fs.readdirSync(dir)
-					.map(async fname => !(await isExecutable(path.join(dir, fname))))
+					.map(async fname => !(await isExecutable(path.join(dir, fname)))),
 			)
 		)
 			.filter(Boolean);
