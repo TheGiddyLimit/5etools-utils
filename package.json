@@ -14,7 +14,7 @@
 	"bin": {
 		"test-json-brew": "bin/test-json-brew.js",
 		"test-json-ua": "bin/test-json-ua.js",
-		"test-file-extensions": "bin/test-file-extensions.js",
+		"test-file-names": "bin/test-file-names.js",
 		"test-file-locations": "bin/test-file-locations.js"
 	},
 	"scripts": {
