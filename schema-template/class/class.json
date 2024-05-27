@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.7",
+	"version": "2.11.8",
 	"$id": "class.json",
 
 	"type": "object",
@@ -448,6 +448,7 @@
 				"shortName": {
 					"type": "string"
 				},
+				"alias": {"$ref": "../util.json#/$defs/alias"},
 				"source": {"$ref": "../util.json#/$defs/source"},
 				"className": {
 					"description": "The name of the class this subclass belongs to.",
@@ -660,6 +661,7 @@
 				"name": {
 					"type": "string"
 				},
+				"alias": {"$ref": "../util.json#/$defs/alias"},
 				"source": {"$ref": "../util.json#/$defs/source"},
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"

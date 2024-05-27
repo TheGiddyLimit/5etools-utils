@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.7",
+	"version": "2.11.8",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -423,6 +423,9 @@
 						"shortName": {
 							"type": "string"
 						},
+						"alias": {
+							"$ref": "../util.json#/$defs/alias"
+						},
 						"source": {
 							"$ref": "../util.json#/$defs/source"
 						},
@@ -546,6 +549,9 @@
 						"shortName": {
 							"type": "string"
 						},
+						"alias": {
+							"$ref": "../util.json#/$defs/alias"
+						},
 						"source": {
 							"$ref": "../util.json#/$defs/source"
 						},
@@ -668,6 +674,9 @@
 				},
 				"shortName": {
 					"type": "string"
+				},
+				"alias": {
+					"$ref": "../util.json#/$defs/alias"
 				},
 				"source": {
 					"$ref": "../util.json#/$defs/source"
@@ -840,6 +849,9 @@
 					"properties": {
 						"name": {
 							"type": "string"
+						},
+						"alias": {
+							"$ref": "../util.json#/$defs/alias"
 						},
 						"source": {
 							"$ref": "../util.json#/$defs/source"
@@ -1079,6 +1091,9 @@
 					"properties": {
 						"name": {
 							"type": "string"
+						},
+						"alias": {
+							"$ref": "../util.json#/$defs/alias"
 						},
 						"source": {
 							"$ref": "../util.json#/$defs/source"
@@ -1321,6 +1336,9 @@
 			"properties": {
 				"name": {
 					"type": "string"
+				},
+				"alias": {
+					"$ref": "../util.json#/$defs/alias"
 				},
 				"source": {
 					"$ref": "../util.json#/$defs/source"
