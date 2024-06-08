@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.1",
+	"version": "1.0.2",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -53,6 +53,12 @@
 			"additionalProperties": false
 		},
 
+		"foundryId": {
+			"type": "string",
+			"minLength": 16,
+			"maxLength": 16
+		},
+
 		"foundryTokenScale": {
 			"type": "number",
 			"minimum": 0.2,
@@ -92,9 +98,14 @@
 			"type": "object"
 		},
 
-		"foundryEffectObject": {
+		"_foundryEffectObject": {
 			"type": "object",
 			"properties": {
+				"foundryId": {
+					"description": "Use only when required. For example, when linking an \"enchantmentRiderParent\".",
+					"$ref": "#/$defs/foundryId"
+				},
+
 				"name": {"type": "string"},
 				"img": {"type": "string"},
 				"changes": {
@@ -111,13 +122,67 @@
 						"additionalProperties": false
 					}
 				},
+				"statuses": {
+					"description": "Dumped via e.g. `copy(Object.keys(CONFIG.DND5E.conditionTypes).sort())`",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"bleeding",
+							"blinded",
+							"charmed",
+							"cursed",
+							"deafened",
+							"diseased",
+							"exhaustion",
+							"frightened",
+							"grappled",
+							"incapacitated",
+							"invisible",
+							"paralyzed",
+							"petrified",
+							"poisoned",
+							"prone",
+							"restrained",
+							"silenced",
+							"stunned",
+							"surprised",
+							"transformed",
+							"unconscious"
+						]
+					}
+				},
 				"flags": {"type": "object"},
 				"duration": {"type": "object"},
 				"disabled": {"const": true},
-				"transfer": {"const": true}
+				"transfer": {"const": true},
+
+				"enchantmentLevelMin": {"type": "number", "minimum": 0, "maximum": 20},
+				"enchantmentLevelMax": {"type": "number", "minimum": 0, "maximum": 20},
+				"enchantmentRiderParent": {"$ref": "#/$defs/foundryId"},
+				"type": {
+					"type": "string",
+					"enum": ["enchantment"]
+				}
 			},
-			"required": ["changes"],
 			"additionalProperties": false
+		},
+
+		"foundryEffectObject": {
+			"anyOf": [
+				{
+					"allOf": [
+						{"$ref": "#/$defs/_foundryEffectObject"},
+						{"type": "object", "required": ["changes"]}
+					]
+				},
+				{
+					"allOf": [
+						{"$ref": "#/$defs/_foundryEffectObject"},
+						{"type": "object", "required": ["statuses"]}
+					]
+				}
+			]
 		},
 
 		"foundryEffectsArray": {
@@ -135,7 +200,7 @@
 
 				"system": {"$ref": "#/$defs/foundrySystemObject"},
 				"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}},
-				"flags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
+				"flags": {"$ref": "#/$defs/foundryFlagsObject"},
 				"img": {"type": "string"},
 
 				"_merge": {
@@ -176,7 +241,9 @@
 						"isIgnored": {"const": true},
 						"ignoreSrdEffects": {"const": true},
 
-						"actorDataMod": {"type": "object"}
+						"actorDataMod": {"type": "object"},
+
+						"subEntities": {"$ref": "#/$defs/foundrySubEntitiesObject"}
 					}
 				}
 			]
@@ -197,7 +264,7 @@
 				{
 					"type": "object",
 					"properties": {
-						"prototypeToken": {"$ref": "util-foundry.json#/$defs/foundryPrototypeTokenObject"}
+						"prototypeToken": {"$ref": "#/$defs/foundryPrototypeTokenObject"}
 					}
 				}
 			]

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-items.json",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"type": "object",
 	"properties": {
 		"magicvariant": {
@@ -67,6 +67,9 @@
 							"container",
 							"loot"
 						]
+					},
+					"subEntities": {
+						"$ref": "util-foundry.json#/$defs/foundrySubEntitiesObject"
 					}
 				},
 				"required": [

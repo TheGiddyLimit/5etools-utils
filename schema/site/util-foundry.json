@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -50,6 +50,11 @@
 			},
 			"additionalProperties": false
 		},
+		"foundryId": {
+			"type": "string",
+			"minLength": 16,
+			"maxLength": 16
+		},
 		"foundryTokenScale": {
 			"type": "number",
 			"minimum": 0.2,
@@ -83,9 +88,13 @@
 			"description": "A 5etools-data-like object of additional entities to import.",
 			"type": "object"
 		},
-		"foundryEffectObject": {
+		"_foundryEffectObject": {
 			"type": "object",
 			"properties": {
+				"foundryId": {
+					"description": "Use only when required. For example, when linking an \"enchantmentRiderParent\".",
+					"$ref": "#/$defs/foundryId"
+				},
 				"name": {
 					"type": "string"
 				},
@@ -122,6 +131,36 @@
 						"additionalProperties": false
 					}
 				},
+				"statuses": {
+					"description": "Dumped via e.g. `copy(Object.keys(CONFIG.DND5E.conditionTypes).sort())`",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"bleeding",
+							"blinded",
+							"charmed",
+							"cursed",
+							"deafened",
+							"diseased",
+							"exhaustion",
+							"frightened",
+							"grappled",
+							"incapacitated",
+							"invisible",
+							"paralyzed",
+							"petrified",
+							"poisoned",
+							"prone",
+							"restrained",
+							"silenced",
+							"stunned",
+							"surprised",
+							"transformed",
+							"unconscious"
+						]
+					}
+				},
 				"flags": {
 					"type": "object"
 				},
@@ -133,12 +172,58 @@
 				},
 				"transfer": {
 					"const": true
+				},
+				"enchantmentLevelMin": {
+					"type": "number",
+					"minimum": 0,
+					"maximum": 20
+				},
+				"enchantmentLevelMax": {
+					"type": "number",
+					"minimum": 0,
+					"maximum": 20
+				},
+				"enchantmentRiderParent": {
+					"$ref": "#/$defs/foundryId"
+				},
+				"type": {
+					"type": "string",
+					"enum": [
+						"enchantment"
+					]
 				}
 			},
-			"required": [
-				"changes"
-			],
 			"additionalProperties": false
+		},
+		"foundryEffectObject": {
+			"anyOf": [
+				{
+					"allOf": [
+						{
+							"$ref": "#/$defs/_foundryEffectObject"
+						},
+						{
+							"type": "object",
+							"required": [
+								"changes"
+							]
+						}
+					]
+				},
+				{
+					"allOf": [
+						{
+							"$ref": "#/$defs/_foundryEffectObject"
+						},
+						{
+							"type": "object",
+							"required": [
+								"statuses"
+							]
+						}
+					]
+				}
+			]
 		},
 		"foundryEffectsArray": {
 			"type": "array",
@@ -167,7 +252,7 @@
 					}
 				},
 				"flags": {
-					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
+					"$ref": "#/$defs/foundryFlagsObject"
 				},
 				"img": {
 					"type": "string"
@@ -227,7 +312,7 @@
 					}
 				},
 				"flags": {
-					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
+					"$ref": "#/$defs/foundryFlagsObject"
 				},
 				"img": {
 					"type": "string"
@@ -267,6 +352,9 @@
 				},
 				"actorDataMod": {
 					"type": "object"
+				},
+				"subEntities": {
+					"$ref": "#/$defs/foundrySubEntitiesObject"
 				}
 			},
 			"required": [
@@ -302,7 +390,7 @@
 					}
 				},
 				"flags": {
-					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
+					"$ref": "#/$defs/foundryFlagsObject"
 				},
 				"img": {
 					"type": "string"
@@ -329,7 +417,7 @@
 					}
 				},
 				"prototypeToken": {
-					"$ref": "util-foundry.json#/$defs/foundryPrototypeTokenObject"
+					"$ref": "#/$defs/foundryPrototypeTokenObject"
 				}
 			},
 			"required": [
