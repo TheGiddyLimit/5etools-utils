@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.2",
+	"version": "1.0.3",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -95,7 +95,11 @@
 
 		"foundrySubEntitiesObject": {
 			"description": "A 5etools-data-like object of additional entities to import.",
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"item": {"$ref": "items.json#/properties/item"}
+			},
+			"minProperties": 1
 		},
 
 		"_foundryEffectObject": {
