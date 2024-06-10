@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.11",
+	"version": "1.14.12",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -444,22 +444,26 @@
 			}
 		},
 
+		"_item": {
+			"type": "object",
+			"$$merge": [
+				{
+					"$ref": "#/$defs/itemData"
+				},
+				{
+					"required": [
+						"name",
+						"rarity",
+						"source"
+					]
+				}
+			]
+		},
+
 		"item": {
 			"anyOf": [
 				{
-					"type": "object",
-					"$$merge": [
-						{
-							"$ref": "#/$defs/itemData"
-						},
-						{
-							"required": [
-								"name",
-								"rarity",
-								"source"
-							]
-						}
-					]
+					"$ref": "#/$defs/_item"
 				},
 				{
 					"type": "object",
@@ -473,6 +477,30 @@
 					]
 				}
 			]
+		},
+
+		"subEntityItem": {
+			"type": "object",
+			"$$merge": [
+				{
+					"$ref": "#/$defs/_item"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"}
+					}
+				}
+			]
+		},
+
+		"subEntityItemArray": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/subEntityItem"
+			},
+			"uniqueItems": true,
+			"minItems": 1
 		},
 
 		"itemGroup": {
@@ -533,6 +561,7 @@
 			"uniqueItems": true,
 			"minItems": 1
 		},
+
 		"_meta": {
 			"$ref": "util.json#/$defs/metaBlock"
 		}
