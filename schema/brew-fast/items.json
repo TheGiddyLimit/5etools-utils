@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.11",
+	"version": "1.14.12",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -562,313 +562,290 @@
 				"type": "string"
 			}
 		},
-		"item": {
-			"anyOf": [
-				{
+		"_item": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"type": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
+				"typeAlt": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
+				"rarity": {
+					"$ref": "items-shared.json#/$defs/itemRarity"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"additionalSources": {
+					"$ref": "util.json#/$defs/additionalSources"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"baseItem": {
+					"type": "string"
+				},
+				"ac": {
+					"type": "integer"
+				},
+				"age": {
+					"$ref": "items-shared.json#/$defs/itemAge"
+				},
+				"carryingCapacity": {
+					"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
+				},
+				"dmg1": {
+					"type": "string"
+				},
+				"dmg2": {
+					"type": "string",
+					"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+				},
+				"dmgType": {
+					"$ref": "util.json#/$defs/dataDamageTags"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"additionalEntries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"property": {
+					"$ref": "items-shared.json#/$defs/itemProperty"
+				},
+				"range": {
+					"type": "string"
+				},
+				"reload": {
+					"type": [
+						"string",
+						"integer"
+					]
+				},
+				"reqAttune": {
+					"type": [
+						"string",
+						"boolean"
+					]
+				},
+				"reqAttuneAlt": {
+					"description": "Used for filtering.",
+					"type": [
+						"string",
+						"boolean"
+					]
+				},
+				"curse": {
+					"type": "boolean"
+				},
+				"vulnerable": {
+					"$ref": "util.json#/$defs/damageVulnerabilityArray"
+				},
+				"resist": {
+					"$ref": "util.json#/$defs/damageResistArray"
+				},
+				"immune": {
+					"$ref": "util.json#/$defs/damageImmunityArray"
+				},
+				"conditionImmune": {
+					"$ref": "util.json#/$defs/conditionImmunityArray"
+				},
+				"detail1": {
+					"description": "A descriptive field that can be used to complete entries in variants.",
+					"type": "string"
+				},
+				"scfType": {
+					"$ref": "items-shared.json#/$defs/itemScfType"
+				},
+				"speed": {
+					"$ref": "items-shared.json#/$defs/itemSpeed"
+				},
+				"stealth": {
+					"type": "boolean"
+				},
+				"strength": {
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"dexterityMax": {
+					"$ref": "items-shared.json#/$defs/itemDexterityMax"
+				},
+				"firearm": {
+					"type": "boolean"
+				},
+				"staff": {
+					"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
+					"type": "boolean"
+				},
+				"tier": {
+					"$ref": "items-shared.json#/$defs/itemTier"
+				},
+				"value": {
+					"description": "In copper pieces.",
+					"type": [
+						"number",
+						"null"
+					]
+				},
+				"valueMult": {
+					"type": "number"
+				},
+				"weaponCategory": {
+					"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+				},
+				"weight": {
+					"type": "number"
+				},
+				"weightMult": {
+					"type": "number"
+				},
+				"weightNote": {
+					"type": "string"
+				},
+				"wondrous": {
+					"type": "boolean"
+				},
+				"tattoo": {
+					"type": "boolean"
+				},
+				"sentient": {
+					"type": "boolean"
+				},
+				"poison": {
+					"type": "boolean"
+				},
+				"poisonTypes": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"examples": [
+							"contact",
+							"ingested",
+							"injury",
+							"inhaled"
+						]
+					}
+				},
+				"crew": {
+					"type": "integer"
+				},
+				"crewMin": {
+					"description": "For crews specified as an X-Y min-max.",
+					"type": "integer"
+				},
+				"crewMax": {
+					"description": "For crews specified as an X-Y min-max.",
+					"type": "integer"
+				},
+				"capPassenger": {
+					"type": "integer"
+				},
+				"capCargo": {
+					"type": "number"
+				},
+				"vehSpeed": {
+					"type": "number"
+				},
+				"vehAc": {
+					"type": "integer"
+				},
+				"vehHp": {
+					"type": "integer"
+				},
+				"vehDmgThresh": {
+					"type": "integer"
+				},
+				"travelCost": {
+					"description": "In copper pieces per mile per passenger.",
+					"type": "integer"
+				},
+				"shippingCost": {
+					"description": "In copper pieces per 100 lbs per mile.",
+					"type": "integer"
+				},
+				"charges": {
+					"type": [
+						"string",
+						"integer"
+					]
+				},
+				"recharge": {
+					"$ref": "items-shared.json#/$defs/itemRecharge"
+				},
+				"rechargeAmount": {
+					"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+				},
+				"optionalfeatures": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"attachedSpells": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"ability": {
+					"description": "Item ability score adjustments.",
 					"type": "object",
 					"properties": {
-						"name": {
-							"type": "string"
-						},
-						"alias": {
-							"$ref": "util.json#/$defs/alias"
-						},
-						"type": {
-							"$ref": "items-shared.json#/$defs/itemType"
-						},
-						"typeAlt": {
-							"$ref": "items-shared.json#/$defs/itemType"
-						},
-						"rarity": {
-							"$ref": "items-shared.json#/$defs/itemRarity"
-						},
-						"source": {
-							"$ref": "util.json#/$defs/source"
-						},
-						"page": {
-							"$ref": "util.json#/$defs/page"
-						},
-						"additionalSources": {
-							"$ref": "util.json#/$defs/additionalSources"
-						},
-						"reprintedAs": {
-							"$ref": "util.json#/$defs/reprintedAs"
-						},
-						"baseItem": {
-							"type": "string"
-						},
-						"ac": {
-							"type": "integer"
-						},
-						"age": {
-							"$ref": "items-shared.json#/$defs/itemAge"
-						},
-						"carryingCapacity": {
-							"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
-						},
-						"dmg1": {
-							"type": "string"
-						},
-						"dmg2": {
-							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
-						},
-						"dmgType": {
-							"$ref": "util.json#/$defs/dataDamageTags"
-						},
-						"entries": {
+						"choose": {
 							"type": "array",
 							"items": {
-								"$ref": "entry.json"
-							}
-						},
-						"additionalEntries": {
-							"type": "array",
-							"items": {
-								"$ref": "entry.json"
-							}
-						},
-						"property": {
-							"$ref": "items-shared.json#/$defs/itemProperty"
-						},
-						"range": {
-							"type": "string"
-						},
-						"reload": {
-							"type": [
-								"string",
-								"integer"
-							]
-						},
-						"reqAttune": {
-							"type": [
-								"string",
-								"boolean"
-							]
-						},
-						"reqAttuneAlt": {
-							"description": "Used for filtering.",
-							"type": [
-								"string",
-								"boolean"
-							]
-						},
-						"curse": {
-							"type": "boolean"
-						},
-						"vulnerable": {
-							"$ref": "util.json#/$defs/damageVulnerabilityArray"
-						},
-						"resist": {
-							"$ref": "util.json#/$defs/damageResistArray"
-						},
-						"immune": {
-							"$ref": "util.json#/$defs/damageImmunityArray"
-						},
-						"conditionImmune": {
-							"$ref": "util.json#/$defs/conditionImmunityArray"
-						},
-						"detail1": {
-							"description": "A descriptive field that can be used to complete entries in variants.",
-							"type": "string"
-						},
-						"scfType": {
-							"$ref": "items-shared.json#/$defs/itemScfType"
-						},
-						"speed": {
-							"$ref": "items-shared.json#/$defs/itemSpeed"
-						},
-						"stealth": {
-							"type": "boolean"
-						},
-						"strength": {
-							"type": [
-								"string",
-								"null"
-							]
-						},
-						"dexterityMax": {
-							"$ref": "items-shared.json#/$defs/itemDexterityMax"
-						},
-						"firearm": {
-							"type": "boolean"
-						},
-						"staff": {
-							"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-							"type": "boolean"
-						},
-						"tier": {
-							"$ref": "items-shared.json#/$defs/itemTier"
-						},
-						"value": {
-							"description": "In copper pieces.",
-							"type": [
-								"number",
-								"null"
-							]
-						},
-						"valueMult": {
-							"type": "number"
-						},
-						"weaponCategory": {
-							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
-						},
-						"weight": {
-							"type": "number"
-						},
-						"weightMult": {
-							"type": "number"
-						},
-						"weightNote": {
-							"type": "string"
-						},
-						"wondrous": {
-							"type": "boolean"
-						},
-						"tattoo": {
-							"type": "boolean"
-						},
-						"sentient": {
-							"type": "boolean"
-						},
-						"poison": {
-							"type": "boolean"
-						},
-						"poisonTypes": {
-							"type": "array",
-							"items": {
-								"type": "string",
-								"examples": [
-									"contact",
-									"ingested",
-									"injury",
-									"inhaled"
-								]
-							}
-						},
-						"crew": {
-							"type": "integer"
-						},
-						"crewMin": {
-							"description": "For crews specified as an X-Y min-max.",
-							"type": "integer"
-						},
-						"crewMax": {
-							"description": "For crews specified as an X-Y min-max.",
-							"type": "integer"
-						},
-						"capPassenger": {
-							"type": "integer"
-						},
-						"capCargo": {
-							"type": "number"
-						},
-						"vehSpeed": {
-							"type": "number"
-						},
-						"vehAc": {
-							"type": "integer"
-						},
-						"vehHp": {
-							"type": "integer"
-						},
-						"vehDmgThresh": {
-							"type": "integer"
-						},
-						"travelCost": {
-							"description": "In copper pieces per mile per passenger.",
-							"type": "integer"
-						},
-						"shippingCost": {
-							"description": "In copper pieces per 100 lbs per mile.",
-							"type": "integer"
-						},
-						"charges": {
-							"type": [
-								"string",
-								"integer"
-							]
-						},
-						"recharge": {
-							"$ref": "items-shared.json#/$defs/itemRecharge"
-						},
-						"rechargeAmount": {
-							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
-						},
-						"optionalfeatures": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						"attachedSpells": {
-							"type": "array",
-							"minItems": 1,
-							"uniqueItems": true,
-							"items": {
-								"type": "string"
-							}
-						},
-						"ability": {
-							"description": "Item ability score adjustments.",
-							"type": "object",
-							"properties": {
-								"choose": {
-									"type": "array",
-									"items": {
-										"type": "object",
-										"properties": {
-											"from": {
-												"type": "array",
-												"items": {
-													"enum": [
-														"str",
-														"dex",
-														"con",
-														"int",
-														"wis",
-														"cha"
-													]
-												},
-												"uniqueItems": true
-											},
-											"count": {
-												"type": "integer"
-											},
-											"amount": {
-												"type": "integer"
-											}
+								"type": "object",
+								"properties": {
+									"from": {
+										"type": "array",
+										"items": {
+											"enum": [
+												"str",
+												"dex",
+												"con",
+												"int",
+												"wis",
+												"cha"
+											]
 										},
-										"required": [
-											"from"
-										],
-										"additionalProperties": false
+										"uniqueItems": true
+									},
+									"count": {
+										"type": "integer"
+									},
+									"amount": {
+										"type": "integer"
 									}
 								},
-								"static": {
-									"type": "object",
-									"properties": {
-										"str": {
-											"type": "integer"
-										},
-										"dex": {
-											"type": "integer"
-										},
-										"con": {
-											"type": "integer"
-										},
-										"int": {
-											"type": "integer"
-										},
-										"wis": {
-											"type": "integer"
-										},
-										"cha": {
-											"type": "integer"
-										}
-									},
-									"additionalProperties": false
-								},
+								"required": [
+									"from"
+								],
+								"additionalProperties": false
+							}
+						},
+						"static": {
+							"type": "object",
+							"properties": {
 								"str": {
 									"type": "integer"
 								},
@@ -887,237 +864,263 @@
 								"cha": {
 									"type": "integer"
 								}
-							}
-						},
-						"focus": {
-							"description": "Item can be used as a spellcasting focus",
-							"oneOf": [
-								{
-									"type": "boolean"
-								},
-								{
-									"type": "array",
-									"items": {
-										"type": "string",
-										"examples": [
-											"Artificer",
-											"Bard",
-											"Cleric",
-											"Druid",
-											"Paladin",
-											"Ranger",
-											"Sorcerer",
-											"Warlock",
-											"Wizard"
-										]
-									}
-								}
-							]
-						},
-						"lootTables": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						"critThreshold": {
-							"type": "integer"
-						},
-						"bonusAc": {
-							"type": "string"
-						},
-						"bonusWeapon": {
-							"type": "string"
-						},
-						"bonusWeaponAttack": {
-							"type": "string"
-						},
-						"bonusWeaponDamage": {
-							"type": "string"
-						},
-						"bonusWeaponCritDamage": {
-							"type": "string"
-						},
-						"bonusSpellAttack": {
-							"type": "string"
-						},
-						"bonusSpellDamage": {
-							"type": "string"
-						},
-						"bonusSpellSaveDc": {
-							"type": "string"
-						},
-						"bonusSavingThrow": {
-							"type": "string"
-						},
-						"bonusAbilityCheck": {
-							"type": "string"
-						},
-						"bonusProficiencyBonus": {
-							"type": "string"
-						},
-						"bonusSavingThrowConcentration": {
-							"type": "string"
-						},
-						"modifySpeed": {
-							"$ref": "items-shared.json#/$defs/itemModifySpeed"
-						},
-						"otherSources": {
-							"$ref": "util.json#/$defs/otherSources"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"legacy": {
-							"$ref": "util.json#/$defs/legacy"
-						},
-						"atomicPackContents": {
-							"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
-							"type": "boolean"
-						},
-						"containerCapacity": {
-							"type": "object",
-							"properties": {
-								"weight": {
-									"type": "array",
-									"items": {
-										"type": "integer"
-									}
-								},
-								"item": {
-									"type": "array",
-									"items": {
-										"type": "object",
-										"patternProperties": {
-											".*": {
-												"type": "integer"
-											}
-										},
-										"additionalProperties": false
-									}
-								},
-								"weightless": {
-									"description": "If the container renders its contents weightless.",
-									"type": "boolean"
-								}
 							},
 							"additionalProperties": false
 						},
-						"ammoType": {
-							"$ref": "items-shared.json#/$defs/itemAmmoType"
-						},
-						"packContents": {
-							"$ref": "items-shared.json#/$defs/packContents"
-						},
-						"grantsProficiency": {
-							"type": "boolean"
-						},
-						"grantsLanguage": {
-							"type": "boolean"
-						},
-						"spellScrollLevel": {
+						"str": {
 							"type": "integer"
 						},
-						"seeAlsoDeck": {
+						"dex": {
+							"type": "integer"
+						},
+						"con": {
+							"type": "integer"
+						},
+						"int": {
+							"type": "integer"
+						},
+						"wis": {
+							"type": "integer"
+						},
+						"cha": {
+							"type": "integer"
+						}
+					}
+				},
+				"focus": {
+					"description": "Item can be used as a spellcasting focus",
+					"oneOf": [
+						{
+							"type": "boolean"
+						},
+						{
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
-							}
-						},
-						"seeAlsoVehicle": {
-							"type": "array",
-							"items": {
-								"type": "string",
-								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\"."
-							}
-						},
-						"reqAttuneTags": {
-							"$ref": "util.json#/$defs/reqAttuneTags"
-						},
-						"reqAttuneAltTags": {
-							"$ref": "util.json#/$defs/reqAttuneTags"
-						},
-						"miscTags": {
-							"type": "array",
-							"items": {
-								"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
-								"enum": [
-									"CF/W",
-									"TT"
+								"examples": [
+									"Artificer",
+									"Bard",
+									"Cleric",
+									"Druid",
+									"Paladin",
+									"Ranger",
+									"Sorcerer",
+									"Warlock",
+									"Wizard"
 								]
 							}
+						}
+					]
+				},
+				"lootTables": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"critThreshold": {
+					"type": "integer"
+				},
+				"bonusAc": {
+					"type": "string"
+				},
+				"bonusWeapon": {
+					"type": "string"
+				},
+				"bonusWeaponAttack": {
+					"type": "string"
+				},
+				"bonusWeaponDamage": {
+					"type": "string"
+				},
+				"bonusWeaponCritDamage": {
+					"type": "string"
+				},
+				"bonusSpellAttack": {
+					"type": "string"
+				},
+				"bonusSpellDamage": {
+					"type": "string"
+				},
+				"bonusSpellSaveDc": {
+					"type": "string"
+				},
+				"bonusSavingThrow": {
+					"type": "string"
+				},
+				"bonusAbilityCheck": {
+					"type": "string"
+				},
+				"bonusProficiencyBonus": {
+					"type": "string"
+				},
+				"bonusSavingThrowConcentration": {
+					"type": "string"
+				},
+				"modifySpeed": {
+					"$ref": "items-shared.json#/$defs/itemModifySpeed"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
+				},
+				"atomicPackContents": {
+					"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
+					"type": "boolean"
+				},
+				"containerCapacity": {
+					"type": "object",
+					"properties": {
+						"weight": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							}
 						},
-						"mastery": {
-							"$ref": "items-shared.json#/$defs/itemMastery"
+						"item": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"patternProperties": {
+									".*": {
+										"type": "integer"
+									}
+								},
+								"additionalProperties": false
+							}
 						},
-						"reach": {
-							"$ref": "items-shared.json#/$defs/itemReach"
-						},
-						"hasFluff": {
+						"weightless": {
+							"description": "If the container renders its contents weightless.",
 							"type": "boolean"
-						},
-						"hasFluffImages": {
-							"type": "boolean"
-						},
-						"hasRefs": {
-							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
-						},
-						"customProperties": {
-							"$ref": "items-shared.json#/$defs/customProperties"
-						},
-						"acSpecial": {
-							"$ref": "items-shared.json#/$defs/itemAcSpecial"
-						},
-						"currencyConversion": {
-							"description": "ID of a value conversion table. Homebrew only.",
-							"type": "string"
-						},
-						"alCertificateId": {
-							"description": "Adventurers League item certificate ID; for use in homebrew.",
-							"type": "string"
-						},
-						"foundryType": {
-							"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
-							"type": "string",
-							"enum": [
-								"weapon",
-								"equipment",
-								"consumable",
-								"tool",
-								"loot",
-								"class",
-								"spell",
-								"feat",
-								"backpack"
-							]
-						},
-						"foundrySystem": {
-							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
-						},
-						"foundryFlags": {
-							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
-						},
-						"foundryEffects": {
-							"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
-						},
-						"foundryImg": {
-							"$ref": "util-foundry.json#/$defs/foundryImg"
-						},
-						"fluff": {
-							"$ref": "items-shared.json#/$defs/fluff"
 						}
 					},
-					"additionalProperties": false,
-					"required": [
-						"name",
-						"rarity",
-						"source"
+					"additionalProperties": false
+				},
+				"ammoType": {
+					"$ref": "items-shared.json#/$defs/itemAmmoType"
+				},
+				"packContents": {
+					"$ref": "items-shared.json#/$defs/packContents"
+				},
+				"grantsProficiency": {
+					"type": "boolean"
+				},
+				"grantsLanguage": {
+					"type": "boolean"
+				},
+				"spellScrollLevel": {
+					"type": "integer"
+				},
+				"seeAlsoDeck": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
+					}
+				},
+				"seeAlsoVehicle": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\"."
+					}
+				},
+				"reqAttuneTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"reqAttuneAltTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"miscTags": {
+					"type": "array",
+					"items": {
+						"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
+						"enum": [
+							"CF/W",
+							"TT"
+						]
+					}
+				},
+				"mastery": {
+					"$ref": "items-shared.json#/$defs/itemMastery"
+				},
+				"reach": {
+					"$ref": "items-shared.json#/$defs/itemReach"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"hasRefs": {
+					"type": "boolean",
+					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+				},
+				"customProperties": {
+					"$ref": "items-shared.json#/$defs/customProperties"
+				},
+				"acSpecial": {
+					"$ref": "items-shared.json#/$defs/itemAcSpecial"
+				},
+				"currencyConversion": {
+					"description": "ID of a value conversion table. Homebrew only.",
+					"type": "string"
+				},
+				"alCertificateId": {
+					"description": "Adventurers League item certificate ID; for use in homebrew.",
+					"type": "string"
+				},
+				"foundryType": {
+					"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
+					"type": "string",
+					"enum": [
+						"weapon",
+						"equipment",
+						"consumable",
+						"tool",
+						"loot",
+						"class",
+						"spell",
+						"feat",
+						"backpack"
 					]
+				},
+				"foundrySystem": {
+					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryFlags": {
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
+				},
+				"foundryEffects": {
+					"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
+				},
+				"foundryImg": {
+					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"fluff": {
+					"$ref": "items-shared.json#/$defs/fluff"
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"name",
+				"rarity",
+				"source"
+			]
+		},
+		"item": {
+			"anyOf": [
+				{
+					"$ref": "#/$defs/_item"
 				},
 				{
 					"type": "object",
@@ -1676,6 +1679,569 @@
 					]
 				}
 			]
+		},
+		"subEntityItem": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"type": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
+				"typeAlt": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
+				"rarity": {
+					"$ref": "items-shared.json#/$defs/itemRarity"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"additionalSources": {
+					"$ref": "util.json#/$defs/additionalSources"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"baseItem": {
+					"type": "string"
+				},
+				"ac": {
+					"type": "integer"
+				},
+				"age": {
+					"$ref": "items-shared.json#/$defs/itemAge"
+				},
+				"carryingCapacity": {
+					"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
+				},
+				"dmg1": {
+					"type": "string"
+				},
+				"dmg2": {
+					"type": "string",
+					"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+				},
+				"dmgType": {
+					"$ref": "util.json#/$defs/dataDamageTags"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"additionalEntries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"property": {
+					"$ref": "items-shared.json#/$defs/itemProperty"
+				},
+				"range": {
+					"type": "string"
+				},
+				"reload": {
+					"type": [
+						"string",
+						"integer"
+					]
+				},
+				"reqAttune": {
+					"type": [
+						"string",
+						"boolean"
+					]
+				},
+				"reqAttuneAlt": {
+					"description": "Used for filtering.",
+					"type": [
+						"string",
+						"boolean"
+					]
+				},
+				"curse": {
+					"type": "boolean"
+				},
+				"vulnerable": {
+					"$ref": "util.json#/$defs/damageVulnerabilityArray"
+				},
+				"resist": {
+					"$ref": "util.json#/$defs/damageResistArray"
+				},
+				"immune": {
+					"$ref": "util.json#/$defs/damageImmunityArray"
+				},
+				"conditionImmune": {
+					"$ref": "util.json#/$defs/conditionImmunityArray"
+				},
+				"detail1": {
+					"description": "A descriptive field that can be used to complete entries in variants.",
+					"type": "string"
+				},
+				"scfType": {
+					"$ref": "items-shared.json#/$defs/itemScfType"
+				},
+				"speed": {
+					"$ref": "items-shared.json#/$defs/itemSpeed"
+				},
+				"stealth": {
+					"type": "boolean"
+				},
+				"strength": {
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				"dexterityMax": {
+					"$ref": "items-shared.json#/$defs/itemDexterityMax"
+				},
+				"firearm": {
+					"type": "boolean"
+				},
+				"staff": {
+					"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
+					"type": "boolean"
+				},
+				"tier": {
+					"$ref": "items-shared.json#/$defs/itemTier"
+				},
+				"value": {
+					"description": "In copper pieces.",
+					"type": [
+						"number",
+						"null"
+					]
+				},
+				"valueMult": {
+					"type": "number"
+				},
+				"weaponCategory": {
+					"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+				},
+				"weight": {
+					"type": "number"
+				},
+				"weightMult": {
+					"type": "number"
+				},
+				"weightNote": {
+					"type": "string"
+				},
+				"wondrous": {
+					"type": "boolean"
+				},
+				"tattoo": {
+					"type": "boolean"
+				},
+				"sentient": {
+					"type": "boolean"
+				},
+				"poison": {
+					"type": "boolean"
+				},
+				"poisonTypes": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"examples": [
+							"contact",
+							"ingested",
+							"injury",
+							"inhaled"
+						]
+					}
+				},
+				"crew": {
+					"type": "integer"
+				},
+				"crewMin": {
+					"description": "For crews specified as an X-Y min-max.",
+					"type": "integer"
+				},
+				"crewMax": {
+					"description": "For crews specified as an X-Y min-max.",
+					"type": "integer"
+				},
+				"capPassenger": {
+					"type": "integer"
+				},
+				"capCargo": {
+					"type": "number"
+				},
+				"vehSpeed": {
+					"type": "number"
+				},
+				"vehAc": {
+					"type": "integer"
+				},
+				"vehHp": {
+					"type": "integer"
+				},
+				"vehDmgThresh": {
+					"type": "integer"
+				},
+				"travelCost": {
+					"description": "In copper pieces per mile per passenger.",
+					"type": "integer"
+				},
+				"shippingCost": {
+					"description": "In copper pieces per 100 lbs per mile.",
+					"type": "integer"
+				},
+				"charges": {
+					"type": [
+						"string",
+						"integer"
+					]
+				},
+				"recharge": {
+					"$ref": "items-shared.json#/$defs/itemRecharge"
+				},
+				"rechargeAmount": {
+					"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+				},
+				"optionalfeatures": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"attachedSpells": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				"ability": {
+					"description": "Item ability score adjustments.",
+					"type": "object",
+					"properties": {
+						"choose": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"from": {
+										"type": "array",
+										"items": {
+											"enum": [
+												"str",
+												"dex",
+												"con",
+												"int",
+												"wis",
+												"cha"
+											]
+										},
+										"uniqueItems": true
+									},
+									"count": {
+										"type": "integer"
+									},
+									"amount": {
+										"type": "integer"
+									}
+								},
+								"required": [
+									"from"
+								],
+								"additionalProperties": false
+							}
+						},
+						"static": {
+							"type": "object",
+							"properties": {
+								"str": {
+									"type": "integer"
+								},
+								"dex": {
+									"type": "integer"
+								},
+								"con": {
+									"type": "integer"
+								},
+								"int": {
+									"type": "integer"
+								},
+								"wis": {
+									"type": "integer"
+								},
+								"cha": {
+									"type": "integer"
+								}
+							},
+							"additionalProperties": false
+						},
+						"str": {
+							"type": "integer"
+						},
+						"dex": {
+							"type": "integer"
+						},
+						"con": {
+							"type": "integer"
+						},
+						"int": {
+							"type": "integer"
+						},
+						"wis": {
+							"type": "integer"
+						},
+						"cha": {
+							"type": "integer"
+						}
+					}
+				},
+				"focus": {
+					"description": "Item can be used as a spellcasting focus",
+					"oneOf": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "array",
+							"items": {
+								"type": "string",
+								"examples": [
+									"Artificer",
+									"Bard",
+									"Cleric",
+									"Druid",
+									"Paladin",
+									"Ranger",
+									"Sorcerer",
+									"Warlock",
+									"Wizard"
+								]
+							}
+						}
+					]
+				},
+				"lootTables": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"critThreshold": {
+					"type": "integer"
+				},
+				"bonusAc": {
+					"type": "string"
+				},
+				"bonusWeapon": {
+					"type": "string"
+				},
+				"bonusWeaponAttack": {
+					"type": "string"
+				},
+				"bonusWeaponDamage": {
+					"type": "string"
+				},
+				"bonusWeaponCritDamage": {
+					"type": "string"
+				},
+				"bonusSpellAttack": {
+					"type": "string"
+				},
+				"bonusSpellDamage": {
+					"type": "string"
+				},
+				"bonusSpellSaveDc": {
+					"type": "string"
+				},
+				"bonusSavingThrow": {
+					"type": "string"
+				},
+				"bonusAbilityCheck": {
+					"type": "string"
+				},
+				"bonusProficiencyBonus": {
+					"type": "string"
+				},
+				"bonusSavingThrowConcentration": {
+					"type": "string"
+				},
+				"modifySpeed": {
+					"$ref": "items-shared.json#/$defs/itemModifySpeed"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
+				},
+				"atomicPackContents": {
+					"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
+					"type": "boolean"
+				},
+				"containerCapacity": {
+					"type": "object",
+					"properties": {
+						"weight": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							}
+						},
+						"item": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"patternProperties": {
+									".*": {
+										"type": "integer"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"weightless": {
+							"description": "If the container renders its contents weightless.",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"ammoType": {
+					"$ref": "items-shared.json#/$defs/itemAmmoType"
+				},
+				"packContents": {
+					"$ref": "items-shared.json#/$defs/packContents"
+				},
+				"grantsProficiency": {
+					"type": "boolean"
+				},
+				"grantsLanguage": {
+					"type": "boolean"
+				},
+				"spellScrollLevel": {
+					"type": "integer"
+				},
+				"seeAlsoDeck": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
+					}
+				},
+				"seeAlsoVehicle": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\"."
+					}
+				},
+				"reqAttuneTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"reqAttuneAltTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"miscTags": {
+					"type": "array",
+					"items": {
+						"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
+						"enum": [
+							"CF/W",
+							"TT"
+						]
+					}
+				},
+				"mastery": {
+					"$ref": "items-shared.json#/$defs/itemMastery"
+				},
+				"reach": {
+					"$ref": "items-shared.json#/$defs/itemReach"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"hasRefs": {
+					"type": "boolean",
+					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+				},
+				"customProperties": {
+					"$ref": "items-shared.json#/$defs/customProperties"
+				},
+				"acSpecial": {
+					"$ref": "items-shared.json#/$defs/itemAcSpecial"
+				},
+				"currencyConversion": {
+					"description": "ID of a value conversion table. Homebrew only.",
+					"type": "string"
+				},
+				"alCertificateId": {
+					"description": "Adventurers League item certificate ID; for use in homebrew.",
+					"type": "string"
+				},
+				"foundryType": {
+					"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
+					"type": "string",
+					"enum": [
+						"weapon",
+						"equipment",
+						"consumable",
+						"tool",
+						"loot",
+						"class",
+						"spell",
+						"feat",
+						"backpack"
+					]
+				},
+				"foundrySystem": {
+					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryFlags": {
+					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
+				},
+				"foundryEffects": {
+					"$ref": "util-foundry.json#/$defs/foundryEffectsArray"
+				},
+				"foundryImg": {
+					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"fluff": {
+					"$ref": "items-shared.json#/$defs/fluff"
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"name",
+				"rarity",
+				"source"
+			]
+		},
+		"subEntityItemArray": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/subEntityItem"
+			},
+			"uniqueItems": true,
+			"minItems": 1
 		},
 		"itemGroup": {
 			"anyOf": [

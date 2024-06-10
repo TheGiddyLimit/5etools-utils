@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -86,7 +86,13 @@
 		},
 		"foundrySubEntitiesObject": {
 			"description": "A 5etools-data-like object of additional entities to import.",
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"item": {
+					"$ref": "items.json#/$defs/subEntityItemArray"
+				}
+			},
+			"minProperties": 1
 		},
 		"_foundryEffectObject": {
 			"type": "object",
