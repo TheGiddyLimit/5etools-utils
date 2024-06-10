@@ -1,14 +1,18 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-token.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"title": "Util: Token",
 
 	"$defs": {
 		"tokenUrl": {
 			"deprecated": true,
-			"description": "A full token URL for the entity. Prefer \"tokenHref\" instead.",
-			"$ref": "util.json#/$defs/url"
+			"description": "A full token URL for the entity. Prefer \"tokenHref\" instead, or \"token\" for internal use.",
+			"$ref": "util.json#/$defs/url",
+			"not": {
+				"type": "string",
+				"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io)/"
+			}
 		},
 
 		"token": {
