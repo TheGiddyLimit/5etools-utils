@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.11",
+	"version": "1.14.12",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -507,6 +507,9 @@
 					"type": "boolean",
 					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 				},
+				"foundrySystem": {
+					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
 				"customProperties": {
 					"$ref": "items-shared.json#/$defs/customProperties"
 				},
@@ -535,9 +538,6 @@
 						"feat",
 						"backpack"
 					]
-				},
-				"foundrySystem": {
-					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -1067,6 +1067,9 @@
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 						},
+						"foundrySystem": {
+							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+						},
 						"customProperties": {
 							"$ref": "items-shared.json#/$defs/customProperties"
 						},
@@ -1095,9 +1098,6 @@
 								"feat",
 								"backpack"
 							]
-						},
-						"foundrySystem": {
-							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -1622,6 +1622,9 @@
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 						},
+						"foundrySystem": {
+							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+						},
 						"customProperties": {
 							"$ref": "items-shared.json#/$defs/customProperties"
 						},
@@ -1650,9 +1653,6 @@
 								"feat",
 								"backpack"
 							]
-						},
-						"foundrySystem": {
-							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -2182,6 +2182,9 @@
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 						},
+						"foundrySystem": {
+							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+						},
 						"customProperties": {
 							"$ref": "items-shared.json#/$defs/customProperties"
 						},
@@ -2210,9 +2213,6 @@
 								"feat",
 								"backpack"
 							]
-						},
-						"foundrySystem": {
-							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -2741,6 +2741,9 @@
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
 						},
+						"foundrySystem": {
+							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+						},
 						"customProperties": {
 							"$ref": "items-shared.json#/$defs/customProperties"
 						},
@@ -2769,9 +2772,6 @@
 								"feat",
 								"backpack"
 							]
-						},
-						"foundrySystem": {
-							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
