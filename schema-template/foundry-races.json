@@ -33,7 +33,7 @@
 							"$ref": "#/$defs/raceData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlockGeneric"
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}
@@ -85,7 +85,7 @@
 							"$ref": "#/$defs/raceFeatureData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlockGeneric"
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

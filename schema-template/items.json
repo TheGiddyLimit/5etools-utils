@@ -472,7 +472,7 @@
 							"$ref": "#/$defs/itemData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlockGeneric"
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}
@@ -536,7 +536,7 @@
 							}
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlockGeneric"
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

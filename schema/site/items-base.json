@@ -900,7 +900,7 @@
 							"type": "boolean"
 						},
 						"_copy": {
-							"$ref": "util.json#/$defs/copyBlock_copy_generic"
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
 						}
 					},
 					"additionalProperties": false,
@@ -914,7 +914,7 @@
 			"type": "object",
 			"properties": {
 				"_mod": {
-					"$ref": "util.json#/$defs/_modObject"
+					"$ref": "util-copy.json#/$defs/_modObject"
 				},
 				"_templates": {
 					"type": "array",

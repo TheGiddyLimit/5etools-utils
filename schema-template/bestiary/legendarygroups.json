@@ -60,7 +60,7 @@
 							"$ref": "#/$defs/legendaryGroupData"
 						},
 						{
-							"$ref": "../util.json#/$defs/copyBlockGeneric"
+							"$ref": "../util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

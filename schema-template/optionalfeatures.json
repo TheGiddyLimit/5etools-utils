@@ -116,7 +116,7 @@
 							"$ref": "#/$defs/optionalfeatureData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlockGeneric"
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

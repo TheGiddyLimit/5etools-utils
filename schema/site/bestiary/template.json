@@ -58,7 +58,7 @@
 							"$ref": "bestiary.json#/$defs/creatureData"
 						},
 						"_mod": {
-							"$ref": "../util.json#/$defs/_modObject"
+							"$ref": "../util-copy.json#/$defs/_modObject"
 						}
 					}
 				}
@@ -121,7 +121,7 @@
 									"$ref": "bestiary.json#/$defs/creatureData"
 								},
 								"_mod": {
-									"$ref": "../util.json#/$defs/_modObject"
+									"$ref": "../util-copy.json#/$defs/_modObject"
 								}
 							}
 						}
@@ -187,12 +187,12 @@
 									"$ref": "bestiary.json#/$defs/creatureData"
 								},
 								"_mod": {
-									"$ref": "../util.json#/$defs/_modObject"
+									"$ref": "../util-copy.json#/$defs/_modObject"
 								}
 							}
 						},
 						"_copy": {
-							"$ref": "../util.json#/$defs/copyBlock_copy_generic"
+							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
 						}
 					},
 					"additionalProperties": false,

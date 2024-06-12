@@ -47,7 +47,7 @@
 					"type": "object",
 					"properties": {
 						"_root": {"$ref": "bestiary.json#/$defs/creatureData"},
-						"_mod": {"$ref": "../util.json#/$defs/_modObject"}
+						"_mod": {"$ref": "../util-copy.json#/$defs/_modObject"}
 					}
 				}
 			},
@@ -78,7 +78,7 @@
 							"$ref": "#/$defs/monsterTemplateData"
 						},
 						{
-							"$ref": "../util.json#/$defs/copyBlockGeneric"
+							"$ref": "../util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

@@ -348,7 +348,7 @@
 							"$ref": "#/$defs/baseitemData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlockGeneric"
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}
@@ -359,7 +359,7 @@
 			"type": "object",
 			"$$merge": [
 				{
-					"$ref": "util.json#/$defs/copyBlock_copy_base"
+					"$ref": "util-copy.json#/$defs/copyBlock_copy_base"
 				},
 				{
 					"properties": {

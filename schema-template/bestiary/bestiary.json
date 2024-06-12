@@ -1122,7 +1122,7 @@
 							"$ref": "#/$defs/creatureData"
 						},
 						{
-							"$ref": "../util.json#/$defs/copyBlockGeneric"
+							"$ref": "../util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}
@@ -1197,7 +1197,7 @@
 
 		"creatureVersion": {
 			"anyOf": [
-				{"$ref": "../util.json#/$defs/version"},
+				{"$ref": "../util-copy.json#/$defs/version"},
 				{"$ref": "#/$defs/creatureData"}
 			]
 		}

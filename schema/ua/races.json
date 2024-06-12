@@ -228,7 +228,7 @@
 					"type": "boolean"
 				},
 				"_versions": {
-					"$ref": "util.json#/$defs/versionsArray"
+					"$ref": "util-copy.json#/$defs/versionsArray"
 				},
 				"fluff": {
 					"$ref": "#/$defs/fluff"
@@ -460,7 +460,7 @@
 					"type": "boolean"
 				},
 				"_versions": {
-					"$ref": "util.json#/$defs/versionsArray"
+					"$ref": "util-copy.json#/$defs/versionsArray"
 				},
 				"fluff": {
 					"$ref": "#/$defs/fluff"
@@ -783,7 +783,7 @@
 							"type": "boolean"
 						},
 						"_versions": {
-							"$ref": "util.json#/$defs/versionsArray"
+							"$ref": "util-copy.json#/$defs/versionsArray"
 						},
 						"fluff": {
 							"$ref": "#/$defs/fluff"
@@ -1019,13 +1019,13 @@
 							"type": "boolean"
 						},
 						"_versions": {
-							"$ref": "util.json#/$defs/versionsArray"
+							"$ref": "util-copy.json#/$defs/versionsArray"
 						},
 						"fluff": {
 							"$ref": "#/$defs/fluff"
 						},
 						"_copy": {
-							"$ref": "util.json#/$defs/copyBlock_copy_generic"
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
 						}
 					},
 					"additionalProperties": false,
@@ -1261,7 +1261,7 @@
 							"type": "boolean"
 						},
 						"_versions": {
-							"$ref": "util.json#/$defs/versionsArray"
+							"$ref": "util-copy.json#/$defs/versionsArray"
 						},
 						"fluff": {
 							"$ref": "#/$defs/fluff"
@@ -1508,7 +1508,7 @@
 							"type": "boolean"
 						},
 						"_versions": {
-							"$ref": "util.json#/$defs/versionsArray"
+							"$ref": "util-copy.json#/$defs/versionsArray"
 						},
 						"fluff": {
 							"$ref": "#/$defs/fluff"
@@ -1524,7 +1524,7 @@
 							"type": "object"
 						},
 						"_copy": {
-							"$ref": "util.json#/$defs/copyBlock_copy_generic"
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
 						}
 					},
 					"additionalProperties": false,

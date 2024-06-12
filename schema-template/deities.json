@@ -175,7 +175,7 @@
 							"$ref": "#/$defs/deityData"
 						},
 						{
-							"$ref": "util.json#/$defs/copyBlockGeneric"
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
 						}
 					]
 				}

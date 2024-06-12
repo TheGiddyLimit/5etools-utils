@@ -3636,7 +3636,7 @@
 							"$ref": "../util-token.json#/$defs/tokenHref"
 						},
 						"_copy": {
-							"$ref": "../util.json#/$defs/copyBlock_copy_generic"
+							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
 						}
 					},
 					"additionalProperties": false,
@@ -3925,7 +3925,7 @@
 		"creatureVersion": {
 			"anyOf": [
 				{
-					"$ref": "../util.json#/$defs/version"
+					"$ref": "../util-copy.json#/$defs/version"
 				},
 				{
 					"$ref": "#/$defs/creatureData"
