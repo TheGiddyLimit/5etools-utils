@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.29",
+	"version": "1.21.30",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1023,8 +1023,8 @@
 				"miscTags": {
 					"type": "array",
 					"items": {
-						"description": "AOE: Has Areas of Effect\n HPR: Has HP Reduction\n MW: Has Weapon Attacks, Melee\n RW: Has Weapon Attacks, Ranged\n RCH: Has Reach Attacks\n MLW: Has Melee Weapons\n RNG: Has Ranged Weapons\n THW: Has Thrown Weapons",
-						"enum": ["AOE", "HPR", "MW", "RW", "RCH", "MLW", "RNG", "THW"]
+						"description": "AOE: Has Areas of Effect\n CUR: Inflicts Curse\n DIS: Inflicts Disease\n HPR: Has HP Reduction\n MW: Has Weapon Attacks, Melee\n RW: Has Weapon Attacks, Ranged\n RCH: Has Reach Attacks\n MLW: Has Melee Weapons\n RNG: Has Ranged Weapons\n THW: Has Thrown Weapons",
+						"enum": ["AOE", "CUR", "DIS", "HPR", "MW", "RW", "RCH", "MLW", "RNG", "THW"]
 					}
 				},
 				"attachedItems": {
