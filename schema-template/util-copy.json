@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.0.0",
+	"version": "1.0.1",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -27,6 +27,71 @@
 			},
 			"additionalProperties": false
 		},
+
+		"_mod_proficiency_levels": {
+			"description": "1: Proficient\n 2: Expertise",
+			"type": "integer",
+			"enum": [
+				1,
+				2
+			]
+		},
+
+		"_mod_senseObject": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string",
+					"enum": [
+						"blindsight",
+						"darkvision",
+						"tremorsense",
+						"truesight"
+					]
+				},
+				"range": {
+					"type": "integer",
+					"minimum": 0
+				}
+			},
+			"required": ["type", "range"],
+			"additionalProperties": false
+		},
+
+		"_mod_additionalSpellReplacementObject": {
+			"type": "object",
+			"patternProperties": {
+				"^(0|[1-9]e?)$": {
+					"type":  "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"replace": {"type": "string"},
+							"with": {"type": "string"}
+						},
+						"required": ["replace", "with"],
+						"additionalProperties": false
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				}
+			},
+			"additionalProperties": false
+		},
+
+		"_mod_additionalSpellAddRemoveObject": {
+			"type": "object",
+			"patternProperties": {
+				"^(0|[1-9]e?)$": {
+					"type":  "array",
+					"items": {"type": "string"},
+					"minItems": 1,
+					"uniqueItems": true
+				}
+			},
+			"additionalProperties": false
+		},
+
 
 		"copyModifier": {
 			"anyOf": [
@@ -246,18 +311,19 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "replaceSpells"},
-						"spells": {"type": "object"},
-						"daily": {"type": "object"}
+						"spells": {"$ref": "#/$defs/_mod_additionalSpellReplacementObject"},
+						"daily": {"$ref": "#/$defs/_mod_additionalSpellReplacementObject"}
 					},
 					"required": ["mode"],
+					"minProperties": 2,
 					"additionalProperties": false
 				},
 				{
 					"type": "object",
 					"properties": {
 						"mode": {"const": "removeSpells"},
-						"spells": {"type": "object"},
-						"daily": {"type": "object"}
+						"spells": {"$ref": "#/$defs/_mod_additionalSpellAddRemoveObject"},
+						"daily": {"$ref": "#/$defs/_mod_additionalSpellAddRemoveObject"}
 					},
 					"required": ["mode"],
 					"minProperties": 2,
@@ -267,12 +333,35 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "addSpells"},
-						"spells": {"type": "object"},
-						"will": {"type": "array"},
-						"daily": {"type": "object"},
-						"weekly": {"type": "object"},
-						"monthly": {"type": "object"},
-						"yearly": {"type": "object"}
+						"spells": {
+							"type": "object",
+							"patternProperties": {
+								"^(0|[1-9]e?)$": {
+									"type": "object",
+									"properties": {
+										"spells": {
+											"type":  "array",
+											"items": {"type": "string"},
+											"minItems": 1,
+											"uniqueItems": true
+										}
+									},
+									"required": ["spells"],
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						},
+						"will": {
+							"type":  "array",
+							"items": {"type": "string"},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"daily": {"$ref": "#/$defs/_mod_additionalSpellAddRemoveObject"},
+						"weekly": {"$ref": "#/$defs/_mod_additionalSpellAddRemoveObject"},
+						"monthly": {"$ref": "#/$defs/_mod_additionalSpellAddRemoveObject"},
+						"yearly": {"$ref": "#/$defs/_mod_additionalSpellAddRemoveObject"}
 					},
 					"required": ["mode"],
 					"minProperties": 2,
@@ -282,7 +371,15 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "addSkills"},
-						"skills": {"type": "object"}
+						"skills": {
+							"type": "object",
+							"propertyNames": {"$ref": "util.json#/$defs/skillNameLower"},
+							"patternProperties": {
+								"": {"$ref": "#/$defs/_mod_proficiency_levels"}
+							},
+							"minProperties": 1,
+							"additionalProperties": false
+						}
 					},
 					"required": ["mode", "skills"],
 					"additionalProperties": false
@@ -291,7 +388,25 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "addSaves"},
-						"saves": {"type": "object"}
+						"saves": {
+							"type": "object",
+							"propertyNames": {
+								"type": "string",
+								"enum": [
+									"str",
+									"dex",
+									"con",
+									"int",
+									"wis",
+									"cha"
+								]
+							},
+							"patternProperties": {
+								"": {"$ref": "#/$defs/_mod_proficiency_levels"}
+							},
+							"minProperties": 1,
+							"additionalProperties": false
+						}
 					},
 					"required": ["mode", "saves"],
 					"additionalProperties": false
@@ -300,7 +415,7 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "addAllSkills"},
-						"skills": {"type": "integer"}
+						"skills": {"$ref": "#/$defs/_mod_proficiency_levels"}
 					},
 					"required": ["mode", "skills"],
 					"additionalProperties": false
@@ -309,7 +424,7 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "addAllSaves"},
-						"saves": {"type": "integer"}
+						"saves": {"$ref": "#/$defs/_mod_proficiency_levels"}
 					},
 					"required": ["mode", "saves"],
 					"additionalProperties": false
@@ -320,8 +435,13 @@
 						"mode": {"const": "addSenses"},
 						"senses": {
 							"anyOf": [
-								{"type":  "object"},
-								{"type":  "array"}
+								{"$ref": "#/$defs/_mod_senseObject"},
+								{
+									"type":  "array",
+									"items": {"$ref": "#/$defs/_mod_senseObject"},
+									"minItems": 1,
+									"uniqueItems": true
+								}
 							]
 						}
 					},
@@ -371,7 +491,7 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "maxSize"},
-						"max": {"type": "string"}
+						"max": {"$ref": "util.json#/$defs/size"}
 					},
 					"required": ["mode", "max"],
 					"additionalProperties": false
