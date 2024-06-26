@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.12",
+	"version": "1.14.13",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -482,14 +482,7 @@
 					"$ref": "util.json#/$defs/reqAttuneTags"
 				},
 				"miscTags": {
-					"type": "array",
-					"items": {
-						"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
-						"enum": [
-							"CF/W",
-							"TT"
-						]
-					}
+					"$ref": "items-shared.json#/$defs/itemMiscTags"
 				},
 				"mastery": {
 					"$ref": "items-shared.json#/$defs/itemMastery"
@@ -1040,14 +1033,7 @@
 					"$ref": "util.json#/$defs/reqAttuneTags"
 				},
 				"miscTags": {
-					"type": "array",
-					"items": {
-						"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
-						"enum": [
-							"CF/W",
-							"TT"
-						]
-					}
+					"$ref": "items-shared.json#/$defs/itemMiscTags"
 				},
 				"mastery": {
 					"$ref": "items-shared.json#/$defs/itemMastery"
@@ -1600,14 +1586,7 @@
 							"$ref": "util.json#/$defs/reqAttuneTags"
 						},
 						"miscTags": {
-							"type": "array",
-							"items": {
-								"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
-								"enum": [
-									"CF/W",
-									"TT"
-								]
-							}
+							"$ref": "items-shared.json#/$defs/itemMiscTags"
 						},
 						"mastery": {
 							"$ref": "items-shared.json#/$defs/itemMastery"
@@ -2158,14 +2137,7 @@
 					"$ref": "util.json#/$defs/reqAttuneTags"
 				},
 				"miscTags": {
-					"type": "array",
-					"items": {
-						"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
-						"enum": [
-							"CF/W",
-							"TT"
-						]
-					}
+					"$ref": "items-shared.json#/$defs/itemMiscTags"
 				},
 				"mastery": {
 					"$ref": "items-shared.json#/$defs/itemMastery"
@@ -2723,14 +2695,7 @@
 							"$ref": "util.json#/$defs/reqAttuneTags"
 						},
 						"miscTags": {
-							"type": "array",
-							"items": {
-								"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
-								"enum": [
-									"CF/W",
-									"TT"
-								]
-							}
+							"$ref": "items-shared.json#/$defs/itemMiscTags"
 						},
 						"mastery": {
 							"$ref": "items-shared.json#/$defs/itemMastery"
@@ -3282,14 +3247,7 @@
 							"$ref": "util.json#/$defs/reqAttuneTags"
 						},
 						"miscTags": {
-							"type": "array",
-							"items": {
-								"description": "CF/W: Creates Food/Water\nTT: Trinket Table",
-								"enum": [
-									"CF/W",
-									"TT"
-								]
-							}
+							"$ref": "items-shared.json#/$defs/itemMiscTags"
 						},
 						"mastery": {
 							"$ref": "items-shared.json#/$defs/itemMastery"

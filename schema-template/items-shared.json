@@ -4,7 +4,7 @@
 
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.0.8",
+	"version": "1.0.9",
 
 	"$defs" : {
 		"_itemModifySpeedEqual": {
@@ -258,6 +258,14 @@
 						"minProperties": 2
 					}
 				]
+			}
+		},
+
+		"itemMiscTags": {
+			"type": "array",
+			"items": {
+				"description": "CF/W: Creates Food/Water\nCNS: Consumable\nTT: Trinket Table",
+				"enum": ["CF/W", "TT"]
 			}
 		},
 

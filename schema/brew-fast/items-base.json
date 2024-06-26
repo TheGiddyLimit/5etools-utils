@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.22",
+	"version": "1.5.23",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -341,6 +341,9 @@
 						"type": "string"
 					}
 				},
+				"miscTags": {
+					"$ref": "items-shared.json#/$defs/itemMiscTags"
+				},
 				"mastery": {
 					"$ref": "items-shared.json#/$defs/itemMastery"
 				},
@@ -650,6 +653,9 @@
 							"items": {
 								"type": "string"
 							}
+						},
+						"miscTags": {
+							"$ref": "items-shared.json#/$defs/itemMiscTags"
 						},
 						"mastery": {
 							"$ref": "items-shared.json#/$defs/itemMastery"
@@ -964,6 +970,9 @@
 							"items": {
 								"type": "string"
 							}
+						},
+						"miscTags": {
+							"$ref": "items-shared.json#/$defs/itemMiscTags"
 						},
 						"mastery": {
 							"$ref": "items-shared.json#/$defs/itemMastery"
