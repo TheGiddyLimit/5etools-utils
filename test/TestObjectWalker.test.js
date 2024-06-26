@@ -124,3 +124,44 @@ test(
 		}).toThrow(TypeError);
 	},
 );
+
+test(
+	"Test pre/post object",
+	() => {
+		const obj = {
+			a: {
+				id: "a",
+				aa: 1,
+			},
+			b: {
+				id: "b",
+				bb: 2,
+			},
+		};
+		const cpyObj = MiscUtil.copyFast(obj);
+
+		const stack = [];
+		const stackSnapshots = [];
+		const handlers = {
+			preObject: (obj) => {
+				if (obj.id) stack.push(obj.id);
+			},
+			object: (obj) => {
+				if (stack.length) stackSnapshots.push([...stack]);
+			},
+			postObject: (obj) => {
+				if (obj.id) stack.pop();
+			},
+		};
+
+		const walked1 = ObjectWalker.walk({obj, primitiveHandlers: handlers});
+		expect(obj).toEqual(cpyObj);
+		expect(walked1).toBe(obj);
+		expect(walked1).toEqual(cpyObj);
+
+		expect(stackSnapshots).toEqual([
+			["a"],
+			["b"],
+		]);
+	},
+);
