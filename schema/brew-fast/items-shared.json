@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -341,6 +341,7 @@
 				"description": "CF/W: Creates Food/Water\nCNS: Consumable\nTT: Trinket Table",
 				"enum": [
 					"CF/W",
+					"CNS",
 					"TT"
 				]
 			}
