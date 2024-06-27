@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.22",
+	"version": "1.10.23",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -285,7 +285,11 @@
 				},
 				"unlisted": {
 					"description": "If this homebrew file should be ignored/hidden by any indexer.",
-					"type": "boolean"
+					"const": true
+				},
+				"partnered": {
+					"description": "If this homebrew file is \"partnered\" content, usually including sources which are shown under the \"Partnered\" section of \"https://www.dndbeyond.com/sources\".",
+					"const": true
 				},
 				"status": {
 					"description": "An overall status for the homebrew.\n\"ready\" indicates that this brew is ready for use, and is in an internally consistent state.\n\"wip\" indicates that this brew is e.g. incomplete, or partially migrated between versions of the source document(s).\n\"invalid\" indicates that using this brew is inadvisable, because while it is schema-passing, it breaks clients which attempt to use it.\n\"deprecated\" indicates this brew is ready for use, but that using it is inadvisable, because e.g. it has been superseded by another brew.",
