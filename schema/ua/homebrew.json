@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.23",
+	"version": "1.10.24",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -86,7 +86,7 @@
 								"minLength": 3
 							},
 							"partnered": {
-								"description": "If this is a \"partnered\" source; usually one which is available and similarly marked on D&D Beyond.",
+								"description": "If this is a \"partnered\" source; usually one which is shown under the \"Partnered\" section of \"https://www.dndbeyond.com/sources\".",
 								"type": "boolean"
 							},
 							"targetSchema": {
@@ -285,10 +285,6 @@
 				},
 				"unlisted": {
 					"description": "If this homebrew file should be ignored/hidden by any indexer.",
-					"const": true
-				},
-				"partnered": {
-					"description": "If this homebrew file is \"partnered\" content, usually including sources which are shown under the \"Partnered\" section of \"https://www.dndbeyond.com/sources\".",
 					"const": true
 				},
 				"status": {
