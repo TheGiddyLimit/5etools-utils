@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.8.18",
+	"version": "1.8.19",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -986,7 +986,8 @@
 			"additionalProperties": false,
 			"required": [
 				"name",
-				"inherits"
+				"inherits",
+				"requires"
 			]
 		},
 		"_magicvariantItemBrewBaseRarity": {
@@ -1486,7 +1487,8 @@
 			"required": [
 				"name",
 				"rarity",
-				"inherits"
+				"inherits",
+				"requires"
 			]
 		},
 		"magicvariantItem": {
