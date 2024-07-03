@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.21",
+	"version": "1.10.22",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -166,11 +166,6 @@
 					"publishedOrder": {
 						"description": "A sorting order for adventures within a single source.",
 						"type": "integer"
-					},
-					"coverUrl": {
-						"deprecated": true,
-						"description": "A direct link to an image which should be 300 x 300px in size. Larger images will be centred and cropped.",
-						"type": "string"
 					},
 					"cover": {
 						"description": "A link to an image which should be 300 x 300px in size. Larger images will be centred and cropped.",
