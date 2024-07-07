@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.30",
+	"version": "1.21.31",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -936,6 +936,7 @@
 							"Light Sensitivity",
 							"Magic Resistance",
 							"Magic Weapons",
+							"Mimicry",
 							"Pack Tactics",
 							"Pounce",
 							"Rampage",
