@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.16.3",
+	"version": "1.17.0",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -39,24 +39,42 @@
 			"type": "string",
 			"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)"
 		},
-		"source": {
+		"_sourceString": {
 			"type": "string",
 			"description": "An identifying string, as seen in the JSON in \"source\" fields.",
-			"pattern": "^[-a-zA-Z0-9 :&+!]+$"
+			"pattern": "^([-a-zA-Z0-9&+!]{1,2}|[-a-zA-Z0-9&+!][-a-zA-Z0-9&+! ]+[-a-zA-Z0-9&+!])$"
+		},
+		"source": {
+			"anyOf": [
+				{
+					"$ref": "#/$defs/_sourceString"
+				}
+			]
 		},
 		"sourceJson": {
-			"oneOf": [
+			"anyOf": [
 				{
 					"type": "string",
 					"description": "An identifying string, as seen in the JSON in \"source\" fields.",
-					"pattern": "^(?:UA|XUA)[-a-zA-Z0-9 :&+!]+$",
+					"pattern": "^([-a-zA-Z0-9&+!]{1,2}|[-a-zA-Z0-9&+!][-a-zA-Z0-9&+! ]+[-a-zA-Z0-9&+!])$",
 					"minLength": 6,
 					"not": {
-						"$ref": "sources-5etools.json#/$defs/sources"
+						"anyOf": [
+							{
+								"type": "string",
+								"pattern": "^(?!UA|XUA)"
+							},
+							{
+								"$ref": "sources-5etools.json#/$defs/sources"
+							}
+						]
 					}
 				},
 				{
-					"$ref": "sources-homebrew-legacy.json#/$defs/sources"
+					"$ref": "sources-homebrew-legacy.json#/$defs/sourcesShort"
+				},
+				{
+					"$ref": "sources-homebrew-legacy.json#/$defs/sourcesColon"
 				}
 			]
 		},
