@@ -63,6 +63,7 @@
 					"$ref": "util.json#/$defs/additionalFeatsArray"
 				},
 				"traitTags": {
+					"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
 					"oneOf": [
 						{
 							"type": "array",
@@ -295,6 +296,7 @@
 					"$ref": "util.json#/$defs/additionalFeatsArray"
 				},
 				"traitTags": {
+					"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
 					"oneOf": [
 						{
 							"type": "array",
@@ -484,23 +486,14 @@
 		"traitTag": {
 			"oneOf": [
 				{
-					"$ref": "util.json#/$defs/proficiencyTag"
+					"$ref": "util.json#/$defs/traitTagCharacter"
 				},
 				{
 					"type": "string",
 					"enum": [
-						"Amphibious",
 						"Dragonmark",
-						"Improved Resting",
-						"Magic Resistance",
 						"Monstrous Race",
-						"Natural Armor",
-						"Natural Weapon",
 						"NPC Race",
-						"Powerful Build",
-						"Skill Bonus Dice",
-						"Sunlight Sensitivity",
-						"Tool Bonus Dice",
 						"Uncommon Race"
 					]
 				}
@@ -618,6 +611,7 @@
 							"$ref": "util.json#/$defs/additionalFeatsArray"
 						},
 						"traitTags": {
+							"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
 							"oneOf": [
 								{
 									"type": "array",
@@ -854,6 +848,7 @@
 							"$ref": "util.json#/$defs/additionalFeatsArray"
 						},
 						"traitTags": {
+							"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
 							"oneOf": [
 								{
 									"type": "array",
@@ -1096,6 +1091,7 @@
 							"$ref": "util.json#/$defs/additionalFeatsArray"
 						},
 						"traitTags": {
+							"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
 							"oneOf": [
 								{
 									"type": "array",
@@ -1343,6 +1339,7 @@
 							"$ref": "util.json#/$defs/additionalFeatsArray"
 						},
 						"traitTags": {
+							"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
 							"oneOf": [
 								{
 									"type": "array",

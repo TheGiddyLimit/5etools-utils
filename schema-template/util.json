@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.0",
+	"version": "1.17.1",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1103,6 +1103,31 @@
 				"Weapon Proficiency",
 				"Tool Proficiency",
 				"Language Proficiency"
+			]
+		},
+
+		"traitTagCharacter": {
+			"oneOf": [
+				{
+					"$ref": "util.json#/$defs/proficiencyTag"
+				},
+				{
+					"type": "string",
+					"enum": [
+						"Amphibious",
+						"Improved Resting",
+						"Magic Resistance",
+						"Natural Armor",
+						"Natural Weapon",
+						"Powerful Build",
+						"Skill Bonus Dice",
+						"Sunlight Sensitivity",
+						"Tool Bonus Dice",
+						"Damage Resistance",
+						"Damage Immunity",
+						"Condition Immunity"
+					]
+				}
 			]
 		},
 

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.6.4",
+	"version": "1.6.5",
 	"type": "object",
 	"$defs": {
 		"featData": {
@@ -91,6 +91,20 @@
 				},
 				"conditionImmune": {
 					"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+				},
+				"traitTags": {
+					"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
+					"oneOf": [
+						{
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/traitTagCharacter"
+							}
+						},
+						{
+							"type": "null"
+						}
+					]
 				},
 				"hasFluff": {
 					"const": true
@@ -206,6 +220,20 @@
 						},
 						"conditionImmune": {
 							"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+						},
+						"traitTags": {
+							"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
+							"oneOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "util.json#/$defs/traitTagCharacter"
+									}
+								},
+								{
+									"type": "null"
+								}
+							]
 						},
 						"hasFluff": {
 							"const": true
@@ -324,6 +352,20 @@
 						},
 						"conditionImmune": {
 							"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+						},
+						"traitTags": {
+							"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
+							"oneOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "util.json#/$defs/traitTagCharacter"
+									}
+								},
+								{
+									"type": "null"
+								}
+							]
 						},
 						"hasFluff": {
 							"const": true
