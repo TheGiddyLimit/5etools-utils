@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.8.19",
+	"version": "1.8.20",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -112,6 +112,7 @@
 								}
 							}
 						},
+						"minProperties": 1,
 						"additionalProperties": false
 					}
 				},
@@ -479,6 +480,7 @@
 							"$ref": "items-shared.json#/$defs/customProperties"
 						}
 					},
+					"minProperties": 1,
 					"additionalProperties": false
 				},
 				"noDisplay": {
@@ -644,6 +646,7 @@
 								}
 							}
 						},
+						"minProperties": 1,
 						"additionalProperties": false
 					}
 				},
@@ -1016,6 +1019,7 @@
 							"$ref": "items-shared.json#/$defs/customProperties"
 						}
 					},
+					"minProperties": 1,
 					"additionalProperties": false
 				},
 				"noDisplay": {
@@ -1186,6 +1190,7 @@
 								}
 							}
 						},
+						"minProperties": 1,
 						"additionalProperties": false
 					}
 				},
@@ -1557,6 +1562,7 @@
 							"$ref": "items-shared.json#/$defs/customProperties"
 						}
 					},
+					"minProperties": 1,
 					"additionalProperties": false
 				},
 				"noDisplay": {
