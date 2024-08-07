@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.31",
+	"version": "1.21.32",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -667,7 +667,8 @@
 					"required": ["name", "source"]
 				},
 				"legendaryActions": {
-					"type": "number"
+					"type": "integer",
+					"minimum": 1
 				},
 				"legendaryHeader": {
 					"type": "array",
