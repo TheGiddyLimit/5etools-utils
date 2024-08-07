@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.8.20",
+	"version": "1.8.21",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -87,6 +87,12 @@
 							"polearm": {
 								"type": "boolean"
 							},
+							"lance": {
+								"type": "boolean"
+							},
+							"rapier": {
+								"type": "boolean"
+							},
 							"arrow": {
 								"type": "boolean"
 							},
@@ -101,6 +107,9 @@
 							},
 							"weaponCategory": {
 								"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+							},
+							"staff": {
+								"type": "boolean"
 							},
 							"customProperties": {
 								"description": "A more restrictive area for custom boolean-only properties to be stored.",
@@ -329,6 +338,9 @@
 						"weaponCategory": {
 							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
 						},
+						"weight": {
+							"type": "number"
+						},
 						"weightMult": {
 							"type": "number"
 						},
@@ -461,6 +473,12 @@
 						"polearm": {
 							"type": "boolean"
 						},
+						"lance": {
+							"type": "boolean"
+						},
+						"rapier": {
+							"type": "boolean"
+						},
 						"arrow": {
 							"type": "boolean"
 						},
@@ -475,6 +493,9 @@
 						},
 						"weaponCategory": {
 							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+						},
+						"staff": {
+							"type": "boolean"
 						},
 						"customProperties": {
 							"$ref": "items-shared.json#/$defs/customProperties"
@@ -621,6 +642,12 @@
 							"polearm": {
 								"type": "boolean"
 							},
+							"lance": {
+								"type": "boolean"
+							},
+							"rapier": {
+								"type": "boolean"
+							},
 							"arrow": {
 								"type": "boolean"
 							},
@@ -635,6 +662,9 @@
 							},
 							"weaponCategory": {
 								"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+							},
+							"staff": {
+								"type": "boolean"
 							},
 							"customProperties": {
 								"description": "A more restrictive area for custom boolean-only properties to be stored.",
@@ -863,6 +893,9 @@
 						"weaponCategory": {
 							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
 						},
+						"weight": {
+							"type": "number"
+						},
 						"weightMult": {
 							"type": "number"
 						},
@@ -1000,6 +1033,12 @@
 						"polearm": {
 							"type": "boolean"
 						},
+						"lance": {
+							"type": "boolean"
+						},
+						"rapier": {
+							"type": "boolean"
+						},
 						"arrow": {
 							"type": "boolean"
 						},
@@ -1014,6 +1053,9 @@
 						},
 						"weaponCategory": {
 							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+						},
+						"staff": {
+							"type": "boolean"
 						},
 						"customProperties": {
 							"$ref": "items-shared.json#/$defs/customProperties"
@@ -1165,6 +1207,12 @@
 							"polearm": {
 								"type": "boolean"
 							},
+							"lance": {
+								"type": "boolean"
+							},
+							"rapier": {
+								"type": "boolean"
+							},
 							"arrow": {
 								"type": "boolean"
 							},
@@ -1179,6 +1227,9 @@
 							},
 							"weaponCategory": {
 								"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+							},
+							"staff": {
+								"type": "boolean"
 							},
 							"customProperties": {
 								"description": "A more restrictive area for custom boolean-only properties to be stored.",
@@ -1407,6 +1458,9 @@
 						"weaponCategory": {
 							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
 						},
+						"weight": {
+							"type": "number"
+						},
 						"weightMult": {
 							"type": "number"
 						},
@@ -1543,6 +1597,12 @@
 						"polearm": {
 							"type": "boolean"
 						},
+						"lance": {
+							"type": "boolean"
+						},
+						"rapier": {
+							"type": "boolean"
+						},
 						"arrow": {
 							"type": "boolean"
 						},
@@ -1557,6 +1617,9 @@
 						},
 						"weaponCategory": {
 							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+						},
+						"staff": {
+							"type": "boolean"
 						},
 						"customProperties": {
 							"$ref": "items-shared.json#/$defs/customProperties"
