@@ -1,6 +1,6 @@
 {
 	"name": "5etools-utils",
-	"version": "0.12.23",
+	"version": "0.12.24",
 	"description": "Shared utilities for the 5etools ecosystem.",
 	"type": "module",
 	"main": "lib/Api.js",
