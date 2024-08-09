@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.25",
+	"version": "1.10.26",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -550,8 +550,14 @@
 		"disease": {
 			"$ref": "conditionsdiseases.json#/properties/disease"
 		},
+		"diseaseFluff": {
+			"$ref": "fluff-conditionsdiseases.json#/properties/diseaseFluff"
+		},
 		"status": {
 			"$ref": "conditionsdiseases.json#/properties/status"
+		},
+		"statusFluff": {
+			"$ref": "fluff-conditionsdiseases.json#/properties/statusFluff"
 		},
 		"cult": {
 			"$ref": "cultsboons.json#/properties/cult"
