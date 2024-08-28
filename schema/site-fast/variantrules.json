@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "variantrules.json",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"title": "RulesArray",
 	"type": "object",
 	"properties": {
@@ -41,9 +41,10 @@
 					"$ref": "util.json#/$defs/page"
 				},
 				"ruleType": {
-					"description": "O: Optional\n P: Prerelease\n V: Variant\n VO: Variant Optional\n VV: Variant Variant",
+					"description": "C: Core\n O: Optional\n P: Prerelease\n V: Variant\n VO: Variant Optional\n VV: Variant Variant",
 					"type": "string",
 					"enum": [
+						"C",
 						"O",
 						"V",
 						"VO",

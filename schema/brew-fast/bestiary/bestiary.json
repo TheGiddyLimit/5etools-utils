@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.32",
+	"version": "1.21.33",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -322,6 +322,33 @@
 				},
 				"speed": {
 					"$ref": "../util.json#/$defs/speed"
+				},
+				"initiative": {
+					"oneOf": [
+						{
+							"type": "object",
+							"properties": {
+								"initiative": {
+									"type": "number"
+								},
+								"proficient": {
+									"const": true
+								},
+								"advantageMode": {
+									"type": "string",
+									"enum": [
+										"adv",
+										"dis"
+									]
+								}
+							},
+							"minProperties": 1,
+							"additionalProperties": false
+						},
+						{
+							"type": "number"
+						}
+					]
 				},
 				"str": {
 					"$ref": "#/$defs/abilityScore"
@@ -1501,6 +1528,33 @@
 						},
 						"speed": {
 							"$ref": "../util.json#/$defs/speed"
+						},
+						"initiative": {
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"initiative": {
+											"type": "number"
+										},
+										"proficient": {
+											"const": true
+										},
+										"advantageMode": {
+											"type": "string",
+											"enum": [
+												"adv",
+												"dis"
+											]
+										}
+									},
+									"minProperties": 1,
+									"additionalProperties": false
+								},
+								{
+									"type": "number"
+								}
+							]
 						},
 						"str": {
 							"$ref": "#/$defs/abilityScore"
@@ -2685,6 +2739,33 @@
 						},
 						"speed": {
 							"$ref": "../util.json#/$defs/speed"
+						},
+						"initiative": {
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"initiative": {
+											"type": "number"
+										},
+										"proficient": {
+											"const": true
+										},
+										"advantageMode": {
+											"type": "string",
+											"enum": [
+												"adv",
+												"dis"
+											]
+										}
+									},
+									"minProperties": 1,
+									"additionalProperties": false
+								},
+								{
+									"type": "number"
+								}
+							]
 						},
 						"str": {
 							"$ref": "#/$defs/abilityScore"
