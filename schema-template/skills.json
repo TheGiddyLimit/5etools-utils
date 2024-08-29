@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "skills.json",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"type": "object",
 	"$defs": {
 		"skill": {
@@ -12,6 +12,7 @@
 				"page": {"$ref": "util.json#/$defs/page"},
 				"srd": {"$ref": "util.json#/$defs/srd"},
 				"basicRules": {"$ref": "util.json#/$defs/basicRules"},
+				"ability": {"$ref": "util.json#/$defs/abilityScoreAbbreviation"},
 				"entries": {
 					"type": "array",
 					"items": {

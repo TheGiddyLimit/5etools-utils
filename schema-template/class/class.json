@@ -93,9 +93,7 @@
 			"enum": ["full", "1/2", "1/3", "pact", "artificer"]
 		},
 
-		"spellcastingAbility": {
-			"enum": ["str", "dex", "con", "int", "wis", "cha"]
-		},
+		"spellcastingAbility": {"$ref": "../util.json#/$defs/abilityScoreAbbreviation"},
 
 		"cantripProgression": {
 			"type": "array",
@@ -708,10 +706,7 @@
 				},
 				"proficiency": {
 					"type": "array",
-					"items": {
-						"type": "string",
-						"enum": ["str", "dex", "con", "int", "wis", "cha"]
-					}
+					"items": {"$ref": "../util.json#/$defs/abilityScoreAbbreviation"}
 				},
 				"classTableGroups": {
 					"type": "array",

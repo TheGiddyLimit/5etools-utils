@@ -619,10 +619,7 @@
 						},
 						"attributes": {
 							"type": "array",
-							"items": {
-								"type": "string",
-								"enum": ["str", "dex", "con", "int", "wis", "cha"]
-							}
+							"items": {"$ref": "util.json#/$defs/abilityScoreAbbreviation"}
 						}
 					},
 					"required": ["text"],
@@ -2290,10 +2287,7 @@
 								"$ref": "#"
 							}
 						},
-						"ability": {
-							"type": "string",
-							"enum": ["str", "dex", "con", "int", "wis", "cha"]
-						},
+						"ability": {"$ref": "util.json#/$defs/abilityScoreAbbreviation"},
 						"displayAs": {
 							"description": "Implicitly \"trait\"",
 							"type": "string",

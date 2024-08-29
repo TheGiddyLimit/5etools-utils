@@ -202,6 +202,17 @@
 				"subclass"
 			]
 		},
+		"abilityScoreAbbreviation": {
+			"type": "string",
+			"enum": [
+				"str",
+				"dex",
+				"con",
+				"int",
+				"wis",
+				"cha"
+			]
+		},
 		"languageNameLower": {
 			"type": "string",
 			"enum": [
@@ -1517,14 +1528,7 @@
 									"from": {
 										"type": "array",
 										"items": {
-											"enum": [
-												"str",
-												"dex",
-												"con",
-												"int",
-												"wis",
-												"cha"
-											]
+											"$ref": "#/$defs/abilityScoreAbbreviation"
 										},
 										"uniqueItems": true,
 										"minItems": 1
@@ -1553,14 +1557,7 @@
 											"from": {
 												"type": "array",
 												"items": {
-													"enum": [
-														"str",
-														"dex",
-														"con",
-														"int",
-														"wis",
-														"cha"
-													]
+													"$ref": "#/$defs/abilityScoreAbbreviation"
 												},
 												"uniqueItems": true,
 												"minItems": 1
@@ -3154,15 +3151,7 @@
 									"choose": {
 										"type": "array",
 										"items": {
-											"type": "string",
-											"enum": [
-												"str",
-												"dex",
-												"con",
-												"int",
-												"wis",
-												"cha"
-											]
+											"$ref": "#/$defs/abilityScoreAbbreviation"
 										},
 										"uniqueItems": true
 									}

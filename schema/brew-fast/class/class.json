@@ -102,14 +102,7 @@
 			]
 		},
 		"spellcastingAbility": {
-			"enum": [
-				"str",
-				"dex",
-				"con",
-				"int",
-				"wis",
-				"cha"
-			]
+			"$ref": "../util.json#/$defs/abilityScoreAbbreviation"
 		},
 		"cantripProgression": {
 			"type": "array",
@@ -1109,15 +1102,7 @@
 						"proficiency": {
 							"type": "array",
 							"items": {
-								"type": "string",
-								"enum": [
-									"str",
-									"dex",
-									"con",
-									"int",
-									"wis",
-									"cha"
-								]
+								"$ref": "../util.json#/$defs/abilityScoreAbbreviation"
 							}
 						},
 						"classTableGroups": {
@@ -1380,15 +1365,7 @@
 						"proficiency": {
 							"type": "array",
 							"items": {
-								"type": "string",
-								"enum": [
-									"str",
-									"dex",
-									"con",
-									"int",
-									"wis",
-									"cha"
-								]
+								"$ref": "../util.json#/$defs/abilityScoreAbbreviation"
 							}
 						},
 						"classTableGroups": {
@@ -1654,15 +1631,7 @@
 				"proficiency": {
 					"type": "array",
 					"items": {
-						"type": "string",
-						"enum": [
-							"str",
-							"dex",
-							"con",
-							"int",
-							"wis",
-							"cha"
-						]
+						"$ref": "../util.json#/$defs/abilityScoreAbbreviation"
 					}
 				},
 				"classTableGroups": {
