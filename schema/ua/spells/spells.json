@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.13",
+	"version": "1.9.14",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -60,6 +60,7 @@
 								"line",
 								"cube",
 								"cone",
+								"emanation",
 								"radius",
 								"sphere",
 								"hemisphere",
@@ -579,6 +580,7 @@
 										"line",
 										"cube",
 										"cone",
+										"emanation",
 										"radius",
 										"sphere",
 										"hemisphere",
@@ -1106,6 +1108,7 @@
 										"line",
 										"cube",
 										"cone",
+										"emanation",
 										"radius",
 										"sphere",
 										"hemisphere",
