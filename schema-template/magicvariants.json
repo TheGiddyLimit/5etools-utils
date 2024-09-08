@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.8.22",
+	"version": "1.9.0",
 	"type": "object",
 
 	"$defs" : {
@@ -12,6 +12,7 @@
 					"type": "string"
 				},
 				"alias": {"$ref": "util.json#/$defs/alias"},
+				"edition": {"$ref": "util-edition.json#/$defs/edition"},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
 				},
@@ -424,7 +425,10 @@
 					"required": [
 						"name",
 						"inherits",
-						"requires"
+						"requires",
+						{
+							"$$ifSite_item": "edition"
+						}
 					]
 				}
 			]
@@ -451,7 +455,10 @@
 						"name",
 						"rarity",
 						"inherits",
-						"requires"
+						"requires",
+						{
+							"$$ifSite_item": "edition"
+						}
 					]
 				}
 			]

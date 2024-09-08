@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.5.24",
+	"version": "1.6.0",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -114,6 +114,9 @@
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"acceptsVariantEdition": {
+					"$ref": "util-edition.json#/$defs/editionChoice"
 				},
 				"ac": {
 					"type": "integer"
@@ -435,6 +438,9 @@
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"acceptsVariantEdition": {
+							"$ref": "util-edition.json#/$defs/editionChoice"
 						},
 						"ac": {
 							"type": "integer"
@@ -760,6 +766,9 @@
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"acceptsVariantEdition": {
+							"$ref": "util-edition.json#/$defs/editionChoice"
 						},
 						"ac": {
 							"type": "integer"
@@ -1350,11 +1359,14 @@
 			"items": {
 				"type": "object",
 				"properties": {
-					"appliesTo": {
+					"name": {
 						"type": "string"
 					},
 					"source": {
 						"$ref": "util.json#/$defs/source"
+					},
+					"appliesTo": {
+						"type": "string"
 					},
 					"entries": {
 						"type": "array",
