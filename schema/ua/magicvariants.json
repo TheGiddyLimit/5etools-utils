@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.0",
+	"version": "1.9.1",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -100,6 +100,9 @@
 								"type": "boolean"
 							},
 							"bolt": {
+								"type": "boolean"
+							},
+							"bulletFirearm": {
 								"type": "boolean"
 							},
 							"bulletSling": {
@@ -481,6 +484,9 @@
 						"bolt": {
 							"type": "boolean"
 						},
+						"bulletFirearm": {
+							"type": "boolean"
+						},
 						"bulletSling": {
 							"type": "boolean"
 						},
@@ -636,6 +642,9 @@
 								"type": "boolean"
 							},
 							"bolt": {
+								"type": "boolean"
+							},
+							"bulletFirearm": {
 								"type": "boolean"
 							},
 							"bulletSling": {
@@ -1022,6 +1031,9 @@
 						"bolt": {
 							"type": "boolean"
 						},
+						"bulletFirearm": {
+							"type": "boolean"
+						},
 						"bulletSling": {
 							"type": "boolean"
 						},
@@ -1182,6 +1194,9 @@
 								"type": "boolean"
 							},
 							"bolt": {
+								"type": "boolean"
+							},
+							"bulletFirearm": {
 								"type": "boolean"
 							},
 							"bulletSling": {
@@ -1565,6 +1580,9 @@
 							"type": "boolean"
 						},
 						"bolt": {
+							"type": "boolean"
+						},
+						"bulletFirearm": {
 							"type": "boolean"
 						},
 						"bulletSling": {

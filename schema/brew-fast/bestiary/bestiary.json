@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.33",
+	"version": "1.21.34",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -907,6 +907,9 @@
 				"altArt": {
 					"$ref": "../util-token.json#/$defs/altArt"
 				},
+				"token": {
+					"$ref": "../util-token.json#/$defs/token"
+				},
 				"isNamedCreature": {
 					"type": "boolean"
 				},
@@ -1304,9 +1307,6 @@
 				},
 				"tokenUrl": {
 					"$ref": "../util-token.json#/$defs/tokenUrl"
-				},
-				"token": {
-					"$ref": "../util-token.json#/$defs/token"
 				},
 				"tokenHref": {
 					"$ref": "../util-token.json#/$defs/tokenHref"
@@ -2113,6 +2113,9 @@
 						"altArt": {
 							"$ref": "../util-token.json#/$defs/altArt"
 						},
+						"token": {
+							"$ref": "../util-token.json#/$defs/token"
+						},
 						"isNamedCreature": {
 							"type": "boolean"
 						},
@@ -2510,9 +2513,6 @@
 						},
 						"tokenUrl": {
 							"$ref": "../util-token.json#/$defs/tokenUrl"
-						},
-						"token": {
-							"$ref": "../util-token.json#/$defs/token"
 						},
 						"tokenHref": {
 							"$ref": "../util-token.json#/$defs/tokenHref"
@@ -3324,6 +3324,9 @@
 						"altArt": {
 							"$ref": "../util-token.json#/$defs/altArt"
 						},
+						"token": {
+							"$ref": "../util-token.json#/$defs/token"
+						},
 						"isNamedCreature": {
 							"type": "boolean"
 						},
@@ -3721,9 +3724,6 @@
 						},
 						"tokenUrl": {
 							"$ref": "../util-token.json#/$defs/tokenUrl"
-						},
-						"token": {
-							"$ref": "../util-token.json#/$defs/token"
 						},
 						"tokenHref": {
 							"$ref": "../util-token.json#/$defs/tokenHref"

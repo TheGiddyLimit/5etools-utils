@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.13",
+	"version": "1.14.14",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -424,7 +424,13 @@
 						"weight": {
 							"type": "array",
 							"items": {
-								"type": "integer"
+								"type": "number"
+							}
+						},
+						"volume": {
+							"type": "array",
+							"items": {
+								"type": "number"
 							}
 						},
 						"item": {
@@ -934,7 +940,13 @@
 						"weight": {
 							"type": "array",
 							"items": {
-								"type": "integer"
+								"type": "number"
+							}
+						},
+						"volume": {
+							"type": "array",
+							"items": {
+								"type": "number"
 							}
 						},
 						"item": {
@@ -1446,7 +1458,13 @@
 								"weight": {
 									"type": "array",
 									"items": {
-										"type": "integer"
+										"type": "number"
+									}
+								},
+								"volume": {
+									"type": "array",
+									"items": {
+										"type": "number"
 									}
 								},
 								"item": {
@@ -1956,7 +1974,13 @@
 						"weight": {
 							"type": "array",
 							"items": {
-								"type": "integer"
+								"type": "number"
+							}
+						},
+						"volume": {
+							"type": "array",
+							"items": {
+								"type": "number"
 							}
 						},
 						"item": {
@@ -2476,7 +2500,13 @@
 								"weight": {
 									"type": "array",
 									"items": {
-										"type": "integer"
+										"type": "number"
+									}
+								},
+								"volume": {
+									"type": "array",
+									"items": {
+										"type": "number"
 									}
 								},
 								"item": {
@@ -2987,7 +3017,13 @@
 								"weight": {
 									"type": "array",
 									"items": {
-										"type": "integer"
+										"type": "number"
+									}
+								},
+								"volume": {
+									"type": "array",
+									"items": {
+										"type": "number"
 									}
 								},
 								"item": {

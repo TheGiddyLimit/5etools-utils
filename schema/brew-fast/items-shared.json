@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -300,7 +300,12 @@
 				"crossbow bolt|phb",
 				"arrow|phb",
 				"renaissance bullet",
-				"sling bullet|phb"
+				"sling bullet|phb",
+				"needle|xphb",
+				"bolt|xphb",
+				"arrow|xphb",
+				"firearm bullet|xphb",
+				"sling bullet|xphb"
 			]
 		},
 		"itemMastery": {
