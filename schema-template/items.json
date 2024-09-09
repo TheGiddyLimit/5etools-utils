@@ -335,13 +335,13 @@
 						"weight": {
 							"type": "array",
 							"items": {
-								"type": "integer"
+								"type": "number"
 							}
 						},
 						"volume": {
 							"type": "array",
 							"items": {
-								"type": "integer"
+								"type": "number"
 							}
 						},
 						"item": {
