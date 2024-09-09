@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.13",
+	"version": "1.14.14",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -333,6 +333,12 @@
 					"type": "object",
 					"properties": {
 						"weight": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							}
+						},
+						"volume": {
 							"type": "array",
 							"items": {
 								"type": "integer"
