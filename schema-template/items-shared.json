@@ -4,7 +4,7 @@
 
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.0",
+	"version": "1.1.1",
 
 	"$defs" : {
 		"_itemModifySpeedEqual": {
@@ -256,7 +256,20 @@
 				"key_site": "enum",
 				"key_ua": "enum",
 				"key_brew": "examples",
-				"value": ["energy cell", "modern bullet", "blowgun needle|phb", "crossbow bolt|phb", "arrow|phb", "renaissance bullet", "sling bullet|phb"]
+				"value": [
+					"energy cell",
+					"modern bullet",
+					"blowgun needle|phb",
+					"crossbow bolt|phb",
+					"arrow|phb",
+					"renaissance bullet",
+					"sling bullet|phb",
+					"needle|xphb",
+					"bolt|xphb",
+					"arrow|xphb",
+					"firearm bullet|xphb",
+					"sling bullet|xphb"
+				]
 			}
 		},
 
