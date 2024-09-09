@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.33",
+	"version": "1.21.34",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -857,11 +857,11 @@
 						"$ref": "../util-foundry.json#/$defs/foundryPrototypeTokenObject"
 					}
 				},
+				"token": {"$ref": "../util-token.json#/$defs/token"},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {
 						"tokenUrl": {"$ref": "../util-token.json#/$defs/tokenUrl"},
-						"token": {"$ref": "../util-token.json#/$defs/token"},
 						"tokenHref": {"$ref": "../util-token.json#/$defs/tokenHref"}
 					}
 				},
