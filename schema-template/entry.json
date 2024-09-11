@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.21",
+	"version": "1.8.22",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2160,6 +2160,19 @@
 				"optionalfeature"
 			]
 		},
+		"entryRefFeat": {
+			"description":"For use in classes page content only.",
+			"type": "object",
+			"properties": {
+				"type": {"const": "refFeat"},
+				"feat": {"type": "string"},
+				"name": {"type": "string"}
+			},
+			"required": [
+				"type",
+				"feat"
+			]
+		},
 		"entryHr": {
 			"type": "object",
 			"properties": {
@@ -2537,6 +2550,7 @@
 		{"$ref": "#/$defs/entryRefClassFeature"},
 		{"$ref": "#/$defs/entryRefSubclassFeature"},
 		{"$ref": "#/$defs/entryRefOptionalfeature"},
+		{"$ref": "#/$defs/entryRefFeat"},
 		{"$ref": "#/$defs/entryHr"},
 		{"$ref": "#/$defs/entrySpellcasting"},
 		{"$ref": "#/$defs/entryFlowchart"},
