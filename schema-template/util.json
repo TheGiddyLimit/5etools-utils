@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.2",
+	"version": "1.17.3",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -791,6 +791,7 @@
 					"simple": {"const": true},
 					"martial": {"const": true},
 					"firearms": {"const": true},
+					"improvised": {"const": true},
 
 					"battleaxe|phb": {"const": true},
 					"club|phb": {"const": true},
@@ -860,7 +861,7 @@
 					"light":  {"const": true},
 					"medium": {"const": true},
 					"heavy":  {"const": true},
-					"shield|phb": {"const": true}
+					"shield": {"const": true}
 				},
 				"additionalProperties": false
 			},
@@ -1520,7 +1521,7 @@
 							"properties": {
 								"armor": {
 									"type": "string",
-									"enum": ["light", "medium", "heavy"]
+									"enum": ["light", "medium", "heavy", "shield"]
 								},
 								"weapon": {
 									"description": "Any <simple|martial> weapon.",
