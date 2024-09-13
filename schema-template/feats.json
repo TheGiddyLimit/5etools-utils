@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.1",
+	"version": "1.7.2",
 	"type": "object",
 
 	"$defs": {
@@ -41,7 +41,7 @@
 				},
 				"category": {
 					"type": "string",
-					"description": "G: General\nO: Origin\nFS: Fighting Style\nEB: Epic Boon",
+					"description": "G: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
 					"$$switch_key": {
 						"key_site": "enum",
 						"key_ua": "enum",
@@ -50,6 +50,8 @@
 							"G",
 							"O",
 							"FS",
+							"FS:P",
+							"FS:R",
 							"EB"
 						]
 					}
