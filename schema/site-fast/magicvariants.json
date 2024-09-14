@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.1",
+	"version": "1.9.2",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -12,9 +12,6 @@
 				},
 				"alias": {
 					"$ref": "util.json#/$defs/alias"
-				},
-				"edition": {
-					"$ref": "util-edition.json#/$defs/edition"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -536,9 +533,6 @@
 				"alias": {
 					"$ref": "util.json#/$defs/alias"
 				},
-				"edition": {
-					"$ref": "util-edition.json#/$defs/edition"
-				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
 				},
@@ -1057,8 +1051,7 @@
 			"required": [
 				"name",
 				"inherits",
-				"requires",
-				"edition"
+				"requires"
 			]
 		},
 		"_magicvariantItemBrewBaseRarity": {
@@ -1069,9 +1062,6 @@
 				},
 				"alias": {
 					"$ref": "util.json#/$defs/alias"
-				},
-				"edition": {
-					"$ref": "util-edition.json#/$defs/edition"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -1594,8 +1584,7 @@
 				"name",
 				"rarity",
 				"inherits",
-				"requires",
-				"edition"
+				"requires"
 			]
 		},
 		"magicvariantItem": {

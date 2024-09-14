@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.2",
+	"version": "1.17.4",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -1087,6 +1087,9 @@
 					"firearms": {
 						"const": true
 					},
+					"improvised": {
+						"const": true
+					},
 					"battleaxe|phb": {
 						"const": true
 					},
@@ -1219,6 +1222,19 @@
 							"fromFilter"
 						],
 						"additionalProperties": false
+					},
+					"all": {
+						"type": "object",
+						"properties": {
+							"fromFilter": {
+								"description": "A filter string, e.g. \"type=martial weapon|miscellaneous=mundane\"",
+								"type": "string"
+							}
+						},
+						"required": [
+							"fromFilter"
+						],
+						"additionalProperties": false
 					}
 				},
 				"additionalProperties": false
@@ -1240,7 +1256,7 @@
 					"heavy": {
 						"const": true
 					},
-					"shield|phb": {
+					"shield": {
 						"const": true
 					}
 				},
@@ -1926,6 +1942,12 @@
 							"type": "string"
 						}
 					},
+					"optionalfeature": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
 					"feature": {
 						"type": "array",
 						"items": {
@@ -2071,7 +2093,8 @@
 									"enum": [
 										"light",
 										"medium",
-										"heavy"
+										"heavy",
+										"shield"
 									]
 								},
 								"weapon": {
@@ -2248,6 +2271,18 @@
 				"RN",
 				"AF",
 				"TT"
+			]
+		},
+		"dataFeatCategory": {
+			"type": "string",
+			"description": "G: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
+			"enum": [
+				"G",
+				"O",
+				"FS",
+				"FS:P",
+				"FS:R",
+				"EB"
 			]
 		},
 		"damageImmunityArray": {
@@ -2655,7 +2690,8 @@
 						"Psionic Energy Die",
 						"Wild Shape",
 						"Sorcery Point",
-						"Arcane Shot"
+						"Arcane Shot",
+						"Focus Point"
 					]
 				}
 			},
@@ -2675,7 +2711,8 @@
 								"Psionic Energy Die",
 								"Wild Shape",
 								"Sorcery Point",
-								"Arcane Shot"
+								"Arcane Shot",
+								"Focus Point"
 							]
 						},
 						"amount": {
@@ -2699,7 +2736,8 @@
 								"Psionic Energy Die",
 								"Wild Shape",
 								"Sorcery Point",
-								"Arcane Shot"
+								"Arcane Shot",
+								"Focus Point"
 							]
 						},
 						"amountMin": {
@@ -3213,6 +3251,29 @@
 				"minProperties": 1
 			}
 		},
+		"_startingEquipment_equipmentType": {
+			"type": "string",
+			"enum": [
+				"weapon",
+				"weaponSimple",
+				"weaponSimpleMelee",
+				"weaponSimpleRanged",
+				"weaponMartial",
+				"weaponMartialMelee",
+				"weaponMartialRanged",
+				"instrumentMusical",
+				"armorLight",
+				"armorMedium",
+				"armorHeavy",
+				"weaponMelee",
+				"weaponRanged",
+				"focusSpellcastingArcane",
+				"focusSpellcastingDruidic",
+				"focusSpellcastingHoly",
+				"setGaming",
+				"toolArtisan"
+			]
+		},
 		"startingEquipment": {
 			"description": "Optional well-structured data version of the \"default\" property, for use in applications that require it.",
 			"type": "array",
@@ -3255,27 +3316,7 @@
 									"type": "object",
 									"properties": {
 										"equipmentType": {
-											"type": "string",
-											"enum": [
-												"weapon",
-												"weaponSimple",
-												"weaponSimpleMelee",
-												"weaponSimpleRanged",
-												"weaponMartial",
-												"weaponMartialMelee",
-												"weaponMartialRanged",
-												"instrumentMusical",
-												"armorLight",
-												"armorMedium",
-												"armorHeavy",
-												"weaponMelee",
-												"weaponRanged",
-												"focusSpellcastingArcane",
-												"focusSpellcastingDruidic",
-												"focusSpellcastingHoly",
-												"setGaming",
-												"toolArtisan"
-											]
+											"$ref": "#/$defs/_startingEquipment_equipmentType"
 										},
 										"quantity": {
 											"type": "integer"
@@ -3283,6 +3324,24 @@
 									},
 									"required": [
 										"equipmentType"
+									],
+									"additionalProperties": false
+								},
+								{
+									"type": "object",
+									"properties": {
+										"equipmentTypes": {
+											"type": "array",
+											"items": {
+												"$ref": "#/$defs/_startingEquipment_equipmentType"
+											}
+										},
+										"quantity": {
+											"type": "integer"
+										}
+									},
+									"required": [
+										"equipmentTypes"
 									],
 									"additionalProperties": false
 								},
@@ -3477,6 +3536,90 @@
 				"required": [
 					"name",
 					"featureType",
+					"progression"
+				]
+			}
+		},
+		"featProgression": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"category": {
+						"type": "array",
+						"items": {
+							"$ref": "#/$defs/dataFeatCategory"
+						},
+						"uniqueItems": true
+					},
+					"progression": {
+						"oneOf": [
+							{
+								"type": "array",
+								"description": "Feats gained when the total count of feats increases according to level.",
+								"items": {
+									"type": "integer"
+								},
+								"minItems": 20,
+								"maxItems": 20
+							},
+							{
+								"type": "object",
+								"description": "Feats gained at the exact levels specified.",
+								"patternProperties": {
+									"^\\d+$": {
+										"type": "integer"
+									}
+								},
+								"additionalProperties": false
+							},
+							{
+								"type": "object",
+								"description": "Feats gained at the level this feat is gained.",
+								"properties": {
+									"*": {
+										"type": "integer"
+									}
+								},
+								"additionalProperties": false
+							}
+						]
+					},
+					"required": {
+						"oneOf": [
+							{
+								"type": "array",
+								"items": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"minItems": 20,
+								"maxItems": 20
+							},
+							{
+								"type": "object",
+								"patternProperties": {
+									"^\\d+$": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										}
+									}
+								},
+								"additionalProperties": false
+							}
+						]
+					}
+				},
+				"required": [
+					"name",
+					"category",
 					"progression"
 				]
 			}

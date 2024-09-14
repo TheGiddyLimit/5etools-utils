@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-edition.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"title": "Util: Edition",
 	"$defs": {
 		"edition": {
@@ -9,14 +9,6 @@
 			"enum": [
 				"classic",
 				"one"
-			]
-		},
-		"editionChoice": {
-			"type": "string",
-			"enum": [
-				"classic",
-				"one",
-				"any"
 			]
 		}
 	}

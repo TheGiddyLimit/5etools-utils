@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.1",
+	"version": "1.6.2",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -99,6 +99,9 @@
 				"alias": {
 					"$ref": "util.json#/$defs/alias"
 				},
+				"edition": {
+					"$ref": "util-edition.json#/$defs/edition"
+				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
 				},
@@ -116,9 +119,6 @@
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
-				},
-				"acceptsVariantEdition": {
-					"$ref": "util-edition.json#/$defs/editionChoice"
 				},
 				"ac": {
 					"type": "integer"
@@ -390,6 +390,9 @@
 						"alias": {
 							"$ref": "util.json#/$defs/alias"
 						},
+						"edition": {
+							"$ref": "util-edition.json#/$defs/edition"
+						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
@@ -407,9 +410,6 @@
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
-						},
-						"acceptsVariantEdition": {
-							"$ref": "util-edition.json#/$defs/editionChoice"
 						},
 						"ac": {
 							"type": "integer"
@@ -685,6 +685,9 @@
 						"alias": {
 							"$ref": "util.json#/$defs/alias"
 						},
+						"edition": {
+							"$ref": "util-edition.json#/$defs/edition"
+						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
@@ -702,9 +705,6 @@
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
-						},
-						"acceptsVariantEdition": {
-							"$ref": "util-edition.json#/$defs/editionChoice"
 						},
 						"ac": {
 							"type": "integer"

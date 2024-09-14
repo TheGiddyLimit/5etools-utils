@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.11.8",
+	"version": "2.12.0",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -425,7 +425,7 @@
 									"light",
 									"medium",
 									"heavy",
-									"{@item shield|phb|shields}"
+									"shield"
 								]
 							},
 							{
@@ -437,7 +437,7 @@
 											"light",
 											"medium",
 											"heavy",
-											"{@item shield|phb|shields}",
+											"shield",
 											"special"
 										]
 									},
@@ -479,6 +479,10 @@
 							}
 						]
 					}
+				},
+				"weaponProficiencies": {
+					"description": "Well-structured weapon proficiency data, used by e.g. Plutonium.",
+					"$ref": "../util.json#/$defs/weaponProficiencies"
 				},
 				"tools": {
 					"type": "array",
@@ -561,6 +565,9 @@
 						},
 						"optionalfeatureProgression": {
 							"$ref": "../util.json#/$defs/optionalfeatureProgression"
+						},
+						"featProgression": {
+							"$ref": "../util.json#/$defs/featProgression"
 						},
 						"subclassFeatures": {
 							"type": "array",
@@ -727,6 +734,9 @@
 						"optionalfeatureProgression": {
 							"$ref": "../util.json#/$defs/optionalfeatureProgression"
 						},
+						"featProgression": {
+							"$ref": "../util.json#/$defs/featProgression"
+						},
 						"subclassFeatures": {
 							"type": "array",
 							"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource.",
@@ -892,6 +902,9 @@
 				"optionalfeatureProgression": {
 					"$ref": "../util.json#/$defs/optionalfeatureProgression"
 				},
+				"featProgression": {
+					"$ref": "../util.json#/$defs/featProgression"
+				},
 				"subclassFeatures": {
 					"type": "array",
 					"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource.",
@@ -1041,6 +1054,33 @@
 			},
 			"additionalProperties": false
 		},
+		"primaryAbility": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"str": {
+						"const": true
+					},
+					"dex": {
+						"const": true
+					},
+					"con": {
+						"const": true
+					},
+					"int": {
+						"const": true
+					},
+					"wis": {
+						"const": true
+					},
+					"cha": {
+						"const": true
+					}
+				},
+				"additionalProperties": false
+			}
+		},
 		"class": {
 			"anyOf": [
 				{
@@ -1115,32 +1155,58 @@
 							"$ref": "#/$defs/proficiencies"
 						},
 						"startingEquipment": {
-							"type": "object",
-							"properties": {
-								"additionalFromBackground": {
-									"type": "boolean"
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"additionalFromBackground": {
+											"type": "boolean"
+										},
+										"default": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											}
+										},
+										"defaultData": {
+											"$ref": "../util.json#/$defs/startingEquipment"
+										},
+										"goldAlternative": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"additionalFromBackground",
+										"default"
+									],
+									"additionalProperties": false
 								},
-								"default": {
-									"type": "array",
-									"items": {
-										"type": "string"
-									}
-								},
-								"defaultData": {
-									"$ref": "../util.json#/$defs/startingEquipment"
-								},
-								"goldAlternative": {
-									"type": "string"
+								{
+									"type": "object",
+									"properties": {
+										"entries": {
+											"type": "array",
+											"items": {
+												"$ref": "../entry.json"
+											}
+										},
+										"defaultData": {
+											"$ref": "../util.json#/$defs/startingEquipment"
+										}
+									},
+									"required": [
+										"entries",
+										"defaultData"
+									],
+									"additionalProperties": false
 								}
-							},
-							"required": [
-								"additionalFromBackground",
-								"default"
-							],
-							"additionalProperties": false
+							]
 						},
 						"requirements": {
 							"$ref": "#/$defs/requirements"
+						},
+						"primaryAbility": {
+							"$ref": "#/$defs/primaryAbility"
 						},
 						"multiclassing": {
 							"type": "object",
@@ -1193,6 +1259,9 @@
 						},
 						"optionalfeatureProgression": {
 							"$ref": "../util.json#/$defs/optionalfeatureProgression"
+						},
+						"featProgression": {
+							"$ref": "../util.json#/$defs/featProgression"
 						},
 						"classFeatures": {
 							"type": "array",
@@ -1378,32 +1447,58 @@
 							"$ref": "#/$defs/proficiencies"
 						},
 						"startingEquipment": {
-							"type": "object",
-							"properties": {
-								"additionalFromBackground": {
-									"type": "boolean"
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"additionalFromBackground": {
+											"type": "boolean"
+										},
+										"default": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											}
+										},
+										"defaultData": {
+											"$ref": "../util.json#/$defs/startingEquipment"
+										},
+										"goldAlternative": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"additionalFromBackground",
+										"default"
+									],
+									"additionalProperties": false
 								},
-								"default": {
-									"type": "array",
-									"items": {
-										"type": "string"
-									}
-								},
-								"defaultData": {
-									"$ref": "../util.json#/$defs/startingEquipment"
-								},
-								"goldAlternative": {
-									"type": "string"
+								{
+									"type": "object",
+									"properties": {
+										"entries": {
+											"type": "array",
+											"items": {
+												"$ref": "../entry.json"
+											}
+										},
+										"defaultData": {
+											"$ref": "../util.json#/$defs/startingEquipment"
+										}
+									},
+									"required": [
+										"entries",
+										"defaultData"
+									],
+									"additionalProperties": false
 								}
-							},
-							"required": [
-								"additionalFromBackground",
-								"default"
-							],
-							"additionalProperties": false
+							]
 						},
 						"requirements": {
 							"$ref": "#/$defs/requirements"
+						},
+						"primaryAbility": {
+							"$ref": "#/$defs/primaryAbility"
 						},
 						"multiclassing": {
 							"type": "object",
@@ -1456,6 +1551,9 @@
 						},
 						"optionalfeatureProgression": {
 							"$ref": "../util.json#/$defs/optionalfeatureProgression"
+						},
+						"featProgression": {
+							"$ref": "../util.json#/$defs/featProgression"
 						},
 						"classFeatures": {
 							"type": "array",
@@ -1644,32 +1742,58 @@
 					"$ref": "#/$defs/proficiencies"
 				},
 				"startingEquipment": {
-					"type": "object",
-					"properties": {
-						"additionalFromBackground": {
-							"type": "boolean"
+					"oneOf": [
+						{
+							"type": "object",
+							"properties": {
+								"additionalFromBackground": {
+									"type": "boolean"
+								},
+								"default": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"defaultData": {
+									"$ref": "../util.json#/$defs/startingEquipment"
+								},
+								"goldAlternative": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"additionalFromBackground",
+								"default"
+							],
+							"additionalProperties": false
 						},
-						"default": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
-						"defaultData": {
-							"$ref": "../util.json#/$defs/startingEquipment"
-						},
-						"goldAlternative": {
-							"type": "string"
+						{
+							"type": "object",
+							"properties": {
+								"entries": {
+									"type": "array",
+									"items": {
+										"$ref": "../entry.json"
+									}
+								},
+								"defaultData": {
+									"$ref": "../util.json#/$defs/startingEquipment"
+								}
+							},
+							"required": [
+								"entries",
+								"defaultData"
+							],
+							"additionalProperties": false
 						}
-					},
-					"required": [
-						"additionalFromBackground",
-						"default"
-					],
-					"additionalProperties": false
+					]
 				},
 				"requirements": {
 					"$ref": "#/$defs/requirements"
+				},
+				"primaryAbility": {
+					"$ref": "#/$defs/primaryAbility"
 				},
 				"multiclassing": {
 					"type": "object",
@@ -1722,6 +1846,9 @@
 				},
 				"optionalfeatureProgression": {
 					"$ref": "../util.json#/$defs/optionalfeatureProgression"
+				},
+				"featProgression": {
+					"$ref": "../util.json#/$defs/featProgression"
 				},
 				"classFeatures": {
 					"type": "array",

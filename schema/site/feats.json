@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.0",
+	"version": "1.7.2",
 	"type": "object",
 	"$defs": {
 		"featData": {
@@ -47,14 +47,7 @@
 					"type": "string"
 				},
 				"category": {
-					"type": "string",
-					"description": "G: General\nO: Origin\nFS: Fighting Style\nEB: Epic Boon",
-					"enum": [
-						"G",
-						"O",
-						"FS",
-						"EB"
-					]
+					"$ref": "util.json#/$defs/dataFeatCategory"
 				},
 				"additionalSpells": {
 					"$ref": "util.json#/$defs/additionalSpellsArray"
@@ -97,6 +90,9 @@
 				},
 				"conditionImmune": {
 					"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+				},
+				"senses": {
+					"$ref": "util.json#/$defs/sensesArray"
 				},
 				"traitTags": {
 					"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
@@ -166,14 +162,7 @@
 							"type": "string"
 						},
 						"category": {
-							"type": "string",
-							"description": "G: General\nO: Origin\nFS: Fighting Style\nEB: Epic Boon",
-							"enum": [
-								"G",
-								"O",
-								"FS",
-								"EB"
-							]
+							"$ref": "util.json#/$defs/dataFeatCategory"
 						},
 						"additionalSpells": {
 							"$ref": "util.json#/$defs/additionalSpellsArray"
@@ -216,6 +205,9 @@
 						},
 						"conditionImmune": {
 							"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+						},
+						"senses": {
+							"$ref": "util.json#/$defs/sensesArray"
 						},
 						"traitTags": {
 							"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
@@ -288,14 +280,7 @@
 							"type": "string"
 						},
 						"category": {
-							"type": "string",
-							"description": "G: General\nO: Origin\nFS: Fighting Style\nEB: Epic Boon",
-							"enum": [
-								"G",
-								"O",
-								"FS",
-								"EB"
-							]
+							"$ref": "util.json#/$defs/dataFeatCategory"
 						},
 						"additionalSpells": {
 							"$ref": "util.json#/$defs/additionalSpellsArray"
@@ -338,6 +323,9 @@
 						},
 						"conditionImmune": {
 							"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
+						},
+						"senses": {
+							"$ref": "util.json#/$defs/sensesArray"
 						},
 						"traitTags": {
 							"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
