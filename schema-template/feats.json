@@ -40,21 +40,7 @@
 					"type": "string"
 				},
 				"category": {
-					"type": "string",
-					"description": "G: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
-					"$$switch_key": {
-						"key_site": "enum",
-						"key_ua": "enum",
-						"key_brew": "examples",
-						"value": [
-							"G",
-							"O",
-							"FS",
-							"FS:P",
-							"FS:R",
-							"EB"
-						]
-					}
+					"$ref": "util.json#/$defs/dataFeatCategory"
 				},
 				"additionalSpells": {
 					"$ref": "util.json#/$defs/additionalSpellsArray"

@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.3",
+	"version": "1.17.4",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -845,6 +845,18 @@
 						},
 						"required": ["fromFilter"],
 						"additionalProperties": false
+					},
+
+					"all": {
+						"type": "object",
+						"properties": {
+							"fromFilter": {
+								"description": "A filter string, e.g. \"type=martial weapon|miscellaneous=mundane\"",
+								"type": "string"
+							}
+						},
+						"required": ["fromFilter"],
+						"additionalProperties": false
 					}
 				},
 				"additionalProperties": false
@@ -1386,6 +1398,12 @@
 							"type": "string"
 						}
 					},
+					"optionalfeature": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
 					"feature": {
 						"type": "array",
 						"items": {
@@ -1474,24 +1492,12 @@
 						"items": {
 							"type": "object",
 							"properties": {
-								"str": {
-									"type": "integer"
-								},
-								"dex": {
-									"type": "integer"
-								},
-								"con": {
-									"type": "integer"
-								},
-								"int": {
-									"type": "integer"
-								},
-								"wis": {
-									"type": "integer"
-								},
-								"cha": {
-									"type": "integer"
-								}
+								"str": {"type": "integer"},
+								"dex": {"type": "integer"},
+								"con": {"type": "integer"},
+								"int": {"type": "integer"},
+								"wis": {"type": "integer"},
+								"cha": {"type": "integer"}
 							},
 							"additionalProperties": false
 						}
@@ -1711,6 +1717,24 @@
 				"key_brew": "examples",
 				"value": [
 					"ED", "EI", "MM", "MV", "MV:B", "OTH", "FS:F", "FS:B", "FS:R", "FS:P", "MV:C2-UA", "AS:V1-UA", "AS:V2-UA", "AS", "PB", "AI", "SHP:H", "SHP:M", "SHP:W", "SHP:F", "SHP:O", "IWM:W", "IWM:A", "IWM:G", "OR", "RN", "AF", "TT"
+				]
+			}
+		},
+
+		"dataFeatCategory": {
+			"type": "string",
+			"description": "G: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
+			"$$switch_key": {
+				"key_site": "enum",
+				"key_ua": "enum",
+				"key_brew": "examples",
+				"value": [
+					"G",
+					"O",
+					"FS",
+					"FS:P",
+					"FS:R",
+					"EB"
 				]
 			}
 		},
@@ -2062,7 +2086,8 @@
 							"Psionic Energy Die",
 							"Wild Shape",
 							"Sorcery Point",
-							"Arcane Shot"
+							"Arcane Shot",
+							"Focus Point"
 						]
 					}
 				}
@@ -2503,6 +2528,30 @@
 			}
 		},
 
+		"_startingEquipment_equipmentType": {
+			"type": "string",
+			"enum": [
+				"weapon",
+				"weaponSimple",
+				"weaponSimpleMelee",
+				"weaponSimpleRanged",
+				"weaponMartial",
+				"weaponMartialMelee",
+				"weaponMartialRanged",
+				"instrumentMusical",
+				"armorLight",
+				"armorMedium",
+				"armorHeavy",
+				"weaponMelee",
+				"weaponRanged",
+				"focusSpellcastingArcane",
+				"focusSpellcastingDruidic",
+				"focusSpellcastingHoly",
+				"setGaming",
+				"toolArtisan"
+			]
+		},
+
 		"startingEquipment": {
 			"description": "Optional well-structured data version of the \"default\" property, for use in applications that require it.",
 			"type": "array",
@@ -2543,33 +2592,29 @@
 									"type": "object",
 									"properties": {
 										"equipmentType": {
-											"type": "string",
-											"enum": [
-												"weapon",
-												"weaponSimple",
-												"weaponSimpleMelee",
-												"weaponSimpleRanged",
-												"weaponMartial",
-												"weaponMartialMelee",
-												"weaponMartialRanged",
-												"instrumentMusical",
-												"armorLight",
-												"armorMedium",
-												"armorHeavy",
-												"weaponMelee",
-												"weaponRanged",
-												"focusSpellcastingArcane",
-												"focusSpellcastingDruidic",
-												"focusSpellcastingHoly",
-												"setGaming",
-												"toolArtisan"
-											]
+											"$ref": "#/$defs/_startingEquipment_equipmentType"
 										},
 										"quantity": {
 											"type": "integer"
 										}
 									},
 									"required": ["equipmentType"],
+									"additionalProperties": false
+								},
+								{
+									"type": "object",
+									"properties": {
+										"equipmentTypes": {
+											"type": "array",
+											"items": {
+												"$ref": "#/$defs/_startingEquipment_equipmentType"
+											}
+										},
+										"quantity": {
+											"type": "integer"
+										}
+									},
+									"required": ["equipmentTypes"],
 									"additionalProperties": false
 								},
 								{
@@ -2710,6 +2755,67 @@
 					}
 				},
 				"required": ["name", "featureType", "progression"]
+			}
+		},
+
+		"featProgression": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {"type": "string"},
+					"category": {
+						"type": "array",
+						"items": {"$ref": "#/$defs/dataFeatCategory"},
+						"uniqueItems": true
+					},
+					"progression": {
+						"oneOf": [
+							{
+								"type": "array",
+								"description": "Feats gained when the total count of feats increases according to level.",
+								"items": {"type": "integer"},
+								"minItems": 20,
+								"maxItems": 20
+							},
+							{
+								"type": "object",
+								"description": "Feats gained at the exact levels specified.",
+								"patternProperties": {
+									"^\\d+$": {"type": "integer"}
+								},
+								"additionalProperties": false
+							},
+							{
+								"type": "object",
+								"description": "Feats gained at the level this feat is gained.",
+								"properties": {
+									"*": {"type": "integer"}
+								},
+								"additionalProperties": false
+							}
+						]
+					},
+					"required": {
+						"oneOf": [
+							{
+								"type": "array",
+								"items": {"type": "array", "items": {"type": "string"}},
+								"minItems": 20,
+								"maxItems": 20
+							},
+							{
+								"type": "object",
+								"patternProperties": {
+									"^\\d+$": {"type": "array", "items": {"type": "string"}}
+								},
+								"additionalProperties": false
+							}
+						]
+					}
+				},
+				"required": ["name", "category", "progression"]
 			}
 		},
 
