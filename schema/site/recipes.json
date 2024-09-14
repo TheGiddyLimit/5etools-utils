@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.5.4",
+	"version": "1.5.5",
 	"type": "object",
 	"$defs": {
 		"recipeData": {
@@ -118,7 +118,16 @@
 						"Solamnia",
 						"The Feywild",
 						"The Rock of Bral",
-						"The Yawning Portal"
+						"The Yawning Portal",
+						"The Hearth",
+						"The Gilded Horseshoe",
+						"The Pink Flumph Theatre",
+						"The Low Lantern",
+						"The Halfway Inn",
+						"The Driftwood Tavern",
+						"One-Eyed Jax",
+						"The Moonstone Mask",
+						"The Hissing Stones"
 					]
 				},
 				"diet": {
@@ -307,7 +316,16 @@
 								"Solamnia",
 								"The Feywild",
 								"The Rock of Bral",
-								"The Yawning Portal"
+								"The Yawning Portal",
+								"The Hearth",
+								"The Gilded Horseshoe",
+								"The Pink Flumph Theatre",
+								"The Low Lantern",
+								"The Halfway Inn",
+								"The Driftwood Tavern",
+								"One-Eyed Jax",
+								"The Moonstone Mask",
+								"The Hissing Stones"
 							]
 						},
 						"diet": {
@@ -500,7 +518,16 @@
 								"Solamnia",
 								"The Feywild",
 								"The Rock of Bral",
-								"The Yawning Portal"
+								"The Yawning Portal",
+								"The Hearth",
+								"The Gilded Horseshoe",
+								"The Pink Flumph Theatre",
+								"The Low Lantern",
+								"The Halfway Inn",
+								"The Driftwood Tavern",
+								"One-Eyed Jax",
+								"The Moonstone Mask",
+								"The Hissing Stones"
 							]
 						},
 						"diet": {
