@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.5",
+	"version": "1.12.6",
 	"type": "object",
 
 	"$defs": {
@@ -30,6 +30,10 @@
 					"type": "array",
 					"items": {"$ref": "entry.json"}
 				},
+				"hasAbilityScoreEntry": {"const": true},
+				"hasCreatureTypeEntry": {"const": true},
+				"hasSizeEntry": {"const": true},
+				"hasSpeedEntry": {"const": true},
 				"darkvision": {"type": "integer"},
 				"blindsight": {"type": "integer"},
 				"feats": {"$ref": "util.json#/$defs/additionalFeatsArray"},
