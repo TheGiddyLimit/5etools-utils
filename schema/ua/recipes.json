@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.5.5",
+	"version": "1.5.6",
 	"type": "object",
 	"$defs": {
 		"recipeData": {
@@ -110,7 +110,7 @@
 						"The Yawning Portal",
 						"The Hearth",
 						"The Gilded Horseshoe",
-						"The Pink Flumph Theatre",
+						"The Pink Flumph Theater",
 						"The Low Lantern",
 						"The Halfway Inn",
 						"The Driftwood Tavern",
@@ -297,7 +297,7 @@
 								"The Yawning Portal",
 								"The Hearth",
 								"The Gilded Horseshoe",
-								"The Pink Flumph Theatre",
+								"The Pink Flumph Theater",
 								"The Low Lantern",
 								"The Halfway Inn",
 								"The Driftwood Tavern",
@@ -488,7 +488,7 @@
 								"The Yawning Portal",
 								"The Hearth",
 								"The Gilded Horseshoe",
-								"The Pink Flumph Theatre",
+								"The Pink Flumph Theater",
 								"The Low Lantern",
 								"The Halfway Inn",
 								"The Driftwood Tavern",
