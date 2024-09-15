@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "decks.json",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"type": "object",
 
 	"$defs": {
@@ -15,6 +15,7 @@
 
 				"page": {"$ref": "util.json#/$defs/page"},
 				"srd": {"$ref": "util.json#/$defs/srd"},
+				"srd52": {"$ref": "util.json#/$defs/srd"},
 
 				"cards": {
 					"type": "array",
@@ -99,6 +100,7 @@
 
 				"page": {"$ref": "util.json#/$defs/page"},
 				"srd": {"$ref": "util.json#/$defs/srd"},
+				"srd52": {"$ref": "util.json#/$defs/srd"},
 
 				"entries": {
 					"type": "array",

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.0",
+	"version": "2.12.1",
 	"$id": "class.json",
 
 	"type": "object",
@@ -168,7 +168,9 @@
 				"name": {"type": "string"},
 				"source": {"$ref": "../util.json#/$defs/source"},
 				"srd": {"$ref": "../util.json#/$defs/srd"},
+				"srd52": {"$ref": "../util.json#/$defs/srd"},
 				"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
+				"freeRules2024": {"$ref": "../util.json#/$defs/basicRules"},
 				"className":  {"type": "string"},
 				"classSource": {"$ref": "../util.json#/$defs/source"},
 				"level":  {"type": "integer"},
@@ -251,7 +253,9 @@
 				"name": {"type": "string"},
 				"source": {"$ref": "../util.json#/$defs/source"},
 				"srd": {"$ref": "../util.json#/$defs/srd"},
+				"srd52": {"$ref": "../util.json#/$defs/srd"},
 				"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
+				"freeRules2024": {"$ref": "../util.json#/$defs/basicRules"},
 				"className":  {"type": "string"},
 				"classSource": {"$ref": "../util.json#/$defs/source"},
 				"subclassShortName":  {"type": "string"},
@@ -466,7 +470,13 @@
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
 				},
+				"srd52": {
+					"$ref": "../util.json#/$defs/srd"
+				},
 				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
 					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"page": {"$ref": "../util.json#/$defs/page"},
@@ -688,7 +698,13 @@
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
 				},
+				"srd52": {
+					"$ref": "../util.json#/$defs/srd"
+				},
 				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
 					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"isReprinted": {
