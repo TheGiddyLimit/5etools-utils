@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.4",
+	"version": "1.17.5",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1099,11 +1099,29 @@
 		"additionalFeatsArray": {
 			"type": "array",
 			"items": {
-				"type": "object",
-				"properties": {
-					"any": {"type": "integer"}
-				},
-				"additionalProperties": true
+				"anyOf": [
+					{
+						"type": "object",
+						"properties": {
+							"any": {"type": "integer"}
+						},
+						"additionalProperties": true
+					},
+					{
+						"type": "object",
+						"properties": {
+							"anyFromCategory": {
+								"type": "object",
+								"properties": {
+									"category": {"$ref": "#/$defs/dataFeatCategory"},
+									"count": {"type": "integer"}
+								},
+								"additionalProperties": false
+							}
+						},
+						"additionalProperties": true
+					}
+				]
 			},
 			"uniqueItems": true,
 			"minItems": 1
@@ -2409,7 +2427,10 @@
 				"4": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
 				"3": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
 				"2": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
-				"1": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"}
+				"1": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
+
+				"pb": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
+				"pbe": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"}
 			},
 			"additionalProperties": false
 		},
