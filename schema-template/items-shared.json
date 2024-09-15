@@ -4,7 +4,7 @@
 
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.1",
+	"version": "1.1.2",
 
 	"$defs" : {
 		"_itemModifySpeedEqual": {
@@ -95,7 +95,7 @@
 			"description": "$|DMG: Treasure\n$A|DMG: Treasure (Art Object)\n$A|XDMG: Treasure (Art Object)\n$C: Treasure (Coinage)\n$C|XPHB: Treasure (Coinage)\n$G|DMG: Treasure (Gemstone)\n$G|XDMG: Treasure (Gemstone)\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nAIR|DMG: Vehicle (air)\nAIR|XPHB: Vehicle (air)\nAT: Artisan Tool\nAT|XPHB: Artisan Tool\nEXP|DMG: Explosive\nEXP|XDMG: Explosive\nFD: Food and Drink\nFD|XPHB: Food and Drink\nG: Adventuring Gear\nG|XPHB: Adventuring Gear\nGS: Gaming Set\nGS|XPHB: Gaming Set\nGV|DMG: Generic Variant\nGV|XDMG: Generic Variant\nHA: Heavy Armor\nHA|XPHB: Heavy Armor\nIDG|TDCSR: Illegal Drug\nINS: Instrument\nINS|XPHB: Instrument\nLA: Light Armor\nLA|XPHB: Light Armor\nM: Melee Weapon\nM|XPHB: Melee Weapon\nMA: Medium Armor\nMA|XPHB: Medium Armor\nMNT: Mount\nMNT|XPHB: Mount\nOTH: Other\nP: Potion\nP|XPHB: Potion\nR: Ranged Weapon\nR|XPHB: Ranged Weapon\nRD|DMG: Rod\nRD|XDMG: Rod\nRG|DMG: Ring\nRG|XDMG: Ring\nS: Shield\nS|XPHB: Shield\nSC|DMG: Scroll\nSC|XPHB: Scroll\nSCF: Spellcasting Focus\nSCF|XPHB: Spellcasting Focus\nSHP: Vehicle (water)\nSHP|XPHB: Vehicle (water)\nSPC|AAG: Vehicle (space)\nT: Tool\nT|XPHB: Tool\nTAH: Tack and Harness\nTAH|XPHB: Tack and Harness\nTG: Trade Good\nTG|XPHB: Trade Good\nVEH: Vehicle (land)\nVEH|XPHB: Vehicle (land)\nWD|DMG: Wand\nWD|XDMG: Wand",
 			"$$switch_key": {
 				"key_site": "enum",
-				"key_ua": "enum",
+				"key_ua": "examples",
 				"key_brew": "examples",
 				"value": [
 					"$|DMG",
