@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.2",
+	"version": "1.9.3",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -316,7 +316,13 @@
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {
@@ -836,7 +842,13 @@
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {
@@ -1366,7 +1378,13 @@
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {

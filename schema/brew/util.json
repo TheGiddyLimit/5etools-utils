@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.4",
+	"version": "1.17.5",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -1636,13 +1636,35 @@
 		"additionalFeatsArray": {
 			"type": "array",
 			"items": {
-				"type": "object",
-				"properties": {
-					"any": {
-						"type": "integer"
+				"anyOf": [
+					{
+						"type": "object",
+						"properties": {
+							"any": {
+								"type": "integer"
+							}
+						},
+						"additionalProperties": true
+					},
+					{
+						"type": "object",
+						"properties": {
+							"anyFromCategory": {
+								"type": "object",
+								"properties": {
+									"category": {
+										"$ref": "#/$defs/dataFeatCategory"
+									},
+									"count": {
+										"type": "integer"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"additionalProperties": true
 					}
-				},
-				"additionalProperties": true
+				]
 			},
 			"uniqueItems": true,
 			"minItems": 1
@@ -3126,6 +3148,12 @@
 					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
 				},
 				"1e": {
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+				},
+				"pb": {
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+				},
+				"pbe": {
 					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
 				}
 			},

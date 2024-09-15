@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.5",
+	"version": "1.12.7",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -52,6 +52,18 @@
 					"items": {
 						"$ref": "entry.json"
 					}
+				},
+				"hasAbilityScoreEntry": {
+					"const": true
+				},
+				"hasCreatureTypeEntry": {
+					"const": true
+				},
+				"hasSizeEntry": {
+					"const": true
+				},
+				"hasSpeedEntry": {
+					"const": true
 				},
 				"darkvision": {
 					"type": "integer"
@@ -110,7 +122,13 @@
 				"srd": {
 					"$ref": "util.json#/$defs/srd"
 				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
 				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"legacy": {
@@ -283,6 +301,18 @@
 						"$ref": "entry.json"
 					}
 				},
+				"hasAbilityScoreEntry": {
+					"const": true
+				},
+				"hasCreatureTypeEntry": {
+					"const": true
+				},
+				"hasSizeEntry": {
+					"const": true
+				},
+				"hasSpeedEntry": {
+					"const": true
+				},
 				"darkvision": {
 					"type": "integer"
 				},
@@ -340,7 +370,13 @@
 				"srd": {
 					"$ref": "util.json#/$defs/srd"
 				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
 				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"legacy": {
@@ -595,6 +631,18 @@
 								"$ref": "entry.json"
 							}
 						},
+						"hasAbilityScoreEntry": {
+							"const": true
+						},
+						"hasCreatureTypeEntry": {
+							"const": true
+						},
+						"hasSizeEntry": {
+							"const": true
+						},
+						"hasSpeedEntry": {
+							"const": true
+						},
 						"darkvision": {
 							"type": "integer"
 						},
@@ -652,7 +700,13 @@
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {
@@ -829,6 +883,18 @@
 								"$ref": "entry.json"
 							}
 						},
+						"hasAbilityScoreEntry": {
+							"const": true
+						},
+						"hasCreatureTypeEntry": {
+							"const": true
+						},
+						"hasSizeEntry": {
+							"const": true
+						},
+						"hasSpeedEntry": {
+							"const": true
+						},
 						"darkvision": {
 							"type": "integer"
 						},
@@ -886,7 +952,13 @@
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {
@@ -1069,6 +1141,18 @@
 								"$ref": "entry.json"
 							}
 						},
+						"hasAbilityScoreEntry": {
+							"const": true
+						},
+						"hasCreatureTypeEntry": {
+							"const": true
+						},
+						"hasSizeEntry": {
+							"const": true
+						},
+						"hasSpeedEntry": {
+							"const": true
+						},
 						"darkvision": {
 							"type": "integer"
 						},
@@ -1126,7 +1210,13 @@
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {
@@ -1314,6 +1404,18 @@
 								"$ref": "entry.json"
 							}
 						},
+						"hasAbilityScoreEntry": {
+							"const": true
+						},
+						"hasCreatureTypeEntry": {
+							"const": true
+						},
+						"hasSizeEntry": {
+							"const": true
+						},
+						"hasSpeedEntry": {
+							"const": true
+						},
 						"darkvision": {
 							"type": "integer"
 						},
@@ -1371,7 +1473,13 @@
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {

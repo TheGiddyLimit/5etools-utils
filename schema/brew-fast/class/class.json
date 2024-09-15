@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.0",
+	"version": "2.12.1",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -196,7 +196,13 @@
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
 				},
+				"srd52": {
+					"$ref": "../util.json#/$defs/srd"
+				},
 				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
 					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"className": {
@@ -304,7 +310,13 @@
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
 				},
+				"srd52": {
+					"$ref": "../util.json#/$defs/srd"
+				},
 				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
 					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"className": {
@@ -530,7 +542,13 @@
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"page": {
@@ -698,7 +716,13 @@
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"page": {
@@ -866,7 +890,13 @@
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
 				},
+				"srd52": {
+					"$ref": "../util.json#/$defs/srd"
+				},
 				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
 					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"page": {
@@ -1102,7 +1132,13 @@
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"isReprinted": {
@@ -1394,7 +1430,13 @@
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"isReprinted": {
@@ -1689,7 +1731,13 @@
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
 				},
+				"srd52": {
+					"$ref": "../util.json#/$defs/srd"
+				},
 				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
 					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"isReprinted": {

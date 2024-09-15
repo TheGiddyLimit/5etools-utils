@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.34",
+	"version": "1.21.35",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1180,7 +1180,13 @@
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
 				},
+				"srd52": {
+					"$ref": "../util.json#/$defs/srd"
+				},
 				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
 					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"legacy": {
@@ -2289,7 +2295,13 @@
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"legacy": {
@@ -3403,7 +3415,13 @@
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"legacy": {
@@ -3537,7 +3555,13 @@
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"data": {
@@ -3638,7 +3662,13 @@
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
 						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"data": {
