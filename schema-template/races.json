@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.7",
+	"version": "1.12.8",
 	"type": "object",
 
 	"$defs": {
@@ -26,14 +26,14 @@
 					"items": {"$ref": "util.json#/$defs/size"}
 				},
 				"speed": {"$ref": "util.json#/$defs/speed"},
+				"abilityEntry": {"$ref": "entry.json#/$defs/entryItem"},
+				"creatureTypesEntry": {"$ref": "entry.json#/$defs/entryItem"},
+				"sizeEntry": {"$ref": "entry.json#/$defs/entryItem"},
+				"speedEntry": {"$ref": "entry.json#/$defs/entryItem"},
 				"entries": {
 					"type": "array",
 					"items": {"$ref": "entry.json"}
 				},
-				"hasAbilityScoreEntry": {"const": true},
-				"hasCreatureTypeEntry": {"const": true},
-				"hasSizeEntry": {"const": true},
-				"hasSpeedEntry": {"const": true},
 				"darkvision": {"type": "integer"},
 				"blindsight": {"type": "integer"},
 				"feats": {"$ref": "util.json#/$defs/additionalFeatsArray"},
