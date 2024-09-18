@@ -449,6 +449,9 @@
 						"isReprinted": {
 							"type": "boolean"
 						},
+						"reprintedAs": {
+							"$ref": "../util.json#/$defs/reprintedAs"
+						},
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
@@ -608,6 +611,9 @@
 						"isReprinted": {
 							"type": "boolean"
 						},
+						"reprintedAs": {
+							"$ref": "../util.json#/$defs/reprintedAs"
+						},
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
 						},
@@ -766,6 +772,9 @@
 				},
 				"isReprinted": {
 					"type": "boolean"
+				},
+				"reprintedAs": {
+					"$ref": "../util.json#/$defs/reprintedAs"
 				},
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
@@ -1008,6 +1017,9 @@
 						},
 						"isReprinted": {
 							"type": "boolean"
+						},
+						"reprintedAs": {
+							"$ref": "../util.json#/$defs/reprintedAs"
 						},
 						"classGroup": {
 							"type": "array",
@@ -1286,6 +1298,9 @@
 						},
 						"isReprinted": {
 							"type": "boolean"
+						},
+						"reprintedAs": {
+							"$ref": "../util.json#/$defs/reprintedAs"
 						},
 						"classGroup": {
 							"type": "array",
@@ -1567,6 +1582,9 @@
 				},
 				"isReprinted": {
 					"type": "boolean"
+				},
+				"reprintedAs": {
+					"$ref": "../util.json#/$defs/reprintedAs"
 				},
 				"classGroup": {
 					"type": "array",

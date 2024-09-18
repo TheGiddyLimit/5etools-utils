@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "senses.json",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"type": "object",
 	"$defs": {
 		"sense": {
@@ -14,6 +14,7 @@
 				"srd52": {"$ref": "util.json#/$defs/srd"},
 				"basicRules": {"$ref": "util.json#/$defs/basicRules"},
 				"freeRules2024": {"$ref": "util.json#/$defs/basicRules"},
+				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
 				"entries": {
 					"type": "array",
 					"items": {

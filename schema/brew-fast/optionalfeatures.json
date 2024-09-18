@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "optionalfeatures.json",
-	"version": "1.12.4",
+	"version": "1.12.5",
 	"title": "Optional Features",
 	"type": "object",
 	"$defs": {
@@ -60,6 +60,9 @@
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"isClassFeatureVariant": {
 					"type": "boolean"
@@ -190,6 +193,9 @@
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"isClassFeatureVariant": {
 							"type": "boolean"
@@ -324,6 +330,9 @@
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"isClassFeatureVariant": {
 							"type": "boolean"

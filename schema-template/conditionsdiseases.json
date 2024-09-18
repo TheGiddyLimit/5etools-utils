@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "conditionsdiseases.json",
-	"version": "1.2.3",
+	"version": "1.2.4",
 	"type": "object",
 	"$defs": {
 		"conditionDisease": {
@@ -34,6 +34,7 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
+				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
 				"$$ifBrew": {
 					"color": {
 						"description": "For homebrew use only; HTML hex color code this source should use when displayed on the DM Screen.\ne.g. \"ff00ff\"",

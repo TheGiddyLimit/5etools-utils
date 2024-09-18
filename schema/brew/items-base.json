@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.4",
+	"version": "1.6.5",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -27,6 +27,9 @@
 				},
 				"freeRules2024": {
 					"$ref": "util.json#/$defs/basicRules"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"name": {
 					"type": "string"
@@ -59,6 +62,9 @@
 						},
 						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"
@@ -102,6 +108,9 @@
 						},
 						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"
@@ -1219,6 +1228,9 @@
 				"freeRules2024": {
 					"$ref": "util.json#/$defs/basicRules"
 				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
 				"name": {
 					"type": "string"
 				},
@@ -1254,6 +1266,9 @@
 				},
 				"freeRules2024": {
 					"$ref": "util.json#/$defs/basicRules"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"name": {
 					"type": "string"
@@ -1299,6 +1314,9 @@
 						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
 						"name": {
 							"type": "string"
 						},
@@ -1338,6 +1356,9 @@
 						},
 						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"
@@ -1381,6 +1402,9 @@
 						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
 						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
 						"name": {
 							"type": "string"
 						},
@@ -1420,6 +1444,9 @@
 						},
 						"freeRules2024": {
 							"$ref": "util.json#/$defs/basicRules"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"

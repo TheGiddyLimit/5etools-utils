@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.4",
+	"version": "1.7.5",
 	"type": "object",
 	"$defs": {
 		"featData": {
@@ -48,6 +48,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"repeatable": {
 					"type": "boolean"
@@ -188,6 +191,9 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"repeatable": {
 							"type": "boolean"
@@ -331,6 +337,9 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"repeatable": {
 							"type": "boolean"

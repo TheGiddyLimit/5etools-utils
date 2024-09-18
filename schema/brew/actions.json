@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "actions.json",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"type": "object",
 	"$defs": {
 		"action": {
@@ -21,6 +21,9 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"fromVariant": {
 					"type": "string",
