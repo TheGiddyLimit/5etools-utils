@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.3",
+	"version": "1.7.4",
 	"type": "object",
 	"$defs": {
 		"featData": {
@@ -39,6 +39,12 @@
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
@@ -173,6 +179,12 @@
 						},
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
@@ -310,6 +322,12 @@
 						},
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.3",
+	"version": "1.6.4",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -15,6 +15,18 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				},
 				"name": {
 					"type": "string"
@@ -35,6 +47,18 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"name": {
 							"type": "string"
@@ -67,6 +91,18 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"name": {
 							"type": "string"
@@ -1053,6 +1089,18 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
 				"name": {
 					"type": "string"
 				},
@@ -1076,6 +1124,18 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				},
 				"name": {
 					"type": "string"
@@ -1110,6 +1170,18 @@
 						"page": {
 							"$ref": "util.json#/$defs/page"
 						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
 						"name": {
 							"type": "string"
 						},
@@ -1138,6 +1210,18 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"name": {
 							"type": "string"
@@ -1169,6 +1253,18 @@
 						"page": {
 							"$ref": "util.json#/$defs/page"
 						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
 						"name": {
 							"type": "string"
 						},
@@ -1197,6 +1293,18 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"name": {
 							"type": "string"
@@ -1307,6 +1415,18 @@
 					},
 					"page": {
 						"$ref": "util.json#/$defs/page"
+					},
+					"srd": {
+						"$ref": "util.json#/$defs/srd"
+					},
+					"srd52": {
+						"$ref": "util.json#/$defs/srd"
+					},
+					"basicRules": {
+						"$ref": "util.json#/$defs/basicRules"
+					},
+					"freeRules2024": {
+						"$ref": "util.json#/$defs/basicRules"
 					},
 					"prerequisite": {
 						"$ref": "util.json#/$defs/prerequisite"

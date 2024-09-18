@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "variantrules.json",
-	"version": "1.1.8",
+	"version": "1.1.9",
 	"title": "RulesArray",
 	"type": "object",
 	"properties": {
@@ -57,6 +57,12 @@
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"

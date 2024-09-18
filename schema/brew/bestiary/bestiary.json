@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.35",
+	"version": "1.21.36",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1136,7 +1136,7 @@
 				"miscTags": {
 					"type": "array",
 					"items": {
-						"description": "AOE: Has Areas of Effect\n CUR: Inflicts Curse\n DIS: Inflicts Disease\n HPR: Has HP Reduction\n MW: Has Weapon Attacks, Melee\n RW: Has Weapon Attacks, Ranged\n RCH: Has Reach Attacks\n MLW: Has Melee Weapons\n RNG: Has Ranged Weapons\n THW: Has Thrown Weapons",
+						"description": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons",
 						"enum": [
 							"AOE",
 							"CUR",
@@ -1144,6 +1144,8 @@
 							"HPR",
 							"MW",
 							"RW",
+							"MA",
+							"RA",
 							"RCH",
 							"MLW",
 							"RNG",
@@ -2348,7 +2350,7 @@
 						"miscTags": {
 							"type": "array",
 							"items": {
-								"description": "AOE: Has Areas of Effect\n CUR: Inflicts Curse\n DIS: Inflicts Disease\n HPR: Has HP Reduction\n MW: Has Weapon Attacks, Melee\n RW: Has Weapon Attacks, Ranged\n RCH: Has Reach Attacks\n MLW: Has Melee Weapons\n RNG: Has Ranged Weapons\n THW: Has Thrown Weapons",
+								"description": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons",
 								"enum": [
 									"AOE",
 									"CUR",
@@ -2356,6 +2358,8 @@
 									"HPR",
 									"MW",
 									"RW",
+									"MA",
+									"RA",
 									"RCH",
 									"MLW",
 									"RNG",
@@ -3565,7 +3569,7 @@
 						"miscTags": {
 							"type": "array",
 							"items": {
-								"description": "AOE: Has Areas of Effect\n CUR: Inflicts Curse\n DIS: Inflicts Disease\n HPR: Has HP Reduction\n MW: Has Weapon Attacks, Melee\n RW: Has Weapon Attacks, Ranged\n RCH: Has Reach Attacks\n MLW: Has Melee Weapons\n RNG: Has Ranged Weapons\n THW: Has Thrown Weapons",
+								"description": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons",
 								"enum": [
 									"AOE",
 									"CUR",
@@ -3573,6 +3577,8 @@
 									"HPR",
 									"MW",
 									"RW",
+									"MA",
+									"RA",
 									"RCH",
 									"MLW",
 									"RNG",
