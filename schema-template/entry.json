@@ -29,6 +29,11 @@
 			"type": "string", "enum":  ["inset"]
 		},
 
+		"_entryDataData": {
+			"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
+			"type": "object"
+		},
+
 		"mediaHrefInternal": {
 			"type": "object",
 			"properties": {
@@ -80,10 +85,7 @@
 				"srd52": {"$ref": "util.json#/$defs/srd"},
 				"basicRules": {"$ref": "util.json#/$defs/basicRules"},
 				"freeRules2024": {"$ref": "util.json#/$defs/basicRules"},
-				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
-				},
+				"data": {"$ref": "#/$defs/_entryDataData"},
 				"id": {"type": "string"}
 			},
 			"required": [
@@ -2128,12 +2130,14 @@
 				"type": {"const": "refClassFeature"},
 				"classFeature": {
 					"type": "string"
-				}
+				},
+				"data": {"$ref": "#/$defs/_entryDataData"}
 			},
 			"required": [
 				"type",
 				"classFeature"
-			]
+			],
+			"additionalProperties": false
 		},
 		"entryRefSubclassFeature": {
 			"description":"For use in classes page content only.",
@@ -2142,12 +2146,14 @@
 				"type": {"const": "refSubclassFeature"},
 				"subclassFeature": {
 					"type": "string"
-				}
+				},
+				"data": {"$ref": "#/$defs/_entryDataData"}
 			},
 			"required": [
 				"type",
 				"subclassFeature"
-			]
+			],
+			"additionalProperties": false
 		},
 		"entryRefOptionalfeature": {
 			"description":"For use in classes page content only.",
@@ -2155,12 +2161,22 @@
 			"properties": {
 				"type": {"const": "refOptionalfeature"},
 				"optionalfeature": {"type": "string"},
-				"name": {"type": "string"}
+				"name": {"type": "string"},
+				"preserve": {
+					"type": "object",
+					"properties": {
+						"prerequisite": {"const": true},
+						"consumes": {"const": true}
+					},
+					"additionalProperties": false
+				},
+				"data": {"$ref": "#/$defs/_entryDataData"}
 			},
 			"required": [
 				"type",
 				"optionalfeature"
-			]
+			],
+			"additionalProperties": false
 		},
 		"entryRefFeat": {
 			"description":"For use in classes page content only.",
@@ -2168,12 +2184,14 @@
 			"properties": {
 				"type": {"const": "refFeat"},
 				"feat": {"type": "string"},
-				"name": {"type": "string"}
+				"name": {"type": "string"},
+				"data": {"$ref": "#/$defs/_entryDataData"}
 			},
 			"required": [
 				"type",
 				"feat"
-			]
+			],
+			"additionalProperties": false
 		},
 		"entryHr": {
 			"type": "object",
