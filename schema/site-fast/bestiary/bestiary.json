@@ -3571,8 +3571,7 @@
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"data": {
-							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-							"type": "object"
+							"$ref": "../entry.json#/$defs/_entryDataData"
 						},
 						"id": {
 							"type": "string"
@@ -3678,8 +3677,7 @@
 							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"data": {
-							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-							"type": "object"
+							"$ref": "../entry.json#/$defs/_entryDataData"
 						},
 						"id": {
 							"type": "string"

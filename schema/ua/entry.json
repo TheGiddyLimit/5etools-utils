@@ -37,6 +37,10 @@
 				"inset"
 			]
 		},
+		"_entryDataData": {
+			"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
+			"type": "object"
+		},
 		"mediaHrefInternal": {
 			"type": "object",
 			"properties": {
@@ -111,8 +115,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -151,8 +154,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -205,8 +207,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -259,8 +260,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -336,8 +336,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -384,8 +383,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -432,8 +430,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -582,8 +579,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -715,8 +711,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -763,8 +758,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -814,8 +808,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -899,8 +892,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -967,8 +959,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1012,8 +1003,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1057,8 +1047,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1127,8 +1116,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1185,8 +1173,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1243,8 +1230,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1294,8 +1280,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1411,7 +1396,7 @@
 			"additionalProperties": false
 		},
 		"entryOptFeature": {
-			"description": "For e.g. Eldritch Invocations which require prerequisite text",
+			"description": "For e.g. Eldritch Invocations which require prerequisite text. Deprecated; prefer \"refOptionalfeature\" or \"statblock\" entries instead.",
 			"type": "object",
 			"properties": {
 				"name": {
@@ -1440,12 +1425,12 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
 				},
+				"deprecated": true,
 				"prerequisite": {
 					"type": "string"
 				},
@@ -1491,8 +1476,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1542,8 +1526,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1593,8 +1576,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1642,8 +1624,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1691,8 +1672,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1742,8 +1722,7 @@
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"data": {
-							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-							"type": "object"
+							"$ref": "#/$defs/_entryDataData"
 						},
 						"id": {
 							"type": "string"
@@ -1793,8 +1772,7 @@
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"data": {
-							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-							"type": "object"
+							"$ref": "#/$defs/_entryDataData"
 						},
 						"id": {
 							"type": "string"
@@ -1849,8 +1827,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1898,8 +1875,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -1944,8 +1920,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -2153,8 +2128,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -2201,8 +2175,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -2250,8 +2223,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -2314,8 +2286,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -2362,8 +2333,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -2409,8 +2379,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -3306,8 +3275,7 @@
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"data": {
-							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-							"type": "object"
+							"$ref": "#/$defs/_entryDataData"
 						},
 						"id": {
 							"type": "string"
@@ -3364,8 +3332,7 @@
 							"$ref": "util.json#/$defs/basicRules"
 						},
 						"data": {
-							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-							"type": "object"
+							"$ref": "#/$defs/_entryDataData"
 						},
 						"id": {
 							"type": "string"
@@ -3404,12 +3371,16 @@
 				},
 				"classFeature": {
 					"type": "string"
+				},
+				"data": {
+					"$ref": "#/$defs/_entryDataData"
 				}
 			},
 			"required": [
 				"type",
 				"classFeature"
-			]
+			],
+			"additionalProperties": false
 		},
 		"entryRefSubclassFeature": {
 			"description": "For use in classes page content only.",
@@ -3420,12 +3391,16 @@
 				},
 				"subclassFeature": {
 					"type": "string"
+				},
+				"data": {
+					"$ref": "#/$defs/_entryDataData"
 				}
 			},
 			"required": [
 				"type",
 				"subclassFeature"
-			]
+			],
+			"additionalProperties": false
 		},
 		"entryRefOptionalfeature": {
 			"description": "For use in classes page content only.",
@@ -3439,12 +3414,28 @@
 				},
 				"name": {
 					"type": "string"
+				},
+				"preserve": {
+					"type": "object",
+					"properties": {
+						"prerequisite": {
+							"const": true
+						},
+						"consumes": {
+							"const": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"data": {
+					"$ref": "#/$defs/_entryDataData"
 				}
 			},
 			"required": [
 				"type",
 				"optionalfeature"
-			]
+			],
+			"additionalProperties": false
 		},
 		"entryRefFeat": {
 			"description": "For use in classes page content only.",
@@ -3458,12 +3449,16 @@
 				},
 				"name": {
 					"type": "string"
+				},
+				"data": {
+					"$ref": "#/$defs/_entryDataData"
 				}
 			},
 			"required": [
 				"type",
 				"feat"
-			]
+			],
+			"additionalProperties": false
 		},
 		"entryHr": {
 			"type": "object",
@@ -3505,8 +3500,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
@@ -3781,8 +3775,7 @@
 					"$ref": "util.json#/$defs/basicRules"
 				},
 				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"$ref": "#/$defs/_entryDataData"
 				},
 				"id": {
 					"type": "string"
