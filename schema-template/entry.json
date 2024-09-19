@@ -728,12 +728,13 @@
 			]
 		},
 		"entryOptFeature": {
-			"description": "For e.g. Eldritch Invocations which require prerequisite text",
+			"description": "For e.g. Eldritch Invocations which require prerequisite text. Deprecated; prefer \"refOptionalfeature\" or \"statblock\" entries instead.",
 			"type": "object",
 			"$$merge": [
 				{"$ref" : "#/$defs/entry"},
 				{
 					"properties": {
+						"deprecated": true,
 						"type": {"const": "optfeature"},
 						"prerequisite": {
 							"type": "string"
