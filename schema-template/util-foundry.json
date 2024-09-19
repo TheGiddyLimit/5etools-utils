@@ -28,6 +28,9 @@
 				"savingThrowProficiencies": {
 					"$ref": "util.json#/$defs/savingThrowProficiencies"
 				},
+				"skillToolLanguageProficiencies": {
+					"$ref": "util.json#/$defs/skillToolLanguageProficiencies"
+				},
 				"expertise": {
 					"$ref": "util.json#/$defs/expertise"
 				},
