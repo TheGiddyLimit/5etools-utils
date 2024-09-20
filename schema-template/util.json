@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.5",
+	"version": "1.17.6",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1103,19 +1103,15 @@
 					{
 						"type": "object",
 						"properties": {
-							"any": {"type": "integer"}
-						},
-						"additionalProperties": true
-					},
-					{
-						"type": "object",
-						"properties": {
+							"any": {"type": "integer"},
+
 							"anyFromCategory": {
 								"type": "object",
 								"properties": {
 									"category": {"$ref": "#/$defs/dataFeatCategory"},
 									"count": {"type": "integer"}
 								},
+								"required": ["category"],
 								"additionalProperties": false
 							}
 						},
