@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.0.1",
+	"version": "1.0.2",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -557,6 +557,10 @@
 						"shortName": {"description": "Used in subclass data", "type": "string"},
 						"className": {"description": "Used in subclass data", "type": "string"},
 						"classSource": {"description": "Used in subclass data", "$ref": "util.json#/$defs/source"},
+
+						"subclassSource": {"description": "Used in subclass feature data", "$ref": "util.json#/$defs/source"},
+						"subclassShortName": {"description": "Used in subclass feature data", "type": "string"},
+						"level": {"description": "Used in subclass feature data", "type": "integer"},
 
 						"raceName": {"description": "Used in race feature data", "type": "string"},
 						"raceSource": {"description": "Used in race feature data", "$ref": "util.json#/$defs/source"}

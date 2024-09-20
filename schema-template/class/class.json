@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.1",
+	"version": "2.12.3",
 	"$id": "class.json",
 
 	"type": "object",
@@ -247,7 +247,7 @@
 			"additionalProperties": false
 		},
 
-		"subclassFeature": {
+		"subclassFeatureData": {
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
@@ -327,17 +327,43 @@
 					}
 				}
 			},
-			"required": [
-				"name",
-				"source",
-				"className",
-				"classSource",
-				"subclassShortName",
-				"subclassSource",
-				"level",
-				"entries"
-			],
 			"additionalProperties": false
+		},
+
+		"subclassFeature": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/subclassFeatureData"
+						},
+						{
+							"required": [
+								"name",
+								"source",
+								"className",
+								"classSource",
+								"subclassShortName",
+								"subclassSource",
+								"level",
+								"entries"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/subclassFeatureData"
+						},
+						{
+							"$ref": "../util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		},
 
 		"proficiencies": {
@@ -464,6 +490,7 @@
 					"description": "The source of the class this subclass belongs to (defaults to PHB).",
 					"$ref": "../util.json#/$defs/source"
 				},
+				"edition": {"$ref": "../util-edition.json#/$defs/edition"},
 				"isReprinted": {
 					"type": "boolean"
 				},
@@ -557,10 +584,33 @@
 						}
 					}
 				},
+				"fluff": {
+					"anyOf": [
+						{
+							"$$ifBrew_item": {
+								"$ref": "../util.json#/$defs/fluffObject"
+							}
+						},
+						{
+							"description": "Reference \"subclassFluff\" array items",
+							"type": "object",
+							"properties": {
+								"_subclassFluff": {
+									"type": "object",
+									"properties": {
+										"name": {"type": "string"},
+										"source": {"$ref": "../util.json#/$defs/source"},
+										"className": {"type": "string"},
+										"classSource": {"$ref": "../util.json#/$defs/source"}
+									}
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						}
+					]
+				},
 				"$$ifBrew": {
-					"fluff": {
-						"$ref": "../util.json#/$defs/fluffObject"
-					},
 					"foundrySystem": {
 						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
@@ -696,6 +746,7 @@
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
 				},
+				"edition": {"$ref": "../util-edition.json#/$defs/edition"},
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
 				},
