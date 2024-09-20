@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.1",
+	"version": "2.12.3",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -253,7 +253,7 @@
 			],
 			"additionalProperties": false
 		},
-		"subclassFeature": {
+		"subclassFeatureData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -322,17 +322,169 @@
 					"$ref": "../util.json#/$defs/consumesObject"
 				}
 			},
-			"required": [
-				"name",
-				"source",
-				"className",
-				"classSource",
-				"subclassShortName",
-				"subclassSource",
-				"level",
-				"entries"
-			],
 			"additionalProperties": false
+		},
+		"subclassFeature": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "../util.json#/$defs/source"
+						},
+						"srd": {
+							"$ref": "../util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"className": {
+							"type": "string"
+						},
+						"classSource": {
+							"$ref": "../util.json#/$defs/source"
+						},
+						"subclassShortName": {
+							"type": "string"
+						},
+						"subclassSource": {
+							"$ref": "../util.json#/$defs/source"
+						},
+						"level": {
+							"type": "integer"
+						},
+						"header": {
+							"type": "integer"
+						},
+						"page": {
+							"$ref": "../util.json#/$defs/page"
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"inset",
+								"item"
+							]
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "../entry.json"
+							}
+						},
+						"isClassFeatureVariant": {
+							"type": "boolean"
+						},
+						"isGainAtNextFeatureLevel": {
+							"description": "If this feature should only be (optionally) gained at the next \"gainSubclassFeature\" level, rather than at the level listed on the feature.",
+							"type": "boolean"
+						},
+						"otherSources": {
+							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"consumes": {
+							"$ref": "../util.json#/$defs/consumesObject"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"className",
+						"classSource",
+						"subclassShortName",
+						"subclassSource",
+						"level",
+						"entries"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "../util.json#/$defs/source"
+						},
+						"srd": {
+							"$ref": "../util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"className": {
+							"type": "string"
+						},
+						"classSource": {
+							"$ref": "../util.json#/$defs/source"
+						},
+						"subclassShortName": {
+							"type": "string"
+						},
+						"subclassSource": {
+							"$ref": "../util.json#/$defs/source"
+						},
+						"level": {
+							"type": "integer"
+						},
+						"header": {
+							"type": "integer"
+						},
+						"page": {
+							"$ref": "../util.json#/$defs/page"
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"inset",
+								"item"
+							]
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "../entry.json"
+							}
+						},
+						"isClassFeatureVariant": {
+							"type": "boolean"
+						},
+						"isGainAtNextFeatureLevel": {
+							"description": "If this feature should only be (optionally) gained at the next \"gainSubclassFeature\" level, rather than at the level listed on the feature.",
+							"type": "boolean"
+						},
+						"otherSources": {
+							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"consumes": {
+							"$ref": "../util.json#/$defs/consumesObject"
+						},
+						"_copy": {
+							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		},
 		"proficiencies": {
 			"type": "object",
@@ -446,6 +598,9 @@
 							"description": "The source of the class this subclass belongs to (defaults to PHB).",
 							"$ref": "../util.json#/$defs/source"
 						},
+						"edition": {
+							"$ref": "../util-edition.json#/$defs/edition"
+						},
 						"isReprinted": {
 							"type": "boolean"
 						},
@@ -549,6 +704,35 @@
 						},
 						"hasFluffImages": {
 							"const": true
+						},
+						"fluff": {
+							"anyOf": [
+								{
+									"description": "Reference \"subclassFluff\" array items",
+									"type": "object",
+									"properties": {
+										"_subclassFluff": {
+											"type": "object",
+											"properties": {
+												"name": {
+													"type": "string"
+												},
+												"source": {
+													"$ref": "../util.json#/$defs/source"
+												},
+												"className": {
+													"type": "string"
+												},
+												"classSource": {
+													"$ref": "../util.json#/$defs/source"
+												}
+											}
+										}
+									},
+									"additionalProperties": false,
+									"minProperties": 1
+								}
+							]
 						}
 					},
 					"additionalProperties": false,
@@ -584,6 +768,9 @@
 							"description": "The source of the class this subclass belongs to (defaults to PHB).",
 							"$ref": "../util.json#/$defs/source"
 						},
+						"edition": {
+							"$ref": "../util-edition.json#/$defs/edition"
+						},
 						"isReprinted": {
 							"type": "boolean"
 						},
@@ -688,6 +875,35 @@
 						"hasFluffImages": {
 							"const": true
 						},
+						"fluff": {
+							"anyOf": [
+								{
+									"description": "Reference \"subclassFluff\" array items",
+									"type": "object",
+									"properties": {
+										"_subclassFluff": {
+											"type": "object",
+											"properties": {
+												"name": {
+													"type": "string"
+												},
+												"source": {
+													"$ref": "../util.json#/$defs/source"
+												},
+												"className": {
+													"type": "string"
+												},
+												"classSource": {
+													"$ref": "../util.json#/$defs/source"
+												}
+											}
+										}
+									},
+									"additionalProperties": false,
+									"minProperties": 1
+								}
+							]
+						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
 						}
@@ -721,6 +937,9 @@
 				"classSource": {
 					"description": "The source of the class this subclass belongs to (defaults to PHB).",
 					"$ref": "../util.json#/$defs/source"
+				},
+				"edition": {
+					"$ref": "../util-edition.json#/$defs/edition"
 				},
 				"isReprinted": {
 					"type": "boolean"
@@ -825,6 +1044,35 @@
 				},
 				"hasFluffImages": {
 					"const": true
+				},
+				"fluff": {
+					"anyOf": [
+						{
+							"description": "Reference \"subclassFluff\" array items",
+							"type": "object",
+							"properties": {
+								"_subclassFluff": {
+									"type": "object",
+									"properties": {
+										"name": {
+											"type": "string"
+										},
+										"source": {
+											"$ref": "../util.json#/$defs/source"
+										},
+										"className": {
+											"type": "string"
+										},
+										"classSource": {
+											"$ref": "../util.json#/$defs/source"
+										}
+									}
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						}
+					]
 				}
 			},
 			"additionalProperties": false
@@ -930,6 +1178,9 @@
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"edition": {
+							"$ref": "../util-edition.json#/$defs/edition"
 						},
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
@@ -1202,6 +1453,9 @@
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"edition": {
+							"$ref": "../util-edition.json#/$defs/edition"
 						},
 						"srd": {
 							"$ref": "../util.json#/$defs/srd"
@@ -1477,6 +1731,9 @@
 				},
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
+				},
+				"edition": {
+					"$ref": "../util-edition.json#/$defs/edition"
 				},
 				"srd": {
 					"$ref": "../util.json#/$defs/srd"
