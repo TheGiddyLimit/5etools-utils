@@ -106,6 +106,9 @@
 				"senses": {
 					"$ref": "util.json#/$defs/sensesArray"
 				},
+				"bonusSenses": {
+					"$ref": "util.json#/$defs/sensesArray"
+				},
 				"traitTags": {
 					"description": "Additional filter-only tags, to be used when more specific data (\"skillProficiencies\", etc.) is not appropriate, due to e.g. conditional or temporary effects.",
 					"oneOf": [
@@ -231,6 +234,9 @@
 							"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
 						},
 						"senses": {
+							"$ref": "util.json#/$defs/sensesArray"
+						},
+						"bonusSenses": {
 							"$ref": "util.json#/$defs/sensesArray"
 						},
 						"traitTags": {
@@ -361,6 +367,9 @@
 							"$ref": "util.json#/$defs/conditionImmunityArrayPlayer"
 						},
 						"senses": {
+							"$ref": "util.json#/$defs/sensesArray"
+						},
+						"bonusSenses": {
 							"$ref": "util.json#/$defs/sensesArray"
 						},
 						"traitTags": {
