@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.36",
+	"version": "1.21.37",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -433,6 +433,31 @@
 					},
 					"additionalProperties": false,
 					"minProperties": 1
+				},
+				"gear": {
+					"type": "array",
+					"items": {
+						"oneOf": [
+							{
+								"description": "An item UID, e.g. \"longsword|phb\"",
+								"type": "string"
+							},
+							{
+								"type": "object",
+								"properties": {
+									"item": {
+										"description": "An item UID, e.g. \"longsword|phb\"",
+										"type": "string"
+									},
+									"quantity": {
+										"type": "integer"
+									}
+								},
+								"required": ["item", "quantity"],
+								"additionalProperties": false
+							}
+						]
+					}
 				},
 				"senses": {
 					"oneOf": [
