@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.3",
+	"version": "1.0.4",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -65,6 +65,13 @@
 		"foundryTokenScale": {
 			"type": "number",
 			"minimum": 0.2,
+			"maximum": 3,
+			"multipleOf" : 0.1
+		},
+
+		"foundryTokenSubjectScale": {
+			"type": "number",
+			"minimum": 0.8,
 			"maximum": 3,
 			"multipleOf" : 0.1
 		},

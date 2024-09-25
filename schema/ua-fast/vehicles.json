@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.10",
+	"version": "1.7.11",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -459,6 +459,12 @@
 				},
 				"tokenHref": {
 					"$ref": "util-token.json#/$defs/tokenHref"
+				},
+				"foundryTokenSubjectHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
+				},
+				"foundryTokenSubjectScale": {
+					"$ref": "util-foundry.json#/$defs/foundryTokenSubjectScale"
 				}
 			},
 			"required": [
@@ -631,6 +637,12 @@
 				},
 				"tokenHref": {
 					"$ref": "util-token.json#/$defs/tokenHref"
+				},
+				"foundryTokenSubjectHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
+				},
+				"foundryTokenSubjectScale": {
+					"$ref": "util-foundry.json#/$defs/foundryTokenSubjectScale"
 				}
 			},
 			"required": [
@@ -805,6 +817,12 @@
 				},
 				"tokenHref": {
 					"$ref": "util-token.json#/$defs/tokenHref"
+				},
+				"foundryTokenSubjectHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
+				},
+				"foundryTokenSubjectScale": {
+					"$ref": "util-foundry.json#/$defs/foundryTokenSubjectScale"
 				}
 			},
 			"required": [

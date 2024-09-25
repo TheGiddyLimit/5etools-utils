@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.37",
+	"version": "1.21.38",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -887,7 +887,10 @@
 					"modes": ["brew", "ua"],
 					"value": {
 						"tokenUrl": {"$ref": "../util-token.json#/$defs/tokenUrl"},
-						"tokenHref": {"$ref": "../util-token.json#/$defs/tokenHref"}
+						"tokenHref": {"$ref": "../util-token.json#/$defs/tokenHref"},
+
+						"foundryTokenSubjectHref": {"$ref": "../util-token.json#/$defs/tokenHref"},
+						"foundryTokenSubjectScale": {"$ref": "../util-foundry.json#/$defs/foundryTokenSubjectScale"}
 					}
 				},
 				"isNamedCreature": {

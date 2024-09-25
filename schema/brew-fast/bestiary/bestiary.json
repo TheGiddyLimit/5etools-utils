@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.37",
+	"version": "1.21.38",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1346,6 +1346,12 @@
 				},
 				"tokenHref": {
 					"$ref": "../util-token.json#/$defs/tokenHref"
+				},
+				"foundryTokenSubjectHref": {
+					"$ref": "../util-token.json#/$defs/tokenHref"
+				},
+				"foundryTokenSubjectScale": {
+					"$ref": "../util-foundry.json#/$defs/foundryTokenSubjectScale"
 				}
 			},
 			"additionalProperties": false
@@ -2588,6 +2594,12 @@
 						},
 						"tokenHref": {
 							"$ref": "../util-token.json#/$defs/tokenHref"
+						},
+						"foundryTokenSubjectHref": {
+							"$ref": "../util-token.json#/$defs/tokenHref"
+						},
+						"foundryTokenSubjectScale": {
+							"$ref": "../util-foundry.json#/$defs/foundryTokenSubjectScale"
 						}
 					},
 					"additionalProperties": false,
@@ -3835,6 +3847,12 @@
 						},
 						"tokenHref": {
 							"$ref": "../util-token.json#/$defs/tokenHref"
+						},
+						"foundryTokenSubjectHref": {
+							"$ref": "../util-token.json#/$defs/tokenHref"
+						},
+						"foundryTokenSubjectScale": {
+							"$ref": "../util-foundry.json#/$defs/foundryTokenSubjectScale"
 						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
