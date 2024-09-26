@@ -63,7 +63,7 @@
 							"type": "string"
 						},
 						"braces": {
-							"type": "boolean"
+							"const": true
 						}
 					},
 					"required": [
@@ -910,13 +910,16 @@
 					"$ref": "../util.json#/$defs/page"
 				},
 				"familiar": {
-					"type": "boolean"
+					"enum": [
+						true,
+						null
+					]
 				},
 				"additionalSources": {
 					"$ref": "../util.json#/$defs/additionalSources"
 				},
 				"hasToken": {
-					"type": "boolean"
+					"const": true
 				},
 				"tokenCredit": {
 					"type": "string"
@@ -931,11 +934,17 @@
 					"$ref": "../util-token.json#/$defs/token"
 				},
 				"isNamedCreature": {
-					"type": "boolean"
+					"enum": [
+						true,
+						null
+					]
 				},
 				"isNpc": {
 					"description": "Used to flag adventure NPCs",
-					"type": "boolean"
+					"enum": [
+						true,
+						null
+					]
 				},
 				"environment": {
 					"type": "array",
@@ -1245,10 +1254,10 @@
 					}
 				},
 				"hasFluff": {
-					"type": "boolean"
+					"const": true
 				},
 				"hasFluffImages": {
-					"type": "boolean"
+					"const": true
 				},
 				"tokenUrl": {
 					"$ref": "../util-token.json#/$defs/tokenUrl"
@@ -2067,13 +2076,16 @@
 							"$ref": "../util.json#/$defs/page"
 						},
 						"familiar": {
-							"type": "boolean"
+							"enum": [
+								true,
+								null
+							]
 						},
 						"additionalSources": {
 							"$ref": "../util.json#/$defs/additionalSources"
 						},
 						"hasToken": {
-							"type": "boolean"
+							"const": true
 						},
 						"tokenCredit": {
 							"type": "string"
@@ -2088,11 +2100,17 @@
 							"$ref": "../util-token.json#/$defs/token"
 						},
 						"isNamedCreature": {
-							"type": "boolean"
+							"enum": [
+								true,
+								null
+							]
 						},
 						"isNpc": {
 							"description": "Used to flag adventure NPCs",
-							"type": "boolean"
+							"enum": [
+								true,
+								null
+							]
 						},
 						"environment": {
 							"type": "array",
@@ -2402,10 +2420,10 @@
 							}
 						},
 						"hasFluff": {
-							"type": "boolean"
+							"const": true
 						},
 						"hasFluffImages": {
-							"type": "boolean"
+							"const": true
 						},
 						"tokenUrl": {
 							"$ref": "../util-token.json#/$defs/tokenUrl"
@@ -3229,13 +3247,16 @@
 							"$ref": "../util.json#/$defs/page"
 						},
 						"familiar": {
-							"type": "boolean"
+							"enum": [
+								true,
+								null
+							]
 						},
 						"additionalSources": {
 							"$ref": "../util.json#/$defs/additionalSources"
 						},
 						"hasToken": {
-							"type": "boolean"
+							"const": true
 						},
 						"tokenCredit": {
 							"type": "string"
@@ -3250,11 +3271,17 @@
 							"$ref": "../util-token.json#/$defs/token"
 						},
 						"isNamedCreature": {
-							"type": "boolean"
+							"enum": [
+								true,
+								null
+							]
 						},
 						"isNpc": {
 							"description": "Used to flag adventure NPCs",
-							"type": "boolean"
+							"enum": [
+								true,
+								null
+							]
 						},
 						"environment": {
 							"type": "array",
@@ -3564,10 +3591,10 @@
 							}
 						},
 						"hasFluff": {
-							"type": "boolean"
+							"const": true
 						},
 						"hasFluffImages": {
-							"type": "boolean"
+							"const": true
 						},
 						"tokenUrl": {
 							"$ref": "../util-token.json#/$defs/tokenUrl"
