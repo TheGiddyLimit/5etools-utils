@@ -339,12 +339,14 @@
 					"type": "object",
 					"properties": {
 						"weight": {
+							"description": "Value in pounds.",
 							"type": "array",
 							"items": {
 								"type": "number"
 							}
 						},
 						"volume": {
+							"description": "Value in cubic feet.",
 							"type": "array",
 							"items": {
 								"type": "number"
