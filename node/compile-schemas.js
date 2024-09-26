@@ -48,26 +48,26 @@ class SchemaPreprocessor {
 	}
 
 	static _recurse ({root, obj, compileMode, isFast, dirSource}) {
-		if (typeof obj !== "object") return obj;
+		if (typeof obj !== "object" || obj == null) return obj;
 
 		if (obj instanceof Array) {
 			return obj
 				.filter(d => {
-					if (d.$$if_item) return d.$$if_item.modes.includes(compileMode);
+					if (d?.$$if_item) return d.$$if_item.modes.includes(compileMode);
 
-					return d.$$ifBrew_item
+					return d?.$$ifBrew_item
 						? compileMode === COMPILE_MODE.BREW
-						: d.$$ifSite_item
+						: d?.$$ifSite_item
 							? compileMode === COMPILE_MODE.SITE
-							: d.$$ifUa_item
+							: d?.$$ifUa_item
 								? compileMode === COMPILE_MODE.UA
 								: true;
 				})
 				.map(d => {
-					if (d.$$if_item) return this._recurse({root, obj: d.$$if_item.value, compileMode, isFast, dirSource});
-					if (d.$$ifBrew_item) return this._recurse({root, obj: d.$$ifBrew_item, compileMode, isFast, dirSource});
-					if (d.$$ifSite_item) return this._recurse({root, obj: d.$$ifSite_item, compileMode, isFast, dirSource});
-					if (d.$$ifUa_item) return this._recurse({root, obj: d.$$ifUa_item, compileMode, isFast, dirSource});
+					if (d?.$$if_item) return this._recurse({root, obj: d.$$if_item.value, compileMode, isFast, dirSource});
+					if (d?.$$ifBrew_item) return this._recurse({root, obj: d.$$ifBrew_item, compileMode, isFast, dirSource});
+					if (d?.$$ifSite_item) return this._recurse({root, obj: d.$$ifSite_item, compileMode, isFast, dirSource});
+					if (d?.$$ifUa_item) return this._recurse({root, obj: d.$$ifUa_item, compileMode, isFast, dirSource});
 					return this._recurse({root, obj: d, compileMode, isFast, dirSource});
 				});
 		}
