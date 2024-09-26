@@ -59,7 +59,7 @@
 							"type": "string"
 						},
 						"braces": {
-							"type": "boolean"
+							"const": true
 						}
 					},
 					"required": ["ac"],
@@ -800,12 +800,12 @@
 				},
 				"page": {"$ref": "../util.json#/$defs/page"},
 				"familiar": {
-					"type": "boolean"
+					"enum": [true, null]
 				},
 				"additionalSources": {
 					"$ref": "../util.json#/$defs/additionalSources"
 				},
-				"hasToken": {"type": "boolean"},
+				"hasToken": {"const": true},
 				"tokenCredit": {"type": "string"},
 				"foundryTokenScale": {"$ref": "../util-foundry.json#/$defs/foundryTokenScale"},
 				"altArt": {"$ref": "../util-token.json#/$defs/altArt"},
@@ -894,11 +894,11 @@
 					}
 				},
 				"isNamedCreature": {
-					"type": "boolean"
+					"enum": [true, null]
 				},
 				"isNpc": {
 					"description": "Used to flag adventure NPCs",
-					"type": "boolean"
+					"enum": [true, null]
 				},
 				"environment": {
 					"type": "array",
@@ -1159,8 +1159,8 @@
 						"$ref": "#/$defs/creatureVersion"
 					}
 				},
-				"hasFluff": {"type": "boolean"},
-				"hasFluffImages": {"type": "boolean"}
+				"hasFluff": {"const": true},
+				"hasFluffImages": {"const": true}
 			},
 			"additionalProperties": false
 		},
