@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.38",
+	"version": "1.21.39",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1073,14 +1073,20 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "X: Any (Choose)\n XX: All\n CS: Can't Speak Known Languages\n LF: Languages Known in Life\n TP: Telepathy\n OTH: Other\n -\n AB: Abyssal\n AQ: Aquan\n AU: Auran\n C: Common\n CE: Celestial\n D: Dwarvish\n DR: Draconic\n DS: Deep Speech\n DU: Druidic\n E: Elvish\n G: Gnomish\n GI: Giant\n GO: Goblin\n GTH: Gith\n H: Halfling\n I: Infernal\n IG: Ignan\n O: Orc\n  P: Primordial\n S: Sylvan\n T: Terran\n TC: Thieves' cant\n U: Undercommon\n ",
+						"description": "X: Any (Choose)\nXX: All\nCS: Can't Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves' cant\nU: Undercommon",
 						"enum": [
+							"X",
+							"XX",
+							"CS",
+							"LF",
+							"TP",
+							"OTH",
 							"AB",
 							"AQ",
 							"AU",
 							"C",
 							"CE",
-							"CS",
+							"CSL",
 							"D",
 							"DR",
 							"DS",
@@ -1093,17 +1099,12 @@
 							"H",
 							"I",
 							"IG",
-							"LF",
 							"O",
-							"OTH",
 							"P",
 							"S",
 							"T",
 							"TC",
-							"TP",
-							"U",
-							"X",
-							"XX"
+							"U"
 						]
 					}
 				},
@@ -2227,14 +2228,20 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "X: Any (Choose)\n XX: All\n CS: Can't Speak Known Languages\n LF: Languages Known in Life\n TP: Telepathy\n OTH: Other\n -\n AB: Abyssal\n AQ: Aquan\n AU: Auran\n C: Common\n CE: Celestial\n D: Dwarvish\n DR: Draconic\n DS: Deep Speech\n DU: Druidic\n E: Elvish\n G: Gnomish\n GI: Giant\n GO: Goblin\n GTH: Gith\n H: Halfling\n I: Infernal\n IG: Ignan\n O: Orc\n  P: Primordial\n S: Sylvan\n T: Terran\n TC: Thieves' cant\n U: Undercommon\n ",
+								"description": "X: Any (Choose)\nXX: All\nCS: Can't Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves' cant\nU: Undercommon",
 								"enum": [
+									"X",
+									"XX",
+									"CS",
+									"LF",
+									"TP",
+									"OTH",
 									"AB",
 									"AQ",
 									"AU",
 									"C",
 									"CE",
-									"CS",
+									"CSL",
 									"D",
 									"DR",
 									"DS",
@@ -2247,17 +2254,12 @@
 									"H",
 									"I",
 									"IG",
-									"LF",
 									"O",
-									"OTH",
 									"P",
 									"S",
 									"T",
 									"TC",
-									"TP",
-									"U",
-									"X",
-									"XX"
+									"U"
 								]
 							}
 						},
@@ -3386,14 +3388,20 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "X: Any (Choose)\n XX: All\n CS: Can't Speak Known Languages\n LF: Languages Known in Life\n TP: Telepathy\n OTH: Other\n -\n AB: Abyssal\n AQ: Aquan\n AU: Auran\n C: Common\n CE: Celestial\n D: Dwarvish\n DR: Draconic\n DS: Deep Speech\n DU: Druidic\n E: Elvish\n G: Gnomish\n GI: Giant\n GO: Goblin\n GTH: Gith\n H: Halfling\n I: Infernal\n IG: Ignan\n O: Orc\n  P: Primordial\n S: Sylvan\n T: Terran\n TC: Thieves' cant\n U: Undercommon\n ",
+								"description": "X: Any (Choose)\nXX: All\nCS: Can't Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves' cant\nU: Undercommon",
 								"enum": [
+									"X",
+									"XX",
+									"CS",
+									"LF",
+									"TP",
+									"OTH",
 									"AB",
 									"AQ",
 									"AU",
 									"C",
 									"CE",
-									"CS",
+									"CSL",
 									"D",
 									"DR",
 									"DS",
@@ -3406,17 +3414,12 @@
 									"H",
 									"I",
 									"IG",
-									"LF",
 									"O",
-									"OTH",
 									"P",
 									"S",
 									"T",
 									"TC",
-									"TP",
-									"U",
-									"X",
-									"XX"
+									"U"
 								]
 							}
 						},
