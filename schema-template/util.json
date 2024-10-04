@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.6",
+	"version": "1.17.7",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -308,6 +308,7 @@
 					"any": {"type": "integer"},
 					"anyStandard": {"type": "integer"},
 					"anyExotic": {"type": "integer"},
+					"anyRare": {"type": "integer"},
 
 					"abyssal": {"const": true},
 					"celestial": {"const": true},
@@ -618,6 +619,7 @@
 					"anyLanguage": {"type": "integer"},
 					"anyStandardLanguage": {"type": "integer"},
 					"anyExoticLanguage": {"type": "integer"},
+					"anyRareLanguage": {"type": "integer"},
 
 					"abyssal": {"const": true},
 					"celestial": {"const": true},
@@ -743,7 +745,7 @@
 													{"$ref": "#/$defs/languageNameLower"},
 													{"$ref": "#/$defs/toolNameLower"},
 													{"$ref": "#/$defs/skillNameLower"},
-													{"type": "string", "enum": ["anySkill", "anyTool", "anyArtisansTool", "anyMusicalInstrument", "anyLanguage", "anyStandardLanguage", "anyExoticLanguage"]}
+													{"type": "string", "enum": ["anySkill", "anyTool", "anyArtisansTool", "anyMusicalInstrument", "anyLanguage", "anyStandardLanguage", "anyExoticLanguage", "anyRareLanguage"]}
 												]
 											},
 											"minItems": 2
