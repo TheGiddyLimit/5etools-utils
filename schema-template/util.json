@@ -1117,7 +1117,10 @@
 								"additionalProperties": false
 							}
 						},
-						"additionalProperties": true
+						"patternProperties": {
+							"^[^|]+\\|.+$": {"const": true}
+						},
+						"additionalProperties": false
 					}
 				]
 			},
