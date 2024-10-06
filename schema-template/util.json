@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.7",
+	"version": "1.17.8",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -795,46 +795,6 @@
 					"firearms": {"const": true},
 					"improvised": {"const": true},
 
-					"battleaxe|phb": {"const": true},
-					"club|phb": {"const": true},
-					"dagger|phb":  {"const": true},
-					"flail|phb": {"const": true},
-					"glaive|phb":  {"const": true},
-					"greataxe|phb": {"const": true},
-					"greatclub|phb":  {"const": true},
-					"greatsword|phb": {"const": true},
-					"halberd|phb":  {"const": true},
-					"handaxe|phb": {"const": true},
-					"javelin|phb":  {"const": true},
-					"lance|phb": {"const": true},
-					"light hammer|phb":  {"const": true},
-					"longsword|phb": {"const": true},
-					"mace|phb":  {"const": true},
-					"maul|phb": {"const": true},
-					"morningstar|phb":  {"const": true},
-					"pike|phb": {"const": true},
-					"quarterstaff|phb":  {"const": true},
-					"rapier|phb": {"const": true},
-					"scimitar|phb":  {"const": true},
-					"shortsword|phb": {"const": true},
-					"sickle|phb":  {"const": true},
-					"spear|phb": {"const": true},
-					"staff|phb":  {"const": true},
-					"trident|phb": {"const": true},
-					"war pick|phb":  {"const": true},
-					"warhammer|phb": {"const": true},
-					"whip|phb":  {"const": true},
-					"blowgun|phb": {"const": true},
-					"dart|phb":  {"const": true},
-					"hand crossbow|phb": {"const": true},
-					"heavy crossbow|phb":  {"const": true},
-					"light crossbow|phb": {"const": true},
-					"longbow|phb":  {"const": true},
-					"net|phb": {"const": true},
-					"shortbow|phb":  {"const": true},
-					"sling|phb": {"const": true},
-					"double-bladed scimitar|erlw":  {"const": true},
-
 					"choose": {
 						"type": "object",
 						"properties": {
@@ -860,6 +820,9 @@
 						"required": ["fromFilter"],
 						"additionalProperties": false
 					}
+				},
+				"patternProperties": {
+					"^[^|]+\\|.+$": {"const": true}
 				},
 				"additionalProperties": false
 			},
