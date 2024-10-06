@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.8",
+	"version": "1.17.9",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -461,6 +461,7 @@
 					"disguise kit": {"const": true},
 					"forgery kit": {"const": true},
 
+					"anyGamingSet": {"type": "integer"},
 					"gaming set": {"const": true},
 					"dragonchess set": {"const": true},
 					"dice set": {"const": true},
@@ -676,6 +677,7 @@
 					"disguise kit": {"const": true},
 					"forgery kit": {"const": true},
 
+					"anyGamingSet": {"type": "integer"},
 					"gaming set": {"const": true},
 					"dragonchess set": {"const": true},
 					"dice set": {"const": true},
