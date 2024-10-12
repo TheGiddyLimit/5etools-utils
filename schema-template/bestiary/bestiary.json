@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.39",
+	"version": "1.21.40",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -969,6 +969,7 @@
 							"Antimagic Susceptibility",
 							"Beast of Burden",
 							"Brute",
+							"Camouflage",
 							"Charge",
 							"Damage Absorption",
 							"Death Burst",
