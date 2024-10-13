@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.8",
+	"version": "1.17.10",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -214,33 +214,37 @@
 			]
 		},
 		"languageNameLower": {
-			"type": "string",
-			"enum": [
-				"abyssal",
-				"aquan",
-				"auran",
-				"celestial",
-				"common",
-				"common sign language",
-				"deep speech",
-				"draconic",
-				"druidic",
-				"dwarvish",
-				"elvish",
-				"giant",
-				"gith",
-				"gnomish",
-				"goblin",
-				"halfling",
-				"ignan",
-				"infernal",
-				"orc",
-				"other",
-				"primordial",
-				"sylvan",
-				"terran",
-				"thieves' cant",
-				"undercommon"
+			"oneOf": [
+				{
+					"type": "string",
+					"enum": [
+						"abyssal",
+						"aquan",
+						"auran",
+						"celestial",
+						"common",
+						"common sign language",
+						"deep speech",
+						"draconic",
+						"druidic",
+						"dwarvish",
+						"elvish",
+						"giant",
+						"gith",
+						"gnomish",
+						"goblin",
+						"halfling",
+						"ignan",
+						"infernal",
+						"orc",
+						"other",
+						"primordial",
+						"sylvan",
+						"terran",
+						"thieves' cant",
+						"undercommon"
+					]
+				}
 			]
 		},
 		"languageProficiencies": {
@@ -476,6 +480,9 @@
 					},
 					"forgery kit": {
 						"const": true
+					},
+					"anyGamingSet": {
+						"type": "integer"
 					},
 					"gaming set": {
 						"const": true
@@ -852,6 +859,9 @@
 					},
 					"forgery kit": {
 						"const": true
+					},
+					"anyGamingSet": {
+						"type": "integer"
 					},
 					"gaming set": {
 						"const": true

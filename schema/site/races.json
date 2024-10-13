@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.8",
+	"version": "1.12.9",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -34,6 +34,9 @@
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"edition": {
+					"$ref": "util-edition.json#/$defs/edition"
 				},
 				"ability": {
 					"$ref": "util.json#/$defs/abilityScores"
@@ -282,6 +285,9 @@
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"edition": {
+					"$ref": "util-edition.json#/$defs/edition"
 				},
 				"ability": {
 					"$ref": "util.json#/$defs/abilityScores"
@@ -613,6 +619,9 @@
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
+						"edition": {
+							"$ref": "util-edition.json#/$defs/edition"
+						},
 						"ability": {
 							"$ref": "util.json#/$defs/abilityScores"
 						},
@@ -864,6 +873,9 @@
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"edition": {
+							"$ref": "util-edition.json#/$defs/edition"
 						},
 						"ability": {
 							"$ref": "util.json#/$defs/abilityScores"
@@ -1122,6 +1134,9 @@
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"edition": {
+							"$ref": "util-edition.json#/$defs/edition"
 						},
 						"ability": {
 							"$ref": "util.json#/$defs/abilityScores"
@@ -1385,6 +1400,9 @@
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"edition": {
+							"$ref": "util-edition.json#/$defs/edition"
 						},
 						"ability": {
 							"$ref": "util.json#/$defs/abilityScores"
