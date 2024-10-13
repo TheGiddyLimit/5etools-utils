@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.9",
+	"version": "1.17.10",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -270,33 +270,43 @@
 		},
 
 		"languageNameLower": {
-			"type": "string",
-			"enum": [
-				"abyssal",
-				"aquan",
-				"auran",
-				"celestial",
-				"common",
-				"common sign language",
-				"deep speech",
-				"draconic",
-				"druidic",
-				"dwarvish",
-				"elvish",
-				"giant",
-				"gith",
-				"gnomish",
-				"goblin",
-				"halfling",
-				"ignan",
-				"infernal",
-				"orc",
-				"other",
-				"primordial",
-				"sylvan",
-				"terran",
-				"thieves' cant",
-				"undercommon"
+			"oneOf": [
+				{
+					"type": "string",
+					"enum": [
+						"abyssal",
+						"aquan",
+						"auran",
+						"celestial",
+						"common",
+						"common sign language",
+						"deep speech",
+						"draconic",
+						"druidic",
+						"dwarvish",
+						"elvish",
+						"giant",
+						"gith",
+						"gnomish",
+						"goblin",
+						"halfling",
+						"ignan",
+						"infernal",
+						"orc",
+						"other",
+						"primordial",
+						"sylvan",
+						"terran",
+						"thieves' cant",
+						"undercommon"
+					]
+				},
+				{
+					"$$ifBrew_item": {
+						"type": "string",
+						"pattern": "^[^|]+\\|.+$"
+					}
+				}
 			]
 		},
 
@@ -354,14 +364,11 @@
 						"additionalProperties": false
 					}
 				},
-				"$$if": {
-					"modes": ["site", "ua"],
-					"value": {
-						"additionalProperties": false
-					}
-				},
+				"additionalProperties": false,
 				"$$ifBrew": {
-					"additionalProperties": {"const": true}
+					"patternProperties": {
+						"^[^|]+\\|.+$": {"const": true}
+					}
 				}
 			},
 			"uniqueItems": true,
