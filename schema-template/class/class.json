@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.3",
+	"version": "2.12.4",
 	"$id": "class.json",
 
 	"type": "object",
@@ -116,6 +116,12 @@
 			},
 			"minItems": 20,
 			"maxItems": 20
+		},
+
+		"preparedSpellsChange": {
+			"description": "The event at which a character can change their prepared spells.",
+			"type": "string",
+			"enum": ["restShort", "restLong", "level"]
 		},
 
 		"spellsKnownProgression": {
@@ -513,6 +519,7 @@
 				"cantripProgression": {"$ref": "#/$defs/cantripProgression"},
 				"preparedSpells": {"$ref": "#/$defs/preparedSpells"},
 				"preparedSpellsProgression": {"$ref": "#/$defs/preparedSpellsProgression"},
+				"preparedSpellsChange": {"$ref": "#/$defs/preparedSpellsChange"},
 				"spellsKnownProgression": {"$ref": "#/$defs/spellsKnownProgression"},
 				"spellsKnownProgressionFixed": {"$ref": "#/$defs/spellsKnownProgressionFixed"},
 				"spellsKnownProgressionFixedAllowLowerLevel": {"$ref": "#/$defs/spellsKnownProgressionFixedAllowLowerLevel"},
@@ -878,6 +885,7 @@
 				"cantripProgression": {"$ref": "#/$defs/cantripProgression"},
 				"preparedSpells": {"$ref": "#/$defs/preparedSpells"},
 				"preparedSpellsProgression": {"$ref": "#/$defs/preparedSpellsProgression"},
+				"preparedSpellsChange": {"$ref": "#/$defs/preparedSpellsChange"},
 				"spellsKnownProgression": {"$ref": "#/$defs/spellsKnownProgression"},
 				"spellsKnownProgressionFixed": {"$ref": "#/$defs/spellsKnownProgressionFixed"},
 				"spellsKnownProgressionFixedAllowLowerLevel": {"$ref": "#/$defs/spellsKnownProgressionFixedAllowLowerLevel"},
