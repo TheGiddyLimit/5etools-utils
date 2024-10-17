@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.3",
+	"version": "2.12.4",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -123,6 +123,15 @@
 			},
 			"minItems": 20,
 			"maxItems": 20
+		},
+		"preparedSpellsChange": {
+			"description": "The event at which a character can change their prepared spells.",
+			"type": "string",
+			"enum": [
+				"restShort",
+				"restLong",
+				"level"
+			]
 		},
 		"spellsKnownProgression": {
 			"type": "array",
@@ -817,6 +826,9 @@
 						"preparedSpellsProgression": {
 							"$ref": "#/$defs/preparedSpellsProgression"
 						},
+						"preparedSpellsChange": {
+							"$ref": "#/$defs/preparedSpellsChange"
+						},
 						"spellsKnownProgression": {
 							"$ref": "#/$defs/spellsKnownProgression"
 						},
@@ -1026,6 +1038,9 @@
 						"preparedSpellsProgression": {
 							"$ref": "#/$defs/preparedSpellsProgression"
 						},
+						"preparedSpellsChange": {
+							"$ref": "#/$defs/preparedSpellsChange"
+						},
 						"spellsKnownProgression": {
 							"$ref": "#/$defs/spellsKnownProgression"
 						},
@@ -1234,6 +1249,9 @@
 				},
 				"preparedSpellsProgression": {
 					"$ref": "#/$defs/preparedSpellsProgression"
+				},
+				"preparedSpellsChange": {
+					"$ref": "#/$defs/preparedSpellsChange"
 				},
 				"spellsKnownProgression": {
 					"$ref": "#/$defs/spellsKnownProgression"
@@ -1634,6 +1652,9 @@
 						"preparedSpellsProgression": {
 							"$ref": "#/$defs/preparedSpellsProgression"
 						},
+						"preparedSpellsChange": {
+							"$ref": "#/$defs/preparedSpellsChange"
+						},
 						"spellsKnownProgression": {
 							"$ref": "#/$defs/spellsKnownProgression"
 						},
@@ -1937,6 +1958,9 @@
 						},
 						"preparedSpellsProgression": {
 							"$ref": "#/$defs/preparedSpellsProgression"
+						},
+						"preparedSpellsChange": {
+							"$ref": "#/$defs/preparedSpellsChange"
 						},
 						"spellsKnownProgression": {
 							"$ref": "#/$defs/spellsKnownProgression"
@@ -2244,6 +2268,9 @@
 				},
 				"preparedSpellsProgression": {
 					"$ref": "#/$defs/preparedSpellsProgression"
+				},
+				"preparedSpellsChange": {
+					"$ref": "#/$defs/preparedSpellsChange"
 				},
 				"spellsKnownProgression": {
 					"$ref": "#/$defs/spellsKnownProgression"

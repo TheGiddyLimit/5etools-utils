@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.23",
+	"version": "1.8.24",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -3300,6 +3300,66 @@
 						"type",
 						"tag",
 						"name"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "statblock"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"tag": {
+							"$ref": "util.json#/$defs/tagNameStatsAbbreviation"
+						},
+						"abbreviation": {
+							"type": "string"
+						},
+						"displayName": {
+							"type": "string"
+						},
+						"hash": {
+							"type": "string"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"tag",
+						"abbreviation"
 					],
 					"additionalProperties": false
 				},

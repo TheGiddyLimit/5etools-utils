@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.10",
+	"version": "1.17.11",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -194,6 +194,12 @@
 				"legroup",
 				"deck",
 				"card"
+			]
+		},
+		"tagNameStatsAbbreviation": {
+			"type": "string",
+			"enum": [
+				"itemProperty"
 			]
 		},
 		"propNameStats": {
