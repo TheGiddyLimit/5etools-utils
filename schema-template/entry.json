@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.23",
+	"version": "1.8.24",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2099,6 +2099,26 @@
 								"collapsed": {"const": true}
 							},
 							"required": ["tag", "name"],
+							"additionalProperties": false
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{"$ref" : "#/$defs/entry"},
+						{
+							"properties": {
+								"type": {"const": "statblock"},
+								"tag": {"$ref": "util.json#/$defs/tagNameStatsAbbreviation"},
+								"abbreviation": {"type": "string"},
+								"displayName": {"type": "string"},
+								"source": {"$ref": "util.json#/$defs/source"},
+								"hash": {"type": "string"},
+								"style": {"$ref": "#/$defs/_entryDataStyle"},
+								"collapsed": {"const": true}
+							},
+							"required": ["tag", "abbreviation"],
 							"additionalProperties": false
 						}
 					]
