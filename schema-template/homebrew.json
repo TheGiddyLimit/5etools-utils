@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.26",
+	"version": "1.10.27",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -287,12 +287,17 @@
 					"description": "An overall status for the homebrew.\n\"ready\" indicates that this brew is ready for use, and is in an internally consistent state.\n\"wip\" indicates that this brew is e.g. incomplete, or partially migrated between versions of the source document(s).\n\"invalid\" indicates that using this brew is inadvisable, because while it is schema-passing, it breaks clients which attempt to use it.\n\"deprecated\" indicates this brew is ready for use, but that using it is inadvisable, because e.g. it has been superseded by another brew.",
 					"type": "string",
 					"enum": ["ready", "wip", "invalid", "deprecated"]
+				},
+				"edition": {
+					"description": "The rules edition this homebrew is compatible with. If ambiguous, \"classic\" should be specified.",
+					"$ref": "util-edition.json#/$defs/edition"
 				}
 			},
 			"required": [
 				"sources",
 				"dateAdded",
-				"dateLastModified"
+				"dateLastModified",
+				"edition"
 			],
 			"additionalProperties": false
 		},
