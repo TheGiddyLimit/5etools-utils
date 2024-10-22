@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.26",
+	"version": "1.10.27",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -294,12 +294,17 @@
 						"invalid",
 						"deprecated"
 					]
+				},
+				"edition": {
+					"description": "The rules edition this homebrew is compatible with. If ambiguous, \"classic\" should be specified.",
+					"$ref": "util-edition.json#/$defs/edition"
 				}
 			},
 			"required": [
 				"sources",
 				"dateAdded",
-				"dateLastModified"
+				"dateLastModified",
+				"edition"
 			],
 			"additionalProperties": false
 		},
