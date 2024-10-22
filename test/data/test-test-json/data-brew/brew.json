@@ -13,6 +13,7 @@
 				"targetSchema": "1.0.0"
 			}
 		],
+		"edition": "classic",
 		"dateAdded": 1537874753,
 		"dateLastModified": 1537874753,
 		"_dateLastModifiedHash": "751ee07570"
