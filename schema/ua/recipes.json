@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.5.6",
+	"version": "1.5.7",
 	"type": "object",
 	"$defs": {
 		"recipeData": {
@@ -172,11 +172,13 @@
 							"dessert",
 							"drink",
 							"entree",
+							"libation",
 							"pastry",
 							"salad",
 							"side",
 							"snack",
-							"soup"
+							"soup",
+							"sweet"
 						]
 					}
 				},
@@ -359,11 +361,13 @@
 									"dessert",
 									"drink",
 									"entree",
+									"libation",
 									"pastry",
 									"salad",
 									"side",
 									"snack",
-									"soup"
+									"soup",
+									"sweet"
 								]
 							}
 						},
@@ -550,11 +554,13 @@
 									"dessert",
 									"drink",
 									"entree",
+									"libation",
 									"pastry",
 									"salad",
 									"side",
 									"snack",
-									"soup"
+									"soup",
+									"sweet"
 								]
 							}
 						},
