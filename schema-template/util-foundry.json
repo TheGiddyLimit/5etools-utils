@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.4",
+	"version": "1.0.5",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -51,6 +51,9 @@
 				},
 				"senses": {
 					"$ref": "util.json#/$defs/sensesArray"
+				},
+				"additionalSpells": {
+					"$ref": "util.json#/$defs/additionalSpellsArray"
 				}
 			},
 			"additionalProperties": false
