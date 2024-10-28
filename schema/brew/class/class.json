@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.4",
+	"version": "2.12.5",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -1567,7 +1567,7 @@
 									"type": "object",
 									"properties": {
 										"additionalFromBackground": {
-											"type": "boolean"
+											"const": true
 										},
 										"default": {
 											"type": "array",
@@ -1591,6 +1591,9 @@
 								{
 									"type": "object",
 									"properties": {
+										"additionalFromBackground": {
+											"const": true
+										},
 										"entries": {
 											"type": "array",
 											"items": {
@@ -1874,7 +1877,7 @@
 									"type": "object",
 									"properties": {
 										"additionalFromBackground": {
-											"type": "boolean"
+											"const": true
 										},
 										"default": {
 											"type": "array",
@@ -1898,6 +1901,9 @@
 								{
 									"type": "object",
 									"properties": {
+										"additionalFromBackground": {
+											"const": true
+										},
 										"entries": {
 											"type": "array",
 											"items": {
@@ -2184,7 +2190,7 @@
 							"type": "object",
 							"properties": {
 								"additionalFromBackground": {
-									"type": "boolean"
+									"const": true
 								},
 								"default": {
 									"type": "array",
@@ -2208,6 +2214,9 @@
 						{
 							"type": "object",
 							"properties": {
+								"additionalFromBackground": {
+									"const": true
+								},
 								"entries": {
 									"type": "array",
 									"items": {
