@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.15",
+	"version": "1.14.16",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -122,9 +122,8 @@
 					"description": "In copper pieces.",
 					"type": ["number", "null"]
 				},
-				"valueMult": {
-					"type": "number"
-				},
+				"valueMult": {"type": "number"},
+				"valueRarity": {"$ref": "items-shared.json#/$defs/itemRarity"},
 				"weaponCategory": {
 					"$ref": "items-shared.json#/$defs/itemWeaponCategory"
 				},
