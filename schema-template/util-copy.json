@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.0.3",
+	"version": "1.0.4",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -26,15 +26,6 @@
 				"force": {"const": true}
 			},
 			"additionalProperties": false
-		},
-
-		"_mod_proficiency_levels": {
-			"description": "1: Proficient\n 2: Expertise",
-			"type": "integer",
-			"enum": [
-				1,
-				2
-			]
 		},
 
 		"_mod_senseObject": {
@@ -375,7 +366,7 @@
 							"type": "object",
 							"propertyNames": {"$ref": "util.json#/$defs/skillNameLower"},
 							"patternProperties": {
-								"": {"$ref": "#/$defs/_mod_proficiency_levels"}
+								"": {"$ref": "util.json#/$defs/proficiencyLevel"}
 							},
 							"minProperties": 1,
 							"additionalProperties": false
@@ -402,7 +393,7 @@
 								]
 							},
 							"patternProperties": {
-								"": {"$ref": "#/$defs/_mod_proficiency_levels"}
+								"": {"$ref": "util.json#/$defs/proficiencyLevel"}
 							},
 							"minProperties": 1,
 							"additionalProperties": false
@@ -415,7 +406,7 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "addAllSkills"},
-						"skills": {"$ref": "#/$defs/_mod_proficiency_levels"}
+						"skills": {"$ref": "util.json#/$defs/proficiencyLevel"}
 					},
 					"required": ["mode", "skills"],
 					"additionalProperties": false
@@ -424,7 +415,7 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "addAllSaves"},
-						"saves": {"$ref": "#/$defs/_mod_proficiency_levels"}
+						"saves": {"$ref": "util.json#/$defs/proficiencyLevel"}
 					},
 					"required": ["mode", "saves"],
 					"additionalProperties": false
