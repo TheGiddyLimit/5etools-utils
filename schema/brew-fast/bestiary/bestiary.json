@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.40",
+	"version": "1.21.41",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -331,8 +331,8 @@
 								"initiative": {
 									"type": "number"
 								},
-								"proficient": {
-									"const": true
+								"proficiency": {
+									"$ref": "../util.json#/$defs/proficiencyLevel"
 								},
 								"advantageMode": {
 									"type": "string",
@@ -613,6 +613,9 @@
 									"type": "string"
 								},
 								"xp": {
+									"type": "integer"
+								},
+								"xpLair": {
 									"type": "integer"
 								}
 							},
@@ -1590,8 +1593,8 @@
 										"initiative": {
 											"type": "number"
 										},
-										"proficient": {
-											"const": true
+										"proficiency": {
+											"$ref": "../util.json#/$defs/proficiencyLevel"
 										},
 										"advantageMode": {
 											"type": "string",
@@ -1872,6 +1875,9 @@
 											"type": "string"
 										},
 										"xp": {
+											"type": "integer"
+										},
+										"xpLair": {
 											"type": "integer"
 										}
 									},
@@ -2854,8 +2860,8 @@
 										"initiative": {
 											"type": "number"
 										},
-										"proficient": {
-											"const": true
+										"proficiency": {
+											"$ref": "../util.json#/$defs/proficiencyLevel"
 										},
 										"advantageMode": {
 											"type": "string",
@@ -3136,6 +3142,9 @@
 											"type": "string"
 										},
 										"xp": {
+											"type": "integer"
+										},
+										"xpLair": {
 											"type": "integer"
 										}
 									},

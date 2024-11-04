@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.11",
+	"version": "1.17.12",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -3695,6 +3695,14 @@
 					"description": "A spell UID of the form \"fireball\" (PHB source assumed by default) or \"shape water|xge\"",
 					"type": "string"
 				}
+			]
+		},
+		"proficiencyLevel": {
+			"description": "1: Proficient\n 2: Expertise",
+			"type": "integer",
+			"enum": [
+				1,
+				2
 			]
 		}
 	}
