@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.5",
+	"version": "1.9.6",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -91,6 +91,15 @@
 								"type": "boolean"
 							},
 							"rapier": {
+								"type": "boolean"
+							},
+							"whip": {
+								"type": "boolean"
+							},
+							"halberd": {
+								"type": "boolean"
+							},
+							"glaive": {
 								"type": "boolean"
 							},
 							"arrow": {
@@ -267,6 +276,9 @@
 						},
 						"wondrous": {
 							"type": "boolean"
+						},
+						"sentient": {
+							"const": true
 						},
 						"entries": {
 							"type": "array",
@@ -471,6 +483,15 @@
 						"rapier": {
 							"type": "boolean"
 						},
+						"whip": {
+							"type": "boolean"
+						},
+						"halberd": {
+							"type": "boolean"
+						},
+						"glaive": {
+							"type": "boolean"
+						},
 						"arrow": {
 							"type": "boolean"
 						},
@@ -620,6 +641,15 @@
 								"type": "boolean"
 							},
 							"rapier": {
+								"type": "boolean"
+							},
+							"whip": {
+								"type": "boolean"
+							},
+							"halberd": {
+								"type": "boolean"
+							},
+							"glaive": {
 								"type": "boolean"
 							},
 							"arrow": {
@@ -796,6 +826,9 @@
 						},
 						"wondrous": {
 							"type": "boolean"
+						},
+						"sentient": {
+							"const": true
 						},
 						"entries": {
 							"type": "array",
@@ -1004,6 +1037,15 @@
 						"rapier": {
 							"type": "boolean"
 						},
+						"whip": {
+							"type": "boolean"
+						},
+						"halberd": {
+							"type": "boolean"
+						},
+						"glaive": {
+							"type": "boolean"
+						},
 						"arrow": {
 							"type": "boolean"
 						},
@@ -1158,6 +1200,15 @@
 								"type": "boolean"
 							},
 							"rapier": {
+								"type": "boolean"
+							},
+							"whip": {
+								"type": "boolean"
+							},
+							"halberd": {
+								"type": "boolean"
+							},
+							"glaive": {
 								"type": "boolean"
 							},
 							"arrow": {
@@ -1334,6 +1385,9 @@
 						},
 						"wondrous": {
 							"type": "boolean"
+						},
+						"sentient": {
+							"const": true
 						},
 						"entries": {
 							"type": "array",
@@ -1539,6 +1593,15 @@
 							"type": "boolean"
 						},
 						"rapier": {
+							"type": "boolean"
+						},
+						"whip": {
+							"type": "boolean"
+						},
+						"halberd": {
+							"type": "boolean"
+						},
+						"glaive": {
 							"type": "boolean"
 						},
 						"arrow": {
