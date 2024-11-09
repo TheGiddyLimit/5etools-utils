@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.5",
+	"version": "1.9.6",
 	"type": "object",
 
 	"$defs" : {
@@ -49,6 +49,9 @@
 							"polearm": {"type": "boolean"},
 							"lance": {"type": "boolean"},
 							"rapier": {"type": "boolean"},
+							"whip": {"type": "boolean"},
+							"halberd": {"type": "boolean"},
+							"glaive": {"type": "boolean"},
 							"arrow": {"type": "boolean"},
 							"bolt": {"type": "boolean"},
 							"bulletFirearm": {"type": "boolean"},
@@ -184,6 +187,7 @@
 						"wondrous": {
 							"type": "boolean"
 						},
+						"sentient": {"const": true},
 						"entries": {
 							"type": "array",
 							"items": {
@@ -348,6 +352,9 @@
 						"polearm": {"type": "boolean"},
 						"lance": {"type": "boolean"},
 						"rapier": {"type": "boolean"},
+						"whip": {"type": "boolean"},
+						"halberd": {"type": "boolean"},
+						"glaive": {"type": "boolean"},
 						"arrow": {"type": "boolean"},
 						"bolt": {"type": "boolean"},
 						"bulletFirearm": {"type": "boolean"},
