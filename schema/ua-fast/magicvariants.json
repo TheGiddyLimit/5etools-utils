@@ -313,6 +313,9 @@
 								"type": "string"
 							}
 						},
+						"ability": {
+							"$ref": "items-shared.json#/$defs/itemAbility"
+						},
 						"lootTables": {
 							"type": "array",
 							"items": {
@@ -377,6 +380,9 @@
 						},
 						"barding": {
 							"type": "boolean"
+						},
+						"spellScrollLevel": {
+							"type": "integer"
 						},
 						"reqAttuneTags": {
 							"$ref": "util.json#/$defs/reqAttuneTags"
@@ -882,6 +888,9 @@
 								"type": "string"
 							}
 						},
+						"ability": {
+							"$ref": "items-shared.json#/$defs/itemAbility"
+						},
 						"lootTables": {
 							"type": "array",
 							"items": {
@@ -946,6 +955,9 @@
 						},
 						"barding": {
 							"type": "boolean"
+						},
+						"spellScrollLevel": {
+							"type": "integer"
 						},
 						"reqAttuneTags": {
 							"$ref": "util.json#/$defs/reqAttuneTags"
@@ -1460,6 +1472,9 @@
 								"type": "string"
 							}
 						},
+						"ability": {
+							"$ref": "items-shared.json#/$defs/itemAbility"
+						},
 						"lootTables": {
 							"type": "array",
 							"items": {
@@ -1524,6 +1539,9 @@
 						},
 						"barding": {
 							"type": "boolean"
+						},
+						"spellScrollLevel": {
+							"type": "integer"
 						},
 						"reqAttuneTags": {
 							"$ref": "util.json#/$defs/reqAttuneTags"
