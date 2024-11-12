@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.24",
+	"version": "1.9.0",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -40,6 +40,16 @@
 		"_entryDataData": {
 			"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
 			"type": "object"
+		},
+		"_entryTableColLabelItem": {
+			"anyOf": [
+				{
+					"$ref": "#/$defs/entryTableHeaderCell"
+				},
+				{
+					"type": "string"
+				}
+			]
 		},
 		"mediaHrefInternal": {
 			"type": "object",
@@ -474,23 +484,18 @@
 				"colLabels": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"$ref": "#/$defs/_entryTableColLabelItem"
 					}
 				},
-				"colLabelGroups": {
+				"colLabelRows": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"properties": {
-							"colLabels": {
-								"type": "array",
-								"items": {
-									"type": "string"
-								}
-							}
-						},
-						"additionalProperties": false
-					}
+						"type": "array",
+						"items": {
+							"$ref": "#/$defs/_entryTableColLabelItem"
+						}
+					},
+					"minItems": 1
 				},
 				"colStyles": {
 					"type": "array",
@@ -551,11 +556,11 @@
 				"colLabels": {
 					"not": {
 						"required": [
-							"colLabelGroups"
+							"colLabelRows"
 						]
 					}
 				},
-				"colLabelGroups": {
+				"colLabelRows": {
 					"not": {
 						"required": [
 							"colLabels"
@@ -615,23 +620,18 @@
 				"colLabels": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"$ref": "#/$defs/_entryTableColLabelItem"
 					}
 				},
-				"colLabelGroups": {
+				"colLabelRows": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"properties": {
-							"colLabels": {
-								"type": "array",
-								"items": {
-									"type": "string"
-								}
-							}
-						},
-						"additionalProperties": false
-					}
+						"type": "array",
+						"items": {
+							"$ref": "#/$defs/_entryTableColLabelItem"
+						}
+					},
+					"minItems": 1
 				},
 				"colStyles": {
 					"type": "array",
@@ -696,11 +696,11 @@
 				"colLabels": {
 					"not": {
 						"required": [
-							"colLabelGroups"
+							"colLabelRows"
 						]
 					}
 				},
-				"colLabelGroups": {
+				"colLabelRows": {
 					"not": {
 						"required": [
 							"colLabels"
@@ -805,6 +805,60 @@
 			"required": [
 				"type",
 				"row"
+			],
+			"additionalProperties": false
+		},
+		"entryTableHeaderCell": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string",
+					"const": "cellHeader"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"data": {
+					"$ref": "#/$defs/_entryDataData"
+				},
+				"id": {
+					"type": "string"
+				},
+				"width": {
+					"type": "integer",
+					"minimum": 2
+				},
+				"entry": {
+					"type": "string"
+				},
+				"style": {
+					"type": "string",
+					"enum": [
+						"th-skewer"
+					]
+				}
+			},
+			"required": [
+				"type",
+				"entry"
 			],
 			"additionalProperties": false
 		},

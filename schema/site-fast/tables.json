@@ -54,23 +54,18 @@
 				"colLabels": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"$ref": "entry.json#/$defs/_entryTableColLabelItem"
 					}
 				},
-				"colLabelGroups": {
+				"colLabelRows": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"properties": {
-							"colLabels": {
-								"type": "array",
-								"items": {
-									"type": "string"
-								}
-							}
-						},
-						"additionalProperties": false
-					}
+						"type": "array",
+						"items": {
+							"$ref": "entry.json#/$defs/_entryTableColLabelItem"
+						}
+					},
+					"minItems": 1
 				},
 				"colStyles": {
 					"type": "array",
@@ -167,11 +162,11 @@
 				"colLabels": {
 					"not": {
 						"required": [
-							"colLabelGroups"
+							"colLabelRows"
 						]
 					}
 				},
-				"colLabelGroups": {
+				"colLabelRows": {
 					"not": {
 						"required": [
 							"colLabels"

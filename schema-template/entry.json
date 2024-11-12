@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.8.24",
+	"version": "1.9.0",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -32,6 +32,13 @@
 		"_entryDataData": {
 			"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
 			"type": "object"
+		},
+
+		"_entryTableColLabelItem": {
+			"anyOf": [
+				{"$ref": "#/$defs/entryTableHeaderCell"},
+				{"type": "string"}
+			]
 		},
 
 		"mediaHrefInternal": {
@@ -298,20 +305,15 @@
 				"style": {"type" : "string"},
 				"colLabels": {
 					"type": "array",
-					"items": {"type" : "string"}
+					"items": {"$ref": "#/$defs/_entryTableColLabelItem"}
 				},
-				"colLabelGroups": {
+				"colLabelRows": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"properties": {
-							"colLabels": {
-								"type": "array",
-								"items": {"type" : "string"}
-							}
-						},
-						"additionalProperties": false
-					}
+						"type": "array",
+						"items": {"$ref": "#/$defs/_entryTableColLabelItem"}
+					},
+					"minItems": 1
 				},
 				"colStyles": {
 					"type": "array",
@@ -349,8 +351,8 @@
 				}
 			},
 			"dependencies": {
-				"colLabels": {"not": {"required": ["colLabelGroups"]}},
-				"colLabelGroups": {"not": {"required": ["colLabels"]}}
+				"colLabels": {"not": {"required": ["colLabelRows"]}},
+				"colLabelRows": {"not": {"required": ["colLabels"]}}
 			},
 			"additionalProperties": false
 		},
@@ -407,6 +409,34 @@
 						}
 					},
 					"required": ["row"],
+					"additionalProperties": false
+				}
+			]
+		},
+		"entryTableHeaderCell": {
+			"type": "object",
+			"$$merge": [
+				{"$ref" : "#/$defs/entry"},
+				{
+					"properties": {
+						"type": {
+							"const": "cellHeader"
+						},
+						"width": {
+							"type": "integer",
+							"minimum": 2
+						},
+						"entry": {
+							"type": "string"
+						},
+						"style": {
+							"type": "string",
+							"enum": [
+								"th-skewer"
+							]
+						}
+					},
+					"required": ["entry"],
 					"additionalProperties": false
 				}
 			]
