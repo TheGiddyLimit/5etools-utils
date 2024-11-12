@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "conditionsdiseases.json",
-	"version": "1.2.4",
+	"version": "1.2.5",
 	"type": "object",
 	"$defs": {
-		"conditionDisease": {
+		"_conditionDiseaseBase": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -56,6 +56,71 @@
 				"source"
 			],
 			"additionalProperties": false
+		},
+		"condition": {
+			"$ref": "#/$defs/_conditionDiseaseBase"
+		},
+		"status": {
+			"$ref": "#/$defs/_conditionDiseaseBase"
+		},
+		"disease": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"type": {
+					"type": "string",
+					"enum": [
+						"Magical Contagion"
+					]
+				}
+			},
+			"required": [
+				"name",
+				"entries",
+				"source"
+			],
+			"additionalProperties": false
 		}
 	},
 	"properties": {
@@ -64,7 +129,7 @@
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {
-				"$ref": "#/$defs/conditionDisease"
+				"$ref": "#/$defs/condition"
 			}
 		},
 		"disease": {
@@ -72,7 +137,7 @@
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {
-				"$ref": "#/$defs/conditionDisease"
+				"$ref": "#/$defs/disease"
 			}
 		},
 		"status": {
@@ -80,7 +145,7 @@
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {
-				"$ref": "#/$defs/conditionDisease"
+				"$ref": "#/$defs/status"
 			}
 		}
 	},

@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.0",
+	"version": "1.9.1",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -1484,7 +1484,7 @@
 							"const": "condition"
 						},
 						"data": {
-							"$ref": "conditionsdiseases.json#/$defs/conditionDisease"
+							"$ref": "conditionsdiseases.json#/$defs/condition"
 						},
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
@@ -1513,7 +1513,7 @@
 							"const": "disease"
 						},
 						"data": {
-							"$ref": "conditionsdiseases.json#/$defs/conditionDisease"
+							"$ref": "conditionsdiseases.json#/$defs/disease"
 						},
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
@@ -1542,7 +1542,7 @@
 							"const": "status"
 						},
 						"data": {
-							"$ref": "conditionsdiseases.json#/$defs/conditionDisease"
+							"$ref": "conditionsdiseases.json#/$defs/status"
 						},
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
