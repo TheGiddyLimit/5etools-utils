@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "deities.json",
-	"version": "1.2.10",
+	"version": "1.2.11",
 	"type": "object",
 
 	"$defs": {
@@ -130,9 +130,11 @@
 				"favoredWeapons": {
 					"type": "string"
 				},
+				"plane": {"type": "string"},
+				"worshipers": {"type": "string"},
 				"$$ifBrew": {
 					"customProperties": {
-						"description": "For homebrew use only; a key-value dict of the form: `\"Typical Worshipers\": \"Half-elf Bards\"`",
+						"description": "For homebrew use only; a key-value dict of the form: `\"Typical Dissidents\": \"Human Bards\"`",
 						"type": "object"
 					},
 					"foundryImg": {

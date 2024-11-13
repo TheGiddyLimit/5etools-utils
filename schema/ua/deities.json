@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "deities.json",
-	"version": "1.2.10",
+	"version": "1.2.11",
 	"type": "object",
 	"$defs": {
 		"deityData": {
@@ -118,6 +118,12 @@
 					"type": "string"
 				},
 				"favoredWeapons": {
+					"type": "string"
+				},
+				"plane": {
+					"type": "string"
+				},
+				"worshipers": {
 					"type": "string"
 				},
 				"source": {
@@ -287,6 +293,12 @@
 							"type": "string"
 						},
 						"favoredWeapons": {
+							"type": "string"
+						},
+						"plane": {
+							"type": "string"
+						},
+						"worshipers": {
 							"type": "string"
 						},
 						"source": {
@@ -459,6 +471,12 @@
 							"type": "string"
 						},
 						"favoredWeapons": {
+							"type": "string"
+						},
+						"plane": {
+							"type": "string"
+						},
+						"worshipers": {
 							"type": "string"
 						},
 						"source": {
