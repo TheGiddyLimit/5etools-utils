@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.3.4",
+	"version": "1.4.0",
 	"type": "object",
 	"$defs": {
-		"_trapTier": {
+		"_trapHazardTier": {
 			"type": "integer",
 			"minimum": 1,
 			"maximum": 4
@@ -21,14 +21,56 @@
 				}
 			}
 		},
-		"_trapThreat": {
+		"_trapHazardThreat": {
 			"type": "string",
 			"enum": [
+				"nuisance",
 				"setback",
 				"moderate",
 				"dangerous",
 				"deadly"
 			]
+		},
+		"_trapHazardRating": {
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"type": "object",
+						"properties": {
+							"level": {
+								"$ref": "#/$defs/_trapLevel"
+							},
+							"threat": {
+								"$ref": "#/$defs/_trapHazardThreat"
+							}
+						},
+						"required": [
+							"level",
+							"threat"
+						],
+						"additionalProperties": false
+					},
+					{
+						"type": "object",
+						"properties": {
+							"tier": {
+								"$ref": "#/$defs/_trapHazardTier"
+							},
+							"threat": {
+								"$ref": "#/$defs/_trapHazardThreat"
+							}
+						},
+						"required": [
+							"tier",
+							"threat"
+						],
+						"additionalProperties": false
+					}
+				]
+			},
+			"minItems": 1,
+			"uniqueItems": true
 		},
 		"trap": {
 			"oneOf": [
@@ -65,14 +107,8 @@
 								"$ref": "entry.json"
 							}
 						},
-						"tier": {
-							"$ref": "#/$defs/_trapTier"
-						},
-						"level": {
-							"$ref": "#/$defs/_trapLevel"
-						},
-						"threat": {
-							"$ref": "#/$defs/_trapThreat"
+						"rating": {
+							"$ref": "#/$defs/_trapHazardRating"
 						},
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
@@ -130,14 +166,8 @@
 								"$ref": "entry.json"
 							}
 						},
-						"tier": {
-							"$ref": "#/$defs/_trapTier"
-						},
-						"level": {
-							"$ref": "#/$defs/_trapLevel"
-						},
-						"threat": {
-							"$ref": "#/$defs/_trapThreat"
+						"rating": {
+							"$ref": "#/$defs/_trapHazardRating"
 						},
 						"trigger": {
 							"type": "array",
@@ -209,7 +239,6 @@
 						"trapHazType",
 						"source",
 						"entries",
-						"threat",
 						"trigger",
 						"countermeasures"
 					]
@@ -259,6 +288,9 @@
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
+				},
+				"rating": {
+					"$ref": "#/$defs/_trapHazardRating"
 				},
 				"hasFluff": {
 					"type": "boolean"
