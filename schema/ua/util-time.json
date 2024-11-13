@@ -56,6 +56,78 @@
 					"additionalProperties": false
 				}
 			]
+		},
+		"_durationEffectItem": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"type": "string",
+					"enum": [
+						"instant",
+						"timed",
+						"permanent",
+						"special"
+					]
+				},
+				"duration": {
+					"type": "object",
+					"properties": {
+						"type": {
+							"type": "string",
+							"enum": [
+								"turn",
+								"round",
+								"minute",
+								"hour",
+								"day",
+								"week",
+								"month",
+								"year"
+							]
+						},
+						"amount": {
+							"type": "integer"
+						},
+						"upTo": {
+							"type": "boolean"
+						}
+					},
+					"required": [
+						"type"
+					],
+					"additionalProperties": false
+				},
+				"concentration": {
+					"type": "boolean"
+				},
+				"ends": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "The examples given are short forms that are automatically expanded to \"discharged\", \"dispelled\" & \"triggered\".\nHomebrew files should state custom end conditions in full.",
+						"enum": [
+							"dispel",
+							"trigger",
+							"discharge"
+						]
+					}
+				},
+				"condition": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"type"
+			],
+			"additionalProperties": false
+		},
+		"durationEffect": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/_durationEffectItem"
+			},
+			"minItems": 1,
+			"uniqueItems": true
 		}
 	}
 }

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.17",
+	"version": "1.9.18",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -152,10 +152,7 @@
 					"additionalProperties": false
 				},
 				"duration": {
-					"type": "array",
-					"items": {
-						"$ref": "#/$defs/duration"
-					}
+					"$ref": "../util-time.json#/$defs/durationEffect"
 				},
 				"entries": {
 					"type": "array",
@@ -502,10 +499,7 @@
 							"additionalProperties": false
 						},
 						"duration": {
-							"type": "array",
-							"items": {
-								"$ref": "#/$defs/duration"
-							}
+							"$ref": "../util-time.json#/$defs/durationEffect"
 						},
 						"entries": {
 							"type": "array",
@@ -860,10 +854,7 @@
 							"additionalProperties": false
 						},
 						"duration": {
-							"type": "array",
-							"items": {
-								"$ref": "#/$defs/duration"
-							}
+							"$ref": "../util-time.json#/$defs/durationEffect"
 						},
 						"entries": {
 							"type": "array",
@@ -1068,70 +1059,6 @@
 					]
 				}
 			]
-		},
-		"duration": {
-			"type": "object",
-			"properties": {
-				"type": {
-					"type": "string",
-					"enum": [
-						"instant",
-						"timed",
-						"permanent",
-						"special"
-					]
-				},
-				"duration": {
-					"type": "object",
-					"properties": {
-						"type": {
-							"type": "string",
-							"enum": [
-								"turn",
-								"round",
-								"minute",
-								"hour",
-								"day",
-								"week",
-								"month",
-								"year"
-							]
-						},
-						"amount": {
-							"type": "integer"
-						},
-						"upTo": {
-							"type": "boolean"
-						}
-					},
-					"required": [
-						"type"
-					],
-					"additionalProperties": false
-				},
-				"concentration": {
-					"type": "boolean"
-				},
-				"ends": {
-					"type": "array",
-					"items": {
-						"type": "string",
-						"description": "The examples given are short forms that are automatically expanded to \"discharged\", \"dispelled\" & \"triggered\".\nHomebrew files should state custom end conditions in full.",
-						"enum": [
-							"dispel",
-							"trigger",
-							"discharge"
-						]
-					}
-				},
-				"condition": {
-					"type": "string"
-				}
-			},
-			"required": [
-				"type"
-			],
-			"additionalProperties": false
 		},
 		"class": {
 			"type": "object",

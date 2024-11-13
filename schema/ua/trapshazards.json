@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"type": "object",
 	"$defs": {
 		"_trapHazardTier": {
@@ -34,7 +34,7 @@
 		"_trapHazardRating": {
 			"type": "array",
 			"items": {
-				"oneOf": [
+				"anyOf": [
 					{
 						"type": "object",
 						"properties": {
@@ -46,7 +46,6 @@
 							}
 						},
 						"required": [
-							"level",
 							"threat"
 						],
 						"additionalProperties": false
@@ -62,7 +61,6 @@
 							}
 						},
 						"required": [
-							"tier",
 							"threat"
 						],
 						"additionalProperties": false
@@ -72,10 +70,17 @@
 			"minItems": 1,
 			"uniqueItems": true
 		},
+		"_trapTrigger": {
+			"type": "array",
+			"items": {
+				"$ref": "entry.json"
+			},
+			"minItems": 1
+		},
 		"trap": {
 			"oneOf": [
 				{
-					"description": "Older format, used in DMG",
+					"description": "Older format, used in DMG.\nExtended to support XDMG.",
 					"type": "object",
 					"properties": {
 						"name": {
@@ -86,10 +91,11 @@
 						},
 						"trapHazType": {
 							"type": "string",
-							"description": "MAG: Magical Trap\n MECH: Mechanical Trap",
+							"description": "MAG: Magical Trap\nMECH: Mechanical Trap\nTRP: Trap",
 							"enum": [
 								"MECH",
-								"MAG"
+								"MAG",
+								"TRP"
 							]
 						},
 						"source": {
@@ -100,6 +106,12 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						"trigger": {
+							"$ref": "#/$defs/_trapTrigger"
+						},
+						"duration": {
+							"$ref": "util-time.json#/$defs/durationEffect"
 						},
 						"entries": {
 							"type": "array",
@@ -170,10 +182,7 @@
 							"$ref": "#/$defs/_trapHazardRating"
 						},
 						"trigger": {
-							"type": "array",
-							"items": {
-								"$ref": "entry.json"
-							}
+							"$ref": "#/$defs/_trapTrigger"
 						},
 						"initiative": {
 							"oneOf": [
