@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.12",
+	"version": "1.17.13",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2007,6 +2007,27 @@
 					"psionics": {
 						"const": true
 					},
+					"spellcastingFocus": {
+						"oneOf": [
+							{
+								"const": true
+							},
+							{
+								"type": "array",
+								"items": {
+									"type": "string",
+									"enum": [
+										"arcane",
+										"druid",
+										"holy",
+										"tool"
+									]
+								},
+								"minItems": 1,
+								"uniqueItems": true
+							}
+						]
+					},
 					"proficiency": {
 						"type": "array",
 						"items": {
@@ -2035,6 +2056,22 @@
 									"enum": [
 										"simple",
 										"martial"
+									]
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"expertise": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"skill": {
+									"oneOf": [
+										{
+											"const": true
+										}
 									]
 								}
 							},

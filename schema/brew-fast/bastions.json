@@ -1,0 +1,445 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "bastions.json",
+	"version": "1.0.0",
+	"type": "object",
+	"$defs": {
+		"_space": {
+			"type": "string",
+			"examples": [
+				"cramped",
+				"roomy",
+				"vast"
+			]
+		},
+		"facilityData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"facilityType": {
+					"type": "string",
+					"examples": [
+						"basic",
+						"special"
+					]
+				},
+				"level": {
+					"type": "integer"
+				},
+				"prerequisite": {
+					"$ref": "util.json#/$defs/prerequisite"
+				},
+				"space": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/_space"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"hirelings": {
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"type": "object",
+								"properties": {
+									"exact": {
+										"type": "integer"
+									},
+									"space": {
+										"$ref": "#/$defs/_space"
+									}
+								},
+								"required": [
+									"exact"
+								],
+								"additionalProperties": false
+							},
+							{
+								"type": "object",
+								"properties": {
+									"min": {
+										"type": "integer"
+									},
+									"max": {
+										"type": "integer"
+									},
+									"space": {
+										"$ref": "#/$defs/_space"
+									}
+								},
+								"required": [
+									"min"
+								],
+								"additionalProperties": false
+							}
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"orders": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"examples": [
+							"craft",
+							"empower",
+							"harvest",
+							"maintain",
+							"recruit",
+							"research",
+							"trade"
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"fluff": {
+					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
+					"$ref": "util.json#/$defs/fluffObject"
+				}
+			},
+			"additionalProperties": false
+		},
+		"facility": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"facilityType": {
+							"type": "string",
+							"examples": [
+								"basic",
+								"special"
+							]
+						},
+						"level": {
+							"type": "integer"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"space": {
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/_space"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"hirelings": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "object",
+										"properties": {
+											"exact": {
+												"type": "integer"
+											},
+											"space": {
+												"$ref": "#/$defs/_space"
+											}
+										},
+										"required": [
+											"exact"
+										],
+										"additionalProperties": false
+									},
+									{
+										"type": "object",
+										"properties": {
+											"min": {
+												"type": "integer"
+											},
+											"max": {
+												"type": "integer"
+											},
+											"space": {
+												"$ref": "#/$defs/_space"
+											}
+										},
+										"required": [
+											"min"
+										],
+										"additionalProperties": false
+									}
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"orders": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"examples": [
+									"craft",
+									"empower",
+									"harvest",
+									"maintain",
+									"recruit",
+									"research",
+									"trade"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"fluff": {
+							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
+							"$ref": "util.json#/$defs/fluffObject"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"entries",
+						"source",
+						"facilityType"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"facilityType": {
+							"type": "string",
+							"examples": [
+								"basic",
+								"special"
+							]
+						},
+						"level": {
+							"type": "integer"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"space": {
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/_space"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"hirelings": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "object",
+										"properties": {
+											"exact": {
+												"type": "integer"
+											},
+											"space": {
+												"$ref": "#/$defs/_space"
+											}
+										},
+										"required": [
+											"exact"
+										],
+										"additionalProperties": false
+									},
+									{
+										"type": "object",
+										"properties": {
+											"min": {
+												"type": "integer"
+											},
+											"max": {
+												"type": "integer"
+											},
+											"space": {
+												"$ref": "#/$defs/_space"
+											}
+										},
+										"required": [
+											"min"
+										],
+										"additionalProperties": false
+									}
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"orders": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"examples": [
+									"craft",
+									"empower",
+									"harvest",
+									"maintain",
+									"recruit",
+									"research",
+									"trade"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"fluff": {
+							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
+							"$ref": "util.json#/$defs/fluffObject"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
+		}
+	},
+	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
+		"facility": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/facility"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		}
+	},
+	"required": [
+		"facility"
+	],
+	"additionalProperties": false
+}

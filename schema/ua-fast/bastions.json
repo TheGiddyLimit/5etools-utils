@@ -1,0 +1,433 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "bastions.json",
+	"version": "1.0.0",
+	"type": "object",
+	"$defs": {
+		"_space": {
+			"type": "string",
+			"enum": [
+				"cramped",
+				"roomy",
+				"vast"
+			]
+		},
+		"facilityData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"facilityType": {
+					"type": "string",
+					"enum": [
+						"basic",
+						"special"
+					]
+				},
+				"level": {
+					"type": "integer"
+				},
+				"prerequisite": {
+					"$ref": "util.json#/$defs/prerequisite"
+				},
+				"space": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/_space"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"hirelings": {
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"type": "object",
+								"properties": {
+									"exact": {
+										"type": "integer"
+									},
+									"space": {
+										"$ref": "#/$defs/_space"
+									}
+								},
+								"required": [
+									"exact"
+								],
+								"additionalProperties": false
+							},
+							{
+								"type": "object",
+								"properties": {
+									"min": {
+										"type": "integer"
+									},
+									"max": {
+										"type": "integer"
+									},
+									"space": {
+										"$ref": "#/$defs/_space"
+									}
+								},
+								"required": [
+									"min"
+								],
+								"additionalProperties": false
+							}
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"orders": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"craft",
+							"empower",
+							"harvest",
+							"maintain",
+							"recruit",
+							"research",
+							"trade"
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"facility": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"facilityType": {
+							"type": "string",
+							"enum": [
+								"basic",
+								"special"
+							]
+						},
+						"level": {
+							"type": "integer"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"space": {
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/_space"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"hirelings": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "object",
+										"properties": {
+											"exact": {
+												"type": "integer"
+											},
+											"space": {
+												"$ref": "#/$defs/_space"
+											}
+										},
+										"required": [
+											"exact"
+										],
+										"additionalProperties": false
+									},
+									{
+										"type": "object",
+										"properties": {
+											"min": {
+												"type": "integer"
+											},
+											"max": {
+												"type": "integer"
+											},
+											"space": {
+												"$ref": "#/$defs/_space"
+											}
+										},
+										"required": [
+											"min"
+										],
+										"additionalProperties": false
+									}
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"orders": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"craft",
+									"empower",
+									"harvest",
+									"maintain",
+									"recruit",
+									"research",
+									"trade"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"entries",
+						"source",
+						"facilityType"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"facilityType": {
+							"type": "string",
+							"enum": [
+								"basic",
+								"special"
+							]
+						},
+						"level": {
+							"type": "integer"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"space": {
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/_space"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"hirelings": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "object",
+										"properties": {
+											"exact": {
+												"type": "integer"
+											},
+											"space": {
+												"$ref": "#/$defs/_space"
+											}
+										},
+										"required": [
+											"exact"
+										],
+										"additionalProperties": false
+									},
+									{
+										"type": "object",
+										"properties": {
+											"min": {
+												"type": "integer"
+											},
+											"max": {
+												"type": "integer"
+											},
+											"space": {
+												"$ref": "#/$defs/_space"
+											}
+										},
+										"required": [
+											"min"
+										],
+										"additionalProperties": false
+									}
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"orders": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"craft",
+									"empower",
+									"harvest",
+									"maintain",
+									"recruit",
+									"research",
+									"trade"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
+		}
+	},
+	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
+		"facility": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/facility"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		}
+	},
+	"required": [
+		"facility"
+	],
+	"additionalProperties": false
+}
