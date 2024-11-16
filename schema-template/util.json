@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.13",
+	"version": "1.17.14",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -253,7 +253,8 @@
 				"sense",
 				"legroup",
 				"deck",
-				"card"
+				"card",
+				"facility"
 			]
 		},
 
