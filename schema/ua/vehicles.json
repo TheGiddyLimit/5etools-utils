@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.11",
+	"version": "1.7.12",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -88,6 +88,9 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
@@ -128,6 +131,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -488,6 +494,9 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
@@ -665,6 +674,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
