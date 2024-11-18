@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.1",
+	"version": "1.9.2",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -49,6 +49,57 @@
 				{
 					"type": "string"
 				}
+			]
+		},
+		"_entryStatblockBase": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string",
+					"const": "statblock"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"freeRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"data": {
+					"$ref": "#/$defs/_entryDataData"
+				},
+				"id": {
+					"type": "string"
+				},
+				"displayName": {
+					"type": "string"
+				},
+				"hash": {
+					"type": "string"
+				},
+				"style": {
+					"$ref": "#/$defs/_entryDataStyle"
+				},
+				"collapsed": {
+					"const": true
+				}
+			},
+			"required": [
+				"type"
 			]
 		},
 		"mediaHrefInternal": {
@@ -3334,9 +3385,6 @@
 						"id": {
 							"type": "string"
 						},
-						"tag": {
-							"$ref": "util.json#/$defs/tagNameStats"
-						},
 						"displayName": {
 							"type": "string"
 						},
@@ -3348,6 +3396,9 @@
 						},
 						"collapsed": {
 							"const": true
+						},
+						"tag": {
+							"$ref": "util.json#/$defs/tagNameStats"
 						}
 					},
 					"required": [
@@ -3391,10 +3442,64 @@
 						"id": {
 							"type": "string"
 						},
-						"tag": {
-							"$ref": "util.json#/$defs/tagNameStatsAbbreviation"
+						"displayName": {
+							"type": "string"
 						},
-						"abbreviation": {
+						"hash": {
+							"type": "string"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						},
+						"tag": {
+							"const": "deity"
+						},
+						"pantheon": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"type",
+						"tag",
+						"name"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "statblock"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
 							"type": "string"
 						},
 						"displayName": {
@@ -3408,6 +3513,12 @@
 						},
 						"collapsed": {
 							"const": true
+						},
+						"tag": {
+							"$ref": "util.json#/$defs/tagNameStatsAbbreviation"
+						},
+						"abbreviation": {
+							"type": "string"
 						}
 					},
 					"required": [
@@ -3451,9 +3562,6 @@
 						"id": {
 							"type": "string"
 						},
-						"prop": {
-							"$ref": "util.json#/$defs/propNameStats"
-						},
 						"displayName": {
 							"type": "string"
 						},
@@ -3465,6 +3573,9 @@
 						},
 						"collapsed": {
 							"const": true
+						},
+						"prop": {
+							"$ref": "util.json#/$defs/propNameStats"
 						}
 					},
 					"required": [
