@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.1",
+	"version": "1.9.2",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -38,6 +38,23 @@
 			"anyOf": [
 				{"$ref": "#/$defs/entryTableHeaderCell"},
 				{"type": "string"}
+			]
+		},
+
+		"_entryStatblockBase": {
+			"type": "object",
+			"$$merge": [
+				{"$ref" : "#/$defs/entry"},
+				{
+					"properties": {
+						"type": {"const": "statblock"},
+						"displayName": {"type": "string"},
+						"source": {"$ref": "util.json#/$defs/source"},
+						"hash": {"type": "string"},
+						"style": {"$ref": "#/$defs/_entryDataStyle"},
+						"collapsed": {"const": true}
+					}
+				}
 			]
 		},
 
@@ -2116,17 +2133,11 @@
 				{
 					"type": "object",
 					"$$merge": [
-						{"$ref" : "#/$defs/entry"},
+						{"$ref" : "#/$defs/_entryStatblockBase"},
 						{
 							"properties": {
-								"type": {"const": "statblock"},
 								"tag": {"$ref": "util.json#/$defs/tagNameStats"},
-								"name": {"type": "string"},
-								"displayName": {"type": "string"},
-								"source": {"$ref": "util.json#/$defs/source"},
-								"hash": {"type": "string"},
-								"style": {"$ref": "#/$defs/_entryDataStyle"},
-								"collapsed": {"const": true}
+								"name": {"type": "string"}
 							},
 							"required": ["tag", "name"],
 							"additionalProperties": false
@@ -2136,17 +2147,26 @@
 				{
 					"type": "object",
 					"$$merge": [
-						{"$ref" : "#/$defs/entry"},
+						{"$ref" : "#/$defs/_entryStatblockBase"},
 						{
 							"properties": {
-								"type": {"const": "statblock"},
+								"tag": {"const": "deity"},
+								"name": {"type": "string"},
+								"pantheon": {"type": "string"}
+							},
+							"required": ["tag", "name"],
+							"additionalProperties": false
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{"$ref" : "#/$defs/_entryStatblockBase"},
+						{
+							"properties": {
 								"tag": {"$ref": "util.json#/$defs/tagNameStatsAbbreviation"},
-								"abbreviation": {"type": "string"},
-								"displayName": {"type": "string"},
-								"source": {"$ref": "util.json#/$defs/source"},
-								"hash": {"type": "string"},
-								"style": {"$ref": "#/$defs/_entryDataStyle"},
-								"collapsed": {"const": true}
+								"abbreviation": {"type": "string"}
 							},
 							"required": ["tag", "abbreviation"],
 							"additionalProperties": false
@@ -2156,17 +2176,11 @@
 				{
 					"type": "object",
 					"$$merge": [
-						{"$ref" : "#/$defs/entry"},
+						{"$ref" : "#/$defs/_entryStatblockBase"},
 						{
 							"properties": {
-								"type": {"const": "statblock"},
 								"prop": {"$ref": "util.json#/$defs/propNameStats"},
-								"name": {"type": "string"},
-								"displayName": {"type": "string"},
-								"source": {"$ref": "util.json#/$defs/source"},
-								"hash": {"type": "string"},
-								"style": {"$ref": "#/$defs/_entryDataStyle"},
-								"collapsed": {"const": true}
+								"name": {"type": "string"}
 							},
 							"required": ["prop", "name", "source"]
 						}
