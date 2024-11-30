@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.14",
+	"version": "1.17.15",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1595,6 +1595,15 @@
 									"Planescape"
 								]
 							}
+						}
+					},
+					"culture": {
+						"type": "array",
+						"items": {
+							"type": "string",
+							"examples": [
+								"Elven"
+							]
 						}
 					},
 					"group": {

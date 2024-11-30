@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.41",
+	"version": "1.21.42",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -432,6 +432,74 @@
 						}
 					},
 					"additionalProperties": false,
+					"minProperties": 1
+				},
+				"tool": {
+					"type": "object",
+					"$$if": {
+						"modes": ["site", "ua"],
+						"value": {
+							"properties": {
+								"artisan's tools": {"type": "string"},
+
+								"alchemist's supplies": {"type": "string"},
+								"brewer's supplies": {"type": "string"},
+								"calligrapher's supplies": {"type": "string"},
+								"carpenter's tools": {"type": "string"},
+								"cartographer's tools": {"type": "string"},
+								"cobbler's tools": {"type": "string"},
+								"cook's utensils": {"type": "string"},
+								"glassblower's tools": {"type": "string"},
+								"jeweler's tools": {"type": "string"},
+								"leatherworker's tools": {"type": "string"},
+								"mason's tools": {"type": "string"},
+								"painter's supplies": {"type": "string"},
+								"potter's tools": {"type": "string"},
+								"smith's tools": {"type": "string"},
+								"tinker's tools": {"type": "string"},
+								"weaver's tools": {"type": "string"},
+								"woodcarver's tools": {"type": "string"},
+
+								"disguise kit": {"type": "string"},
+								"forgery kit": {"type": "string"},
+
+								"gaming set": {"type": "string"},
+								"dragonchess set": {"type": "string"},
+								"dice set": {"type": "string"},
+								"three-dragon ante set": {"type": "string"},
+
+								"herbalism kit": {"type": "string"},
+
+								"musical instrument": {"type": "string"},
+								"bagpipes": {"type": "string"},
+								"drum": {"type": "string"},
+								"dulcimer": {"type": "string"},
+								"flute": {"type": "string"},
+								"horn": {"type": "string"},
+								"lute": {"type": "string"},
+								"lyre": {"type": "string"},
+								"pan flute": {"type": "string"},
+								"shawm": {"type": "string"},
+								"viol": {"type": "string"},
+
+								"navigator's tools": {"type": "string"},
+								"thieves' tools": {"type": "string"},
+								"poisoner's kit": {"type": "string"},
+
+								"vehicles": {"type": "string"},
+								"vehicles (air)": {"type": "string"},
+								"vehicles (land)": {"type": "string"},
+								"vehicles (water)": {"type": "string"},
+								"vehicles (space)": {"type": "string"}
+							},
+							"additionalProperties": false
+						}
+					},
+					"$$ifBrew": {
+						"patternProperties": {
+							".*": {"type": "string"}
+						}
+					},
 					"minProperties": 1
 				},
 				"gear": {

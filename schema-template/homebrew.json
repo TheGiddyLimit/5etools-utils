@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.28",
+	"version": "1.10.29",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -151,6 +151,15 @@
 				"optionalFeatureTypes": {
 					"type": "object",
 					"description": "Object names are optional feature \"type\" shorthands (e.g. \"EI\" for \"Eldritch Invocation\" which will be displayed in the list view as a sortable column",
+					"patternProperties": {
+						".*": {
+							"type": "string"
+						}
+					}
+				},
+				"featCategories": {
+					"type": "object",
+					"description": "Object names are feat \"category\" shorthands (e.g. \"O\" for \"Origin\" which will be displayed in the list view as a sortable column",
 					"patternProperties": {
 						".*": {
 							"type": "string"

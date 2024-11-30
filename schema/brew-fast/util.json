@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.14",
+	"version": "1.17.15",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2122,6 +2122,15 @@
 							"examples": [
 								"Dragonlance",
 								"Planescape"
+							]
+						}
+					},
+					"culture": {
+						"type": "array",
+						"items": {
+							"type": "string",
+							"examples": [
+								"Elven"
 							]
 						}
 					},
