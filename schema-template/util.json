@@ -455,21 +455,21 @@
 					"artisan's tools": {"const": true},
 
 					"alchemist's supplies": {"const": true},
-					"brewer's supplies":{"const": true},
+					"brewer's supplies": {"const": true},
 					"calligrapher's supplies": {"const": true},
-					"carpenter's tools":{"const": true},
+					"carpenter's tools": {"const": true},
 					"cartographer's tools": {"const": true},
-					"cobbler's tools":{"const": true},
+					"cobbler's tools": {"const": true},
 					"cook's utensils": {"const": true},
-					"glassblower's tools":{"const": true},
+					"glassblower's tools": {"const": true},
 					"jeweler's tools": {"const": true},
-					"leatherworker's tools":{"const": true},
+					"leatherworker's tools": {"const": true},
 					"mason's tools": {"const": true},
-					"painter's supplies":{"const": true},
+					"painter's supplies": {"const": true},
 					"potter's tools": {"const": true},
-					"smith's tools":{"const": true},
+					"smith's tools": {"const": true},
 					"tinker's tools": {"const": true},
-					"weaver's tools":{"const": true},
+					"weaver's tools": {"const": true},
 					"woodcarver's tools": {"const": true},
 
 					"disguise kit": {"const": true},
@@ -542,32 +542,37 @@
 		},
 
 		"skillNameLower": {
-			"type": "string",
-			"$$switch_key": {
-				"key_site": "enum",
-				"key_ua": "enum",
-				"key_brew": "examples",
-				"value": [
-					"athletics",
-					"acrobatics",
-					"sleight of hand",
-					"stealth",
-					"arcana",
-					"history",
-					"investigation",
-					"nature",
-					"religion",
-					"animal handling",
-					"insight",
-					"medicine",
-					"perception",
-					"survival",
-					"deception",
-					"intimidation",
-					"performance",
-					"persuasion"
-				]
-			}
+			"anyOf": [
+				{
+					"type": "string",
+					"enum": [
+						"athletics",
+						"acrobatics",
+						"sleight of hand",
+						"stealth",
+						"arcana",
+						"history",
+						"investigation",
+						"nature",
+						"religion",
+						"animal handling",
+						"insight",
+						"medicine",
+						"perception",
+						"survival",
+						"deception",
+						"intimidation",
+						"performance",
+						"persuasion"
+					]
+				},
+				{
+					"$$ifBrew_item": {
+						"type": "string",
+						"pattern": "^[^|]+\\|.+$"
+					}
+				}
+			]
 		},
 
 		"skillProficiencies": {
@@ -578,23 +583,23 @@
 					"any": {"type": "integer"},
 
 					"athletics": {"const": true},
-					"acrobatics":{"const": true},
+					"acrobatics": {"const": true},
 					"sleight of hand": {"const": true},
-					"stealth":{"const": true},
+					"stealth": {"const": true},
 					"arcana": {"const": true},
-					"history":{"const": true},
+					"history": {"const": true},
 					"investigation": {"const": true},
-					"nature":{"const": true},
+					"nature": {"const": true},
 					"religion": {"const": true},
-					"animal handling":{"const": true},
+					"animal handling": {"const": true},
 					"insight": {"const": true},
-					"medicine":{"const": true},
+					"medicine": {"const": true},
 					"perception": {"const": true},
-					"survival":{"const": true},
+					"survival": {"const": true},
 					"deception": {"const": true},
-					"intimidation":{"const": true},
+					"intimidation": {"const": true},
 					"performance": {"const": true},
-					"persuasion":{"const": true},
+					"persuasion": {"const": true},
 
 					"choose": {
 						"type": "object",
@@ -611,6 +616,7 @@
 								"type": "integer"
 							}
 						},
+						"required": ["from"],
 						"additionalProperties": false
 					}
 				},
@@ -668,21 +674,21 @@
 					"artisan's tools": {"const": true},
 
 					"alchemist's supplies": {"const": true},
-					"brewer's supplies":{"const": true},
+					"brewer's supplies": {"const": true},
 					"calligrapher's supplies": {"const": true},
-					"carpenter's tools":{"const": true},
+					"carpenter's tools": {"const": true},
 					"cartographer's tools": {"const": true},
-					"cobbler's tools":{"const": true},
+					"cobbler's tools": {"const": true},
 					"cook's utensils": {"const": true},
-					"glassblower's tools":{"const": true},
+					"glassblower's tools": {"const": true},
 					"jeweler's tools": {"const": true},
-					"leatherworker's tools":{"const": true},
+					"leatherworker's tools": {"const": true},
 					"mason's tools": {"const": true},
-					"painter's supplies":{"const": true},
+					"painter's supplies": {"const": true},
 					"potter's tools": {"const": true},
-					"smith's tools":{"const": true},
+					"smith's tools": {"const": true},
 					"tinker's tools": {"const": true},
-					"weaver's tools":{"const": true},
+					"weaver's tools": {"const": true},
 					"woodcarver's tools": {"const": true},
 
 					"disguise kit": {"const": true},
@@ -724,23 +730,23 @@
 					"anySkill": {"type": "integer"},
 
 					"athletics": {"const": true},
-					"acrobatics":{"const": true},
+					"acrobatics": {"const": true},
 					"sleight of hand": {"const": true},
-					"stealth":{"const": true},
+					"stealth": {"const": true},
 					"arcana": {"const": true},
-					"history":{"const": true},
+					"history": {"const": true},
 					"investigation": {"const": true},
-					"nature":{"const": true},
+					"nature": {"const": true},
 					"religion": {"const": true},
-					"animal handling":{"const": true},
+					"animal handling": {"const": true},
 					"insight": {"const": true},
-					"medicine":{"const": true},
+					"medicine": {"const": true},
 					"perception": {"const": true},
-					"survival":{"const": true},
+					"survival": {"const": true},
 					"deception": {"const": true},
-					"intimidation":{"const": true},
+					"intimidation": {"const": true},
 					"performance": {"const": true},
-					"persuasion":{"const": true},
+					"persuasion": {"const": true},
 
 
 
@@ -909,23 +915,23 @@
 					"anyProficientSkill": {"type": "number"},
 
 					"athletics": {"const": true},
-					"acrobatics":{"const": true},
+					"acrobatics": {"const": true},
 					"sleight of hand": {"const": true},
-					"stealth":{"const": true},
+					"stealth": {"const": true},
 					"arcana": {"const": true},
-					"history":{"const": true},
+					"history": {"const": true},
 					"investigation": {"const": true},
-					"nature":{"const": true},
+					"nature": {"const": true},
 					"religion": {"const": true},
-					"animal handling":{"const": true},
+					"animal handling": {"const": true},
 					"insight": {"const": true},
-					"medicine":{"const": true},
+					"medicine": {"const": true},
 					"perception": {"const": true},
-					"survival":{"const": true},
+					"survival": {"const": true},
 					"deception": {"const": true},
-					"intimidation":{"const": true},
+					"intimidation": {"const": true},
 					"performance": {"const": true},
-					"persuasion":{"const": true},
+					"persuasion": {"const": true},
 
 
 
@@ -934,21 +940,21 @@
 					"artisan's tools": {"const": true},
 
 					"alchemist's supplies": {"const": true},
-					"brewer's supplies":{"const": true},
+					"brewer's supplies": {"const": true},
 					"calligrapher's supplies": {"const": true},
-					"carpenter's tools":{"const": true},
+					"carpenter's tools": {"const": true},
 					"cartographer's tools": {"const": true},
-					"cobbler's tools":{"const": true},
+					"cobbler's tools": {"const": true},
 					"cook's utensils": {"const": true},
-					"glassblower's tools":{"const": true},
+					"glassblower's tools": {"const": true},
 					"jeweler's tools": {"const": true},
-					"leatherworker's tools":{"const": true},
+					"leatherworker's tools": {"const": true},
 					"mason's tools": {"const": true},
-					"painter's supplies":{"const": true},
+					"painter's supplies": {"const": true},
 					"potter's tools": {"const": true},
-					"smith's tools":{"const": true},
+					"smith's tools": {"const": true},
 					"tinker's tools": {"const": true},
-					"weaver's tools":{"const": true},
+					"weaver's tools": {"const": true},
 					"woodcarver's tools": {"const": true},
 
 					"disguise kit": {"const": true},
@@ -2710,11 +2716,11 @@
 			"items": {
 				"type": "object",
 				"properties": {
-					"background":{"type": "string"},
+					"background": {"type": "string"},
 					"race": {"type": "string"},
-					"creatureType":{"$ref": "#/$defs/creatureType"},
+					"creatureType": {"$ref": "#/$defs/creatureType"},
 					"size": {"$ref": "#/$defs/size"},
-					"class":{"type": "string"},
+					"class": {"type": "string"},
 
 					"languageProficiency": {"$ref": "#/$defs/languageNameLower"},
 					"skillProficiency": {"$ref": "#/$defs/skillNameLower"},
@@ -2731,7 +2737,7 @@
 					"wis": {"type": "integer"},
 					"cha": {"type": "integer"},
 
-					"spellcasting":{"const": true},
+					"spellcasting": {"const": true},
 					"psionics": {"const": true}
 				}
 			},

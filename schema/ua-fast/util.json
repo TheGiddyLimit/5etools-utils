@@ -611,26 +611,30 @@
 			"minItems": 1
 		},
 		"skillNameLower": {
-			"type": "string",
-			"enum": [
-				"athletics",
-				"acrobatics",
-				"sleight of hand",
-				"stealth",
-				"arcana",
-				"history",
-				"investigation",
-				"nature",
-				"religion",
-				"animal handling",
-				"insight",
-				"medicine",
-				"perception",
-				"survival",
-				"deception",
-				"intimidation",
-				"performance",
-				"persuasion"
+			"anyOf": [
+				{
+					"type": "string",
+					"enum": [
+						"athletics",
+						"acrobatics",
+						"sleight of hand",
+						"stealth",
+						"arcana",
+						"history",
+						"investigation",
+						"nature",
+						"religion",
+						"animal handling",
+						"insight",
+						"medicine",
+						"perception",
+						"survival",
+						"deception",
+						"intimidation",
+						"performance",
+						"persuasion"
+					]
+				}
 			]
 		},
 		"skillProficiencies": {
@@ -710,6 +714,9 @@
 								"type": "integer"
 							}
 						},
+						"required": [
+							"from"
+						],
 						"additionalProperties": false
 					}
 				},
