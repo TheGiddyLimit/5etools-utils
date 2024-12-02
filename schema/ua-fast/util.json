@@ -1545,7 +1545,12 @@
 								"type": "object",
 								"properties": {
 									"category": {
-										"$ref": "#/$defs/dataFeatCategory"
+										"type": "array",
+										"items": {
+											"$ref": "#/$defs/dataFeatCategory"
+										},
+										"uniqueItems": true,
+										"minItems": 1
 									},
 									"count": {
 										"type": "integer"
