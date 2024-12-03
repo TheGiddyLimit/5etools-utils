@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.6",
+	"version": "1.7.7",
 	"type": "object",
 
 	"$defs": {
@@ -69,6 +69,7 @@
 					"$ref": "util.json#/$defs/savingThrowProficiencies"
 				},
 				"optionalfeatureProgression": {"$ref": "util.json#/$defs/optionalfeatureProgression"},
+				"featProgression": {"$ref": "util.json#/$defs/featProgression"},
 				"expertise": {"$ref": "util.json#/$defs/expertise"},
 				"resist": {"$ref": "util.json#/$defs/damageResistArrayPlayer"},
 				"immune": {"$ref": "util.json#/$defs/damageImmunityArrayPlayer"},
