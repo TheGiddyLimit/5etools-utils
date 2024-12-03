@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.9",
+	"version": "1.12.10",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -154,6 +154,16 @@
 						},
 						{
 							"type": "null"
+						}
+					]
+				},
+				"startingEquipment": {
+					"oneOf": [
+						{
+							"type": "null"
+						},
+						{
+							"$ref": "util.json#/$defs/startingEquipment"
 						}
 					]
 				},
@@ -420,6 +430,16 @@
 						},
 						{
 							"type": "null"
+						}
+					]
+				},
+				"startingEquipment": {
+					"oneOf": [
+						{
+							"type": "null"
+						},
+						{
+							"$ref": "util.json#/$defs/startingEquipment"
 						}
 					]
 				},
@@ -771,6 +791,16 @@
 								}
 							]
 						},
+						"startingEquipment": {
+							"oneOf": [
+								{
+									"type": "null"
+								},
+								{
+									"$ref": "util.json#/$defs/startingEquipment"
+								}
+							]
+						},
 						"additionalSpells": {
 							"oneOf": [
 								{
@@ -1038,6 +1068,16 @@
 								},
 								{
 									"type": "null"
+								}
+							]
+						},
+						"startingEquipment": {
+							"oneOf": [
+								{
+									"type": "null"
+								},
+								{
+									"$ref": "util.json#/$defs/startingEquipment"
 								}
 							]
 						},
@@ -1314,6 +1354,16 @@
 								},
 								{
 									"type": "null"
+								}
+							]
+						},
+						"startingEquipment": {
+							"oneOf": [
+								{
+									"type": "null"
+								},
+								{
+									"$ref": "util.json#/$defs/startingEquipment"
 								}
 							]
 						},
@@ -1596,6 +1646,16 @@
 								},
 								{
 									"type": "null"
+								}
+							]
+						},
+						"startingEquipment": {
+							"oneOf": [
+								{
+									"type": "null"
+								},
+								{
+									"$ref": "util.json#/$defs/startingEquipment"
 								}
 							]
 						},
