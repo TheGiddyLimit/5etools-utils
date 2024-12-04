@@ -359,15 +359,13 @@
 						"properties": {
 							"from": {
 								"type": "array",
-								"items": {
-									"$ref": "#/$defs/languageNameLower"
-								},
-								"uniqueItems": true
+								"items": {"$ref": "#/$defs/languageNameLower"},
+								"uniqueItems": true,
+								"minItems": 2
 							},
-							"count": {
-								"type": "integer"
-							}
+							"count": {"type": "integer"}
 						},
+						"required": ["from"],
 						"additionalProperties": false
 					}
 				},
@@ -383,65 +381,71 @@
 		},
 
 		"toolNameLower": {
-			"type": "string",
-			"$$switch_key": {
-				"key_site": "enum",
-				"key_ua": "enum",
-				"key_brew": "examples",
-				"value": [
-					"artisan's tools",
+			"anyOf": [
+				{
+					"type": "string",
+					"enum": [
+						"artisan's tools",
 
-					"alchemist's supplies",
-					"brewer's supplies",
-					"calligrapher's supplies",
-					"carpenter's tools",
-					"cartographer's tools",
-					"cobbler's tools",
-					"cook's utensils",
-					"glassblower's tools",
-					"jeweler's tools",
-					"leatherworker's tools",
-					"mason's tools",
-					"painter's supplies",
-					"potter's tools",
-					"smith's tools",
-					"tinker's tools",
-					"weaver's tools",
-					"woodcarver's tools",
+						"alchemist's supplies",
+						"brewer's supplies",
+						"calligrapher's supplies",
+						"carpenter's tools",
+						"cartographer's tools",
+						"cobbler's tools",
+						"cook's utensils",
+						"glassblower's tools",
+						"jeweler's tools",
+						"leatherworker's tools",
+						"mason's tools",
+						"painter's supplies",
+						"potter's tools",
+						"smith's tools",
+						"tinker's tools",
+						"weaver's tools",
+						"woodcarver's tools",
 
-					"disguise kit",
-					"forgery kit",
+						"disguise kit",
+						"forgery kit",
 
-					"gaming set",
-					"dragonchess set",
-					"dice set",
-					"three-dragon ante set",
+						"gaming set",
+						"dragonchess set",
+						"dice set",
+						"three-dragon ante set",
+						"playing card set",
 
-					"herbalism kit",
+						"herbalism kit",
 
-					"musical instrument",
-					"bagpipes",
-					"drum",
-					"dulcimer",
-					"flute",
-					"horn",
-					"lute",
-					"lyre",
-					"pan flute",
-					"shawm",
-					"viol",
+						"musical instrument",
+						"bagpipes",
+						"drum",
+						"dulcimer",
+						"flute",
+						"horn",
+						"lute",
+						"lyre",
+						"pan flute",
+						"shawm",
+						"viol",
 
-					"navigator's tools",
-					"thieves' tools",
-					"poisoner's kit",
+						"navigator's tools",
+						"thieves' tools",
+						"poisoner's kit",
 
-					"vehicles",
-					"vehicles (air)",
-					"vehicles (land)",
-					"vehicles (water)",
-					"vehicles (space)"
-				]
-			}
+						"vehicles",
+						"vehicles (air)",
+						"vehicles (land)",
+						"vehicles (water)",
+						"vehicles (space)"
+					]
+				},
+				{
+					"$$ifBrew_item": {
+						"type": "string",
+						"pattern": "^[^|]+\\|.+$"
+					}
+				}
+			]
 		},
 
 		"toolProficiencies": {
@@ -480,6 +484,7 @@
 					"dragonchess set": {"const": true},
 					"dice set": {"const": true},
 					"three-dragon ante set": {"const": true},
+					"playing card set": {"const": true},
 
 					"herbalism kit": {"const": true},
 
@@ -520,21 +525,17 @@
 								"uniqueItems": true,
 								"minItems": 2
 							},
-							"count": {
-								"type": "integer"
-							}
+							"count": {"type": "integer"}
 						},
+						"required": ["from"],
 						"additionalProperties": false
 					}
 				},
-				"$$if": {
-					"modes": ["site", "ua"],
-					"value": {
-						"additionalProperties": false
-					}
-				},
+				"additionalProperties": false,
 				"$$ifBrew": {
-					"additionalProperties": {"const": true}
+					"patternProperties": {
+						"^[^|]+\\|.+$": {"const": true}
+					}
 				}
 			},
 			"uniqueItems": true,
@@ -606,15 +607,11 @@
 						"properties": {
 							"from": {
 								"type": "array",
-								"items": {
-									"$ref": "#/$defs/skillNameLower"
-								},
+								"items": {"$ref": "#/$defs/skillNameLower"},
 								"uniqueItems": true,
 								"minItems": 2
 							},
-							"count": {
-								"type": "integer"
-							}
+							"count": {"type": "integer"}
 						},
 						"required": ["from"],
 						"additionalProperties": false
@@ -626,7 +623,9 @@
 						"^[^|]+\\|.+$": {"const": true}
 					}
 				}
-			}
+			},
+			"uniqueItems": true,
+			"minItems": 1
 		},
 
 		"skillToolLanguageProficiencies": {
@@ -699,6 +698,7 @@
 					"dragonchess set": {"const": true},
 					"dice set": {"const": true},
 					"three-dragon ante set": {"const": true},
+					"playing card set": {"const": true},
 
 					"herbalism kit": {"const": true},
 
@@ -790,14 +790,11 @@
 						"minItems": 1
 					}
 				},
-				"$$if": {
-					"modes": ["site", "ua"],
-					"value": {
-						"additionalProperties": false
-					}
-				},
+				"additionalProperties": false,
 				"$$ifBrew": {
-					"additionalProperties": {"const": true}
+					"patternProperties": {
+						"^[^|]+\\|.+$": {"const": true}
+					}
 				}
 			},
 			"uniqueItems": true,
@@ -859,6 +856,7 @@
 					"heavy":  {"const": true},
 					"shield": {"const": true}
 				},
+				"minProperties": 1,
 				"additionalProperties": false
 			},
 			"uniqueItems": true,
@@ -901,6 +899,7 @@
 						"additionalProperties": false
 					}
 				},
+				"minProperties": 1,
 				"additionalProperties": false
 			},
 			"uniqueItems": true,
@@ -964,6 +963,7 @@
 					"dragonchess set": {"const": true},
 					"dice set": {"const": true},
 					"three-dragon ante set": {"const": true},
+					"playing card set": {"const": true},
 
 					"herbalism kit": {"const": true},
 
@@ -988,6 +988,12 @@
 					"vehicles (water)": {"const": true},
 					"vehicles (space)": {"const": true},
 					"poisoner's kit": {"const": true}
+				},
+				"additionalProperties": false,
+				"$$ifBrew": {
+					"patternProperties": {
+						"^[^|]+\\|.+$": {"const": true}
+					}
 				}
 			},
 			"uniqueItems": true,
