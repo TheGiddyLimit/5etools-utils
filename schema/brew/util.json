@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.16",
+	"version": "1.17.17",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -3180,6 +3180,24 @@
 					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
 				},
 				"pbe": {
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+				},
+				"str": {
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+				},
+				"dex": {
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+				},
+				"con": {
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+				},
+				"int": {
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+				},
+				"wis": {
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+				},
+				"cha": {
 					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
 				}
 			},

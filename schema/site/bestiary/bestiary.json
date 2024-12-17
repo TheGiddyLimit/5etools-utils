@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.42",
+	"version": "1.21.43",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -595,6 +595,9 @@
 							"type": "string"
 						},
 						"three-dragon ante set": {
+							"type": "string"
+						},
+						"playing card set": {
 							"type": "string"
 						},
 						"herbalism kit": {
@@ -1893,6 +1896,9 @@
 									"type": "string"
 								},
 								"three-dragon ante set": {
+									"type": "string"
+								},
+								"playing card set": {
 									"type": "string"
 								},
 								"herbalism kit": {
@@ -3196,6 +3202,9 @@
 									"type": "string"
 								},
 								"three-dragon ante set": {
+									"type": "string"
+								},
+								"playing card set": {
 									"type": "string"
 								},
 								"herbalism kit": {
