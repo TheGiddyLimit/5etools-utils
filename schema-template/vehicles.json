@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.12",
+	"version": "1.7.13",
 	"type": "object",
 
 	"$defs": {
@@ -401,11 +401,11 @@
 						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
+				"token": {"$ref": "util-token.json#/$defs/token"},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {
 						"tokenUrl": {"$ref": "util-token.json#/$defs/tokenUrl"},
-						"token": {"$ref": "util-token.json#/$defs/token"},
 						"tokenHref": {"$ref": "util-token.json#/$defs/tokenHref"},
 
 						"foundryTokenSubjectHref": {"$ref": "util-token.json#/$defs/tokenHref"},
@@ -523,11 +523,11 @@
 						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
+				"token": {"$ref": "util-token.json#/$defs/token"},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {
 						"tokenUrl": {"$ref": "util-token.json#/$defs/tokenUrl"},
-						"token": {"$ref": "util-token.json#/$defs/token"},
 						"tokenHref": {"$ref": "util-token.json#/$defs/tokenHref"},
 
 						"foundryTokenSubjectHref": {"$ref": "util-token.json#/$defs/tokenHref"},
@@ -693,11 +693,11 @@
 						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
+				"token": {"$ref": "util-token.json#/$defs/token"},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {
 						"tokenUrl": {"$ref": "util-token.json#/$defs/tokenUrl"},
-						"token": {"$ref": "util-token.json#/$defs/token"},
 						"tokenHref": {"$ref": "util-token.json#/$defs/tokenHref"},
 
 						"foundryTokenSubjectHref": {"$ref": "util-token.json#/$defs/tokenHref"},
