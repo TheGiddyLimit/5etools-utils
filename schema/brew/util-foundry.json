@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -363,6 +363,9 @@
 					}
 				},
 				"isIgnored": {
+					"const": true
+				},
+				"ignoreSrdActivities": {
 					"const": true
 				},
 				"ignoreSrdEffects": {
