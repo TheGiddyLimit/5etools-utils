@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.5",
+	"version": "1.0.6",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -256,6 +256,7 @@
 					"properties": {
 						"entries": {"type": "array", "items": {"$ref": "entry.json"}},
 						"isIgnored": {"const": true},
+						"ignoreSrdActivities": {"const": true},
 						"ignoreSrdEffects": {"const": true},
 
 						"actorDataMod": {"type": "object"},
