@@ -388,6 +388,7 @@
 						}
 					]
 				},
+				"token": {"$ref": "util-token.json#/$defs/token"},
 				"tokenCredit": {"type": "string"},
 				"$$ifBrew": {
 					"fluff": {
@@ -401,7 +402,6 @@
 						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
-				"token": {"$ref": "util-token.json#/$defs/token"},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {
@@ -510,6 +510,7 @@
 						"additionalProperties": false
 					}
 				},
+				"token": {"$ref": "util-token.json#/$defs/token"},
 				"tokenCredit": {"type": "string"},
 				"$$ifBrew": {
 					"fluff": {
@@ -523,7 +524,6 @@
 						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
-				"token": {"$ref": "util-token.json#/$defs/token"},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {
@@ -680,6 +680,7 @@
 						}
 					}
 				},
+				"token": {"$ref": "util-token.json#/$defs/token"},
 				"tokenCredit": {"type": "string"},
 				"$$ifBrew": {
 					"fluff": {
@@ -693,7 +694,6 @@
 						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
-				"token": {"$ref": "util-token.json#/$defs/token"},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {

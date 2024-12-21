@@ -107,6 +107,7 @@
 						"$ref": "entry.json"
 					}
 				},
+				"token": {"$ref": "util-token.json#/$defs/token"},
 				"tokenCredit": {"type": "string"},
 				"foundryTokenScale": {"$ref": "util-foundry.json#/$defs/foundryTokenScale"},
 				"srd": {
@@ -132,7 +133,6 @@
 						"$ref": "util-foundry.json#/$defs/foundryImg"
 					}
 				},
-				"token": {"$ref": "util-token.json#/$defs/token"},
 				"$$if": {
 					"modes": ["brew", "ua"],
 					"value": {

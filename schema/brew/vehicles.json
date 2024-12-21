@@ -444,11 +444,11 @@
 						}
 					]
 				},
-				"tokenCredit": {
-					"type": "string"
-				},
 				"token": {
 					"$ref": "util-token.json#/$defs/token"
+				},
+				"tokenCredit": {
+					"type": "string"
 				},
 				"hasToken": {
 					"type": "boolean"
@@ -641,11 +641,11 @@
 						"additionalProperties": false
 					}
 				},
-				"tokenCredit": {
-					"type": "string"
-				},
 				"token": {
 					"$ref": "util-token.json#/$defs/token"
+				},
+				"tokenCredit": {
+					"type": "string"
 				},
 				"hasToken": {
 					"type": "boolean"
@@ -840,11 +840,11 @@
 						}
 					}
 				},
-				"tokenCredit": {
-					"type": "string"
-				},
 				"token": {
 					"$ref": "util-token.json#/$defs/token"
+				},
+				"tokenCredit": {
+					"type": "string"
 				},
 				"hasToken": {
 					"type": "boolean"
