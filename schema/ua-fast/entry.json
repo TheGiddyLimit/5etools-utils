@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.2",
+	"version": "1.9.3",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -129,7 +129,7 @@
 					"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)",
 					"pattern": "^https?://",
 					"not": {
-						"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io)/"
+						"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io|raw\\.githubusercontent\\.com/5etools-mirror-\\d+)/"
 					}
 				}
 			},

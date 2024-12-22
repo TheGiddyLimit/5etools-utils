@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.2",
+	"version": "1.9.3",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -81,7 +81,7 @@
 						{
 							"pattern": "^https?://",
 							"not": {
-								"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io)/"
+								"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io|raw\\.githubusercontent\\.com\/5etools-mirror-\\d+)/"
 							}
 						}
 					]
