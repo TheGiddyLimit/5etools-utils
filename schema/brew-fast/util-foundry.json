@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -275,6 +275,9 @@
 				"img": {
 					"type": "string"
 				},
+				"migrationVersion": {
+					"type": "integer"
+				},
 				"_merge": {
 					"type": "object",
 					"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
@@ -334,6 +337,9 @@
 				},
 				"img": {
 					"type": "string"
+				},
+				"migrationVersion": {
+					"type": "integer"
 				},
 				"_merge": {
 					"type": "object",
@@ -415,6 +421,9 @@
 				},
 				"img": {
 					"type": "string"
+				},
+				"migrationVersion": {
+					"type": "integer"
 				},
 				"_merge": {
 					"type": "object",

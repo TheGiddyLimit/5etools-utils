@@ -42,6 +42,9 @@
 					"img": {
 						"type": "string"
 					},
+					"migrationVersion": {
+						"type": "integer"
+					},
 					"_merge": {
 						"type": "object",
 						"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",

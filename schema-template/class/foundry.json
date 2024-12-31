@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-class.json",
-	"version": "1.4.5",
+	"version": "1.4.6",
 
 	"type": "object",
 
@@ -48,6 +48,7 @@
 					},
 					{
 						"properties": {
+							"shortName": {"type": "string"},
 							"className":  {"type": "string"},
 							"classSource": {"$ref": "../util.json#/$defs/source"},
 
@@ -70,6 +71,7 @@
 				],
 				"required": [
 					"name",
+					"shortName",
 					"source",
 					"className",
 					"classSource"

@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.6",
+	"version": "1.0.7",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -219,6 +219,8 @@
 				"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}},
 				"flags": {"$ref": "#/$defs/foundryFlagsObject"},
 				"img": {"type": "string"},
+
+				"migrationVersion": {"type": "integer"},
 
 				"_merge": {
 					"type": "object",
