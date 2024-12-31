@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.18",
+	"version": "1.17.19",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -2093,20 +2093,63 @@
 			"minItems": 1
 		},
 
+		"_resourcesItemBase": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+
+				"recharge": {
+					"type": "string",
+					"enum": [
+						"restShort",
+						"restLong",
+						"dawn",
+						"dusk",
+						"midnight"
+					]
+				}
+			},
+			"required": ["name"],
+			"additionalProperties": false
+		},
+
 		"resourcesArray": {
 			"type": "array",
 			"items": {
-				"type": "object",
-				"properties": {
-					"name": {"type": "string"},
-					"type": {"type": "string"},
+				"anyOf": [
+					{
+						"$$merge": [
+							{
+								"$ref": "#/$defs/_resourcesItemBase"
+							},
+							{
+								"properties": {
+									"type": {"const": "dicePool"},
 
-					"recharge": {"type": "string"},
-					"count": {"type": ["integer", "string"]},
-					"number": {"type": ["integer", "string"]},
-					"faces": {"type": ["integer", "string"]}
-				},
-				"required": ["name", "type"]
+									"count": {"type": ["integer", "string"]},
+									"number": {"type": ["integer", "string"]},
+									"faces": {"type": ["integer", "string"]}
+								},
+								"required": ["type", "count", "number", "faces"]
+							}
+						]
+					},
+					{
+						"$$merge": [
+							{
+								"$ref": "#/$defs/_resourcesItemBase"
+							},
+							{
+								"properties": {
+									"type": {"const": "pointPool"},
+
+									"count": {"type": ["integer", "string"]}
+								},
+								"required": ["type", "count"]
+							}
+						]
+					}
+				]
 			},
 			"uniqueItems": true
 		},
