@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.43",
+	"version": "1.21.44",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -95,6 +95,11 @@
 					"additionalProperties": false
 				}
 			]
+		},
+
+		"_legendaryActions": {
+			"type": "integer",
+			"minimum": 1
 		},
 
 		"creatureData":  {
@@ -783,10 +788,8 @@
 					"additionalProperties": false,
 					"required": ["name", "source"]
 				},
-				"legendaryActions": {
-					"type": "integer",
-					"minimum": 1
-				},
+				"legendaryActions": {"$ref": "#/$defs/_legendaryActions"},
+				"legendaryActionsLair": {"$ref": "#/$defs/_legendaryActions"},
 				"legendaryHeader": {
 					"type": "array",
 					"minItems": 1,
