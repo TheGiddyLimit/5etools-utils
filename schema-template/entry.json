@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.3",
+	"version": "1.9.4",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2292,6 +2292,9 @@
 						"rest": {
 							"$ref": "#/$defs/entrySpellcasting_frequency"
 						},
+						"restLong": {
+							"$ref": "#/$defs/entrySpellcasting_frequency"
+						},
 						"daily": {
 							"$ref": "#/$defs/entrySpellcasting_frequency"
 						},
@@ -2309,6 +2312,9 @@
 						},
 						"recharge": {
 							"$ref": "#/$defs/entrySpellcasting_recharge"
+						},
+						"legendary": {
+							"$ref": "#/$defs/entrySpellcasting_frequency"
 						},
 						"spells": {
 							"type": "object",
@@ -2368,6 +2374,7 @@
 									"constant",
 									"will",
 									"rest",
+									"restLong",
 									"daily",
 									"weekly",
 									"monthly",
@@ -2375,7 +2382,8 @@
 									"ritual",
 									"spells",
 									"charges",
-									"recharge"
+									"recharge",
+									"legendary"
 								]
 							}
 						},
@@ -2389,7 +2397,7 @@
 						"displayAs": {
 							"description": "Implicitly \"trait\"",
 							"type": "string",
-							"enum": ["trait", "action", "bonus", "reaction"]
+							"enum": ["trait", "action", "bonus", "reaction", "legendary", "mythic"]
 						},
 						"chargesItem": {
 							"type": "string",
