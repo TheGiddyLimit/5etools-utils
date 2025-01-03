@@ -53,7 +53,7 @@
 					"$ref": "util.json#/$defs/sensesArray"
 				},
 				"additionalSpells": {
-					"$ref": "util.json#/$defs/additionalSpellsArray"
+					"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 				}
 			},
 			"additionalProperties": false

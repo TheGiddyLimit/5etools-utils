@@ -564,7 +564,7 @@
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
 				},
-				"additionalSpells": { "$ref": "../util.json#/$defs/additionalSpellsArray" },
+				"additionalSpells": { "$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray" },
 				"hasFluff": {"const": true},
 				"hasFluffImages": {"const": true},
 				"$$if": {
@@ -946,7 +946,7 @@
 						}
 					]
 				},
-				"additionalSpells": { "$ref": "../util.json#/$defs/additionalSpellsArray" },
+				"additionalSpells": { "$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray" },
 				"hasFluff": {"const": true},
 				"hasFluffImages": {"const": true},
 				"$$if": {

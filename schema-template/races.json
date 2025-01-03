@@ -101,7 +101,7 @@
 							"type": "null"
 						},
 						{
-							"$ref": "util.json#/$defs/additionalSpellsArray"
+							"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 						}
 					]
 				},
