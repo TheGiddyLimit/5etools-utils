@@ -65,7 +65,7 @@
 					"$ref": "util.json#/$defs/dataFeatCategory"
 				},
 				"additionalSpells": {
-					"$ref": "util.json#/$defs/additionalSpellsArray"
+					"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 				},
 				"languageProficiencies": {
 					"$ref": "util.json#/$defs/languageProficiencies"
@@ -204,7 +204,7 @@
 							"$ref": "util.json#/$defs/dataFeatCategory"
 						},
 						"additionalSpells": {
-							"$ref": "util.json#/$defs/additionalSpellsArray"
+							"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"languageProficiencies": {
 							"$ref": "util.json#/$defs/languageProficiencies"
@@ -346,7 +346,7 @@
 							"$ref": "util.json#/$defs/dataFeatCategory"
 						},
 						"additionalSpells": {
-							"$ref": "util.json#/$defs/additionalSpellsArray"
+							"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"languageProficiencies": {
 							"$ref": "util.json#/$defs/languageProficiencies"

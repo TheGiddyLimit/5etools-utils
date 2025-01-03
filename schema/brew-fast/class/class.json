@@ -890,7 +890,7 @@
 							"$ref": "../util.json#/$defs/otherSources"
 						},
 						"additionalSpells": {
-							"$ref": "../util.json#/$defs/additionalSpellsArray"
+							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"hasFluff": {
 							"const": true
@@ -1102,7 +1102,7 @@
 							"$ref": "../util.json#/$defs/otherSources"
 						},
 						"additionalSpells": {
-							"$ref": "../util.json#/$defs/additionalSpellsArray"
+							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"hasFluff": {
 							"const": true
@@ -1314,7 +1314,7 @@
 					"$ref": "../util.json#/$defs/otherSources"
 				},
 				"additionalSpells": {
-					"$ref": "../util.json#/$defs/additionalSpellsArray"
+					"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 				},
 				"hasFluff": {
 					"const": true
@@ -1747,7 +1747,7 @@
 							]
 						},
 						"additionalSpells": {
-							"$ref": "../util.json#/$defs/additionalSpellsArray"
+							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"hasFluff": {
 							"const": true
@@ -2056,7 +2056,7 @@
 							]
 						},
 						"additionalSpells": {
-							"$ref": "../util.json#/$defs/additionalSpellsArray"
+							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"hasFluff": {
 							"const": true
@@ -2368,7 +2368,7 @@
 					]
 				},
 				"additionalSpells": {
-					"$ref": "../util.json#/$defs/additionalSpellsArray"
+					"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 				},
 				"hasFluff": {
 					"const": true

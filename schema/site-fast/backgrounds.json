@@ -74,7 +74,7 @@
 					"$ref": "util.json#/$defs/startingEquipment"
 				},
 				"additionalSpells": {
-					"$ref": "util.json#/$defs/additionalSpellsArray"
+					"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 				},
 				"ability": {
 					"$ref": "util.json#/$defs/abilityScores"
@@ -170,7 +170,7 @@
 							"$ref": "util.json#/$defs/startingEquipment"
 						},
 						"additionalSpells": {
-							"$ref": "util.json#/$defs/additionalSpellsArray"
+							"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"ability": {
 							"$ref": "util.json#/$defs/abilityScores"
@@ -270,7 +270,7 @@
 							"$ref": "util.json#/$defs/startingEquipment"
 						},
 						"additionalSpells": {
-							"$ref": "util.json#/$defs/additionalSpellsArray"
+							"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"ability": {
 							"$ref": "util.json#/$defs/abilityScores"

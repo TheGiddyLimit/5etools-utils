@@ -68,7 +68,7 @@
 					"type": "boolean"
 				},
 				"additionalSpells": {
-					"$ref": "util.json#/$defs/additionalSpellsArray"
+					"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 				},
 				"languageProficiencies": {
 					"$ref": "util.json#/$defs/languageProficiencies"
@@ -189,7 +189,7 @@
 							"type": "boolean"
 						},
 						"additionalSpells": {
-							"$ref": "util.json#/$defs/additionalSpellsArray"
+							"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"languageProficiencies": {
 							"$ref": "util.json#/$defs/languageProficiencies"
@@ -314,7 +314,7 @@
 							"type": "boolean"
 						},
 						"additionalSpells": {
-							"$ref": "util.json#/$defs/additionalSpellsArray"
+							"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
 						"languageProficiencies": {
 							"$ref": "util.json#/$defs/languageProficiencies"
