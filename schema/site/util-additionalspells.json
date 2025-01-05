@@ -248,7 +248,7 @@
 									"choose": {
 										"type": "array",
 										"items": {
-											"$ref": "#/$defs/abilityScoreAbbreviation"
+											"$ref": "util.json#/$defs/abilityScoreAbbreviation"
 										},
 										"uniqueItems": true
 									}

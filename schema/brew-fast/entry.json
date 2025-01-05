@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.4",
+	"version": "1.9.5",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -39,7 +39,46 @@
 		},
 		"_entryDataData": {
 			"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-			"type": "object"
+			"type": "object",
+			"properties": {
+				"genTables": {
+					"type": "object",
+					"properties": {
+						"tableIgnore": {
+							"const": true
+						},
+						"tableChapterIgnore": {
+							"const": true
+						},
+						"tableInclude": {
+							"const": true
+						},
+						"tableNamePrefix": {
+							"type": "string"
+						},
+						"tableName": {
+							"type": "string"
+						},
+						"skipSectionPrefix": {
+							"const": true
+						},
+						"fauxGroupName": {
+							"type": "string"
+						},
+						"fauxGroupSource": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"fauxGroupPage": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"isFauxGroupAdditional": {
+							"const": true
+						}
+					},
+					"additionalProperties": false,
+					"minProperties": 1
+				}
+			}
 		},
 		"_entryTableColLabelItem": {
 			"anyOf": [

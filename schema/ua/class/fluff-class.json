@@ -10,6 +10,9 @@
 				"name": {
 					"type": "string"
 				},
+				"preserveName": {
+					"const": true
+				},
 				"source": {
 					"$ref": "../util.json#/$defs/source"
 				},
@@ -55,6 +58,9 @@
 						"properties": {
 							"name": {
 								"type": "string"
+							},
+							"preserveName": {
+								"const": true
 							},
 							"source": {
 								"$ref": "../util.json#/$defs/source"
@@ -102,6 +108,9 @@
 						"properties": {
 							"name": {
 								"type": "string"
+							},
+							"preserveName": {
+								"const": true
 							},
 							"source": {
 								"$ref": "../util.json#/$defs/source"
