@@ -189,7 +189,7 @@
 								"properties": {
 									"choose": {
 										"type": "array",
-										"items": {"$ref": "#/$defs/abilityScoreAbbreviation"},
+										"items": {"$ref": "util.json#/$defs/abilityScoreAbbreviation"},
 										"uniqueItems": true
 									}
 								},
