@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.44",
+	"version": "1.21.45",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -978,6 +978,7 @@
 					"items": {
 						"type": "string",
 						"examples": [
+							"any",
 							"underwater",
 							"coastal",
 							"mountain",
@@ -989,10 +990,56 @@
 							"swamp",
 							"underdark",
 							"desert",
-							"any",
 							"badlands",
 							"farmland",
-							"planar"
+							"planar",
+							"planar, transitive",
+							"planar, elemental",
+							"planar, inner",
+							"planar, upper",
+							"planar, lower",
+							"planar, water",
+							"planar, earth",
+							"planar, fire",
+							"planar, air",
+							"planar, ooze",
+							"planar, magma",
+							"planar, ash",
+							"planar, ice",
+							"planar, ethereal",
+							"planar, astral",
+							"planar, arborea",
+							"planar, arcadia",
+							"planar, beastlands",
+							"planar, bytopia",
+							"planar, elysium",
+							"planar, mount celestia",
+							"planar, ysgard",
+							"planar, abyss",
+							"planar, acheron",
+							"planar, carceri",
+							"planar, gehenna",
+							"planar, hades",
+							"planar, nine hells",
+							"planar, pandemonium",
+							"planar, limbo",
+							"planar, mechanus",
+							"planar, outlands"
+						]
+					}
+				},
+				"treasure": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "string",
+						"examples": [
+							"any",
+							"individual",
+							"arcana",
+							"armaments",
+							"implements",
+							"relics"
 						]
 					}
 				},
@@ -2251,6 +2298,7 @@
 							"items": {
 								"type": "string",
 								"examples": [
+									"any",
 									"underwater",
 									"coastal",
 									"mountain",
@@ -2262,10 +2310,56 @@
 									"swamp",
 									"underdark",
 									"desert",
-									"any",
 									"badlands",
 									"farmland",
-									"planar"
+									"planar",
+									"planar, transitive",
+									"planar, elemental",
+									"planar, inner",
+									"planar, upper",
+									"planar, lower",
+									"planar, water",
+									"planar, earth",
+									"planar, fire",
+									"planar, air",
+									"planar, ooze",
+									"planar, magma",
+									"planar, ash",
+									"planar, ice",
+									"planar, ethereal",
+									"planar, astral",
+									"planar, arborea",
+									"planar, arcadia",
+									"planar, beastlands",
+									"planar, bytopia",
+									"planar, elysium",
+									"planar, mount celestia",
+									"planar, ysgard",
+									"planar, abyss",
+									"planar, acheron",
+									"planar, carceri",
+									"planar, gehenna",
+									"planar, hades",
+									"planar, nine hells",
+									"planar, pandemonium",
+									"planar, limbo",
+									"planar, mechanus",
+									"planar, outlands"
+								]
+							}
+						},
+						"treasure": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "string",
+								"examples": [
+									"any",
+									"individual",
+									"arcana",
+									"armaments",
+									"implements",
+									"relics"
 								]
 							}
 						},
@@ -3529,6 +3623,7 @@
 							"items": {
 								"type": "string",
 								"examples": [
+									"any",
 									"underwater",
 									"coastal",
 									"mountain",
@@ -3540,10 +3635,56 @@
 									"swamp",
 									"underdark",
 									"desert",
-									"any",
 									"badlands",
 									"farmland",
-									"planar"
+									"planar",
+									"planar, transitive",
+									"planar, elemental",
+									"planar, inner",
+									"planar, upper",
+									"planar, lower",
+									"planar, water",
+									"planar, earth",
+									"planar, fire",
+									"planar, air",
+									"planar, ooze",
+									"planar, magma",
+									"planar, ash",
+									"planar, ice",
+									"planar, ethereal",
+									"planar, astral",
+									"planar, arborea",
+									"planar, arcadia",
+									"planar, beastlands",
+									"planar, bytopia",
+									"planar, elysium",
+									"planar, mount celestia",
+									"planar, ysgard",
+									"planar, abyss",
+									"planar, acheron",
+									"planar, carceri",
+									"planar, gehenna",
+									"planar, hades",
+									"planar, nine hells",
+									"planar, pandemonium",
+									"planar, limbo",
+									"planar, mechanus",
+									"planar, outlands"
+								]
+							}
+						},
+						"treasure": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "string",
+								"examples": [
+									"any",
+									"individual",
+									"arcana",
+									"armaments",
+									"implements",
+									"relics"
 								]
 							}
 						},
