@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-additionalspells.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"title": "Util: Additional Spells",
 
 	"$defs": {
@@ -43,7 +43,9 @@
 						}
 					]
 				}
-			}
+			},
+			"minProperties": 1,
+			"additionalProperties": false
 		},
 
 		"_additionalSpellLevelObject": {
