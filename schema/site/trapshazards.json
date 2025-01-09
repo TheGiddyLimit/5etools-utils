@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"type": "object",
 	"$defs": {
 		"_trapHazardTier": {
@@ -91,11 +91,12 @@
 						},
 						"trapHazType": {
 							"type": "string",
-							"description": "MAG: Magical Trap\nMECH: Mechanical Trap\nTRP: Trap",
+							"description": "HAUNT: Haunted Trap\nMAG: Magical Trap\nMECH: Mechanical Trap\nTRP: Trap",
 							"enum": [
 								"MECH",
 								"MAG",
-								"TRP"
+								"TRP",
+								"HAUNT"
 							]
 						},
 						"source": {
@@ -124,6 +125,9 @@
 						},
 						"rating": {
 							"$ref": "#/$defs/_trapHazardRating"
+						},
+						"hauntBonus": {
+							"type": "string"
 						},
 						"srd": {
 							"$ref": "util.json#/$defs/srd"

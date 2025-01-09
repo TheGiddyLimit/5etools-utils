@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.46",
+	"version": "1.21.47",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1319,6 +1319,10 @@
 				"summonedByClass": {
 					"description": "The class which can summon this creature; e.g. for those granted by some TCE class features.",
 					"type": "string"
+				},
+				"summonedScaleByPlayerLevel": {
+					"description": "If this creature should be scalable by summoning/owning player level.",
+					"const": true
 				},
 				"_isCopy": {
 					"description": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the \"_copy\" format at a later date.",
@@ -2641,6 +2645,10 @@
 						"summonedByClass": {
 							"description": "The class which can summon this creature; e.g. for those granted by some TCE class features.",
 							"type": "string"
+						},
+						"summonedScaleByPlayerLevel": {
+							"description": "If this creature should be scalable by summoning/owning player level.",
+							"const": true
 						},
 						"_isCopy": {
 							"description": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the \"_copy\" format at a later date.",
@@ -3968,6 +3976,10 @@
 						"summonedByClass": {
 							"description": "The class which can summon this creature; e.g. for those granted by some TCE class features.",
 							"type": "string"
+						},
+						"summonedScaleByPlayerLevel": {
+							"description": "If this creature should be scalable by summoning/owning player level.",
+							"const": true
 						},
 						"_isCopy": {
 							"description": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the \"_copy\" format at a later date.",
