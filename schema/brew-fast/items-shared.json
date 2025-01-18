@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.5",
+	"version": "1.1.6",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -235,41 +235,74 @@
 			]
 		},
 		"itemProperty": {
-			"type": "array",
 			"description": "2H: Two-Handed\n2H|XPHB: Two-Handed\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nBF|DMG: Burst Fire\nBF|XDMG: Burst Fire\nER|TDCSR: Extended Reach\nF: Finesse\nF|XPHB: Finesse\nH: Heavy\nH|XPHB: Heavy\nL: Light\nL|XPHB: Light\nLD: Loading\nLD|XPHB: Loading\nOTH: Other\nR: Reach\nR|XPHB: Reach\nRLD: Reload\nRLD|XDMG: Reload\nS: Special\nT: Thrown\nT|XPHB: Thrown\nV: Versatile\nV|XPHB: Versatile\nVst|TDCSR: Vestige of Divergence",
+			"type": "string",
+			"examples": [
+				"2H",
+				"2H|XPHB",
+				"A",
+				"A|XPHB",
+				"AF|DMG",
+				"AF|XDMG",
+				"BF|DMG",
+				"BF|XDMG",
+				"ER|TDCSR",
+				"F",
+				"F|XPHB",
+				"H",
+				"H|XPHB",
+				"L",
+				"L|XPHB",
+				"LD",
+				"LD|XPHB",
+				"OTH",
+				"R",
+				"R|XPHB",
+				"RLD",
+				"RLD|XDMG",
+				"S",
+				"T",
+				"T|XPHB",
+				"V",
+				"V|XPHB",
+				"Vst|TDCSR"
+			]
+		},
+		"itemPropertyArray": {
+			"type": "array",
 			"items": {
-				"type": "string",
-				"examples": [
-					"2H",
-					"2H|XPHB",
-					"A",
-					"A|XPHB",
-					"AF|DMG",
-					"AF|XDMG",
-					"BF|DMG",
-					"BF|XDMG",
-					"ER|TDCSR",
-					"F",
-					"F|XPHB",
-					"H",
-					"H|XPHB",
-					"L",
-					"L|XPHB",
-					"LD",
-					"LD|XPHB",
-					"OTH",
-					"R",
-					"R|XPHB",
-					"RLD",
-					"RLD|XDMG",
-					"S",
-					"T",
-					"T|XPHB",
-					"V",
-					"V|XPHB",
-					"Vst|TDCSR"
+				"$ref": "#/$defs/itemProperty"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		},
+		"itemPropertyOrWrapperArray": {
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"$ref": "#/$defs/itemProperty"
+					},
+					{
+						"type": "object",
+						"properties": {
+							"uid": {
+								"$ref": "#/$defs/itemProperty"
+							},
+							"note": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"uid"
+						],
+						"minProperties": 2,
+						"additionalProperties": false
+					}
 				]
-			}
+			},
+			"minItems": 1,
+			"uniqueItems": true
 		},
 		"itemScfType": {
 			"type": "string",

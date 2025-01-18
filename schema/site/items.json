@@ -69,7 +69,7 @@
 					}
 				},
 				"property": {
-					"$ref": "items-shared.json#/$defs/itemProperty"
+					"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 				},
 				"range": {
 					"type": "string"
@@ -542,7 +542,7 @@
 					}
 				},
 				"property": {
-					"$ref": "items-shared.json#/$defs/itemProperty"
+					"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 				},
 				"range": {
 					"type": "string"
@@ -1017,7 +1017,7 @@
 							}
 						},
 						"property": {
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"range": {
 							"type": "string"
@@ -1490,7 +1490,7 @@
 					}
 				},
 				"property": {
-					"$ref": "items-shared.json#/$defs/itemProperty"
+					"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 				},
 				"range": {
 					"type": "string"
@@ -1973,7 +1973,7 @@
 							}
 						},
 						"property": {
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"range": {
 							"type": "string"
@@ -2450,7 +2450,7 @@
 							}
 						},
 						"property": {
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"range": {
 							"type": "string"

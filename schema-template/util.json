@@ -1437,7 +1437,7 @@
 					"itemProperty": {
 						"oneOf": [
 							{
-								"$ref": "items-shared.json#/$defs/itemProperty"
+								"$ref": "items-shared.json#/$defs/itemPropertyArray"
 							},
 							{
 								"type": "null"

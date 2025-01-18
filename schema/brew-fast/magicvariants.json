@@ -152,15 +152,15 @@
 						},
 						"property": {
 							"description": "Generally this should be omitted, as the properties of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"propertyAdd": {
 							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"propertyRemove": {
 							"description": "Properties to remove from the specific variant, if present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"range": {
 							"type": "string"
@@ -755,15 +755,15 @@
 						},
 						"property": {
 							"description": "Generally this should be omitted, as the properties of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"propertyAdd": {
 							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"propertyRemove": {
 							"description": "Properties to remove from the specific variant, if present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"range": {
 							"type": "string"
@@ -1367,15 +1367,15 @@
 						},
 						"property": {
 							"description": "Generally this should be omitted, as the properties of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"propertyAdd": {
 							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"propertyRemove": {
 							"description": "Properties to remove from the specific variant, if present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemProperty"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
 						"range": {
 							"type": "string"
