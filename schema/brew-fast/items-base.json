@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.7",
+	"version": "1.6.8",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -334,6 +334,10 @@
 					"type": "boolean"
 				},
 				"bulletSling": {
+					"description": "Flag used when merging generic variants",
+					"type": "boolean"
+				},
+				"cellEnergy": {
 					"description": "Flag used when merging generic variants",
 					"type": "boolean"
 				},
@@ -683,6 +687,10 @@
 							"type": "boolean"
 						},
 						"bulletSling": {
+							"description": "Flag used when merging generic variants",
+							"type": "boolean"
+						},
+						"cellEnergy": {
 							"description": "Flag used when merging generic variants",
 							"type": "boolean"
 						},
@@ -1036,6 +1044,10 @@
 							"type": "boolean"
 						},
 						"bulletSling": {
+							"description": "Flag used when merging generic variants",
+							"type": "boolean"
+						},
+						"cellEnergy": {
 							"description": "Flag used when merging generic variants",
 							"type": "boolean"
 						},

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.7",
+	"version": "1.9.8",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -115,6 +115,9 @@
 								"type": "boolean"
 							},
 							"bulletSling": {
+								"type": "boolean"
+							},
+							"cellEnergy": {
 								"type": "boolean"
 							},
 							"needleBlowgun": {
@@ -526,6 +529,9 @@
 						"bulletSling": {
 							"type": "boolean"
 						},
+						"cellEnergy": {
+							"type": "boolean"
+						},
 						"needleBlowgun": {
 							"type": "boolean"
 						},
@@ -693,6 +699,9 @@
 								"type": "boolean"
 							},
 							"bulletSling": {
+								"type": "boolean"
+							},
+							"cellEnergy": {
 								"type": "boolean"
 							},
 							"needleBlowgun": {
@@ -1108,6 +1117,9 @@
 						"bulletSling": {
 							"type": "boolean"
 						},
+						"cellEnergy": {
+							"type": "boolean"
+						},
 						"needleBlowgun": {
 							"type": "boolean"
 						},
@@ -1280,6 +1292,9 @@
 								"type": "boolean"
 							},
 							"bulletSling": {
+								"type": "boolean"
+							},
+							"cellEnergy": {
 								"type": "boolean"
 							},
 							"needleBlowgun": {
@@ -1692,6 +1707,9 @@
 							"type": "boolean"
 						},
 						"bulletSling": {
+							"type": "boolean"
+						},
+						"cellEnergy": {
 							"type": "boolean"
 						},
 						"needleBlowgun": {
