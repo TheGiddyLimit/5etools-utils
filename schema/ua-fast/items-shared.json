@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -524,6 +524,31 @@
 					"type": "integer"
 				}
 			}
+		},
+		"itemLight": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"dim": {
+						"type": "number"
+					},
+					"bright": {
+						"type": "number"
+					},
+					"shape": {
+						"type": "string",
+						"enum": [
+							"radius",
+							"cone"
+						]
+					}
+				},
+				"minProperties": 1,
+				"additionalProperties": false
+			},
+			"minItems": 1,
+			"uniqueItems": true
 		},
 		"customProperties": {
 			"description": "An unrestricted area for custom properties to be stored.",

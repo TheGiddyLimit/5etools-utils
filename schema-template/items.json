@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.18",
+	"version": "1.14.19",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -357,6 +357,7 @@
 				"miscTags": {"$ref": "items-shared.json#/$defs/itemMiscTags"},
 				"mastery": {"$ref": "items-shared.json#/$defs/itemMastery"},
 				"reach": {"$ref": "items-shared.json#/$defs/itemReach"},
+				"light": {"$ref": "items-shared.json#/$defs/itemLight"},
 				"barDimensions": {
 					"type": "object",
 					"description": "Values given in inches.",

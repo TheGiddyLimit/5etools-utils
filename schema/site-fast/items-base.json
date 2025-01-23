@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.8",
+	"version": "1.6.9",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -437,6 +437,9 @@
 				"reach": {
 					"$ref": "items-shared.json#/$defs/itemReach"
 				},
+				"light": {
+					"$ref": "items-shared.json#/$defs/itemLight"
+				},
 				"hasFluff": {
 					"type": "boolean"
 				},
@@ -749,6 +752,9 @@
 						},
 						"reach": {
 							"$ref": "items-shared.json#/$defs/itemReach"
+						},
+						"light": {
+							"$ref": "items-shared.json#/$defs/itemLight"
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -1066,6 +1072,9 @@
 						},
 						"reach": {
 							"$ref": "items-shared.json#/$defs/itemReach"
+						},
+						"light": {
+							"$ref": "items-shared.json#/$defs/itemLight"
 						},
 						"hasFluff": {
 							"type": "boolean"

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.8",
+	"version": "1.9.9",
 	"type": "object",
 	"$defs": {
 		"_magicvariantItemBase": {
@@ -404,6 +404,9 @@
 						},
 						"reach": {
 							"$ref": "items-shared.json#/$defs/itemReach"
+						},
+						"light": {
+							"$ref": "items-shared.json#/$defs/itemLight"
 						},
 						"hasRefs": {
 							"type": "boolean",
@@ -988,6 +991,9 @@
 						},
 						"reach": {
 							"$ref": "items-shared.json#/$defs/itemReach"
+						},
+						"light": {
+							"$ref": "items-shared.json#/$defs/itemLight"
 						},
 						"hasRefs": {
 							"type": "boolean",
@@ -1581,6 +1587,9 @@
 						},
 						"reach": {
 							"$ref": "items-shared.json#/$defs/itemReach"
+						},
+						"light": {
+							"$ref": "items-shared.json#/$defs/itemLight"
 						},
 						"hasRefs": {
 							"type": "boolean",
