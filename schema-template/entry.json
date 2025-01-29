@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.6",
+	"version": "1.9.7",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -26,7 +26,7 @@
 		},
 
 		"_entryDataStyle": {
-			"type": "string", "enum":  ["inset"]
+			"type": "string", "enum":  ["inset", "narrow"]
 		},
 
 		"_entryDataData": {
