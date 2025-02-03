@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.0.5",
+	"version": "1.0.6",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -287,7 +287,7 @@
 						"prop": {"type": "string"},
 						"value": {}
 					},
-					"required": ["mode", "prop", "value"],
+					"required": ["mode", "value"],
 					"additionalProperties": false
 				},
 				{
@@ -509,6 +509,17 @@
 					},
 					"required": ["mode", "prop"],
 					"minProperties": 3,
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"mode": {"const": "prefixSuffixStringProp"},
+						"prefix": {"type": "string"},
+						"suffix": {"type": "string"}
+					},
+					"required": ["mode"],
+					"minProperties": 2,
 					"additionalProperties": false
 				}
 			]
