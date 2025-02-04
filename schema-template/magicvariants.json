@@ -1,11 +1,11 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.9",
+	"version": "1.9.10",
 	"type": "object",
 
 	"$defs" : {
-		"_magicvariantItemBase": {
+		"_magicvariantDataBase": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -426,10 +426,31 @@
 			"additionalProperties": false
 		},
 
-		"_magicvariantItemSite": {
+		"_magicvariantDataSite": {
+			"$ref": "#/$defs/_magicvariantDataBase"
+		},
+
+		"_magicvariantDataBrewRootRarity": {
 			"$$merge": [
 				{
-					"$ref": "#/$defs/_magicvariantItemBase"
+					"$ref": "#/$defs/_magicvariantDataBase"
+				},
+				{
+					"properties": {
+						"rarity": {
+							"$ref": "items-shared.json#/$defs/itemRarity"
+						}
+					}
+				}
+			]
+		},
+
+
+
+		"_magicvariantSite": {
+			"$$merge": [
+				{
+					"$ref": "#/$defs/_magicvariantDataSite"
 				},
 				{
 					"properties": {
@@ -449,10 +470,10 @@
 			]
 		},
 
-		"_magicvariantItemBrewBaseRarity": {
+		"_magicvariantBrewRootRarity": {
 			"$$merge": [
 				{
-					"$ref": "#/$defs/_magicvariantItemBase"
+					"$ref": "#/$defs/_magicvariantDataBrewRootRarity"
 				},
 				{
 					"properties": {
@@ -460,9 +481,6 @@
 							"required": [
 								"source"
 							]
-						},
-						"rarity": {
-							"$ref": "items-shared.json#/$defs/itemRarity"
 						}
 					},
 					"required": [
@@ -475,10 +493,50 @@
 			]
 		},
 
+		"_magicvariantSiteCopy": {
+			"type": "object",
+			"$$merge": [
+				{
+					"$ref": "#/$defs/_magicvariantDataSite"
+				},
+				{
+					"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"source": {"$ref": "util.json#/$defs/source"}
+					},
+					"required": ["source"]
+				}
+			]
+		},
+
+		"_magicvariantBrewRootRarityCopy": {
+			"type": "object",
+			"$$merge": [
+				{
+					"$ref": "#/$defs/_magicvariantDataBrewRootRarity"
+				},
+				{
+					"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"source": {"$ref": "util.json#/$defs/source"}
+					},
+					"required": ["source"]
+				}
+			]
+		},
+
 		"magicvariantItem": {
 			"anyOf": [
-				{"$ref": "#/$defs/_magicvariantItemSite"},
-				{"$$ifBrew_item": {"$ref": "#/$defs/_magicvariantItemBrewBaseRarity"}}
+				{"$ref": "#/$defs/_magicvariantSite"},
+				{"$ref": "#/$defs/_magicvariantSiteCopy"},
+				{"$$ifBrew_item": {"$ref": "#/$defs/_magicvariantBrewRootRarity"}},
+				{"$$ifBrew_item": {"$ref": "#/$defs/_magicvariantBrewRootRarityCopy"}}
 			]
 		}
 	},

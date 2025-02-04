@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.9",
+	"version": "1.9.10",
 	"type": "object",
 	"$defs": {
-		"_magicvariantItemBase": {
+		"_magicvariantDataBase": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -572,7 +572,581 @@
 			},
 			"additionalProperties": false
 		},
-		"_magicvariantItemSite": {
+		"_magicvariantDataSite": {
+			"$ref": "#/$defs/_magicvariantDataBase"
+		},
+		"_magicvariantDataBrewRootRarity": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"edition": {
+					"$ref": "util-edition.json#/$defs/edition"
+				},
+				"type": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"requires": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"property": {
+								"type": "string"
+							},
+							"armor": {
+								"type": "boolean"
+							},
+							"axe": {
+								"type": "boolean"
+							},
+							"bow": {
+								"type": "boolean"
+							},
+							"crossbow": {
+								"type": "boolean"
+							},
+							"sword": {
+								"type": "boolean"
+							},
+							"weapon": {
+								"type": "boolean"
+							},
+							"firearm": {
+								"type": "boolean"
+							},
+							"mace": {
+								"type": "boolean"
+							},
+							"spear": {
+								"type": "boolean"
+							},
+							"hammer": {
+								"type": "boolean"
+							},
+							"club": {
+								"type": "boolean"
+							},
+							"dagger": {
+								"type": "boolean"
+							},
+							"dmgType": {
+								"$ref": "util.json#/$defs/dataDamageTags"
+							},
+							"source": {
+								"$ref": "util.json#/$defs/source"
+							},
+							"type": {
+								"$ref": "items-shared.json#/$defs/itemType"
+							},
+							"scfType": {
+								"$ref": "items-shared.json#/$defs/itemScfType"
+							},
+							"net": {
+								"type": "boolean"
+							},
+							"polearm": {
+								"type": "boolean"
+							},
+							"lance": {
+								"type": "boolean"
+							},
+							"rapier": {
+								"type": "boolean"
+							},
+							"whip": {
+								"type": "boolean"
+							},
+							"halberd": {
+								"type": "boolean"
+							},
+							"glaive": {
+								"type": "boolean"
+							},
+							"arrow": {
+								"type": "boolean"
+							},
+							"bolt": {
+								"type": "boolean"
+							},
+							"bulletFirearm": {
+								"type": "boolean"
+							},
+							"bulletSling": {
+								"type": "boolean"
+							},
+							"cellEnergy": {
+								"type": "boolean"
+							},
+							"needleBlowgun": {
+								"type": "boolean"
+							},
+							"weaponCategory": {
+								"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+							},
+							"staff": {
+								"type": "boolean"
+							}
+						},
+						"minProperties": 1,
+						"additionalProperties": false
+					}
+				},
+				"inherits": {
+					"type": "object",
+					"properties": {
+						"type": {
+							"description": "Generally this should be omitted, as the type of the base item will be used.",
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"typeAlt": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"property": {
+							"description": "Generally this should be omitted, as the properties of the base item will be used.",
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+						},
+						"propertyAdd": {
+							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+						},
+						"propertyRemove": {
+							"description": "Properties to remove from the specific variant, if present on the base item.",
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+						},
+						"range": {
+							"type": "string"
+						},
+						"ac": {
+							"type": "integer"
+						},
+						"age": {
+							"$ref": "items-shared.json#/$defs/itemAge"
+						},
+						"critThreshold": {
+							"type": "integer"
+						},
+						"bonusAc": {
+							"type": "string"
+						},
+						"bonusWeapon": {
+							"type": "string"
+						},
+						"bonusWeaponAttack": {
+							"type": "string"
+						},
+						"bonusWeaponDamage": {
+							"type": "string"
+						},
+						"bonusWeaponCritDamage": {
+							"type": "string"
+						},
+						"bonusSpellAttack": {
+							"type": "string"
+						},
+						"bonusSpellDamage": {
+							"type": "string"
+						},
+						"bonusSpellSaveDc": {
+							"type": "string"
+						},
+						"bonusSavingThrow": {
+							"type": "string"
+						},
+						"bonusAbilityCheck": {
+							"type": "string"
+						},
+						"bonusProficiencyBonus": {
+							"type": "string"
+						},
+						"bonusSavingThrowConcentration": {
+							"type": "string"
+						},
+						"dmg1": {
+							"type": "string"
+						},
+						"dmg2": {
+							"type": "string",
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+						},
+						"dmgType": {
+							"$ref": "util.json#/$defs/dataDamageTags"
+						},
+						"modifySpeed": {
+							"$ref": "items-shared.json#/$defs/itemModifySpeed"
+						},
+						"tier": {
+							"$ref": "items-shared.json#/$defs/itemTier"
+						},
+						"rarity": {
+							"$ref": "items-shared.json#/$defs/itemRarity"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"namePrefix": {
+							"type": "string"
+						},
+						"nameSuffix": {
+							"type": "string"
+						},
+						"nameRemove": {
+							"type": "string"
+						},
+						"grantsProficiency": {
+							"type": "boolean"
+						},
+						"grantsLanguage": {
+							"type": "boolean"
+						},
+						"reqAttune": {
+							"type": [
+								"string",
+								"boolean"
+							]
+						},
+						"curse": {
+							"type": "boolean"
+						},
+						"vulnerable": {
+							"$ref": "util.json#/$defs/damageVulnerabilityArray"
+						},
+						"resist": {
+							"$ref": "util.json#/$defs/damageResistArray"
+						},
+						"immune": {
+							"$ref": "util.json#/$defs/damageImmunityArray"
+						},
+						"conditionImmune": {
+							"$ref": "util.json#/$defs/conditionImmunityArray"
+						},
+						"stealth": {
+							"type": "boolean"
+						},
+						"strength": {
+							"type": [
+								"string",
+								"null"
+							]
+						},
+						"dexterityMax": {
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
+						},
+						"wondrous": {
+							"type": "boolean"
+						},
+						"sentient": {
+							"const": true
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"charges": {
+							"type": [
+								"string",
+								"integer"
+							]
+						},
+						"recharge": {
+							"$ref": "items-shared.json#/$defs/itemRecharge"
+						},
+						"rechargeAmount": {
+							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+						},
+						"attachedSpells": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"ability": {
+							"$ref": "items-shared.json#/$defs/itemAbility"
+						},
+						"lootTables": {
+							"type": "array",
+							"items": {
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"source": {
+												"$ref": "util.json#/$defs/source"
+											}
+										}
+									}
+								]
+							}
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"valueMult": {
+							"type": "number"
+						},
+						"valueExpression": {
+							"description": "Expression used to calculate each specific variant's value.",
+							"type": "string"
+						},
+						"valueRarity": {
+							"$ref": "items-shared.json#/$defs/itemRarity"
+						},
+						"weaponCategory": {
+							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+						},
+						"weight": {
+							"type": "number"
+						},
+						"weightMult": {
+							"type": "number"
+						},
+						"weightExpression": {
+							"description": "Expression used to calculate each specific variant's weight.",
+							"type": "string"
+						},
+						"barding": {
+							"type": "boolean"
+						},
+						"spellScrollLevel": {
+							"type": "integer"
+						},
+						"reqAttuneTags": {
+							"$ref": "util.json#/$defs/reqAttuneTags"
+						},
+						"reqAttuneAltTags": {
+							"$ref": "util.json#/$defs/reqAttuneTags"
+						},
+						"miscTags": {
+							"$ref": "items-shared.json#/$defs/itemMiscTags"
+						},
+						"mastery": {
+							"$ref": "items-shared.json#/$defs/itemMastery"
+						},
+						"reach": {
+							"$ref": "items-shared.json#/$defs/itemReach"
+						},
+						"light": {
+							"$ref": "items-shared.json#/$defs/itemLight"
+						},
+						"hasRefs": {
+							"type": "boolean",
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						}
+					},
+					"additionalProperties": false
+				},
+				"excludes": {
+					"type": "object",
+					"properties": {
+						"name": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							]
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"property": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							]
+						},
+						"armor": {
+							"type": "boolean"
+						},
+						"axe": {
+							"type": "boolean"
+						},
+						"bow": {
+							"type": "boolean"
+						},
+						"crossbow": {
+							"type": "boolean"
+						},
+						"sword": {
+							"type": "boolean"
+						},
+						"weapon": {
+							"type": "boolean"
+						},
+						"firearm": {
+							"type": "boolean"
+						},
+						"mace": {
+							"type": "boolean"
+						},
+						"spear": {
+							"type": "boolean"
+						},
+						"hammer": {
+							"type": "boolean"
+						},
+						"club": {
+							"type": "boolean"
+						},
+						"dagger": {
+							"type": "boolean"
+						},
+						"dmgType": {
+							"$ref": "util.json#/$defs/dataDamageTags"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"type": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"scfType": {
+							"$ref": "items-shared.json#/$defs/itemScfType"
+						},
+						"net": {
+							"type": "boolean"
+						},
+						"polearm": {
+							"type": "boolean"
+						},
+						"lance": {
+							"type": "boolean"
+						},
+						"rapier": {
+							"type": "boolean"
+						},
+						"whip": {
+							"type": "boolean"
+						},
+						"halberd": {
+							"type": "boolean"
+						},
+						"glaive": {
+							"type": "boolean"
+						},
+						"arrow": {
+							"type": "boolean"
+						},
+						"bolt": {
+							"type": "boolean"
+						},
+						"bulletFirearm": {
+							"type": "boolean"
+						},
+						"bulletSling": {
+							"type": "boolean"
+						},
+						"cellEnergy": {
+							"type": "boolean"
+						},
+						"needleBlowgun": {
+							"type": "boolean"
+						},
+						"weaponCategory": {
+							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+						},
+						"staff": {
+							"type": "boolean"
+						}
+					},
+					"minProperties": 1,
+					"additionalProperties": false
+				},
+				"noDisplay": {
+					"type": "boolean"
+				},
+				"charges": {
+					"type": [
+						"string",
+						"integer"
+					]
+				},
+				"attachedSpells": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"ammo": {
+					"description": "Adds ammunition text to the header of the generic variant.",
+					"type": "boolean"
+				},
+				"reqAttuneTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"reqAttuneAltTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"weaponCategory": {
+					"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"rarity": {
+					"$ref": "items-shared.json#/$defs/itemRarity"
+				}
+			},
+			"additionalProperties": false
+		},
+		"_magicvariantSite": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -1149,7 +1723,7 @@
 				"requires"
 			]
 		},
-		"_magicvariantItemBrewBaseRarity": {
+		"_magicvariantBrewRootRarity": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -1729,10 +2303,1172 @@
 				"requires"
 			]
 		},
+		"_magicvariantSiteCopy": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"edition": {
+					"$ref": "util-edition.json#/$defs/edition"
+				},
+				"type": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"requires": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"property": {
+								"type": "string"
+							},
+							"armor": {
+								"type": "boolean"
+							},
+							"axe": {
+								"type": "boolean"
+							},
+							"bow": {
+								"type": "boolean"
+							},
+							"crossbow": {
+								"type": "boolean"
+							},
+							"sword": {
+								"type": "boolean"
+							},
+							"weapon": {
+								"type": "boolean"
+							},
+							"firearm": {
+								"type": "boolean"
+							},
+							"mace": {
+								"type": "boolean"
+							},
+							"spear": {
+								"type": "boolean"
+							},
+							"hammer": {
+								"type": "boolean"
+							},
+							"club": {
+								"type": "boolean"
+							},
+							"dagger": {
+								"type": "boolean"
+							},
+							"dmgType": {
+								"$ref": "util.json#/$defs/dataDamageTags"
+							},
+							"source": {
+								"$ref": "util.json#/$defs/source"
+							},
+							"type": {
+								"$ref": "items-shared.json#/$defs/itemType"
+							},
+							"scfType": {
+								"$ref": "items-shared.json#/$defs/itemScfType"
+							},
+							"net": {
+								"type": "boolean"
+							},
+							"polearm": {
+								"type": "boolean"
+							},
+							"lance": {
+								"type": "boolean"
+							},
+							"rapier": {
+								"type": "boolean"
+							},
+							"whip": {
+								"type": "boolean"
+							},
+							"halberd": {
+								"type": "boolean"
+							},
+							"glaive": {
+								"type": "boolean"
+							},
+							"arrow": {
+								"type": "boolean"
+							},
+							"bolt": {
+								"type": "boolean"
+							},
+							"bulletFirearm": {
+								"type": "boolean"
+							},
+							"bulletSling": {
+								"type": "boolean"
+							},
+							"cellEnergy": {
+								"type": "boolean"
+							},
+							"needleBlowgun": {
+								"type": "boolean"
+							},
+							"weaponCategory": {
+								"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+							},
+							"staff": {
+								"type": "boolean"
+							}
+						},
+						"minProperties": 1,
+						"additionalProperties": false
+					}
+				},
+				"inherits": {
+					"type": "object",
+					"properties": {
+						"type": {
+							"description": "Generally this should be omitted, as the type of the base item will be used.",
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"typeAlt": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"property": {
+							"description": "Generally this should be omitted, as the properties of the base item will be used.",
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+						},
+						"propertyAdd": {
+							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+						},
+						"propertyRemove": {
+							"description": "Properties to remove from the specific variant, if present on the base item.",
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+						},
+						"range": {
+							"type": "string"
+						},
+						"ac": {
+							"type": "integer"
+						},
+						"age": {
+							"$ref": "items-shared.json#/$defs/itemAge"
+						},
+						"critThreshold": {
+							"type": "integer"
+						},
+						"bonusAc": {
+							"type": "string"
+						},
+						"bonusWeapon": {
+							"type": "string"
+						},
+						"bonusWeaponAttack": {
+							"type": "string"
+						},
+						"bonusWeaponDamage": {
+							"type": "string"
+						},
+						"bonusWeaponCritDamage": {
+							"type": "string"
+						},
+						"bonusSpellAttack": {
+							"type": "string"
+						},
+						"bonusSpellDamage": {
+							"type": "string"
+						},
+						"bonusSpellSaveDc": {
+							"type": "string"
+						},
+						"bonusSavingThrow": {
+							"type": "string"
+						},
+						"bonusAbilityCheck": {
+							"type": "string"
+						},
+						"bonusProficiencyBonus": {
+							"type": "string"
+						},
+						"bonusSavingThrowConcentration": {
+							"type": "string"
+						},
+						"dmg1": {
+							"type": "string"
+						},
+						"dmg2": {
+							"type": "string",
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+						},
+						"dmgType": {
+							"$ref": "util.json#/$defs/dataDamageTags"
+						},
+						"modifySpeed": {
+							"$ref": "items-shared.json#/$defs/itemModifySpeed"
+						},
+						"tier": {
+							"$ref": "items-shared.json#/$defs/itemTier"
+						},
+						"rarity": {
+							"$ref": "items-shared.json#/$defs/itemRarity"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"namePrefix": {
+							"type": "string"
+						},
+						"nameSuffix": {
+							"type": "string"
+						},
+						"nameRemove": {
+							"type": "string"
+						},
+						"grantsProficiency": {
+							"type": "boolean"
+						},
+						"grantsLanguage": {
+							"type": "boolean"
+						},
+						"reqAttune": {
+							"type": [
+								"string",
+								"boolean"
+							]
+						},
+						"curse": {
+							"type": "boolean"
+						},
+						"vulnerable": {
+							"$ref": "util.json#/$defs/damageVulnerabilityArray"
+						},
+						"resist": {
+							"$ref": "util.json#/$defs/damageResistArray"
+						},
+						"immune": {
+							"$ref": "util.json#/$defs/damageImmunityArray"
+						},
+						"conditionImmune": {
+							"$ref": "util.json#/$defs/conditionImmunityArray"
+						},
+						"stealth": {
+							"type": "boolean"
+						},
+						"strength": {
+							"type": [
+								"string",
+								"null"
+							]
+						},
+						"dexterityMax": {
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
+						},
+						"wondrous": {
+							"type": "boolean"
+						},
+						"sentient": {
+							"const": true
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"charges": {
+							"type": [
+								"string",
+								"integer"
+							]
+						},
+						"recharge": {
+							"$ref": "items-shared.json#/$defs/itemRecharge"
+						},
+						"rechargeAmount": {
+							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+						},
+						"attachedSpells": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"ability": {
+							"$ref": "items-shared.json#/$defs/itemAbility"
+						},
+						"lootTables": {
+							"type": "array",
+							"items": {
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"source": {
+												"$ref": "util.json#/$defs/source"
+											}
+										}
+									}
+								]
+							}
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"valueMult": {
+							"type": "number"
+						},
+						"valueExpression": {
+							"description": "Expression used to calculate each specific variant's value.",
+							"type": "string"
+						},
+						"valueRarity": {
+							"$ref": "items-shared.json#/$defs/itemRarity"
+						},
+						"weaponCategory": {
+							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+						},
+						"weight": {
+							"type": "number"
+						},
+						"weightMult": {
+							"type": "number"
+						},
+						"weightExpression": {
+							"description": "Expression used to calculate each specific variant's weight.",
+							"type": "string"
+						},
+						"barding": {
+							"type": "boolean"
+						},
+						"spellScrollLevel": {
+							"type": "integer"
+						},
+						"reqAttuneTags": {
+							"$ref": "util.json#/$defs/reqAttuneTags"
+						},
+						"reqAttuneAltTags": {
+							"$ref": "util.json#/$defs/reqAttuneTags"
+						},
+						"miscTags": {
+							"$ref": "items-shared.json#/$defs/itemMiscTags"
+						},
+						"mastery": {
+							"$ref": "items-shared.json#/$defs/itemMastery"
+						},
+						"reach": {
+							"$ref": "items-shared.json#/$defs/itemReach"
+						},
+						"light": {
+							"$ref": "items-shared.json#/$defs/itemLight"
+						},
+						"hasRefs": {
+							"type": "boolean",
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						}
+					},
+					"additionalProperties": false
+				},
+				"excludes": {
+					"type": "object",
+					"properties": {
+						"name": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							]
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"property": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							]
+						},
+						"armor": {
+							"type": "boolean"
+						},
+						"axe": {
+							"type": "boolean"
+						},
+						"bow": {
+							"type": "boolean"
+						},
+						"crossbow": {
+							"type": "boolean"
+						},
+						"sword": {
+							"type": "boolean"
+						},
+						"weapon": {
+							"type": "boolean"
+						},
+						"firearm": {
+							"type": "boolean"
+						},
+						"mace": {
+							"type": "boolean"
+						},
+						"spear": {
+							"type": "boolean"
+						},
+						"hammer": {
+							"type": "boolean"
+						},
+						"club": {
+							"type": "boolean"
+						},
+						"dagger": {
+							"type": "boolean"
+						},
+						"dmgType": {
+							"$ref": "util.json#/$defs/dataDamageTags"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"type": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"scfType": {
+							"$ref": "items-shared.json#/$defs/itemScfType"
+						},
+						"net": {
+							"type": "boolean"
+						},
+						"polearm": {
+							"type": "boolean"
+						},
+						"lance": {
+							"type": "boolean"
+						},
+						"rapier": {
+							"type": "boolean"
+						},
+						"whip": {
+							"type": "boolean"
+						},
+						"halberd": {
+							"type": "boolean"
+						},
+						"glaive": {
+							"type": "boolean"
+						},
+						"arrow": {
+							"type": "boolean"
+						},
+						"bolt": {
+							"type": "boolean"
+						},
+						"bulletFirearm": {
+							"type": "boolean"
+						},
+						"bulletSling": {
+							"type": "boolean"
+						},
+						"cellEnergy": {
+							"type": "boolean"
+						},
+						"needleBlowgun": {
+							"type": "boolean"
+						},
+						"weaponCategory": {
+							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+						},
+						"staff": {
+							"type": "boolean"
+						}
+					},
+					"minProperties": 1,
+					"additionalProperties": false
+				},
+				"noDisplay": {
+					"type": "boolean"
+				},
+				"charges": {
+					"type": [
+						"string",
+						"integer"
+					]
+				},
+				"attachedSpells": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"ammo": {
+					"description": "Adds ammunition text to the header of the generic variant.",
+					"type": "boolean"
+				},
+				"reqAttuneTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"reqAttuneAltTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"weaponCategory": {
+					"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"_copy": {
+					"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"_copy",
+				"source"
+			]
+		},
+		"_magicvariantBrewRootRarityCopy": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"edition": {
+					"$ref": "util-edition.json#/$defs/edition"
+				},
+				"type": {
+					"$ref": "items-shared.json#/$defs/itemType"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"requires": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"property": {
+								"type": "string"
+							},
+							"armor": {
+								"type": "boolean"
+							},
+							"axe": {
+								"type": "boolean"
+							},
+							"bow": {
+								"type": "boolean"
+							},
+							"crossbow": {
+								"type": "boolean"
+							},
+							"sword": {
+								"type": "boolean"
+							},
+							"weapon": {
+								"type": "boolean"
+							},
+							"firearm": {
+								"type": "boolean"
+							},
+							"mace": {
+								"type": "boolean"
+							},
+							"spear": {
+								"type": "boolean"
+							},
+							"hammer": {
+								"type": "boolean"
+							},
+							"club": {
+								"type": "boolean"
+							},
+							"dagger": {
+								"type": "boolean"
+							},
+							"dmgType": {
+								"$ref": "util.json#/$defs/dataDamageTags"
+							},
+							"source": {
+								"$ref": "util.json#/$defs/source"
+							},
+							"type": {
+								"$ref": "items-shared.json#/$defs/itemType"
+							},
+							"scfType": {
+								"$ref": "items-shared.json#/$defs/itemScfType"
+							},
+							"net": {
+								"type": "boolean"
+							},
+							"polearm": {
+								"type": "boolean"
+							},
+							"lance": {
+								"type": "boolean"
+							},
+							"rapier": {
+								"type": "boolean"
+							},
+							"whip": {
+								"type": "boolean"
+							},
+							"halberd": {
+								"type": "boolean"
+							},
+							"glaive": {
+								"type": "boolean"
+							},
+							"arrow": {
+								"type": "boolean"
+							},
+							"bolt": {
+								"type": "boolean"
+							},
+							"bulletFirearm": {
+								"type": "boolean"
+							},
+							"bulletSling": {
+								"type": "boolean"
+							},
+							"cellEnergy": {
+								"type": "boolean"
+							},
+							"needleBlowgun": {
+								"type": "boolean"
+							},
+							"weaponCategory": {
+								"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+							},
+							"staff": {
+								"type": "boolean"
+							}
+						},
+						"minProperties": 1,
+						"additionalProperties": false
+					}
+				},
+				"inherits": {
+					"type": "object",
+					"properties": {
+						"type": {
+							"description": "Generally this should be omitted, as the type of the base item will be used.",
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"typeAlt": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"property": {
+							"description": "Generally this should be omitted, as the properties of the base item will be used.",
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+						},
+						"propertyAdd": {
+							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+						},
+						"propertyRemove": {
+							"description": "Properties to remove from the specific variant, if present on the base item.",
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+						},
+						"range": {
+							"type": "string"
+						},
+						"ac": {
+							"type": "integer"
+						},
+						"age": {
+							"$ref": "items-shared.json#/$defs/itemAge"
+						},
+						"critThreshold": {
+							"type": "integer"
+						},
+						"bonusAc": {
+							"type": "string"
+						},
+						"bonusWeapon": {
+							"type": "string"
+						},
+						"bonusWeaponAttack": {
+							"type": "string"
+						},
+						"bonusWeaponDamage": {
+							"type": "string"
+						},
+						"bonusWeaponCritDamage": {
+							"type": "string"
+						},
+						"bonusSpellAttack": {
+							"type": "string"
+						},
+						"bonusSpellDamage": {
+							"type": "string"
+						},
+						"bonusSpellSaveDc": {
+							"type": "string"
+						},
+						"bonusSavingThrow": {
+							"type": "string"
+						},
+						"bonusAbilityCheck": {
+							"type": "string"
+						},
+						"bonusProficiencyBonus": {
+							"type": "string"
+						},
+						"bonusSavingThrowConcentration": {
+							"type": "string"
+						},
+						"dmg1": {
+							"type": "string"
+						},
+						"dmg2": {
+							"type": "string",
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+						},
+						"dmgType": {
+							"$ref": "util.json#/$defs/dataDamageTags"
+						},
+						"modifySpeed": {
+							"$ref": "items-shared.json#/$defs/itemModifySpeed"
+						},
+						"tier": {
+							"$ref": "items-shared.json#/$defs/itemTier"
+						},
+						"rarity": {
+							"$ref": "items-shared.json#/$defs/itemRarity"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"namePrefix": {
+							"type": "string"
+						},
+						"nameSuffix": {
+							"type": "string"
+						},
+						"nameRemove": {
+							"type": "string"
+						},
+						"grantsProficiency": {
+							"type": "boolean"
+						},
+						"grantsLanguage": {
+							"type": "boolean"
+						},
+						"reqAttune": {
+							"type": [
+								"string",
+								"boolean"
+							]
+						},
+						"curse": {
+							"type": "boolean"
+						},
+						"vulnerable": {
+							"$ref": "util.json#/$defs/damageVulnerabilityArray"
+						},
+						"resist": {
+							"$ref": "util.json#/$defs/damageResistArray"
+						},
+						"immune": {
+							"$ref": "util.json#/$defs/damageImmunityArray"
+						},
+						"conditionImmune": {
+							"$ref": "util.json#/$defs/conditionImmunityArray"
+						},
+						"stealth": {
+							"type": "boolean"
+						},
+						"strength": {
+							"type": [
+								"string",
+								"null"
+							]
+						},
+						"dexterityMax": {
+							"$ref": "items-shared.json#/$defs/itemDexterityMax"
+						},
+						"wondrous": {
+							"type": "boolean"
+						},
+						"sentient": {
+							"const": true
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"charges": {
+							"type": [
+								"string",
+								"integer"
+							]
+						},
+						"recharge": {
+							"$ref": "items-shared.json#/$defs/itemRecharge"
+						},
+						"rechargeAmount": {
+							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
+						},
+						"attachedSpells": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"ability": {
+							"$ref": "items-shared.json#/$defs/itemAbility"
+						},
+						"lootTables": {
+							"type": "array",
+							"items": {
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "object",
+										"properties": {
+											"name": {
+												"type": "string"
+											},
+											"source": {
+												"$ref": "util.json#/$defs/source"
+											}
+										}
+									}
+								]
+							}
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"freeRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"valueMult": {
+							"type": "number"
+						},
+						"valueExpression": {
+							"description": "Expression used to calculate each specific variant's value.",
+							"type": "string"
+						},
+						"valueRarity": {
+							"$ref": "items-shared.json#/$defs/itemRarity"
+						},
+						"weaponCategory": {
+							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+						},
+						"weight": {
+							"type": "number"
+						},
+						"weightMult": {
+							"type": "number"
+						},
+						"weightExpression": {
+							"description": "Expression used to calculate each specific variant's weight.",
+							"type": "string"
+						},
+						"barding": {
+							"type": "boolean"
+						},
+						"spellScrollLevel": {
+							"type": "integer"
+						},
+						"reqAttuneTags": {
+							"$ref": "util.json#/$defs/reqAttuneTags"
+						},
+						"reqAttuneAltTags": {
+							"$ref": "util.json#/$defs/reqAttuneTags"
+						},
+						"miscTags": {
+							"$ref": "items-shared.json#/$defs/itemMiscTags"
+						},
+						"mastery": {
+							"$ref": "items-shared.json#/$defs/itemMastery"
+						},
+						"reach": {
+							"$ref": "items-shared.json#/$defs/itemReach"
+						},
+						"light": {
+							"$ref": "items-shared.json#/$defs/itemLight"
+						},
+						"hasRefs": {
+							"type": "boolean",
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						}
+					},
+					"additionalProperties": false
+				},
+				"excludes": {
+					"type": "object",
+					"properties": {
+						"name": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							]
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"property": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							]
+						},
+						"armor": {
+							"type": "boolean"
+						},
+						"axe": {
+							"type": "boolean"
+						},
+						"bow": {
+							"type": "boolean"
+						},
+						"crossbow": {
+							"type": "boolean"
+						},
+						"sword": {
+							"type": "boolean"
+						},
+						"weapon": {
+							"type": "boolean"
+						},
+						"firearm": {
+							"type": "boolean"
+						},
+						"mace": {
+							"type": "boolean"
+						},
+						"spear": {
+							"type": "boolean"
+						},
+						"hammer": {
+							"type": "boolean"
+						},
+						"club": {
+							"type": "boolean"
+						},
+						"dagger": {
+							"type": "boolean"
+						},
+						"dmgType": {
+							"$ref": "util.json#/$defs/dataDamageTags"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"type": {
+							"$ref": "items-shared.json#/$defs/itemType"
+						},
+						"scfType": {
+							"$ref": "items-shared.json#/$defs/itemScfType"
+						},
+						"net": {
+							"type": "boolean"
+						},
+						"polearm": {
+							"type": "boolean"
+						},
+						"lance": {
+							"type": "boolean"
+						},
+						"rapier": {
+							"type": "boolean"
+						},
+						"whip": {
+							"type": "boolean"
+						},
+						"halberd": {
+							"type": "boolean"
+						},
+						"glaive": {
+							"type": "boolean"
+						},
+						"arrow": {
+							"type": "boolean"
+						},
+						"bolt": {
+							"type": "boolean"
+						},
+						"bulletFirearm": {
+							"type": "boolean"
+						},
+						"bulletSling": {
+							"type": "boolean"
+						},
+						"cellEnergy": {
+							"type": "boolean"
+						},
+						"needleBlowgun": {
+							"type": "boolean"
+						},
+						"weaponCategory": {
+							"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+						},
+						"staff": {
+							"type": "boolean"
+						}
+					},
+					"minProperties": 1,
+					"additionalProperties": false
+				},
+				"noDisplay": {
+					"type": "boolean"
+				},
+				"charges": {
+					"type": [
+						"string",
+						"integer"
+					]
+				},
+				"attachedSpells": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"ammo": {
+					"description": "Adds ammunition text to the header of the generic variant.",
+					"type": "boolean"
+				},
+				"reqAttuneTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"reqAttuneAltTags": {
+					"$ref": "util.json#/$defs/reqAttuneTags"
+				},
+				"weaponCategory": {
+					"$ref": "items-shared.json#/$defs/itemWeaponCategory"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"rarity": {
+					"$ref": "items-shared.json#/$defs/itemRarity"
+				},
+				"_copy": {
+					"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"_copy",
+				"source"
+			]
+		},
 		"magicvariantItem": {
 			"anyOf": [
 				{
-					"$ref": "#/$defs/_magicvariantItemSite"
+					"$ref": "#/$defs/_magicvariantSite"
+				},
+				{
+					"$ref": "#/$defs/_magicvariantSiteCopy"
 				}
 			]
 		}
