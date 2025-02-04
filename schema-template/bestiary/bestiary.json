@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.47",
+	"version": "1.21.48",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1020,6 +1020,8 @@
 								"planar, magma",
 								"planar, ash",
 								"planar, ice",
+
+								"planar, elemental chaos",
 
 								"planar, ethereal",
 								"planar, astral",
