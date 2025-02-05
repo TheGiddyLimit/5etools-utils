@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.20",
+	"version": "1.17.21",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -216,7 +216,8 @@
 		"propNameStats": {
 			"type": "string",
 			"enum": [
-				"subclass"
+				"subclass",
+				"monsterFluff"
 			]
 		},
 		"abilityScoreAbbreviation": {
