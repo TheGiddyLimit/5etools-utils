@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.29",
+	"version": "1.10.30",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -10,7 +10,7 @@
 			"items": {
 				"type": "object",
 				"properties": {
-					"id": {"type": "string"},
+					"id": {"$ref": "util.json#/$defs/corpusId"},
 					"source": {"$ref": "util.json#/$defs/source"},
 					"data": {
 						"$$ifNotFast": {

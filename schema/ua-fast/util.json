@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.21",
+	"version": "1.17.22",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -45,6 +45,14 @@
 			"pattern": "^([-a-zA-Z0-9&+!]{1,2}|[-a-zA-Z0-9&+!][-a-zA-Z0-9&+! ]+[-a-zA-Z0-9&+!])$"
 		},
 		"source": {
+			"anyOf": [
+				{
+					"$ref": "#/$defs/_sourceString"
+				}
+			]
+		},
+		"corpusId": {
+			"description": "An ID that will be used to refer to this corpus (adventure/book) in tags.",
 			"anyOf": [
 				{
 					"$ref": "#/$defs/_sourceString"

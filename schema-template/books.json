@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "books.json",
-	"version": "1.2.13",
+	"version": "1.2.14",
 	"type": "object",
 	"properties": {
 		"book": {
@@ -15,10 +15,7 @@
 						"type": "string"
 					},
 					"alias": {"$ref": "util.json#/$defs/alias"},
-					"id": {
-						"type": "string",
-						"description": "An ID that will be used to refer to this book in tags."
-					},
+					"id": {"$ref": "util.json#/$defs/corpusId"},
 					"source": {"$ref": "util.json#/$defs/source"},
 					"legacy": {"$ref": "util.json#/$defs/legacy"},
 					"group": {
@@ -115,12 +112,3 @@
 	},
 	"additionalProperties": false
 }
-
-
-
-
-
-
-
-
-
