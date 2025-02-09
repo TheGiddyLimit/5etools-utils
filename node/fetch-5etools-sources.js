@@ -26,7 +26,7 @@ const _TEMPLATE = {
 async function main () {
 	// :^)
 	// eslint-disable-next-line no-eval
-	eval(await (await fetch(`https://5etools-mirror-2.github.io/js/parser.js`)).text());
+	eval(await (await fetch(`https://raw.githubusercontent.com/5etools-mirror-3/5etools-src/refs/heads/main/js/parser.js`)).text());
 	_TEMPLATE.$defs.sources = {
 		"type": "string",
 		"enum": Object.keys(Parser.SOURCE_JSON_TO_FULL),
