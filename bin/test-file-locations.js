@@ -2,4 +2,4 @@
 
 import {BrewTester} from "../lib/BrewTester.js";
 
-BrewTester.testFileLocations();
+await BrewTester.pTestFileLocations();

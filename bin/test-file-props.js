@@ -2,4 +2,4 @@
 
 import {BrewTester} from "../lib/BrewTester.js";
 
-BrewTester.testFileProps();
+await BrewTester.pTestFileProps();
