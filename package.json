@@ -15,7 +15,8 @@
 		"test-json-brew": "bin/test-json-brew.js",
 		"test-json-ua": "bin/test-json-ua.js",
 		"test-file-names": "bin/test-file-names.js",
-		"test-file-locations": "bin/test-file-locations.js"
+		"test-file-locations": "bin/test-file-locations.js",
+		"test-file-props": "bin/test-file-props.js"
 	},
 	"scripts": {
 		"build:dangerous:sources": "node node/fetch-5etools-sources.js",
