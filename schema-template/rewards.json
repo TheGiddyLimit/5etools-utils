@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "rewards.json",
-	"version": "1.1.4",
+	"version": "1.2.0",
 	"type": "object",
 
 	"$defs": {
@@ -36,20 +36,11 @@
 					],
 					"additionalProperties": false
 				},
-				"signaturespells": {
-					"type": "object",
-					"properties": {
-						"entry": {
-							"$ref": "entry.json"
-						}
-					},
-					"required": [
-						"entry"
-					],
-					"additionalProperties": false
-				},
 				"rarity": {
 					"$ref": "util.json#/$defs/rarity"
+				},
+				"additionalSpells": {
+					"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 				},
 				"entries": {
 					"type": "array",
