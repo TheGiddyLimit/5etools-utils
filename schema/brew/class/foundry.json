@@ -19,6 +19,12 @@
 					"system": {
 						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
+					"activities": {
+						"type": "array",
+						"items": {
+							"$ref": "../util-foundry.json#/$defs/foundryActivityObject"
+						}
+					},
 					"effects": {
 						"type": "array",
 						"items": {
@@ -42,6 +48,9 @@
 								"const": true
 							},
 							"chooseSystem": {
+								"const": true
+							},
+							"activities": {
 								"const": true
 							},
 							"effects": {
@@ -128,6 +137,12 @@
 					"system": {
 						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
+					"activities": {
+						"type": "array",
+						"items": {
+							"$ref": "../util-foundry.json#/$defs/foundryActivityObject"
+						}
+					},
 					"effects": {
 						"type": "array",
 						"items": {
@@ -151,6 +166,9 @@
 								"const": true
 							},
 							"chooseSystem": {
+								"const": true
+							},
+							"activities": {
 								"const": true
 							},
 							"effects": {
@@ -242,6 +260,12 @@
 					"system": {
 						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
+					"activities": {
+						"type": "array",
+						"items": {
+							"$ref": "../util-foundry.json#/$defs/foundryActivityObject"
+						}
+					},
 					"effects": {
 						"type": "array",
 						"items": {
@@ -265,6 +289,9 @@
 								"const": true
 							},
 							"chooseSystem": {
+								"const": true
+							},
+							"activities": {
 								"const": true
 							},
 							"effects": {
@@ -355,6 +382,12 @@
 					"system": {
 						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
 					},
+					"activities": {
+						"type": "array",
+						"items": {
+							"$ref": "../util-foundry.json#/$defs/foundryActivityObject"
+						}
+					},
 					"effects": {
 						"type": "array",
 						"items": {
@@ -378,6 +411,9 @@
 								"const": true
 							},
 							"chooseSystem": {
+								"const": true
+							},
+							"activities": {
 								"const": true
 							},
 							"effects": {

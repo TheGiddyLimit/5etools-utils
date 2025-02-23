@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -59,7 +59,14 @@
 		"foundryId": {
 			"type": "string",
 			"minLength": 16,
-			"maxLength": 16
+			"maxLength": 16,
+			"pattern": "^[A-Za-z0-9]+$"
+		},
+		"foundryIdShort": {
+			"type": "string",
+			"minLength": 1,
+			"maxLength": 16,
+			"pattern": "^[A-Za-z0-9]+$"
 		},
 		"foundryTokenScale": {
 			"type": "number",
@@ -106,12 +113,44 @@
 			},
 			"minProperties": 1
 		},
+		"_foundryActivityObject_utility": {
+			"type": "object",
+			"properties": {
+				"type": {
+					"const": "utility"
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"foundryId": {
+								"$ref": "#/$defs/foundryIdShort"
+							}
+						},
+						"required": [
+							"foundryId"
+						]
+					}
+				}
+			},
+			"required": [
+				"type"
+			]
+		},
+		"foundryActivityObject": {
+			"anyOf": [
+				{
+					"$ref": "#/$defs/_foundryActivityObject_utility"
+				}
+			]
+		},
 		"_foundryEffectObject": {
 			"type": "object",
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking an \"enchantmentRiderParent\".",
-					"$ref": "#/$defs/foundryId"
+					"$ref": "#/$defs/foundryIdShort"
 				},
 				"name": {
 					"type": "string"
@@ -202,7 +241,7 @@
 					"maximum": 20
 				},
 				"enchantmentRiderParent": {
-					"$ref": "#/$defs/foundryId"
+					"$ref": "#/$defs/foundryIdShort"
 				},
 				"type": {
 					"type": "string",
@@ -263,6 +302,12 @@
 				"system": {
 					"$ref": "#/$defs/foundrySystemObject"
 				},
+				"activities": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/foundryActivityObject"
+					}
+				},
 				"effects": {
 					"type": "array",
 					"items": {
@@ -286,6 +331,9 @@
 							"const": true
 						},
 						"chooseSystem": {
+							"const": true
+						},
+						"activities": {
 							"const": true
 						},
 						"effects": {
@@ -326,6 +374,12 @@
 				"system": {
 					"$ref": "#/$defs/foundrySystemObject"
 				},
+				"activities": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/foundryActivityObject"
+					}
+				},
 				"effects": {
 					"type": "array",
 					"items": {
@@ -349,6 +403,9 @@
 							"const": true
 						},
 						"chooseSystem": {
+							"const": true
+						},
+						"activities": {
 							"const": true
 						},
 						"effects": {
@@ -410,6 +467,12 @@
 				"system": {
 					"$ref": "#/$defs/foundrySystemObject"
 				},
+				"activities": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/foundryActivityObject"
+					}
+				},
 				"effects": {
 					"type": "array",
 					"items": {
@@ -433,6 +496,9 @@
 							"const": true
 						},
 						"chooseSystem": {
+							"const": true
+						},
+						"activities": {
 							"const": true
 						},
 						"effects": {

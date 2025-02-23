@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.7",
+	"version": "1.0.8",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -62,7 +62,15 @@
 		"foundryId": {
 			"type": "string",
 			"minLength": 16,
-			"maxLength": 16
+			"maxLength": 16,
+			"pattern": "^[A-Za-z0-9]+$"
+		},
+
+		"foundryIdShort": {
+			"type": "string",
+			"minLength": 1,
+			"maxLength": 16,
+			"pattern": "^[A-Za-z0-9]+$"
 		},
 
 		"foundryTokenScale": {
@@ -115,12 +123,37 @@
 			"minProperties": 1
 		},
 
+		"_foundryActivityObject_utility": {
+			"type": "object",
+			"properties": {
+				"type": {"const": "utility"},
+
+				"effects": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"foundryId": {"$ref": "#/$defs/foundryIdShort"}
+						},
+						"required": ["foundryId"]
+					}
+				}
+			},
+			"required": ["type"]
+		},
+
+		"foundryActivityObject": {
+			"anyOf": [
+				{"$ref": "#/$defs/_foundryActivityObject_utility"}
+			]
+		},
+
 		"_foundryEffectObject": {
 			"type": "object",
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking an \"enchantmentRiderParent\".",
-					"$ref": "#/$defs/foundryId"
+					"$ref": "#/$defs/foundryIdShort"
 				},
 
 				"name": {"type": "string"},
@@ -176,7 +209,7 @@
 
 				"enchantmentLevelMin": {"type": "number", "minimum": 0, "maximum": 20},
 				"enchantmentLevelMax": {"type": "number", "minimum": 0, "maximum": 20},
-				"enchantmentRiderParent": {"$ref": "#/$defs/foundryId"},
+				"enchantmentRiderParent": {"$ref": "#/$defs/foundryIdShort"},
 				"type": {
 					"type": "string",
 					"enum": ["enchantment"]
@@ -216,6 +249,7 @@
 				"source": {"$ref": "util.json#/$defs/source"},
 
 				"system": {"$ref": "#/$defs/foundrySystemObject"},
+				"activities": {"type": "array", "items": {"$ref": "#/$defs/foundryActivityObject"}},
 				"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}},
 				"flags": {"$ref": "#/$defs/foundryFlagsObject"},
 				"img": {"type": "string"},
@@ -228,6 +262,7 @@
 					"properties": {
 						"system": {"const": true},
 						"chooseSystem": {"const": true},
+						"activities": {"const": true},
 						"effects": {"const": true},
 						"flags": {"const": true},
 						"chooseFlags": {"const": true}
