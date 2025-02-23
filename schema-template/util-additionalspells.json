@@ -71,6 +71,10 @@
 					"description": "Spells which cost a specific resource to use (such as Ki), but otherwise have no restrictions",
 					"$ref": "#/$defs/_additionalSpellRechargeObject"
 				},
+				"limited": {
+					"description": "Spells which do not recharge, and have a limited number of uses",
+					"$ref": "#/$defs/_additionalSpellRechargeObject"
+				},
 				"_": {
 					"description": "Spells which do not fall into the above categories (i.e. have no specific recharge, and are simply known)",
 					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
