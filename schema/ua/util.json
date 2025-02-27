@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.23",
+	"version": "1.17.24",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2306,6 +2306,7 @@
 			"type": "string",
 			"description": "D: Dragonmark\nG: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
 			"enum": [
+				"D",
 				"G",
 				"O",
 				"FS",
