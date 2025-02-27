@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "fluff-class.json",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"type": "object",
 
 	"$defs": {
@@ -45,7 +45,7 @@
 								"$ref": "#/$defs/_subclassFluffItemData"
 							},
 							{
-								"$ref": "#/$defs/_subclassFluffItemData"
+								"$ref": "../util-copy.json#/$defs/copyBlockGeneric"
 							}
 						]
 					}
@@ -55,15 +55,9 @@
 	},
 
 	"properties": {
-		"_meta": {
-			"$ref": "../util.json#/$defs/metaBlock"
-		},
-		"classFluff": {
-			"$ref": "../util.json#/$defs/genericFluffArray"
-		},
-		"subclassFluff": {
-			"$ref": "#/$defs/subclassFluffArray"
-		}
+		"_meta": {"$ref": "../util.json#/$defs/metaBlock"},
+		"classFluff": {"$ref": "../util.json#/$defs/genericFluffArray"},
+		"subclassFluff": {"$ref": "#/$defs/subclassFluffArray"}
 	},
 
 	"additionalProperties": false
