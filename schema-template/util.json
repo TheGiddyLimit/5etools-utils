@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.22",
+	"version": "1.17.23",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1621,7 +1621,8 @@
 								"key_brew": "examples",
 								"value": [
 									"Dragonlance",
-									"Planescape"
+									"Planescape",
+									"Eberron"
 								]
 							}
 						}
@@ -1794,7 +1795,7 @@
 
 		"dataFeatCategory": {
 			"type": "string",
-			"description": "G: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
+			"description": "D: Dragonmark\nG: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
 			"$$switch_key": {
 				"key_site": "enum",
 				"key_ua": "enum",
