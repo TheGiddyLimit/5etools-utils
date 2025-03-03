@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "fluff-races.json",
-	"version": "2.1.2",
+	"version": "2.2.0",
 	"type": "object",
 
 	"$defs": {
@@ -31,11 +31,9 @@
 						"$ref": "entry.json"
 					}
 				},
-				"uncommon": {
-					"type": "boolean"
-				},
-				"monstrous": {
-					"type": "boolean"
+				"$$ifSite": {
+					"uncommon": {"const": true},
+					"monstrous": {"const": true}
 				}
 			},
 			"additionalProperties": false

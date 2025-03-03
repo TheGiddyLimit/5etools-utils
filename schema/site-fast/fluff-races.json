@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "fluff-races.json",
-	"version": "2.1.2",
+	"version": "2.2.0",
 	"type": "object",
 	"$defs": {
 		"raceFluffData": {
@@ -33,10 +33,10 @@
 					}
 				},
 				"uncommon": {
-					"type": "boolean"
+					"const": true
 				},
 				"monstrous": {
-					"type": "boolean"
+					"const": true
 				}
 			},
 			"additionalProperties": false
@@ -72,10 +72,10 @@
 							}
 						},
 						"uncommon": {
-							"type": "boolean"
+							"const": true
 						},
 						"monstrous": {
-							"type": "boolean"
+							"const": true
 						}
 					},
 					"additionalProperties": false,
@@ -114,10 +114,10 @@
 							}
 						},
 						"uncommon": {
-							"type": "boolean"
+							"const": true
 						},
 						"monstrous": {
-							"type": "boolean"
+							"const": true
 						},
 						"_copy": {
 							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
