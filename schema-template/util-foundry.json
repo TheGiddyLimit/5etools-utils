@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.8",
+	"version": "1.0.9",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -123,10 +123,36 @@
 			"minProperties": 1
 		},
 
-		"_foundryActivityObject_utility": {
+		"_foundryActivityObject_base": {
 			"type": "object",
 			"properties": {
-				"type": {"const": "utility"},
+				"consumption": {
+					"type": "object",
+					"properties": {
+						"targets": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"target": {
+										"oneOf": [
+											{"type": "string"},
+											{
+												"type": "object",
+												"properties": {
+													"prop": {"type": "string"},
+													"uid": {"type": "string"}
+												},
+												"required": ["prop", "uid"],
+												"additionalProperties": false
+											}
+										]
+									}
+								}
+							}
+						}
+					}
+				},
 
 				"effects": {
 					"type": "array",
@@ -142,8 +168,59 @@
 			"required": ["type"]
 		},
 
+		"_foundryActivityObject_damage": {
+			"$$merge": [
+				{"$ref": "#/$defs/_foundryActivityObject_base"},
+				{
+					"type": "object",
+					"properties": {
+						"type": {"const": "damage"}
+					}
+				}
+			]
+		},
+
+		"_foundryActivityObject_save": {
+			"$$merge": [
+				{"$ref": "#/$defs/_foundryActivityObject_base"},
+				{
+					"type": "object",
+					"properties": {
+						"type": {"const": "save"}
+					}
+				}
+			]
+		},
+
+		"_foundryActivityObject_heal": {
+			"$$merge": [
+				{"$ref": "#/$defs/_foundryActivityObject_base"},
+				{
+					"type": "object",
+					"properties": {
+						"type": {"const": "heal"}
+					}
+				}
+			]
+		},
+
+		"_foundryActivityObject_utility": {
+			"$$merge": [
+				{"$ref": "#/$defs/_foundryActivityObject_base"},
+				{
+					"type": "object",
+					"properties": {
+						"type": {"const": "utility"}
+					}
+				}
+			]
+		},
+
 		"foundryActivityObject": {
 			"anyOf": [
+				{"$ref": "#/$defs/_foundryActivityObject_damage"},
+				{"$ref": "#/$defs/_foundryActivityObject_save"},
+				{"$ref": "#/$defs/_foundryActivityObject_heal"},
 				{"$ref": "#/$defs/_foundryActivityObject_utility"}
 			]
 		},
@@ -158,6 +235,7 @@
 
 				"name": {"type": "string"},
 				"img": {"type": "string"},
+				"description": {"type": "string"},
 				"changes": {
 					"type": "array",
 					"items": {
@@ -230,6 +308,13 @@
 					"allOf": [
 						{"$ref": "#/$defs/_foundryEffectObject"},
 						{"type": "object", "required": ["statuses"]}
+					]
+				},
+				{
+					"description": "An effect with no functional changes, but descriptive text. Should only be used for effects which cannot be otherwise automated.",
+					"allOf": [
+						{"$ref": "#/$defs/_foundryEffectObject"},
+						{"type": "object", "required": ["description"]}
 					]
 				}
 			]

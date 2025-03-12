@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -113,11 +113,44 @@
 			},
 			"minProperties": 1
 		},
-		"_foundryActivityObject_utility": {
+		"_foundryActivityObject_base": {
 			"type": "object",
 			"properties": {
-				"type": {
-					"const": "utility"
+				"consumption": {
+					"type": "object",
+					"properties": {
+						"targets": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"target": {
+										"oneOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "object",
+												"properties": {
+													"prop": {
+														"type": "string"
+													},
+													"uid": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"prop",
+													"uid"
+												],
+												"additionalProperties": false
+											}
+										]
+									}
+								}
+							}
+						}
+					}
 				},
 				"effects": {
 					"type": "array",
@@ -138,8 +171,261 @@
 				"type"
 			]
 		},
+		"_foundryActivityObject_damage": {
+			"type": "object",
+			"properties": {
+				"consumption": {
+					"type": "object",
+					"properties": {
+						"targets": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"target": {
+										"oneOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "object",
+												"properties": {
+													"prop": {
+														"type": "string"
+													},
+													"uid": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"prop",
+													"uid"
+												],
+												"additionalProperties": false
+											}
+										]
+									}
+								}
+							}
+						}
+					}
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"foundryId": {
+								"$ref": "#/$defs/foundryIdShort"
+							}
+						},
+						"required": [
+							"foundryId"
+						]
+					}
+				},
+				"type": {
+					"const": "damage"
+				}
+			},
+			"required": [
+				"type"
+			]
+		},
+		"_foundryActivityObject_save": {
+			"type": "object",
+			"properties": {
+				"consumption": {
+					"type": "object",
+					"properties": {
+						"targets": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"target": {
+										"oneOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "object",
+												"properties": {
+													"prop": {
+														"type": "string"
+													},
+													"uid": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"prop",
+													"uid"
+												],
+												"additionalProperties": false
+											}
+										]
+									}
+								}
+							}
+						}
+					}
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"foundryId": {
+								"$ref": "#/$defs/foundryIdShort"
+							}
+						},
+						"required": [
+							"foundryId"
+						]
+					}
+				},
+				"type": {
+					"const": "save"
+				}
+			},
+			"required": [
+				"type"
+			]
+		},
+		"_foundryActivityObject_heal": {
+			"type": "object",
+			"properties": {
+				"consumption": {
+					"type": "object",
+					"properties": {
+						"targets": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"target": {
+										"oneOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "object",
+												"properties": {
+													"prop": {
+														"type": "string"
+													},
+													"uid": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"prop",
+													"uid"
+												],
+												"additionalProperties": false
+											}
+										]
+									}
+								}
+							}
+						}
+					}
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"foundryId": {
+								"$ref": "#/$defs/foundryIdShort"
+							}
+						},
+						"required": [
+							"foundryId"
+						]
+					}
+				},
+				"type": {
+					"const": "heal"
+				}
+			},
+			"required": [
+				"type"
+			]
+		},
+		"_foundryActivityObject_utility": {
+			"type": "object",
+			"properties": {
+				"consumption": {
+					"type": "object",
+					"properties": {
+						"targets": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"target": {
+										"oneOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "object",
+												"properties": {
+													"prop": {
+														"type": "string"
+													},
+													"uid": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"prop",
+													"uid"
+												],
+												"additionalProperties": false
+											}
+										]
+									}
+								}
+							}
+						}
+					}
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"foundryId": {
+								"$ref": "#/$defs/foundryIdShort"
+							}
+						},
+						"required": [
+							"foundryId"
+						]
+					}
+				},
+				"type": {
+					"const": "utility"
+				}
+			},
+			"required": [
+				"type"
+			]
+		},
 		"foundryActivityObject": {
 			"anyOf": [
+				{
+					"$ref": "#/$defs/_foundryActivityObject_damage"
+				},
+				{
+					"$ref": "#/$defs/_foundryActivityObject_save"
+				},
+				{
+					"$ref": "#/$defs/_foundryActivityObject_heal"
+				},
 				{
 					"$ref": "#/$defs/_foundryActivityObject_utility"
 				}
@@ -156,6 +442,9 @@
 					"type": "string"
 				},
 				"img": {
+					"type": "string"
+				},
+				"description": {
 					"type": "string"
 				},
 				"changes": {
@@ -276,6 +565,20 @@
 							"type": "object",
 							"required": [
 								"statuses"
+							]
+						}
+					]
+				},
+				{
+					"description": "An effect with no functional changes, but descriptive text. Should only be used for effects which cannot be otherwise automated.",
+					"allOf": [
+						{
+							"$ref": "#/$defs/_foundryEffectObject"
+						},
+						{
+							"type": "object",
+							"required": [
+								"description"
 							]
 						}
 					]
