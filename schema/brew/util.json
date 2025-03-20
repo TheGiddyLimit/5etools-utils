@@ -2826,21 +2826,24 @@
 			},
 			"uniqueItems": true
 		},
+		"consumesName": {
+			"type": "string",
+			"examples": [
+				"Superiority Die",
+				"Ki",
+				"Channel Divinity",
+				"Psionic Energy Die",
+				"Wild Shape",
+				"Sorcery Point",
+				"Arcane Shot",
+				"Focus Point"
+			]
+		},
 		"_consumesObjectBase": {
 			"type": "object",
 			"properties": {
 				"name": {
-					"type": "string",
-					"examples": [
-						"Superiority Die",
-						"Ki",
-						"Channel Divinity",
-						"Psionic Energy Die",
-						"Wild Shape",
-						"Sorcery Point",
-						"Arcane Shot",
-						"Focus Point"
-					]
+					"$ref": "#/$defs/consumesName"
 				}
 			},
 			"additionalProperties": false
@@ -2851,17 +2854,7 @@
 					"type": "object",
 					"properties": {
 						"name": {
-							"type": "string",
-							"examples": [
-								"Superiority Die",
-								"Ki",
-								"Channel Divinity",
-								"Psionic Energy Die",
-								"Wild Shape",
-								"Sorcery Point",
-								"Arcane Shot",
-								"Focus Point"
-							]
+							"$ref": "#/$defs/consumesName"
 						},
 						"amount": {
 							"type": "integer"
@@ -2876,17 +2869,7 @@
 					"type": "object",
 					"properties": {
 						"name": {
-							"type": "string",
-							"examples": [
-								"Superiority Die",
-								"Ki",
-								"Channel Divinity",
-								"Psionic Energy Die",
-								"Wild Shape",
-								"Sorcery Point",
-								"Arcane Shot",
-								"Focus Point"
-							]
+							"$ref": "#/$defs/consumesName"
 						},
 						"amountMin": {
 							"type": "integer"

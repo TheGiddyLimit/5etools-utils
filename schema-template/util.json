@@ -2186,27 +2186,29 @@
 			"uniqueItems": true
 		},
 
+		"consumesName": {
+			"type": "string",
+			"$$switch_key": {
+				"key_site": "enum",
+				"key_ua": "enum",
+				"key_brew": "examples",
+				"value": [
+					"Superiority Die",
+					"Ki",
+					"Channel Divinity",
+					"Psionic Energy Die",
+					"Wild Shape",
+					"Sorcery Point",
+					"Arcane Shot",
+					"Focus Point"
+				]
+			}
+		},
+
 		"_consumesObjectBase": {
 			"type": "object",
 			"properties": {
-				"name": {
-					"type": "string",
-					"$$switch_key": {
-						"key_site": "enum",
-						"key_ua": "enum",
-						"key_brew": "examples",
-						"value": [
-							"Superiority Die",
-							"Ki",
-							"Channel Divinity",
-							"Psionic Energy Die",
-							"Wild Shape",
-							"Sorcery Point",
-							"Arcane Shot",
-							"Focus Point"
-						]
-					}
-				}
+				"name": {"$ref": "#/$defs/consumesName"}
 			},
 			"additionalProperties": false
 		},
