@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.10.31",
+	"version": "1.11.0",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -501,6 +501,9 @@
 		"action": {
 			"$ref": "actions.json#/properties/action"
 		},
+		"foundryAction": {
+			"$ref": "foundry-actions.json#/properties/action"
+		},
 		"item": {
 			"$ref": "items.json#/properties/item"
 		},
@@ -543,11 +546,11 @@
 		"background": {
 			"$ref": "backgrounds.json#/properties/background"
 		},
-		"backgroundFeature": {
-			"$ref": "foundry-backgrounds.json#/properties/backgroundFeature"
-		},
 		"backgroundFluff": {
 			"$ref": "fluff-backgrounds.json#/properties/backgroundFluff"
+		},
+		"foundryBackgroundFeature": {
+			"$ref": "foundry-backgrounds.json#/properties/backgroundFeature"
 		},
 		"charoption": {
 			"$ref": "charcreationoptions.json#/properties/charoption"
@@ -630,13 +633,16 @@
 		"optionalfeatureFluff": {
 			"$ref": "fluff-optionalfeatures.json#/properties/optionalfeatureFluff"
 		},
+		"foundryOptionalfeature": {
+			"$ref": "foundry-optionalfeatures.json#/properties/optionalfeature"
+		},
 		"psionic": {
 			"$ref": "psionics.json#/properties/psionic"
 		},
-		"psionicDisciplineFocus": {
+		"foundryPsionicDisciplineFocus": {
 			"$ref": "foundry-psionics.json#/properties/psionicDisciplineFocus"
 		},
-		"psionicDisciplineActive": {
+		"foundryPsionicDisciplineActive": {
 			"$ref": "foundry-psionics.json#/properties/psionicDisciplineActive"
 		},
 		"race": {
@@ -695,6 +701,9 @@
 		},
 		"vehicleUpgrade": {
 			"$ref": "vehicles.json#/properties/vehicleUpgrade"
+		},
+		"foundryVehicleUpgrade": {
+			"$ref": "foundry-vehicles.json#/properties/vehicleUpgrade"
 		},
 		"vehicleFluff": {
 			"$ref": "fluff-vehicles.json#/properties/vehicleFluff"
