@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.10",
+	"version": "1.0.11",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -339,6 +339,10 @@
 				"name": {"type": "string"},
 				"img": {"type": "string"},
 				"description": {"type": "string"},
+				"descriptionEntries": {
+					"type": "array",
+					"items": {"$ref": "entry.json"}
+				},
 				"changes": {
 					"type": "array",
 					"items": {
@@ -426,6 +430,13 @@
 					"allOf": [
 						{"$ref": "#/$defs/_foundryEffectObject"},
 						{"type": "object", "required": ["description"]}
+					]
+				},
+				{
+					"description": "An effect with no functional changes, but descriptive text. Should only be used for effects which cannot be otherwise automated.",
+					"allOf": [
+						{"$ref": "#/$defs/_foundryEffectObject"},
+						{"type": "object", "required": ["descriptionEntries"]}
 					]
 				},
 				{
