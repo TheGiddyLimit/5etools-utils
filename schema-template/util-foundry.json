@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.11",
+	"version": "1.0.12",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -114,6 +114,30 @@
 			"type": "string"
 		},
 
+		"_foundrySkill": {
+			"type": "string",
+			"enum": [
+				"acr",
+				"ani",
+				"arc",
+				"ath",
+				"dec",
+				"his",
+				"ins",
+				"itm",
+				"inv",
+				"med",
+				"nat",
+				"prc",
+				"prf",
+				"per",
+				"rel",
+				"slt",
+				"ste",
+				"sur"
+			]
+		},
+
 		"_foundryIdRef": {
 			"type": "object",
 			"properties": {
@@ -138,6 +162,9 @@
 					"description": "Use only when required. For example, when linking a \"rider\".",
 					"$ref": "#/$defs/foundryIdShort"
 				},
+
+				"img": {"type": "string"},
+				"description": {"type": "object"},
 
 				"consumption": {
 					"type": "object",
@@ -223,6 +250,30 @@
 					"type": "object",
 					"properties": {
 						"type": {"const": "save"}
+					}
+				}
+			]
+		},
+
+		"_foundryActivityObject_check": {
+			"$$merge": [
+				{"$ref": "#/$defs/_foundryActivityObject_base"},
+				{
+					"type": "object",
+					"properties": {
+						"type": {"const": "check"},
+
+						"check": {
+							"type": "object",
+							"properties": {
+								"associated": {
+									"type": "array",
+									"items": {"$ref": "#/$defs/_foundrySkill"}
+								},
+
+								"ability": {"$ref": "util.json#/$defs/abilityScoreAbbreviation"}
+							}
+						}
 					}
 				}
 			]
@@ -321,6 +372,7 @@
 				{"$ref": "#/$defs/_foundryActivityObject_attack"},
 				{"$ref": "#/$defs/_foundryActivityObject_damage"},
 				{"$ref": "#/$defs/_foundryActivityObject_save"},
+				{"$ref": "#/$defs/_foundryActivityObject_check"},
 				{"$ref": "#/$defs/_foundryActivityObject_heal"},
 				{"$ref": "#/$defs/_foundryActivityObject_summon"},
 				{"$ref": "#/$defs/_foundryActivityObject_enchant"},
