@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.12",
+	"version": "1.0.13",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -291,6 +291,25 @@
 			]
 		},
 
+		"_foundryActivityObject_cast": {
+			"$$merge": [
+				{"$ref": "#/$defs/_foundryActivityObject_base"},
+				{
+					"type": "object",
+					"properties": {
+						"type": {"const": "cast"},
+
+						"spell": {
+							"type": "object",
+							"properties": {
+								"uuid": {"type": "string"}
+							}
+						}
+					}
+				}
+			]
+		},
+
 		"_foundryActivityObject_enchant": {
 			"$$merge": [
 				{"$ref": "#/$defs/_foundryActivityObject_base"},
@@ -374,6 +393,7 @@
 				{"$ref": "#/$defs/_foundryActivityObject_save"},
 				{"$ref": "#/$defs/_foundryActivityObject_check"},
 				{"$ref": "#/$defs/_foundryActivityObject_heal"},
+				{"$ref": "#/$defs/_foundryActivityObject_cast"},
 				{"$ref": "#/$defs/_foundryActivityObject_summon"},
 				{"$ref": "#/$defs/_foundryActivityObject_enchant"},
 				{"$ref": "#/$defs/_foundryActivityObject_utility"}
