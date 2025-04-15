@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.13",
+	"version": "1.0.14",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -138,6 +138,47 @@
 			]
 		},
 
+		"_foundryTool": {
+			"type": "string",
+			"enum": [
+				"alchemist",
+				"bagpipes",
+				"brewer",
+				"calligrapher",
+				"card",
+				"carpenter",
+				"cartographer",
+				"chess",
+				"cobbler",
+				"cook",
+				"dice",
+				"disg",
+				"drum",
+				"dulcimer",
+				"flute",
+				"forg",
+				"glassblower",
+				"herb",
+				"horn",
+				"jeweler",
+				"leatherworker",
+				"lute",
+				"lyre",
+				"mason",
+				"navg",
+				"painter",
+				"panflute",
+				"pois",
+				"potter",
+				"shawm",
+				"smith",
+				"thief",
+				"tinker",
+				"viol",
+				"weaver",
+				"woodcarver"
+			]		},
+
 		"_foundryIdRef": {
 			"type": "object",
 			"properties": {
@@ -268,7 +309,12 @@
 							"properties": {
 								"associated": {
 									"type": "array",
-									"items": {"$ref": "#/$defs/_foundrySkill"}
+									"items": {
+										"oneOf": [
+											{"$ref": "#/$defs/_foundrySkill"},
+											{"$ref": "#/$defs/_foundryTool"}
+										]
+									}
 								},
 
 								"ability": {"$ref": "util.json#/$defs/abilityScoreAbbreviation"}
@@ -463,7 +509,9 @@
 							"unconscious",
 
 							"dodging",
-							"hiding"
+							"hiding",
+							"coverHalf",
+							"coverThreeQuarters"
 						]
 					}
 				},
