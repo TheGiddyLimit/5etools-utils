@@ -4,7 +4,7 @@
 
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.7",
+	"version": "1.1.8",
 
 	"$defs" : {
 		"_itemModifySpeedEqual": {
@@ -447,6 +447,65 @@
 			},
 			"minItems": 1,
 			"uniqueItems": true
+		},
+
+		"_itemAttachedSpells_arrayOfSpell": {
+			"type": "array",
+			"items": {"type": "string"},
+			"uniqueItems": true,
+			"minItems": 1
+		},
+
+		"_itemAttachedSpells_frequency": {
+			"type": "object",
+			"patternProperties": {
+				"^\\d+e$": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"},
+				"^\\d+$": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"}
+			},
+			"additionalProperties": false,
+			"minProperties": 1
+		},
+
+		"_itemAttachedSpells_charges": {
+			"type": "object",
+			"patternProperties": {
+				"^\\d+$": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"}
+			},
+			"additionalProperties": false,
+			"minProperties": 1
+		},
+
+		"itemAttachedSpells": {
+			"oneOf": [
+				{
+					"description": "A generic array of attached spells, implicitly \"other\" usage type (see below).",
+
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				},
+				{
+					"description": "Attached spells broken down by usage type.",
+
+					"type": "object",
+					"properties": {
+						"rest": {"$ref": "#/$defs/_itemAttachedSpells_frequency"},
+						"daily": {"$ref": "#/$defs/_itemAttachedSpells_frequency"},
+						"limited": {"$ref": "#/$defs/_itemAttachedSpells_frequency"},
+
+						"charges": {"$ref": "#/$defs/_itemAttachedSpells_charges"},
+
+						"will": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"},
+						"ritual": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"},
+						"other": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"}
+					},
+					"additionalProperties": false,
+					"minProperties": 1
+				}
+			]
 		},
 
 		"$$if": {

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.10",
+	"version": "1.9.11",
 	"type": "object",
 
 	"$defs" : {
@@ -205,12 +205,7 @@
 						"rechargeAmount": {
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
-						"attachedSpells": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						},
+						"attachedSpells": {"$ref": "items-shared.json#/$defs/itemAttachedSpells"},
 						"ability": {"$ref": "items-shared.json#/$defs/itemAbility"},
 						"lootTables": {
 							"type": "array",
@@ -386,12 +381,7 @@
 				"charges": {
 					"type": ["string", "integer"]
 				},
-				"attachedSpells": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
-				},
+				"attachedSpells": {"$ref": "items-shared.json#/$defs/itemAttachedSpells"},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
 					"type": "boolean"
