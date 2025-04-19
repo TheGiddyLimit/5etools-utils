@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.14",
+	"version": "1.0.15",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -402,7 +402,42 @@
 				{
 					"type": "object",
 					"properties": {
-						"type": {"const": "summon"}
+						"type": {"const": "summon"},
+						"profiles": {
+							"type": "array",
+							"items": {
+								"oneOf": [
+									{
+										"type": "object",
+										"properties": {
+											"cr": {"type": "string"},
+											"types": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												},
+												"minItems": 1,
+												"uniqueItems": true
+											}
+										},
+										"additionalProperties": false,
+										"minProperties": 1
+									},
+									{
+										"type": "object",
+										"properties": {
+											"name": {"type": "string"},
+											"uuid": {
+												"type": "string",
+												"pattern": "^@creature\\[.*\\]$"
+											}
+										},
+										"additionalProperties": false,
+										"required": ["uuid"]
+									}
+								]
+							}
+						}
 					}
 				}
 			]
