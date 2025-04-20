@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.19",
+	"version": "1.14.20",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -249,12 +249,7 @@
 					}
 				},
 				"attachedSpells": {
-					"type": "array",
-					"minItems": 1,
-					"uniqueItems": true,
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 				},
 				"ability": {
 					"$ref": "items-shared.json#/$defs/itemAbility"
@@ -769,12 +764,7 @@
 					}
 				},
 				"attachedSpells": {
-					"type": "array",
-					"minItems": 1,
-					"uniqueItems": true,
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 				},
 				"ability": {
 					"$ref": "items-shared.json#/$defs/itemAbility"
@@ -1291,12 +1281,7 @@
 							}
 						},
 						"attachedSpells": {
-							"type": "array",
-							"minItems": 1,
-							"uniqueItems": true,
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 						},
 						"ability": {
 							"$ref": "items-shared.json#/$defs/itemAbility"
@@ -1811,12 +1796,7 @@
 					}
 				},
 				"attachedSpells": {
-					"type": "array",
-					"minItems": 1,
-					"uniqueItems": true,
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 				},
 				"ability": {
 					"$ref": "items-shared.json#/$defs/itemAbility"
@@ -2338,12 +2318,7 @@
 							}
 						},
 						"attachedSpells": {
-							"type": "array",
-							"minItems": 1,
-							"uniqueItems": true,
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 						},
 						"ability": {
 							"$ref": "items-shared.json#/$defs/itemAbility"
@@ -2862,12 +2837,7 @@
 							}
 						},
 						"attachedSpells": {
-							"type": "array",
-							"minItems": 1,
-							"uniqueItems": true,
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 						},
 						"ability": {
 							"$ref": "items-shared.json#/$defs/itemAbility"

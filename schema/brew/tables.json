@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "tables.json",
-	"version": "1.1.7",
+	"version": "1.1.8",
 	"type": "object",
 	"$defs": {
 		"tableData": {
@@ -170,6 +170,22 @@
 							"type": "integer"
 						}
 					}
+				},
+				"parentEntity": {
+					"type": "object",
+					"properties": {
+						"prop": {
+							"type": "string"
+						},
+						"uid": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"prop",
+						"uid"
+					]
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"

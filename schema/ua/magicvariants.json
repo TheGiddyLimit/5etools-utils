@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.10",
+	"version": "1.9.11",
 	"type": "object",
 	"$defs": {
 		"_magicvariantDataBase": {
@@ -314,10 +314,7 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"attachedSpells": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 						},
 						"ability": {
 							"$ref": "items-shared.json#/$defs/itemAbility"
@@ -561,10 +558,7 @@
 					]
 				},
 				"attachedSpells": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
@@ -904,10 +898,7 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"attachedSpells": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 						},
 						"ability": {
 							"$ref": "items-shared.json#/$defs/itemAbility"
@@ -1151,10 +1142,7 @@
 					]
 				},
 				"attachedSpells": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
@@ -1494,10 +1482,7 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"attachedSpells": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 						},
 						"ability": {
 							"$ref": "items-shared.json#/$defs/itemAbility"
@@ -1745,10 +1730,7 @@
 					]
 				},
 				"attachedSpells": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
@@ -2090,10 +2072,7 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"attachedSpells": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 						},
 						"ability": {
 							"$ref": "items-shared.json#/$defs/itemAbility"
@@ -2340,10 +2319,7 @@
 					]
 				},
 				"attachedSpells": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
@@ -2689,10 +2665,7 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"attachedSpells": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 						},
 						"ability": {
 							"$ref": "items-shared.json#/$defs/itemAbility"
@@ -2936,10 +2909,7 @@
 					]
 				},
 				"attachedSpells": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
@@ -3286,10 +3256,7 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"attachedSpells": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 						},
 						"ability": {
 							"$ref": "items-shared.json#/$defs/itemAbility"
@@ -3533,10 +3500,7 @@
 					]
 				},
 				"attachedSpells": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
