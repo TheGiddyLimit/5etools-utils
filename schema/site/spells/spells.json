@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.18",
+	"version": "1.9.19",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -319,12 +319,6 @@
 				"srd52": {
 					"$ref": "../util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "../util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "../util.json#/$defs/basicRules"
-				},
 				"legacy": {
 					"$ref": "../util.json#/$defs/legacy"
 				},
@@ -346,6 +340,12 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "../util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false
@@ -666,12 +666,6 @@
 						"srd52": {
 							"$ref": "../util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "../util.json#/$defs/legacy"
 						},
@@ -693,6 +687,12 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -1021,12 +1021,6 @@
 						"srd52": {
 							"$ref": "../util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "../util.json#/$defs/legacy"
 						},
@@ -1048,6 +1042,12 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"

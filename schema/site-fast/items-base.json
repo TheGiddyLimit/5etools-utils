@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.9",
+	"version": "1.6.10",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -22,17 +22,17 @@
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"name": {
 					"type": "string"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false
@@ -57,17 +57,17 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"template": {
 							"type": "string"
@@ -104,17 +104,17 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"template": {
 							"type": "string"
@@ -404,12 +404,6 @@
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
@@ -445,6 +439,12 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false
@@ -720,12 +720,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -761,6 +755,12 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -1040,12 +1040,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1081,6 +1075,12 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"_copy": {
 							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
@@ -1170,17 +1170,17 @@
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"name": {
 					"type": "string"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				},
 				"entries": {
 					"type": "array",
@@ -1209,17 +1209,17 @@
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"name": {
 					"type": "string"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				},
 				"entriesTemplate": {
 					"type": "array",
@@ -1257,17 +1257,17 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"entries": {
 							"type": "array",
@@ -1301,17 +1301,17 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"entries": {
 							"type": "array",
@@ -1346,17 +1346,17 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"entriesTemplate": {
 							"type": "array",
@@ -1390,17 +1390,17 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"name": {
 							"type": "string"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"entriesTemplate": {
 							"type": "array",
@@ -1515,12 +1515,6 @@
 					"srd52": {
 						"$ref": "util.json#/$defs/srd"
 					},
-					"basicRules": {
-						"$ref": "util.json#/$defs/basicRules"
-					},
-					"freeRules2024": {
-						"$ref": "util.json#/$defs/basicRules"
-					},
 					"prerequisite": {
 						"$ref": "util.json#/$defs/prerequisite"
 					},
@@ -1529,6 +1523,12 @@
 						"items": {
 							"$ref": "entry.json"
 						}
+					},
+					"basicRules": {
+						"$ref": "util.json#/$defs/basicRules"
+					},
+					"basicRules2024": {
+						"$ref": "util.json#/$defs/basicRules"
 					}
 				},
 				"required": [

@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.7",
+	"version": "1.9.8",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -128,8 +128,10 @@
 				"page": {"$ref": "util.json#/$defs/page"},
 				"srd": {"$ref": "util.json#/$defs/srd"},
 				"srd52": {"$ref": "util.json#/$defs/srd"},
-				"basicRules": {"$ref": "util.json#/$defs/basicRules"},
-				"freeRules2024": {"$ref": "util.json#/$defs/basicRules"},
+				"$$ifSite": {
+					"basicRules": {"$ref": "util.json#/$defs/basicRules"},
+					"basicRules2024": {"$ref": "util.json#/$defs/basicRules"}
+				},
 				"data": {"$ref": "#/$defs/_entryDataData"},
 				"id": {"type": "string"}
 			},

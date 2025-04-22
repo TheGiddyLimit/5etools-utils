@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.20",
+	"version": "1.14.21",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -335,12 +335,6 @@
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -809,12 +803,6 @@
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -1286,12 +1274,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1759,12 +1741,6 @@
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -2244,12 +2220,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -2721,12 +2691,6 @@
 						},
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
-						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"

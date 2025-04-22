@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "bastions.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "object",
 
 	"$defs": {
@@ -25,8 +25,10 @@
 				"page": {"$ref": "util.json#/$defs/page"},
 				"srd": {"$ref": "util.json#/$defs/srd"},
 				"srd52": {"$ref": "util.json#/$defs/srd"},
-				"basicRules": {"$ref": "util.json#/$defs/basicRules"},
-				"freeRules2024": {"$ref": "util.json#/$defs/basicRules"},
+				"$$ifSite": {
+					"basicRules": {"$ref": "util.json#/$defs/basicRules"},
+					"basicRules2024": {"$ref": "util.json#/$defs/basicRules"}
+				},
 				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
 
 				"facilityType": {

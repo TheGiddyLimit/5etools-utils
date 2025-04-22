@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.7",
+	"version": "2.12.8",
 	"$id": "class.json",
 
 	"type": "object",
@@ -175,8 +175,10 @@
 				"source": {"$ref": "../util.json#/$defs/source"},
 				"srd": {"$ref": "../util.json#/$defs/srd"},
 				"srd52": {"$ref": "../util.json#/$defs/srd"},
-				"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
-				"freeRules2024": {"$ref": "../util.json#/$defs/basicRules"},
+				"$$ifSite": {
+					"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
+					"basicRules2024": {"$ref": "../util.json#/$defs/basicRules"}
+				},
 				"className":  {"type": "string"},
 				"classSource": {"$ref": "../util.json#/$defs/source"},
 				"level":  {"type": "integer"},
@@ -260,8 +262,10 @@
 				"source": {"$ref": "../util.json#/$defs/source"},
 				"srd": {"$ref": "../util.json#/$defs/srd"},
 				"srd52": {"$ref": "../util.json#/$defs/srd"},
-				"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
-				"freeRules2024": {"$ref": "../util.json#/$defs/basicRules"},
+				"$$ifSite": {
+					"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
+					"basicRules2024": {"$ref": "../util.json#/$defs/basicRules"}
+				},
 				"className":  {"type": "string"},
 				"classSource": {"$ref": "../util.json#/$defs/source"},
 				"subclassShortName":  {"type": "string"},
@@ -508,11 +512,9 @@
 				"srd52": {
 					"$ref": "../util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "../util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "../util.json#/$defs/basicRules"
+				"$$ifSite": {
+					"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
+					"basicRules2024": {"$ref": "../util.json#/$defs/basicRules"}
 				},
 				"page": {"$ref": "../util.json#/$defs/page"},
 				"casterProgression": {"$ref": "#/$defs/casterProgression"},
@@ -761,11 +763,9 @@
 				"srd52": {
 					"$ref": "../util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "../util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "../util.json#/$defs/basicRules"
+				"$$ifSite": {
+					"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
+					"basicRules2024": {"$ref": "../util.json#/$defs/basicRules"}
 				},
 				"isReprinted": {
 					"type": "boolean"

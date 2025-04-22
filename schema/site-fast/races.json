@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.10",
+	"version": "1.12.11",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -127,12 +127,6 @@
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -261,6 +255,12 @@
 				},
 				"_versions": {
 					"$ref": "util-copy.json#/$defs/versionsArray"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false
@@ -389,12 +389,6 @@
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
@@ -522,6 +516,12 @@
 				},
 				"_versions": {
 					"$ref": "util-copy.json#/$defs/versionsArray"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				},
 				"raceName": {
 					"type": "string"
@@ -732,12 +732,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -865,6 +859,12 @@
 						},
 						"_versions": {
 							"$ref": "util-copy.json#/$defs/versionsArray"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -997,12 +997,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1130,6 +1124,12 @@
 						},
 						"_versions": {
 							"$ref": "util-copy.json#/$defs/versionsArray"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"_copy": {
 							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
@@ -1268,12 +1268,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1401,6 +1395,12 @@
 						},
 						"_versions": {
 							"$ref": "util-copy.json#/$defs/versionsArray"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"raceName": {
 							"type": "string"
@@ -1544,12 +1544,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1677,6 +1671,12 @@
 						},
 						"_versions": {
 							"$ref": "util-copy.json#/$defs/versionsArray"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"raceName": {
 							"type": "string"

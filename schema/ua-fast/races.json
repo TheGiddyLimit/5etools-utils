@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.10",
+	"version": "1.12.11",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -127,12 +127,6 @@
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -391,12 +385,6 @@
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -738,12 +726,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1005,12 +987,6 @@
 						},
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
-						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
@@ -1279,12 +1255,6 @@
 						},
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
-						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
@@ -1558,12 +1528,6 @@
 						},
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
-						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"

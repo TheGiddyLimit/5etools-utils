@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.7",
+	"version": "2.12.8",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -208,12 +208,6 @@
 				"srd52": {
 					"$ref": "../util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "../util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "../util.json#/$defs/basicRules"
-				},
 				"className": {
 					"type": "string"
 				},
@@ -250,6 +244,12 @@
 				},
 				"consumes": {
 					"$ref": "../util.json#/$defs/consumesObject"
+				},
+				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "../util.json#/$defs/basicRules"
 				}
 			},
 			"required": [
@@ -276,12 +276,6 @@
 				},
 				"srd52": {
 					"$ref": "../util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "../util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"className": {
 					"type": "string"
@@ -329,6 +323,12 @@
 				},
 				"consumes": {
 					"$ref": "../util.json#/$defs/consumesObject"
+				},
+				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "../util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false
@@ -349,12 +349,6 @@
 						},
 						"srd52": {
 							"$ref": "../util.json#/$defs/srd"
-						},
-						"basicRules": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"className": {
 							"type": "string"
@@ -402,6 +396,12 @@
 						},
 						"consumes": {
 							"$ref": "../util.json#/$defs/consumesObject"
+						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -431,12 +431,6 @@
 						"srd52": {
 							"$ref": "../util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
 						"className": {
 							"type": "string"
 						},
@@ -483,6 +477,12 @@
 						},
 						"consumes": {
 							"$ref": "../util.json#/$defs/consumesObject"
+						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
@@ -623,12 +623,6 @@
 						"srd52": {
 							"$ref": "../util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
 						"page": {
 							"$ref": "../util.json#/$defs/page"
 						},
@@ -746,6 +740,12 @@
 									"minProperties": 1
 								}
 							]
+						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -796,12 +796,6 @@
 						"srd52": {
 							"$ref": "../util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
 						"page": {
 							"$ref": "../util.json#/$defs/page"
 						},
@@ -920,6 +914,12 @@
 								}
 							]
 						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
 						}
@@ -968,12 +968,6 @@
 				},
 				"srd52": {
 					"$ref": "../util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "../util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"page": {
 					"$ref": "../util.json#/$defs/page"
@@ -1092,6 +1086,12 @@
 							"minProperties": 1
 						}
 					]
+				},
+				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "../util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false
@@ -1207,12 +1207,6 @@
 						"srd52": {
 							"$ref": "../util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
 						"isReprinted": {
 							"type": "boolean"
 						},
@@ -1453,6 +1447,12 @@
 						},
 						"hasFluffImages": {
 							"const": true
+						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -1487,12 +1487,6 @@
 						"srd52": {
 							"$ref": "../util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "../util.json#/$defs/basicRules"
-						},
 						"isReprinted": {
 							"type": "boolean"
 						},
@@ -1733,6 +1727,12 @@
 						},
 						"hasFluffImages": {
 							"const": true
+						},
+						"basicRules": {
+							"$ref": "../util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "../util.json#/$defs/basicRules"
 						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
@@ -1769,12 +1769,6 @@
 				},
 				"srd52": {
 					"$ref": "../util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "../util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "../util.json#/$defs/basicRules"
 				},
 				"isReprinted": {
 					"type": "boolean"
@@ -2016,6 +2010,12 @@
 				},
 				"hasFluffImages": {
 					"const": true
+				},
+				"basicRules": {
+					"$ref": "../util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "../util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false

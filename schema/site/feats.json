@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.8",
+	"version": "1.7.9",
 	"type": "object",
 	"$defs": {
 		"featData": {
@@ -39,12 +39,6 @@
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
@@ -137,6 +131,12 @@
 				},
 				"_versions": {
 					"$ref": "util-copy.json#/$defs/versionsArray"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false
@@ -178,12 +178,6 @@
 						},
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
-						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
@@ -276,6 +270,12 @@
 						},
 						"_versions": {
 							"$ref": "util-copy.json#/$defs/versionsArray"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -321,12 +321,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
 						},
@@ -418,6 +412,12 @@
 						},
 						"_versions": {
 							"$ref": "util-copy.json#/$defs/versionsArray"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"_copy": {
 							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"

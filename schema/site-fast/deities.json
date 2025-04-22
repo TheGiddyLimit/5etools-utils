@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "deities.json",
-	"version": "1.2.11",
+	"version": "1.2.12",
 	"type": "object",
 	"$defs": {
 		"deityData": {
@@ -158,12 +158,6 @@
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
 				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"freeRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
@@ -173,6 +167,12 @@
 				},
 				"piety": {
 					"type": "boolean"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false
@@ -333,12 +333,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -348,6 +342,12 @@
 						},
 						"piety": {
 							"type": "boolean"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -511,12 +511,6 @@
 						"srd52": {
 							"$ref": "util.json#/$defs/srd"
 						},
-						"basicRules": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
-						"freeRules2024": {
-							"$ref": "util.json#/$defs/basicRules"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -526,6 +520,12 @@
 						},
 						"piety": {
 							"type": "boolean"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						},
 						"_copy": {
 							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
