@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.19",
+	"version": "1.9.20",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -313,12 +313,6 @@
 						"$ref": "../util.json#/$defs/creatureType"
 					}
 				},
-				"srd": {
-					"$ref": "../util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "../util.json#/$defs/srd"
-				},
 				"legacy": {
 					"$ref": "../util.json#/$defs/legacy"
 				},
@@ -340,6 +334,12 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"srd": {
+					"$ref": "../util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "../util.json#/$defs/srd"
 				},
 				"basicRules": {
 					"$ref": "../util.json#/$defs/basicRules"
@@ -660,12 +660,6 @@
 								"$ref": "../util.json#/$defs/creatureType"
 							}
 						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "../util.json#/$defs/legacy"
 						},
@@ -687,6 +681,12 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "../util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "../util.json#/$defs/basicRules"
@@ -1015,12 +1015,6 @@
 								"$ref": "../util.json#/$defs/creatureType"
 							}
 						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "../util.json#/$defs/legacy"
 						},
@@ -1042,6 +1036,12 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "../util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "../util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "../util.json#/$defs/basicRules"

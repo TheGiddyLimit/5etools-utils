@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "bastions.json",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"type": "object",
 	"$defs": {
 		"_space": {
@@ -29,12 +29,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
@@ -157,12 +151,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
@@ -289,12 +277,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"

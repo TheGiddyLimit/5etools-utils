@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.4.3",
+	"version": "1.4.4",
 	"type": "object",
 	"$defs": {
 		"_trapHazardTier": {
@@ -129,12 +129,6 @@
 						"hauntBonus": {
 							"type": "string"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -143,6 +137,18 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -236,12 +242,6 @@
 								"$ref": "entry.json"
 							}
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -250,6 +250,18 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
 						}
 					},
 					"additionalProperties": false,
@@ -302,12 +314,6 @@
 						"$ref": "entry.json"
 					}
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
@@ -319,6 +325,18 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
 			"additionalProperties": false,

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "charcreationoptions.json",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"title": "Character Creation Options",
 	"type": "object",
 	"$defs": {
@@ -44,12 +44,6 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"hasFluff": {
 					"type": "boolean"
 				},
@@ -58,6 +52,18 @@
 				},
 				"prerequisite": {
 					"$ref": "util.json#/$defs/prerequisite"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
 			"required": [

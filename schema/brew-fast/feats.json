@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.9",
+	"version": "1.7.10",
 	"type": "object",
 	"$defs": {
 		"featData": {
@@ -33,12 +33,6 @@
 				},
 				"ability": {
 					"$ref": "util.json#/$defs/abilityScores"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
@@ -182,12 +176,6 @@
 						},
 						"ability": {
 							"$ref": "util.json#/$defs/abilityScores"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
@@ -334,12 +322,6 @@
 						},
 						"ability": {
 							"$ref": "util.json#/$defs/abilityScores"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"

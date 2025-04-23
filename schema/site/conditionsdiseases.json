@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "conditionsdiseases.json",
-	"version": "1.2.6",
+	"version": "1.2.7",
 	"type": "object",
 	"$defs": {
 		"_conditionDiseaseBase": {
@@ -25,12 +25,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
@@ -42,6 +36,12 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
 				},
 				"basicRules": {
 					"$ref": "util.json#/$defs/basicRules"
@@ -85,12 +85,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
@@ -102,6 +96,12 @@
 				},
 				"hasFluffImages": {
 					"type": "boolean"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
 				},
 				"basicRules": {
 					"$ref": "util.json#/$defs/basicRules"

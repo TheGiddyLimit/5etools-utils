@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.21",
+	"version": "1.14.22",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -330,12 +330,6 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
@@ -457,6 +451,12 @@
 				"hasRefs": {
 					"type": "boolean",
 					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
 				},
 				"basicRules": {
 					"$ref": "util.json#/$defs/basicRules"
@@ -801,12 +801,6 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
@@ -928,6 +922,12 @@
 				"hasRefs": {
 					"type": "boolean",
 					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
 				},
 				"basicRules": {
 					"$ref": "util.json#/$defs/basicRules"
@@ -1274,12 +1274,6 @@
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1401,6 +1395,12 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
@@ -1745,12 +1745,6 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
@@ -1872,6 +1866,12 @@
 				"hasRefs": {
 					"type": "boolean",
 					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
 				},
 				"basicRules": {
 					"$ref": "util.json#/$defs/basicRules"
@@ -2226,12 +2226,6 @@
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -2353,6 +2347,12 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
@@ -2701,12 +2701,6 @@
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -2828,6 +2822,12 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"

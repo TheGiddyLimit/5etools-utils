@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.21",
+	"version": "1.14.22",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -329,12 +329,6 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -838,12 +832,6 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -1350,12 +1338,6 @@
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1858,12 +1840,6 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -2375,12 +2351,6 @@
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -2887,12 +2857,6 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"

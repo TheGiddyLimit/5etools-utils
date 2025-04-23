@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.8",
+	"version": "1.9.9",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -107,12 +107,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -198,12 +192,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -230,12 +218,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -278,12 +260,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -324,12 +300,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -395,12 +365,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -436,12 +400,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -476,12 +434,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -629,12 +581,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -764,12 +710,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -804,12 +744,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -848,12 +782,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -896,12 +824,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -975,12 +897,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1037,12 +953,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1075,12 +985,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1112,12 +1016,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -1176,12 +1074,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1226,12 +1118,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -1278,12 +1164,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1321,12 +1201,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -1461,12 +1335,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1506,12 +1374,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1549,12 +1411,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -1594,12 +1450,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1636,12 +1486,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1677,12 +1521,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -1722,12 +1560,6 @@
 						"page": {
 							"$ref": "util.json#/$defs/page"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"data": {
 							"$ref": "#/$defs/_entryDataData"
 						},
@@ -1765,12 +1597,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"data": {
 							"$ref": "#/$defs/_entryDataData"
@@ -1815,12 +1641,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1857,12 +1677,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -1895,12 +1709,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -2119,12 +1927,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -2159,12 +1961,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -2201,12 +1997,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -2259,12 +2049,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -2300,12 +2084,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -2339,12 +2117,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -3230,12 +3002,6 @@
 						"page": {
 							"$ref": "util.json#/$defs/page"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"data": {
 							"$ref": "#/$defs/_entryDataData"
 						},
@@ -3280,12 +3046,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"data": {
 							"$ref": "#/$defs/_entryDataData"
@@ -3335,12 +3095,6 @@
 						"page": {
 							"$ref": "util.json#/$defs/page"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"data": {
 							"$ref": "#/$defs/_entryDataData"
 						},
@@ -3388,12 +3142,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"data": {
 							"$ref": "#/$defs/_entryDataData"
@@ -3550,12 +3298,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
@@ -3830,12 +3572,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"
 				},
@@ -3945,12 +3681,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"data": {
 					"$ref": "#/$defs/_entryDataData"

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "languages.json",
-	"version": "1.1.14",
+	"version": "1.1.15",
 	"type": "object",
 	"$defs": {
 		"language": {
@@ -21,9 +21,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"type": "boolean"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"

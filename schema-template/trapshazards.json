@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.4.3",
+	"version": "1.4.4",
 	"type": "object",
 
 	"$defs": {
@@ -97,8 +97,12 @@
 						},
 						"rating": {"$ref": "#/$defs/_trapHazardRating"},
 						"hauntBonus": {"type": "string"},
-						"srd": {"$ref": "util.json#/$defs/srd"},
-						"srd52": {"$ref": "util.json#/$defs/srd"},
+						"$$ifSite": {
+							"srd": {"$ref": "util.json#/$defs/srd"},
+							"srd52": {"$ref": "util.json#/$defs/srd"},
+							"basicRules": {"$ref": "util.json#/$defs/basicRules"},
+							"basicRules2024": {"$ref": "util.json#/$defs/basicRules"}
+						},
 						"legacy": {"$ref": "util.json#/$defs/legacy"},
 						"hasFluff": {"type": "boolean"},
 						"hasFluffImages": {"type": "boolean"},
@@ -194,8 +198,12 @@
 								"$ref": "entry.json"
 							}
 						},
-						"srd": {"$ref": "util.json#/$defs/srd"},
-						"srd52": {"$ref": "util.json#/$defs/srd"},
+						"$$ifSite": {
+							"srd": {"$ref": "util.json#/$defs/srd"},
+							"srd52": {"$ref": "util.json#/$defs/srd"},
+							"basicRules": {"$ref": "util.json#/$defs/basicRules"},
+							"basicRules2024": {"$ref": "util.json#/$defs/basicRules"}
+						},
 						"legacy": {"$ref": "util.json#/$defs/legacy"},
 						"hasFluff": {"type": "boolean"},
 						"hasFluffImages": {"type": "boolean"},
@@ -256,8 +264,12 @@
 						"$ref": "entry.json"
 					}
 				},
-				"srd": {"$ref": "util.json#/$defs/srd"},
-				"srd52": {"$ref": "util.json#/$defs/srd"},
+				"$$ifSite": {
+					"srd": {"$ref": "util.json#/$defs/srd"},
+					"srd52": {"$ref": "util.json#/$defs/srd"},
+					"basicRules": {"$ref": "util.json#/$defs/basicRules"},
+					"basicRules2024": {"$ref": "util.json#/$defs/basicRules"}
+				},
 				"legacy": {"$ref": "util.json#/$defs/legacy"},
 				"rating": {"$ref": "#/$defs/_trapHazardRating"},
 				"hasFluff": {"type": "boolean"},

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "optionalfeatures.json",
-	"version": "1.12.6",
+	"version": "1.12.7",
 	"title": "Optional Features",
 	"type": "object",
 	"$defs": {
@@ -51,12 +51,6 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -172,12 +166,6 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
@@ -297,12 +285,6 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"

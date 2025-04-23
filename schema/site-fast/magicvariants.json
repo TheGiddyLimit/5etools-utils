@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.12",
+	"version": "1.9.13",
 	"type": "object",
 	"$defs": {
 		"_magicvariantDataBase": {
@@ -331,12 +331,6 @@
 								]
 							}
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -393,6 +387,12 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
@@ -896,12 +896,6 @@
 								]
 							}
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -958,6 +952,12 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
@@ -1461,12 +1461,6 @@
 								]
 							}
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1523,6 +1517,12 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
@@ -2032,12 +2032,6 @@
 								]
 							}
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -2094,6 +2088,12 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
@@ -2606,12 +2606,6 @@
 								]
 							}
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -2668,6 +2662,12 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"
@@ -3178,12 +3178,6 @@
 								]
 							}
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -3240,6 +3234,12 @@
 						"hasRefs": {
 							"type": "boolean",
 							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
 						},
 						"basicRules": {
 							"$ref": "util.json#/$defs/basicRules"

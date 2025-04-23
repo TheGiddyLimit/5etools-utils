@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.49",
+	"version": "1.21.50",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1293,12 +1293,6 @@
 					"items": {
 						"$ref": "../entry.json"
 					}
-				},
-				"srd": {
-					"$ref": "../util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "../util.json#/$defs/srd"
 				},
 				"legacy": {
 					"$ref": "../util.json#/$defs/legacy"
@@ -2614,12 +2608,6 @@
 							"items": {
 								"$ref": "../entry.json"
 							}
-						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "../util.json#/$defs/legacy"
@@ -3941,12 +3929,6 @@
 								"$ref": "../entry.json"
 							}
 						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "../util.json#/$defs/legacy"
 						},
@@ -4174,12 +4156,6 @@
 						"page": {
 							"$ref": "../util.json#/$defs/page"
 						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
-						},
 						"data": {
 							"$ref": "../entry.json#/$defs/_entryDataData"
 						},
@@ -4273,12 +4249,6 @@
 						},
 						"page": {
 							"$ref": "../util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
 						},
 						"data": {
 							"$ref": "../entry.json#/$defs/_entryDataData"

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.10",
+	"version": "1.6.11",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -15,12 +15,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
@@ -44,12 +38,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
@@ -84,12 +72,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
@@ -377,12 +359,6 @@
 				},
 				"quantity": {
 					"type": "integer"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -727,12 +703,6 @@
 						},
 						"quantity": {
 							"type": "integer"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
@@ -1082,12 +1052,6 @@
 						"quantity": {
 							"type": "integer"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1246,12 +1210,6 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
 				},
@@ -1278,12 +1236,6 @@
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
@@ -1320,12 +1272,6 @@
 						"page": {
 							"$ref": "util.json#/$defs/page"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
@@ -1356,12 +1302,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
@@ -1396,12 +1336,6 @@
 						"page": {
 							"$ref": "util.json#/$defs/page"
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
@@ -1432,12 +1366,6 @@
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
@@ -1551,12 +1479,6 @@
 					},
 					"page": {
 						"$ref": "util.json#/$defs/page"
-					},
-					"srd": {
-						"$ref": "util.json#/$defs/srd"
-					},
-					"srd52": {
-						"$ref": "util.json#/$defs/srd"
 					},
 					"prerequisite": {
 						"$ref": "util.json#/$defs/prerequisite"

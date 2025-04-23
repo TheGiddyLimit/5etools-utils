@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.49",
+	"version": "1.21.50",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1296,13 +1296,9 @@
 						"$ref": "../entry.json"
 					}
 				},
-				"srd": {
-					"$ref": "../util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "../util.json#/$defs/srd"
-				},
 				"$$ifSite": {
+					"srd": {"$ref": "../util.json#/$defs/srd"},
+					"srd52": {"$ref": "../util.json#/$defs/srd"},
 					"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
 					"basicRules2024": {"$ref": "../util.json#/$defs/basicRules"}
 				},

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.8",
+	"version": "2.12.9",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -202,12 +202,6 @@
 				"source": {
 					"$ref": "../util.json#/$defs/source"
 				},
-				"srd": {
-					"$ref": "../util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "../util.json#/$defs/srd"
-				},
 				"className": {
 					"type": "string"
 				},
@@ -309,12 +303,6 @@
 				},
 				"source": {
 					"$ref": "../util.json#/$defs/source"
-				},
-				"srd": {
-					"$ref": "../util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "../util.json#/$defs/srd"
 				},
 				"className": {
 					"type": "string"
@@ -421,12 +409,6 @@
 						},
 						"source": {
 							"$ref": "../util.json#/$defs/source"
-						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
 						},
 						"className": {
 							"type": "string"
@@ -541,12 +523,6 @@
 						},
 						"source": {
 							"$ref": "../util.json#/$defs/source"
-						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
 						},
 						"className": {
 							"type": "string"
@@ -773,12 +749,6 @@
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
 						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
-						},
 						"page": {
 							"$ref": "../util.json#/$defs/page"
 						},
@@ -979,12 +949,6 @@
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
 						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
-						},
 						"page": {
 							"$ref": "../util.json#/$defs/page"
 						},
@@ -1184,12 +1148,6 @@
 				},
 				"reprintedAs": {
 					"$ref": "../util.json#/$defs/reprintedAs"
-				},
-				"srd": {
-					"$ref": "../util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "../util.json#/$defs/srd"
 				},
 				"page": {
 					"$ref": "../util.json#/$defs/page"
@@ -1455,12 +1413,6 @@
 						},
 						"edition": {
 							"$ref": "../util-edition.json#/$defs/edition"
-						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
 						},
 						"isReprinted": {
 							"type": "boolean"
@@ -1758,12 +1710,6 @@
 						},
 						"edition": {
 							"$ref": "../util-edition.json#/$defs/edition"
-						},
-						"srd": {
-							"$ref": "../util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "../util.json#/$defs/srd"
 						},
 						"isReprinted": {
 							"type": "boolean"
@@ -2064,12 +2010,6 @@
 				},
 				"edition": {
 					"$ref": "../util-edition.json#/$defs/edition"
-				},
-				"srd": {
-					"$ref": "../util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "../util.json#/$defs/srd"
 				},
 				"isReprinted": {
 					"type": "boolean"

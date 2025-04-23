@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.12",
+	"version": "1.9.13",
 	"type": "object",
 	"$defs": {
 		"_magicvariantDataBase": {
@@ -339,12 +339,6 @@
 									}
 								]
 							}
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
@@ -943,12 +937,6 @@
 								]
 							}
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1545,12 +1533,6 @@
 									}
 								]
 							}
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
@@ -2154,12 +2136,6 @@
 									}
 								]
 							}
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
@@ -2767,12 +2743,6 @@
 								]
 							}
 						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
-						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -3376,12 +3346,6 @@
 									}
 								]
 							}
-						},
-						"srd": {
-							"$ref": "util.json#/$defs/srd"
-						},
-						"srd52": {
-							"$ref": "util.json#/$defs/srd"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"

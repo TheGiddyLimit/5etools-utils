@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "tables.json",
-	"version": "1.1.9",
+	"version": "1.1.10",
 	"type": "object",
 	"$defs": {
 		"tableData": {
@@ -22,15 +22,15 @@
 				"page": {
 					"$ref": "util.json#/$defs/page"
 				},
+				"data": {
+					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
+					"type": "object"
+				},
 				"srd": {
 					"$ref": "util.json#/$defs/srd"
 				},
 				"srd52": {
 					"$ref": "util.json#/$defs/srd"
-				},
-				"data": {
-					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
 				},
 				"basicRules": {
 					"$ref": "util.json#/$defs/basicRules"
