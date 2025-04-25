@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "actions.json",
-	"version": "1.2.4",
+	"version": "1.2.5",
 	"type": "object",
 	"$defs": {
 		"action": {
@@ -69,6 +69,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"

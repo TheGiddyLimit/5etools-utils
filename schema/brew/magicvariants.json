@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.13",
+	"version": "1.9.14",
 	"type": "object",
 	"$defs": {
 		"_magicvariantDataBase": {
@@ -585,6 +585,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -1182,6 +1185,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -1784,6 +1790,9 @@
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
+				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				},
@@ -2385,6 +2394,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -2989,6 +3001,9 @@
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
+				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				},
@@ -3592,6 +3607,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"

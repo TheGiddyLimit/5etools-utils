@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.12",
+	"version": "1.12.13",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -255,6 +255,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -519,6 +522,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -866,6 +872,9 @@
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 						},
+						"foundryActivities": {
+							"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
+						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 						},
@@ -1133,6 +1142,9 @@
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+						},
+						"foundryActivities": {
+							"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -1407,6 +1419,9 @@
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+						},
+						"foundryActivities": {
+							"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -1687,6 +1702,9 @@
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+						},
+						"foundryActivities": {
+							"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"

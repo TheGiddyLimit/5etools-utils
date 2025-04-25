@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.10",
+	"version": "1.7.11",
 	"type": "object",
 
 	"$defs": {
@@ -98,6 +98,7 @@
 						"$ref": "util.json#/$defs/fluffObject"
 					},
 					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryActivities": {"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"},
 					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
 					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
 					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}

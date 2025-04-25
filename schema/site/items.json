@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.22",
+	"version": "1.14.23",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -1881,6 +1881,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				}
 			},
 			"additionalProperties": false,

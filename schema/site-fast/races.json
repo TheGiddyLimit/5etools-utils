@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.12",
+	"version": "1.12.13",
 	"type": "object",
 	"$defs": {
 		"sharedData": {

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "optionalfeatures.json",
-	"version": "1.12.7",
+	"version": "1.12.8",
 	"title": "Optional Features",
 	"type": "object",
 	"$defs": {
@@ -120,6 +120,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -250,6 +253,9 @@
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+						},
+						"foundryActivities": {
+							"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -384,6 +390,9 @@
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+						},
+						"foundryActivities": {
+							"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 						},
 						"foundryFlags": {
 							"$ref": "util-foundry.json#/$defs/foundryFlagsObject"

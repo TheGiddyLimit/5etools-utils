@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.13",
+	"version": "1.7.14",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -469,6 +469,9 @@
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
+				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
 				},
@@ -665,6 +668,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"
@@ -864,6 +870,9 @@
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
+				},
+				"foundryActivities": {
+					"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"
 				},
 				"foundryFlags": {
 					"$ref": "util-foundry.json#/$defs/foundryFlagsObject"

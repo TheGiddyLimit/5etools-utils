@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "rewards.json",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"type": "object",
 
 	"$defs": {
@@ -53,6 +53,7 @@
 				"hasFluffImages": {"type": "boolean"},
 				"$$ifBrew": {
 					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryActivities": {"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"},
 					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
 					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
 					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}

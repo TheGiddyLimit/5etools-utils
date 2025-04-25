@@ -1349,6 +1349,13 @@
 				}
 			]
 		},
+		"foundryActivitiesArray": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/foundryActivityObject"
+			},
+			"uniqueItems": true
+		},
 		"foundryEffectsArray": {
 			"type": "array",
 			"items": {
