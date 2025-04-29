@@ -4,7 +4,7 @@
 
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.8",
+	"version": "1.1.9",
 
 	"$defs" : {
 		"_itemModifySpeedEqual": {
@@ -497,10 +497,17 @@
 						"limited": {"$ref": "#/$defs/_itemAttachedSpells_frequency"},
 
 						"charges": {"$ref": "#/$defs/_itemAttachedSpells_charges"},
+						"resource": {"$ref": "#/$defs/_itemAttachedSpells_charges"},
 
 						"will": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"},
 						"ritual": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"},
-						"other": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"}
+						"other": {"$ref": "#/$defs/_itemAttachedSpells_arrayOfSpell"},
+
+						"ability": {"$ref": "util-additionalspells.json#/$defs/additionalSpellsAbility"},
+						"resourceName": {
+							"description": "Optional resource name for resource-cast spells in this group",
+							"type": "string"
+						}
 					},
 					"additionalProperties": false,
 					"minProperties": 1

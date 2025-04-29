@@ -178,6 +178,29 @@
 			}
 		},
 
+		"additionalSpellsAbility": {
+			"description": "Optionally specify the ability score used for e.g. racial spellcasting",
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"choose": {
+							"type": "array",
+							"items": {"$ref": "util.json#/$defs/abilityScoreAbbreviation"},
+							"uniqueItems": true
+						}
+					},
+					"required": ["choose"],
+					"additionalProperties": false
+				},
+				{
+					"description": "\"inherit\" is used for special cases, where the ability score matches a choice the player made when taking the feature",
+					"type": "string",
+					"enum": ["str", "dex", "con", "int", "wis", "cha", "inherit"]
+				}
+			]
+		},
+
 		"additionalSpellsArray": {
 			"description": "A collection of additional spells which a feature grants.\nThis array enables import functionality for VTTs, and should be used in addition to \"classSpells\"/\"subclassSpells\"/\"subSubclassSpells\" blocks which enable references on the site.",
 			"type": "array",
@@ -189,28 +212,7 @@
 						"description": "Optional display name for the group",
 						"type": "string"
 					},
-					"ability": {
-						"description": "Optionally specify the ability score used for e.g. racial spellcasting",
-						"oneOf": [
-							{
-								"type": "object",
-								"properties": {
-									"choose": {
-										"type": "array",
-										"items": {"$ref": "util.json#/$defs/abilityScoreAbbreviation"},
-										"uniqueItems": true
-									}
-								},
-								"required": ["choose"],
-								"additionalProperties": false
-							},
-							{
-								"description": "\"inherit\" is used for special cases, where the ability score matches a choice the player made when taking the feature",
-								"type": "string",
-								"enum": ["str", "dex", "con", "int", "wis", "cha", "inherit"]
-							}
-						]
-					},
+					"ability": {"$ref": "#/$defs/additionalSpellsAbility"},
 					"resourceName": {
 						"description": "Optional resource name for resource-cast spells in this group",
 						"type": "string"
