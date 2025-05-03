@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.25",
+	"version": "1.10.26",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -103,7 +103,7 @@
 									"properties": {
 										"type": {
 											"type": "string",
-											"enum": ["chapter", "appendix", "part", "episode", "level"]
+											"enum": ["chapter", "appendix", "part", "episode", "level", "section"]
 										},
 										"identifier": {
 											"type": ["integer", "string"]
