@@ -100,7 +100,10 @@ class SchemaPreprocessor {
 						if (typeof v !== "string") return obj[k] = this._recurse({root, obj: v, compileMode, isFast, dirSource});
 
 						obj[k] = v;
-						obj["markdownDescription"] = escapeQuotes(v);
+						obj["markdownDescription"] = escapeQuotes(
+							// Strip code blocks, to avoid escaped HTML failing to render
+							v.replace(/`/g, ""),
+						);
 						return;
 					}
 
