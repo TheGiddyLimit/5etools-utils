@@ -36,7 +36,8 @@
 						"GEN",
 						"SW",
 						"U"
-					]
+					],
+					"markdownDescription": "G: Generic\n SW: Siege Weapon\n U: Unknown"
 				},
 				"str": {
 					"type": "integer"
@@ -126,7 +127,8 @@
 					"description": "Actions available with the object, like firing a siege weapon. Uses the normal entries data.",
 					"items": {
 						"$ref": "entry.json"
-					}
+					},
+					"markdownDescription": "Actions available with the object, like firing a siege weapon. Uses the normal entries data."
 				},
 				"token": {
 					"$ref": "util-token.json#/$defs/token"
@@ -154,7 +156,8 @@
 				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-					"$ref": "util.json#/$defs/fluffObject"
+					"$ref": "util.json#/$defs/fluffObject",
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"

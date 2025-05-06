@@ -257,110 +257,136 @@
 				},
 				"armor": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"axe": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"sword": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"mace": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"spear": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"hammer": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"bow": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"crossbow": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"club": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"dagger": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"net": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"polearm": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"lance": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"rapier": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"whip": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"halberd": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"glaive": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"arrow": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"bolt": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"bulletFirearm": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"bulletSling": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"cellEnergy": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"needleBlowgun": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"weapon": {
 					"description": "Flag used when merging generic variants",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Flag used when merging generic variants"
 				},
 				"firearm": {
 					"type": "boolean"
 				},
 				"staff": {
 					"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds the italicized &quot;Staff&quot; text to the item info line (below the name)."
 				},
 				"value": {
 					"description": "In copper pieces.",
-					"type": "number"
+					"type": "number",
+					"markdownDescription": "In copper pieces."
 				},
 				"carryingCapacity": {
 					"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
@@ -573,110 +599,136 @@
 						},
 						"armor": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"axe": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"sword": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"mace": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"spear": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"hammer": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"bow": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"crossbow": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"club": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"dagger": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"net": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"polearm": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"lance": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"rapier": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"whip": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"halberd": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"glaive": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"arrow": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"bolt": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"bulletFirearm": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"bulletSling": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"cellEnergy": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"needleBlowgun": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"weapon": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"firearm": {
 							"type": "boolean"
 						},
 						"staff": {
 							"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Adds the italicized &quot;Staff&quot; text to the item info line (below the name)."
 						},
 						"value": {
 							"description": "In copper pieces.",
-							"type": "number"
+							"type": "number",
+							"markdownDescription": "In copper pieces."
 						},
 						"carryingCapacity": {
 							"$ref": "items-shared.json#/$defs/itemCarryingCapacity"
@@ -893,110 +945,136 @@
 						},
 						"armor": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"axe": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"sword": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"mace": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"spear": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"hammer": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"bow": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"crossbow": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"club": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"dagger": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"net": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"polearm": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"lance": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"rapier": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"whip": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"halberd": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"glaive": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"arrow": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"bolt": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"bulletFirearm": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"bulletSling": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"cellEnergy": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"needleBlowgun": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"weapon": {
 							"description": "Flag used when merging generic variants",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Flag used when merging generic variants"
 						},
 						"firearm": {
 							"type": "boolean"
 						},
 						"staff": {
 							"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Adds the italicized &quot;Staff&quot; text to the item info line (below the name)."
 						},
 						"value": {
 							"description": "In copper pieces.",
-							"type": "number"
+							"type": "number",
+							"markdownDescription": "In copper pieces."
 						},
 						"carryingCapacity": {
 							"$ref": "items-shared.json#/$defs/itemCarryingCapacity"

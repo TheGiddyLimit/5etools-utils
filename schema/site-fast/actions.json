@@ -27,7 +27,8 @@
 				},
 				"fromVariant": {
 					"type": "string",
-					"description": "UID of a \"variantrule\" to be linked as a footnote in the action."
+					"description": "UID of a \"variantrule\" to be linked as a footnote in the action.",
+					"markdownDescription": "UID of a &quot;variantrule&quot; to be linked as a footnote in the action."
 				},
 				"time": {
 					"type": "array",
@@ -64,7 +65,8 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"action\"s to be linked in a \"See Also\" footnote.\nEx.: \"disarm|dmg\"."
+						"description": "UIDs of \"action\"s to be linked in a \"See Also\" footnote.\nEx.: \"disarm|dmg\".",
+						"markdownDescription": "UIDs of &quot;action&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;disarm|dmg&quot;."
 					}
 				},
 				"srd": {

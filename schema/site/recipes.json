@@ -137,7 +137,8 @@
 						"C",
 						"V",
 						"X"
-					]
+					],
+					"markdownDescription": "C: Vegetarian [aka &quot;cheese&quot;]\n V: Vegan\n X: Omnivorous"
 				},
 				"miscTags": {
 					"type": "array",
@@ -170,7 +171,8 @@
 							"soya",
 							"sulphites"
 						]
-					}
+					},
+					"markdownDescription": "One of the 14 major food allergens; see https://erudus.com/food-allergens for more information."
 				},
 				"dishTypes": {
 					"type": "array",
@@ -337,7 +339,8 @@
 								"C",
 								"V",
 								"X"
-							]
+							],
+							"markdownDescription": "C: Vegetarian [aka &quot;cheese&quot;]\n V: Vegan\n X: Omnivorous"
 						},
 						"miscTags": {
 							"type": "array",
@@ -370,7 +373,8 @@
 									"soya",
 									"sulphites"
 								]
-							}
+							},
+							"markdownDescription": "One of the 14 major food allergens; see https://erudus.com/food-allergens for more information."
 						},
 						"dishTypes": {
 							"type": "array",
@@ -541,7 +545,8 @@
 								"C",
 								"V",
 								"X"
-							]
+							],
+							"markdownDescription": "C: Vegetarian [aka &quot;cheese&quot;]\n V: Vegan\n X: Omnivorous"
 						},
 						"miscTags": {
 							"type": "array",
@@ -574,7 +579,8 @@
 									"soya",
 									"sulphites"
 								]
-							}
+							},
+							"markdownDescription": "One of the 14 major food allergens; see https://erudus.com/food-allergens for more information."
 						},
 						"dishTypes": {
 							"type": "array",

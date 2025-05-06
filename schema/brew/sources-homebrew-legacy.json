@@ -406,7 +406,8 @@
 				"DDHQP",
 				"r20rt",
 				"LoRME"
-			]
+			],
+			"markdownDescription": "A dump of homebrew &quot;legacy&quot; sources, which are below the required character count."
 		},
 		"sourcesColon": {
 			"description": "A dump of homebrew \"legacy\" sources, which contain colons.",
@@ -522,7 +523,8 @@
 				"TEB:SV",
 				"TWS:SC",
 				"u21gs:e"
-			]
+			],
+			"markdownDescription": "A dump of homebrew &quot;legacy&quot; sources, which contain colons."
 		}
 	}
 }

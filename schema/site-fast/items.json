@@ -51,7 +51,8 @@
 				},
 				"dmg2": {
 					"type": "string",
-					"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+					"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+					"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 				},
 				"dmgType": {
 					"$ref": "util.json#/$defs/dataDamageTags"
@@ -91,7 +92,8 @@
 					"type": [
 						"string",
 						"boolean"
-					]
+					],
+					"markdownDescription": "Used for filtering."
 				},
 				"curse": {
 					"type": "boolean"
@@ -110,11 +112,13 @@
 				},
 				"detail1": {
 					"description": "A descriptive field that can be used to complete entries in variants.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 				},
 				"detail2": {
 					"description": "A descriptive field that can be used to complete entries in variants.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 				},
 				"scfType": {
 					"$ref": "items-shared.json#/$defs/itemScfType"
@@ -139,7 +143,8 @@
 				},
 				"staff": {
 					"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds the italicized &quot;Staff&quot; text to the item info line (below the name)."
 				},
 				"tier": {
 					"$ref": "items-shared.json#/$defs/itemTier"
@@ -149,7 +154,8 @@
 					"type": [
 						"number",
 						"null"
-					]
+					],
+					"markdownDescription": "In copper pieces."
 				},
 				"valueMult": {
 					"type": "number"
@@ -198,11 +204,13 @@
 				},
 				"crewMin": {
 					"description": "For crews specified as an X-Y min-max.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "For crews specified as an X-Y min-max."
 				},
 				"crewMax": {
 					"description": "For crews specified as an X-Y min-max.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "For crews specified as an X-Y min-max."
 				},
 				"capPassenger": {
 					"type": "integer"
@@ -224,11 +232,13 @@
 				},
 				"travelCost": {
 					"description": "In copper pieces per mile per passenger.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "In copper pieces per mile per passenger."
 				},
 				"shippingCost": {
 					"description": "In copper pieces per 100 lbs per mile.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "In copper pieces per 100 lbs per mile."
 				},
 				"charges": {
 					"type": [
@@ -277,7 +287,8 @@
 								]
 							}
 						}
-					]
+					],
+					"markdownDescription": "Item can be used as a spellcasting focus"
 				},
 				"lootTables": {
 					"type": "array",
@@ -335,7 +346,8 @@
 				},
 				"atomicPackContents": {
 					"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "If the item&apos;s pack contents should be treated as one atomic unit, rather than handled as individual sub-items."
 				},
 				"containerCapacity": {
 					"type": "object",
@@ -345,14 +357,16 @@
 							"type": "array",
 							"items": {
 								"type": "number"
-							}
+							},
+							"markdownDescription": "Value in pounds."
 						},
 						"volume": {
 							"description": "Value in cubic feet.",
 							"type": "array",
 							"items": {
 								"type": "number"
-							}
+							},
+							"markdownDescription": "Value in cubic feet."
 						},
 						"item": {
 							"type": "array",
@@ -368,7 +382,8 @@
 						},
 						"weightless": {
 							"description": "If the container renders its contents weightless.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "If the container renders its contents weightless."
 						}
 					},
 					"additionalProperties": false
@@ -392,14 +407,16 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
+						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
+						"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
 					}
 				},
 				"seeAlsoVehicle": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\"."
+						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
+						"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
 					}
 				},
 				"reqAttuneTags": {
@@ -440,7 +457,8 @@
 						"w",
 						"h"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"markdownDescription": "Values given in inches."
 				},
 				"hasFluff": {
 					"type": "boolean"
@@ -450,7 +468,8 @@
 				},
 				"hasRefs": {
 					"type": "boolean",
-					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+					"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 				},
 				"srd": {
 					"$ref": "util.json#/$defs/srd"
@@ -522,7 +541,8 @@
 				},
 				"dmg2": {
 					"type": "string",
-					"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+					"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+					"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 				},
 				"dmgType": {
 					"$ref": "util.json#/$defs/dataDamageTags"
@@ -562,7 +582,8 @@
 					"type": [
 						"string",
 						"boolean"
-					]
+					],
+					"markdownDescription": "Used for filtering."
 				},
 				"curse": {
 					"type": "boolean"
@@ -581,11 +602,13 @@
 				},
 				"detail1": {
 					"description": "A descriptive field that can be used to complete entries in variants.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 				},
 				"detail2": {
 					"description": "A descriptive field that can be used to complete entries in variants.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 				},
 				"scfType": {
 					"$ref": "items-shared.json#/$defs/itemScfType"
@@ -610,7 +633,8 @@
 				},
 				"staff": {
 					"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds the italicized &quot;Staff&quot; text to the item info line (below the name)."
 				},
 				"tier": {
 					"$ref": "items-shared.json#/$defs/itemTier"
@@ -620,7 +644,8 @@
 					"type": [
 						"number",
 						"null"
-					]
+					],
+					"markdownDescription": "In copper pieces."
 				},
 				"valueMult": {
 					"type": "number"
@@ -669,11 +694,13 @@
 				},
 				"crewMin": {
 					"description": "For crews specified as an X-Y min-max.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "For crews specified as an X-Y min-max."
 				},
 				"crewMax": {
 					"description": "For crews specified as an X-Y min-max.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "For crews specified as an X-Y min-max."
 				},
 				"capPassenger": {
 					"type": "integer"
@@ -695,11 +722,13 @@
 				},
 				"travelCost": {
 					"description": "In copper pieces per mile per passenger.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "In copper pieces per mile per passenger."
 				},
 				"shippingCost": {
 					"description": "In copper pieces per 100 lbs per mile.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "In copper pieces per 100 lbs per mile."
 				},
 				"charges": {
 					"type": [
@@ -748,7 +777,8 @@
 								]
 							}
 						}
-					]
+					],
+					"markdownDescription": "Item can be used as a spellcasting focus"
 				},
 				"lootTables": {
 					"type": "array",
@@ -806,7 +836,8 @@
 				},
 				"atomicPackContents": {
 					"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "If the item&apos;s pack contents should be treated as one atomic unit, rather than handled as individual sub-items."
 				},
 				"containerCapacity": {
 					"type": "object",
@@ -816,14 +847,16 @@
 							"type": "array",
 							"items": {
 								"type": "number"
-							}
+							},
+							"markdownDescription": "Value in pounds."
 						},
 						"volume": {
 							"description": "Value in cubic feet.",
 							"type": "array",
 							"items": {
 								"type": "number"
-							}
+							},
+							"markdownDescription": "Value in cubic feet."
 						},
 						"item": {
 							"type": "array",
@@ -839,7 +872,8 @@
 						},
 						"weightless": {
 							"description": "If the container renders its contents weightless.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "If the container renders its contents weightless."
 						}
 					},
 					"additionalProperties": false
@@ -863,14 +897,16 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
+						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
+						"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
 					}
 				},
 				"seeAlsoVehicle": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\"."
+						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
+						"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
 					}
 				},
 				"reqAttuneTags": {
@@ -911,7 +947,8 @@
 						"w",
 						"h"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"markdownDescription": "Values given in inches."
 				},
 				"hasFluff": {
 					"type": "boolean"
@@ -921,7 +958,8 @@
 				},
 				"hasRefs": {
 					"type": "boolean",
-					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+					"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 				},
 				"srd": {
 					"$ref": "util.json#/$defs/srd"
@@ -995,7 +1033,8 @@
 						},
 						"dmg2": {
 							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+							"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 						},
 						"dmgType": {
 							"$ref": "util.json#/$defs/dataDamageTags"
@@ -1035,7 +1074,8 @@
 							"type": [
 								"string",
 								"boolean"
-							]
+							],
+							"markdownDescription": "Used for filtering."
 						},
 						"curse": {
 							"type": "boolean"
@@ -1054,11 +1094,13 @@
 						},
 						"detail1": {
 							"description": "A descriptive field that can be used to complete entries in variants.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 						},
 						"detail2": {
 							"description": "A descriptive field that can be used to complete entries in variants.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 						},
 						"scfType": {
 							"$ref": "items-shared.json#/$defs/itemScfType"
@@ -1083,7 +1125,8 @@
 						},
 						"staff": {
 							"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Adds the italicized &quot;Staff&quot; text to the item info line (below the name)."
 						},
 						"tier": {
 							"$ref": "items-shared.json#/$defs/itemTier"
@@ -1093,7 +1136,8 @@
 							"type": [
 								"number",
 								"null"
-							]
+							],
+							"markdownDescription": "In copper pieces."
 						},
 						"valueMult": {
 							"type": "number"
@@ -1142,11 +1186,13 @@
 						},
 						"crewMin": {
 							"description": "For crews specified as an X-Y min-max.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "For crews specified as an X-Y min-max."
 						},
 						"crewMax": {
 							"description": "For crews specified as an X-Y min-max.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "For crews specified as an X-Y min-max."
 						},
 						"capPassenger": {
 							"type": "integer"
@@ -1168,11 +1214,13 @@
 						},
 						"travelCost": {
 							"description": "In copper pieces per mile per passenger.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "In copper pieces per mile per passenger."
 						},
 						"shippingCost": {
 							"description": "In copper pieces per 100 lbs per mile.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "In copper pieces per 100 lbs per mile."
 						},
 						"charges": {
 							"type": [
@@ -1221,7 +1269,8 @@
 										]
 									}
 								}
-							]
+							],
+							"markdownDescription": "Item can be used as a spellcasting focus"
 						},
 						"lootTables": {
 							"type": "array",
@@ -1279,7 +1328,8 @@
 						},
 						"atomicPackContents": {
 							"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "If the item&apos;s pack contents should be treated as one atomic unit, rather than handled as individual sub-items."
 						},
 						"containerCapacity": {
 							"type": "object",
@@ -1289,14 +1339,16 @@
 									"type": "array",
 									"items": {
 										"type": "number"
-									}
+									},
+									"markdownDescription": "Value in pounds."
 								},
 								"volume": {
 									"description": "Value in cubic feet.",
 									"type": "array",
 									"items": {
 										"type": "number"
-									}
+									},
+									"markdownDescription": "Value in cubic feet."
 								},
 								"item": {
 									"type": "array",
@@ -1312,7 +1364,8 @@
 								},
 								"weightless": {
 									"description": "If the container renders its contents weightless.",
-									"type": "boolean"
+									"type": "boolean",
+									"markdownDescription": "If the container renders its contents weightless."
 								}
 							},
 							"additionalProperties": false
@@ -1336,14 +1389,16 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
+								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
+								"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
 							}
 						},
 						"seeAlsoVehicle": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\"."
+								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
+								"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
 							}
 						},
 						"reqAttuneTags": {
@@ -1384,7 +1439,8 @@
 								"w",
 								"h"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"markdownDescription": "Values given in inches."
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -1394,7 +1450,8 @@
 						},
 						"hasRefs": {
 							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+							"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 						},
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
@@ -1466,7 +1523,8 @@
 				},
 				"dmg2": {
 					"type": "string",
-					"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+					"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+					"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 				},
 				"dmgType": {
 					"$ref": "util.json#/$defs/dataDamageTags"
@@ -1506,7 +1564,8 @@
 					"type": [
 						"string",
 						"boolean"
-					]
+					],
+					"markdownDescription": "Used for filtering."
 				},
 				"curse": {
 					"type": "boolean"
@@ -1525,11 +1584,13 @@
 				},
 				"detail1": {
 					"description": "A descriptive field that can be used to complete entries in variants.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 				},
 				"detail2": {
 					"description": "A descriptive field that can be used to complete entries in variants.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 				},
 				"scfType": {
 					"$ref": "items-shared.json#/$defs/itemScfType"
@@ -1554,7 +1615,8 @@
 				},
 				"staff": {
 					"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds the italicized &quot;Staff&quot; text to the item info line (below the name)."
 				},
 				"tier": {
 					"$ref": "items-shared.json#/$defs/itemTier"
@@ -1564,7 +1626,8 @@
 					"type": [
 						"number",
 						"null"
-					]
+					],
+					"markdownDescription": "In copper pieces."
 				},
 				"valueMult": {
 					"type": "number"
@@ -1613,11 +1676,13 @@
 				},
 				"crewMin": {
 					"description": "For crews specified as an X-Y min-max.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "For crews specified as an X-Y min-max."
 				},
 				"crewMax": {
 					"description": "For crews specified as an X-Y min-max.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "For crews specified as an X-Y min-max."
 				},
 				"capPassenger": {
 					"type": "integer"
@@ -1639,11 +1704,13 @@
 				},
 				"travelCost": {
 					"description": "In copper pieces per mile per passenger.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "In copper pieces per mile per passenger."
 				},
 				"shippingCost": {
 					"description": "In copper pieces per 100 lbs per mile.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "In copper pieces per 100 lbs per mile."
 				},
 				"charges": {
 					"type": [
@@ -1692,7 +1759,8 @@
 								]
 							}
 						}
-					]
+					],
+					"markdownDescription": "Item can be used as a spellcasting focus"
 				},
 				"lootTables": {
 					"type": "array",
@@ -1750,7 +1818,8 @@
 				},
 				"atomicPackContents": {
 					"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "If the item&apos;s pack contents should be treated as one atomic unit, rather than handled as individual sub-items."
 				},
 				"containerCapacity": {
 					"type": "object",
@@ -1760,14 +1829,16 @@
 							"type": "array",
 							"items": {
 								"type": "number"
-							}
+							},
+							"markdownDescription": "Value in pounds."
 						},
 						"volume": {
 							"description": "Value in cubic feet.",
 							"type": "array",
 							"items": {
 								"type": "number"
-							}
+							},
+							"markdownDescription": "Value in cubic feet."
 						},
 						"item": {
 							"type": "array",
@@ -1783,7 +1854,8 @@
 						},
 						"weightless": {
 							"description": "If the container renders its contents weightless.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "If the container renders its contents weightless."
 						}
 					},
 					"additionalProperties": false
@@ -1807,14 +1879,16 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
+						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
+						"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
 					}
 				},
 				"seeAlsoVehicle": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\"."
+						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
+						"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
 					}
 				},
 				"reqAttuneTags": {
@@ -1855,7 +1929,8 @@
 						"w",
 						"h"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"markdownDescription": "Values given in inches."
 				},
 				"hasFluff": {
 					"type": "boolean"
@@ -1865,7 +1940,8 @@
 				},
 				"hasRefs": {
 					"type": "boolean",
-					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+					"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+					"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 				},
 				"srd": {
 					"$ref": "util.json#/$defs/srd"
@@ -1950,7 +2026,8 @@
 						},
 						"dmg2": {
 							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+							"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 						},
 						"dmgType": {
 							"$ref": "util.json#/$defs/dataDamageTags"
@@ -1990,7 +2067,8 @@
 							"type": [
 								"string",
 								"boolean"
-							]
+							],
+							"markdownDescription": "Used for filtering."
 						},
 						"curse": {
 							"type": "boolean"
@@ -2009,11 +2087,13 @@
 						},
 						"detail1": {
 							"description": "A descriptive field that can be used to complete entries in variants.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 						},
 						"detail2": {
 							"description": "A descriptive field that can be used to complete entries in variants.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 						},
 						"scfType": {
 							"$ref": "items-shared.json#/$defs/itemScfType"
@@ -2038,7 +2118,8 @@
 						},
 						"staff": {
 							"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Adds the italicized &quot;Staff&quot; text to the item info line (below the name)."
 						},
 						"tier": {
 							"$ref": "items-shared.json#/$defs/itemTier"
@@ -2048,7 +2129,8 @@
 							"type": [
 								"number",
 								"null"
-							]
+							],
+							"markdownDescription": "In copper pieces."
 						},
 						"valueMult": {
 							"type": "number"
@@ -2097,11 +2179,13 @@
 						},
 						"crewMin": {
 							"description": "For crews specified as an X-Y min-max.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "For crews specified as an X-Y min-max."
 						},
 						"crewMax": {
 							"description": "For crews specified as an X-Y min-max.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "For crews specified as an X-Y min-max."
 						},
 						"capPassenger": {
 							"type": "integer"
@@ -2123,11 +2207,13 @@
 						},
 						"travelCost": {
 							"description": "In copper pieces per mile per passenger.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "In copper pieces per mile per passenger."
 						},
 						"shippingCost": {
 							"description": "In copper pieces per 100 lbs per mile.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "In copper pieces per 100 lbs per mile."
 						},
 						"charges": {
 							"type": [
@@ -2176,7 +2262,8 @@
 										]
 									}
 								}
-							]
+							],
+							"markdownDescription": "Item can be used as a spellcasting focus"
 						},
 						"lootTables": {
 							"type": "array",
@@ -2234,7 +2321,8 @@
 						},
 						"atomicPackContents": {
 							"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "If the item&apos;s pack contents should be treated as one atomic unit, rather than handled as individual sub-items."
 						},
 						"containerCapacity": {
 							"type": "object",
@@ -2244,14 +2332,16 @@
 									"type": "array",
 									"items": {
 										"type": "number"
-									}
+									},
+									"markdownDescription": "Value in pounds."
 								},
 								"volume": {
 									"description": "Value in cubic feet.",
 									"type": "array",
 									"items": {
 										"type": "number"
-									}
+									},
+									"markdownDescription": "Value in cubic feet."
 								},
 								"item": {
 									"type": "array",
@@ -2267,7 +2357,8 @@
 								},
 								"weightless": {
 									"description": "If the container renders its contents weightless.",
-									"type": "boolean"
+									"type": "boolean",
+									"markdownDescription": "If the container renders its contents weightless."
 								}
 							},
 							"additionalProperties": false
@@ -2291,14 +2382,16 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
+								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
+								"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
 							}
 						},
 						"seeAlsoVehicle": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\"."
+								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
+								"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
 							}
 						},
 						"reqAttuneTags": {
@@ -2339,7 +2432,8 @@
 								"w",
 								"h"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"markdownDescription": "Values given in inches."
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -2349,7 +2443,8 @@
 						},
 						"hasRefs": {
 							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+							"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 						},
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
@@ -2425,7 +2520,8 @@
 						},
 						"dmg2": {
 							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+							"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 						},
 						"dmgType": {
 							"$ref": "util.json#/$defs/dataDamageTags"
@@ -2465,7 +2561,8 @@
 							"type": [
 								"string",
 								"boolean"
-							]
+							],
+							"markdownDescription": "Used for filtering."
 						},
 						"curse": {
 							"type": "boolean"
@@ -2484,11 +2581,13 @@
 						},
 						"detail1": {
 							"description": "A descriptive field that can be used to complete entries in variants.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 						},
 						"detail2": {
 							"description": "A descriptive field that can be used to complete entries in variants.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "A descriptive field that can be used to complete entries in variants."
 						},
 						"scfType": {
 							"$ref": "items-shared.json#/$defs/itemScfType"
@@ -2513,7 +2612,8 @@
 						},
 						"staff": {
 							"description": "Adds the italicized \"Staff\" text to the item info line (below the name).",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "Adds the italicized &quot;Staff&quot; text to the item info line (below the name)."
 						},
 						"tier": {
 							"$ref": "items-shared.json#/$defs/itemTier"
@@ -2523,7 +2623,8 @@
 							"type": [
 								"number",
 								"null"
-							]
+							],
+							"markdownDescription": "In copper pieces."
 						},
 						"valueMult": {
 							"type": "number"
@@ -2572,11 +2673,13 @@
 						},
 						"crewMin": {
 							"description": "For crews specified as an X-Y min-max.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "For crews specified as an X-Y min-max."
 						},
 						"crewMax": {
 							"description": "For crews specified as an X-Y min-max.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "For crews specified as an X-Y min-max."
 						},
 						"capPassenger": {
 							"type": "integer"
@@ -2598,11 +2701,13 @@
 						},
 						"travelCost": {
 							"description": "In copper pieces per mile per passenger.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "In copper pieces per mile per passenger."
 						},
 						"shippingCost": {
 							"description": "In copper pieces per 100 lbs per mile.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "In copper pieces per 100 lbs per mile."
 						},
 						"charges": {
 							"type": [
@@ -2651,7 +2756,8 @@
 										]
 									}
 								}
-							]
+							],
+							"markdownDescription": "Item can be used as a spellcasting focus"
 						},
 						"lootTables": {
 							"type": "array",
@@ -2709,7 +2815,8 @@
 						},
 						"atomicPackContents": {
 							"description": "If the item's pack contents should be treated as one atomic unit, rather than handled as individual sub-items.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "If the item&apos;s pack contents should be treated as one atomic unit, rather than handled as individual sub-items."
 						},
 						"containerCapacity": {
 							"type": "object",
@@ -2719,14 +2826,16 @@
 									"type": "array",
 									"items": {
 										"type": "number"
-									}
+									},
+									"markdownDescription": "Value in pounds."
 								},
 								"volume": {
 									"description": "Value in cubic feet.",
 									"type": "array",
 									"items": {
 										"type": "number"
-									}
+									},
+									"markdownDescription": "Value in cubic feet."
 								},
 								"item": {
 									"type": "array",
@@ -2742,7 +2851,8 @@
 								},
 								"weightless": {
 									"description": "If the container renders its contents weightless.",
-									"type": "boolean"
+									"type": "boolean",
+									"markdownDescription": "If the container renders its contents weightless."
 								}
 							},
 							"additionalProperties": false
@@ -2766,14 +2876,16 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\"."
+								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
+								"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
 							}
 						},
 						"seeAlsoVehicle": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\"."
+								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
+								"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
 							}
 						},
 						"reqAttuneTags": {
@@ -2814,7 +2926,8 @@
 								"w",
 								"h"
 							],
-							"additionalProperties": false
+							"additionalProperties": false,
+							"markdownDescription": "Values given in inches."
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -2824,7 +2937,8 @@
 						},
 						"hasRefs": {
 							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+							"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 						},
 						"srd": {
 							"$ref": "util.json#/$defs/srd"
@@ -2869,7 +2983,8 @@
 				"$ref": "#/$defs/itemGroup"
 			},
 			"uniqueItems": true,
-			"minItems": 1
+			"minItems": 1,
+			"markdownDescription": "Used to create fake item entries for groups of related items, often referred to as a single item (e.g. arcane foci)"
 		},
 		"_meta": {
 			"$ref": "util.json#/$defs/metaBlock"

@@ -70,7 +70,8 @@
 							"chooseFlags": {
 								"const": true
 							}
-						}
+						},
+						"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 					},
 					"backgroundName": {
 						"type": "string"

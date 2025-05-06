@@ -49,7 +49,8 @@
 						"V",
 						"VO",
 						"VV"
-					]
+					],
+					"markdownDescription": "C: Core\n O: Optional\n P: Prerelease\n V: Variant\n VO: Variant Optional\n VV: Variant Variant"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"

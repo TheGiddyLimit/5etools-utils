@@ -81,7 +81,8 @@
 								},
 								"minItems": 1,
 								"maxItems": 9
-							}
+							},
+							"markdownDescription": "A count of spell points, starting with 1st-level spells at array index 0, to (n+1)th-level spells at array index n"
 						}
 					},
 					"required": [
@@ -114,7 +115,8 @@
 		},
 		"preparedSpells": {
 			"type": "string",
-			"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\""
+			"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\"",
+			"markdownDescription": "Formula for the number of spells the class can prepare, for example:\n&quot;&lt;$level$&gt; / 2 + &lt;$int_mod$&gt;&quot;"
 		},
 		"preparedSpellsProgression": {
 			"type": "array",
@@ -131,7 +133,8 @@
 				"restShort",
 				"restLong",
 				"level"
-			]
+			],
+			"markdownDescription": "The event at which a character can change their prepared spells."
 		},
 		"spellsKnownProgression": {
 			"type": "array",
@@ -148,7 +151,8 @@
 				"type": "integer"
 			},
 			"minItems": 20,
-			"maxItems": 20
+			"maxItems": 20,
+			"markdownDescription": "For e.g. Wizard, where the spells taken at each level must be &lt;= the max spellcasting level, and cannot be swapped out afterward."
 		},
 		"spellsKnownProgressionFixedAllowLowerLevel": {
 			"type": "boolean"
@@ -191,7 +195,8 @@
 					"additionalProperties": false
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": false,
+			"markdownDescription": "For e.g. Warlock Mystic Arcanum. A map of &lt;class level&gt; -&gt; &lt;spell level&gt; -&gt; &lt;number of spells known&gt;"
 		},
 		"classFeature": {
 			"type": "object",
@@ -298,7 +303,8 @@
 				},
 				"isGainAtNextFeatureLevel": {
 					"description": "If this feature should only be (optionally) gained at the next \"gainSubclassFeature\" level, rather than at the level listed on the feature.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "If this feature should only be (optionally) gained at the next &quot;gainSubclassFeature&quot; level, rather than at the level listed on the feature."
 				},
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
@@ -359,7 +365,8 @@
 						},
 						"isGainAtNextFeatureLevel": {
 							"description": "If this feature should only be (optionally) gained at the next \"gainSubclassFeature\" level, rather than at the level listed on the feature.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "If this feature should only be (optionally) gained at the next &quot;gainSubclassFeature&quot; level, rather than at the level listed on the feature."
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
@@ -428,7 +435,8 @@
 						},
 						"isGainAtNextFeatureLevel": {
 							"description": "If this feature should only be (optionally) gained at the next \"gainSubclassFeature\" level, rather than at the level listed on the feature.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "If this feature should only be (optionally) gained at the next &quot;gainSubclassFeature&quot; level, rather than at the level listed on the feature."
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
@@ -478,7 +486,8 @@
 									},
 									"full": {
 										"description": "The complete text for this proficiency.",
-										"type": "string"
+										"type": "string",
+										"markdownDescription": "The complete text for this proficiency."
 									}
 								},
 								"required": [
@@ -517,7 +526,8 @@
 				},
 				"weaponProficiencies": {
 					"description": "Well-structured weapon proficiency data, used by e.g. Plutonium.",
-					"$ref": "../util.json#/$defs/weaponProficiencies"
+					"$ref": "../util.json#/$defs/weaponProficiencies",
+					"markdownDescription": "Well-structured weapon proficiency data, used by e.g. Plutonium."
 				},
 				"tools": {
 					"type": "array",
@@ -527,7 +537,8 @@
 				},
 				"toolProficiencies": {
 					"description": "Well-structured tool proficiency data, used by e.g. Plutonium.",
-					"$ref": "../util.json#/$defs/toolProficiencies"
+					"$ref": "../util.json#/$defs/toolProficiencies",
+					"markdownDescription": "Well-structured tool proficiency data, used by e.g. Plutonium."
 				},
 				"skills": {
 					"$ref": "../util.json#/$defs/skillProficiencies"
@@ -554,11 +565,13 @@
 						},
 						"className": {
 							"description": "The name of the class this subclass belongs to.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The name of the class this subclass belongs to."
 						},
 						"classSource": {
 							"description": "The source of the class this subclass belongs to (defaults to PHB).",
-							"$ref": "../util.json#/$defs/source"
+							"$ref": "../util.json#/$defs/source",
+							"markdownDescription": "The source of the class this subclass belongs to (defaults to PHB)."
 						},
 						"edition": {
 							"$ref": "../util-edition.json#/$defs/edition"
@@ -627,7 +640,8 @@
 											},
 											"gainSubclassFeatureHasContent": {
 												"description": "Features with \"gainSubclassFeature\" are generally ignored by e.g. VTT integrations, as having no meaningful content to import to sheets. Setting this flag informs the integration that this feature should not be ignored.",
-												"type": "boolean"
+												"type": "boolean",
+												"markdownDescription": "Features with &quot;gainSubclassFeature&quot; are generally ignored by e.g. VTT integrations, as having no meaningful content to import to sheets. Setting this flag informs the integration that this feature should not be ignored."
 											},
 											"tableDisplayName": {
 												"type": "string"
@@ -638,7 +652,8 @@
 										]
 									}
 								]
-							}
+							},
+							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource."
 						},
 						"subclassTableGroups": {
 							"type": "array",
@@ -683,7 +698,8 @@
 										}
 									},
 									"additionalProperties": false,
-									"minProperties": 1
+									"minProperties": 1,
+									"markdownDescription": "Reference &quot;subclassFluff&quot; array items"
 								}
 							]
 						},
@@ -694,7 +710,8 @@
 							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
-							}
+							},
+							"markdownDescription": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see &quot;additionalSpells&quot;."
 						},
 						"subSubclassSpells": {
 							"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
@@ -707,9 +724,11 @@
 									"uniqueItems": true,
 									"items": {
 										"$ref": "../util.json#/$defs/spellListSpellRef"
-									}
+									},
+									"markdownDescription": "For example, a druid circle, religious order, or other sub-subclass name"
 								}
-							}
+							},
+							"markdownDescription": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use &quot;additionalSpells&quot; as well."
 						}
 					},
 					"additionalProperties": false,
@@ -739,11 +758,13 @@
 						},
 						"className": {
 							"description": "The name of the class this subclass belongs to.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The name of the class this subclass belongs to."
 						},
 						"classSource": {
 							"description": "The source of the class this subclass belongs to (defaults to PHB).",
-							"$ref": "../util.json#/$defs/source"
+							"$ref": "../util.json#/$defs/source",
+							"markdownDescription": "The source of the class this subclass belongs to (defaults to PHB)."
 						},
 						"edition": {
 							"$ref": "../util-edition.json#/$defs/edition"
@@ -812,7 +833,8 @@
 											},
 											"gainSubclassFeatureHasContent": {
 												"description": "Features with \"gainSubclassFeature\" are generally ignored by e.g. VTT integrations, as having no meaningful content to import to sheets. Setting this flag informs the integration that this feature should not be ignored.",
-												"type": "boolean"
+												"type": "boolean",
+												"markdownDescription": "Features with &quot;gainSubclassFeature&quot; are generally ignored by e.g. VTT integrations, as having no meaningful content to import to sheets. Setting this flag informs the integration that this feature should not be ignored."
 											},
 											"tableDisplayName": {
 												"type": "string"
@@ -823,7 +845,8 @@
 										]
 									}
 								]
-							}
+							},
+							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource."
 						},
 						"subclassTableGroups": {
 							"type": "array",
@@ -868,7 +891,8 @@
 										}
 									},
 									"additionalProperties": false,
-									"minProperties": 1
+									"minProperties": 1,
+									"markdownDescription": "Reference &quot;subclassFluff&quot; array items"
 								}
 							]
 						},
@@ -879,7 +903,8 @@
 							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
-							}
+							},
+							"markdownDescription": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see &quot;additionalSpells&quot;."
 						},
 						"subSubclassSpells": {
 							"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
@@ -892,9 +917,11 @@
 									"uniqueItems": true,
 									"items": {
 										"$ref": "../util.json#/$defs/spellListSpellRef"
-									}
+									},
+									"markdownDescription": "For example, a druid circle, religious order, or other sub-subclass name"
 								}
-							}
+							},
+							"markdownDescription": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use &quot;additionalSpells&quot; as well."
 						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
@@ -924,11 +951,13 @@
 				},
 				"className": {
 					"description": "The name of the class this subclass belongs to.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "The name of the class this subclass belongs to."
 				},
 				"classSource": {
 					"description": "The source of the class this subclass belongs to (defaults to PHB).",
-					"$ref": "../util.json#/$defs/source"
+					"$ref": "../util.json#/$defs/source",
+					"markdownDescription": "The source of the class this subclass belongs to (defaults to PHB)."
 				},
 				"edition": {
 					"$ref": "../util-edition.json#/$defs/edition"
@@ -997,7 +1026,8 @@
 									},
 									"gainSubclassFeatureHasContent": {
 										"description": "Features with \"gainSubclassFeature\" are generally ignored by e.g. VTT integrations, as having no meaningful content to import to sheets. Setting this flag informs the integration that this feature should not be ignored.",
-										"type": "boolean"
+										"type": "boolean",
+										"markdownDescription": "Features with &quot;gainSubclassFeature&quot; are generally ignored by e.g. VTT integrations, as having no meaningful content to import to sheets. Setting this flag informs the integration that this feature should not be ignored."
 									},
 									"tableDisplayName": {
 										"type": "string"
@@ -1008,7 +1038,8 @@
 								]
 							}
 						]
-					}
+					},
+					"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource."
 				},
 				"subclassTableGroups": {
 					"type": "array",
@@ -1053,7 +1084,8 @@
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"markdownDescription": "Reference &quot;subclassFluff&quot; array items"
 						}
 					]
 				},
@@ -1064,7 +1096,8 @@
 					"uniqueItems": true,
 					"items": {
 						"$ref": "../util.json#/$defs/spellListSpellRef"
-					}
+					},
+					"markdownDescription": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see &quot;additionalSpells&quot;."
 				},
 				"subSubclassSpells": {
 					"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
@@ -1077,9 +1110,11 @@
 							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
-							}
+							},
+							"markdownDescription": "For example, a druid circle, religious order, or other sub-subclass name"
 						}
-					}
+					},
+					"markdownDescription": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use &quot;additionalSpells&quot; as well."
 				}
 			},
 			"additionalProperties": false
@@ -1374,7 +1409,8 @@
 										]
 									}
 								]
-							}
+							},
+							"markdownDescription": "Format: &quot; name | className | classSource | level | source &quot; , PHB is assumed as classSource and featureSource is assumed to be the same as classSource."
 						},
 						"subclassTitle": {
 							"type": "string"
@@ -1437,10 +1473,12 @@
 							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
-							}
+							},
+							"markdownDescription": "Homebrew use only"
 						}
 					},
 					"additionalProperties": false,
+					"markdownDescription": "A character class",
 					"required": [
 						"name",
 						"source",
@@ -1651,7 +1689,8 @@
 										]
 									}
 								]
-							}
+							},
+							"markdownDescription": "Format: &quot; name | className | classSource | level | source &quot; , PHB is assumed as classSource and featureSource is assumed to be the same as classSource."
 						},
 						"subclassTitle": {
 							"type": "string"
@@ -1714,13 +1753,15 @@
 							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
-							}
+							},
+							"markdownDescription": "Homebrew use only"
 						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
 						}
 					},
 					"additionalProperties": false,
+					"markdownDescription": "A character class",
 					"required": [
 						"_copy"
 					]
@@ -1931,7 +1972,8 @@
 								]
 							}
 						]
-					}
+					},
+					"markdownDescription": "Format: &quot; name | className | classSource | level | source &quot; , PHB is assumed as classSource and featureSource is assumed to be the same as classSource."
 				},
 				"subclassTitle": {
 					"type": "string"
@@ -1994,10 +2036,12 @@
 					"uniqueItems": true,
 					"items": {
 						"$ref": "../util.json#/$defs/spellListSpellRef"
-					}
+					},
+					"markdownDescription": "Homebrew use only"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": false,
+			"markdownDescription": "A character class"
 		}
 	},
 	"properties": {

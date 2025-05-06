@@ -15,11 +15,13 @@
 					"air",
 					"space"
 				]
-			}
+			},
+			"markdownDescription": "Note that a vehicle&apos;s &quot;primary&quot; terrain should be listed first."
 		},
 		"_vehicleCost": {
 			"description": "In copper pieces.",
-			"type": "number"
+			"type": "number",
+			"markdownDescription": "In copper pieces."
 		},
 		"spelljammerPaceObj": {
 			"type": "object",
@@ -206,7 +208,8 @@
 						"\\d+": {
 							"type": "integer"
 						}
-					}
+					},
+					"markdownDescription": "A map of &quot;number of vehicle actions&quot;: &quot;number of remaining crew members&quot;"
 				},
 				"action": {
 					"type": "array",
@@ -228,7 +231,8 @@
 						},
 						"dt": {
 							"type": "integer",
-							"description": "Damage Threshold"
+							"description": "Damage Threshold",
+							"markdownDescription": "Damage Threshold"
 						}
 					},
 					"required": [
@@ -253,7 +257,8 @@
 							},
 							"dt": {
 								"type": "integer",
-								"description": "Damage Threshold"
+								"description": "Damage Threshold",
+								"markdownDescription": "Damage Threshold"
 							},
 							"entries": {
 								"type": "array",
@@ -292,7 +297,8 @@
 							},
 							"dt": {
 								"type": "integer",
-								"description": "Damage Threshold"
+								"description": "Damage Threshold",
+								"markdownDescription": "Damage Threshold"
 							},
 							"locomotion": {
 								"description": "Legacy format, from the original UA release.",
@@ -315,7 +321,8 @@
 										"entries"
 									],
 									"additionalProperties": false
-								}
+								},
+								"markdownDescription": "Legacy format, from the original UA release."
 							},
 							"speed": {
 								"type": "array",
@@ -366,7 +373,8 @@
 							},
 							"dt": {
 								"type": "integer",
-								"description": "Damage Threshold"
+								"description": "Damage Threshold",
+								"markdownDescription": "Damage Threshold"
 							},
 							"entries": {
 								"type": "array",
@@ -429,7 +437,8 @@
 									},
 									"sort": {
 										"description": "Forces a sort order. Traits with sort orders will always be arranged before those without.",
-										"type": "integer"
+										"type": "integer",
+										"markdownDescription": "Forces a sort order. Traits with sort orders will always be arranged before those without."
 									}
 								},
 								"required": [
@@ -461,7 +470,8 @@
 				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-					"$ref": "util.json#/$defs/fluffObject"
+					"$ref": "util.json#/$defs/fluffObject",
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				},
 				"foundryTokenScale": {
 					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
@@ -565,7 +575,8 @@
 						},
 						"dt": {
 							"type": "integer",
-							"description": "Damage Threshold"
+							"description": "Damage Threshold",
+							"markdownDescription": "Damage Threshold"
 						}
 					},
 					"required": [
@@ -661,7 +672,8 @@
 				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-					"$ref": "util.json#/$defs/fluffObject"
+					"$ref": "util.json#/$defs/fluffObject",
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				},
 				"foundryTokenScale": {
 					"$ref": "util-foundry.json#/$defs/foundryTokenScale"
@@ -762,15 +774,18 @@
 					"properties": {
 						"hp": {
 							"type": "integer",
-							"description": "Hit Points"
+							"description": "Hit Points",
+							"markdownDescription": "Hit Points"
 						},
 						"dt": {
 							"type": "integer",
-							"description": "Damage Threshold"
+							"description": "Damage Threshold",
+							"markdownDescription": "Damage Threshold"
 						},
 						"mt": {
 							"type": "integer",
-							"description": "Mishap Threshold"
+							"description": "Mishap Threshold",
+							"markdownDescription": "Mishap Threshold"
 						}
 					},
 					"additionalProperties": false,
@@ -827,7 +842,8 @@
 								}
 							}
 						}
-					}
+					},
+					"markdownDescription": "The Action Stations section of a vehicle block, for example the &quot;Helm&quot; or a weapon."
 				},
 				"reaction": {
 					"type": "array",
@@ -863,7 +879,8 @@
 				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-					"$ref": "util.json#/$defs/fluffObject"
+					"$ref": "util.json#/$defs/fluffObject",
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				},
 				"foundryTokenScale": {
 					"$ref": "util-foundry.json#/$defs/foundryTokenScale"

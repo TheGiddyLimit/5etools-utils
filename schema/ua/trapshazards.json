@@ -19,7 +19,8 @@
 				"max": {
 					"type": "integer"
 				}
-			}
+			},
+			"markdownDescription": "Alternative to &quot;tier&quot; which allows for non-standard level ranges."
 		},
 		"_trapHazardThreat": {
 			"type": "string",
@@ -97,7 +98,8 @@
 								"MAG",
 								"TRP",
 								"HAUNT"
-							]
+							],
+							"markdownDescription": "HAUNT: Haunted Trap\nMAG: Magical Trap\nMECH: Mechanical Trap\nTRP: Trap"
 						},
 						"source": {
 							"$ref": "util.json#/$defs/source"
@@ -145,7 +147,8 @@
 						"trapHazType",
 						"source",
 						"entries"
-					]
+					],
+					"markdownDescription": "Older format, used in DMG.\nExtended to support XDMG."
 				},
 				{
 					"description": "XGE \"Traps Revisited\" Simple/Complex traps",
@@ -248,7 +251,8 @@
 						"entries",
 						"trigger",
 						"countermeasures"
-					]
+					],
+					"markdownDescription": "XGE &quot;Traps Revisited&quot; Simple/Complex traps"
 				}
 			]
 		},
@@ -264,6 +268,7 @@
 				"trapHazType": {
 					"type": "string",
 					"description": "ENV: Environmental Hazard\n EST: Eldritch Storm\n GEN: Generic\n WTH: Weather\n WLD: Wilderness Hazard",
+					"markdownDescription": "ENV: Environmental Hazard\n EST: Eldritch Storm\n GEN: Generic\n WTH: Weather\n WLD: Wilderness Hazard",
 					"enum": [
 						"ENV",
 						"EST",

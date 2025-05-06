@@ -79,7 +79,8 @@
 					"additionalProperties": false,
 					"minProperties": 1
 				}
-			}
+			},
+			"markdownDescription": "A generic object for storing special data for external use-cases. Keys prefixed with &quot;rd-&quot; should be added as &quot;data-&quot; HTML attributes when rendering to HTML."
 		},
 		"_entryTableColLabelItem": {
 			"anyOf": [
@@ -155,6 +156,7 @@
 				"url": {
 					"type": "string",
 					"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)",
+					"markdownDescription": "&quot;uri-reference&quot; is unsuitable for brew, as it requires URL-encoding &quot;&apos;&quot; (see: https://www.ietf.org/rfc/rfc3986.txt)",
 					"pattern": "^https?://",
 					"not": {
 						"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io|raw\\.githubusercontent\\.com/5etools-mirror-\\d+)/"
@@ -330,7 +332,8 @@
 				},
 				"skipMarks": {
 					"description": "If the automatically-inserted quotation marks should be skipped.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "If the automatically-inserted quotation marks should be skipped."
 				},
 				"skipItalics": {
 					"type": "boolean"
@@ -442,7 +445,8 @@
 				},
 				"count": {
 					"description": "Used to specify how many of the listed options can be chosen as e.g. permanent character features. Leave blank for transient choices.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "Used to specify how many of the listed options can be chosen as e.g. permanent character features. Leave blank for transient choices."
 				},
 				"style": {
 					"type": "string"
@@ -470,7 +474,8 @@
 				},
 				"isNameGenerator": {
 					"type": "boolean",
-					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
+					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc.",
+					"markdownDescription": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
 				},
 				"style": {
 					"type": "string"
@@ -580,7 +585,8 @@
 				},
 				"isNameGenerator": {
 					"type": "boolean",
-					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
+					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc.",
+					"markdownDescription": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
 				},
 				"style": {
 					"type": "string"
@@ -667,6 +673,7 @@
 		"entryTableGroup": {
 			"description": "Used to group related tables together; has no effect on rendering.",
 			"type": "object",
+			"markdownDescription": "Used to group related tables together; has no effect on rendering.",
 			"properties": {
 				"name": {
 					"type": "string"
@@ -876,7 +883,8 @@
 				},
 				"columns": {
 					"description": "Number of columns the content should be split into. Note that the full value is only displayed on wide screens, and screens below certain widths will see an appropriately reduced number of columns.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "Number of columns the content should be split into. Note that the full value is only displayed on wide screens, and screens below certain widths will see an appropriately reduced number of columns."
 				},
 				"style": {
 					"type": "string",
@@ -890,7 +898,8 @@
 						"list-name",
 						"list-no-bullets",
 						"list-caption"
-					]
+					],
+					"markdownDescription": "Formatting to be applied to the list; not providing a style results in a simple bullet point list.\n list-decimal: decimal numbering 1. 2. 3. etc \n list-hang: a list with the bullets removed and a full indentation \n list-hang-notitle: a list with no bullets that indents all lines but the first\n list-lower-roman: lowercase roman numeral numbering i, ii, iii, iv, etc.\n list-name: a bulleted list with all text in bold\n list-no-bullets: a list with the bullets removed and reduced indentation"
 				},
 				"start": {
 					"type": "integer"
@@ -1007,11 +1016,13 @@
 							},
 							"modifier": {
 								"description": "(Warning: unused)",
-								"type": "integer"
+								"type": "integer",
+								"markdownDescription": "(Warning: unused)"
 							},
 							"hideModifier": {
 								"description": "(Warning: unused)",
-								"type": "boolean"
+								"type": "boolean",
+								"markdownDescription": "(Warning: unused)"
 							}
 						},
 						"required": [
@@ -1258,7 +1269,8 @@
 										},
 										"hash": {
 											"description": "Optional; overrides the href hash for hover handlers.",
-											"type": "string"
+											"type": "string",
+											"markdownDescription": "Optional; overrides the href hash for hover handlers."
 										},
 										"hashPreEncoded": {
 											"type": "boolean"
@@ -1292,6 +1304,7 @@
 		"entryOptFeature": {
 			"description": "For e.g. Eldritch Invocations which require prerequisite text. Deprecated; prefer \"refOptionalfeature\" or \"statblock\" entries instead.",
 			"type": "object",
+			"markdownDescription": "For e.g. Eldritch Invocations which require prerequisite text. Deprecated; prefer &quot;refOptionalfeature&quot; or &quot;statblock&quot; entries instead.",
 			"properties": {
 				"name": {
 					"type": "string"
@@ -1702,7 +1715,8 @@
 				},
 				"altText": {
 					"description": "For accessibility purposes",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "For accessibility purposes"
 				},
 				"imageType": {
 					"type": "string",
@@ -1728,7 +1742,8 @@
 						"size": {
 							"description": "The size of a single grid square/hex, in pixels.",
 							"type": "integer",
-							"minimum": 50
+							"minimum": 50,
+							"markdownDescription": "The size of a single grid square/hex, in pixels."
 						},
 						"offsetX": {
 							"type": "integer"
@@ -1738,11 +1753,13 @@
 						},
 						"scale": {
 							"description": "Map image scaling. Where possible, avoid using this, and use size/offset instead.",
-							"type": "number"
+							"type": "number",
+							"markdownDescription": "Map image scaling. Where possible, avoid using this, and use size/offset instead."
 						},
 						"units": {
 							"description": "A unit of measurement (e.g. \"feet\", \"miles\") in which the grid should be presented.",
 							"type": "string",
+							"markdownDescription": "A unit of measurement (e.g. &quot;feet&quot;, &quot;miles&quot;) in which the grid should be presented.",
 							"enum": [
 								"feet",
 								"yards",
@@ -1753,7 +1770,8 @@
 						},
 						"distance": {
 							"description": "The number of units (e.g. feet) per grid square/hex.",
-							"type": "number"
+							"type": "number",
+							"markdownDescription": "The number of units (e.g. feet) per grid square/hex."
 						}
 					},
 					"additionalProperties": false
@@ -1791,28 +1809,34 @@
 						},
 						"offsetX": {
 							"description": "The X position of this map within the parent map. Defaults to 0.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "The X position of this map within the parent map. Defaults to 0."
 						},
 						"offsetY": {
 							"description": "The Y position of this map within the parent map. Defaults to 0.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "The Y position of this map within the parent map. Defaults to 0."
 						},
 						"scaleX": {
 							"description": "X scaling required for this map to match the parent map. Defaults to 1.",
 							"type": "number",
-							"exclusiveMinimum": 0
+							"exclusiveMinimum": 0,
+							"markdownDescription": "X scaling required for this map to match the parent map. Defaults to 1."
 						},
 						"scaleY": {
 							"description": "Y scaling required for this map to match the parent map. Defaults to 1.",
 							"type": "number",
-							"exclusiveMinimum": 0
+							"exclusiveMinimum": 0,
+							"markdownDescription": "Y scaling required for this map to match the parent map. Defaults to 1."
 						},
 						"autoScale": {
 							"description": "If the X/Y scaling for this map should be based on the size ratio between the two. This is often used a placeholder for maps requiring future manual adjustment.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "If the X/Y scaling for this map should be based on the size ratio between the two. This is often used a placeholder for maps requiring future manual adjustment."
 						}
 					},
-					"additionalProperties": false
+					"additionalProperties": false,
+					"markdownDescription": "Note that the order of transformations is: scale, then offset."
 				},
 				"mapName": {
 					"type": "string"
@@ -1825,11 +1849,13 @@
 				},
 				"maxWidth": {
 					"description": "Specify the max desired display width of the images, as opposed to \"width\" which should only be used for the _real_ width. Assumes pixels by default.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "Specify the max desired display width of the images, as opposed to &quot;width&quot; which should only be used for the _real_ width. Assumes pixels by default."
 				},
 				"maxHeight": {
 					"description": "As per \"maxWidth\"",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "As per &quot;maxWidth&quot;"
 				},
 				"maxWidthUnits": {
 					"type": "string"
@@ -1847,12 +1873,14 @@
 				"expectsLightBackground": {
 					"description": "If this image is largely transparent, and expects to be rendered atop a light background.",
 					"type": "boolean",
-					"const": true
+					"const": true,
+					"markdownDescription": "If this image is largely transparent, and expects to be rendered atop a light background."
 				},
 				"expectsDarkBackground": {
 					"description": "If this image is largely transparent, and expects to be rendered atop a dark background.",
 					"type": "boolean",
-					"const": true
+					"const": true,
+					"markdownDescription": "If this image is largely transparent, and expects to be rendered atop a dark background."
 				}
 			},
 			"required": [
@@ -1960,7 +1988,8 @@
 					"enum": [
 						"MW",
 						"RW"
-					]
+					],
+					"markdownDescription": "MW: Melee Weapon\n RW: Ranged Weapon"
 				},
 				"attackEntries": {
 					"type": "array",
@@ -3142,7 +3171,8 @@
 				"type",
 				"classFeature"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"markdownDescription": "For use in classes page content only."
 		},
 		"entryRefSubclassFeature": {
 			"description": "For use in classes page content only.",
@@ -3162,7 +3192,8 @@
 				"type",
 				"subclassFeature"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"markdownDescription": "For use in classes page content only."
 		},
 		"entryRefOptionalfeature": {
 			"description": "For use in classes page content only.",
@@ -3197,7 +3228,8 @@
 				"type",
 				"optionalfeature"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"markdownDescription": "For use in classes page content only."
 		},
 		"entryRefFeat": {
 			"description": "For use in classes page content only.",
@@ -3220,7 +3252,8 @@
 				"type",
 				"feat"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"markdownDescription": "For use in classes page content only."
 		},
 		"entryHr": {
 			"type": "object",
@@ -3366,7 +3399,8 @@
 							"recharge",
 							"legendary"
 						]
-					}
+					},
+					"markdownDescription": "Allows the above properties to be specified, but not rendered. Useful if e.g. a creature can only cast one spell, and this is rendered in the header line."
 				},
 				"footerEntries": {
 					"type": "array",
@@ -3387,11 +3421,13 @@
 						"reaction",
 						"legendary",
 						"mythic"
-					]
+					],
+					"markdownDescription": "Implicitly &quot;trait&quot;"
 				},
 				"chargesItem": {
 					"type": "string",
-					"description": "The UID of an item which provides the charges required to cast any \"charges\" spells."
+					"description": "The UID of an item which provides the charges required to cast any \"charges\" spells.",
+					"markdownDescription": "The UID of an item which provides the charges required to cast any &quot;charges&quot; spells."
 				}
 			},
 			"required": [
@@ -3753,5 +3789,6 @@
 		{
 			"type": "integer"
 		}
-	]
+	],
+	"markdownDescription": "A recursively renderable object."
 }

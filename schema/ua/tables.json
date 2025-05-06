@@ -24,7 +24,8 @@
 				},
 				"data": {
 					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
-					"type": "object"
+					"type": "object",
+					"markdownDescription": "A generic object for storing special data for external use-cases. Keys prefixed with &quot;rd-&quot; should be added as &quot;data-&quot; HTML attributes when rendering to HTML."
 				},
 				"caption": {
 					"type": "string"
@@ -34,7 +35,8 @@
 				},
 				"isNameGenerator": {
 					"type": "boolean",
-					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
+					"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc.",
+					"markdownDescription": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
 				},
 				"style": {
 					"type": "string"

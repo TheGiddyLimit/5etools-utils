@@ -60,7 +60,8 @@
 						"chooseFlags": {
 							"const": true
 						}
-					}
+					},
+					"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 				},
 				"entryData": {
 					"$ref": "util-foundry.json#/$defs/entryDataObject"
@@ -132,7 +133,8 @@
 								"chooseFlags": {
 									"const": true
 								}
-							}
+							},
+							"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 						},
 						"entryData": {
 							"$ref": "util-foundry.json#/$defs/entryDataObject"
@@ -205,15 +207,18 @@
 						"chooseFlags": {
 							"const": true
 						}
-					}
+					},
+					"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 				},
 				"raceName": {
 					"description": "The full name of the race, with subrace parts/etc. applied.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "The full name of the race, with subrace parts/etc. applied."
 				},
 				"raceSource": {
 					"description": "The source of the subrace or race.",
-					"$ref": "util.json#/$defs/source"
+					"$ref": "util.json#/$defs/source",
+					"markdownDescription": "The source of the subrace or race."
 				}
 			},
 			"required": [
@@ -279,15 +284,18 @@
 								"chooseFlags": {
 									"const": true
 								}
-							}
+							},
+							"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 						},
 						"raceName": {
 							"description": "The full name of the race, with subrace parts/etc. applied.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The full name of the race, with subrace parts/etc. applied."
 						},
 						"raceSource": {
 							"description": "The source of the subrace or race.",
-							"$ref": "util.json#/$defs/source"
+							"$ref": "util.json#/$defs/source",
+							"markdownDescription": "The source of the subrace or race."
 						}
 					},
 					"required": [
@@ -353,15 +361,18 @@
 								"chooseFlags": {
 									"const": true
 								}
-							}
+							},
+							"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 						},
 						"raceName": {
 							"description": "The full name of the race, with subrace parts/etc. applied.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The full name of the race, with subrace parts/etc. applied."
 						},
 						"raceSource": {
 							"description": "The source of the subrace or race.",
-							"$ref": "util.json#/$defs/source"
+							"$ref": "util.json#/$defs/source",
+							"markdownDescription": "The source of the subrace or race."
 						},
 						"_copy": {
 							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"

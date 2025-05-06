@@ -125,7 +125,8 @@
 					"type": [
 						"string",
 						"boolean"
-					]
+					],
+					"markdownDescription": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\nIf not supplied, a shortened name will be automatically generated from the creature&apos;s full name.\nAlternatively use &quot;true&quot; if the &quot;shortName&quot; should be an exact copy of the creature&apos;s &quot;name&quot;."
 				},
 				"alias": {
 					"$ref": "../util.json#/$defs/alias"
@@ -138,11 +139,13 @@
 					],
 					"items": {
 						"type": "string"
-					}
+					},
+					"markdownDescription": "A group name, indexed by search. E.g. searching &quot;Lycanthrope&quot; would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search."
 				},
 				"level": {
 					"description": "Used in sidekicks, which can have levels (and generally do not have alignment)",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "Used in sidekicks, which can have levels (and generally do not have alignment)"
 				},
 				"size": {
 					"type": "array",
@@ -183,7 +186,8 @@
 								},
 								"swarmSize": {
 									"$ref": "../util.json#/$defs/size",
-									"description": "Size of the individual creatures that make up the swarm."
+									"description": "Size of the individual creatures that make up the swarm.",
+									"markdownDescription": "Size of the individual creatures that make up the swarm."
 								},
 								"tags": {
 									"type": "array",
@@ -269,7 +273,8 @@
 				},
 				"sourceSub": {
 					"type": "string",
-					"description": "Sub-source text that is shown when hovered."
+					"description": "Sub-source text that is shown when hovered.",
+					"markdownDescription": "Sub-source text that is shown when hovered."
 				},
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
@@ -395,7 +400,8 @@
 						},
 						"special": {
 							"description": "For use in homebrew.",
-							"$ref": "../entry.json"
+							"$ref": "../entry.json",
+							"markdownDescription": "For use in homebrew."
 						}
 					},
 					"additionalProperties": false,
@@ -527,7 +533,8 @@
 						},
 						"special": {
 							"description": "For use in homebrew.",
-							"$ref": "../entry.json"
+							"$ref": "../entry.json",
+							"markdownDescription": "For use in homebrew."
 						}
 					},
 					"additionalProperties": false,
@@ -548,14 +555,16 @@
 						"oneOf": [
 							{
 								"description": "An item UID, e.g. \"longsword|phb\"",
-								"type": "string"
+								"type": "string",
+								"markdownDescription": "An item UID, e.g. &quot;longsword|phb&quot;"
 							},
 							{
 								"type": "object",
 								"properties": {
 									"item": {
 										"description": "An item UID, e.g. \"longsword|phb\"",
-										"type": "string"
+										"type": "string",
+										"markdownDescription": "An item UID, e.g. &quot;longsword|phb&quot;"
 									},
 									"quantity": {
 										"type": "integer"
@@ -690,7 +699,8 @@
 									},
 									"sort": {
 										"description": "Forces a sort order. Traits with sort orders will always be arranged before those without.",
-										"type": "integer"
+										"type": "integer",
+										"markdownDescription": "Forces a sort order. Traits with sort orders will always be arranged before those without."
 									}
 								},
 								"required": [
@@ -970,7 +980,8 @@
 					"enum": [
 						true,
 						null
-					]
+					],
+					"markdownDescription": "Used to flag adventure NPCs"
 				},
 				"environment": {
 					"type": "array",
@@ -1182,7 +1193,8 @@
 							"T",
 							"TC",
 							"U"
-						]
+						],
+						"markdownDescription": "X: Any (Choose)\nXX: All\nCS: Can&apos;t Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves&apos; cant\nU: Undercommon"
 					}
 				},
 				"senseTags": {
@@ -1196,7 +1208,8 @@
 							"SD",
 							"T",
 							"U"
-						]
+						],
+						"markdownDescription": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight"
 					}
 				},
 				"spellcastingTags": {
@@ -1219,7 +1232,8 @@
 							"CS",
 							"CL",
 							"CW"
-						]
+						],
+						"markdownDescription": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n O: Other\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard"
 					}
 				},
 				"damageTags": {
@@ -1257,7 +1271,8 @@
 							"MLW",
 							"RNG",
 							"THW"
-						]
+						],
+						"markdownDescription": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons"
 					}
 				},
 				"attachedItems": {
@@ -1266,7 +1281,8 @@
 					"uniqueItems": true,
 					"items": {
 						"description": "A UID, e.g. \"longsword|phb\"",
-						"type": "string"
+						"type": "string",
+						"markdownDescription": "A UID, e.g. &quot;longsword|phb&quot;"
 					}
 				},
 				"conditionInflict": {
@@ -1292,30 +1308,36 @@
 					"type": "array",
 					"items": {
 						"$ref": "../entry.json"
-					}
+					},
+					"markdownDescription": "Intended for homebrew use only."
 				},
 				"legacy": {
 					"$ref": "../util.json#/$defs/legacy"
 				},
 				"summonedBySpell": {
 					"description": "The spell used to summon this creature; specifically for TCE-esque summon spells.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "The spell used to summon this creature; specifically for TCE-esque summon spells."
 				},
 				"summonedBySpellLevel": {
 					"description": "The level of the spell used to summon this creature; specifically for TCE-esque summon spells.",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "The level of the spell used to summon this creature; specifically for TCE-esque summon spells."
 				},
 				"summonedByClass": {
 					"description": "The class which can summon this creature; e.g. for those granted by some TCE class features.",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "The class which can summon this creature; e.g. for those granted by some TCE class features."
 				},
 				"summonedScaleByPlayerLevel": {
 					"description": "If this creature should be scalable by summoning/owning player level.",
-					"const": true
+					"const": true,
+					"markdownDescription": "If this creature should be scalable by summoning/owning player level."
 				},
 				"_isCopy": {
 					"description": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the \"_copy\" format at a later date.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the &quot;_copy&quot; format at a later date."
 				},
 				"_versions": {
 					"type": "array",
@@ -1343,7 +1365,8 @@
 							"entry"
 						],
 						"additionalProperties": false
-					}
+					},
+					"markdownDescription": "For homebrew use only."
 				},
 				"resource": {
 					"type": "array",
@@ -1402,9 +1425,11 @@
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"markdownDescription": "Reference &quot;monsterFluff&quot; array items"
 						}
-					]
+					],
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				},
 				"foundryImg": {
 					"$ref": "../util-foundry.json#/$defs/foundryImg"
@@ -1440,7 +1465,8 @@
 							"type": [
 								"string",
 								"boolean"
-							]
+							],
+							"markdownDescription": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\nIf not supplied, a shortened name will be automatically generated from the creature&apos;s full name.\nAlternatively use &quot;true&quot; if the &quot;shortName&quot; should be an exact copy of the creature&apos;s &quot;name&quot;."
 						},
 						"alias": {
 							"$ref": "../util.json#/$defs/alias"
@@ -1453,11 +1479,13 @@
 							],
 							"items": {
 								"type": "string"
-							}
+							},
+							"markdownDescription": "A group name, indexed by search. E.g. searching &quot;Lycanthrope&quot; would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search."
 						},
 						"level": {
 							"description": "Used in sidekicks, which can have levels (and generally do not have alignment)",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "Used in sidekicks, which can have levels (and generally do not have alignment)"
 						},
 						"size": {
 							"type": "array",
@@ -1498,7 +1526,8 @@
 										},
 										"swarmSize": {
 											"$ref": "../util.json#/$defs/size",
-											"description": "Size of the individual creatures that make up the swarm."
+											"description": "Size of the individual creatures that make up the swarm.",
+											"markdownDescription": "Size of the individual creatures that make up the swarm."
 										},
 										"tags": {
 											"type": "array",
@@ -1584,7 +1613,8 @@
 						},
 						"sourceSub": {
 							"type": "string",
-							"description": "Sub-source text that is shown when hovered."
+							"description": "Sub-source text that is shown when hovered.",
+							"markdownDescription": "Sub-source text that is shown when hovered."
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
@@ -1710,7 +1740,8 @@
 								},
 								"special": {
 									"description": "For use in homebrew.",
-									"$ref": "../entry.json"
+									"$ref": "../entry.json",
+									"markdownDescription": "For use in homebrew."
 								}
 							},
 							"additionalProperties": false,
@@ -1842,7 +1873,8 @@
 								},
 								"special": {
 									"description": "For use in homebrew.",
-									"$ref": "../entry.json"
+									"$ref": "../entry.json",
+									"markdownDescription": "For use in homebrew."
 								}
 							},
 							"additionalProperties": false,
@@ -1863,14 +1895,16 @@
 								"oneOf": [
 									{
 										"description": "An item UID, e.g. \"longsword|phb\"",
-										"type": "string"
+										"type": "string",
+										"markdownDescription": "An item UID, e.g. &quot;longsword|phb&quot;"
 									},
 									{
 										"type": "object",
 										"properties": {
 											"item": {
 												"description": "An item UID, e.g. \"longsword|phb\"",
-												"type": "string"
+												"type": "string",
+												"markdownDescription": "An item UID, e.g. &quot;longsword|phb&quot;"
 											},
 											"quantity": {
 												"type": "integer"
@@ -2005,7 +2039,8 @@
 											},
 											"sort": {
 												"description": "Forces a sort order. Traits with sort orders will always be arranged before those without.",
-												"type": "integer"
+												"type": "integer",
+												"markdownDescription": "Forces a sort order. Traits with sort orders will always be arranged before those without."
 											}
 										},
 										"required": [
@@ -2285,7 +2320,8 @@
 							"enum": [
 								true,
 								null
-							]
+							],
+							"markdownDescription": "Used to flag adventure NPCs"
 						},
 						"environment": {
 							"type": "array",
@@ -2497,7 +2533,8 @@
 									"T",
 									"TC",
 									"U"
-								]
+								],
+								"markdownDescription": "X: Any (Choose)\nXX: All\nCS: Can&apos;t Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves&apos; cant\nU: Undercommon"
 							}
 						},
 						"senseTags": {
@@ -2511,7 +2548,8 @@
 									"SD",
 									"T",
 									"U"
-								]
+								],
+								"markdownDescription": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight"
 							}
 						},
 						"spellcastingTags": {
@@ -2534,7 +2572,8 @@
 									"CS",
 									"CL",
 									"CW"
-								]
+								],
+								"markdownDescription": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n O: Other\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard"
 							}
 						},
 						"damageTags": {
@@ -2572,7 +2611,8 @@
 									"MLW",
 									"RNG",
 									"THW"
-								]
+								],
+								"markdownDescription": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons"
 							}
 						},
 						"attachedItems": {
@@ -2581,7 +2621,8 @@
 							"uniqueItems": true,
 							"items": {
 								"description": "A UID, e.g. \"longsword|phb\"",
-								"type": "string"
+								"type": "string",
+								"markdownDescription": "A UID, e.g. &quot;longsword|phb&quot;"
 							}
 						},
 						"conditionInflict": {
@@ -2607,30 +2648,36 @@
 							"type": "array",
 							"items": {
 								"$ref": "../entry.json"
-							}
+							},
+							"markdownDescription": "Intended for homebrew use only."
 						},
 						"legacy": {
 							"$ref": "../util.json#/$defs/legacy"
 						},
 						"summonedBySpell": {
 							"description": "The spell used to summon this creature; specifically for TCE-esque summon spells.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The spell used to summon this creature; specifically for TCE-esque summon spells."
 						},
 						"summonedBySpellLevel": {
 							"description": "The level of the spell used to summon this creature; specifically for TCE-esque summon spells.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "The level of the spell used to summon this creature; specifically for TCE-esque summon spells."
 						},
 						"summonedByClass": {
 							"description": "The class which can summon this creature; e.g. for those granted by some TCE class features.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The class which can summon this creature; e.g. for those granted by some TCE class features."
 						},
 						"summonedScaleByPlayerLevel": {
 							"description": "If this creature should be scalable by summoning/owning player level.",
-							"const": true
+							"const": true,
+							"markdownDescription": "If this creature should be scalable by summoning/owning player level."
 						},
 						"_isCopy": {
 							"description": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the \"_copy\" format at a later date.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the &quot;_copy&quot; format at a later date."
 						},
 						"_versions": {
 							"type": "array",
@@ -2658,7 +2705,8 @@
 									"entry"
 								],
 								"additionalProperties": false
-							}
+							},
+							"markdownDescription": "For homebrew use only."
 						},
 						"resource": {
 							"type": "array",
@@ -2717,9 +2765,11 @@
 										}
 									},
 									"additionalProperties": false,
-									"minProperties": 1
+									"minProperties": 1,
+									"markdownDescription": "Reference &quot;monsterFluff&quot; array items"
 								}
-							]
+							],
+							"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 						},
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"
@@ -2760,7 +2810,8 @@
 							"type": [
 								"string",
 								"boolean"
-							]
+							],
+							"markdownDescription": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\nIf not supplied, a shortened name will be automatically generated from the creature&apos;s full name.\nAlternatively use &quot;true&quot; if the &quot;shortName&quot; should be an exact copy of the creature&apos;s &quot;name&quot;."
 						},
 						"alias": {
 							"$ref": "../util.json#/$defs/alias"
@@ -2773,11 +2824,13 @@
 							],
 							"items": {
 								"type": "string"
-							}
+							},
+							"markdownDescription": "A group name, indexed by search. E.g. searching &quot;Lycanthrope&quot; would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search."
 						},
 						"level": {
 							"description": "Used in sidekicks, which can have levels (and generally do not have alignment)",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "Used in sidekicks, which can have levels (and generally do not have alignment)"
 						},
 						"size": {
 							"type": "array",
@@ -2818,7 +2871,8 @@
 										},
 										"swarmSize": {
 											"$ref": "../util.json#/$defs/size",
-											"description": "Size of the individual creatures that make up the swarm."
+											"description": "Size of the individual creatures that make up the swarm.",
+											"markdownDescription": "Size of the individual creatures that make up the swarm."
 										},
 										"tags": {
 											"type": "array",
@@ -2904,7 +2958,8 @@
 						},
 						"sourceSub": {
 							"type": "string",
-							"description": "Sub-source text that is shown when hovered."
+							"description": "Sub-source text that is shown when hovered.",
+							"markdownDescription": "Sub-source text that is shown when hovered."
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
@@ -3030,7 +3085,8 @@
 								},
 								"special": {
 									"description": "For use in homebrew.",
-									"$ref": "../entry.json"
+									"$ref": "../entry.json",
+									"markdownDescription": "For use in homebrew."
 								}
 							},
 							"additionalProperties": false,
@@ -3162,7 +3218,8 @@
 								},
 								"special": {
 									"description": "For use in homebrew.",
-									"$ref": "../entry.json"
+									"$ref": "../entry.json",
+									"markdownDescription": "For use in homebrew."
 								}
 							},
 							"additionalProperties": false,
@@ -3183,14 +3240,16 @@
 								"oneOf": [
 									{
 										"description": "An item UID, e.g. \"longsword|phb\"",
-										"type": "string"
+										"type": "string",
+										"markdownDescription": "An item UID, e.g. &quot;longsword|phb&quot;"
 									},
 									{
 										"type": "object",
 										"properties": {
 											"item": {
 												"description": "An item UID, e.g. \"longsword|phb\"",
-												"type": "string"
+												"type": "string",
+												"markdownDescription": "An item UID, e.g. &quot;longsword|phb&quot;"
 											},
 											"quantity": {
 												"type": "integer"
@@ -3325,7 +3384,8 @@
 											},
 											"sort": {
 												"description": "Forces a sort order. Traits with sort orders will always be arranged before those without.",
-												"type": "integer"
+												"type": "integer",
+												"markdownDescription": "Forces a sort order. Traits with sort orders will always be arranged before those without."
 											}
 										},
 										"required": [
@@ -3605,7 +3665,8 @@
 							"enum": [
 								true,
 								null
-							]
+							],
+							"markdownDescription": "Used to flag adventure NPCs"
 						},
 						"environment": {
 							"type": "array",
@@ -3817,7 +3878,8 @@
 									"T",
 									"TC",
 									"U"
-								]
+								],
+								"markdownDescription": "X: Any (Choose)\nXX: All\nCS: Can&apos;t Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves&apos; cant\nU: Undercommon"
 							}
 						},
 						"senseTags": {
@@ -3831,7 +3893,8 @@
 									"SD",
 									"T",
 									"U"
-								]
+								],
+								"markdownDescription": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight"
 							}
 						},
 						"spellcastingTags": {
@@ -3854,7 +3917,8 @@
 									"CS",
 									"CL",
 									"CW"
-								]
+								],
+								"markdownDescription": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n O: Other\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard"
 							}
 						},
 						"damageTags": {
@@ -3892,7 +3956,8 @@
 									"MLW",
 									"RNG",
 									"THW"
-								]
+								],
+								"markdownDescription": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons"
 							}
 						},
 						"attachedItems": {
@@ -3901,7 +3966,8 @@
 							"uniqueItems": true,
 							"items": {
 								"description": "A UID, e.g. \"longsword|phb\"",
-								"type": "string"
+								"type": "string",
+								"markdownDescription": "A UID, e.g. &quot;longsword|phb&quot;"
 							}
 						},
 						"conditionInflict": {
@@ -3927,30 +3993,36 @@
 							"type": "array",
 							"items": {
 								"$ref": "../entry.json"
-							}
+							},
+							"markdownDescription": "Intended for homebrew use only."
 						},
 						"legacy": {
 							"$ref": "../util.json#/$defs/legacy"
 						},
 						"summonedBySpell": {
 							"description": "The spell used to summon this creature; specifically for TCE-esque summon spells.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The spell used to summon this creature; specifically for TCE-esque summon spells."
 						},
 						"summonedBySpellLevel": {
 							"description": "The level of the spell used to summon this creature; specifically for TCE-esque summon spells.",
-							"type": "integer"
+							"type": "integer",
+							"markdownDescription": "The level of the spell used to summon this creature; specifically for TCE-esque summon spells."
 						},
 						"summonedByClass": {
 							"description": "The class which can summon this creature; e.g. for those granted by some TCE class features.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The class which can summon this creature; e.g. for those granted by some TCE class features."
 						},
 						"summonedScaleByPlayerLevel": {
 							"description": "If this creature should be scalable by summoning/owning player level.",
-							"const": true
+							"const": true,
+							"markdownDescription": "If this creature should be scalable by summoning/owning player level."
 						},
 						"_isCopy": {
 							"description": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the \"_copy\" format at a later date.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "An internal flag indicating this creature is a copy of another, and is a temporary/placeholder entry which will be factored out using the &quot;_copy&quot; format at a later date."
 						},
 						"_versions": {
 							"type": "array",
@@ -3978,7 +4050,8 @@
 									"entry"
 								],
 								"additionalProperties": false
-							}
+							},
+							"markdownDescription": "For homebrew use only."
 						},
 						"resource": {
 							"type": "array",
@@ -4037,9 +4110,11 @@
 										}
 									},
 									"additionalProperties": false,
-									"minProperties": 1
+									"minProperties": 1,
+									"markdownDescription": "Reference &quot;monsterFluff&quot; array items"
 								}
-							]
+							],
+							"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 						},
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"

@@ -105,6 +105,7 @@
 					"items": {
 						"type": "string",
 						"description": "The examples given are short forms that are automatically expanded to \"discharged\", \"dispelled\" & \"triggered\".\nHomebrew files should state custom end conditions in full.",
+						"markdownDescription": "The examples given are short forms that are automatically expanded to &quot;discharged&quot;, &quot;dispelled&quot; &amp; &quot;triggered&quot;.\nHomebrew files should state custom end conditions in full.",
 						"enum": [
 							"dispel",
 							"trigger",

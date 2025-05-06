@@ -89,7 +89,8 @@
 						{
 							"type": "null"
 						}
-					]
+					],
+					"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 				},
 				"soundClip": {
 					"$ref": "entry.json#/$defs/mediaHref"
@@ -350,7 +351,8 @@
 						{
 							"type": "null"
 						}
-					]
+					],
+					"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 				},
 				"soundClip": {
 					"$ref": "entry.json#/$defs/mediaHref"
@@ -531,7 +533,8 @@
 				},
 				"overwrite": {
 					"description": "Map of 'property' -> true where 'property' is a property on the base race which should be overwritten by that of the subrace",
-					"type": "object"
+					"type": "object",
+					"markdownDescription": "Map of &apos;property&apos; -&gt; true where &apos;property&apos; is a property on the base race which should be overwritten by that of the subrace"
 				}
 			},
 			"additionalProperties": false
@@ -583,7 +586,8 @@
 				{
 					"description": "For lineages that should be filterable using the \"Lineage\" filter, but should not have any modifications applied.",
 					"type": "boolean",
-					"const": true
+					"const": true,
+					"markdownDescription": "For lineages that should be filterable using the &quot;Lineage&quot; filter, but should not have any modifications applied."
 				},
 				{
 					"description": "For lineages which modify the race with e.g. specific ability score modes.",
@@ -591,7 +595,8 @@
 					"enum": [
 						"UA1",
 						"VRGR"
-					]
+					],
+					"markdownDescription": "For lineages which modify the race with e.g. specific ability score modes."
 				}
 			]
 		},
@@ -693,7 +698,8 @@
 								{
 									"type": "null"
 								}
-							]
+							],
+							"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 						},
 						"soundClip": {
 							"$ref": "entry.json#/$defs/mediaHref"
@@ -958,7 +964,8 @@
 								{
 									"type": "null"
 								}
-							]
+							],
+							"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 						},
 						"soundClip": {
 							"$ref": "entry.json#/$defs/mediaHref"
@@ -1229,7 +1236,8 @@
 								{
 									"type": "null"
 								}
-							]
+							],
+							"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 						},
 						"soundClip": {
 							"$ref": "entry.json#/$defs/mediaHref"
@@ -1410,7 +1418,8 @@
 						},
 						"overwrite": {
 							"description": "Map of 'property' -> true where 'property' is a property on the base race which should be overwritten by that of the subrace",
-							"type": "object"
+							"type": "object",
+							"markdownDescription": "Map of &apos;property&apos; -&gt; true where &apos;property&apos; is a property on the base race which should be overwritten by that of the subrace"
 						}
 					},
 					"additionalProperties": false,
@@ -1505,7 +1514,8 @@
 								{
 									"type": "null"
 								}
-							]
+							],
+							"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 						},
 						"soundClip": {
 							"$ref": "entry.json#/$defs/mediaHref"
@@ -1686,7 +1696,8 @@
 						},
 						"overwrite": {
 							"description": "Map of 'property' -> true where 'property' is a property on the base race which should be overwritten by that of the subrace",
-							"type": "object"
+							"type": "object",
+							"markdownDescription": "Map of &apos;property&apos; -&gt; true where &apos;property&apos; is a property on the base race which should be overwritten by that of the subrace"
 						},
 						"_copy": {
 							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
@@ -1732,9 +1743,11 @@
 							}
 						}
 					},
-					"additionalProperties": false
+					"additionalProperties": false,
+					"markdownDescription": "References &quot;raceFluff&quot; array items"
 				}
-			]
+			],
+			"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source."
 		}
 	},
 	"properties": {

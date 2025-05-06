@@ -34,7 +34,8 @@
 					"entries"
 				],
 				"additionalProperties": false
-			}
+			},
+			"markdownDescription": "Additional trait templates which can be used in the homebrew builder."
 		},
 		"makebrewCreatureAction": {
 			"description": "Additional action templates which can be used in the homebrew builder.",
@@ -66,7 +67,8 @@
 					"entries"
 				],
 				"additionalProperties": false
-			}
+			},
+			"markdownDescription": "Additional action templates which can be used in the homebrew builder."
 		}
 	},
 	"additionalProperties": false

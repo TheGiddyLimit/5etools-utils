@@ -125,7 +125,8 @@
 									"string",
 									"null"
 								]
-							}
+							},
+							"markdownDescription": "If unspecified, defaults to `[null, &quot;entries&quot;, &quot;headerEntries&quot;, &quot;footerEntries&quot;]`. To apply to _any_ string, including those outside of sub-properties (for instance, when trying to replace text in an array of plain strings), include `null` as one of the props (i.e. `&quot;props&quot;: [null]`)"
 						}
 					},
 					"required": [
@@ -974,39 +975,48 @@
 				},
 				"pantheon": {
 					"description": "Used in deity data",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "Used in deity data"
 				},
 				"shortName": {
 					"description": "Used in subclass data",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "Used in subclass data"
 				},
 				"className": {
 					"description": "Used in subclass data",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "Used in subclass data"
 				},
 				"classSource": {
 					"description": "Used in subclass data",
-					"$ref": "util.json#/$defs/source"
+					"$ref": "util.json#/$defs/source",
+					"markdownDescription": "Used in subclass data"
 				},
 				"subclassSource": {
 					"description": "Used in subclass feature data",
-					"$ref": "util.json#/$defs/source"
+					"$ref": "util.json#/$defs/source",
+					"markdownDescription": "Used in subclass feature data"
 				},
 				"subclassShortName": {
 					"description": "Used in subclass feature data",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "Used in subclass feature data"
 				},
 				"level": {
 					"description": "Used in subclass feature data",
-					"type": "integer"
+					"type": "integer",
+					"markdownDescription": "Used in subclass feature data"
 				},
 				"raceName": {
 					"description": "Used in race feature data",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "Used in race feature data"
 				},
 				"raceSource": {
 					"description": "Used in race feature data",
-					"$ref": "util.json#/$defs/source"
+					"$ref": "util.json#/$defs/source",
+					"markdownDescription": "Used in race feature data"
 				}
 			},
 			"additionalProperties": false,
@@ -1042,7 +1052,8 @@
 						},
 						"_preserve": {
 							"description": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`.",
-							"$ref": "#/$defs/_preserveObject"
+							"$ref": "#/$defs/_preserveObject",
+							"markdownDescription": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`."
 						}
 					},
 					"required": [
@@ -1067,7 +1078,8 @@
 								},
 								"_preserve": {
 									"description": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`.",
-									"$ref": "#/$defs/_preserveObject"
+									"$ref": "#/$defs/_preserveObject",
+									"markdownDescription": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`."
 								}
 							},
 							"required": [

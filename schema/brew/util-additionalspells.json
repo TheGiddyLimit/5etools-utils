@@ -16,7 +16,8 @@
 						{
 							"$ref": "#/$defs/_additionalSpellLevelObject"
 						}
-					]
+					],
+					"markdownDescription": "Spells keyed by character/class level."
 				},
 				"^s\\d+$": {
 					"description": "Spells keyed by spell level, access to which is gated behind the character advancing to a point where they could cast those spells with e.g. a Spellcasting class feature (Mark spells from ERLW races)",
@@ -27,7 +28,8 @@
 						{
 							"$ref": "#/$defs/_additionalSpellLevelObject"
 						}
-					]
+					],
+					"markdownDescription": "Spells keyed by spell level, access to which is gated behind the character advancing to a point where they could cast those spells with e.g. a Spellcasting class feature (Mark spells from ERLW races)"
 				}
 			},
 			"properties": {
@@ -40,7 +42,8 @@
 						{
 							"$ref": "#/$defs/_additionalSpellLevelObject"
 						}
-					]
+					],
+					"markdownDescription": "Spells gained when gaining a particular feature, regardless of level or caster level"
 				}
 			},
 			"minProperties": 1,
@@ -51,31 +54,38 @@
 			"properties": {
 				"rest": {
 					"description": "Spells which recharge on short or long rest",
-					"$ref": "#/$defs/_additionalSpellRechargeObject"
+					"$ref": "#/$defs/_additionalSpellRechargeObject",
+					"markdownDescription": "Spells which recharge on short or long rest"
 				},
 				"daily": {
 					"description": "Spells which recharge on long rest",
-					"$ref": "#/$defs/_additionalSpellRechargeObject"
+					"$ref": "#/$defs/_additionalSpellRechargeObject",
+					"markdownDescription": "Spells which recharge on long rest"
 				},
 				"will": {
 					"description": "At-will spells",
-					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject",
+					"markdownDescription": "At-will spells"
 				},
 				"ritual": {
 					"description": "Ritual-only spells",
-					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject",
+					"markdownDescription": "Ritual-only spells"
 				},
 				"resource": {
 					"description": "Spells which cost a specific resource to use (such as Ki), but otherwise have no restrictions",
-					"$ref": "#/$defs/_additionalSpellRechargeObject"
+					"$ref": "#/$defs/_additionalSpellRechargeObject",
+					"markdownDescription": "Spells which cost a specific resource to use (such as Ki), but otherwise have no restrictions"
 				},
 				"limited": {
 					"description": "Spells which do not recharge, and have a limited number of uses",
-					"$ref": "#/$defs/_additionalSpellRechargeObject"
+					"$ref": "#/$defs/_additionalSpellRechargeObject",
+					"markdownDescription": "Spells which do not recharge, and have a limited number of uses"
 				},
 				"_": {
 					"description": "Spells which do not fall into the above categories (i.e. have no specific recharge, and are simply known)",
-					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"
+					"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject",
+					"markdownDescription": "Spells which do not fall into the above categories (i.e. have no specific recharge, and are simply known)"
 				}
 			},
 			"additionalProperties": false
@@ -183,7 +193,8 @@
 						"properties": {
 							"all": {
 								"type": "string",
-								"description": "A range of spells to be added, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\""
+								"description": "A range of spells to be added, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\"",
+								"markdownDescription": "A range of spells to be added, formatted similarly to the options in a {@filter ...} tag. \nFor example: &quot;level=0|class=Wizard&quot;"
 							}
 						},
 						"required": [
@@ -196,7 +207,8 @@
 						"properties": {
 							"choose": {
 								"type": "string",
-								"description": "A range of spells to be chosen from, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\""
+								"description": "A range of spells to be chosen from, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\"",
+								"markdownDescription": "A range of spells to be chosen from, formatted similarly to the options in a {@filter ...} tag. \nFor example: &quot;level=0|class=Wizard&quot;"
 							},
 							"count": {
 								"type": "integer"
@@ -220,7 +232,8 @@
 											"type": "string"
 										},
 										"minItems": 2,
-										"uniqueItems": true
+										"uniqueItems": true,
+										"markdownDescription": "An array of spell UIDs to be chosen from."
 									},
 									"count": {
 										"type": "integer"
@@ -270,9 +283,11 @@
 						"wis",
 						"cha",
 						"inherit"
-					]
+					],
+					"markdownDescription": "&quot;inherit&quot; is used for special cases, where the ability score matches a choice the player made when taking the feature"
 				}
-			]
+			],
+			"markdownDescription": "Optionally specify the ability score used for e.g. racial spellcasting"
 		},
 		"additionalSpellsArray": {
 			"description": "A collection of additional spells which a feature grants.\nThis array enables import functionality for VTTs, and should be used in addition to \"classSpells\"/\"subclassSpells\"/\"subSubclassSpells\" blocks which enable references on the site.",
@@ -283,35 +298,42 @@
 				"properties": {
 					"name": {
 						"description": "Optional display name for the group",
-						"type": "string"
+						"type": "string",
+						"markdownDescription": "Optional display name for the group"
 					},
 					"ability": {
 						"$ref": "#/$defs/additionalSpellsAbility"
 					},
 					"resourceName": {
 						"description": "Optional resource name for resource-cast spells in this group",
-						"type": "string"
+						"type": "string",
+						"markdownDescription": "Optional resource name for resource-cast spells in this group"
 					},
 					"innate": {
 						"description": "Spells which can be innately cast, without expending normal spell resources",
-						"$ref": "#/$defs/_additionalSpellObject"
+						"$ref": "#/$defs/_additionalSpellObject",
+						"markdownDescription": "Spells which can be innately cast, without expending normal spell resources"
 					},
 					"known": {
 						"description": "Spells which are always known",
-						"$ref": "#/$defs/_additionalSpellObject"
+						"$ref": "#/$defs/_additionalSpellObject",
+						"markdownDescription": "Spells which are always known"
 					},
 					"prepared": {
 						"description": "Spells which are always prepared",
-						"$ref": "#/$defs/_additionalSpellObject"
+						"$ref": "#/$defs/_additionalSpellObject",
+						"markdownDescription": "Spells which are always prepared"
 					},
 					"expanded": {
 						"description": "Expansions to a class' default spell list, from which spells can be chosen (e.g. Warlock Patron spells)",
-						"$ref": "#/$defs/_additionalSpellObject"
+						"$ref": "#/$defs/_additionalSpellObject",
+						"markdownDescription": "Expansions to a class&apos; default spell list, from which spells can be chosen (e.g. Warlock Patron spells)"
 					}
 				},
 				"additionalProperties": false,
 				"minProperties": 1
-			}
+			},
+			"markdownDescription": "A collection of additional spells which a feature grants.\nThis array enables import functionality for VTTs, and should be used in addition to &quot;classSpells&quot;/&quot;subclassSpells&quot;/&quot;subSubclassSpells&quot; blocks which enable references on the site."
 		}
 	}
 }

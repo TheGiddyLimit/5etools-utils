@@ -29,7 +29,8 @@
 					"properties": {
 						"monster": {
 							"description": "Keys are other sources to be loaded; values are `otherSources` sources from that source to search for.",
-							"type": "object"
+							"type": "object",
+							"markdownDescription": "Keys are other sources to be loaded; values are `otherSources` sources from that source to search for."
 						}
 					}
 				}
@@ -38,12 +39,14 @@
 		"url": {
 			"type": "string",
 			"description": "\"uri-reference\" is unsuitable for brew, as it requires URL-encoding \"'\" (see: https://www.ietf.org/rfc/rfc3986.txt)",
+			"markdownDescription": "&quot;uri-reference&quot; is unsuitable for brew, as it requires URL-encoding &quot;&apos;&quot; (see: https://www.ietf.org/rfc/rfc3986.txt)",
 			"minLength": 3
 		},
 		"_sourceString": {
 			"type": "string",
 			"description": "An identifying string, as seen in the JSON in \"source\" fields.",
-			"pattern": "^([-a-zA-Z0-9&+!]{1,2}|[-a-zA-Z0-9&+!][-a-zA-Z0-9&+! ]+[-a-zA-Z0-9&+!])$"
+			"pattern": "^([-a-zA-Z0-9&+!]{1,2}|[-a-zA-Z0-9&+!][-a-zA-Z0-9&+! ]+[-a-zA-Z0-9&+!])$",
+			"markdownDescription": "An identifying string, as seen in the JSON in &quot;source&quot; fields."
 		},
 		"source": {
 			"anyOf": [
@@ -64,7 +67,8 @@
 				{
 					"$ref": "sources-homebrew-legacy.json#/$defs/sourcesColon"
 				}
-			]
+			],
+			"markdownDescription": "An ID that will be used to refer to this corpus (adventure/book) in tags."
 		},
 		"sourceJson": {
 			"anyOf": [
@@ -72,6 +76,7 @@
 					"type": "string",
 					"description": "An identifying string, as seen in the JSON in \"source\" fields.",
 					"pattern": "^([-a-zA-Z0-9&+!]{1,2}|[-a-zA-Z0-9&+!][-a-zA-Z0-9&+! ]+[-a-zA-Z0-9&+!])$",
+					"markdownDescription": "An identifying string, as seen in the JSON in &quot;source&quot; fields.",
 					"minLength": 6,
 					"not": {
 						"anyOf": [
@@ -158,18 +163,21 @@
 				"oneOf": [
 					{
 						"description": "A UID, e.g. \"longsword|phb\"",
-						"type": "string"
+						"type": "string",
+						"markdownDescription": "A UID, e.g. &quot;longsword|phb&quot;"
 					},
 					{
 						"type": "object",
 						"properties": {
 							"uid": {
 								"description": "A UID, e.g. \"longsword|phb\"",
-								"type": "string"
+								"type": "string",
+								"markdownDescription": "A UID, e.g. &quot;longsword|phb&quot;"
 							},
 							"tag": {
 								"description": "A tag used in the renderer, e.g. \"creature\"",
-								"type": "string"
+								"type": "string",
+								"markdownDescription": "A tag used in the renderer, e.g. &quot;creature&quot;"
 							}
 						},
 						"additionalProperties": false,
@@ -1194,7 +1202,8 @@
 						"properties": {
 							"fromFilter": {
 								"description": "A filter string, e.g. \"type=martial weapon|miscellaneous=mundane\"",
-								"type": "string"
+								"type": "string",
+								"markdownDescription": "A filter string, e.g. &quot;type=martial weapon|miscellaneous=mundane&quot;"
 							},
 							"count": {
 								"type": "integer"
@@ -1210,7 +1219,8 @@
 						"properties": {
 							"fromFilter": {
 								"description": "A filter string, e.g. \"type=martial weapon|miscellaneous=mundane\"",
-								"type": "string"
+								"type": "string",
+								"markdownDescription": "A filter string, e.g. &quot;type=martial weapon|miscellaneous=mundane&quot;"
 							}
 						},
 						"required": [
@@ -1612,7 +1622,8 @@
 					},
 					"max": {
 						"description": "The max ability score this ASI allows (otherwise assumed to be 20).",
-						"type": "integer"
+						"type": "integer",
+						"markdownDescription": "The max ability score this ASI allows (otherwise assumed to be 20)."
 					}
 				},
 				"additionalProperties": false
@@ -1873,7 +1884,8 @@
 											},
 											"visible": {
 												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
-												"const": true
+												"const": true,
+												"markdownDescription": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations."
 											}
 										},
 										"required": [
@@ -1892,7 +1904,8 @@
 											},
 											"visible": {
 												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
-												"const": true
+												"const": true,
+												"markdownDescription": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations."
 											}
 										},
 										"required": [
@@ -1944,14 +1957,16 @@
 									"properties": {
 										"choose": {
 											"type": "string",
-											"description": "A range prerequisite spells, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\""
+											"description": "A range prerequisite spells, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\"",
+											"markdownDescription": "A range prerequisite spells, formatted similarly to the options in a {@filter ...} tag. \nFor example: &quot;level=0|class=Wizard&quot;"
 										},
 										"entry": {
 											"type": "string"
 										},
 										"entrySummary": {
 											"description": "Used in short/list displays",
-											"type": "string"
+											"type": "string",
+											"markdownDescription": "Used in short/list displays"
 										}
 									},
 									"required": [
@@ -2005,7 +2020,8 @@
 					},
 					"other": {
 						"description": "A free text prerequisite",
-						"type": "string"
+						"type": "string",
+						"markdownDescription": "A free text prerequisite"
 					},
 					"otherSummary": {
 						"description": "A free text prerequisite, with a shortened form for list display.",
@@ -2016,13 +2032,15 @@
 							},
 							"entrySummary": {
 								"description": "Used in short/list displays",
-								"type": "string"
+								"type": "string",
+								"markdownDescription": "Used in short/list displays"
 							}
 						},
 						"required": [
 							"entry",
 							"entrySummary"
-						]
+						],
+						"markdownDescription": "A free text prerequisite, with a shortened form for list display."
 					},
 					"race": {
 						"type": "array",
@@ -2034,7 +2052,8 @@
 								},
 								"displayEntry": {
 									"description": "Optional long-form name to be used in the rendered entity.",
-									"type": "string"
+									"type": "string",
+									"markdownDescription": "Optional long-form name to be used in the rendered entity."
 								},
 								"subrace": {
 									"type": "string"
@@ -2056,7 +2075,8 @@
 								},
 								"displayEntry": {
 									"description": "Optional long-form name to be used in the rendered entity.",
-									"type": "string"
+									"type": "string",
+									"markdownDescription": "Optional long-form name to be used in the rendered entity."
 								}
 							},
 							"required": [
@@ -2097,15 +2117,18 @@
 					},
 					"spellcasting2020": {
 						"description": "Renders with the updated text found in UA2020: Feats",
-						"const": true
+						"const": true,
+						"markdownDescription": "Renders with the updated text found in UA2020: Feats"
 					},
 					"spellcastingFeature": {
 						"description": "A more restrictive spellcasting variant; specifically \"Spellcasting Feature\"",
-						"const": true
+						"const": true,
+						"markdownDescription": "A more restrictive spellcasting variant; specifically &quot;Spellcasting Feature&quot;"
 					},
 					"spellcastingPrepared": {
 						"description": "A more restrictive spellcasting variant; specifically \"Spellcasting feature from a class that prepares spells\"",
-						"const": true
+						"const": true,
+						"markdownDescription": "A more restrictive spellcasting variant; specifically &quot;Spellcasting feature from a class that prepares spells&quot;"
 					},
 					"psionics": {
 						"const": true
@@ -2151,7 +2174,8 @@
 									"enum": [
 										"simple",
 										"martial"
-									]
+									],
+									"markdownDescription": "Any &lt;simple|martial&gt; weapon."
 								},
 								"weaponGroup": {
 									"description": "All <simple|martial> weapons.",
@@ -2159,7 +2183,8 @@
 									"enum": [
 										"simple",
 										"martial"
-									]
+									],
+									"markdownDescription": "All &lt;simple|martial&gt; weapons."
 								}
 							},
 							"additionalProperties": false
@@ -2221,7 +2246,8 @@
 					},
 					"note": {
 						"description": "An additional note that accompanies the proficiencies, but is not part of them.",
-						"type": "string"
+						"type": "string",
+						"markdownDescription": "An additional note that accompanies the proficiencies, but is not part of them."
 					}
 				},
 				"additionalProperties": false
@@ -2259,11 +2285,13 @@
 				"E",
 				"U",
 				"A"
-			]
+			],
+			"markdownDescription": "L: Lawful\n N: Neutral\n NX: Neutral (law/chaos axis)\n NY: Neutral (good/evil axis)\n C: Chaotic\n G: Good\n E: Evil\n U: Unaligned\n A: Any"
 		},
 		"size": {
 			"type": "string",
 			"description": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
+			"markdownDescription": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
 			"enum": [
 				"F",
 				"D",
@@ -2319,6 +2347,7 @@
 		"dataOptionalfeatureType": {
 			"type": "string",
 			"description": "AF: Alchemical Formula\n AI: Artificer Infusion\n AS: Arcane Shot\n AS:V1-UA: Arcane Shot, V1 (UA)\n AS:V2-UA: Arcane Shot, V2 (UA)\n ED: Elemental Discipline\n EI: Eldritch Invocation\n FS:B: Fighting Style; Bard\n FS:F: Fighting Style; Fighter\n FS:P: Fighting Style; Paladin\n FS:R: Fighting Style; Ranger\n IWM:A: Infernal War Machine Upgrade, Armor\n IWM:G: Infernal War Machine Upgrade, Gadget\n IWM:W: Infernal War Machine Variant, Weapon\n MM: Metamagic\n MV: Maneuver\n MV:B: Maneuver, Battle Master\n MV:C2-UA: Maneuver, Cavalier V2 (UA)\n OR: Onomancy Resonant\n OTH: Other\n PB: Pact Boon\n RN: Rune Knight Rune\n SHP:F: Ship Upgrade, Figurehead\n SHP:H: Ship Upgrade, Hull\n SHP:M: Ship Upgrade, Movement\n SHP:O: Ship Upgrade, Miscellaneous\n SHP:W: Ship Upgrade, Weapon\n TT: Traveler's Trick",
+			"markdownDescription": "AF: Alchemical Formula\n AI: Artificer Infusion\n AS: Arcane Shot\n AS:V1-UA: Arcane Shot, V1 (UA)\n AS:V2-UA: Arcane Shot, V2 (UA)\n ED: Elemental Discipline\n EI: Eldritch Invocation\n FS:B: Fighting Style; Bard\n FS:F: Fighting Style; Fighter\n FS:P: Fighting Style; Paladin\n FS:R: Fighting Style; Ranger\n IWM:A: Infernal War Machine Upgrade, Armor\n IWM:G: Infernal War Machine Upgrade, Gadget\n IWM:W: Infernal War Machine Variant, Weapon\n MM: Metamagic\n MV: Maneuver\n MV:B: Maneuver, Battle Master\n MV:C2-UA: Maneuver, Cavalier V2 (UA)\n OR: Onomancy Resonant\n OTH: Other\n PB: Pact Boon\n RN: Rune Knight Rune\n SHP:F: Ship Upgrade, Figurehead\n SHP:H: Ship Upgrade, Hull\n SHP:M: Ship Upgrade, Movement\n SHP:O: Ship Upgrade, Miscellaneous\n SHP:W: Ship Upgrade, Weapon\n TT: Traveler&apos;s Trick",
 			"examples": [
 				"ED",
 				"EI",
@@ -2353,6 +2382,7 @@
 		"dataFeatCategory": {
 			"type": "string",
 			"description": "D: Dragonmark\nG: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
+			"markdownDescription": "D: Dragonmark\nG: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
 			"examples": [
 				"D",
 				"G",
@@ -2904,7 +2934,8 @@
 				"R",
 				"S",
 				"T"
-			]
+			],
+			"markdownDescription": "A: Acid\n B: Bludgeoning\n C: Cold\n F: Fire\n O: Force\n L: Lightning\n N: Necrotic\n P: Piercing\n I: Poison\n Y: Psychic\n R: Radiant\n S: Slashing\n T: Thunder"
 		},
 		"spellSchool": {
 			"type": "string",
@@ -2922,6 +2953,7 @@
 					"Psychic"
 				]
 			},
+			"markdownDescription": "A: Abjuration\n C: Conjuration\n D: Divination\n E: Enchantment\n V: Evocation\n I: Illusion\n N: Necromancy\n T: Transmutation\n P: Psychic",
 			"examples": [
 				"A",
 				"C",
@@ -3160,25 +3192,29 @@
 							"oneOf": [
 								{
 									"description": "An item UID, e.g. \"longsword|phb\"",
-									"type": "string"
+									"type": "string",
+									"markdownDescription": "An item UID, e.g. &quot;longsword|phb&quot;"
 								},
 								{
 									"type": "object",
 									"properties": {
 										"item": {
 											"description": "An item UID, e.g. \"longsword|phb\"",
-											"type": "string"
+											"type": "string",
+											"markdownDescription": "An item UID, e.g. &quot;longsword|phb&quot;"
 										},
 										"quantity": {
 											"type": "integer"
 										},
 										"displayName": {
 											"description": "The display name this item should be given",
-											"type": "string"
+											"type": "string",
+											"markdownDescription": "The display name this item should be given"
 										},
 										"containsValue": {
 											"description": "The value (in copper pieces) that this piece of equipment contains in coins.",
-											"type": "integer"
+											"type": "integer",
+											"markdownDescription": "The value (in copper pieces) that this piece of equipment contains in coins."
 										}
 									},
 									"required": [
@@ -3224,7 +3260,8 @@
 									"properties": {
 										"value": {
 											"description": "A value in copper pieces",
-											"type": "integer"
+											"type": "integer",
+											"markdownDescription": "A value in copper pieces"
 										}
 									},
 									"required": [
@@ -3237,18 +3274,21 @@
 									"properties": {
 										"special": {
 											"description": "The name of a non-statted item, such as \"wooden stake\"",
-											"type": "string"
+											"type": "string",
+											"markdownDescription": "The name of a non-statted item, such as &quot;wooden stake&quot;"
 										},
 										"quantity": {
 											"type": "integer"
 										},
 										"worthValue": {
 											"description": "The worth (in copper pieces) of this piece of equipment.",
-											"type": "integer"
+											"type": "integer",
+											"markdownDescription": "The worth (in copper pieces) of this piece of equipment."
 										},
 										"containsValue": {
 											"description": "The value (in copper pieces) that this piece of equipment contains in coins.",
-											"type": "integer"
+											"type": "integer",
+											"markdownDescription": "The value (in copper pieces) that this piece of equipment contains in coins."
 										}
 									},
 									"required": [
@@ -3260,7 +3300,8 @@
 						}
 					}
 				}
-			}
+			},
+			"markdownDescription": "Optional well-structured data version of the &quot;default&quot; property, for use in applications that require it."
 		},
 		"reqAttuneTags": {
 			"type": "array",
@@ -3355,7 +3396,8 @@
 									"type": "integer"
 								},
 								"minItems": 20,
-								"maxItems": 20
+								"maxItems": 20,
+								"markdownDescription": "Features gained when the total count of features increases according to level."
 							},
 							{
 								"type": "object",
@@ -3365,7 +3407,8 @@
 										"type": "integer"
 									}
 								},
-								"additionalProperties": false
+								"additionalProperties": false,
+								"markdownDescription": "Features gained at the exact levels specified."
 							},
 							{
 								"type": "object",
@@ -3375,7 +3418,8 @@
 										"type": "integer"
 									}
 								},
-								"additionalProperties": false
+								"additionalProperties": false,
+								"markdownDescription": "Features gained at the level this feature is gained."
 							}
 						]
 					},
@@ -3439,7 +3483,8 @@
 									"type": "integer"
 								},
 								"minItems": 20,
-								"maxItems": 20
+								"maxItems": 20,
+								"markdownDescription": "Feats gained when the total count of feats increases according to level."
 							},
 							{
 								"type": "object",
@@ -3449,7 +3494,8 @@
 										"type": "integer"
 									}
 								},
-								"additionalProperties": false
+								"additionalProperties": false,
+								"markdownDescription": "Feats gained at the exact levels specified."
 							},
 							{
 								"type": "object",
@@ -3459,7 +3505,8 @@
 										"type": "integer"
 									}
 								},
-								"additionalProperties": false
+								"additionalProperties": false,
+								"markdownDescription": "Feats gained at the level this feat is gained."
 							}
 						]
 					},
@@ -3524,7 +3571,8 @@
 						"groupName",
 						"groupSource"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"markdownDescription": "A group spell list"
 				},
 				{
 					"description": "Another class's spell list",
@@ -3541,7 +3589,8 @@
 						"className",
 						"classSource"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"markdownDescription": "Another class&apos;s spell list"
 				},
 				{
 					"description": "Another subclass's spell list",
@@ -3566,7 +3615,8 @@
 						"subclassName",
 						"subclassSource"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"markdownDescription": "Another subclass&apos;s spell list"
 				},
 				{
 					"description": "Another sub-subclass's spell list",
@@ -3599,13 +3649,16 @@
 						"subSubclassName",
 						"subSubclassSource"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"markdownDescription": "Another sub-subclass&apos;s spell list"
 				},
 				{
 					"description": "A spell UID of the form \"fireball\" (PHB source assumed by default) or \"shape water|xge\"",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "A spell UID of the form &quot;fireball&quot; (PHB source assumed by default) or &quot;shape water|xge&quot;"
 				}
-			]
+			],
+			"markdownDescription": "A reference to a spell or an existing spell list, linked by name and source. Assumes PHB as the source, if none is provided."
 		},
 		"proficiencyLevel": {
 			"description": "1: Proficient\n 2: Expertise",
@@ -3613,7 +3666,9 @@
 			"enum": [
 				1,
 				2
-			]
+			],
+			"markdownDescription": "1: Proficient\n 2: Expertise"
 		}
-	}
+	},
+	"markdownDescription": "Utility definitions to be used in other schemas."
 }

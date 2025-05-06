@@ -26,7 +26,8 @@
 					"parentSource": {
 						"type": "string",
 						"description": "Used for books that contain multiple adventures, e.g. TftYP",
-						"$ref": "util.json#/$defs/source"
+						"$ref": "util.json#/$defs/source",
+						"markdownDescription": "Used for books that contain multiple adventures, e.g. TftYP"
 					},
 					"group": {
 						"description": "The group under which this adventure should be listed in the navbar.",
@@ -37,7 +38,8 @@
 							"prerelease",
 							"homebrew",
 							"other"
-						]
+						],
+						"markdownDescription": "The group under which this adventure should be listed in the navbar."
 					},
 					"author": {
 						"type": "string"
@@ -71,7 +73,8 @@
 													},
 													"index": {
 														"description": "The relative index of this header in the current chapter, i.e. if \"Treasure\" appears twice and you wish the contents entry to link to the second instance, set the \"index\" to 1.",
-														"type": "integer"
+														"type": "integer",
+														"markdownDescription": "The relative index of this header in the current chapter, i.e. if &quot;Treasure&quot; appears twice and you wish the contents entry to link to the second instance, set the &quot;index&quot; to 1."
 													}
 												},
 												"required": [
@@ -113,7 +116,8 @@
 							"required": [
 								"name"
 							]
-						}
+						},
+						"markdownDescription": "The linked Table of Contents of the adventure."
 					},
 					"level": {
 						"description": "The character levels that the adventure ranges across.",
@@ -146,20 +150,24 @@
 									"custom"
 								]
 							}
-						]
+						],
+						"markdownDescription": "The character levels that the adventure ranges across."
 					},
 					"published": {
 						"type": "string",
 						"format": "date",
-						"description": "The date of publication of the adventure, in the format YYYY-MM-DD (RFC3339)."
+						"description": "The date of publication of the adventure, in the format YYYY-MM-DD (RFC3339).",
+						"markdownDescription": "The date of publication of the adventure, in the format YYYY-MM-DD (RFC3339)."
 					},
 					"publishedOrder": {
 						"description": "A sorting order for adventures within a single source.",
-						"type": "integer"
+						"type": "integer",
+						"markdownDescription": "A sorting order for adventures within a single source."
 					},
 					"cover": {
 						"description": "A link to an image which should be 300 x 300px in size. Larger images will be centred and cropped.",
-						"$ref": "entry.json#/$defs/mediaHref"
+						"$ref": "entry.json#/$defs/mediaHref",
+						"markdownDescription": "A link to an image which should be 300 x 300px in size. Larger images will be centred and cropped."
 					},
 					"storyline": {
 						"type": "string",

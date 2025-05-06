@@ -65,9 +65,11 @@
 				}
 			},
 			"additionalProperties": false,
-			"minProperties": 1
+			"minProperties": 1,
+			"markdownDescription": "Keys are spell names."
 		}
 	},
 	"additionalProperties": false,
-	"minProperties": 1
+	"minProperties": 1,
+	"markdownDescription": "Keys are source identifiers."
 }

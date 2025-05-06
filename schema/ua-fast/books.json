@@ -40,7 +40,8 @@
 							"screen",
 							"recipe",
 							"other"
-						]
+						],
+						"markdownDescription": "The group under which this book should be listed in the navbar."
 					},
 					"author": {
 						"type": "string"
@@ -48,11 +49,13 @@
 					"published": {
 						"type": "string",
 						"format": "date",
-						"description": "The date of publication of the book, in the format YYYY-MM-DD (RFC3339)."
+						"description": "The date of publication of the book, in the format YYYY-MM-DD (RFC3339).",
+						"markdownDescription": "The date of publication of the book, in the format YYYY-MM-DD (RFC3339)."
 					},
 					"cover": {
 						"description": "A link to an image which should be 300 x 300px in size. Larger images will be centred and cropped.",
-						"$ref": "entry.json#/$defs/mediaHref"
+						"$ref": "entry.json#/$defs/mediaHref",
+						"markdownDescription": "A link to an image which should be 300 x 300px in size. Larger images will be centred and cropped."
 					},
 					"contents": {
 						"description": "The linked Table of Contents of the rulebook.",
@@ -83,7 +86,8 @@
 													},
 													"index": {
 														"description": "The relative index of this header in the current chapter, i.e. if \"Treasure\" appears twice and you wish the contents entry to link to the second instance, set the \"index\" to 1.",
-														"type": "integer"
+														"type": "integer",
+														"markdownDescription": "The relative index of this header in the current chapter, i.e. if &quot;Treasure&quot; appears twice and you wish the contents entry to link to the second instance, set the &quot;index&quot; to 1."
 													}
 												},
 												"required": [
@@ -124,7 +128,8 @@
 							"required": [
 								"name"
 							]
-						}
+						},
+						"markdownDescription": "The linked Table of Contents of the rulebook."
 					}
 				},
 				"additionalProperties": false,

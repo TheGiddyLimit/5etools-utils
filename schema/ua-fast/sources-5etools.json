@@ -172,5 +172,6 @@
 				"AATM"
 			]
 		}
-	}
+	},
+	"markdownDescription": "A dump of 5etools sources. See `node/fetch-5etools-sources.js`."
 }

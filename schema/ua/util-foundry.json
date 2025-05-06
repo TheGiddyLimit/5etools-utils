@@ -54,7 +54,8 @@
 					"$ref": "util-additionalspells.json#/$defs/additionalSpellsArray"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": false,
+			"markdownDescription": "Additional &quot;5etools-type&quot; data to be stored on the entry."
 		},
 		"foundryId": {
 			"type": "string",
@@ -186,14 +187,16 @@
 					"$ref": "items.json#/$defs/subEntityItemArray"
 				}
 			},
-			"minProperties": 1
+			"minProperties": 1,
+			"markdownDescription": "A 5etools-data-like object of additional entities to import."
 		},
 		"_foundryActivityObject_base": {
 			"type": "object",
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -229,7 +232,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -251,7 +255,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -276,7 +281,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -312,7 +318,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -334,7 +341,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -362,7 +370,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -398,7 +407,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -420,7 +430,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -448,7 +459,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -484,7 +496,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -506,7 +519,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -534,7 +548,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -570,7 +585,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -592,7 +608,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -641,7 +658,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -677,7 +695,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -699,7 +718,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -727,7 +747,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -763,7 +784,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -785,7 +807,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -821,7 +844,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -857,7 +881,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -879,7 +904,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -907,7 +933,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -943,7 +970,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -965,7 +993,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -1034,7 +1063,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking a \"rider\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
 				},
 				"img": {
 					"type": "string"
@@ -1070,7 +1100,8 @@
 													"prop",
 													"uid"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
 											},
 											{
 												"description": "A link to a 5etools-style resource",
@@ -1092,7 +1123,8 @@
 												"required": [
 													"consumes"
 												],
-												"additionalProperties": false
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
 										]
 									}
@@ -1151,7 +1183,8 @@
 			"properties": {
 				"foundryId": {
 					"description": "Use only when required. For example, when linking an \"enchantmentRiderParent\".",
-					"$ref": "#/$defs/foundryIdShort"
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking an &quot;enchantmentRiderParent&quot;."
 				},
 				"name": {
 					"type": "string"
@@ -1235,7 +1268,8 @@
 							"coverHalf",
 							"coverThreeQuarters"
 						]
-					}
+					},
+					"markdownDescription": "Dumped via e.g. `copy(Object.keys(CONFIG.DND5E.conditionTypes).sort())`"
 				},
 				"flags": {
 					"type": "object"
@@ -1311,7 +1345,8 @@
 								"description"
 							]
 						}
-					]
+					],
+					"markdownDescription": "An effect with no functional changes, but descriptive text. Should only be used for effects which cannot be otherwise automated."
 				},
 				{
 					"description": "An effect with no functional changes, but descriptive text. Should only be used for effects which cannot be otherwise automated.",
@@ -1325,7 +1360,8 @@
 								"descriptionEntries"
 							]
 						}
-					]
+					],
+					"markdownDescription": "An effect with no functional changes, but descriptive text. Should only be used for effects which cannot be otherwise automated."
 				},
 				{
 					"description": "An effect with no functional changes, but an enchantment link.",
@@ -1345,7 +1381,8 @@
 								"type"
 							]
 						}
-					]
+					],
+					"markdownDescription": "An effect with no functional changes, but an enchantment link."
 				}
 			]
 		},
@@ -1419,7 +1456,8 @@
 						"chooseFlags": {
 							"const": true
 						}
-					}
+					},
+					"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 				}
 			},
 			"required": [
@@ -1491,7 +1529,8 @@
 						"chooseFlags": {
 							"const": true
 						}
-					}
+					},
+					"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 				},
 				"entries": {
 					"type": "array",
@@ -1584,7 +1623,8 @@
 						"chooseFlags": {
 							"const": true
 						}
-					}
+					},
+					"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 				},
 				"prototypeToken": {
 					"$ref": "#/$defs/foundryPrototypeTokenObject"

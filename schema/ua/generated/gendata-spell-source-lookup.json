@@ -42,11 +42,13 @@
 						}
 					},
 					"additionalProperties": false,
-					"minProperties": 1
+					"minProperties": 1,
+					"markdownDescription": "Keys are entity names."
 				}
 			},
 			"additionalProperties": false,
-			"minProperties": 1
+			"minProperties": 1,
+			"markdownDescription": "Keys are source identifiers."
 		}
 	},
 	"patternProperties": {
@@ -110,19 +112,23 @@
 														}
 													},
 													"additionalProperties": false,
-													"minProperties": 1
+													"minProperties": 1,
+													"markdownDescription": "Keys are subclass names."
 												}
 											},
 											"additionalProperties": false,
-											"minProperties": 1
+											"minProperties": 1,
+											"markdownDescription": "Keys are source identifiers."
 										}
 									},
 									"additionalProperties": false,
-									"minProperties": 1
+									"minProperties": 1,
+									"markdownDescription": "Keys are class names."
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"markdownDescription": "Keys are source identifiers."
 						},
 						"classVariant": {
 							"type": "object",
@@ -137,11 +143,13 @@
 										}
 									},
 									"additionalProperties": false,
-									"minProperties": 1
+									"minProperties": 1,
+									"markdownDescription": "Keys are class names."
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"markdownDescription": "Keys are source identifiers."
 						},
 						"optionalfeature": {
 							"type": "object",
@@ -170,11 +178,13 @@
 										}
 									},
 									"additionalProperties": false,
-									"minProperties": 1
+									"minProperties": 1,
+									"markdownDescription": "Keys are optional feature names."
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"markdownDescription": "Keys are source identifiers."
 						},
 						"race": {
 							"type": "object",
@@ -210,11 +220,13 @@
 										}
 									},
 									"additionalProperties": false,
-									"minProperties": 1
+									"minProperties": 1,
+									"markdownDescription": "Keys are race names."
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"markdownDescription": "Keys are source identifiers."
 						}
 					},
 					"additionalProperties": false,
@@ -222,9 +234,11 @@
 				}
 			},
 			"additionalProperties": false,
-			"minProperties": 1
+			"minProperties": 1,
+			"markdownDescription": "Keys are lowercase&apos;d spell names."
 		}
 	},
 	"additionalProperties": false,
-	"minProperties": 1
+	"minProperties": 1,
+	"markdownDescription": "Keys are lowercase&apos;d source identifiers."
 }

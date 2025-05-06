@@ -115,7 +115,8 @@
 						{
 							"type": "null"
 						}
-					]
+					],
+					"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 				},
 				"hasFluff": {
 					"const": true
@@ -254,7 +255,8 @@
 								{
 									"type": "null"
 								}
-							]
+							],
+							"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 						},
 						"hasFluff": {
 							"const": true
@@ -396,7 +398,8 @@
 								{
 									"type": "null"
 								}
-							]
+							],
+							"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 						},
 						"hasFluff": {
 							"const": true

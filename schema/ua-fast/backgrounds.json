@@ -75,7 +75,8 @@
 							"type": "boolean",
 							"const": true
 						}
-					}
+					},
+					"markdownDescription": "A lookup of other properties which should be tied to the &quot;Feature: ...&quot; entry. This is used when e.g. customizing a background during import to a VTT."
 				},
 				"hasFluff": {
 					"type": "boolean"
@@ -85,7 +86,8 @@
 				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-					"$ref": "util.json#/$defs/fluffObject"
+					"$ref": "util.json#/$defs/fluffObject",
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				}
 			},
 			"additionalProperties": false
@@ -163,7 +165,8 @@
 									"type": "boolean",
 									"const": true
 								}
-							}
+							},
+							"markdownDescription": "A lookup of other properties which should be tied to the &quot;Feature: ...&quot; entry. This is used when e.g. customizing a background during import to a VTT."
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -173,7 +176,8 @@
 						},
 						"fluff": {
 							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-							"$ref": "util.json#/$defs/fluffObject"
+							"$ref": "util.json#/$defs/fluffObject",
+							"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 						}
 					},
 					"additionalProperties": false,
@@ -254,7 +258,8 @@
 									"type": "boolean",
 									"const": true
 								}
-							}
+							},
+							"markdownDescription": "A lookup of other properties which should be tied to the &quot;Feature: ...&quot; entry. This is used when e.g. customizing a background during import to a VTT."
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -264,7 +269,8 @@
 						},
 						"fluff": {
 							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-							"$ref": "util.json#/$defs/fluffObject"
+							"$ref": "util.json#/$defs/fluffObject",
+							"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 						},
 						"_copy": {
 							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"

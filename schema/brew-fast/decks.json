@@ -64,7 +64,8 @@
 				},
 				"hasCardArt": {
 					"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "A hint used by filters, determining whether or not this deck should be filtered out by default."
 				}
 			},
 			"additionalProperties": false
@@ -131,7 +132,8 @@
 						},
 						"hasCardArt": {
 							"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "A hint used by filters, determining whether or not this deck should be filtered out by default."
 						}
 					},
 					"additionalProperties": false,
@@ -201,7 +203,8 @@
 						},
 						"hasCardArt": {
 							"description": "A hint used by filters, determining whether or not this deck should be filtered out by default.",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "A hint used by filters, determining whether or not this deck should be filtered out by default."
 						},
 						"_copy": {
 							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"

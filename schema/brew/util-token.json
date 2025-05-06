@@ -11,7 +11,8 @@
 			"not": {
 				"type": "string",
 				"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io)/"
-			}
+			},
+			"markdownDescription": "A full token URL for the entity. Prefer &quot;tokenHref&quot; instead, or &quot;token&quot; for internal use."
 		},
 		"token": {
 			"description": "A name/source pair used to construct a token URL for the entity. For example `\"name\": \"Goblin\", \"source\": \"MM\"` for a creature token would refer to the MM Goblin's token.",
@@ -28,7 +29,8 @@
 				"name",
 				"source"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"markdownDescription": "A name/source pair used to construct a token URL for the entity. For example `&quot;name&quot;: &quot;Goblin&quot;, &quot;source&quot;: &quot;MM&quot;` for a creature token would refer to the MM Goblin&apos;s token."
 		},
 		"tokenHref": {
 			"$ref": "entry.json#/$defs/mediaHref"

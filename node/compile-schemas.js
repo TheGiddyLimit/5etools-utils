@@ -2,6 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import {listJsonFiles, readJsonSync} from "../lib/UtilFs.js";
 import MiscUtil from "../lib/UtilMisc.js";
+import {escapeQuotes} from "../lib/UtilString.js";
 
 const DIR_IN = "./schema-template/";
 const COMPILE_MODE = {
@@ -88,6 +89,21 @@ class SchemaPreprocessor {
 					case "$$if": return this._recurse_$$if({root, obj, k, v, compileMode, isFast, dirSource});
 					case "$$ifNotFast": return this._recurse_$$ifNotFast({root, obj, k, v, compileMode, isFast, dirSource});
 					case "$$switch_key": return this._recurse_$$switch_key({root, obj, k, v, compileMode, isFast, dirSource});
+
+					// Attempt to support VSCode's dubious "description as HTML" interpretation
+					// See also:
+					//   - the spec; https://json-schema.org/draft/2020-12/meta/meta-data
+					//   - the docs; https://json-schema.org/understanding-json-schema/reference/annotations
+					//   - Idea's version; https://www.jetbrains.com/help/idea/json.html#ws_json_show_doc_in_html
+					//   - VSCode's docs; https://code.visualstudio.com/docs/languages/json#_use-rich-formatting-in-hovers
+					case "description": {
+						if (typeof v !== "string") return obj[k] = this._recurse({root, obj: v, compileMode, isFast, dirSource});
+
+						obj[k] = v;
+						obj["markdownDescription"] = escapeQuotes(v);
+						return;
+					}
+
 					default: return obj[k] = this._recurse({root, obj: v, compileMode, isFast, dirSource});
 				}
 			});

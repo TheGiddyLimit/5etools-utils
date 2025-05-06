@@ -40,11 +40,13 @@
 				"color": {
 					"description": "For homebrew use only; HTML hex color code this source should use when displayed on the DM Screen.\ne.g. \"ff00ff\"",
 					"type": "string",
-					"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+					"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+					"markdownDescription": "For homebrew use only; HTML hex color code this source should use when displayed on the DM Screen.\ne.g. &quot;ff00ff&quot;"
 				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-					"$ref": "util.json#/$defs/fluffObject"
+					"$ref": "util.json#/$defs/fluffObject",
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
@@ -111,11 +113,13 @@
 				"color": {
 					"description": "For homebrew use only; HTML hex color code this source should use when displayed on the DM Screen.\ne.g. \"ff00ff\"",
 					"type": "string",
-					"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+					"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+					"markdownDescription": "For homebrew use only; HTML hex color code this source should use when displayed on the DM Screen.\ne.g. &quot;ff00ff&quot;"
 				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-					"$ref": "util.json#/$defs/fluffObject"
+					"$ref": "util.json#/$defs/fluffObject",
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"

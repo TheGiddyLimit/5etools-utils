@@ -42,55 +42,67 @@
 							},
 							"abbreviation": {
 								"type": "string",
-								"description": "Abbreviated form of the source, to display on the site."
+								"description": "Abbreviated form of the source, to display on the site.",
+								"markdownDescription": "Abbreviated form of the source, to display on the site."
 							},
 							"color": {
 								"type": "string",
 								"description": "HTML hex color code this source should use when displayed in lists, e.g. 'ff00ff'",
-								"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+								"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+								"markdownDescription": "HTML hex color code this source should use when displayed in lists, e.g. &apos;ff00ff&apos;"
 							},
 							"full": {
 								"type": "string",
-								"description": "Full title of the source, to display on the site."
+								"description": "Full title of the source, to display on the site.",
+								"markdownDescription": "Full title of the source, to display on the site."
 							},
 							"authors": {
 								"type": "array",
 								"description": "A list of authors who created the homebrew source.",
 								"items": {
 									"type": "string",
-									"description": "Author name."
-								}
+									"description": "Author name.",
+									"markdownDescription": "Author name."
+								},
+								"markdownDescription": "A list of authors who created the homebrew source."
 							},
 							"convertedBy": {
 								"type": "array",
 								"description": "An optional list of people who contributed to converting the source to 5etools format.",
 								"items": {
 									"type": "string",
-									"description": "Contributor name."
-								}
+									"description": "Contributor name.",
+									"markdownDescription": "Contributor name."
+								},
+								"markdownDescription": "An optional list of people who contributed to converting the source to 5etools format."
 							},
 							"dateReleased": {
 								"type": "string",
 								"format": "date",
-								"description": "The date of release of the source, in the format YYYY-MM-DD (RFC3339)."
+								"description": "The date of release of the source, in the format YYYY-MM-DD (RFC3339).",
+								"markdownDescription": "The date of release of the source, in the format YYYY-MM-DD (RFC3339)."
 							},
 							"version": {
 								"type": "string",
-								"description": "The source version, e.g. \"1.2.3\"."
+								"description": "The source version, e.g. \"1.2.3\".",
+								"markdownDescription": "The source version, e.g. &quot;1.2.3&quot;."
 							},
 							"url": {
 								"type": "string",
 								"description": "A direct link to the source, if available in web form or on a store.",
-								"minLength": 3
+								"minLength": 3,
+								"markdownDescription": "A direct link to the source, if available in web form or on a store."
 							},
 							"partnered": {
 								"description": "If this is a \"partnered\" source; usually one which is shown under the \"Partnered\" section of \"https://www.dndbeyond.com/sources\".",
-								"type": "boolean"
+								"type": "boolean",
+								"markdownDescription": "If this is a &quot;partnered&quot; source; usually one which is shown under the &quot;Partnered&quot; section of &quot;https://www.dndbeyond.com/sources&quot;."
 							},
 							"targetSchema": {
 								"deprecated": true,
 								"type": "string",
-								"description": "The target schema version in 5etools, e.g. \"1.2.3\"."
+								"description": "The target schema version in 5etools, e.g. \"1.2.3\".",
+								"markdownDescription": "The target schema version in 5etools, e.g. &quot;1.2.3&quot;."
 							}
 						},
 						"required": [
@@ -99,7 +111,8 @@
 							"full",
 							"version"
 						],
-						"additionalProperties": false
+						"additionalProperties": false,
+						"markdownDescription": "A set of properties describing a &quot;source.&quot; A source could be, for example, a homebrew PDF, book, or blog post."
 					},
 					"minItems": 1,
 					"uniqueItems": true
@@ -120,7 +133,8 @@
 								"color": {
 									"type": "string",
 									"description": "HTML hex color code this source should use when displayed in lists, e.g. 'ff00ff'",
-									"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+									"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+									"markdownDescription": "HTML hex color code this source should use when displayed in lists, e.g. &apos;ff00ff&apos;"
 								}
 							},
 							"required": [
@@ -128,7 +142,8 @@
 								"short"
 							]
 						}
-					}
+					},
+					"markdownDescription": "Object names are spell school abbreviations (e.g. `&quot;X&quot;`); values should be objects with `&quot;full&quot;`` (used in the main entry, e.g. &quot;Evocation&quot;) and `&quot;short&quot;` (used in the list view, e.g. `&quot;Evoc.&quot;`) key/values."
 				},
 				"spellDistanceUnits": {
 					"type": "object",
@@ -148,7 +163,8 @@
 								"feetPerUnit"
 							]
 						}
-					}
+					},
+					"markdownDescription": "Object names are spell distance units (e.g. `&quot;hectares&quot;`); values should be objects with optional `&quot;singular&quot;`` (singular form of the unit, e.g. &quot;foot&quot; for the singular of &quot;feet&quot;--if unspecified, a trailing &quot;s&quot; is removed from the plural version, if it exists, and the result is used as the singular form) and `&quot;feetPerUnit&quot;` (e.g. for a &quot;yards&quot; custom unit, this would be `3`, as there are three feet in a yard) key/values."
 				},
 				"optionalFeatureTypes": {
 					"type": "object",
@@ -157,7 +173,8 @@
 						".*": {
 							"type": "string"
 						}
-					}
+					},
+					"markdownDescription": "Object names are optional feature &quot;type&quot; shorthands (e.g. &quot;EI&quot; for &quot;Eldritch Invocation&quot; which will be displayed in the list view as a sortable column"
 				},
 				"featCategories": {
 					"type": "object",
@@ -166,7 +183,8 @@
 						".*": {
 							"type": "string"
 						}
-					}
+					},
+					"markdownDescription": "Object names are feat &quot;category&quot; shorthands (e.g. &quot;O&quot; for &quot;Origin&quot; which will be displayed in the list view as a sortable column"
 				},
 				"psionicTypes": {
 					"type": "object",
@@ -183,11 +201,13 @@
 								},
 								"hasOrder": {
 									"description": "If this type has a psionic order.",
-									"type": "boolean"
+									"type": "boolean",
+									"markdownDescription": "If this type has a psionic order."
 								},
 								"isAltDisplay": {
 									"description": "If this type should display its psionic type/order with the format \"Greater Discipline (Awakened)\" instead of the standard \"Awakened Greater Discipline\"",
-									"type": "boolean"
+									"type": "boolean",
+									"markdownDescription": "If this type should display its psionic type/order with the format &quot;Greater Discipline (Awakened)&quot; instead of the standard &quot;Awakened Greater Discipline&quot;"
 								}
 							},
 							"required": [
@@ -195,7 +215,8 @@
 								"short"
 							]
 						}
-					}
+					},
+					"markdownDescription": "Object names are psionic type abbreviations (e.g. `&quot;X&quot;`); values should be objects with `&quot;full&quot;`` (used in the main entry, e.g. &quot;Greater Discipline&quot;) and `&quot;short&quot;` (used in the list view, e.g. `&quot;G. Discipline&quot;`) key/values."
 				},
 				"currencyConversions": {
 					"type": "object",
@@ -208,15 +229,18 @@
 								"properties": {
 									"coin": {
 										"type": "string",
-										"description": "Coin abbreviation, e.g. \"gp\""
+										"description": "Coin abbreviation, e.g. \"gp\"",
+										"markdownDescription": "Coin abbreviation, e.g. &quot;gp&quot;"
 									},
 									"mult": {
 										"type": "number",
-										"description": "A multiplier for converting copper to this currency, e.g. \"0.01\" for standard gold pieces"
+										"description": "A multiplier for converting copper to this currency, e.g. \"0.01\" for standard gold pieces",
+										"markdownDescription": "A multiplier for converting copper to this currency, e.g. &quot;0.01&quot; for standard gold pieces"
 									},
 									"isFallback": {
 										"type": "boolean",
-										"description": "If true, this currency will be used as a fallback when the copper value of the item is a fractional value (e.g. a single ball bearing is worth 0.1 cp; marking gold as the fallback currency would have this be converted to gold)."
+										"description": "If true, this currency will be used as a fallback when the copper value of the item is a fractional value (e.g. a single ball bearing is worth 0.1 cp; marking gold as the fallback currency would have this be converted to gold).",
+										"markdownDescription": "If true, this currency will be used as a fallback when the copper value of the item is a fractional value (e.g. a single ball bearing is worth 0.1 cp; marking gold as the fallback currency would have this be converted to gold)."
 									}
 								},
 								"required": [
@@ -227,21 +251,25 @@
 							"minItems": 1,
 							"uniqueItems": true
 						}
-					}
+					},
+					"markdownDescription": "Keys should be uniquely-named value conversion objects, and can be referenced from item entities as &quot;currencyConversion&quot;: &quot;&lt;MyKey&gt;&quot;. The currency conversion info will then be used when rendering the value of the item."
 				},
 				"dateAdded": {
 					"type": "integer",
-					"description": "The epoch timestamp (in seconds) when the homebrew was added to the repository. Not guaranteed to be anywhere near accurate."
+					"description": "The epoch timestamp (in seconds) when the homebrew was added to the repository. Not guaranteed to be anywhere near accurate.",
+					"markdownDescription": "The epoch timestamp (in seconds) when the homebrew was added to the repository. Not guaranteed to be anywhere near accurate."
 				},
 				"dateLastModified": {
 					"type": "integer",
-					"description": "The epoch timestamp (in seconds) when the homebrew was last modified. Not guaranteed to be anywhere near accurate."
+					"description": "The epoch timestamp (in seconds) when the homebrew was last modified. Not guaranteed to be anywhere near accurate.",
+					"markdownDescription": "The epoch timestamp (in seconds) when the homebrew was last modified. Not guaranteed to be anywhere near accurate."
 				},
 				"_dateLastModifiedHash": {
 					"type": "string",
 					"description": "A file hash used to automatically update the value of \"dateLastModified\". Should not be manually created/edited.",
 					"minLength": 10,
-					"maxLength": 10
+					"maxLength": 10,
+					"markdownDescription": "A file hash used to automatically update the value of &quot;dateLastModified&quot;. Should not be manually created/edited."
 				},
 				"dependencies": {
 					"description": "A map of `\"<data property>\": [\"<JsonSource1>\", ..., \"<JsonSourceN>\"]`. Entities from these sources can then be extended/referenced in this file.\nNote: when copying classes/subclasses/class features/subclass features, the array should consist of \"<classIdentifier1>\", ..., \"<classIdentifierN>\" items, where \"classIdentifierN\" matches the keys in \"5etools/data/class/index.json\" (when copying class/etc. homebrew, normal \"source\"-based linking applies).",
@@ -255,7 +283,8 @@
 							"minItems": 1,
 							"uniqueItems": true
 						}
-					}
+					},
+					"markdownDescription": "A map of `&quot;&lt;data property&gt;&quot;: [&quot;&lt;JsonSource1&gt;&quot;, ..., &quot;&lt;JsonSourceN&gt;&quot;]`. Entities from these sources can then be extended/referenced in this file.\nNote: when copying classes/subclasses/class features/subclass features, the array should consist of &quot;&lt;classIdentifier1&gt;&quot;, ..., &quot;&lt;classIdentifierN&gt;&quot; items, where &quot;classIdentifierN&quot; matches the keys in &quot;5etools/data/class/index.json&quot; (when copying class/etc. homebrew, normal &quot;source&quot;-based linking applies)."
 				},
 				"includes": {
 					"description": "Structure as per \"dependencies\". Additional sources to be included when loading the file.",
@@ -269,7 +298,8 @@
 							"minItems": 1,
 							"uniqueItems": true
 						}
-					}
+					},
+					"markdownDescription": "Structure as per &quot;dependencies&quot;. Additional sources to be included when loading the file."
 				},
 				"internalCopies": {
 					"description": "An array of keys that are copied from within the current document. e.g. \"item\", \"monsterFluff\", \"background\" etc.",
@@ -278,7 +308,8 @@
 						"type": "string"
 					},
 					"minItems": 1,
-					"uniqueItems": true
+					"uniqueItems": true,
+					"markdownDescription": "An array of keys that are copied from within the current document. e.g. &quot;item&quot;, &quot;monsterFluff&quot;, &quot;background&quot; etc."
 				},
 				"fonts": {
 					"description": "A map of \"font family\" to font URL.",
@@ -288,11 +319,13 @@
 							"type": "string",
 							"minLength": 3
 						}
-					}
+					},
+					"markdownDescription": "A map of &quot;font family&quot; to font URL."
 				},
 				"unlisted": {
 					"description": "If this homebrew file should be ignored/hidden by any indexer.",
-					"const": true
+					"const": true,
+					"markdownDescription": "If this homebrew file should be ignored/hidden by any indexer."
 				},
 				"status": {
 					"description": "An overall status for the homebrew.\n\"ready\" indicates that this brew is ready for use, and is in an internally consistent state.\n\"wip\" indicates that this brew is e.g. incomplete, or partially migrated between versions of the source document(s).\n\"invalid\" indicates that using this brew is inadvisable, because while it is schema-passing, it breaks clients which attempt to use it.\n\"deprecated\" indicates this brew is ready for use, but that using it is inadvisable, because e.g. it has been superseded by another brew.",
@@ -302,11 +335,13 @@
 						"wip",
 						"invalid",
 						"deprecated"
-					]
+					],
+					"markdownDescription": "An overall status for the homebrew.\n&quot;ready&quot; indicates that this brew is ready for use, and is in an internally consistent state.\n&quot;wip&quot; indicates that this brew is e.g. incomplete, or partially migrated between versions of the source document(s).\n&quot;invalid&quot; indicates that using this brew is inadvisable, because while it is schema-passing, it breaks clients which attempt to use it.\n&quot;deprecated&quot; indicates this brew is ready for use, but that using it is inadvisable, because e.g. it has been superseded by another brew."
 				},
 				"edition": {
 					"description": "The rules edition this homebrew is compatible with. If ambiguous, \"classic\" should be specified.",
-					"$ref": "util-edition.json#/$defs/edition"
+					"$ref": "util-edition.json#/$defs/edition",
+					"markdownDescription": "The rules edition this homebrew is compatible with. If ambiguous, &quot;classic&quot; should be specified."
 				}
 			},
 			"required": [
@@ -315,7 +350,8 @@
 				"dateLastModified",
 				"edition"
 			],
-			"additionalProperties": false
+			"additionalProperties": false,
+			"markdownDescription": "Metadata for the included data arrays"
 		},
 		"_test": {
 			"description": "Supplementary information used when testing this homebrew.",
@@ -326,10 +362,12 @@
 					"type": "array",
 					"items": {
 						"$ref": "util.json#/$defs/sourceJson"
-					}
+					},
+					"markdownDescription": "Other sources from which this homebrew should be allowed to use images."
 				}
 			},
-			"minProperties": 1
+			"minProperties": 1,
+			"markdownDescription": "Supplementary information used when testing this homebrew."
 		},
 		"spellList": {
 			"type": "array",
@@ -429,7 +467,8 @@
 				"../_schema/homebrew.json",
 				"https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew-fast/homebrew.json",
 				"https://raw.githubusercontent.com/TheGiddyLimit/5etools-utils/master/schema/brew/homebrew.json"
-			]
+			],
+			"markdownDescription": "An optional key that allows you specify the schema you want to verify against in compatible IDEs.\nIt is  advised that you leave this key out when submitting to the repo."
 		},
 		"blocklist": {
 			"description": "An array of objects to blocklist from display on the site.\nUse of this in public brew files is strongly discouraged.",
@@ -442,7 +481,8 @@
 					},
 					"hash": {
 						"type": "string",
-						"description": "A unique reference for the removed item. Use the blocklist tool on the site to generate this."
+						"description": "A unique reference for the removed item. Use the blocklist tool on the site to generate this.",
+						"markdownDescription": "A unique reference for the removed item. Use the blocklist tool on the site to generate this."
 					},
 					"category": {
 						"type": "string"
@@ -467,7 +507,8 @@
 				"additionalProperties": false
 			},
 			"minItems": 1,
-			"uniqueItems": true
+			"uniqueItems": true,
+			"markdownDescription": "An array of objects to blocklist from display on the site.\nUse of this in public brew files is strongly discouraged."
 		},
 		"adventure": {
 			"$ref": "adventures.json#/properties/adventure"
@@ -531,11 +572,13 @@
 		},
 		"roll20Spell": {
 			"description": "Based on the Roll20 JSON data, example available here: https://app.roll20.net/compendium/dnd5e/Spells:Fireball.json",
-			"$ref": "spells/roll20.json#/properties/spell"
+			"$ref": "spells/roll20.json#/properties/spell",
+			"markdownDescription": "Based on the Roll20 JSON data, example available here: https://app.roll20.net/compendium/dnd5e/Spells:Fireball.json"
 		},
 		"foundrySpell": {
 			"description": "Based on the Foundry VTT spell data, examples available here: https://gitlab.com/foundrynet/dnd5e/-/tree/master/packs/src/spells",
-			"$ref": "spells/foundry.json#/properties/spell"
+			"$ref": "spells/foundry.json#/properties/spell",
+			"markdownDescription": "Based on the Foundry VTT spell data, examples available here: https://gitlab.com/foundrynet/dnd5e/-/tree/master/packs/src/spells"
 		},
 		"action": {
 			"$ref": "actions.json#/properties/action"
@@ -775,5 +818,6 @@
 	"additionalProperties": false,
 	"required": [
 		"_meta"
-	]
+	],
+	"markdownDescription": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`"
 }

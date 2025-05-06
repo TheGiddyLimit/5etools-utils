@@ -115,7 +115,8 @@
 						{
 							"type": "null"
 						}
-					]
+					],
+					"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 				},
 				"hasFluff": {
 					"const": true
@@ -128,7 +129,8 @@
 				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-					"$ref": "util.json#/$defs/fluffObject"
+					"$ref": "util.json#/$defs/fluffObject",
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
@@ -261,7 +263,8 @@
 								{
 									"type": "null"
 								}
-							]
+							],
+							"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 						},
 						"hasFluff": {
 							"const": true
@@ -274,7 +277,8 @@
 						},
 						"fluff": {
 							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-							"$ref": "util.json#/$defs/fluffObject"
+							"$ref": "util.json#/$defs/fluffObject",
+							"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
@@ -410,7 +414,8 @@
 								{
 									"type": "null"
 								}
-							]
+							],
+							"markdownDescription": "Additional filter-only tags, to be used when more specific data (&quot;skillProficiencies&quot;, etc.) is not appropriate, due to e.g. conditional or temporary effects."
 						},
 						"hasFluff": {
 							"const": true
@@ -423,7 +428,8 @@
 						},
 						"fluff": {
 							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-							"$ref": "util.json#/$defs/fluffObject"
+							"$ref": "util.json#/$defs/fluffObject",
+							"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"

@@ -109,7 +109,8 @@
 				},
 				"province": {
 					"description": "The nouveau form of \"title\", first seen in MTF",
-					"type": "string"
+					"type": "string",
+					"markdownDescription": "The nouveau form of &quot;title&quot;, first seen in MTF"
 				},
 				"symbol": {
 					"type": "string"
@@ -157,7 +158,8 @@
 				},
 				"customExtensionOf": {
 					"type": "string",
-					"description": "A UID of an existing deity that this deity extends. e.g. \"Bahgtru|Orc|SCAG\""
+					"description": "A UID of an existing deity that this deity extends. e.g. \"Bahgtru|Orc|SCAG\"",
+					"markdownDescription": "A UID of an existing deity that this deity extends. e.g. &quot;Bahgtru|Orc|SCAG&quot;"
 				},
 				"piety": {
 					"type": "boolean"
@@ -284,7 +286,8 @@
 						},
 						"province": {
 							"description": "The nouveau form of \"title\", first seen in MTF",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The nouveau form of &quot;title&quot;, first seen in MTF"
 						},
 						"symbol": {
 							"type": "string"
@@ -332,7 +335,8 @@
 						},
 						"customExtensionOf": {
 							"type": "string",
-							"description": "A UID of an existing deity that this deity extends. e.g. \"Bahgtru|Orc|SCAG\""
+							"description": "A UID of an existing deity that this deity extends. e.g. \"Bahgtru|Orc|SCAG\"",
+							"markdownDescription": "A UID of an existing deity that this deity extends. e.g. &quot;Bahgtru|Orc|SCAG&quot;"
 						},
 						"piety": {
 							"type": "boolean"
@@ -462,7 +466,8 @@
 						},
 						"province": {
 							"description": "The nouveau form of \"title\", first seen in MTF",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "The nouveau form of &quot;title&quot;, first seen in MTF"
 						},
 						"symbol": {
 							"type": "string"
@@ -510,7 +515,8 @@
 						},
 						"customExtensionOf": {
 							"type": "string",
-							"description": "A UID of an existing deity that this deity extends. e.g. \"Bahgtru|Orc|SCAG\""
+							"description": "A UID of an existing deity that this deity extends. e.g. \"Bahgtru|Orc|SCAG\"",
+							"markdownDescription": "A UID of an existing deity that this deity extends. e.g. &quot;Bahgtru|Orc|SCAG&quot;"
 						},
 						"piety": {
 							"type": "boolean"

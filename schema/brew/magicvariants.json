@@ -136,7 +136,8 @@
 									"type": [
 										"boolean"
 									]
-								}
+								},
+								"markdownDescription": "A more restrictive area for custom boolean-only properties to be stored."
 							}
 						},
 						"minProperties": 1,
@@ -148,22 +149,26 @@
 					"properties": {
 						"type": {
 							"description": "Generally this should be omitted, as the type of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemType"
+							"$ref": "items-shared.json#/$defs/itemType",
+							"markdownDescription": "Generally this should be omitted, as the type of the base item will be used."
 						},
 						"typeAlt": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
 						"property": {
 							"description": "Generally this should be omitted, as the properties of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Generally this should be omitted, as the properties of the base item will be used."
 						},
 						"propertyAdd": {
 							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Additional properties to grant the specific variant, if not already present on the base item."
 						},
 						"propertyRemove": {
 							"description": "Properties to remove from the specific variant, if present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Properties to remove from the specific variant, if present on the base item."
 						},
 						"range": {
 							"type": "string"
@@ -218,7 +223,8 @@
 						},
 						"dmg2": {
 							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+							"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 						},
 						"dmgType": {
 							"$ref": "util.json#/$defs/dataDamageTags"
@@ -351,7 +357,8 @@
 						},
 						"valueExpression": {
 							"description": "Expression used to calculate each specific variant's value.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s value."
 						},
 						"valueRarity": {
 							"$ref": "items-shared.json#/$defs/itemRarity"
@@ -367,7 +374,8 @@
 						},
 						"weightExpression": {
 							"description": "Expression used to calculate each specific variant's weight.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s weight."
 						},
 						"barding": {
 							"type": "boolean"
@@ -395,18 +403,21 @@
 						},
 						"hasRefs": {
 							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+							"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 						},
 						"customProperties": {
 							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"type": "object",
+							"markdownDescription": "An unrestricted area for custom properties to be stored."
 						},
 						"acSpecial": {
 							"$ref": "items-shared.json#/$defs/itemAcSpecial"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "ID of a value conversion table. Homebrew only."
 						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"
@@ -560,7 +571,8 @@
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds ammunition text to the header of the generic variant."
 				},
 				"reqAttuneTags": {
 					"$ref": "util.json#/$defs/reqAttuneTags"
@@ -736,7 +748,8 @@
 									"type": [
 										"boolean"
 									]
-								}
+								},
+								"markdownDescription": "A more restrictive area for custom boolean-only properties to be stored."
 							}
 						},
 						"minProperties": 1,
@@ -748,22 +761,26 @@
 					"properties": {
 						"type": {
 							"description": "Generally this should be omitted, as the type of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemType"
+							"$ref": "items-shared.json#/$defs/itemType",
+							"markdownDescription": "Generally this should be omitted, as the type of the base item will be used."
 						},
 						"typeAlt": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
 						"property": {
 							"description": "Generally this should be omitted, as the properties of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Generally this should be omitted, as the properties of the base item will be used."
 						},
 						"propertyAdd": {
 							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Additional properties to grant the specific variant, if not already present on the base item."
 						},
 						"propertyRemove": {
 							"description": "Properties to remove from the specific variant, if present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Properties to remove from the specific variant, if present on the base item."
 						},
 						"range": {
 							"type": "string"
@@ -818,7 +835,8 @@
 						},
 						"dmg2": {
 							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+							"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 						},
 						"dmgType": {
 							"$ref": "util.json#/$defs/dataDamageTags"
@@ -951,7 +969,8 @@
 						},
 						"valueExpression": {
 							"description": "Expression used to calculate each specific variant's value.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s value."
 						},
 						"valueRarity": {
 							"$ref": "items-shared.json#/$defs/itemRarity"
@@ -967,7 +986,8 @@
 						},
 						"weightExpression": {
 							"description": "Expression used to calculate each specific variant's weight.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s weight."
 						},
 						"barding": {
 							"type": "boolean"
@@ -995,18 +1015,21 @@
 						},
 						"hasRefs": {
 							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+							"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 						},
 						"customProperties": {
 							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"type": "object",
+							"markdownDescription": "An unrestricted area for custom properties to be stored."
 						},
 						"acSpecial": {
 							"$ref": "items-shared.json#/$defs/itemAcSpecial"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "ID of a value conversion table. Homebrew only."
 						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"
@@ -1160,7 +1183,8 @@
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds ammunition text to the header of the generic variant."
 				},
 				"reqAttuneTags": {
 					"$ref": "util.json#/$defs/reqAttuneTags"
@@ -1336,7 +1360,8 @@
 									"type": [
 										"boolean"
 									]
-								}
+								},
+								"markdownDescription": "A more restrictive area for custom boolean-only properties to be stored."
 							}
 						},
 						"minProperties": 1,
@@ -1348,22 +1373,26 @@
 					"properties": {
 						"type": {
 							"description": "Generally this should be omitted, as the type of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemType"
+							"$ref": "items-shared.json#/$defs/itemType",
+							"markdownDescription": "Generally this should be omitted, as the type of the base item will be used."
 						},
 						"typeAlt": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
 						"property": {
 							"description": "Generally this should be omitted, as the properties of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Generally this should be omitted, as the properties of the base item will be used."
 						},
 						"propertyAdd": {
 							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Additional properties to grant the specific variant, if not already present on the base item."
 						},
 						"propertyRemove": {
 							"description": "Properties to remove from the specific variant, if present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Properties to remove from the specific variant, if present on the base item."
 						},
 						"range": {
 							"type": "string"
@@ -1418,7 +1447,8 @@
 						},
 						"dmg2": {
 							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+							"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 						},
 						"dmgType": {
 							"$ref": "util.json#/$defs/dataDamageTags"
@@ -1551,7 +1581,8 @@
 						},
 						"valueExpression": {
 							"description": "Expression used to calculate each specific variant's value.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s value."
 						},
 						"valueRarity": {
 							"$ref": "items-shared.json#/$defs/itemRarity"
@@ -1567,7 +1598,8 @@
 						},
 						"weightExpression": {
 							"description": "Expression used to calculate each specific variant's weight.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s weight."
 						},
 						"barding": {
 							"type": "boolean"
@@ -1595,18 +1627,21 @@
 						},
 						"hasRefs": {
 							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+							"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 						},
 						"customProperties": {
 							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"type": "object",
+							"markdownDescription": "An unrestricted area for custom properties to be stored."
 						},
 						"acSpecial": {
 							"$ref": "items-shared.json#/$defs/itemAcSpecial"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "ID of a value conversion table. Homebrew only."
 						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"
@@ -1764,7 +1799,8 @@
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds ammunition text to the header of the generic variant."
 				},
 				"reqAttuneTags": {
 					"$ref": "util.json#/$defs/reqAttuneTags"
@@ -1942,7 +1978,8 @@
 									"type": [
 										"boolean"
 									]
-								}
+								},
+								"markdownDescription": "A more restrictive area for custom boolean-only properties to be stored."
 							}
 						},
 						"minProperties": 1,
@@ -1954,22 +1991,26 @@
 					"properties": {
 						"type": {
 							"description": "Generally this should be omitted, as the type of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemType"
+							"$ref": "items-shared.json#/$defs/itemType",
+							"markdownDescription": "Generally this should be omitted, as the type of the base item will be used."
 						},
 						"typeAlt": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
 						"property": {
 							"description": "Generally this should be omitted, as the properties of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Generally this should be omitted, as the properties of the base item will be used."
 						},
 						"propertyAdd": {
 							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Additional properties to grant the specific variant, if not already present on the base item."
 						},
 						"propertyRemove": {
 							"description": "Properties to remove from the specific variant, if present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Properties to remove from the specific variant, if present on the base item."
 						},
 						"range": {
 							"type": "string"
@@ -2024,7 +2065,8 @@
 						},
 						"dmg2": {
 							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+							"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 						},
 						"dmgType": {
 							"$ref": "util.json#/$defs/dataDamageTags"
@@ -2157,7 +2199,8 @@
 						},
 						"valueExpression": {
 							"description": "Expression used to calculate each specific variant's value.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s value."
 						},
 						"valueRarity": {
 							"$ref": "items-shared.json#/$defs/itemRarity"
@@ -2173,7 +2216,8 @@
 						},
 						"weightExpression": {
 							"description": "Expression used to calculate each specific variant's weight.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s weight."
 						},
 						"barding": {
 							"type": "boolean"
@@ -2201,18 +2245,21 @@
 						},
 						"hasRefs": {
 							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+							"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 						},
 						"customProperties": {
 							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"type": "object",
+							"markdownDescription": "An unrestricted area for custom properties to be stored."
 						},
 						"acSpecial": {
 							"$ref": "items-shared.json#/$defs/itemAcSpecial"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "ID of a value conversion table. Homebrew only."
 						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"
@@ -2369,7 +2416,8 @@
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds ammunition text to the header of the generic variant."
 				},
 				"reqAttuneTags": {
 					"$ref": "util.json#/$defs/reqAttuneTags"
@@ -2551,7 +2599,8 @@
 									"type": [
 										"boolean"
 									]
-								}
+								},
+								"markdownDescription": "A more restrictive area for custom boolean-only properties to be stored."
 							}
 						},
 						"minProperties": 1,
@@ -2563,22 +2612,26 @@
 					"properties": {
 						"type": {
 							"description": "Generally this should be omitted, as the type of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemType"
+							"$ref": "items-shared.json#/$defs/itemType",
+							"markdownDescription": "Generally this should be omitted, as the type of the base item will be used."
 						},
 						"typeAlt": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
 						"property": {
 							"description": "Generally this should be omitted, as the properties of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Generally this should be omitted, as the properties of the base item will be used."
 						},
 						"propertyAdd": {
 							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Additional properties to grant the specific variant, if not already present on the base item."
 						},
 						"propertyRemove": {
 							"description": "Properties to remove from the specific variant, if present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Properties to remove from the specific variant, if present on the base item."
 						},
 						"range": {
 							"type": "string"
@@ -2633,7 +2686,8 @@
 						},
 						"dmg2": {
 							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+							"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 						},
 						"dmgType": {
 							"$ref": "util.json#/$defs/dataDamageTags"
@@ -2766,7 +2820,8 @@
 						},
 						"valueExpression": {
 							"description": "Expression used to calculate each specific variant's value.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s value."
 						},
 						"valueRarity": {
 							"$ref": "items-shared.json#/$defs/itemRarity"
@@ -2782,7 +2837,8 @@
 						},
 						"weightExpression": {
 							"description": "Expression used to calculate each specific variant's weight.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s weight."
 						},
 						"barding": {
 							"type": "boolean"
@@ -2810,18 +2866,21 @@
 						},
 						"hasRefs": {
 							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+							"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 						},
 						"customProperties": {
 							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"type": "object",
+							"markdownDescription": "An unrestricted area for custom properties to be stored."
 						},
 						"acSpecial": {
 							"$ref": "items-shared.json#/$defs/itemAcSpecial"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "ID of a value conversion table. Homebrew only."
 						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"
@@ -2975,7 +3034,8 @@
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds ammunition text to the header of the generic variant."
 				},
 				"reqAttuneTags": {
 					"$ref": "util.json#/$defs/reqAttuneTags"
@@ -3158,7 +3218,8 @@
 									"type": [
 										"boolean"
 									]
-								}
+								},
+								"markdownDescription": "A more restrictive area for custom boolean-only properties to be stored."
 							}
 						},
 						"minProperties": 1,
@@ -3170,22 +3231,26 @@
 					"properties": {
 						"type": {
 							"description": "Generally this should be omitted, as the type of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemType"
+							"$ref": "items-shared.json#/$defs/itemType",
+							"markdownDescription": "Generally this should be omitted, as the type of the base item will be used."
 						},
 						"typeAlt": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
 						"property": {
 							"description": "Generally this should be omitted, as the properties of the base item will be used.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Generally this should be omitted, as the properties of the base item will be used."
 						},
 						"propertyAdd": {
 							"description": "Additional properties to grant the specific variant, if not already present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Additional properties to grant the specific variant, if not already present on the base item."
 						},
 						"propertyRemove": {
 							"description": "Properties to remove from the specific variant, if present on the base item.",
-							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
+							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray",
+							"markdownDescription": "Properties to remove from the specific variant, if present on the base item."
 						},
 						"range": {
 							"type": "string"
@@ -3240,7 +3305,8 @@
 						},
 						"dmg2": {
 							"type": "string",
-							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\""
+							"description": "The versatile or alternative damage dice of the weapon, e.g. \"1d10\"",
+							"markdownDescription": "The versatile or alternative damage dice of the weapon, e.g. &quot;1d10&quot;"
 						},
 						"dmgType": {
 							"$ref": "util.json#/$defs/dataDamageTags"
@@ -3373,7 +3439,8 @@
 						},
 						"valueExpression": {
 							"description": "Expression used to calculate each specific variant's value.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s value."
 						},
 						"valueRarity": {
 							"$ref": "items-shared.json#/$defs/itemRarity"
@@ -3389,7 +3456,8 @@
 						},
 						"weightExpression": {
 							"description": "Expression used to calculate each specific variant's weight.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Expression used to calculate each specific variant&apos;s weight."
 						},
 						"barding": {
 							"type": "boolean"
@@ -3417,18 +3485,21 @@
 						},
 						"hasRefs": {
 							"type": "boolean",
-							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s."
+							"description": "Whether this item has references within its data to dedicated \"itemEntry\"s.",
+							"markdownDescription": "Whether this item has references within its data to dedicated &quot;itemEntry&quot;s."
 						},
 						"customProperties": {
 							"description": "An unrestricted area for custom properties to be stored.",
-							"type": "object"
+							"type": "object",
+							"markdownDescription": "An unrestricted area for custom properties to be stored."
 						},
 						"acSpecial": {
 							"$ref": "items-shared.json#/$defs/itemAcSpecial"
 						},
 						"currencyConversion": {
 							"description": "ID of a value conversion table. Homebrew only.",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "ID of a value conversion table. Homebrew only."
 						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"
@@ -3582,7 +3653,8 @@
 				},
 				"ammo": {
 					"description": "Adds ammunition text to the header of the generic variant.",
-					"type": "boolean"
+					"type": "boolean",
+					"markdownDescription": "Adds ammunition text to the header of the generic variant."
 				},
 				"reqAttuneTags": {
 					"$ref": "util.json#/$defs/reqAttuneTags"

@@ -117,7 +117,8 @@
 										},
 										"cost": {
 											"description": "In copper pieces.",
-											"type": "number"
+											"type": "number",
+											"markdownDescription": "In copper pieces."
 										},
 										"consume": {
 											"oneOf": [
@@ -146,7 +147,8 @@
 						},
 						"r": {
 							"description": "\"Royalty\" components, as introduced in Acquisitions Incorporated",
-							"type": "boolean"
+							"type": "boolean",
+							"markdownDescription": "&quot;Royalty&quot; components, as introduced in Acquisitions Incorporated"
 						}
 					},
 					"additionalProperties": false
@@ -248,7 +250,8 @@
 							"M",
 							"R",
 							"O"
-						]
+						],
+						"markdownDescription": "M: Melee\n R: Ranged\n O: Other/Unknown"
 					}
 				},
 				"areaTags": {
@@ -271,7 +274,8 @@
 							"Q",
 							"W"
 						]
-					}
+					},
+					"markdownDescription": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n C: Cube\n H: Hemisphere\n L: Line\n MT: Multiple Targets\n N: Cone\n Q: Square\n R: Circle\n ST: Single Target\n S: Sphere\n W: Wall\n Y: Cylinder"
 				},
 				"miscTags": {
 					"type": "array",
@@ -303,7 +307,8 @@
 							"TP",
 							"UBA"
 						]
-					}
+					},
+					"markdownDescription": "AAD: Additional Attack Damage\nADV: Grants Advantage\nDFT: Difficult Terrain\nFMV: Forced Movement\nHL: Healing\nLGT: Creates Light\nLGTS: Creates Sunlight\nMAC: Modifies AC\nOBJ: Affects Objects\nOBS: Obscures Vision\nPIR: Permanent If Repeated\nPRM: Permanent Effects\nPS: Plane Shifting\nRO: Rollable Effects\nSCL: Scaling Effects\nSCT: Scaling Targets\nSMN: Summons Creature\nSGT: Requires Sight\nTHP: Grants Temporary Hit Points\nTP: Teleportation\nUBA: Uses Bonus Action"
 				},
 				"affectsCreatureType": {
 					"type": "array",
@@ -513,7 +518,8 @@
 				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-					"$ref": "../util.json#/$defs/fluffObject"
+					"$ref": "../util.json#/$defs/fluffObject",
+					"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 				}
 			},
 			"additionalProperties": false
@@ -632,7 +638,8 @@
 												},
 												"cost": {
 													"description": "In copper pieces.",
-													"type": "number"
+													"type": "number",
+													"markdownDescription": "In copper pieces."
 												},
 												"consume": {
 													"oneOf": [
@@ -661,7 +668,8 @@
 								},
 								"r": {
 									"description": "\"Royalty\" components, as introduced in Acquisitions Incorporated",
-									"type": "boolean"
+									"type": "boolean",
+									"markdownDescription": "&quot;Royalty&quot; components, as introduced in Acquisitions Incorporated"
 								}
 							},
 							"additionalProperties": false
@@ -763,7 +771,8 @@
 									"M",
 									"R",
 									"O"
-								]
+								],
+								"markdownDescription": "M: Melee\n R: Ranged\n O: Other/Unknown"
 							}
 						},
 						"areaTags": {
@@ -786,7 +795,8 @@
 									"Q",
 									"W"
 								]
-							}
+							},
+							"markdownDescription": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n C: Cube\n H: Hemisphere\n L: Line\n MT: Multiple Targets\n N: Cone\n Q: Square\n R: Circle\n ST: Single Target\n S: Sphere\n W: Wall\n Y: Cylinder"
 						},
 						"miscTags": {
 							"type": "array",
@@ -818,7 +828,8 @@
 									"TP",
 									"UBA"
 								]
-							}
+							},
+							"markdownDescription": "AAD: Additional Attack Damage\nADV: Grants Advantage\nDFT: Difficult Terrain\nFMV: Forced Movement\nHL: Healing\nLGT: Creates Light\nLGTS: Creates Sunlight\nMAC: Modifies AC\nOBJ: Affects Objects\nOBS: Obscures Vision\nPIR: Permanent If Repeated\nPRM: Permanent Effects\nPS: Plane Shifting\nRO: Rollable Effects\nSCL: Scaling Effects\nSCT: Scaling Targets\nSMN: Summons Creature\nSGT: Requires Sight\nTHP: Grants Temporary Hit Points\nTP: Teleportation\nUBA: Uses Bonus Action"
 						},
 						"affectsCreatureType": {
 							"type": "array",
@@ -1028,7 +1039,8 @@
 						},
 						"fluff": {
 							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-							"$ref": "../util.json#/$defs/fluffObject"
+							"$ref": "../util.json#/$defs/fluffObject",
+							"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 						}
 					},
 					"additionalProperties": false,
@@ -1155,7 +1167,8 @@
 												},
 												"cost": {
 													"description": "In copper pieces.",
-													"type": "number"
+													"type": "number",
+													"markdownDescription": "In copper pieces."
 												},
 												"consume": {
 													"oneOf": [
@@ -1184,7 +1197,8 @@
 								},
 								"r": {
 									"description": "\"Royalty\" components, as introduced in Acquisitions Incorporated",
-									"type": "boolean"
+									"type": "boolean",
+									"markdownDescription": "&quot;Royalty&quot; components, as introduced in Acquisitions Incorporated"
 								}
 							},
 							"additionalProperties": false
@@ -1286,7 +1300,8 @@
 									"M",
 									"R",
 									"O"
-								]
+								],
+								"markdownDescription": "M: Melee\n R: Ranged\n O: Other/Unknown"
 							}
 						},
 						"areaTags": {
@@ -1309,7 +1324,8 @@
 									"Q",
 									"W"
 								]
-							}
+							},
+							"markdownDescription": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n C: Cube\n H: Hemisphere\n L: Line\n MT: Multiple Targets\n N: Cone\n Q: Square\n R: Circle\n ST: Single Target\n S: Sphere\n W: Wall\n Y: Cylinder"
 						},
 						"miscTags": {
 							"type": "array",
@@ -1341,7 +1357,8 @@
 									"TP",
 									"UBA"
 								]
-							}
+							},
+							"markdownDescription": "AAD: Additional Attack Damage\nADV: Grants Advantage\nDFT: Difficult Terrain\nFMV: Forced Movement\nHL: Healing\nLGT: Creates Light\nLGTS: Creates Sunlight\nMAC: Modifies AC\nOBJ: Affects Objects\nOBS: Obscures Vision\nPIR: Permanent If Repeated\nPRM: Permanent Effects\nPS: Plane Shifting\nRO: Rollable Effects\nSCL: Scaling Effects\nSCT: Scaling Targets\nSMN: Summons Creature\nSGT: Requires Sight\nTHP: Grants Temporary Hit Points\nTP: Teleportation\nUBA: Uses Bonus Action"
 						},
 						"affectsCreatureType": {
 							"type": "array",
@@ -1551,7 +1568,8 @@
 						},
 						"fluff": {
 							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
-							"$ref": "../util.json#/$defs/fluffObject"
+							"$ref": "../util.json#/$defs/fluffObject",
+							"markdownDescription": "This is intended to be used for Homebrew only - site data should include a fluff file per source"
 						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"

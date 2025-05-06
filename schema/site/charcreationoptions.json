@@ -8,6 +8,7 @@
 		"optionType": {
 			"type": "string",
 			"description": "CS: Character Secret\nDG: Dark Gift\n OF: Optional Feature\n RF:B Replacement Feature: Background\n SG: Supernatural Gift",
+			"markdownDescription": "CS: Character Secret\nDG: Dark Gift\n OF: Optional Feature\n RF:B Replacement Feature: Background\n SG: Supernatural Gift",
 			"enum": [
 				"CS",
 				"DG",

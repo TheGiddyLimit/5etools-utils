@@ -75,7 +75,8 @@
 							"type": "boolean",
 							"const": true
 						}
-					}
+					},
+					"markdownDescription": "A lookup of other properties which should be tied to the &quot;Feature: ...&quot; entry. This is used when e.g. customizing a background during import to a VTT."
 				},
 				"hasFluff": {
 					"type": "boolean"
@@ -171,7 +172,8 @@
 									"type": "boolean",
 									"const": true
 								}
-							}
+							},
+							"markdownDescription": "A lookup of other properties which should be tied to the &quot;Feature: ...&quot; entry. This is used when e.g. customizing a background during import to a VTT."
 						},
 						"hasFluff": {
 							"type": "boolean"
@@ -271,7 +273,8 @@
 									"type": "boolean",
 									"const": true
 								}
-							}
+							},
+							"markdownDescription": "A lookup of other properties which should be tied to the &quot;Feature: ...&quot; entry. This is used when e.g. customizing a background during import to a VTT."
 						},
 						"hasFluff": {
 							"type": "boolean"

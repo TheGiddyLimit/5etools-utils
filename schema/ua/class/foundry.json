@@ -62,7 +62,8 @@
 							"chooseFlags": {
 								"const": true
 							}
-						}
+						},
+						"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 					},
 					"entries": {
 						"type": "array",
@@ -180,7 +181,8 @@
 							"chooseFlags": {
 								"const": true
 							}
-						}
+						},
+						"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 					},
 					"shortName": {
 						"type": "string"
@@ -303,7 +305,8 @@
 							"chooseFlags": {
 								"const": true
 							}
-						}
+						},
+						"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 					},
 					"className": {
 						"type": "string"
@@ -425,7 +428,8 @@
 							"chooseFlags": {
 								"const": true
 							}
-						}
+						},
+						"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
 					},
 					"className": {
 						"type": "string"

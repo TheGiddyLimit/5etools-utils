@@ -127,7 +127,8 @@
 						"unknown",
 						"unknown (magic)",
 						"varies"
-					]
+					],
+					"markdownDescription": "&quot;none&quot; is for mundane items. &quot;unknown (magic)&quot; is for miscellaneous magical items. &quot;unknown&quot; is for miscellaneous mundane items. &quot;varies&quot; is for item groups, or for magic variants, where it has the special functionality of maintaining a base item&apos;s rarity when creating specific variants."
 				}
 			]
 		},
@@ -156,6 +157,7 @@
 		"itemType": {
 			"type": "string",
 			"description": "$|DMG: Treasure\n$A|DMG: Treasure (Art Object)\n$A|XDMG: Treasure (Art Object)\n$C: Treasure (Coinage)\n$C|XPHB: Treasure (Coinage)\n$G|DMG: Treasure (Gemstone)\n$G|XDMG: Treasure (Gemstone)\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nAIR|DMG: Vehicle (air)\nAIR|XPHB: Vehicle (air)\nAT: Artisan Tool\nAT|XPHB: Artisan Tool\nEXP|DMG: Explosive\nEXP|XDMG: Explosive\nFD: Food and Drink\nFD|XPHB: Food and Drink\nG: Adventuring Gear\nG|XPHB: Adventuring Gear\nGS: Gaming Set\nGS|XPHB: Gaming Set\nGV|DMG: Generic Variant\nGV|XDMG: Generic Variant\nHA: Heavy Armor\nHA|XPHB: Heavy Armor\nIDG|TDCSR: Illegal Drug\nINS: Instrument\nINS|XPHB: Instrument\nLA: Light Armor\nLA|XPHB: Light Armor\nM: Melee Weapon\nM|XPHB: Melee Weapon\nMA: Medium Armor\nMA|XPHB: Medium Armor\nMNT: Mount\nMNT|XPHB: Mount\nOTH: Other\nP: Potion\nP|XPHB: Potion\nR: Ranged Weapon\nR|XPHB: Ranged Weapon\nRD|DMG: Rod\nRD|XDMG: Rod\nRG|DMG: Ring\nRG|XDMG: Ring\nS: Shield\nS|XPHB: Shield\nSC|DMG: Scroll\nSC|XPHB: Scroll\nSCF: Spellcasting Focus\nSCF|XPHB: Spellcasting Focus\nSHP: Vehicle (water)\nSHP|XPHB: Vehicle (water)\nSPC|AAG: Vehicle (space)\nT: Tool\nT|XPHB: Tool\nTAH: Tack and Harness\nTAH|XPHB: Tack and Harness\nTB|XDMG: Trade Bar\nTG: Trade Good\nTG|XPHB: Trade Good\nVEH: Vehicle (land)\nVEH|XPHB: Vehicle (land)\nWD|DMG: Wand\nWD|XDMG: Wand",
+			"markdownDescription": "$|DMG: Treasure\n$A|DMG: Treasure (Art Object)\n$A|XDMG: Treasure (Art Object)\n$C: Treasure (Coinage)\n$C|XPHB: Treasure (Coinage)\n$G|DMG: Treasure (Gemstone)\n$G|XDMG: Treasure (Gemstone)\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nAIR|DMG: Vehicle (air)\nAIR|XPHB: Vehicle (air)\nAT: Artisan Tool\nAT|XPHB: Artisan Tool\nEXP|DMG: Explosive\nEXP|XDMG: Explosive\nFD: Food and Drink\nFD|XPHB: Food and Drink\nG: Adventuring Gear\nG|XPHB: Adventuring Gear\nGS: Gaming Set\nGS|XPHB: Gaming Set\nGV|DMG: Generic Variant\nGV|XDMG: Generic Variant\nHA: Heavy Armor\nHA|XPHB: Heavy Armor\nIDG|TDCSR: Illegal Drug\nINS: Instrument\nINS|XPHB: Instrument\nLA: Light Armor\nLA|XPHB: Light Armor\nM: Melee Weapon\nM|XPHB: Melee Weapon\nMA: Medium Armor\nMA|XPHB: Medium Armor\nMNT: Mount\nMNT|XPHB: Mount\nOTH: Other\nP: Potion\nP|XPHB: Potion\nR: Ranged Weapon\nR|XPHB: Ranged Weapon\nRD|DMG: Rod\nRD|XDMG: Rod\nRG|DMG: Ring\nRG|XDMG: Ring\nS: Shield\nS|XPHB: Shield\nSC|DMG: Scroll\nSC|XPHB: Scroll\nSCF: Spellcasting Focus\nSCF|XPHB: Spellcasting Focus\nSHP: Vehicle (water)\nSHP|XPHB: Vehicle (water)\nSPC|AAG: Vehicle (space)\nT: Tool\nT|XPHB: Tool\nTAH: Tack and Harness\nTAH|XPHB: Tack and Harness\nTB|XDMG: Trade Bar\nTG: Trade Good\nTG|XPHB: Trade Good\nVEH: Vehicle (land)\nVEH|XPHB: Vehicle (land)\nWD|DMG: Wand\nWD|XDMG: Wand",
 			"enum": [
 				"$|DMG",
 				"$A|DMG",
@@ -237,6 +239,7 @@
 		"itemProperty": {
 			"description": "2H: Two-Handed\n2H|XPHB: Two-Handed\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nBF|DMG: Burst Fire\nBF|XDMG: Burst Fire\nER|TDCSR: Extended Reach\nF: Finesse\nF|XPHB: Finesse\nH: Heavy\nH|XPHB: Heavy\nL: Light\nL|XPHB: Light\nLD: Loading\nLD|XPHB: Loading\nOTH: Other\nR: Reach\nR|XPHB: Reach\nRLD: Reload\nRLD|XDMG: Reload\nS: Special\nT: Thrown\nT|XPHB: Thrown\nV: Versatile\nV|XPHB: Versatile\nVst|TDCSR: Vestige of Divergence",
 			"type": "string",
+			"markdownDescription": "2H: Two-Handed\n2H|XPHB: Two-Handed\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nBF|DMG: Burst Fire\nBF|XDMG: Burst Fire\nER|TDCSR: Extended Reach\nF: Finesse\nF|XPHB: Finesse\nH: Heavy\nH|XPHB: Heavy\nL: Light\nL|XPHB: Light\nLD: Loading\nLD|XPHB: Loading\nOTH: Other\nR: Reach\nR|XPHB: Reach\nRLD: Reload\nRLD|XDMG: Reload\nS: Special\nT: Thrown\nT|XPHB: Thrown\nV: Versatile\nV|XPHB: Versatile\nVst|TDCSR: Vestige of Divergence",
 			"enum": [
 				"2H",
 				"2H|XPHB",
@@ -315,6 +318,7 @@
 		"itemTier": {
 			"type": "string",
 			"description": "Item Tier as per XGE p135",
+			"markdownDescription": "Item Tier as per XGE p135",
 			"enum": [
 				"minor",
 				"major"
@@ -375,7 +379,8 @@
 		},
 		"itemCarryingCapacity": {
 			"type": "integer",
-			"description": "Of a mount/beast, not a container."
+			"description": "Of a mount/beast, not a container.",
+			"markdownDescription": "Of a mount/beast, not a container."
 		},
 		"itemSpeed": {
 			"type": "integer"
@@ -388,7 +393,8 @@
 			"type": [
 				"integer",
 				"null"
-			]
+			],
+			"markdownDescription": "Maximum dexterity modifier for medium armor."
 		},
 		"packContents": {
 			"type": "array",
@@ -442,7 +448,8 @@
 					"CF/W",
 					"CNS",
 					"TT"
-				]
+				],
+				"markdownDescription": "CF/W: Creates Food/Water\nCNS: Consumable\nTT: Trinket Table"
 			}
 		},
 		"itemAbility": {
@@ -523,7 +530,8 @@
 				"cha": {
 					"type": "integer"
 				}
-			}
+			},
+			"markdownDescription": "Item ability score adjustments."
 		},
 		"itemLight": {
 			"type": "array",
@@ -590,7 +598,8 @@
 					"uniqueItems": true,
 					"items": {
 						"type": "string"
-					}
+					},
+					"markdownDescription": "A generic array of attached spells, implicitly &quot;other&quot; usage type (see below)."
 				},
 				{
 					"description": "Attached spells broken down by usage type.",
@@ -625,13 +634,16 @@
 						},
 						"resourceName": {
 							"description": "Optional resource name for resource-cast spells in this group",
-							"type": "string"
+							"type": "string",
+							"markdownDescription": "Optional resource name for resource-cast spells in this group"
 						}
 					},
 					"additionalProperties": false,
-					"minProperties": 1
+					"minProperties": 1,
+					"markdownDescription": "Attached spells broken down by usage type."
 				}
 			]
 		}
-	}
+	},
+	"markdownDescription": "Shared item definitions to be used in item schemas."
 }

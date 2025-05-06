@@ -36,7 +36,8 @@
 						"GEN",
 						"SW",
 						"U"
-					]
+					],
+					"markdownDescription": "G: Generic\n SW: Siege Weapon\n U: Unknown"
 				},
 				"str": {
 					"type": "integer"
@@ -126,7 +127,8 @@
 					"description": "Actions available with the object, like firing a siege weapon. Uses the normal entries data.",
 					"items": {
 						"$ref": "entry.json"
-					}
+					},
+					"markdownDescription": "Actions available with the object, like firing a siege weapon. Uses the normal entries data."
 				},
 				"token": {
 					"$ref": "util-token.json#/$defs/token"

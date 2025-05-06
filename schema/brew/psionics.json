@@ -19,6 +19,7 @@
 				"type": {
 					"description": "D: Discipline\nT: Talent",
 					"type": "string",
+					"markdownDescription": "D: Discipline\nT: Talent",
 					"examples": [
 						"D",
 						"T"
