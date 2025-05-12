@@ -30,7 +30,7 @@
 						"monster": {
 							"description": "Keys are other sources to be loaded; values are `otherSources` sources from that source to search for.",
 							"type": "object",
-							"markdownDescription": "Keys are other sources to be loaded; values are `otherSources` sources from that source to search for."
+							"markdownDescription": "Keys are other sources to be loaded; values are otherSources sources from that source to search for."
 						}
 					}
 				}

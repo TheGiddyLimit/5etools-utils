@@ -126,7 +126,7 @@
 									"null"
 								]
 							},
-							"markdownDescription": "If unspecified, defaults to `[null, &quot;entries&quot;, &quot;headerEntries&quot;, &quot;footerEntries&quot;]`. To apply to _any_ string, including those outside of sub-properties (for instance, when trying to replace text in an array of plain strings), include `null` as one of the props (i.e. `&quot;props&quot;: [null]`)"
+							"markdownDescription": "If unspecified, defaults to [null, &quot;entries&quot;, &quot;headerEntries&quot;, &quot;footerEntries&quot;]. To apply to _any_ string, including those outside of sub-properties (for instance, when trying to replace text in an array of plain strings), include null as one of the props (i.e. &quot;props&quot;: [null])"
 						}
 					},
 					"required": [
@@ -1053,7 +1053,7 @@
 						"_preserve": {
 							"description": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`.",
 							"$ref": "#/$defs/_preserveObject",
-							"markdownDescription": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`."
+							"markdownDescription": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object {}."
 						}
 					},
 					"required": [
@@ -1079,7 +1079,7 @@
 								"_preserve": {
 									"description": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`.",
 									"$ref": "#/$defs/_preserveObject",
-									"markdownDescription": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`."
+									"markdownDescription": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object {}."
 								}
 							},
 							"required": [

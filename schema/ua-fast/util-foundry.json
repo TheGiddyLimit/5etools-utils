@@ -1269,7 +1269,7 @@
 							"coverThreeQuarters"
 						]
 					},
-					"markdownDescription": "Dumped via e.g. `copy(Object.keys(CONFIG.DND5E.conditionTypes).sort())`"
+					"markdownDescription": "Dumped via e.g. copy(Object.keys(CONFIG.DND5E.conditionTypes).sort())"
 				},
 				"flags": {
 					"type": "object"

@@ -11,7 +11,7 @@
 				"classic",
 				"one"
 			],
-			"markdownDescription": "A context-sensitive behaviour hint. Generally, entities marked with `&quot;edition&quot;: &quot;one&quot;` will not be modified (as they are assumed to be up-to-date) prior to display/use, and entities lacking an `&quot;edition&quot;` or using `&quot;edition&quot;: &quot;classic&quot;` may be modified to better suit modern rules. For example:\n- Classes/subclasses: an edition mismatch between class and subclass will prompt the renderer to add a note that the subclass is from a different game edition, and that feature levels may have to be adjusted accordingly (notably, when rendering synthetic subclass copies)\n- Plutonium, when using the &quot;Modern (2024)&quot; rules version: non-&quot;one&quot; species will be stripped of their ability scores; non-&quot;one&quot; backgrounds will gain extra ability scores; etc."
+			"markdownDescription": "A context-sensitive behaviour hint. Generally, entities marked with &quot;edition&quot;: &quot;one&quot; will not be modified (as they are assumed to be up-to-date) prior to display/use, and entities lacking an &quot;edition&quot; or using &quot;edition&quot;: &quot;classic&quot; may be modified to better suit modern rules. For example:\n- Classes/subclasses: an edition mismatch between class and subclass will prompt the renderer to add a note that the subclass is from a different game edition, and that feature levels may have to be adjusted accordingly (notably, when rendering synthetic subclass copies)\n- Plutonium, when using the &quot;Modern (2024)&quot; rules version: non-&quot;one&quot; species will be stripped of their ability scores; non-&quot;one&quot; backgrounds will gain extra ability scores; etc."
 		}
 	}
 }

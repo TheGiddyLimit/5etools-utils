@@ -167,7 +167,7 @@
 				"customProperties": {
 					"description": "For homebrew use only; a key-value dict of the form: `\"Typical Dissidents\": \"Human Bards\"`",
 					"type": "object",
-					"markdownDescription": "For homebrew use only; a key-value dict of the form: `&quot;Typical Dissidents&quot;: &quot;Human Bards&quot;`"
+					"markdownDescription": "For homebrew use only; a key-value dict of the form: &quot;Typical Dissidents&quot;: &quot;Human Bards&quot;"
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
@@ -340,7 +340,7 @@
 						"customProperties": {
 							"description": "For homebrew use only; a key-value dict of the form: `\"Typical Dissidents\": \"Human Bards\"`",
 							"type": "object",
-							"markdownDescription": "For homebrew use only; a key-value dict of the form: `&quot;Typical Dissidents&quot;: &quot;Human Bards&quot;`"
+							"markdownDescription": "For homebrew use only; a key-value dict of the form: &quot;Typical Dissidents&quot;: &quot;Human Bards&quot;"
 						},
 						"foundryImg": {
 							"$ref": "util-foundry.json#/$defs/foundryImg"
@@ -516,7 +516,7 @@
 						"customProperties": {
 							"description": "For homebrew use only; a key-value dict of the form: `\"Typical Dissidents\": \"Human Bards\"`",
 							"type": "object",
-							"markdownDescription": "For homebrew use only; a key-value dict of the form: `&quot;Typical Dissidents&quot;: &quot;Human Bards&quot;`"
+							"markdownDescription": "For homebrew use only; a key-value dict of the form: &quot;Typical Dissidents&quot;: &quot;Human Bards&quot;"
 						},
 						"foundryImg": {
 							"$ref": "util-foundry.json#/$defs/foundryImg"

@@ -30,7 +30,7 @@
 				"source"
 			],
 			"additionalProperties": false,
-			"markdownDescription": "A name/source pair used to construct a token URL for the entity. For example `&quot;name&quot;: &quot;Goblin&quot;, &quot;source&quot;: &quot;MM&quot;` for a creature token would refer to the MM Goblin&apos;s token."
+			"markdownDescription": "A name/source pair used to construct a token URL for the entity. For example &quot;name&quot;: &quot;Goblin&quot;, &quot;source&quot;: &quot;MM&quot; for a creature token would refer to the MM Goblin&apos;s token."
 		},
 		"tokenHref": {
 			"$ref": "entry.json#/$defs/mediaHref"
