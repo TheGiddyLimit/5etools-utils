@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.0.15",
+	"version": "1.0.16",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -410,6 +410,7 @@
 									{
 										"type": "object",
 										"properties": {
+											"name": {"type": "string"},
 											"cr": {"type": "string"},
 											"types": {
 												"type": "array",
@@ -418,7 +419,8 @@
 												},
 												"minItems": 1,
 												"uniqueItems": true
-											}
+											},
+											"count": {"type": ["integer", "string"]}
 										},
 										"additionalProperties": false,
 										"minProperties": 1
@@ -430,6 +432,14 @@
 											"uuid": {
 												"type": "string",
 												"pattern": "^@creature\\[.*\\]$"
+											},
+											"count": {"type": ["integer", "string"]},
+											"level": {
+												"type": "object",
+												"properties": {
+													"min": {"type": "integer"},
+													"max": {"type": "integer"}
+												}
 											}
 										},
 										"additionalProperties": false,
@@ -543,10 +553,14 @@
 							"transformed",
 							"unconscious",
 
-							"dodging",
-							"hiding",
 							"coverHalf",
-							"coverThreeQuarters"
+							"coverThreeQuarters",
+							"dead",
+							"dodging",
+							"ethereal",
+							"hiding",
+							"marked",
+							"stable"
 						]
 					}
 				},
@@ -578,6 +592,20 @@
 					"allOf": [
 						{"$ref": "#/$defs/_foundryEffectObject"},
 						{"type": "object", "required": ["statuses"]}
+					]
+				},
+				{
+					"description": "An effect with no functional changes, but a name. Should only be used for effects which cannot be otherwise automated.",
+					"allOf": [
+						{"$ref": "#/$defs/_foundryEffectObject"},
+						{"type": "object", "required": ["name"]}
+					]
+				},
+				{
+					"description": "An effect with no functional changes, but a duration. Should only be used for effects which cannot be otherwise automated.",
+					"allOf": [
+						{"$ref": "#/$defs/_foundryEffectObject"},
+						{"type": "object", "required": ["duration"]}
 					]
 				},
 				{

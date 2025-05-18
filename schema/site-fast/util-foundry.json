@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -1019,6 +1019,9 @@
 							{
 								"type": "object",
 								"properties": {
+									"name": {
+										"type": "string"
+									},
 									"cr": {
 										"type": "string"
 									},
@@ -1029,6 +1032,12 @@
 										},
 										"minItems": 1,
 										"uniqueItems": true
+									},
+									"count": {
+										"type": [
+											"integer",
+											"string"
+										]
 									}
 								},
 								"additionalProperties": false,
@@ -1043,6 +1052,23 @@
 									"uuid": {
 										"type": "string",
 										"pattern": "^@creature\\[.*\\]$"
+									},
+									"count": {
+										"type": [
+											"integer",
+											"string"
+										]
+									},
+									"level": {
+										"type": "object",
+										"properties": {
+											"min": {
+												"type": "integer"
+											},
+											"max": {
+												"type": "integer"
+											}
+										}
 									}
 								},
 								"additionalProperties": false,
@@ -1263,10 +1289,14 @@
 							"surprised",
 							"transformed",
 							"unconscious",
-							"dodging",
-							"hiding",
 							"coverHalf",
-							"coverThreeQuarters"
+							"coverThreeQuarters",
+							"dead",
+							"dodging",
+							"ethereal",
+							"hiding",
+							"marked",
+							"stable"
 						]
 					},
 					"markdownDescription": "Dumped via e.g. copy(Object.keys(CONFIG.DND5E.conditionTypes).sort())"
@@ -1332,6 +1362,36 @@
 							]
 						}
 					]
+				},
+				{
+					"description": "An effect with no functional changes, but a name. Should only be used for effects which cannot be otherwise automated.",
+					"allOf": [
+						{
+							"$ref": "#/$defs/_foundryEffectObject"
+						},
+						{
+							"type": "object",
+							"required": [
+								"name"
+							]
+						}
+					],
+					"markdownDescription": "An effect with no functional changes, but a name. Should only be used for effects which cannot be otherwise automated."
+				},
+				{
+					"description": "An effect with no functional changes, but a duration. Should only be used for effects which cannot be otherwise automated.",
+					"allOf": [
+						{
+							"$ref": "#/$defs/_foundryEffectObject"
+						},
+						{
+							"type": "object",
+							"required": [
+								"duration"
+							]
+						}
+					],
+					"markdownDescription": "An effect with no functional changes, but a duration. Should only be used for effects which cannot be otherwise automated."
 				},
 				{
 					"description": "An effect with no functional changes, but descriptive text. Should only be used for effects which cannot be otherwise automated.",
