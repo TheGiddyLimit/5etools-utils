@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.10",
+	"version": "1.9.11",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -1644,40 +1644,81 @@
 			]
 		},
 		"entryItemSub": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string"
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "itemSub"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"entry": {
+							"$ref": "#"
+						},
+						"nameDot": {
+							"const": false
+						}
+					},
+					"required": [
+						"type",
+						"entry"
+					],
+					"additionalProperties": false
 				},
-				"type": {
-					"type": "string",
-					"const": "itemSub"
-				},
-				"source": {
-					"$ref": "util.json#/$defs/source"
-				},
-				"page": {
-					"$ref": "util.json#/$defs/page"
-				},
-				"data": {
-					"$ref": "#/$defs/_entryDataData"
-				},
-				"id": {
-					"type": "string"
-				},
-				"entry": {
-					"$ref": "#"
-				},
-				"nameDot": {
-					"const": false
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "itemSub"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "#"
+							}
+						},
+						"nameDot": {
+							"const": false
+						}
+					},
+					"required": [
+						"type",
+						"entries"
+					],
+					"additionalProperties": false
 				}
-			},
-			"required": [
-				"type",
-				"name",
-				"entry"
-			],
-			"additionalProperties": false
+			]
 		},
 		"entryItemSpell": {
 			"type": "object",
