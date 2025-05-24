@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-class.json",
-	"version": "1.4.6",
+	"version": "1.5.0",
 	"type": "object",
 	"properties": {
 		"class": {
@@ -97,9 +97,6 @@
 					},
 					"ignoreSrdEffects": {
 						"const": true
-					},
-					"actorDataMod": {
-						"type": "object"
 					},
 					"actorTokenMod": {
 						"type": "object"
@@ -226,9 +223,6 @@
 					"ignoreSrdEffects": {
 						"const": true
 					},
-					"actorDataMod": {
-						"type": "object"
-					},
 					"actorTokenMod": {
 						"type": "object"
 					},
@@ -346,9 +340,6 @@
 					},
 					"ignoreSrdEffects": {
 						"const": true
-					},
-					"actorDataMod": {
-						"type": "object"
 					},
 					"actorTokenMod": {
 						"type": "object"
@@ -475,9 +466,6 @@
 					},
 					"ignoreSrdEffects": {
 						"const": true
-					},
-					"actorDataMod": {
-						"type": "object"
 					},
 					"actorTokenMod": {
 						"type": "object"
