@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.24",
+	"version": "1.17.25",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1798,7 +1798,7 @@
 			"description": "D: Dragonmark\nG: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
 			"$$switch_key": {
 				"key_site": "enum",
-				"key_ua": "enum",
+				"key_ua": "examples",
 				"key_brew": "examples",
 				"value": [
 					"D",
