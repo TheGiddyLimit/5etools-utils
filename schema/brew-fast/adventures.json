@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.26",
+	"version": "1.10.27",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -217,7 +217,8 @@
 							"Quests from the Infinite Staircase",
 							"LEGO",
 							"Shadow Realm",
-							"Animated Series"
+							"Animated Series",
+							"Miscellaneous"
 						]
 					},
 					"alAveragePlayerLevel": {
