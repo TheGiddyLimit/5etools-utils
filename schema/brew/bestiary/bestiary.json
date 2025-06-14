@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.50",
+	"version": "1.21.51",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -132,15 +132,7 @@
 					"$ref": "../util.json#/$defs/alias"
 				},
 				"group": {
-					"description": "A group name, indexed by search. E.g. searching \"Lycanthrope\" would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search.",
-					"type": [
-						"null",
-						"array"
-					],
-					"items": {
-						"type": "string"
-					},
-					"markdownDescription": "A group name, indexed by search. E.g. searching &quot;Lycanthrope&quot; would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search."
+					"$ref": "../util.json#/$defs/group"
 				},
 				"level": {
 					"description": "Used in sidekicks, which can have levels (and generally do not have alignment)",
@@ -1472,15 +1464,7 @@
 							"$ref": "../util.json#/$defs/alias"
 						},
 						"group": {
-							"description": "A group name, indexed by search. E.g. searching \"Lycanthrope\" would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search.",
-							"type": [
-								"null",
-								"array"
-							],
-							"items": {
-								"type": "string"
-							},
-							"markdownDescription": "A group name, indexed by search. E.g. searching &quot;Lycanthrope&quot; would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search."
+							"$ref": "../util.json#/$defs/group"
 						},
 						"level": {
 							"description": "Used in sidekicks, which can have levels (and generally do not have alignment)",
@@ -2817,15 +2801,7 @@
 							"$ref": "../util.json#/$defs/alias"
 						},
 						"group": {
-							"description": "A group name, indexed by search. E.g. searching \"Lycanthrope\" would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search.",
-							"type": [
-								"null",
-								"array"
-							],
-							"items": {
-								"type": "string"
-							},
-							"markdownDescription": "A group name, indexed by search. E.g. searching &quot;Lycanthrope&quot; would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search."
+							"$ref": "../util.json#/$defs/group"
 						},
 						"level": {
 							"description": "Used in sidekicks, which can have levels (and generally do not have alignment)",

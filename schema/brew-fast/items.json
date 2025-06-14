@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.23",
+	"version": "1.14.24",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -12,6 +12,9 @@
 				},
 				"alias": {
 					"$ref": "util.json#/$defs/alias"
+				},
+				"group": {
+					"$ref": "util.json#/$defs/group"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -540,6 +543,9 @@
 				},
 				"alias": {
 					"$ref": "util.json#/$defs/alias"
+				},
+				"group": {
+					"$ref": "util.json#/$defs/group"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -1071,6 +1077,9 @@
 						"alias": {
 							"$ref": "util.json#/$defs/alias"
 						},
+						"group": {
+							"$ref": "util.json#/$defs/group"
+						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
@@ -1598,6 +1607,9 @@
 				},
 				"alias": {
 					"$ref": "util.json#/$defs/alias"
+				},
+				"group": {
+					"$ref": "util.json#/$defs/group"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -2134,6 +2146,9 @@
 						"alias": {
 							"$ref": "util.json#/$defs/alias"
 						},
+						"group": {
+							"$ref": "util.json#/$defs/group"
+						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"
 						},
@@ -2665,6 +2680,9 @@
 						},
 						"alias": {
 							"$ref": "util.json#/$defs/alias"
+						},
+						"group": {
+							"$ref": "util.json#/$defs/group"
 						},
 						"type": {
 							"$ref": "items-shared.json#/$defs/itemType"

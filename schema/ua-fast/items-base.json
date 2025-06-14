@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.12",
+	"version": "1.6.13",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -107,6 +107,9 @@
 				},
 				"alias": {
 					"$ref": "util.json#/$defs/alias"
+				},
+				"group": {
+					"$ref": "util.json#/$defs/group"
 				},
 				"edition": {
 					"$ref": "util-edition.json#/$defs/edition"
@@ -440,6 +443,9 @@
 						},
 						"alias": {
 							"$ref": "util.json#/$defs/alias"
+						},
+						"group": {
+							"$ref": "util.json#/$defs/group"
 						},
 						"edition": {
 							"$ref": "util-edition.json#/$defs/edition"
@@ -777,6 +783,9 @@
 						},
 						"alias": {
 							"$ref": "util.json#/$defs/alias"
+						},
+						"group": {
+							"$ref": "util.json#/$defs/group"
 						},
 						"edition": {
 							"$ref": "util-edition.json#/$defs/edition"

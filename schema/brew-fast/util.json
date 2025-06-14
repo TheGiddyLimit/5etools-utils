@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.25",
+	"version": "1.17.26",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -156,6 +156,17 @@
 			"items": {
 				"type": "string"
 			}
+		},
+		"group": {
+			"description": "A group name, indexed by page search. E.g. searching \"Lycanthrope\" would otherwise fail to find anything.\nOnly works on a given page, and not in Omnisearch.",
+			"type": [
+				"null",
+				"array"
+			],
+			"items": {
+				"type": "string"
+			},
+			"markdownDescription": "A group name, indexed by page search. E.g. searching &quot;Lycanthrope&quot; would otherwise fail to find anything.\nOnly works on a given page, and not in Omnisearch."
 		},
 		"reprintedAs": {
 			"type": "array",

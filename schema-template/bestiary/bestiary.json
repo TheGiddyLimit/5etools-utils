@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.50",
+	"version": "1.21.51",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -113,16 +113,7 @@
 					"type": ["string", "boolean"]
 				},
 				"alias": {"$ref": "../util.json#/$defs/alias"},
-				"group": {
-					"description": "A group name, indexed by search. E.g. searching \"Lycanthrope\" would otherwise fail to find anything.\nOnly works on the bestiary page, not in the full site search.",
-					"type": [
-						"null",
-						"array"
-					],
-					"items": {
-						"type": "string"
-					}
-				},
+				"group": {"$ref": "../util.json#/$defs/group"},
 				"level": {
 					"description": "Used in sidekicks, which can have levels (and generally do not have alignment)",
 					"type": "integer"
