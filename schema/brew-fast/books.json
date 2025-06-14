@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "books.json",
-	"version": "1.2.15",
+	"version": "1.2.16",
 	"type": "object",
 	"properties": {
 		"book": {
@@ -38,6 +38,7 @@
 							"prerelease",
 							"homebrew",
 							"screen",
+							"organised-play",
 							"recipe",
 							"other"
 						],
