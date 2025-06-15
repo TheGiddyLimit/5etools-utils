@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.5.7",
+	"version": "1.5.8",
 	"type": "object",
 
 	"$defs": {
@@ -126,7 +126,7 @@
 				},
 				"diet": {
 					"type": "string",
-					"description": "C: Vegetarian [aka \"cheese\"]\n V: Vegan\n X: Omnivorous",
+					"description": "- C: Vegetarian [aka \"cheese\"]\n- V: Vegan\n- X: Omnivorous",
 					"enum": ["C", "V", "X"]
 				},
 				"miscTags": {

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.21",
+	"version": "1.9.22",
 	"title": "Spells",
 	"type": "object",
 
@@ -255,14 +255,14 @@
 					"uniqueItems": true,
 					"items": {
 						"type": "string",
-						"description": "M: Melee\n R: Ranged\n O: Other/Unknown",
+						"description": "- M: Melee\n- R: Ranged\n- O: Other/Unknown",
 						"enum": [
 							"M", "R", "O"
 						]
 					}
 				},
 				"areaTags": {
-					"description": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n C: Cube\n H: Hemisphere\n L: Line\n MT: Multiple Targets\n N: Cone\n Q: Square\n R: Circle\n ST: Single Target\n S: Sphere\n W: Wall\n Y: Cylinder",
+					"description": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder",
 					"type": "array",
 					"minItems": 1,
 					"uniqueItems": true,
@@ -273,7 +273,7 @@
 				},
 				"miscTags": {
 					"type": "array",
-					"description": "AAD: Additional Attack Damage\nADV: Grants Advantage\nDFT: Difficult Terrain\nFMV: Forced Movement\nHL: Healing\nLGT: Creates Light\nLGTS: Creates Sunlight\nMAC: Modifies AC\nOBJ: Affects Objects\nOBS: Obscures Vision\nPIR: Permanent If Repeated\nPRM: Permanent Effects\nPS: Plane Shifting\nRO: Rollable Effects\nSCL: Scaling Effects\nSCT: Scaling Targets\nSMN: Summons Creature\nSGT: Requires Sight\nTHP: Grants Temporary Hit Points\nTP: Teleportation\nUBA: Uses Bonus Action",
+					"description": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UBA: Uses Bonus Action",
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
