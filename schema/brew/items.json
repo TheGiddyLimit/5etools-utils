@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.24",
+	"version": "1.14.25",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -410,16 +410,16 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
-						"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
+						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"deck of many things|dmg\".",
+						"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;deck of many things|dmg&quot;."
 					}
 				},
 				"seeAlsoVehicle": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
-						"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
+						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"rowboat|gos\".",
+						"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;rowboat|gos&quot;."
 					}
 				},
 				"reqAttuneTags": {
@@ -491,7 +491,7 @@
 					"markdownDescription": "Adventurers League item certificate ID; for use in homebrew."
 				},
 				"foundryType": {
-					"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
+					"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
 					"type": "string",
 					"enum": [
 						"weapon",
@@ -504,7 +504,7 @@
 						"feat",
 						"backpack"
 					],
-					"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
+					"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
@@ -941,16 +941,16 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
-						"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
+						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"deck of many things|dmg\".",
+						"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;deck of many things|dmg&quot;."
 					}
 				},
 				"seeAlsoVehicle": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
-						"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
+						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"rowboat|gos\".",
+						"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;rowboat|gos&quot;."
 					}
 				},
 				"reqAttuneTags": {
@@ -1022,7 +1022,7 @@
 					"markdownDescription": "Adventurers League item certificate ID; for use in homebrew."
 				},
 				"foundryType": {
-					"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
+					"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
 					"type": "string",
 					"enum": [
 						"weapon",
@@ -1035,7 +1035,7 @@
 						"feat",
 						"backpack"
 					],
-					"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
+					"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
@@ -1474,16 +1474,16 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
-								"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
+								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"deck of many things|dmg\".",
+								"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;deck of many things|dmg&quot;."
 							}
 						},
 						"seeAlsoVehicle": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
-								"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
+								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"rowboat|gos\".",
+								"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;rowboat|gos&quot;."
 							}
 						},
 						"reqAttuneTags": {
@@ -1555,7 +1555,7 @@
 							"markdownDescription": "Adventurers League item certificate ID; for use in homebrew."
 						},
 						"foundryType": {
-							"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
+							"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
 							"type": "string",
 							"enum": [
 								"weapon",
@@ -1568,7 +1568,7 @@
 								"feat",
 								"backpack"
 							],
-							"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
+							"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
@@ -2005,16 +2005,16 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
-						"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
+						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"deck of many things|dmg\".",
+						"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;deck of many things|dmg&quot;."
 					}
 				},
 				"seeAlsoVehicle": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
-						"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
+						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"rowboat|gos\".",
+						"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;rowboat|gos&quot;."
 					}
 				},
 				"reqAttuneTags": {
@@ -2086,7 +2086,7 @@
 					"markdownDescription": "Adventurers League item certificate ID; for use in homebrew."
 				},
 				"foundryType": {
-					"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
+					"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
 					"type": "string",
 					"enum": [
 						"weapon",
@@ -2099,7 +2099,7 @@
 						"feat",
 						"backpack"
 					],
-					"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
+					"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
@@ -2543,16 +2543,16 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
-								"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
+								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"deck of many things|dmg\".",
+								"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;deck of many things|dmg&quot;."
 							}
 						},
 						"seeAlsoVehicle": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
-								"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
+								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"rowboat|gos\".",
+								"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;rowboat|gos&quot;."
 							}
 						},
 						"reqAttuneTags": {
@@ -2624,7 +2624,7 @@
 							"markdownDescription": "Adventurers League item certificate ID; for use in homebrew."
 						},
 						"foundryType": {
-							"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
+							"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
 							"type": "string",
 							"enum": [
 								"weapon",
@@ -2637,7 +2637,7 @@
 								"feat",
 								"backpack"
 							],
-							"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
+							"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"
@@ -3078,16 +3078,16 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\nEx.: \"deck of many things|dmg\".",
-								"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;deck of many things|dmg&quot;."
+								"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"deck of many things|dmg\".",
+								"markdownDescription": "UIDs of &quot;deck&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;deck of many things|dmg&quot;."
 							}
 						},
 						"seeAlsoVehicle": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\nEx.: \"rowboat|gos\".",
-								"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;rowboat|gos&quot;."
+								"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"rowboat|gos\".",
+								"markdownDescription": "UIDs of &quot;vehicle&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;rowboat|gos&quot;."
 							}
 						},
 						"reqAttuneTags": {
@@ -3159,7 +3159,7 @@
 							"markdownDescription": "Adventurers League item certificate ID; for use in homebrew."
 						},
 						"foundryType": {
-							"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
+							"description": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n\"CONFIG.Item.typeLabels\" correct as of Foundry v0.8.9",
 							"type": "string",
 							"enum": [
 								"weapon",
@@ -3172,7 +3172,7 @@
 								"feat",
 								"backpack"
 							],
-							"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as. \n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
+							"markdownDescription": "Homebrew only: used to manually specify the exact Foundry item type an item should be imported as.\n\n&quot;CONFIG.Item.typeLabels&quot; correct as of Foundry v0.8.9"
 						},
 						"foundrySystem": {
 							"$ref": "util-foundry.json#/$defs/foundrySystemObject"

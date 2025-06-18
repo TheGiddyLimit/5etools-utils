@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "psionics.json",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"type": "object",
 	"$defs": {
 		"psionic": {
@@ -17,9 +17,9 @@
 					"$ref": "util.json#/$defs/page"
 				},
 				"type": {
-					"description": "D: Discipline\nT: Talent",
+					"description": "- D: Discipline\n- T: Talent",
 					"type": "string",
-					"markdownDescription": "D: Discipline\nT: Talent",
+					"markdownDescription": "- D: Discipline\n- T: Talent",
 					"enum": [
 						"D",
 						"T"

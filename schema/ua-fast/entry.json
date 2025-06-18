@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.11",
+	"version": "1.9.12",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -888,7 +888,7 @@
 				},
 				"style": {
 					"type": "string",
-					"description": "Formatting to be applied to the list; not providing a style results in a simple bullet point list.\n list-decimal: decimal numbering 1. 2. 3. etc \n list-hang: a list with the bullets removed and a full indentation \n list-hang-notitle: a list with no bullets that indents all lines but the first\n list-lower-roman: lowercase roman numeral numbering i, ii, iii, iv, etc.\n list-name: a bulleted list with all text in bold\n list-no-bullets: a list with the bullets removed and reduced indentation",
+					"description": "Formatting to be applied to the list; not providing a style results in a simple bullet point list.\n- list-decimal: decimal numbering 1. 2. 3. etc\n- list-hang: a list with the bullets removed and a full indentation\n- list-hang-notitle: a list with no bullets that indents all lines but the first\n- list-lower-roman: lowercase roman numeral numbering i, ii, iii, iv, etc.\n- list-name: a bulleted list with all text in bold\n- list-no-bullets: a list with the bullets removed and reduced indentation",
 					"enum": [
 						"list-decimal",
 						"list-hang",
@@ -900,7 +900,7 @@
 						"list-no-bullets",
 						"list-caption"
 					],
-					"markdownDescription": "Formatting to be applied to the list; not providing a style results in a simple bullet point list.\n list-decimal: decimal numbering 1. 2. 3. etc \n list-hang: a list with the bullets removed and a full indentation \n list-hang-notitle: a list with no bullets that indents all lines but the first\n list-lower-roman: lowercase roman numeral numbering i, ii, iii, iv, etc.\n list-name: a bulleted list with all text in bold\n list-no-bullets: a list with the bullets removed and reduced indentation"
+					"markdownDescription": "Formatting to be applied to the list; not providing a style results in a simple bullet point list.\n- list-decimal: decimal numbering 1. 2. 3. etc\n- list-hang: a list with the bullets removed and a full indentation\n- list-hang-notitle: a list with no bullets that indents all lines but the first\n- list-lower-roman: lowercase roman numeral numbering i, ii, iii, iv, etc.\n- list-name: a bulleted list with all text in bold\n- list-no-bullets: a list with the bullets removed and reduced indentation"
 				},
 				"start": {
 					"type": "integer"
@@ -2026,12 +2026,12 @@
 				},
 				"attackType": {
 					"type": "string",
-					"description": "MW: Melee Weapon\n RW: Ranged Weapon",
+					"description": "- MW: Melee Weapon\n- RW: Ranged Weapon",
 					"enum": [
 						"MW",
 						"RW"
 					],
-					"markdownDescription": "MW: Melee Weapon\n RW: Ranged Weapon"
+					"markdownDescription": "- MW: Melee Weapon\n- RW: Ranged Weapon"
 				},
 				"attackEntries": {
 					"type": "array",

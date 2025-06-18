@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.26",
+	"version": "1.17.27",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -140,7 +140,7 @@
 			}
 		},
 		"group": {
-			"description": "A group name, indexed by page search. E.g. searching \"Lycanthrope\" would otherwise fail to find anything.\nOnly works on a given page, and not in Omnisearch.",
+			"description": "A group name, indexed by page search. E.g. searching \"Lycanthrope\" would otherwise fail to find anything.\n\nOnly works on a given page, and not in Omnisearch.",
 			"type": [
 				"null",
 				"array"
@@ -148,7 +148,7 @@
 			"items": {
 				"type": "string"
 			},
-			"markdownDescription": "A group name, indexed by page search. E.g. searching &quot;Lycanthrope&quot; would otherwise fail to find anything.\nOnly works on a given page, and not in Omnisearch."
+			"markdownDescription": "A group name, indexed by page search. E.g. searching &quot;Lycanthrope&quot; would otherwise fail to find anything.\n\nOnly works on a given page, and not in Omnisearch."
 		},
 		"reprintedAs": {
 			"type": "array",
@@ -1913,8 +1913,8 @@
 									"properties": {
 										"choose": {
 											"type": "string",
-											"description": "A range prerequisite spells, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\"",
-											"markdownDescription": "A range prerequisite spells, formatted similarly to the options in a {@filter ...} tag. \nFor example: &quot;level=0|class=Wizard&quot;"
+											"description": "A range prerequisite spells, formatted similarly to the options in a {@filter ...} tag.\n\nFor example: \"level=0|class=Wizard\"",
+											"markdownDescription": "A range prerequisite spells, formatted similarly to the options in a {@filter ...} tag.\n\nFor example: &quot;level=0|class=Wizard&quot;"
 										},
 										"entry": {
 											"type": "string"
@@ -2230,7 +2230,7 @@
 		},
 		"alignment": {
 			"type": "string",
-			"description": "L: Lawful\n N: Neutral\n NX: Neutral (law/chaos axis)\n NY: Neutral (good/evil axis)\n C: Chaotic\n G: Good\n E: Evil\n U: Unaligned\n A: Any",
+			"description": "- L: Lawful\n- N: Neutral\n- NX: Neutral (law/chaos axis)\n- NY: Neutral (good/evil axis)\n- C: Chaotic\n- G: Good\n- E: Evil\n- U: Unaligned\n- A: Any",
 			"enum": [
 				"L",
 				"N",
@@ -2242,12 +2242,12 @@
 				"U",
 				"A"
 			],
-			"markdownDescription": "L: Lawful\n N: Neutral\n NX: Neutral (law/chaos axis)\n NY: Neutral (good/evil axis)\n C: Chaotic\n G: Good\n E: Evil\n U: Unaligned\n A: Any"
+			"markdownDescription": "- L: Lawful\n- N: Neutral\n- NX: Neutral (law/chaos axis)\n- NY: Neutral (good/evil axis)\n- C: Chaotic\n- G: Good\n- E: Evil\n- U: Unaligned\n- A: Any"
 		},
 		"size": {
 			"type": "string",
-			"description": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
-			"markdownDescription": "F: Fine\n D: Diminutive\n T: Tiny\n S: Small\n M: Medium\n L: Large\n H: Huge\n G: Gargantuan\n C: Colossal\n V: Varies.",
+			"description": "- F: Fine\n- D: Diminutive\n- T: Tiny\n- S: Small\n- M: Medium\n- L: Large\n- H: Huge\n- G: Gargantuan\n- C: Colossal\n- V: Varies.",
+			"markdownDescription": "- F: Fine\n- D: Diminutive\n- T: Tiny\n- S: Small\n- M: Medium\n- L: Large\n- H: Huge\n- G: Gargantuan\n- C: Colossal\n- V: Varies.",
 			"enum": [
 				"T",
 				"S",
@@ -2299,8 +2299,8 @@
 		},
 		"dataOptionalfeatureType": {
 			"type": "string",
-			"description": "AF: Alchemical Formula\n AI: Artificer Infusion\n AS: Arcane Shot\n AS:V1-UA: Arcane Shot, V1 (UA)\n AS:V2-UA: Arcane Shot, V2 (UA)\n ED: Elemental Discipline\n EI: Eldritch Invocation\n FS:B: Fighting Style; Bard\n FS:F: Fighting Style; Fighter\n FS:P: Fighting Style; Paladin\n FS:R: Fighting Style; Ranger\n IWM:A: Infernal War Machine Upgrade, Armor\n IWM:G: Infernal War Machine Upgrade, Gadget\n IWM:W: Infernal War Machine Variant, Weapon\n MM: Metamagic\n MV: Maneuver\n MV:B: Maneuver, Battle Master\n MV:C2-UA: Maneuver, Cavalier V2 (UA)\n OR: Onomancy Resonant\n OTH: Other\n PB: Pact Boon\n RN: Rune Knight Rune\n SHP:F: Ship Upgrade, Figurehead\n SHP:H: Ship Upgrade, Hull\n SHP:M: Ship Upgrade, Movement\n SHP:O: Ship Upgrade, Miscellaneous\n SHP:W: Ship Upgrade, Weapon\n TT: Traveler's Trick",
-			"markdownDescription": "AF: Alchemical Formula\n AI: Artificer Infusion\n AS: Arcane Shot\n AS:V1-UA: Arcane Shot, V1 (UA)\n AS:V2-UA: Arcane Shot, V2 (UA)\n ED: Elemental Discipline\n EI: Eldritch Invocation\n FS:B: Fighting Style; Bard\n FS:F: Fighting Style; Fighter\n FS:P: Fighting Style; Paladin\n FS:R: Fighting Style; Ranger\n IWM:A: Infernal War Machine Upgrade, Armor\n IWM:G: Infernal War Machine Upgrade, Gadget\n IWM:W: Infernal War Machine Variant, Weapon\n MM: Metamagic\n MV: Maneuver\n MV:B: Maneuver, Battle Master\n MV:C2-UA: Maneuver, Cavalier V2 (UA)\n OR: Onomancy Resonant\n OTH: Other\n PB: Pact Boon\n RN: Rune Knight Rune\n SHP:F: Ship Upgrade, Figurehead\n SHP:H: Ship Upgrade, Hull\n SHP:M: Ship Upgrade, Movement\n SHP:O: Ship Upgrade, Miscellaneous\n SHP:W: Ship Upgrade, Weapon\n TT: Traveler&apos;s Trick",
+			"description": "- AF: Alchemical Formula\n- AI: Artificer Infusion\n- AS: Arcane Shot\n- AS:V1-UA: Arcane Shot, V1 (UA)\n- AS:V2-UA: Arcane Shot, V2 (UA)\n- ED: Elemental Discipline\n- EI: Eldritch Invocation\n- FS:B: Fighting Style; Bard\n- FS:F: Fighting Style; Fighter\n- FS:P: Fighting Style; Paladin\n- FS:R: Fighting Style; Ranger\n- IWM:A: Infernal War Machine Upgrade, Armor\n- IWM:G: Infernal War Machine Upgrade, Gadget\n- IWM:W: Infernal War Machine Variant, Weapon\n- MM: Metamagic\n- MV: Maneuver\n- MV:B: Maneuver, Battle Master\n- MV:C2-UA: Maneuver, Cavalier V2 (UA)\n- OR: Onomancy Resonant\n- OTH: Other\n- PB: Pact Boon\n- RN: Rune Knight Rune\n- SHP:F: Ship Upgrade, Figurehead\n- SHP:H: Ship Upgrade, Hull\n- SHP:M: Ship Upgrade, Movement\n- SHP:O: Ship Upgrade, Miscellaneous\n- SHP:W: Ship Upgrade, Weapon\n- TT: Traveler's Trick",
+			"markdownDescription": "- AF: Alchemical Formula\n- AI: Artificer Infusion\n- AS: Arcane Shot\n- AS:V1-UA: Arcane Shot, V1 (UA)\n- AS:V2-UA: Arcane Shot, V2 (UA)\n- ED: Elemental Discipline\n- EI: Eldritch Invocation\n- FS:B: Fighting Style; Bard\n- FS:F: Fighting Style; Fighter\n- FS:P: Fighting Style; Paladin\n- FS:R: Fighting Style; Ranger\n- IWM:A: Infernal War Machine Upgrade, Armor\n- IWM:G: Infernal War Machine Upgrade, Gadget\n- IWM:W: Infernal War Machine Variant, Weapon\n- MM: Metamagic\n- MV: Maneuver\n- MV:B: Maneuver, Battle Master\n- MV:C2-UA: Maneuver, Cavalier V2 (UA)\n- OR: Onomancy Resonant\n- OTH: Other\n- PB: Pact Boon\n- RN: Rune Knight Rune\n- SHP:F: Ship Upgrade, Figurehead\n- SHP:H: Ship Upgrade, Hull\n- SHP:M: Ship Upgrade, Movement\n- SHP:O: Ship Upgrade, Miscellaneous\n- SHP:W: Ship Upgrade, Weapon\n- TT: Traveler&apos;s Trick",
 			"enum": [
 				"ED",
 				"EI",
@@ -2334,8 +2334,8 @@
 		},
 		"dataFeatCategory": {
 			"type": "string",
-			"description": "D: Dragonmark\nG: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
-			"markdownDescription": "D: Dragonmark\nG: General\nO: Origin\nFS: Fighting Style\nFS:P: Fighting Style (Paladin)\nFS:R: Fighting Style (Ranger)\nEB: Epic Boon",
+			"description": "- D: Dragonmark\n- G: General\n- O: Origin\n- FS: Fighting Style\n- FS:P: Fighting Style (Paladin)\n- FS:R: Fighting Style (Ranger)\n- EB: Epic Boon",
+			"markdownDescription": "- D: Dragonmark\n- G: General\n- O: Origin\n- FS: Fighting Style\n- FS:P: Fighting Style (Paladin)\n- FS:R: Fighting Style (Ranger)\n- EB: Epic Boon",
 			"enum": [
 				"D",
 				"G",
@@ -2872,7 +2872,7 @@
 		},
 		"dataDamageTags": {
 			"type": "string",
-			"description": "A: Acid\n B: Bludgeoning\n C: Cold\n F: Fire\n O: Force\n L: Lightning\n N: Necrotic\n P: Piercing\n I: Poison\n Y: Psychic\n R: Radiant\n S: Slashing\n T: Thunder",
+			"description": "- A: Acid\n- B: Bludgeoning\n- C: Cold\n- F: Fire\n- O: Force\n- L: Lightning\n- N: Necrotic\n- P: Piercing\n- I: Poison\n- Y: Psychic\n- R: Radiant\n- S: Slashing\n- T: Thunder",
 			"enum": [
 				"A",
 				"B",
@@ -2888,11 +2888,11 @@
 				"S",
 				"T"
 			],
-			"markdownDescription": "A: Acid\n B: Bludgeoning\n C: Cold\n F: Fire\n O: Force\n L: Lightning\n N: Necrotic\n P: Piercing\n I: Poison\n Y: Psychic\n R: Radiant\n S: Slashing\n T: Thunder"
+			"markdownDescription": "- A: Acid\n- B: Bludgeoning\n- C: Cold\n- F: Fire\n- O: Force\n- L: Lightning\n- N: Necrotic\n- P: Piercing\n- I: Poison\n- Y: Psychic\n- R: Radiant\n- S: Slashing\n- T: Thunder"
 		},
 		"spellSchool": {
 			"type": "string",
-			"description": "A: Abjuration\n C: Conjuration\n D: Divination\n E: Enchantment\n V: Evocation\n I: Illusion\n N: Necromancy\n T: Transmutation\n P: Psychic",
+			"description": "- A: Abjuration\n- C: Conjuration\n- D: Divination\n- E: Enchantment\n- V: Evocation\n- I: Illusion\n- N: Necromancy\n- T: Transmutation\n- P: Psychic",
 			"not": {
 				"enum": [
 					"Abjuration",
@@ -2906,7 +2906,7 @@
 					"Psychic"
 				]
 			},
-			"markdownDescription": "A: Abjuration\n C: Conjuration\n D: Divination\n E: Enchantment\n V: Evocation\n I: Illusion\n N: Necromancy\n T: Transmutation\n P: Psychic",
+			"markdownDescription": "- A: Abjuration\n- C: Conjuration\n- D: Divination\n- E: Enchantment\n- V: Evocation\n- I: Illusion\n- N: Necromancy\n- T: Transmutation\n- P: Psychic",
 			"enum": [
 				"A",
 				"C",
@@ -3614,13 +3614,13 @@
 			"markdownDescription": "A reference to a spell or an existing spell list, linked by name and source. Assumes PHB as the source, if none is provided."
 		},
 		"proficiencyLevel": {
-			"description": "1: Proficient\n 2: Expertise",
+			"description": "- 1: Proficient\n- 2: Expertise",
 			"type": "integer",
 			"enum": [
 				1,
 				2
 			],
-			"markdownDescription": "1: Proficient\n 2: Expertise"
+			"markdownDescription": "- 1: Proficient\n- 2: Expertise"
 		}
 	},
 	"markdownDescription": "Utility definitions to be used in other schemas."

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-time.json",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"title": "Util: Time",
 	"$defs": {
 		"time": {
@@ -104,8 +104,8 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "The examples given are short forms that are automatically expanded to \"discharged\", \"dispelled\" & \"triggered\".\nHomebrew files should state custom end conditions in full.",
-						"markdownDescription": "The examples given are short forms that are automatically expanded to &quot;discharged&quot;, &quot;dispelled&quot; &amp; &quot;triggered&quot;.\nHomebrew files should state custom end conditions in full.",
+						"description": "The examples given are short forms that are automatically expanded to \"discharged\", \"dispelled\" & \"triggered\".\n\nHomebrew files should state custom end conditions in full.",
+						"markdownDescription": "The examples given are short forms that are automatically expanded to &quot;discharged&quot;, &quot;dispelled&quot; &amp; &quot;triggered&quot;.\n\nHomebrew files should state custom end conditions in full.",
 						"examples": [
 							"dispel",
 							"trigger",

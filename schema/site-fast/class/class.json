@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.9",
+	"version": "2.12.10",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -115,8 +115,8 @@
 		},
 		"preparedSpells": {
 			"type": "string",
-			"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\"",
-			"markdownDescription": "Formula for the number of spells the class can prepare, for example:\n&quot;&lt;$level$&gt; / 2 + &lt;$int_mod$&gt;&quot;"
+			"description": "Formula for the number of spells the class can prepare, for example:\n\n\"<$level$> / 2 + <$int_mod$>\"",
+			"markdownDescription": "Formula for the number of spells the class can prepare, for example:\n\n&quot;&lt;$level$&gt; / 2 + &lt;$int_mod$&gt;&quot;"
 		},
 		"preparedSpellsProgression": {
 			"type": "array",
@@ -671,7 +671,7 @@
 						},
 						"subclassFeatures": {
 							"type": "array",
-							"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource.",
+							"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource.",
 							"items": {
 								"oneOf": [
 									{
@@ -701,7 +701,7 @@
 									}
 								]
 							},
-							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource."
+							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource."
 						},
 						"subclassTableGroups": {
 							"type": "array",
@@ -849,7 +849,7 @@
 						},
 						"subclassFeatures": {
 							"type": "array",
-							"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource.",
+							"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource.",
 							"items": {
 								"oneOf": [
 									{
@@ -879,7 +879,7 @@
 									}
 								]
 							},
-							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource."
+							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource."
 						},
 						"subclassTableGroups": {
 							"type": "array",
@@ -1027,7 +1027,7 @@
 				},
 				"subclassFeatures": {
 					"type": "array",
-					"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource.",
+					"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource.",
 					"items": {
 						"oneOf": [
 							{
@@ -1057,7 +1057,7 @@
 							}
 						]
 					},
-					"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource."
+					"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource."
 				},
 				"subclassTableGroups": {
 					"type": "array",

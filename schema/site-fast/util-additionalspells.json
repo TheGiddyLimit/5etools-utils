@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-additionalspells.json",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"title": "Util: Additional Spells",
 	"$defs": {
 		"_additionalSpellObject": {
@@ -193,8 +193,8 @@
 						"properties": {
 							"all": {
 								"type": "string",
-								"description": "A range of spells to be added, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\"",
-								"markdownDescription": "A range of spells to be added, formatted similarly to the options in a {@filter ...} tag. \nFor example: &quot;level=0|class=Wizard&quot;"
+								"description": "A range of spells to be added, formatted similarly to the options in a {@filter ...} tag.\n\nFor example: \"level=0|class=Wizard\"",
+								"markdownDescription": "A range of spells to be added, formatted similarly to the options in a {@filter ...} tag.\n\nFor example: &quot;level=0|class=Wizard&quot;"
 							}
 						},
 						"required": [
@@ -207,8 +207,8 @@
 						"properties": {
 							"choose": {
 								"type": "string",
-								"description": "A range of spells to be chosen from, formatted similarly to the options in a {@filter ...} tag. \nFor example: \"level=0|class=Wizard\"",
-								"markdownDescription": "A range of spells to be chosen from, formatted similarly to the options in a {@filter ...} tag. \nFor example: &quot;level=0|class=Wizard&quot;"
+								"description": "A range of spells to be chosen from, formatted similarly to the options in a {@filter ...} tag.\n\nFor example: \"level=0|class=Wizard\"",
+								"markdownDescription": "A range of spells to be chosen from, formatted similarly to the options in a {@filter ...} tag.\n\nFor example: &quot;level=0|class=Wizard&quot;"
 							},
 							"count": {
 								"type": "integer"
@@ -290,7 +290,7 @@
 			"markdownDescription": "Optionally specify the ability score used for e.g. racial spellcasting"
 		},
 		"additionalSpellsArray": {
-			"description": "A collection of additional spells which a feature grants.\nThis array enables import functionality for VTTs, and should be used in addition to \"classSpells\"/\"subclassSpells\"/\"subSubclassSpells\" blocks which enable references on the site.",
+			"description": "A collection of additional spells which a feature grants.\n\nThis array enables import functionality for VTTs, and should be used in addition to \"classSpells\"/\"subclassSpells\"/\"subSubclassSpells\" blocks which enable references on the site.",
 			"type": "array",
 			"minItems": 1,
 			"items": {
@@ -333,7 +333,7 @@
 				"additionalProperties": false,
 				"minProperties": 1
 			},
-			"markdownDescription": "A collection of additional spells which a feature grants.\nThis array enables import functionality for VTTs, and should be used in addition to &quot;classSpells&quot;/&quot;subclassSpells&quot;/&quot;subSubclassSpells&quot; blocks which enable references on the site."
+			"markdownDescription": "A collection of additional spells which a feature grants.\n\nThis array enables import functionality for VTTs, and should be used in addition to &quot;classSpells&quot;/&quot;subclassSpells&quot;/&quot;subSubclassSpells&quot; blocks which enable references on the site."
 		}
 	}
 }

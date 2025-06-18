@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.51",
+	"version": "1.21.52",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -121,12 +121,12 @@
 					"type": "string"
 				},
 				"shortName": {
-					"description": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\nIf not supplied, a shortened name will be automatically generated from the creature's full name.\nAlternatively use \"true\" if the \"shortName\" should be an exact copy of the creature's \"name\".",
+					"description": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\n\nIf not supplied, a shortened name will be automatically generated from the creature's full name.\n\nAlternatively use \"true\" if the \"shortName\" should be an exact copy of the creature's \"name\".",
 					"type": [
 						"string",
 						"boolean"
 					],
-					"markdownDescription": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\nIf not supplied, a shortened name will be automatically generated from the creature&apos;s full name.\nAlternatively use &quot;true&quot; if the &quot;shortName&quot; should be an exact copy of the creature&apos;s &quot;name&quot;."
+					"markdownDescription": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\n\nIf not supplied, a shortened name will be automatically generated from the creature&apos;s full name.\n\nAlternatively use &quot;true&quot; if the &quot;shortName&quot; should be an exact copy of the creature&apos;s &quot;name&quot;."
 				},
 				"alias": {
 					"$ref": "../util.json#/$defs/alias"
@@ -1153,7 +1153,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "X: Any (Choose)\nXX: All\nCS: Can't Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves' cant\nU: Undercommon",
+						"description": "- X: Any (Choose)\n- XX: All\n- CS: Can't Speak Known Languages\n- LF: Languages Known in Life\n- TP: Telepathy\n- OTH: Other\n- -\n- AB: Abyssal\n- AQ: Aquan\n- AU: Auran\n- C: Common\n- CE: Celestial\n- CSL: Common Sign Language\n- D: Dwarvish\n- DR: Draconic\n- DS: Deep Speech\n- DU: Druidic\n- E: Elvish\n- G: Gnomish\n- GI: Giant\n- GO: Goblin\n- GTH: Gith\n- H: Halfling\n- I: Infernal\n- IG: Ignan\n- O: Orc\n- P: Primordial\n- S: Sylvan\n- T: Terran\n- TC: Thieves' cant\n- U: Undercommon",
 						"enum": [
 							"X",
 							"XX",
@@ -1186,14 +1186,14 @@
 							"TC",
 							"U"
 						],
-						"markdownDescription": "X: Any (Choose)\nXX: All\nCS: Can&apos;t Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves&apos; cant\nU: Undercommon"
+						"markdownDescription": "- X: Any (Choose)\n- XX: All\n- CS: Can&apos;t Speak Known Languages\n- LF: Languages Known in Life\n- TP: Telepathy\n- OTH: Other\n- -\n- AB: Abyssal\n- AQ: Aquan\n- AU: Auran\n- C: Common\n- CE: Celestial\n- CSL: Common Sign Language\n- D: Dwarvish\n- DR: Draconic\n- DS: Deep Speech\n- DU: Druidic\n- E: Elvish\n- G: Gnomish\n- GI: Giant\n- GO: Goblin\n- GTH: Gith\n- H: Halfling\n- I: Infernal\n- IG: Ignan\n- O: Orc\n- P: Primordial\n- S: Sylvan\n- T: Terran\n- TC: Thieves&apos; cant\n- U: Undercommon"
 					}
 				},
 				"senseTags": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight",
+						"description": "- B: Blindsight\n- D: Darkvision\n- SD: Superior Darkvision\n- T: Tremorsense\n- U: Truesight",
 						"enum": [
 							"B",
 							"D",
@@ -1201,14 +1201,14 @@
 							"T",
 							"U"
 						],
-						"markdownDescription": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight"
+						"markdownDescription": "- B: Blindsight\n- D: Darkvision\n- SD: Superior Darkvision\n- T: Tremorsense\n- U: Truesight"
 					}
 				},
 				"spellcastingTags": {
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n O: Other\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard",
+						"description": "- P: Psionics\n- I: Innate\n- F: Form Only\n- S: Shared\n- O: Other\n- CA: Class, Artificer\n- CB: Class, Bard\n- CC: Class, Cleric\n- CD: Class, Druid\n- CP: Class, Paladin\n- CR: Class, Ranger\n- CS: Class, Sorcerer\n- CL: Class, Warlock\n- CW: Class, Wizard",
 						"enum": [
 							"P",
 							"I",
@@ -1225,7 +1225,7 @@
 							"CL",
 							"CW"
 						],
-						"markdownDescription": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n O: Other\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard"
+						"markdownDescription": "- P: Psionics\n- I: Innate\n- F: Form Only\n- S: Shared\n- O: Other\n- CA: Class, Artificer\n- CB: Class, Bard\n- CC: Class, Cleric\n- CD: Class, Druid\n- CP: Class, Paladin\n- CR: Class, Ranger\n- CS: Class, Sorcerer\n- CL: Class, Warlock\n- CW: Class, Wizard"
 					}
 				},
 				"damageTags": {
@@ -1249,7 +1249,7 @@
 				"miscTags": {
 					"type": "array",
 					"items": {
-						"description": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons",
+						"description": "- AOE: Has Areas of Effect\n- CUR: Inflicts Curse\n- DIS: Inflicts Disease\n- HPR: Has HP Reduction\n- MW: Has Weapon Attacks, Melee\n- RW: Has Weapon Attacks, Ranged\n- MA: Has Attacks, Melee\n- RA: Has Attacks, Ranged\n- RCH: Has Reach Attacks\n- MLW: Has Melee Weapons\n- RNG: Has Ranged Weapons\n- THW: Has Thrown Weapons",
 						"enum": [
 							"AOE",
 							"CUR",
@@ -1264,7 +1264,7 @@
 							"RNG",
 							"THW"
 						],
-						"markdownDescription": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons"
+						"markdownDescription": "- AOE: Has Areas of Effect\n- CUR: Inflicts Curse\n- DIS: Inflicts Disease\n- HPR: Has HP Reduction\n- MW: Has Weapon Attacks, Melee\n- RW: Has Weapon Attacks, Ranged\n- MA: Has Attacks, Melee\n- RA: Has Attacks, Ranged\n- RCH: Has Reach Attacks\n- MLW: Has Melee Weapons\n- RNG: Has Ranged Weapons\n- THW: Has Thrown Weapons"
 					}
 				},
 				"attachedItems": {
@@ -1453,12 +1453,12 @@
 							"type": "string"
 						},
 						"shortName": {
-							"description": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\nIf not supplied, a shortened name will be automatically generated from the creature's full name.\nAlternatively use \"true\" if the \"shortName\" should be an exact copy of the creature's \"name\".",
+							"description": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\n\nIf not supplied, a shortened name will be automatically generated from the creature's full name.\n\nAlternatively use \"true\" if the \"shortName\" should be an exact copy of the creature's \"name\".",
 							"type": [
 								"string",
 								"boolean"
 							],
-							"markdownDescription": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\nIf not supplied, a shortened name will be automatically generated from the creature&apos;s full name.\nAlternatively use &quot;true&quot; if the &quot;shortName&quot; should be an exact copy of the creature&apos;s &quot;name&quot;."
+							"markdownDescription": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\n\nIf not supplied, a shortened name will be automatically generated from the creature&apos;s full name.\n\nAlternatively use &quot;true&quot; if the &quot;shortName&quot; should be an exact copy of the creature&apos;s &quot;name&quot;."
 						},
 						"alias": {
 							"$ref": "../util.json#/$defs/alias"
@@ -2485,7 +2485,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "X: Any (Choose)\nXX: All\nCS: Can't Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves' cant\nU: Undercommon",
+								"description": "- X: Any (Choose)\n- XX: All\n- CS: Can't Speak Known Languages\n- LF: Languages Known in Life\n- TP: Telepathy\n- OTH: Other\n- -\n- AB: Abyssal\n- AQ: Aquan\n- AU: Auran\n- C: Common\n- CE: Celestial\n- CSL: Common Sign Language\n- D: Dwarvish\n- DR: Draconic\n- DS: Deep Speech\n- DU: Druidic\n- E: Elvish\n- G: Gnomish\n- GI: Giant\n- GO: Goblin\n- GTH: Gith\n- H: Halfling\n- I: Infernal\n- IG: Ignan\n- O: Orc\n- P: Primordial\n- S: Sylvan\n- T: Terran\n- TC: Thieves' cant\n- U: Undercommon",
 								"enum": [
 									"X",
 									"XX",
@@ -2518,14 +2518,14 @@
 									"TC",
 									"U"
 								],
-								"markdownDescription": "X: Any (Choose)\nXX: All\nCS: Can&apos;t Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves&apos; cant\nU: Undercommon"
+								"markdownDescription": "- X: Any (Choose)\n- XX: All\n- CS: Can&apos;t Speak Known Languages\n- LF: Languages Known in Life\n- TP: Telepathy\n- OTH: Other\n- -\n- AB: Abyssal\n- AQ: Aquan\n- AU: Auran\n- C: Common\n- CE: Celestial\n- CSL: Common Sign Language\n- D: Dwarvish\n- DR: Draconic\n- DS: Deep Speech\n- DU: Druidic\n- E: Elvish\n- G: Gnomish\n- GI: Giant\n- GO: Goblin\n- GTH: Gith\n- H: Halfling\n- I: Infernal\n- IG: Ignan\n- O: Orc\n- P: Primordial\n- S: Sylvan\n- T: Terran\n- TC: Thieves&apos; cant\n- U: Undercommon"
 							}
 						},
 						"senseTags": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight",
+								"description": "- B: Blindsight\n- D: Darkvision\n- SD: Superior Darkvision\n- T: Tremorsense\n- U: Truesight",
 								"enum": [
 									"B",
 									"D",
@@ -2533,14 +2533,14 @@
 									"T",
 									"U"
 								],
-								"markdownDescription": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight"
+								"markdownDescription": "- B: Blindsight\n- D: Darkvision\n- SD: Superior Darkvision\n- T: Tremorsense\n- U: Truesight"
 							}
 						},
 						"spellcastingTags": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n O: Other\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard",
+								"description": "- P: Psionics\n- I: Innate\n- F: Form Only\n- S: Shared\n- O: Other\n- CA: Class, Artificer\n- CB: Class, Bard\n- CC: Class, Cleric\n- CD: Class, Druid\n- CP: Class, Paladin\n- CR: Class, Ranger\n- CS: Class, Sorcerer\n- CL: Class, Warlock\n- CW: Class, Wizard",
 								"enum": [
 									"P",
 									"I",
@@ -2557,7 +2557,7 @@
 									"CL",
 									"CW"
 								],
-								"markdownDescription": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n O: Other\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard"
+								"markdownDescription": "- P: Psionics\n- I: Innate\n- F: Form Only\n- S: Shared\n- O: Other\n- CA: Class, Artificer\n- CB: Class, Bard\n- CC: Class, Cleric\n- CD: Class, Druid\n- CP: Class, Paladin\n- CR: Class, Ranger\n- CS: Class, Sorcerer\n- CL: Class, Warlock\n- CW: Class, Wizard"
 							}
 						},
 						"damageTags": {
@@ -2581,7 +2581,7 @@
 						"miscTags": {
 							"type": "array",
 							"items": {
-								"description": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons",
+								"description": "- AOE: Has Areas of Effect\n- CUR: Inflicts Curse\n- DIS: Inflicts Disease\n- HPR: Has HP Reduction\n- MW: Has Weapon Attacks, Melee\n- RW: Has Weapon Attacks, Ranged\n- MA: Has Attacks, Melee\n- RA: Has Attacks, Ranged\n- RCH: Has Reach Attacks\n- MLW: Has Melee Weapons\n- RNG: Has Ranged Weapons\n- THW: Has Thrown Weapons",
 								"enum": [
 									"AOE",
 									"CUR",
@@ -2596,7 +2596,7 @@
 									"RNG",
 									"THW"
 								],
-								"markdownDescription": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons"
+								"markdownDescription": "- AOE: Has Areas of Effect\n- CUR: Inflicts Curse\n- DIS: Inflicts Disease\n- HPR: Has HP Reduction\n- MW: Has Weapon Attacks, Melee\n- RW: Has Weapon Attacks, Ranged\n- MA: Has Attacks, Melee\n- RA: Has Attacks, Ranged\n- RCH: Has Reach Attacks\n- MLW: Has Melee Weapons\n- RNG: Has Ranged Weapons\n- THW: Has Thrown Weapons"
 							}
 						},
 						"attachedItems": {
@@ -2790,12 +2790,12 @@
 							"type": "string"
 						},
 						"shortName": {
-							"description": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\nIf not supplied, a shortened name will be automatically generated from the creature's full name.\nAlternatively use \"true\" if the \"shortName\" should be an exact copy of the creature's \"name\".",
+							"description": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\n\nIf not supplied, a shortened name will be automatically generated from the creature's full name.\n\nAlternatively use \"true\" if the \"shortName\" should be an exact copy of the creature's \"name\".",
 							"type": [
 								"string",
 								"boolean"
 							],
-							"markdownDescription": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\nIf not supplied, a shortened name will be automatically generated from the creature&apos;s full name.\nAlternatively use &quot;true&quot; if the &quot;shortName&quot; should be an exact copy of the creature&apos;s &quot;name&quot;."
+							"markdownDescription": "Used anywhere a shortened form of the creatures name is required (e.g. in legendary action headers).\n\nIf not supplied, a shortened name will be automatically generated from the creature&apos;s full name.\n\nAlternatively use &quot;true&quot; if the &quot;shortName&quot; should be an exact copy of the creature&apos;s &quot;name&quot;."
 						},
 						"alias": {
 							"$ref": "../util.json#/$defs/alias"
@@ -3822,7 +3822,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "X: Any (Choose)\nXX: All\nCS: Can't Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves' cant\nU: Undercommon",
+								"description": "- X: Any (Choose)\n- XX: All\n- CS: Can't Speak Known Languages\n- LF: Languages Known in Life\n- TP: Telepathy\n- OTH: Other\n- -\n- AB: Abyssal\n- AQ: Aquan\n- AU: Auran\n- C: Common\n- CE: Celestial\n- CSL: Common Sign Language\n- D: Dwarvish\n- DR: Draconic\n- DS: Deep Speech\n- DU: Druidic\n- E: Elvish\n- G: Gnomish\n- GI: Giant\n- GO: Goblin\n- GTH: Gith\n- H: Halfling\n- I: Infernal\n- IG: Ignan\n- O: Orc\n- P: Primordial\n- S: Sylvan\n- T: Terran\n- TC: Thieves' cant\n- U: Undercommon",
 								"enum": [
 									"X",
 									"XX",
@@ -3855,14 +3855,14 @@
 									"TC",
 									"U"
 								],
-								"markdownDescription": "X: Any (Choose)\nXX: All\nCS: Can&apos;t Speak Known Languages\nLF: Languages Known in Life\nTP: Telepathy\nOTH: Other\n-\nAB: Abyssal\nAQ: Aquan\nAU: Auran\nC: Common\nCE: Celestial\nCSL: Common Sign Language\nD: Dwarvish\nDR: Draconic\nDS: Deep Speech\nDU: Druidic\nE: Elvish\nG: Gnomish\nGI: Giant\nGO: Goblin\nGTH: Gith\nH: Halfling\nI: Infernal\nIG: Ignan\nO: Orc\nP: Primordial\nS: Sylvan\nT: Terran\nTC: Thieves&apos; cant\nU: Undercommon"
+								"markdownDescription": "- X: Any (Choose)\n- XX: All\n- CS: Can&apos;t Speak Known Languages\n- LF: Languages Known in Life\n- TP: Telepathy\n- OTH: Other\n- -\n- AB: Abyssal\n- AQ: Aquan\n- AU: Auran\n- C: Common\n- CE: Celestial\n- CSL: Common Sign Language\n- D: Dwarvish\n- DR: Draconic\n- DS: Deep Speech\n- DU: Druidic\n- E: Elvish\n- G: Gnomish\n- GI: Giant\n- GO: Goblin\n- GTH: Gith\n- H: Halfling\n- I: Infernal\n- IG: Ignan\n- O: Orc\n- P: Primordial\n- S: Sylvan\n- T: Terran\n- TC: Thieves&apos; cant\n- U: Undercommon"
 							}
 						},
 						"senseTags": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight",
+								"description": "- B: Blindsight\n- D: Darkvision\n- SD: Superior Darkvision\n- T: Tremorsense\n- U: Truesight",
 								"enum": [
 									"B",
 									"D",
@@ -3870,14 +3870,14 @@
 									"T",
 									"U"
 								],
-								"markdownDescription": "B: Blindsight\n D: Darkvision\n SD: Superior Darkvision\n T: Tremorsense\n U: Truesight"
+								"markdownDescription": "- B: Blindsight\n- D: Darkvision\n- SD: Superior Darkvision\n- T: Tremorsense\n- U: Truesight"
 							}
 						},
 						"spellcastingTags": {
 							"type": "array",
 							"items": {
 								"type": "string",
-								"description": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n O: Other\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard",
+								"description": "- P: Psionics\n- I: Innate\n- F: Form Only\n- S: Shared\n- O: Other\n- CA: Class, Artificer\n- CB: Class, Bard\n- CC: Class, Cleric\n- CD: Class, Druid\n- CP: Class, Paladin\n- CR: Class, Ranger\n- CS: Class, Sorcerer\n- CL: Class, Warlock\n- CW: Class, Wizard",
 								"enum": [
 									"P",
 									"I",
@@ -3894,7 +3894,7 @@
 									"CL",
 									"CW"
 								],
-								"markdownDescription": "P: Psionics\n I: Innate\n F: Form Only\n S: Shared\n O: Other\n CA: Class, Artificer\n CB: Class, Bard\n CC: Class, Cleric\n CD: Class, Druid\n CP: Class, Paladin\n CR: Class, Ranger\n CS: Class, Sorcerer\n CL: Class, Warlock\n CW: Class, Wizard"
+								"markdownDescription": "- P: Psionics\n- I: Innate\n- F: Form Only\n- S: Shared\n- O: Other\n- CA: Class, Artificer\n- CB: Class, Bard\n- CC: Class, Cleric\n- CD: Class, Druid\n- CP: Class, Paladin\n- CR: Class, Ranger\n- CS: Class, Sorcerer\n- CL: Class, Warlock\n- CW: Class, Wizard"
 							}
 						},
 						"damageTags": {
@@ -3918,7 +3918,7 @@
 						"miscTags": {
 							"type": "array",
 							"items": {
-								"description": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons",
+								"description": "- AOE: Has Areas of Effect\n- CUR: Inflicts Curse\n- DIS: Inflicts Disease\n- HPR: Has HP Reduction\n- MW: Has Weapon Attacks, Melee\n- RW: Has Weapon Attacks, Ranged\n- MA: Has Attacks, Melee\n- RA: Has Attacks, Ranged\n- RCH: Has Reach Attacks\n- MLW: Has Melee Weapons\n- RNG: Has Ranged Weapons\n- THW: Has Thrown Weapons",
 								"enum": [
 									"AOE",
 									"CUR",
@@ -3933,7 +3933,7 @@
 									"RNG",
 									"THW"
 								],
-								"markdownDescription": "AOE: Has Areas of Effect\nCUR: Inflicts Curse\nDIS: Inflicts Disease\nHPR: Has HP Reduction\nMW: Has Weapon Attacks, Melee\nRW: Has Weapon Attacks, Ranged\nMA: Has Attacks, Melee\nRA: Has Attacks, Ranged\nRCH: Has Reach Attacks\nMLW: Has Melee Weapons\nRNG: Has Ranged Weapons\nTHW: Has Thrown Weapons"
+								"markdownDescription": "- AOE: Has Areas of Effect\n- CUR: Inflicts Curse\n- DIS: Inflicts Disease\n- HPR: Has HP Reduction\n- MW: Has Weapon Attacks, Melee\n- RW: Has Weapon Attacks, Ranged\n- MA: Has Attacks, Melee\n- RA: Has Attacks, Ranged\n- RCH: Has Reach Attacks\n- MLW: Has Melee Weapons\n- RNG: Has Ranged Weapons\n- THW: Has Thrown Weapons"
 							}
 						},
 						"attachedItems": {

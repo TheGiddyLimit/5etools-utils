@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.4.5",
+	"version": "1.4.6",
 	"type": "object",
 	"$defs": {
 		"_trapHazardTier": {
@@ -81,7 +81,7 @@
 		"trap": {
 			"oneOf": [
 				{
-					"description": "Older format, used in DMG.\nExtended to support XDMG.",
+					"description": "Older format, used in DMG.\n\nExtended to support XDMG.",
 					"type": "object",
 					"properties": {
 						"name": {
@@ -92,14 +92,14 @@
 						},
 						"trapHazType": {
 							"type": "string",
-							"description": "HAUNT: Haunted Trap\nMAG: Magical Trap\nMECH: Mechanical Trap\nTRP: Trap",
+							"description": "- HAUNT: Haunted Trap\n- MAG: Magical Trap\n- MECH: Mechanical Trap\n- TRP: Trap",
 							"enum": [
 								"MECH",
 								"MAG",
 								"TRP",
 								"HAUNT"
 							],
-							"markdownDescription": "HAUNT: Haunted Trap\nMAG: Magical Trap\nMECH: Mechanical Trap\nTRP: Trap"
+							"markdownDescription": "- HAUNT: Haunted Trap\n- MAG: Magical Trap\n- MECH: Mechanical Trap\n- TRP: Trap"
 						},
 						"source": {
 							"$ref": "util.json#/$defs/source"
@@ -154,7 +154,7 @@
 						"source",
 						"entries"
 					],
-					"markdownDescription": "Older format, used in DMG.\nExtended to support XDMG."
+					"markdownDescription": "Older format, used in DMG.\n\nExtended to support XDMG."
 				},
 				{
 					"description": "XGE \"Traps Revisited\" Simple/Complex traps",
@@ -284,8 +284,8 @@
 				},
 				"trapHazType": {
 					"type": "string",
-					"description": "ENV: Environmental Hazard\n EST: Eldritch Storm\n GEN: Generic\n WTH: Weather\n WLD: Wilderness Hazard",
-					"markdownDescription": "ENV: Environmental Hazard\n EST: Eldritch Storm\n GEN: Generic\n WTH: Weather\n WLD: Wilderness Hazard",
+					"description": "- ENV: Environmental Hazard\n- EST: Eldritch Storm\n- GEN: Generic\n- WTH: Weather\n- WLD: Wilderness Hazard",
+					"markdownDescription": "- ENV: Environmental Hazard\n- EST: Eldritch Storm\n- GEN: Generic\n- WTH: Weather\n- WLD: Wilderness Hazard",
 					"examples": [
 						"ENV",
 						"EST",

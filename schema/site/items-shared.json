@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.9",
+	"version": "1.1.10",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -156,8 +156,8 @@
 		},
 		"itemType": {
 			"type": "string",
-			"description": "$|DMG: Treasure\n$A|DMG: Treasure (Art Object)\n$A|XDMG: Treasure (Art Object)\n$C: Treasure (Coinage)\n$C|XPHB: Treasure (Coinage)\n$G|DMG: Treasure (Gemstone)\n$G|XDMG: Treasure (Gemstone)\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nAIR|DMG: Vehicle (air)\nAIR|XPHB: Vehicle (air)\nAT: Artisan Tool\nAT|XPHB: Artisan Tool\nEXP|DMG: Explosive\nEXP|XDMG: Explosive\nFD: Food and Drink\nFD|XPHB: Food and Drink\nG: Adventuring Gear\nG|XPHB: Adventuring Gear\nGS: Gaming Set\nGS|XPHB: Gaming Set\nGV|DMG: Generic Variant\nGV|XDMG: Generic Variant\nHA: Heavy Armor\nHA|XPHB: Heavy Armor\nIDG|TDCSR: Illegal Drug\nINS: Instrument\nINS|XPHB: Instrument\nLA: Light Armor\nLA|XPHB: Light Armor\nM: Melee Weapon\nM|XPHB: Melee Weapon\nMA: Medium Armor\nMA|XPHB: Medium Armor\nMNT: Mount\nMNT|XPHB: Mount\nOTH: Other\nP: Potion\nP|XPHB: Potion\nR: Ranged Weapon\nR|XPHB: Ranged Weapon\nRD|DMG: Rod\nRD|XDMG: Rod\nRG|DMG: Ring\nRG|XDMG: Ring\nS: Shield\nS|XPHB: Shield\nSC|DMG: Scroll\nSC|XPHB: Scroll\nSCF: Spellcasting Focus\nSCF|XPHB: Spellcasting Focus\nSHP: Vehicle (water)\nSHP|XPHB: Vehicle (water)\nSPC|AAG: Vehicle (space)\nT: Tool\nT|XPHB: Tool\nTAH: Tack and Harness\nTAH|XPHB: Tack and Harness\nTB|XDMG: Trade Bar\nTG: Trade Good\nTG|XPHB: Trade Good\nVEH: Vehicle (land)\nVEH|XPHB: Vehicle (land)\nWD|DMG: Wand\nWD|XDMG: Wand",
-			"markdownDescription": "$|DMG: Treasure\n$A|DMG: Treasure (Art Object)\n$A|XDMG: Treasure (Art Object)\n$C: Treasure (Coinage)\n$C|XPHB: Treasure (Coinage)\n$G|DMG: Treasure (Gemstone)\n$G|XDMG: Treasure (Gemstone)\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nAIR|DMG: Vehicle (air)\nAIR|XPHB: Vehicle (air)\nAT: Artisan Tool\nAT|XPHB: Artisan Tool\nEXP|DMG: Explosive\nEXP|XDMG: Explosive\nFD: Food and Drink\nFD|XPHB: Food and Drink\nG: Adventuring Gear\nG|XPHB: Adventuring Gear\nGS: Gaming Set\nGS|XPHB: Gaming Set\nGV|DMG: Generic Variant\nGV|XDMG: Generic Variant\nHA: Heavy Armor\nHA|XPHB: Heavy Armor\nIDG|TDCSR: Illegal Drug\nINS: Instrument\nINS|XPHB: Instrument\nLA: Light Armor\nLA|XPHB: Light Armor\nM: Melee Weapon\nM|XPHB: Melee Weapon\nMA: Medium Armor\nMA|XPHB: Medium Armor\nMNT: Mount\nMNT|XPHB: Mount\nOTH: Other\nP: Potion\nP|XPHB: Potion\nR: Ranged Weapon\nR|XPHB: Ranged Weapon\nRD|DMG: Rod\nRD|XDMG: Rod\nRG|DMG: Ring\nRG|XDMG: Ring\nS: Shield\nS|XPHB: Shield\nSC|DMG: Scroll\nSC|XPHB: Scroll\nSCF: Spellcasting Focus\nSCF|XPHB: Spellcasting Focus\nSHP: Vehicle (water)\nSHP|XPHB: Vehicle (water)\nSPC|AAG: Vehicle (space)\nT: Tool\nT|XPHB: Tool\nTAH: Tack and Harness\nTAH|XPHB: Tack and Harness\nTB|XDMG: Trade Bar\nTG: Trade Good\nTG|XPHB: Trade Good\nVEH: Vehicle (land)\nVEH|XPHB: Vehicle (land)\nWD|DMG: Wand\nWD|XDMG: Wand",
+			"description": "- $|DMG: Treasure\n- $A|DMG: Treasure (Art Object)\n- $A|XDMG: Treasure (Art Object)\n- $C: Treasure (Coinage)\n- $C|XPHB: Treasure (Coinage)\n- $G|DMG: Treasure (Gemstone)\n- $G|XDMG: Treasure (Gemstone)\n- A: Ammunition\n- A|XPHB: Ammunition\n- AF|DMG: Ammunition (futuristic)\n- AF|XDMG: Ammunition (futuristic)\n- AIR|DMG: Vehicle (air)\n- AIR|XPHB: Vehicle (air)\n- AT: Artisan Tool\n- AT|XPHB: Artisan Tool\n- EXP|DMG: Explosive\n- EXP|XDMG: Explosive\n- FD: Food and Drink\n- FD|XPHB: Food and Drink\n- G: Adventuring Gear\n- G|XPHB: Adventuring Gear\n- GS: Gaming Set\n- GS|XPHB: Gaming Set\n- GV|DMG: Generic Variant\n- GV|XDMG: Generic Variant\n- HA: Heavy Armor\n- HA|XPHB: Heavy Armor\n- IDG|TDCSR: Illegal Drug\n- INS: Instrument\n- INS|XPHB: Instrument\n- LA: Light Armor\n- LA|XPHB: Light Armor\n- M: Melee Weapon\n- M|XPHB: Melee Weapon\n- MA: Medium Armor\n- MA|XPHB: Medium Armor\n- MNT: Mount\n- MNT|XPHB: Mount\n- OTH: Other\n- P: Potion\n- P|XPHB: Potion\n- R: Ranged Weapon\n- R|XPHB: Ranged Weapon\n- RD|DMG: Rod\n- RD|XDMG: Rod\n- RG|DMG: Ring\n- RG|XDMG: Ring\n- S: Shield\n- S|XPHB: Shield\n- SC|DMG: Scroll\n- SC|XPHB: Scroll\n- SCF: Spellcasting Focus\n- SCF|XPHB: Spellcasting Focus\n- SHP: Vehicle (water)\n- SHP|XPHB: Vehicle (water)\n- SPC|AAG: Vehicle (space)\n- T: Tool\n- T|XPHB: Tool\n- TAH: Tack and Harness\n- TAH|XPHB: Tack and Harness\n- TB|XDMG: Trade Bar\n- TG: Trade Good\n- TG|XPHB: Trade Good\n- VEH: Vehicle (land)\n- VEH|XPHB: Vehicle (land)\n- WD|DMG: Wand\n- WD|XDMG: Wand",
+			"markdownDescription": "- $|DMG: Treasure\n- $A|DMG: Treasure (Art Object)\n- $A|XDMG: Treasure (Art Object)\n- $C: Treasure (Coinage)\n- $C|XPHB: Treasure (Coinage)\n- $G|DMG: Treasure (Gemstone)\n- $G|XDMG: Treasure (Gemstone)\n- A: Ammunition\n- A|XPHB: Ammunition\n- AF|DMG: Ammunition (futuristic)\n- AF|XDMG: Ammunition (futuristic)\n- AIR|DMG: Vehicle (air)\n- AIR|XPHB: Vehicle (air)\n- AT: Artisan Tool\n- AT|XPHB: Artisan Tool\n- EXP|DMG: Explosive\n- EXP|XDMG: Explosive\n- FD: Food and Drink\n- FD|XPHB: Food and Drink\n- G: Adventuring Gear\n- G|XPHB: Adventuring Gear\n- GS: Gaming Set\n- GS|XPHB: Gaming Set\n- GV|DMG: Generic Variant\n- GV|XDMG: Generic Variant\n- HA: Heavy Armor\n- HA|XPHB: Heavy Armor\n- IDG|TDCSR: Illegal Drug\n- INS: Instrument\n- INS|XPHB: Instrument\n- LA: Light Armor\n- LA|XPHB: Light Armor\n- M: Melee Weapon\n- M|XPHB: Melee Weapon\n- MA: Medium Armor\n- MA|XPHB: Medium Armor\n- MNT: Mount\n- MNT|XPHB: Mount\n- OTH: Other\n- P: Potion\n- P|XPHB: Potion\n- R: Ranged Weapon\n- R|XPHB: Ranged Weapon\n- RD|DMG: Rod\n- RD|XDMG: Rod\n- RG|DMG: Ring\n- RG|XDMG: Ring\n- S: Shield\n- S|XPHB: Shield\n- SC|DMG: Scroll\n- SC|XPHB: Scroll\n- SCF: Spellcasting Focus\n- SCF|XPHB: Spellcasting Focus\n- SHP: Vehicle (water)\n- SHP|XPHB: Vehicle (water)\n- SPC|AAG: Vehicle (space)\n- T: Tool\n- T|XPHB: Tool\n- TAH: Tack and Harness\n- TAH|XPHB: Tack and Harness\n- TB|XDMG: Trade Bar\n- TG: Trade Good\n- TG|XPHB: Trade Good\n- VEH: Vehicle (land)\n- VEH|XPHB: Vehicle (land)\n- WD|DMG: Wand\n- WD|XDMG: Wand",
 			"enum": [
 				"$|DMG",
 				"$A|DMG",
@@ -237,9 +237,9 @@
 			]
 		},
 		"itemProperty": {
-			"description": "2H: Two-Handed\n2H|XPHB: Two-Handed\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nBF|DMG: Burst Fire\nBF|XDMG: Burst Fire\nER|TDCSR: Extended Reach\nF: Finesse\nF|XPHB: Finesse\nH: Heavy\nH|XPHB: Heavy\nL: Light\nL|XPHB: Light\nLD: Loading\nLD|XPHB: Loading\nOTH: Other\nR: Reach\nR|XPHB: Reach\nRLD: Reload\nRLD|XDMG: Reload\nS: Special\nT: Thrown\nT|XPHB: Thrown\nV: Versatile\nV|XPHB: Versatile\nVst|TDCSR: Vestige of Divergence",
+			"description": "- 2H: Two-Handed\n- 2H|XPHB: Two-Handed\n- A: Ammunition\n- A|XPHB: Ammunition\n- AF|DMG: Ammunition (futuristic)\n- AF|XDMG: Ammunition (futuristic)\n- BF|DMG: Burst Fire\n- BF|XDMG: Burst Fire\n- ER|TDCSR: Extended Reach\n- F: Finesse\n- F|XPHB: Finesse\n- H: Heavy\n- H|XPHB: Heavy\n- L: Light\n- L|XPHB: Light\n- LD: Loading\n- LD|XPHB: Loading\n- OTH: Other\n- R: Reach\n- R|XPHB: Reach\n- RLD: Reload\n- RLD|XDMG: Reload\n- S: Special\n- T: Thrown\n- T|XPHB: Thrown\n- V: Versatile\n- V|XPHB: Versatile\n- Vst|TDCSR: Vestige of Divergence",
 			"type": "string",
-			"markdownDescription": "2H: Two-Handed\n2H|XPHB: Two-Handed\nA: Ammunition\nA|XPHB: Ammunition\nAF|DMG: Ammunition (futuristic)\nAF|XDMG: Ammunition (futuristic)\nBF|DMG: Burst Fire\nBF|XDMG: Burst Fire\nER|TDCSR: Extended Reach\nF: Finesse\nF|XPHB: Finesse\nH: Heavy\nH|XPHB: Heavy\nL: Light\nL|XPHB: Light\nLD: Loading\nLD|XPHB: Loading\nOTH: Other\nR: Reach\nR|XPHB: Reach\nRLD: Reload\nRLD|XDMG: Reload\nS: Special\nT: Thrown\nT|XPHB: Thrown\nV: Versatile\nV|XPHB: Versatile\nVst|TDCSR: Vestige of Divergence",
+			"markdownDescription": "- 2H: Two-Handed\n- 2H|XPHB: Two-Handed\n- A: Ammunition\n- A|XPHB: Ammunition\n- AF|DMG: Ammunition (futuristic)\n- AF|XDMG: Ammunition (futuristic)\n- BF|DMG: Burst Fire\n- BF|XDMG: Burst Fire\n- ER|TDCSR: Extended Reach\n- F: Finesse\n- F|XPHB: Finesse\n- H: Heavy\n- H|XPHB: Heavy\n- L: Light\n- L|XPHB: Light\n- LD: Loading\n- LD|XPHB: Loading\n- OTH: Other\n- R: Reach\n- R|XPHB: Reach\n- RLD: Reload\n- RLD|XDMG: Reload\n- S: Special\n- T: Thrown\n- T|XPHB: Thrown\n- V: Versatile\n- V|XPHB: Versatile\n- Vst|TDCSR: Vestige of Divergence",
 			"enum": [
 				"2H",
 				"2H|XPHB",
@@ -443,13 +443,13 @@
 		"itemMiscTags": {
 			"type": "array",
 			"items": {
-				"description": "CF/W: Creates Food/Water\nCNS: Consumable\nTT: Trinket Table",
+				"description": "- CF/W: Creates Food/Water\n- CNS: Consumable\n- TT: Trinket Table",
 				"enum": [
 					"CF/W",
 					"CNS",
 					"TT"
 				],
-				"markdownDescription": "CF/W: Creates Food/Water\nCNS: Consumable\nTT: Trinket Table"
+				"markdownDescription": "- CF/W: Creates Food/Water\n- CNS: Consumable\n- TT: Trinket Table"
 			}
 		},
 		"itemAbility": {

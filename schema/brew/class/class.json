@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.9",
+	"version": "2.12.10",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -115,8 +115,8 @@
 		},
 		"preparedSpells": {
 			"type": "string",
-			"description": "Formula for the number of spells the class can prepare, for example:\n\"<$level$> / 2 + <$int_mod$>\"",
-			"markdownDescription": "Formula for the number of spells the class can prepare, for example:\n&quot;&lt;$level$&gt; / 2 + &lt;$int_mod$&gt;&quot;"
+			"description": "Formula for the number of spells the class can prepare, for example:\n\n\"<$level$> / 2 + <$int_mod$>\"",
+			"markdownDescription": "Formula for the number of spells the class can prepare, for example:\n\n&quot;&lt;$level$&gt; / 2 + &lt;$int_mod$&gt;&quot;"
 		},
 		"preparedSpellsProgression": {
 			"type": "array",
@@ -803,7 +803,7 @@
 						},
 						"subclassFeatures": {
 							"type": "array",
-							"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource.",
+							"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource.",
 							"items": {
 								"oneOf": [
 									{
@@ -833,7 +833,7 @@
 									}
 								]
 							},
-							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource."
+							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource."
 						},
 						"subclassTableGroups": {
 							"type": "array",
@@ -887,17 +887,17 @@
 							]
 						},
 						"subclassSpells": {
-							"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
+							"description": "Homebrew use only; adds custom subclasses to lists in spells.\n\nDoes not enable VTT import - see \"additionalSpells\".",
 							"type": "array",
 							"minItems": 1,
 							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
 							},
-							"markdownDescription": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see &quot;additionalSpells&quot;."
+							"markdownDescription": "Homebrew use only; adds custom subclasses to lists in spells.\n\nDoes not enable VTT import - see &quot;additionalSpells&quot;."
 						},
 						"subSubclassSpells": {
-							"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
+							"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\n\nPrimarily used by cleric orders and druid circles.\n\nDoes not enable VTT import - use \"additionalSpells\" as well.",
 							"type": "object",
 							"patternProperties": {
 								".*": {
@@ -911,7 +911,7 @@
 									"markdownDescription": "For example, a druid circle, religious order, or other sub-subclass name"
 								}
 							},
-							"markdownDescription": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use &quot;additionalSpells&quot; as well."
+							"markdownDescription": "Homebrew use only; adds custom sub-subclasses to lists in spells.\n\nPrimarily used by cleric orders and druid circles.\n\nDoes not enable VTT import - use &quot;additionalSpells&quot; as well."
 						},
 						"foundrySystem": {
 							"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
@@ -1011,7 +1011,7 @@
 						},
 						"subclassFeatures": {
 							"type": "array",
-							"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource.",
+							"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource.",
 							"items": {
 								"oneOf": [
 									{
@@ -1041,7 +1041,7 @@
 									}
 								]
 							},
-							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource."
+							"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource."
 						},
 						"subclassTableGroups": {
 							"type": "array",
@@ -1095,17 +1095,17 @@
 							]
 						},
 						"subclassSpells": {
-							"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
+							"description": "Homebrew use only; adds custom subclasses to lists in spells.\n\nDoes not enable VTT import - see \"additionalSpells\".",
 							"type": "array",
 							"minItems": 1,
 							"uniqueItems": true,
 							"items": {
 								"$ref": "../util.json#/$defs/spellListSpellRef"
 							},
-							"markdownDescription": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see &quot;additionalSpells&quot;."
+							"markdownDescription": "Homebrew use only; adds custom subclasses to lists in spells.\n\nDoes not enable VTT import - see &quot;additionalSpells&quot;."
 						},
 						"subSubclassSpells": {
-							"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
+							"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\n\nPrimarily used by cleric orders and druid circles.\n\nDoes not enable VTT import - use \"additionalSpells\" as well.",
 							"type": "object",
 							"patternProperties": {
 								".*": {
@@ -1119,7 +1119,7 @@
 									"markdownDescription": "For example, a druid circle, religious order, or other sub-subclass name"
 								}
 							},
-							"markdownDescription": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use &quot;additionalSpells&quot; as well."
+							"markdownDescription": "Homebrew use only; adds custom sub-subclasses to lists in spells.\n\nPrimarily used by cleric orders and druid circles.\n\nDoes not enable VTT import - use &quot;additionalSpells&quot; as well."
 						},
 						"foundrySystem": {
 							"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
@@ -1219,7 +1219,7 @@
 				},
 				"subclassFeatures": {
 					"type": "array",
-					"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource.",
+					"description": "Format: \" name | className | classSource | subclassShortName | subclassSource | level | source\"\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource.",
 					"items": {
 						"oneOf": [
 							{
@@ -1249,7 +1249,7 @@
 							}
 						]
 					},
-					"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\nPHB is assumed for sources.\nfeatureSource is assumed to be the same as subclassSource."
+					"markdownDescription": "Format: &quot; name | className | classSource | subclassShortName | subclassSource | level | source&quot;\n\nPHB is assumed for sources.\n\nfeatureSource is assumed to be the same as subclassSource."
 				},
 				"subclassTableGroups": {
 					"type": "array",
@@ -1303,17 +1303,17 @@
 					]
 				},
 				"subclassSpells": {
-					"description": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see \"additionalSpells\".",
+					"description": "Homebrew use only; adds custom subclasses to lists in spells.\n\nDoes not enable VTT import - see \"additionalSpells\".",
 					"type": "array",
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
 						"$ref": "../util.json#/$defs/spellListSpellRef"
 					},
-					"markdownDescription": "Homebrew use only; adds custom subclasses to lists in spells.\nDoes not enable VTT import - see &quot;additionalSpells&quot;."
+					"markdownDescription": "Homebrew use only; adds custom subclasses to lists in spells.\n\nDoes not enable VTT import - see &quot;additionalSpells&quot;."
 				},
 				"subSubclassSpells": {
-					"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use \"additionalSpells\" as well.",
+					"description": "Homebrew use only; adds custom sub-subclasses to lists in spells.\n\nPrimarily used by cleric orders and druid circles.\n\nDoes not enable VTT import - use \"additionalSpells\" as well.",
 					"type": "object",
 					"patternProperties": {
 						".*": {
@@ -1327,7 +1327,7 @@
 							"markdownDescription": "For example, a druid circle, religious order, or other sub-subclass name"
 						}
 					},
-					"markdownDescription": "Homebrew use only; adds custom sub-subclasses to lists in spells.\nPrimarily used by cleric orders and druid circles.\nDoes not enable VTT import - use &quot;additionalSpells&quot; as well."
+					"markdownDescription": "Homebrew use only; adds custom sub-subclasses to lists in spells.\n\nPrimarily used by cleric orders and druid circles.\n\nDoes not enable VTT import - use &quot;additionalSpells&quot; as well."
 				},
 				"foundrySystem": {
 					"$ref": "../util-foundry.json#/$defs/foundrySystemObject"

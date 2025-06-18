@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "actions.json",
-	"version": "1.2.5",
+	"version": "1.2.6",
 	"type": "object",
 	"$defs": {
 		"action": {
@@ -65,8 +65,8 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"action\"s to be linked in a \"See Also\" footnote.\nEx.: \"disarm|dmg\".",
-						"markdownDescription": "UIDs of &quot;action&quot;s to be linked in a &quot;See Also&quot; footnote.\nEx.: &quot;disarm|dmg&quot;."
+						"description": "UIDs of \"action\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"disarm|dmg\".",
+						"markdownDescription": "UIDs of &quot;action&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;disarm|dmg&quot;."
 					}
 				},
 				"foundrySystem": {
