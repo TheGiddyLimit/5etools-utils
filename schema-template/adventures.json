@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.28",
+	"version": "1.10.29",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -221,6 +221,7 @@
 								"LEGO",
 								"Shadow Realm",
 								"Animated Series",
+								"Dragon Delves",
 								"Miscellaneous"
 							]
 						}
