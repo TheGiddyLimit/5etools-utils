@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.11.1",
+	"version": "1.11.2",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -50,6 +50,12 @@
 								"description": "HTML hex color code this source should use when displayed in lists, e.g. 'ff00ff'",
 								"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
 								"markdownDescription": "HTML hex color code this source should use when displayed in lists, e.g. &apos;ff00ff&apos;"
+							},
+							"colorNight": {
+								"type": "string",
+								"description": "As \"color\", but for night mode themes",
+								"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+								"markdownDescription": "As &quot;color&quot;, but for night mode themes"
 							},
 							"full": {
 								"type": "string",
