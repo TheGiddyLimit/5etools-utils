@@ -1376,7 +1376,8 @@
 							"ethereal",
 							"hiding",
 							"marked",
-							"stable"
+							"stable",
+							"flying"
 						]
 					},
 					"markdownDescription": "Dumped via e.g. copy(Object.keys(CONFIG.DND5E.conditionTypes).sort())"
