@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.12",
+	"version": "1.9.13",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2196,6 +2196,21 @@
 								"tag": {"const": "deity"},
 								"name": {"type": "string"},
 								"pantheon": {"type": "string"}
+							},
+							"required": ["tag", "name"],
+							"additionalProperties": false
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{"$ref" : "#/$defs/_entryStatblockBase"},
+						{
+							"properties": {
+								"tag": {"const": "card"},
+								"name": {"type": "string"},
+								"set": {"type": "string"}
 							},
 							"required": ["tag", "name"],
 							"additionalProperties": false

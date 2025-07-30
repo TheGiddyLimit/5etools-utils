@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.27",
+	"version": "1.17.28",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -238,7 +238,6 @@
 				"sense",
 				"legroup",
 				"deck",
-				"card",
 				"facility"
 			]
 		},
