@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "loot.json",
-	"version": "1.4.1",
+	"version": "1.4.2",
 	"$defs": {
 		"cr": {
 			"type": "integer",
@@ -148,6 +148,7 @@
 					},
 					"source": {"$ref": "util.json#/$defs/source"},
 					"page": {"$ref": "util.json#/$defs/page"},
+					"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
 					"type": {
 						"type": "integer"
 					},
