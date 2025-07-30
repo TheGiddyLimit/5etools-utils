@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "loot.json",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"$defs": {
 		"cr": {
 			"type": "integer",
@@ -271,6 +271,28 @@
 								},
 								"required": [
 									"fromItems"
+								],
+								"additionalProperties": false
+							},
+							{
+								"type": "object",
+								"properties": {
+									"fromMatching": {
+										"type": "object",
+										"properties": {
+											"rarity": {
+												"type": "string"
+											},
+											"tier": {
+												"type": "string"
+											}
+										},
+										"minProperties": 1,
+										"additionalProperties": false
+									}
+								},
+								"required": [
+									"fromMatching"
 								],
 								"additionalProperties": false
 							}
