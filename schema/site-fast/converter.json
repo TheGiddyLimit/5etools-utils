@@ -1,0 +1,53 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "converter.json",
+	"version": "1.0.0",
+	"type": "object",
+	"properties": {
+		"converterSample": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"type": "object",
+				"properties": {
+					"converterId": {
+						"type": "string",
+						"enum": [
+							"background",
+							"monster",
+							"generic",
+							"feat",
+							"item",
+							"race",
+							"spell",
+							"table"
+						]
+					},
+					"format": {
+						"type": "string",
+						"enum": [
+							"txt",
+							"md",
+							"html"
+						]
+					},
+					"edition": {
+						"$ref": "util-edition.json#/$defs/edition"
+					},
+					"text": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"converterId",
+					"format",
+					"edition",
+					"text"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"additionalProperties": false
+}
