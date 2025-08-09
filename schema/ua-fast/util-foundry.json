@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -278,7 +278,11 @@
 					"items": {
 						"$ref": "#/$defs/_foundryIdRef"
 					}
-				}
+				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false
 			},
 			"required": [
 				"type"
@@ -373,6 +377,10 @@
 						"$ref": "#/$defs/_foundryIdRef"
 					}
 				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
 				"type": {
 					"const": "attack"
 				}
@@ -470,6 +478,10 @@
 						"$ref": "#/$defs/_foundryIdRef"
 					}
 				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
 				"type": {
 					"const": "damage"
 				}
@@ -567,6 +579,10 @@
 						"$ref": "#/$defs/_foundryIdRef"
 					}
 				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
 				"type": {
 					"const": "save"
 				}
@@ -664,6 +680,10 @@
 						"$ref": "#/$defs/_foundryIdRef"
 					}
 				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
 				"type": {
 					"const": "check"
 				},
@@ -782,6 +802,10 @@
 						"$ref": "#/$defs/_foundryIdRef"
 					}
 				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
 				"type": {
 					"const": "heal"
 				}
@@ -879,6 +903,10 @@
 						"$ref": "#/$defs/_foundryIdRef"
 					}
 				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
 				"type": {
 					"const": "cast"
 				},
@@ -984,6 +1012,10 @@
 						"$ref": "#/$defs/_foundryIdRef"
 					}
 				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
 				"type": {
 					"const": "enchant"
 				}
@@ -1081,6 +1113,10 @@
 						"$ref": "#/$defs/_foundryIdRef"
 					}
 				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
 				"type": {
 					"const": "summon"
 				},
@@ -1245,6 +1281,10 @@
 						"$ref": "#/$defs/_foundryIdRef"
 					}
 				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
 				"type": {
 					"const": "utility"
 				}

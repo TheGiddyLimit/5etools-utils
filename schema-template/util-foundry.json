@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.1",
+	"version": "1.1.2",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -260,7 +260,13 @@
 				"effects": {
 					"type": "array",
 					"items": {"$ref": "#/$defs/_foundryIdRef"}
-				}
+				},
+
+				"_id": false,
+				"sort": false,
+
+				"template": false,
+				"affects": false
 			},
 			"required": ["type"]
 		},
