@@ -37,7 +37,7 @@
 							"supplement-alt",
 							"prerelease",
 							"homebrew",
-							"organised-play",
+							"organized-play",
 							"other"
 						],
 						"markdownDescription": "The group under which this adventure should be listed in the navbar."
