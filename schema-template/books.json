@@ -21,7 +21,7 @@
 					"group": {
 						"description": "The group under which this book should be listed in the navbar.",
 						"type": "string",
-						"enum": ["core", "supplement", "supplement-alt", "setting", "setting-alt", "prerelease", "homebrew", "screen", "organised-play", "recipe", "other"]
+						"enum": ["core", "supplement", "supplement-alt", "setting", "setting-alt", "prerelease", "homebrew", "screen", "organized-play", "recipe", "other"]
 					},
 					"author": {
 						"type": "string"

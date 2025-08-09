@@ -25,7 +25,7 @@
 					"group": {
 						"description": "The group under which this adventure should be listed in the navbar.",
 						"type": "string",
-						"enum": ["supplement", "supplement-alt", "prerelease", "homebrew", "organised-play", "other"]
+						"enum": ["supplement", "supplement-alt", "prerelease", "homebrew", "organized-play", "other"]
 					},
 					"author": {
 						"type": "string"
