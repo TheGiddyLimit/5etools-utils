@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.15",
+	"version": "1.9.16",
 	"type": "object",
 	"$defs": {
 		"_magicvariantDataBase": {
@@ -612,6 +612,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				}
 			},
 			"additionalProperties": false
@@ -1227,6 +1230,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				},
 				"rarity": {
 					"$ref": "items-shared.json#/$defs/itemRarity"
@@ -1846,6 +1852,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				}
 			},
 			"additionalProperties": false,
@@ -2466,6 +2475,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				},
 				"rarity": {
 					"$ref": "items-shared.json#/$defs/itemRarity"
@@ -3088,6 +3100,9 @@
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
 				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
+				},
 				"_copy": {
 					"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
 				},
@@ -3709,6 +3724,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				},
 				"rarity": {
 					"$ref": "items-shared.json#/$defs/itemRarity"

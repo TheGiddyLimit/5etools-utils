@@ -39,29 +39,7 @@
 					"type": "integer"
 				},
 				"_merge": {
-					"type": "object",
-					"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
-					"properties": {
-						"system": {
-							"const": true
-						},
-						"chooseSystem": {
-							"const": true
-						},
-						"activities": {
-							"const": true
-						},
-						"effects": {
-							"const": true
-						},
-						"flags": {
-							"const": true
-						},
-						"chooseFlags": {
-							"const": true
-						}
-					},
-					"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				},
 				"entryData": {
 					"$ref": "util-foundry.json#/$defs/entryDataObject"
@@ -112,29 +90,7 @@
 							"type": "integer"
 						},
 						"_merge": {
-							"type": "object",
-							"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
-							"properties": {
-								"system": {
-									"const": true
-								},
-								"chooseSystem": {
-									"const": true
-								},
-								"activities": {
-									"const": true
-								},
-								"effects": {
-									"const": true
-								},
-								"flags": {
-									"const": true
-								},
-								"chooseFlags": {
-									"const": true
-								}
-							},
-							"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
+							"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 						},
 						"entryData": {
 							"$ref": "util-foundry.json#/$defs/entryDataObject"
@@ -186,29 +142,7 @@
 					"type": "integer"
 				},
 				"_merge": {
-					"type": "object",
-					"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
-					"properties": {
-						"system": {
-							"const": true
-						},
-						"chooseSystem": {
-							"const": true
-						},
-						"activities": {
-							"const": true
-						},
-						"effects": {
-							"const": true
-						},
-						"flags": {
-							"const": true
-						},
-						"chooseFlags": {
-							"const": true
-						}
-					},
-					"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				},
 				"raceName": {
 					"description": "The full name of the race, with subrace parts/etc. applied.",
@@ -263,29 +197,7 @@
 							"type": "integer"
 						},
 						"_merge": {
-							"type": "object",
-							"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
-							"properties": {
-								"system": {
-									"const": true
-								},
-								"chooseSystem": {
-									"const": true
-								},
-								"activities": {
-									"const": true
-								},
-								"effects": {
-									"const": true
-								},
-								"flags": {
-									"const": true
-								},
-								"chooseFlags": {
-									"const": true
-								}
-							},
-							"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
+							"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 						},
 						"raceName": {
 							"description": "The full name of the race, with subrace parts/etc. applied.",
@@ -340,29 +252,7 @@
 							"type": "integer"
 						},
 						"_merge": {
-							"type": "object",
-							"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
-							"properties": {
-								"system": {
-									"const": true
-								},
-								"chooseSystem": {
-									"const": true
-								},
-								"activities": {
-									"const": true
-								},
-								"effects": {
-									"const": true
-								},
-								"flags": {
-									"const": true
-								},
-								"chooseFlags": {
-									"const": true
-								}
-							},
-							"markdownDescription": "If our &quot;X&quot; (e.g. &quot;system&quot;) should be merged with any base &quot;X&quot;, rather than overwriting."
+							"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 						},
 						"raceName": {
 							"description": "The full name of the race, with subrace parts/etc. applied.",

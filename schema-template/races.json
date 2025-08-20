@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.13",
+	"version": "1.12.14",
 	"type": "object",
 
 	"$defs": {
@@ -193,7 +193,8 @@
 					"foundryActivities": {"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"},
 					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
 					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
-					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"_foundryMerge": {"$ref": "util-foundry.json#/$defs/foundryMergeObject"}
 				}
 			},
 			"additionalProperties": false

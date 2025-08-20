@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "conditionsdiseases.json",
-	"version": "1.2.9",
+	"version": "1.2.10",
 	"type": "object",
 	"$defs": {
 		"_conditionDiseaseBase": {
@@ -43,7 +43,8 @@
 					"foundryActivities": {"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"},
 					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
 					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
-					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"_foundryMerge": {"$ref": "util-foundry.json#/$defs/foundryMergeObject"}
 				},
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}

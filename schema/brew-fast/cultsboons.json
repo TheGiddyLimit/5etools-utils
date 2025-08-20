@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "cultsboons.json",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"type": "object",
 	"$defs": {
 		"cult": {
@@ -90,6 +90,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				}
 			},
 			"required": [
@@ -168,6 +171,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				}
 			},
 			"required": [

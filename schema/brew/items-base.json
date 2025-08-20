@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.14",
+	"version": "1.6.15",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -467,6 +467,9 @@
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
 				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
+				},
 				"fluff": {
 					"$ref": "items-shared.json#/$defs/fluff"
 				}
@@ -844,6 +847,9 @@
 						},
 						"foundryImg": {
 							"$ref": "util-foundry.json#/$defs/foundryImg"
+						},
+						"_foundryMerge": {
+							"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"
@@ -1226,6 +1232,9 @@
 						},
 						"foundryImg": {
 							"$ref": "util-foundry.json#/$defs/foundryImg"
+						},
+						"_foundryMerge": {
+							"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 						},
 						"fluff": {
 							"$ref": "items-shared.json#/$defs/fluff"

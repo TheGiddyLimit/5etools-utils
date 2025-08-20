@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.4.6",
+	"version": "1.4.7",
 	"type": "object",
 	"$defs": {
 		"_trapHazardTier": {
@@ -338,6 +338,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"_foundryMerge": {
+					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				}
 			},
 			"additionalProperties": false,

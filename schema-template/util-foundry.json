@@ -677,18 +677,7 @@
 
 				"migrationVersion": {"type": "integer"},
 
-				"_merge": {
-					"type": "object",
-					"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
-					"properties": {
-						"system": {"const": true},
-						"chooseSystem": {"const": true},
-						"activities": {"const": true},
-						"effects": {"const": true},
-						"flags": {"const": true},
-						"chooseFlags": {"const": true}
-					}
-				}
+				"_merge": {"$ref": "#/$defs/foundryMergeObject"}
 			},
 			"required": [
 				"name",
@@ -749,6 +738,20 @@
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {"$ref": "#/$defs/foundrySideDataGenericActorObject"}
+		},
+
+		"foundryMergeObject": {
+			"description": "If our \"X\" (e.g. \"system\") should be merged with any base \"X\", rather than overwriting.",
+			"type": "object",
+			"properties": {
+				"system": {"const": true},
+				"chooseSystem": {"const": true},
+				"effects": {"const": true},
+				"flags": {"const": true},
+				"chooseFlags": {"const": true},
+				"activities": {"const": true}
+			},
+			"minProperties": 1
 		}
 	}
 }

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.4.6",
+	"version": "1.4.7",
 	"type": "object",
 
 	"$defs": {
@@ -279,7 +279,8 @@
 					"foundryActivities": {"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"},
 					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
 					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
-					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"_foundryMerge": {"$ref": "util-foundry.json#/$defs/foundryMergeObject"}
 				}
 			},
 			"additionalProperties": false,
