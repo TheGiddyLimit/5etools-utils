@@ -2237,7 +2237,9 @@
 							}
 						},
 						"additionalProperties": false
-					}
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"mapParent": {
 					"description": "Note that the order of transformations is: scale, then offset.",

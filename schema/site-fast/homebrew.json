@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.11.2",
+	"version": "1.11.3",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -138,9 +138,9 @@
 								},
 								"color": {
 									"type": "string",
-									"description": "HTML hex color code this source should use when displayed in lists, e.g. 'ff00ff'",
+									"description": "HTML hex color code this school should use when displayed in lists, e.g. 'ff00ff'",
 									"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
-									"markdownDescription": "HTML hex color code this source should use when displayed in lists, e.g. &apos;ff00ff&apos;"
+									"markdownDescription": "HTML hex color code this school should use when displayed in lists, e.g. &apos;ff00ff&apos;"
 								}
 							},
 							"required": [
@@ -204,6 +204,12 @@
 								},
 								"short": {
 									"type": "string"
+								},
+								"color": {
+									"type": "string",
+									"description": "HTML hex color code this type should use when displayed in lists, e.g. 'ff00ff'",
+									"pattern": "^([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+									"markdownDescription": "HTML hex color code this type should use when displayed in lists, e.g. &apos;ff00ff&apos;"
 								},
 								"hasOrder": {
 									"description": "If this type has a psionic order.",
