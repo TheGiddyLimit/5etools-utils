@@ -35,6 +35,9 @@
 				"img": {
 					"type": "string"
 				},
+				"advancement": {
+					"$ref": "util-foundry.json#/$defs/foundryAdvancementsArray"
+				},
 				"migrationVersion": {
 					"type": "integer"
 				},
@@ -85,6 +88,9 @@
 						},
 						"img": {
 							"type": "string"
+						},
+						"advancement": {
+							"$ref": "util-foundry.json#/$defs/foundryAdvancementsArray"
 						},
 						"migrationVersion": {
 							"type": "integer"
@@ -137,6 +143,9 @@
 				},
 				"img": {
 					"type": "string"
+				},
+				"advancement": {
+					"$ref": "util-foundry.json#/$defs/foundryAdvancementsArray"
 				},
 				"migrationVersion": {
 					"type": "integer"
@@ -193,6 +202,9 @@
 						"img": {
 							"type": "string"
 						},
+						"advancement": {
+							"$ref": "util-foundry.json#/$defs/foundryAdvancementsArray"
+						},
 						"migrationVersion": {
 							"type": "integer"
 						},
@@ -247,6 +259,9 @@
 						},
 						"img": {
 							"type": "string"
+						},
+						"advancement": {
+							"$ref": "util-foundry.json#/$defs/foundryAdvancementsArray"
 						},
 						"migrationVersion": {
 							"type": "integer"
