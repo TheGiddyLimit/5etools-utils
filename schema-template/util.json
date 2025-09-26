@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.28",
+	"version": "1.17.29",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -230,10 +230,12 @@
 							"tag": {
 								"description": "A tag used in the renderer, e.g. \"creature\"",
 								"type": "string"
-							}
+							},
+							"edition": {"$ref": "util-edition.json#/$defs/edition"}
 						},
 						"additionalProperties": false,
-						"required": ["tag", "uid"]
+						"required": ["uid"],
+						"minProperties": 2
 					}
 				]
 			},
