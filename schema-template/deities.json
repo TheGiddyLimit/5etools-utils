@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "deities.json",
-	"version": "1.2.13",
+	"version": "1.2.14",
 	"type": "object",
 
 	"$defs": {
@@ -137,9 +137,8 @@
 						"description": "For homebrew use only; a key-value dict of the form: `\"Typical Dissidents\": \"Human Bards\"`",
 						"type": "object"
 					},
-					"foundryImg": {
-						"$ref": "util-foundry.json#/$defs/foundryImg"
-					}
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvice": {"$ref": "entry.json"}
 				},
 				"source": {"$ref": "util.json#/$defs/source"},
 				"entries": {

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "tables.json",
-	"version": "1.1.11",
+	"version": "1.1.12",
 	"type": "object",
 	"$defs": {
 		"tableData": {
@@ -116,9 +116,7 @@
 					}
 				},
 				"$$ifBrew": {
-					"foundryImg": {
-						"$ref": "util-foundry.json#/$defs/foundryImg"
-					}
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
 				}
 			}
 		}

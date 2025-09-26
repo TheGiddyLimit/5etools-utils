@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.52",
+	"version": "1.21.53",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -941,9 +941,8 @@
 							}
 						]
 					},
-					"foundryImg": {
-						"$ref": "../util-foundry.json#/$defs/foundryImg"
-					},
+					"foundryImg": {"$ref": "../util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvice": {"$ref": "../entry.json"},
 					"foundryPrototypeToken": {
 						"$ref": "../util-foundry.json#/$defs/foundryPrototypeTokenObject"
 					}

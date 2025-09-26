@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.15",
+	"version": "1.6.16",
 	"type": "object",
 
 	"$defs": {
@@ -310,6 +310,7 @@
 					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
 					"foundryEffects": {"$ref": "util-foundry.json#/$defs/foundryEffectsArray"},
 					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvice": {"$ref": "entry.json"},
 					"_foundryMerge": {"$ref": "util-foundry.json#/$defs/foundryMergeObject"},
 					"fluff": {
 						"$ref": "items-shared.json#/$defs/fluff"

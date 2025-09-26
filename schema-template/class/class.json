@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.10",
+	"version": "2.12.11",
 	"$id": "class.json",
 
 	"type": "object",
@@ -206,6 +206,9 @@
 					"foundryImg": {
 						"$ref": "../util-foundry.json#/$defs/foundryImg"
 					},
+					"foundryAdvice": {
+						"$ref": "../entry.json"
+					},
 					"languageProficiencies": {
 						"$ref": "../util.json#/$defs/languageProficiencies"
 					},
@@ -298,6 +301,9 @@
 					},
 					"foundryImg": {
 						"$ref": "../util-foundry.json#/$defs/foundryImg"
+					},
+					"foundryAdvice": {
+						"$ref": "../entry.json"
 					},
 					"languageProficiencies": {
 						"$ref": "../util.json#/$defs/languageProficiencies"
@@ -628,6 +634,9 @@
 					},
 					"foundryImg": {
 						"$ref": "../util-foundry.json#/$defs/foundryImg"
+					},
+					"foundryAdvice": {
+						"$ref": "../entry.json"
 					}
 				}
 			},
@@ -969,6 +978,9 @@
 					},
 					"foundryImg": {
 						"$ref": "../util-foundry.json#/$defs/foundryImg"
+					},
+					"foundryAdvice": {
+						"$ref": "../entry.json"
 					}
 				}
 			},

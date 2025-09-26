@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.14",
+	"version": "1.7.15",
 	"type": "object",
 
 	"$defs": {
@@ -399,9 +399,8 @@
 					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
 					"foundryActivities": {"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"},
 					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
-					"foundryImg": {
-						"$ref": "util-foundry.json#/$defs/foundryImg"
-					}
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvice": {"$ref": "entry.json"}
 				},
 				"$$if": {
 					"modes": ["brew", "ua"],
@@ -522,9 +521,8 @@
 					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
 					"foundryActivities": {"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"},
 					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
-					"foundryImg": {
-						"$ref": "util-foundry.json#/$defs/foundryImg"
-					}
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvice": {"$ref": "entry.json"}
 				},
 				"$$if": {
 					"modes": ["brew", "ua"],
@@ -693,9 +691,8 @@
 					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
 					"foundryActivities": {"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"},
 					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
-					"foundryImg": {
-						"$ref": "util-foundry.json#/$defs/foundryImg"
-					}
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvice": {"$ref": "entry.json"}
 				},
 				"$$if": {
 					"modes": ["brew", "ua"],
