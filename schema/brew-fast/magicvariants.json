@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.16",
+	"version": "1.9.17",
 	"type": "object",
 	"$defs": {
 		"_magicvariantDataBase": {
@@ -612,6 +612,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"foundryAdvice": {
+					"$ref": "entry.json"
 				},
 				"_foundryMerge": {
 					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
@@ -1230,6 +1233,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"foundryAdvice": {
+					"$ref": "entry.json"
 				},
 				"_foundryMerge": {
 					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
@@ -1853,6 +1859,9 @@
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
 				},
+				"foundryAdvice": {
+					"$ref": "entry.json"
+				},
 				"_foundryMerge": {
 					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				}
@@ -2475,6 +2484,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"foundryAdvice": {
+					"$ref": "entry.json"
 				},
 				"_foundryMerge": {
 					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
@@ -3100,6 +3112,9 @@
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
 				},
+				"foundryAdvice": {
+					"$ref": "entry.json"
+				},
 				"_foundryMerge": {
 					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
 				},
@@ -3724,6 +3739,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"foundryAdvice": {
+					"$ref": "entry.json"
 				},
 				"_foundryMerge": {
 					"$ref": "util-foundry.json#/$defs/foundryMergeObject"

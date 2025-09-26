@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "languages.json",
-	"version": "1.1.15",
+	"version": "1.1.16",
 	"type": "object",
 	"$defs": {
 		"language": {
@@ -79,6 +79,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"foundryAdvice": {
+					"$ref": "entry.json"
 				}
 			},
 			"required": [

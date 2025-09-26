@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.12",
+	"version": "1.7.13",
 	"type": "object",
 	"$defs": {
 		"featData": {
@@ -146,6 +146,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"foundryAdvice": {
+					"$ref": "entry.json"
 				},
 				"_foundryMerge": {
 					"$ref": "util-foundry.json#/$defs/foundryMergeObject"
@@ -297,6 +300,9 @@
 						},
 						"foundryImg": {
 							"$ref": "util-foundry.json#/$defs/foundryImg"
+						},
+						"foundryAdvice": {
+							"$ref": "entry.json"
 						},
 						"_foundryMerge": {
 							"$ref": "util-foundry.json#/$defs/foundryMergeObject"
@@ -451,6 +457,9 @@
 						},
 						"foundryImg": {
 							"$ref": "util-foundry.json#/$defs/foundryImg"
+						},
+						"foundryAdvice": {
+							"$ref": "entry.json"
 						},
 						"_foundryMerge": {
 							"$ref": "util-foundry.json#/$defs/foundryMergeObject"

@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.28",
+	"version": "1.17.29",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -171,13 +171,16 @@
 								"description": "A tag used in the renderer, e.g. \"creature\"",
 								"type": "string",
 								"markdownDescription": "A tag used in the renderer, e.g. &quot;creature&quot;"
+							},
+							"edition": {
+								"$ref": "util-edition.json#/$defs/edition"
 							}
 						},
 						"additionalProperties": false,
 						"required": [
-							"tag",
 							"uid"
-						]
+						],
+						"minProperties": 2
 					}
 				]
 			},

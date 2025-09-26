@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "actions.json",
-	"version": "1.2.7",
+	"version": "1.2.8",
 	"type": "object",
 	"$defs": {
 		"action": {
@@ -83,6 +83,9 @@
 				},
 				"foundryImg": {
 					"$ref": "util-foundry.json#/$defs/foundryImg"
+				},
+				"foundryAdvice": {
+					"$ref": "entry.json"
 				},
 				"_foundryMerge": {
 					"$ref": "util-foundry.json#/$defs/foundryMergeObject"

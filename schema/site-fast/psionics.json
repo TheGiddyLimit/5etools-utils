@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "psionics.json",
-	"version": "1.2.3",
+	"version": "1.2.4",
 	"type": "object",
 	"$defs": {
 		"psionic": {

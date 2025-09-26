@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.10",
+	"version": "2.12.11",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -253,6 +253,9 @@
 				"foundryImg": {
 					"$ref": "../util-foundry.json#/$defs/foundryImg"
 				},
+				"foundryAdvice": {
+					"$ref": "../entry.json"
+				},
 				"languageProficiencies": {
 					"$ref": "../util.json#/$defs/languageProficiencies"
 				},
@@ -366,6 +369,9 @@
 				"foundryImg": {
 					"$ref": "../util-foundry.json#/$defs/foundryImg"
 				},
+				"foundryAdvice": {
+					"$ref": "../entry.json"
+				},
 				"languageProficiencies": {
 					"$ref": "../util.json#/$defs/languageProficiencies"
 				},
@@ -472,6 +478,9 @@
 						},
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"
+						},
+						"foundryAdvice": {
+							"$ref": "../entry.json"
 						},
 						"languageProficiencies": {
 							"$ref": "../util.json#/$defs/languageProficiencies"
@@ -587,6 +596,9 @@
 						},
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"
+						},
+						"foundryAdvice": {
+							"$ref": "../entry.json"
 						},
 						"languageProficiencies": {
 							"$ref": "../util.json#/$defs/languageProficiencies"
@@ -924,6 +936,9 @@
 						},
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"
+						},
+						"foundryAdvice": {
+							"$ref": "../entry.json"
 						}
 					},
 					"additionalProperties": false,
@@ -1133,6 +1148,9 @@
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"
 						},
+						"foundryAdvice": {
+							"$ref": "../entry.json"
+						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
 						}
@@ -1340,6 +1358,9 @@
 				},
 				"foundryImg": {
 					"$ref": "../util-foundry.json#/$defs/foundryImg"
+				},
+				"foundryAdvice": {
+					"$ref": "../entry.json"
 				}
 			},
 			"additionalProperties": false
@@ -1722,6 +1743,9 @@
 						},
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"
+						},
+						"foundryAdvice": {
+							"$ref": "../entry.json"
 						}
 					},
 					"additionalProperties": false,
@@ -2024,6 +2048,9 @@
 						},
 						"foundryImg": {
 							"$ref": "../util-foundry.json#/$defs/foundryImg"
+						},
+						"foundryAdvice": {
+							"$ref": "../entry.json"
 						},
 						"_copy": {
 							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
@@ -2329,6 +2356,9 @@
 				},
 				"foundryImg": {
 					"$ref": "../util-foundry.json#/$defs/foundryImg"
+				},
+				"foundryAdvice": {
+					"$ref": "../entry.json"
 				}
 			},
 			"additionalProperties": false,
