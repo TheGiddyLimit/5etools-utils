@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.13",
+	"version": "1.9.14",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -100,9 +100,10 @@
 					"$$merge": [
 						{"$ref": "util.json#/$defs/url"},
 						{
+							"description": "Restrict the usage of:\n\n- Site URLs -- these should be `\"internal\"` URLs instead\n- Imgur links -- these are not accessible in the UK https://help.imgur.com/hc/en-us/articles/41592665292443-Imgur-access-in-the-United-Kingdom",
 							"pattern": "^https?://",
 							"not": {
-								"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io|raw\\.githubusercontent\\.com\/5etools-mirror-\\d+)/"
+								"pattern": "^https?://(5e\\.tools|5etools-mirror-\\d+\\.github\\.io|raw\\.githubusercontent\\.com\/5etools-mirror-\\d+|i\\.imgur\\.com|imgur\\.com)/"
 							}
 						}
 					]
