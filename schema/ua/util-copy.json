@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-copy.json",
 	"title": "Util: Copy",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"$defs": {
 		"_mod_renameArr_rename": {
 			"type": "object",
@@ -1109,7 +1109,8 @@
 					"required": [
 						"_abstract",
 						"_implementations"
-					]
+					],
+					"additionalProperties": false
 				}
 			]
 		},
