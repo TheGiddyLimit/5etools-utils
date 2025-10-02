@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.3",
+	"version": "1.1.4",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -673,6 +673,7 @@
 				"activities": {"type": "array", "items": {"$ref": "#/$defs/foundryActivityObject"}},
 				"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}},
 				"flags": {"$ref": "#/$defs/foundryFlagsObject"},
+				"advice": {"$ref": "entry.json"},
 				"img": {"type": "string"},
 				"advancement": {"$ref": "util-foundry.json#/$defs/foundryAdvancementsArray"},
 

@@ -34,6 +34,9 @@
 					"flags": {
 						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
 					},
+					"advice": {
+						"$ref": "../entry.json"
+					},
 					"img": {
 						"type": "string"
 					},
@@ -127,6 +130,9 @@
 					},
 					"flags": {
 						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
+					},
+					"advice": {
+						"$ref": "../entry.json"
 					},
 					"img": {
 						"type": "string"
@@ -226,6 +232,9 @@
 					},
 					"flags": {
 						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
+					},
+					"advice": {
+						"$ref": "../entry.json"
 					},
 					"img": {
 						"type": "string"
@@ -327,6 +336,9 @@
 					},
 					"flags": {
 						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
+					},
+					"advice": {
+						"$ref": "../entry.json"
 					},
 					"img": {
 						"type": "string"
