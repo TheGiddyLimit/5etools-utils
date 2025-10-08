@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.11",
+	"version": "2.12.12",
 	"$id": "class.json",
 
 	"type": "object",
@@ -508,9 +508,7 @@
 					"$ref": "../util.json#/$defs/source"
 				},
 				"edition": {"$ref": "../util-edition.json#/$defs/edition"},
-				"isReprinted": {
-					"type": "boolean"
-				},
+				"isReprinted": {"$ref": "../util.json#/$defs/isReprinted"},
 				"reprintedAs": {"$ref": "../util.json#/$defs/reprintedAs"},
 				"$$ifSite": {
 					"srd": {"$ref": "../util.json#/$defs/srd"},
@@ -768,9 +766,7 @@
 					"basicRules": {"$ref": "../util.json#/$defs/basicRules"},
 					"basicRules2024": {"$ref": "../util.json#/$defs/basicRules"}
 				},
-				"isReprinted": {
-					"type": "boolean"
-				},
+				"isReprinted": {"$ref": "../util.json#/$defs/isReprinted"},
 				"reprintedAs": {"$ref": "../util.json#/$defs/reprintedAs"},
 				"classGroup": {
 					"type": "array",
@@ -784,9 +780,7 @@
 						}
 					}
 				},
-				"isSidekick": {
-					"type": "boolean"
-				},
+				"isSidekick": {"const": true},
 				"hd": {
 					"type": "object",
 					"properties": {
