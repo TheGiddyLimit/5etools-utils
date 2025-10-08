@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.53",
+	"version": "1.21.54",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -273,6 +273,9 @@
 				},
 				"reprintedAs": {
 					"$ref": "../util.json#/$defs/reprintedAs"
+				},
+				"isReprinted": {
+					"$ref": "../util.json#/$defs/isReprinted"
 				},
 				"alignment": {
 					"type": "array",
@@ -1642,6 +1645,9 @@
 						},
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
+						},
+						"isReprinted": {
+							"$ref": "../util.json#/$defs/isReprinted"
 						},
 						"alignment": {
 							"type": "array",
@@ -3016,6 +3022,9 @@
 						},
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
+						},
+						"isReprinted": {
+							"$ref": "../util.json#/$defs/isReprinted"
 						},
 						"alignment": {
 							"type": "array",

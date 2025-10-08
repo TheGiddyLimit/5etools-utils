@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.11",
+	"version": "2.12.12",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -577,7 +577,7 @@
 							"$ref": "../util-edition.json#/$defs/edition"
 						},
 						"isReprinted": {
-							"type": "boolean"
+							"$ref": "../util.json#/$defs/isReprinted"
 						},
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
@@ -770,7 +770,7 @@
 							"$ref": "../util-edition.json#/$defs/edition"
 						},
 						"isReprinted": {
-							"type": "boolean"
+							"$ref": "../util.json#/$defs/isReprinted"
 						},
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
@@ -963,7 +963,7 @@
 					"$ref": "../util-edition.json#/$defs/edition"
 				},
 				"isReprinted": {
-					"type": "boolean"
+					"$ref": "../util.json#/$defs/isReprinted"
 				},
 				"reprintedAs": {
 					"$ref": "../util.json#/$defs/reprintedAs"
@@ -1225,7 +1225,7 @@
 							"$ref": "../util-edition.json#/$defs/edition"
 						},
 						"isReprinted": {
-							"type": "boolean"
+							"$ref": "../util.json#/$defs/isReprinted"
 						},
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
@@ -1243,7 +1243,7 @@
 							}
 						},
 						"isSidekick": {
-							"type": "boolean"
+							"const": true
 						},
 						"hd": {
 							"type": "object",
@@ -1505,7 +1505,7 @@
 							"$ref": "../util-edition.json#/$defs/edition"
 						},
 						"isReprinted": {
-							"type": "boolean"
+							"$ref": "../util.json#/$defs/isReprinted"
 						},
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
@@ -1523,7 +1523,7 @@
 							}
 						},
 						"isSidekick": {
-							"type": "boolean"
+							"const": true
 						},
 						"hd": {
 							"type": "object",
@@ -1788,7 +1788,7 @@
 					"$ref": "../util-edition.json#/$defs/edition"
 				},
 				"isReprinted": {
-					"type": "boolean"
+					"$ref": "../util.json#/$defs/isReprinted"
 				},
 				"reprintedAs": {
 					"$ref": "../util.json#/$defs/reprintedAs"
@@ -1806,7 +1806,7 @@
 					}
 				},
 				"isSidekick": {
-					"type": "boolean"
+					"const": true
 				},
 				"hd": {
 					"type": "object",

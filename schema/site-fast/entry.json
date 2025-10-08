@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.14",
+	"version": "1.9.15",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -2240,6 +2240,9 @@
 					},
 					"minItems": 1,
 					"uniqueItems": true
+				},
+				"labelMapRegions": {
+					"const": true
 				},
 				"mapParent": {
 					"description": "Note that the order of transformations is: scale, then offset.",
