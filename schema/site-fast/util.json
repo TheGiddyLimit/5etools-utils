@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.30",
+	"version": "1.17.31",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -3190,6 +3190,9 @@
 										},
 										"quantity": {
 											"type": "integer"
+										},
+										"displayName": {
+											"type": "string"
 										}
 									},
 									"required": [
@@ -3208,6 +3211,9 @@
 										},
 										"quantity": {
 											"type": "integer"
+										},
+										"displayName": {
+											"type": "string"
 										}
 									},
 									"required": [
