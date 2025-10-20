@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.4",
+	"version": "1.1.5",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -401,6 +401,13 @@
 									}
 								]
 							}
+						},
+
+						"enchant": {
+							"type": "object",
+							"properties": {
+								"self": {"const": true}
+							}
 						}
 					}
 				}
@@ -459,18 +466,6 @@
 								]
 							}
 						}
-					}
-				}
-			]
-		},
-
-		"_foundryActivityObject_enchant": {
-			"$$merge": [
-				{"$ref": "#/$defs/_foundryActivityObject_base"},
-				{
-					"type": "object",
-					"properties": {
-						"type": {"const": "enchant"}
 					}
 				}
 			]
