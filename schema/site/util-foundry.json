@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.1.5",
+	"version": "1.1.6",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -189,6 +189,244 @@
 			},
 			"minProperties": 1,
 			"markdownDescription": "A 5etools-data-like object of additional entities to import."
+		},
+		"_foundryActivityProfileBase": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"types": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"movement": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"sizes": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"count": {
+					"type": [
+						"integer",
+						"string"
+					]
+				},
+				"level": {
+					"type": "object",
+					"properties": {
+						"min": {
+							"type": "integer"
+						},
+						"max": {
+							"type": "integer"
+						}
+					}
+				}
+			}
+		},
+		"_foundryActivityProfile": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"types": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"movement": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"sizes": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"count": {
+							"type": [
+								"integer",
+								"string"
+							]
+						},
+						"level": {
+							"type": "object",
+							"properties": {
+								"min": {
+									"type": "integer"
+								},
+								"max": {
+									"type": "integer"
+								}
+							}
+						}
+					},
+					"additionalProperties": false,
+					"unevaluatedProperties": {
+						"not": {
+							"anyOf": [
+								{
+									"required": [
+										"cr"
+									]
+								},
+								{
+									"required": [
+										"uuid"
+									]
+								}
+							]
+						}
+					}
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"types": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"movement": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"sizes": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"count": {
+							"type": [
+								"integer",
+								"string"
+							]
+						},
+						"level": {
+							"type": "object",
+							"properties": {
+								"min": {
+									"type": "integer"
+								},
+								"max": {
+									"type": "integer"
+								}
+							}
+						},
+						"cr": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"cr"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"types": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"movement": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"sizes": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"count": {
+							"type": [
+								"integer",
+								"string"
+							]
+						},
+						"level": {
+							"type": "object",
+							"properties": {
+								"min": {
+									"type": "integer"
+								},
+								"max": {
+									"type": "integer"
+								}
+							}
+						},
+						"uuid": {
+							"type": "string",
+							"pattern": "^@creature\\[.*\\]$"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"uuid"
+					]
+				}
+			]
+		},
+		"_foundryActivityProfiles": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/_foundryActivityProfile"
+			}
 		},
 		"_foundryActivityObject_base": {
 			"type": "object",
@@ -1156,70 +1394,118 @@
 					"const": "summon"
 				},
 				"profiles": {
+					"$ref": "#/$defs/_foundryActivityProfiles"
+				}
+			},
+			"required": [
+				"type"
+			]
+		},
+		"_foundryActivityObject_transform": {
+			"type": "object",
+			"properties": {
+				"foundryId": {
+					"description": "Use only when required. For example, when linking a \"rider\".",
+					"$ref": "#/$defs/foundryIdShort",
+					"markdownDescription": "Use only when required. For example, when linking a &quot;rider&quot;."
+				},
+				"img": {
+					"type": "string"
+				},
+				"description": {
+					"type": "object"
+				},
+				"descriptionEntries": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
 					"type": "array",
 					"items": {
-						"oneOf": [
-							{
+						"$ref": "entry.json"
+					},
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
+				},
+				"consumption": {
+					"type": "object",
+					"properties": {
+						"targets": {
+							"type": "array",
+							"items": {
 								"type": "object",
 								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"cr": {
-										"type": "string"
-									},
-									"types": {
-										"type": "array",
-										"items": {
-											"type": "string"
-										},
-										"minItems": 1,
-										"uniqueItems": true
-									},
-									"count": {
-										"type": [
-											"integer",
-											"string"
-										]
-									}
-								},
-								"additionalProperties": false,
-								"minProperties": 1
-							},
-							{
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"uuid": {
-										"type": "string",
-										"pattern": "^@creature\\[.*\\]$"
-									},
-									"count": {
-										"type": [
-											"integer",
-											"string"
-										]
-									},
-									"level": {
-										"type": "object",
-										"properties": {
-											"min": {
-												"type": "integer"
+									"target": {
+										"oneOf": [
+											{
+												"type": "string"
 											},
-											"max": {
-												"type": "integer"
+											{
+												"description": "A link to an importable entity",
+												"type": "object",
+												"properties": {
+													"prop": {
+														"type": "string"
+													},
+													"uid": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"prop",
+													"uid"
+												],
+												"additionalProperties": false,
+												"markdownDescription": "A link to an importable entity"
+											},
+											{
+												"description": "A link to a 5etools-style resource",
+												"type": "object",
+												"properties": {
+													"consumes": {
+														"type": "object",
+														"properties": {
+															"name": {
+																"$ref": "util.json#/$defs/consumesName"
+															}
+														},
+														"required": [
+															"name"
+														],
+														"additionalProperties": false
+													}
+												},
+												"required": [
+													"consumes"
+												],
+												"additionalProperties": false,
+												"markdownDescription": "A link to a 5etools-style resource"
 											}
-										}
+										]
 									}
-								},
-								"additionalProperties": false,
-								"required": [
-									"uuid"
-								]
+								}
 							}
-						]
+						}
+					}
+				},
+				"effects": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/_foundryIdRef"
+					}
+				},
+				"_id": false,
+				"sort": false,
+				"template": false,
+				"affects": false,
+				"type": {
+					"const": "transform"
+				},
+				"profiles": {
+					"$ref": "#/$defs/_foundryActivityProfiles"
+				},
+				"transform": {
+					"type": "object",
+					"properties": {
+						"customize": {
+							"const": true
+						}
 					}
 				}
 			},
@@ -1353,6 +1639,9 @@
 				},
 				{
 					"$ref": "#/$defs/_foundryActivityObject_enchant"
+				},
+				{
+					"$ref": "#/$defs/_foundryActivityObject_transform"
 				},
 				{
 					"$ref": "#/$defs/_foundryActivityObject_utility"

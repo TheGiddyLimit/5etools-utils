@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.5",
+	"version": "1.1.6",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -194,6 +194,87 @@
 				"item": {"$ref": "items.json#/$defs/subEntityItemArray"}
 			},
 			"minProperties": 1
+		},
+
+		"_foundryActivityProfileBase": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"types": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"movement": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+				"sizes": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+				"count": {"type": ["integer", "string"]},
+				"level": {
+					"type": "object",
+					"properties": {
+						"min": {"type": "integer"},
+						"max": {"type": "integer"}
+					}
+				}
+			}
+		},
+
+		"_foundryActivityProfile": {
+			"anyOf": [
+				{
+					"$$merge": [
+						{"$ref": "#/$defs/_foundryActivityProfileBase"},
+						{
+							"type": "object",
+							"additionalProperties": false,
+							"unevaluatedProperties": {
+								"not": {
+									"anyOf": [
+										{"required": ["cr"]},
+										{"required": ["uuid"]}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"$$merge": [
+						{"$ref": "#/$defs/_foundryActivityProfileBase"},
+						{
+							"type": "object",
+							"properties": {
+								"cr": {"type": "string"}
+							},
+							"additionalProperties": false,
+							"required": ["cr"]
+						}
+					]
+				},
+				{
+					"$$merge": [
+						{"$ref": "#/$defs/_foundryActivityProfileBase"},
+						{
+							"type": "object",
+							"properties": {
+								"uuid": {
+									"type": "string",
+									"pattern": "^@creature\\[.*\\]$"
+								}
+							},
+							"additionalProperties": false,
+							"required": ["uuid"]
+						}
+					]
+				}
+			]
+		},
+
+		"_foundryActivityProfiles": {
+			"type": "array",
+			"items": {"$ref": "#/$defs/_foundryActivityProfile"}
 		},
 
 		"_foundryActivityObject_base": {
@@ -421,49 +502,24 @@
 					"type": "object",
 					"properties": {
 						"type": {"const": "summon"},
-						"profiles": {
-							"type": "array",
-							"items": {
-								"oneOf": [
-									{
-										"type": "object",
-										"properties": {
-											"name": {"type": "string"},
-											"cr": {"type": "string"},
-											"types": {
-												"type": "array",
-												"items": {
-													"type": "string"
-												},
-												"minItems": 1,
-												"uniqueItems": true
-											},
-											"count": {"type": ["integer", "string"]}
-										},
-										"additionalProperties": false,
-										"minProperties": 1
-									},
-									{
-										"type": "object",
-										"properties": {
-											"name": {"type": "string"},
-											"uuid": {
-												"type": "string",
-												"pattern": "^@creature\\[.*\\]$"
-											},
-											"count": {"type": ["integer", "string"]},
-											"level": {
-												"type": "object",
-												"properties": {
-													"min": {"type": "integer"},
-													"max": {"type": "integer"}
-												}
-											}
-										},
-										"additionalProperties": false,
-										"required": ["uuid"]
-									}
-								]
+						"profiles": {"$ref": "#/$defs/_foundryActivityProfiles"}
+					}
+				}
+			]
+		},
+
+		"_foundryActivityObject_transform": {
+			"$$merge": [
+				{"$ref": "#/$defs/_foundryActivityObject_base"},
+				{
+					"type": "object",
+					"properties": {
+						"type": {"const": "transform"},
+						"profiles": {"$ref": "#/$defs/_foundryActivityProfiles"},
+						"transform": {
+							"type": "object",
+							"properties": {
+								"customize": {"const": true}
 							}
 						}
 					}
@@ -493,6 +549,7 @@
 				{"$ref": "#/$defs/_foundryActivityObject_cast"},
 				{"$ref": "#/$defs/_foundryActivityObject_summon"},
 				{"$ref": "#/$defs/_foundryActivityObject_enchant"},
+				{"$ref": "#/$defs/_foundryActivityObject_transform"},
 				{"$ref": "#/$defs/_foundryActivityObject_utility"}
 			]
 		},
