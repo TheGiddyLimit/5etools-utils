@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.31",
+	"version": "1.17.32",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1358,7 +1358,15 @@
 											},
 											"source": {"$ref": "util.json#/$defs/source"},
 											"visible": {
-												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
+												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations. This functions as a combination of \"visibleStats\" and \"visibleList\".",
+												"const": true
+											},
+											"visibleStats": {
+												"description": "Governs whether or not the class name is visible in the prerequisite line.",
+												"const": true
+											},
+											"visibleList": {
+												"description": "Governs whether or not the class name is visible in the list display. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
 												"const": true
 											}
 										},
@@ -1373,7 +1381,15 @@
 											},
 											"source": {"$ref": "util.json#/$defs/source"},
 											"visible": {
-												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
+												"description": "Governs whether or not the class name is visible in the list display/prerequisite line. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations. This functions as a combination of \"visibleStats\" and \"visibleList\".",
+												"const": true
+											},
+											"visibleStats": {
+												"description": "Governs whether or not the class name is visible in the prerequisite line.",
+												"const": true
+											},
+											"visibleList": {
+												"description": "Governs whether or not the class name is visible in the list display. *Not* recommended for features which implicitly carry a class restriction, such as Eldritch Invocations.",
 												"const": true
 											}
 										},
