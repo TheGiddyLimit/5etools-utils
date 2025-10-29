@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "sources.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "object",
 	"description": "Keys are source identifiers.",
 	"patternProperties": {
@@ -9,7 +9,7 @@
 			"type": "object",
 			"description": "Keys are spell names.",
 			"patternProperties": {
-				"^[-a-zA-Z0-9 '()/;]+$": {
+				"^[-a-zA-ZÀ-ž0-9 '()/;]+$": {
 					"type": "object",
 					"properties": {
 						"class": {
