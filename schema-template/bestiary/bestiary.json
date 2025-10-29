@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.54",
+	"version": "1.21.55",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1073,7 +1073,7 @@
 						"key_site": "enum",
 						"key_ua": "enum",
 						"key_brew": "examples",
-						"value": ["black", "blue", "green", "red", "white", "brass", "bronze", "copper", "gold", "silver", "deep"]
+						"value": ["black", "blue", "green", "red", "white", "brass", "bronze", "copper", "gold", "silver", "deep", "spirit"]
 					}
 				},
 				"dragonAge": {
