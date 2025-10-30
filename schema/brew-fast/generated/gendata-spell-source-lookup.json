@@ -56,7 +56,7 @@
 			"type": "object",
 			"description": "Keys are lowercase'd spell names.",
 			"patternProperties": {
-				"^[-a-z0-9 '()/;]+$": {
+				"^[-a-zÀ-ž0-9 '()/;]+$": {
 					"type": "object",
 					"properties": {
 						"class": {
