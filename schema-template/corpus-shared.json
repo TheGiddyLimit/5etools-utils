@@ -1,0 +1,82 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "corpus-shared.json",
+	"version": "1.0.0",
+
+	"$defs": {
+		"corpusCover": {
+			"description": "A link to an image. Preferred sizes are 300 x 300px or 600 x 600px.",
+			"$ref": "entry.json#/$defs/mediaHref"
+		},
+
+		"corpusContents": {
+			"description": "The linked Table of Contents of the corpus.",
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"headers": {
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"depth": {
+											"type": "integer"
+										},
+										"header": {
+											"type": "string"
+										},
+										"index": {
+											"description": "The relative index of this header in the current chapter, i.e. if \"Treasure\" appears twice and you wish the contents entry to link to the second instance, set the \"index\" to 1.",
+											"type": "integer"
+										}
+									},
+									"required": [
+										"header"
+									]
+								}
+							]
+						}
+					},
+					"ordinal": {
+						"type": "object",
+						"properties": {
+							"type": {
+								"type": "string",
+								"enum": ["chapter", "appendix", "part", "episode", "level", "section"]
+							},
+							"identifier": {
+								"type": ["integer", "string"]
+							}
+						},
+						"additionalProperties": false,
+						"required": [
+							"type"
+						]
+					}
+				},
+				"additionalProperties": false,
+				"required": [
+					"name"
+				]
+			}
+		},
+
+
+		"corpusPublished": {
+			"type": "string",
+			"format": "date",
+			"description": "The date of publication of the book, in the format YYYY-MM-DD (RFC3339)."
+		}
+	}
+}

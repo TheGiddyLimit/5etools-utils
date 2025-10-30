@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.31",
+	"version": "1.10.32",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -46,79 +46,7 @@
 						"type": "string"
 					},
 					"contents": {
-						"description": "The linked Table of Contents of the adventure.",
-						"type": "array",
-						"minItems": 1,
-						"items": {
-							"type": "object",
-							"properties": {
-								"name": {
-									"type": "string"
-								},
-								"headers": {
-									"type": "array",
-									"minItems": 1,
-									"items": {
-										"oneOf": [
-											{
-												"type": "string"
-											},
-											{
-												"type": "object",
-												"properties": {
-													"depth": {
-														"type": "integer"
-													},
-													"header": {
-														"type": "string"
-													},
-													"index": {
-														"description": "The relative index of this header in the current chapter, i.e. if \"Treasure\" appears twice and you wish the contents entry to link to the second instance, set the \"index\" to 1.",
-														"type": "integer",
-														"markdownDescription": "The relative index of this header in the current chapter, i.e. if &quot;Treasure&quot; appears twice and you wish the contents entry to link to the second instance, set the &quot;index&quot; to 1."
-													}
-												},
-												"required": [
-													"header"
-												]
-											}
-										]
-									}
-								},
-								"ordinal": {
-									"type": "object",
-									"properties": {
-										"type": {
-											"type": "string",
-											"enum": [
-												"chapter",
-												"appendix",
-												"part",
-												"episode",
-												"level",
-												"section"
-											]
-										},
-										"identifier": {
-											"type": [
-												"integer",
-												"string"
-											]
-										}
-									},
-									"additionalProperties": false,
-									"required": [
-										"type",
-										"identifier"
-									]
-								}
-							},
-							"additionalProperties": false,
-							"required": [
-								"name"
-							]
-						},
-						"markdownDescription": "The linked Table of Contents of the adventure."
+						"$ref": "corpus-shared.json#/$defs/corpusContents"
 					},
 					"level": {
 						"description": "The character levels that the adventure ranges across.",
@@ -155,10 +83,7 @@
 						"markdownDescription": "The character levels that the adventure ranges across."
 					},
 					"published": {
-						"type": "string",
-						"format": "date",
-						"description": "The date of publication of the adventure, in the format YYYY-MM-DD (RFC3339).",
-						"markdownDescription": "The date of publication of the adventure, in the format YYYY-MM-DD (RFC3339)."
+						"$ref": "corpus-shared.json#/$defs/corpusPublished"
 					},
 					"publishedOrder": {
 						"description": "A sorting order for adventures within a single source.",
@@ -166,9 +91,7 @@
 						"markdownDescription": "A sorting order for adventures within a single source."
 					},
 					"cover": {
-						"description": "A link to an image which should be 300 x 300px in size. Larger images will be centred and cropped.",
-						"$ref": "entry.json#/$defs/mediaHref",
-						"markdownDescription": "A link to an image which should be 300 x 300px in size. Larger images will be centred and cropped."
+						"$ref": "corpus-shared.json#/$defs/corpusCover"
 					},
 					"storyline": {
 						"type": "string",
