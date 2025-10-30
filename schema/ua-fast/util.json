@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.33",
+	"version": "1.17.34",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2234,7 +2234,7 @@
 								"Cult of the Dragon",
 								"Emerald Enclave",
 								"Harpers",
-								"Lords’ Alliance",
+								"Lords' Alliance",
 								"Order of the Gauntlet",
 								"Purple Dragon Knights",
 								"Red Wizards",
