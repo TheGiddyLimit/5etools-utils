@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "gendata-spell-source-lookup.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 
 	"type": "object",
 	"description": "Keys are lowercase'd source identifiers.",
@@ -57,7 +57,7 @@
 			"description": "Keys are lowercase'd spell names.",
 
 			"patternProperties": {
-				"^[-a-z0-9 '()/;]+$": {
+				"^[-a-zÀ-ž0-9 '()/;]+$": {
 					"type": "object",
 
 					"properties": {
