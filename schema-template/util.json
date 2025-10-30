@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.32",
+	"version": "1.17.33",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1667,6 +1667,27 @@
 							"examples": [
 								"Elven"
 							]
+						}
+					},
+					"membership": {
+						"type": "array",
+						"items": {
+							"type": "string",
+							"$$switch_key": {
+								"key_site": "enum",
+								"key_ua": "enum",
+								"key_brew": "examples",
+								"value": [
+									"Cult of the Dragon",
+									"Emerald Enclave",
+									"Harpers",
+									"Lords’ Alliance",
+									"Order of the Gauntlet",
+									"Purple Dragon Knights",
+									"Red Wizards",
+									"Zhentarim"
+								]
+							}
 						}
 					},
 					"group": {

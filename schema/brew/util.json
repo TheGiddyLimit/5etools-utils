@@ -2270,6 +2270,22 @@
 							]
 						}
 					},
+					"membership": {
+						"type": "array",
+						"items": {
+							"type": "string",
+							"examples": [
+								"Cult of the Dragon",
+								"Emerald Enclave",
+								"Harpers",
+								"Lords’ Alliance",
+								"Order of the Gauntlet",
+								"Purple Dragon Knights",
+								"Red Wizards",
+								"Zhentarim"
+							]
+						}
+					},
 					"group": {
 						"type": "array",
 						"items": {
