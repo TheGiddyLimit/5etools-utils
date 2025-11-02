@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.32",
+	"version": "1.10.33",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -17,11 +17,7 @@
 					"alias": {"$ref": "util.json#/$defs/alias"},
 					"id": {"$ref": "util.json#/$defs/corpusId"},
 					"source": {"$ref": "util.json#/$defs/source"},
-					"parentSource": {
-						"type": "string",
-						"description": "Used for books that contain multiple adventures, e.g. TftYP",
-						"$ref": "util.json#/$defs/source"
-					},
+					"parentSource": {"$ref": "corpus-shared.json#/$defs/corpusParentSource"},
 					"group": {
 						"description": "The group under which this adventure should be listed in the navbar.",
 						"type": "string",

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "corpus-shared.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 
 	"$defs": {
 		"corpusCover": {
@@ -72,11 +72,16 @@
 			}
 		},
 
-
 		"corpusPublished": {
 			"type": "string",
 			"format": "date",
 			"description": "The date of publication of the book, in the format YYYY-MM-DD (RFC3339)."
+		},
+
+		"corpusParentSource": {
+			"type": "string",
+			"description": "Used for sources which contain multiple adventures, e.g. TftYP, or \"packages\" of related books, e.g. SAiS.",
+			"$ref": "util.json#/$defs/source"
 		}
 	}
 }
