@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.15",
+	"version": "1.7.16",
 	"type": "object",
 
 	"$defs": {
@@ -390,6 +390,7 @@
 				},
 				"token": {"$ref": "util-token.json#/$defs/token"},
 				"tokenCredit": {"type": "string"},
+				"tokenCustom": {"const": true},
 				"$$ifBrew": {
 					"fluff": {
 						"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
@@ -512,6 +513,7 @@
 				},
 				"token": {"$ref": "util-token.json#/$defs/token"},
 				"tokenCredit": {"type": "string"},
+				"tokenCustom": {"const": true},
 				"$$ifBrew": {
 					"fluff": {
 						"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
@@ -682,6 +684,7 @@
 				},
 				"token": {"$ref": "util-token.json#/$defs/token"},
 				"tokenCredit": {"type": "string"},
+				"tokenCustom": {"const": true},
 				"$$ifBrew": {
 					"fluff": {
 						"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",

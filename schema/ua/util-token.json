@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-token.json",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"title": "Util: Token",
 	"$defs": {
 		"tokenUrl": {
@@ -61,6 +61,9 @@
 				"tokenCredit": {
 					"type": "string"
 				},
+				"tokenCustom": {
+					"const": true
+				},
 				"tokenTags": {
 					"$ref": "#/$defs/_altArtTokenTags"
 				}
@@ -89,6 +92,9 @@
 				},
 				"tokenCredit": {
 					"type": "string"
+				},
+				"tokenCustom": {
+					"const": true
 				},
 				"tokenTags": {
 					"$ref": "#/$defs/_altArtTokenTags"
@@ -120,6 +126,9 @@
 				"tokenCredit": {
 					"type": "string"
 				},
+				"tokenCustom": {
+					"const": true
+				},
 				"tokenTags": {
 					"$ref": "#/$defs/_altArtTokenTags"
 				},
@@ -149,6 +158,9 @@
 				},
 				"tokenCredit": {
 					"type": "string"
+				},
+				"tokenCustom": {
+					"const": true
 				},
 				"tokenTags": {
 					"$ref": "#/$defs/_altArtTokenTags"

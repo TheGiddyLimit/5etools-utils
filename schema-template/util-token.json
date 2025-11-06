@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-token.json",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"title": "Util: Token",
 
 	"$defs": {
@@ -45,6 +45,7 @@
 				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"tokenCredit": {"type": "string"},
+				"tokenCustom": {"const": true},
 				"tokenTags": {"$ref": "#/$defs/_altArtTokenTags"}
 			},
 			"required": ["name", "source"],
@@ -62,6 +63,7 @@
 				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"tokenCredit": {"type": "string"},
+				"tokenCustom": {"const": true},
 				"tokenTags": {"$ref": "#/$defs/_altArtTokenTags"},
 
 				"foundryTokenScale": {"$ref": "util-foundry.json#/$defs/foundryTokenScale"}
@@ -79,6 +81,7 @@
 				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"tokenCredit": {"type": "string"},
+				"tokenCustom": {"const": true},
 				"tokenTags": {"$ref": "#/$defs/_altArtTokenTags"},
 
 				"foundryTokenScale": {"$ref": "util-foundry.json#/$defs/foundryTokenScale"}
@@ -96,6 +99,7 @@
 				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"tokenCredit": {"type": "string"},
+				"tokenCustom": {"const": true},
 				"tokenTags": {"$ref": "#/$defs/_altArtTokenTags"},
 
 				"foundryTokenScale": {"$ref": "util-foundry.json#/$defs/foundryTokenScale"}

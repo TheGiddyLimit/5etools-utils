@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.55",
+	"version": "1.21.56",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -876,6 +876,7 @@
 				},
 				"hasToken": {"const": true},
 				"tokenCredit": {"type": "string"},
+				"tokenCustom": {"const": true},
 				"foundryTokenScale": {"$ref": "../util-foundry.json#/$defs/foundryTokenScale"},
 				"altArt": {"$ref": "../util-token.json#/$defs/altArt"},
 				"$$ifBrew": {
