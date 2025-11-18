@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.0.8",
+	"version": "1.0.9",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -327,6 +327,7 @@
 					"type": "object",
 					"properties": {
 						"mode": {"const": "addSpells"},
+						"name": {"type": "string"},
 						"spells": {
 							"type": "object",
 							"patternProperties": {
