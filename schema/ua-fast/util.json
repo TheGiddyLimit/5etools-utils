@@ -1979,9 +1979,19 @@
 						"type": "array",
 						"items": {
 							"type": "string"
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
-					"exclusiveFeatType": {
+					"featCategory": {
+						"type": "array",
+						"items": {
+							"$ref": "#/$defs/dataFeatCategory"
+						},
+						"uniqueItems": true,
+						"minItems": 1
+					},
+					"exclusiveFeatCategory": {
 						"type": "array",
 						"items": {
 							"$ref": "#/$defs/dataFeatCategory"
