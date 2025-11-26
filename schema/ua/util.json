@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.35",
+	"version": "1.17.36",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -1971,7 +1971,9 @@
 									"additionalProperties": false
 								}
 							]
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"feat": {
 						"type": "array",
@@ -1979,17 +1981,29 @@
 							"type": "string"
 						}
 					},
+					"exclusiveFeatType": {
+						"type": "array",
+						"items": {
+							"$ref": "#/$defs/dataFeatCategory"
+						},
+						"uniqueItems": true,
+						"minItems": 1
+					},
 					"optionalfeature": {
 						"type": "array",
 						"items": {
 							"type": "string"
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"feature": {
 						"type": "array",
 						"items": {
 							"type": "string"
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"item": {
 						"type": "array",
@@ -2001,7 +2015,9 @@
 						"type": "array",
 						"items": {
 							"$ref": "items-shared.json#/$defs/itemType"
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"itemProperty": {
 						"oneOf": [
@@ -2058,7 +2074,9 @@
 								"name"
 							],
 							"additionalProperties": false
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"background": {
 						"type": "array",
@@ -2105,7 +2123,9 @@
 								}
 							},
 							"additionalProperties": false
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"spellcasting": {
 						"const": true
@@ -2183,7 +2203,9 @@
 								}
 							},
 							"additionalProperties": false
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"expertise": {
 						"type": "array",
@@ -2199,13 +2221,17 @@
 								}
 							},
 							"additionalProperties": false
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"alignment": {
 						"type": "array",
 						"items": {
 							"$ref": "util.json#/$defs/alignment"
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"campaign": {
 						"type": "array",
@@ -2216,7 +2242,9 @@
 								"Planescape",
 								"Eberron"
 							]
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"culture": {
 						"type": "array",
@@ -2225,7 +2253,9 @@
 							"examples": [
 								"Elven"
 							]
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"membership": {
 						"type": "array",
@@ -2241,7 +2271,9 @@
 								"Red Wizards",
 								"Zhentarim"
 							]
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"group": {
 						"type": "array",
@@ -2253,7 +2285,9 @@
 								"priest",
 								"warrior"
 							]
-						}
+						},
+						"uniqueItems": true,
+						"minItems": 1
 					},
 					"note": {
 						"description": "An additional note that accompanies the proficiencies, but is not part of them.",
