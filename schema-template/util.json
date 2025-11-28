@@ -1624,7 +1624,7 @@
 										"key_site": "enum",
 										"key_ua": "enum",
 										"key_brew": "examples",
-										"value": ["arcane", "druid", "holy", "tool"]
+										"value": ["arcane", "druid", "holy", "tool", "artisansTool"]
 									}
 								},
 								"minItems": 1,
