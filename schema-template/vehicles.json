@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.7.16",
+	"version": "1.8.0",
 	"type": "object",
 
 	"$defs": {
@@ -29,24 +29,96 @@
 			"type": "number"
 		},
 
-		"spelljammerPaceObj": {
+		"spelljammerElementalAirshipPaceObj": {
 			"type": "object",
 			"properties": {
-				"walk": {"$ref": "#/$defs/_spelljammerPace"},
-				"burrow": {"$ref": "#/$defs/_spelljammerPace"},
-				"climb": {"$ref": "#/$defs/_spelljammerPace"},
-				"fly": {"$ref": "#/$defs/_spelljammerPace"},
-				"swim": {"$ref": "#/$defs/_spelljammerPace"}
+				"walk": {"$ref": "#/$defs/_spelljammerElementalAirshipPace"},
+				"burrow": {"$ref": "#/$defs/_spelljammerElementalAirshipPace"},
+				"climb": {"$ref": "#/$defs/_spelljammerElementalAirshipPace"},
+				"fly": {"$ref": "#/$defs/_spelljammerElementalAirshipPace"},
+				"swim": {"$ref": "#/$defs/_spelljammerElementalAirshipPace"}
 			},
 			"additionalProperties": false
 		},
 
-		"_spelljammerPace": {"type": ["string", "number"]},
+		"_spelljammerElementalAirshipPace": {"type": ["string", "number"]},
+
+		"spelljammerElementalAirshipHullObj": {
+			"type": "object",
+			"properties": {
+				"ac": {"type": "integer"},
+				"acFrom": {
+					"type": "array",
+					"items": {"type": "string"}
+				},
+				"hp": {"type": "integer"},
+				"dt": {
+					"type": "integer",
+					"description": "Damage Threshold"
+				}
+			},
+			"required": ["ac", "hp"],
+			"additionalProperties": false
+		},
+
+		"spelljammerElementalAirshipStation": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"size": {
+					"type": "array",
+					"items": {
+						"$ref": "util.json#/$defs/size"
+					},
+					"uniqueItems": true
+				},
+				"ac": {"type": "integer"},
+				"hp": {"type": "integer"},
+				"count": {"type": "integer"},
+				"crew": {"type": "integer"},
+				"costs": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"cost": {"$ref": "#/$defs/_vehicleCost"},
+							"note": {"type": "string"}
+						},
+						"additionalProperties": false
+					}
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"action": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {"type": "string"},
+							"entries": {
+								"type": "array",
+								"items": {
+									"$ref": "entry.json"
+								}
+							}
+						},
+						"additionalProperties": false
+					}
+				}
+			},
+			"required": ["name", "entries"],
+			"additionalProperties": false
+		},
 
 		"vehicle": {
 			"oneOf": [
 				{"$ref": "#/$defs/vehicleShip"},
 				{"$ref": "#/$defs/vehicleSpelljammer"},
+				{"$ref": "#/$defs/vehicleElementalAirship"},
 				{"$ref": "#/$defs/vehicleInfernalWarMachine"},
 				{"$ref": "#/$defs/vehicleCreature"},
 				{"$ref": "#/$defs/vehicleObject"}
@@ -443,73 +515,87 @@
 				"capCargo": {
 					"type": ["number", "string"]
 				},
-				"pace": {"$ref": "#/$defs/spelljammerPaceObj"},
+				"pace": {"$ref": "#/$defs/spelljammerElementalAirshipPaceObj"},
 				"speed": {"$ref": "util.json#/$defs/speed"},
-				"hull": {
-					"type": "object",
-					"properties": {
-						"ac": {"type": "integer"},
-						"acFrom": {
-							"type": "array",
-							"items": {"type": "string"}
-						},
-						"hp": {"type": "integer"},
-						"dt": {
-							"type": "integer",
-							"description": "Damage Threshold"
-						}
-					},
-					"required": ["ac", "hp"],
-					"additionalProperties": false
-				},
+				"hull": {"$ref": "#/$defs/spelljammerElementalAirshipHullObj"},
 				"cost": {"$ref": "#/$defs/_vehicleCost"},
 				"weapon": {
 					"type": "array",
 					"items": {
-						"type": "object",
-						"properties": {
-							"name": {"type": "string"},
-							"ac": {"type": "integer"},
-							"hp": {"type": "integer"},
-							"count": {"type": "integer"},
-							"crew": {"type": "integer"},
-							"costs": {
-								"type": "array",
-								"items": {
-									"type": "object",
-									"properties": {
-										"cost": {"$ref": "#/$defs/_vehicleCost"},
-										"note": {"type": "string"}
-									},
-									"additionalProperties": false
-								}
-							},
-							"entries": {
-								"type": "array",
-								"items": {
-									"$ref": "entry.json"
-								}
-							},
-							"action": {
-								"type": "array",
-								"items": {
-									"type": "object",
-									"properties": {
-										"name": {"type": "string"},
-										"entries": {
-											"type": "array",
-											"items": {
-												"$ref": "entry.json"
-											}
-										}
-									},
-									"additionalProperties": false
-								}
-							}
-						},
-						"required": ["name", "entries"],
-						"additionalProperties": false
+						"$ref": "#/$defs/spelljammerElementalAirshipStation"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"token": {"$ref": "util-token.json#/$defs/token"},
+				"tokenCredit": {"type": "string"},
+				"tokenCustom": {"const": true},
+				"$$ifBrew": {
+					"fluff": {
+						"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
+						"$ref": "util.json#/$defs/fluffObject"
+					},
+					"foundryTokenScale": {"$ref": "util-foundry.json#/$defs/foundryTokenScale"},
+					"foundrySystem": {"$ref": "util-foundry.json#/$defs/foundrySystemObject"},
+					"foundryActivities": {"$ref": "util-foundry.json#/$defs/foundryActivitiesArray"},
+					"foundryFlags": {"$ref": "util-foundry.json#/$defs/foundryFlagsObject"},
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvice": {"$ref": "entry.json"}
+				},
+				"$$if": {
+					"modes": ["brew", "ua"],
+					"value": {
+						"tokenUrl": {"$ref": "util-token.json#/$defs/tokenUrl"},
+						"tokenHref": {"$ref": "util-token.json#/$defs/tokenHref"},
+
+						"foundryTokenSubjectHref": {"$ref": "util-token.json#/$defs/tokenHref"},
+						"foundryTokenSubjectScale": {"$ref": "util-foundry.json#/$defs/foundryTokenSubjectScale"}
 					}
+				},
+				"hasToken": {"type": "boolean"},
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
+			},
+			"required": ["name", "source"],
+			"additionalProperties": false
+		},
+
+		"vehicleElementalAirship": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
+				"page": {"$ref": "util.json#/$defs/page"},
+				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
+				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
+				"legacy": {"$ref": "util.json#/$defs/legacy"},
+				"vehicleType": {"const": "ELEMENTAL_AIRSHIP"},
+				"terrain": {"$ref": "#/$defs/vehicleTerrain"},
+				"capCrew": {"type": "integer"},
+				"capCrewNote": {"type": "string"},
+				"capPassenger": {"type": "integer"},
+				"capCargo": {
+					"type": ["number", "string"]
+				},
+				"pace": {"$ref": "#/$defs/spelljammerElementalAirshipPaceObj"},
+				"speed": {"$ref": "util.json#/$defs/speed"},
+				"hull": {"$ref": "#/$defs/spelljammerElementalAirshipHullObj"},
+				"cost": {"$ref": "#/$defs/_vehicleCost"},
+				"weapon": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/spelljammerElementalAirshipStation"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"station": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/spelljammerElementalAirshipStation"
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"token": {"$ref": "util-token.json#/$defs/token"},
 				"tokenCredit": {"type": "string"},
