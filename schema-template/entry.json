@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.15",
+	"version": "1.9.16",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -43,6 +43,7 @@
 						"tableNamePrefix": {"type": "string"},
 						"tableName": {"type": "string"},
 						"skipSectionPrefix": {"const": true},
+						"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
 
 						"fauxGroupName": {"type": "string"},
 						"fauxGroupSource": {"$ref": "util.json#/$defs/source"},

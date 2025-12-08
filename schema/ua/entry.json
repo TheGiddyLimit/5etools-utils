@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.15",
+	"version": "1.9.16",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -62,6 +62,9 @@
 						},
 						"skipSectionPrefix": {
 							"const": true
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"fauxGroupName": {
 							"type": "string"
