@@ -4,7 +4,7 @@
 
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.10",
+	"version": "1.1.11",
 
 	"$defs" : {
 		"_itemModifySpeedEqual": {
@@ -513,6 +513,20 @@
 					"minProperties": 1
 				}
 			]
+		},
+
+		"itemOptionalfeatures": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+
+		"itemClassFeatures": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
 		},
 
 		"$$if": {

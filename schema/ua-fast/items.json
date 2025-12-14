@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.27",
+	"version": "1.14.28",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -256,10 +256,10 @@
 					"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 				},
 				"optionalfeatures": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemOptionalfeatures"
+				},
+				"classFeatures": {
+					"$ref": "items-shared.json#/$defs/itemClassFeatures"
 				},
 				"attachedSpells": {
 					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
@@ -740,10 +740,10 @@
 					"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 				},
 				"optionalfeatures": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemOptionalfeatures"
+				},
+				"classFeatures": {
+					"$ref": "items-shared.json#/$defs/itemClassFeatures"
 				},
 				"attachedSpells": {
 					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
@@ -1226,10 +1226,10 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"optionalfeatures": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemOptionalfeatures"
+						},
+						"classFeatures": {
+							"$ref": "items-shared.json#/$defs/itemClassFeatures"
 						},
 						"attachedSpells": {
 							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
@@ -1710,10 +1710,10 @@
 					"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 				},
 				"optionalfeatures": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
+					"$ref": "items-shared.json#/$defs/itemOptionalfeatures"
+				},
+				"classFeatures": {
+					"$ref": "items-shared.json#/$defs/itemClassFeatures"
 				},
 				"attachedSpells": {
 					"$ref": "items-shared.json#/$defs/itemAttachedSpells"
@@ -2207,10 +2207,10 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"optionalfeatures": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemOptionalfeatures"
+						},
+						"classFeatures": {
+							"$ref": "items-shared.json#/$defs/itemClassFeatures"
 						},
 						"attachedSpells": {
 							"$ref": "items-shared.json#/$defs/itemAttachedSpells"
@@ -2695,10 +2695,10 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"optionalfeatures": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
+							"$ref": "items-shared.json#/$defs/itemOptionalfeatures"
+						},
+						"classFeatures": {
+							"$ref": "items-shared.json#/$defs/itemClassFeatures"
 						},
 						"attachedSpells": {
 							"$ref": "items-shared.json#/$defs/itemAttachedSpells"

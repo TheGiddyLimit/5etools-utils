@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.17",
+	"version": "1.9.18",
 	"type": "object",
 
 	"$defs" : {
@@ -207,6 +207,8 @@
 							"$ref": "items-shared.json#/$defs/itemRechargeAmount"
 						},
 						"attachedSpells": {"$ref": "items-shared.json#/$defs/itemAttachedSpells"},
+						"optionalfeatures": {"$ref": "items-shared.json#/$defs/itemOptionalfeatures"},
+						"classFeatures": {"$ref": "items-shared.json#/$defs/itemClassFeatures"},
 						"ability": {"$ref": "items-shared.json#/$defs/itemAbility"},
 						"lootTables": {
 							"type": "array",

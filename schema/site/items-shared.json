@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.1.10",
+	"version": "1.1.11",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -643,6 +643,18 @@
 					"markdownDescription": "Attached spells broken down by usage type."
 				}
 			]
+		},
+		"itemOptionalfeatures": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"itemClassFeatures": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
 		}
 	},
 	"markdownDescription": "Shared item definitions to be used in item schemas."
