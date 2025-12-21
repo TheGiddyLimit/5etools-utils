@@ -1,14 +1,99 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "fluff-rewards.json",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"type": "object",
 	"properties": {
 		"_meta": {
 			"$ref": "util.json#/$defs/metaBlock"
 		},
 		"rewardFluff": {
-			"$ref": "util.json#/$defs/genericFluffArray"
+			"type": "array",
+			"minItems": 0,
+			"uniqueItems": true,
+			"items": {
+				"anyOf": [
+					{
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"preserveName": {
+								"const": true
+							},
+							"source": {
+								"$ref": "util.json#/$defs/source"
+							},
+							"images": {
+								"oneOf": [
+									{
+										"type": "array",
+										"items": {
+											"$ref": "entry.json#/$defs/entryImage"
+										}
+									},
+									{
+										"type": "null"
+									}
+								]
+							},
+							"entries": {
+								"type": "array",
+								"items": {
+									"$ref": "entry.json"
+								}
+							}
+						},
+						"additionalProperties": false,
+						"required": [
+							"name",
+							"source"
+						]
+					},
+					{
+						"type": "object",
+						"$comment": "This is a custom pre-processor tag, which merges together the array of objects into one. This allows proper inheritance, which JSON schema don't really do.",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"preserveName": {
+								"const": true
+							},
+							"source": {
+								"$ref": "util.json#/$defs/source"
+							},
+							"images": {
+								"oneOf": [
+									{
+										"type": "array",
+										"items": {
+											"$ref": "entry.json#/$defs/entryImage"
+										}
+									},
+									{
+										"type": "null"
+									}
+								]
+							},
+							"entries": {
+								"type": "array",
+								"items": {
+									"$ref": "entry.json"
+								}
+							},
+							"_copy": {
+								"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+							}
+						},
+						"additionalProperties": false,
+						"required": [
+							"_copy"
+						]
+					}
+				]
+			}
 		}
 	},
 	"additionalProperties": false

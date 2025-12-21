@@ -1,11 +1,16 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "fluff-rewards.json",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"type": "object",
 	"properties": {
 		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
-		"rewardFluff": {"$ref": "util.json#/$defs/genericFluffArray"}
+		"rewardFluff": {
+			"$$merge": [
+				{"$ref": "util.json#/$defs/genericFluffArray"},
+				{"minItems": 0}
+			]
+		}
 	},
 	"additionalProperties": false
 }
