@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.6",
+	"version": "1.1.7",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -85,6 +85,11 @@
 			"minimum": 0.8,
 			"maximum": 3,
 			"multipleOf" : 0.1
+		},
+
+		"foundryIdentifier": {
+			"type": "string",
+			"pattern": "^[-A-Za-z0-9]+$"
 		},
 
 		"foundrySystemObject": {
@@ -721,6 +726,7 @@
 				"name": {"type": "string"},
 				"source": {"$ref": "util.json#/$defs/source"},
 
+				"identifier": {"$ref": "#/$defs/foundryIdentifier"},
 				"system": {"$ref": "#/$defs/foundrySystemObject"},
 				"activities": {"type": "array", "items": {"$ref": "#/$defs/foundryActivityObject"}},
 				"effects": {"type": "array", "items": {"$ref": "#/$defs/foundryEffectObject"}},

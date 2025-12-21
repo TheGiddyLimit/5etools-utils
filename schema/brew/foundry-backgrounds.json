@@ -24,6 +24,9 @@
 					"source": {
 						"$ref": "util.json#/$defs/source"
 					},
+					"identifier": {
+						"$ref": "util-foundry.json#/$defs/foundryIdentifier"
+					},
 					"system": {
 						"$ref": "util-foundry.json#/$defs/foundrySystemObject"
 					},
