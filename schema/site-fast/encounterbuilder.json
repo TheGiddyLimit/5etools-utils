@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "encounterbuilder.json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "object",
 	"$defs": {
-		"_shapeTemplateNumericalValue": {
+		"_shapeTemplateNumericalValueFloat": {
 			"oneOf": [
 				{
 					"type": "number"
@@ -31,11 +31,11 @@
 				}
 			]
 		},
-		"_shapeTemplateNumericalTermExact": {
+		"_shapeTemplateNumericalTermExactInteger": {
 			"type": "object",
 			"properties": {
 				"exact": {
-					"$ref": "#/$defs/_shapeTemplateNumericalValue"
+					"type": "integer"
 				}
 			},
 			"required": [
@@ -43,14 +43,42 @@
 			],
 			"additionalProperties": false
 		},
-		"_shapeTemplateNumericalTermMinMax": {
+		"_shapeTemplateNumericalTermExactFloat": {
+			"type": "object",
+			"properties": {
+				"exact": {
+					"$ref": "#/$defs/_shapeTemplateNumericalValueFloat"
+				}
+			},
+			"required": [
+				"exact"
+			],
+			"additionalProperties": false
+		},
+		"_shapeTemplateNumericalTermMinMaxInteger": {
 			"type": "object",
 			"properties": {
 				"min": {
-					"$ref": "#/$defs/_shapeTemplateNumericalValue"
+					"type": "integer"
 				},
 				"max": {
-					"$ref": "#/$defs/_shapeTemplateNumericalValue"
+					"type": "integer"
+				}
+			},
+			"required": [
+				"min",
+				"max"
+			],
+			"additionalProperties": false
+		},
+		"_shapeTemplateNumericalTermMinMaxFloat": {
+			"type": "object",
+			"properties": {
+				"min": {
+					"$ref": "#/$defs/_shapeTemplateNumericalValueFloat"
+				},
+				"max": {
+					"$ref": "#/$defs/_shapeTemplateNumericalValueFloat"
 				}
 			},
 			"required": [
@@ -81,10 +109,10 @@
 				"count": {
 					"oneOf": [
 						{
-							"$ref": "#/$defs/_shapeTemplateNumericalTermExact"
+							"$ref": "#/$defs/_shapeTemplateNumericalTermExactInteger"
 						},
 						{
-							"$ref": "#/$defs/_shapeTemplateNumericalTermMinMax"
+							"$ref": "#/$defs/_shapeTemplateNumericalTermMinMaxInteger"
 						},
 						{
 							"$ref": "#/$defs/_shapeTemplateFormulaTermMinMax"
@@ -94,10 +122,10 @@
 				"ratio": {
 					"oneOf": [
 						{
-							"$ref": "#/$defs/_shapeTemplateNumericalTermExact"
+							"$ref": "#/$defs/_shapeTemplateNumericalTermExactFloat"
 						},
 						{
-							"$ref": "#/$defs/_shapeTemplateNumericalTermMinMax"
+							"$ref": "#/$defs/_shapeTemplateNumericalTermMinMaxFloat"
 						}
 					]
 				}
