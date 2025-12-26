@@ -1,0 +1,123 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "encounterbuilder.json",
+	"version": "1.0.0",
+	"type": "object",
+
+	"$defs": {
+		"_shapeTemplateNumericalValue": {
+			"oneOf": [
+				{"type": "number"},
+				{
+					"type": "object",
+					"description": "A fraction, expressed as a numerator and a denominator.",
+					"properties": {
+						"num": {"type": "number", "minimum": 1},
+						"denom": {"type": "number", "minimum": 1}
+					},
+					"required": ["num", "denom"],
+					"additionalProperties": false
+				}
+			]
+		},
+
+		"_shapeTemplateNumericalTermExact": {
+			"type": "object",
+			"properties": {
+				"exact": {"$ref": "#/$defs/_shapeTemplateNumericalValue"}
+			},
+			"required": ["exact"],
+			"additionalProperties": false
+		},
+
+		"_shapeTemplateNumericalTermMinMax": {
+			"type": "object",
+			"properties": {
+				"min": {"$ref": "#/$defs/_shapeTemplateNumericalValue"},
+				"max": {"$ref": "#/$defs/_shapeTemplateNumericalValue"}
+			},
+			"required": ["min", "max"],
+			"additionalProperties": false
+		},
+
+		"_shapeTemplateFormulaTermMinMax": {
+			"type": "object",
+			"properties": {
+				"formulaMin": {"type": "string"},
+				"formulaMax": {"type": "string"}
+			},
+			"required": ["formulaMin", "formulaMax"],
+			"additionalProperties": false
+		},
+
+		"_shapeTemplateGroup": {
+			"type": "object",
+			"properties": {
+				"count": {
+					"oneOf": [
+						{"$ref": "#/$defs/_shapeTemplateNumericalTermExact"},
+						{"$ref": "#/$defs/_shapeTemplateNumericalTermMinMax"},
+						{"$ref": "#/$defs/_shapeTemplateFormulaTermMinMax"}
+					]
+				},
+				"ratio": {
+					"oneOf": [
+						{"$ref": "#/$defs/_shapeTemplateNumericalTermExact"},
+						{"$ref": "#/$defs/_shapeTemplateNumericalTermMinMax"}
+					]
+				}
+			},
+			"required": ["count"],
+			"additionalProperties": false
+		},
+
+		"_shapeTemplateItem": {
+			"type": "object",
+			"properties": {
+				"groups": {
+					"type": "array",
+					"items": {"$ref": "#/$defs/_shapeTemplateGroup"},
+					"minItems": 1
+				}
+			},
+			"required": ["groups"],
+			"additionalProperties": false
+		},
+
+		"encounterShape": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"source": {"$ref": "util.json#/$defs/source"},
+				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
+				"page": {"$ref": "util.json#/$defs/page"},
+				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
+
+				"shapeTemplate": {
+					"type": "array",
+					"items": {"$ref": "#/$defs/_shapeTemplateItem"},
+					"minItems": 1,
+					"uniqueItems": true
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+
+	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
+
+		"encounterShape": {
+			"type": "array",
+			"items": {"$ref": "#/$defs/encounterShape"},
+			"minItems": 1,
+			"uniqueItems": true
+		}
+	},
+
+	"required": [
+		"encounterShape"
+	],
+
+	"additionalProperties": false
+}
