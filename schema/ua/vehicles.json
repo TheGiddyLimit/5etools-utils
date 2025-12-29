@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.8.0",
+	"version": "1.8.1",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -579,6 +579,9 @@
 				"tokenHref": {
 					"$ref": "util-token.json#/$defs/tokenHref"
 				},
+				"tokenHref3d": {
+					"$ref": "util-token.json#/$defs/tokenHref"
+				},
 				"foundryTokenSubjectHref": {
 					"$ref": "util-token.json#/$defs/tokenHref"
 				},
@@ -679,6 +682,9 @@
 					"$ref": "util-token.json#/$defs/tokenUrl"
 				},
 				"tokenHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
+				},
+				"tokenHref3d": {
 					"$ref": "util-token.json#/$defs/tokenHref"
 				},
 				"foundryTokenSubjectHref": {
@@ -786,6 +792,9 @@
 					"$ref": "util-token.json#/$defs/tokenUrl"
 				},
 				"tokenHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
+				},
+				"tokenHref3d": {
 					"$ref": "util-token.json#/$defs/tokenHref"
 				},
 				"foundryTokenSubjectHref": {
@@ -976,6 +985,9 @@
 					"$ref": "util-token.json#/$defs/tokenUrl"
 				},
 				"tokenHref": {
+					"$ref": "util-token.json#/$defs/tokenHref"
+				},
+				"tokenHref3d": {
 					"$ref": "util-token.json#/$defs/tokenHref"
 				},
 				"foundryTokenSubjectHref": {
