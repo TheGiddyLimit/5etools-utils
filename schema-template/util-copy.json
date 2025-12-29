@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.0.9",
+	"version": "1.0.10",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -99,7 +99,8 @@
 							"description": "If unspecified, defaults to `[null, \"entries\", \"headerEntries\", \"footerEntries\"]`. To apply to _any_ string, including those outside of sub-properties (for instance, when trying to replace text in an array of plain strings), include `null` as one of the props (i.e. `\"props\": [null]`)",
 							"type": "array",
 							"items": {"type": ["string", "null"]}
-						}
+						},
+						"tagInsensitive": {"const": true}
 					},
 					"required": ["mode", "replace", "with"],
 					"additionalProperties": false
@@ -110,7 +111,8 @@
 						"mode": {"const": "replaceName"},
 						"replace": {"type":  "string"},
 						"with": {"type":  "string"},
-						"flags":  {"type":  "string"}
+						"flags":  {"type":  "string"},
+						"tagInsensitive": {"const": true}
 					},
 					"required": ["mode", "replace", "with"],
 					"additionalProperties": false
