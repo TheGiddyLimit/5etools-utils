@@ -1,16 +1,52 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-bestiary.json",
-	"version": "1.0.1",
+	"version": "1.0.2",
 
 	"type": "object",
 
+	"$defs": {
+		"_monsterSubEntityArray": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"type": "object",
+				"$$merge": [
+					{
+						"$ref": "util-foundry.json#/$defs/foundrySideDataGenericObject"
+					},
+					{
+						"properties": {
+							"monsterName": {"type": "string"},
+							"monsterSource": {"$ref": "util.json#/$defs/source"}
+						}
+					}
+				],
+				"required": [
+					"name",
+					"source",
+					"monsterName",
+					"monsterSource"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+
 	"properties": {
-		"monster": {"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericActorArray"}
+		"monster": {"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericActorArray"},
+
+		"monsterAction": {"$ref": "#/$defs/_monsterSubEntityArray"},
+		"monsterBonus": {"$ref": "#/$defs/_monsterSubEntityArray"},
+		"monsterReaction": {"$ref": "#/$defs/_monsterSubEntityArray"},
+		"monsterTrait": {"$ref": "#/$defs/_monsterSubEntityArray"},
+		"monsterLegendary": {"$ref": "#/$defs/_monsterSubEntityArray"},
+		"monsterMythic": {"$ref": "#/$defs/_monsterSubEntityArray"}
 	},
 
 	"required": [
 		"monster"
 	],
 	"additionalProperties": false
-}
+},
