@@ -14,12 +14,12 @@
 				"type": "object",
 				"$$merge": [
 					{
-						"$ref": "util-foundry.json#/$defs/foundrySideDataGenericObject"
+						"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericObject"
 					},
 					{
 						"properties": {
 							"monsterName": {"type": "string"},
-							"monsterSource": {"$ref": "util.json#/$defs/source"}
+							"monsterSource": {"$ref": "../util.json#/$defs/source"}
 						}
 					}
 				],
@@ -49,4 +49,4 @@
 		"monster"
 	],
 	"additionalProperties": false
-},
+}
