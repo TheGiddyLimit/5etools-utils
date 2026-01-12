@@ -1,11 +1,96 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-bestiary.json",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"type": "object",
+	"$defs": {
+		"_monsterSubEntityArray": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"type": "object",
+				"required": [
+					"name",
+					"source",
+					"monsterName",
+					"monsterSource"
+				],
+				"additionalProperties": false,
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"source": {
+						"$ref": "../util.json#/$defs/source"
+					},
+					"identifier": {
+						"$ref": "../util-foundry.json#/$defs/foundryIdentifier"
+					},
+					"system": {
+						"$ref": "../util-foundry.json#/$defs/foundrySystemObject"
+					},
+					"activities": {
+						"type": "array",
+						"items": {
+							"$ref": "../util-foundry.json#/$defs/foundryActivityObject"
+						}
+					},
+					"effects": {
+						"type": "array",
+						"items": {
+							"$ref": "../util-foundry.json#/$defs/foundryEffectObject"
+						}
+					},
+					"flags": {
+						"$ref": "../util-foundry.json#/$defs/foundryFlagsObject"
+					},
+					"advice": {
+						"$ref": "../entry.json"
+					},
+					"img": {
+						"type": "string"
+					},
+					"advancement": {
+						"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"
+					},
+					"migrationVersion": {
+						"type": "integer"
+					},
+					"_merge": {
+						"$ref": "../util-foundry.json#/$defs/foundryMergeObject"
+					},
+					"monsterName": {
+						"type": "string"
+					},
+					"monsterSource": {
+						"$ref": "../util.json#/$defs/source"
+					}
+				}
+			}
+		}
+	},
 	"properties": {
 		"monster": {
 			"$ref": "../util-foundry.json#/$defs/foundrySideDataGenericActorArray"
+		},
+		"monsterAction": {
+			"$ref": "#/$defs/_monsterSubEntityArray"
+		},
+		"monsterBonus": {
+			"$ref": "#/$defs/_monsterSubEntityArray"
+		},
+		"monsterReaction": {
+			"$ref": "#/$defs/_monsterSubEntityArray"
+		},
+		"monsterTrait": {
+			"$ref": "#/$defs/_monsterSubEntityArray"
+		},
+		"monsterLegendary": {
+			"$ref": "#/$defs/_monsterSubEntityArray"
+		},
+		"monsterMythic": {
+			"$ref": "#/$defs/_monsterSubEntityArray"
 		}
 	},
 	"required": [

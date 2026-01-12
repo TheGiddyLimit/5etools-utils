@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "books.json",
-	"version": "1.2.18",
+	"version": "1.2.19",
 	"type": "object",
 	"properties": {
 		"book": {
@@ -51,6 +51,9 @@
 						"type": "string"
 					},
 					"published": {
+						"$ref": "corpus-shared.json#/$defs/corpusPublished"
+					},
+					"revised": {
 						"$ref": "corpus-shared.json#/$defs/corpusPublished"
 					},
 					"cover": {

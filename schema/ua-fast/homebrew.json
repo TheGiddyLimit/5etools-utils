@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.11.4",
+	"version": "1.11.5",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -536,6 +536,24 @@
 		},
 		"foundryMonster": {
 			"$ref": "bestiary/foundry.json#/properties/monster"
+		},
+		"foundryMonsterAction": {
+			"$ref": "bestiary/foundry.json#/properties/monsterAction"
+		},
+		"foundryMonsterBonus": {
+			"$ref": "bestiary/foundry.json#/properties/monsterBonus"
+		},
+		"foundryMonsterReaction": {
+			"$ref": "bestiary/foundry.json#/properties/monsterReaction"
+		},
+		"foundryMonsterTrait": {
+			"$ref": "bestiary/foundry.json#/properties/monsterTrait"
+		},
+		"foundryMonsterLegendary": {
+			"$ref": "bestiary/foundry.json#/properties/monsterLegendary"
+		},
+		"foundryMonsterMythic": {
+			"$ref": "bestiary/foundry.json#/properties/monsterMythic"
 		},
 		"legendaryGroup": {
 			"$ref": "bestiary/legendarygroups.json#/properties/legendaryGroup"
