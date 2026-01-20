@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.37",
+	"version": "1.17.38",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -298,7 +298,7 @@
 		"propNameStats": {
 			"type": "string",
 			"enum": [
-				"subclass",
+				"classFluff",
 				"monsterFluff",
 				"raceFluff"
 			]

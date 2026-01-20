@@ -251,7 +251,7 @@
 		"propNameStats": {
 			"type": "string",
 			"enum": [
-				"subclass",
+				"classFluff",
 				"monsterFluff",
 				"raceFluff"
 			]

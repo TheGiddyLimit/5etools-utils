@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.16",
+	"version": "1.9.17",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2236,6 +2236,7 @@
 						}
 					]
 				},
+
 				{
 					"type": "object",
 					"$$merge": [
@@ -2246,6 +2247,40 @@
 								"name": {"type": "string"}
 							},
 							"required": ["prop", "name", "source"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{"$ref" : "#/$defs/_entryStatblockBase"},
+						{
+							"properties": {
+								"prop": {"const": "subclass"},
+								"name": {"type": "string"},
+								"shortName": {"type": "string"},
+								"className": {"type": "string"},
+								"classSource": {"$ref": "util.json#/$defs/source"}
+							},
+							"required": ["prop", "name", "shortName", "source", "className", "classSource"],
+							"additionalProperties": false
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{"$ref" : "#/$defs/_entryStatblockBase"},
+						{
+							"properties": {
+								"prop": {"const": "subclassFluff"},
+								"name": {"type": "string"},
+								"shortName": {"type": "string"},
+								"className": {"type": "string"},
+								"classSource": {"$ref": "util.json#/$defs/source"}
+							},
+							"required": ["prop", "name", "shortName", "source", "className", "classSource"],
+							"additionalProperties": false
 						}
 					]
 				}

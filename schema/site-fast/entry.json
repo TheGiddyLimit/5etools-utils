@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.16",
+	"version": "1.9.17",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -3777,6 +3777,146 @@
 						"name",
 						"source"
 					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "statblock"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"displayName": {
+							"type": "string"
+						},
+						"hash": {
+							"type": "string"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						},
+						"prop": {
+							"const": "subclass"
+						},
+						"shortName": {
+							"type": "string"
+						},
+						"className": {
+							"type": "string"
+						},
+						"classSource": {
+							"$ref": "util.json#/$defs/source"
+						}
+					},
+					"required": [
+						"type",
+						"prop",
+						"name",
+						"shortName",
+						"source",
+						"className",
+						"classSource"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "statblock"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"displayName": {
+							"type": "string"
+						},
+						"hash": {
+							"type": "string"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						},
+						"prop": {
+							"const": "subclassFluff"
+						},
+						"shortName": {
+							"type": "string"
+						},
+						"className": {
+							"type": "string"
+						},
+						"classSource": {
+							"$ref": "util.json#/$defs/source"
+						}
+					},
+					"required": [
+						"type",
+						"prop",
+						"name",
+						"shortName",
+						"source",
+						"className",
+						"classSource"
+					],
+					"additionalProperties": false
 				}
 			]
 		},
