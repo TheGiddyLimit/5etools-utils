@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.24",
+	"version": "1.9.25",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -255,7 +255,7 @@
 					}
 				},
 				"areaTags": {
-					"description": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder",
+					"description": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- E: Emanation\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder",
 					"type": "array",
 					"minItems": 1,
 					"uniqueItems": true,
@@ -269,13 +269,14 @@
 							"C",
 							"Y",
 							"H",
+							"E",
 							"L",
 							"S",
 							"Q",
 							"W"
 						]
 					},
-					"markdownDescription": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder"
+					"markdownDescription": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- E: Emanation\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder"
 				},
 				"miscTags": {
 					"type": "array",
@@ -607,7 +608,7 @@
 							}
 						},
 						"areaTags": {
-							"description": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder",
+							"description": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- E: Emanation\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder",
 							"type": "array",
 							"minItems": 1,
 							"uniqueItems": true,
@@ -621,13 +622,14 @@
 									"C",
 									"Y",
 									"H",
+									"E",
 									"L",
 									"S",
 									"Q",
 									"W"
 								]
 							},
-							"markdownDescription": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder"
+							"markdownDescription": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- E: Emanation\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder"
 						},
 						"miscTags": {
 							"type": "array",
@@ -967,7 +969,7 @@
 							}
 						},
 						"areaTags": {
-							"description": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder",
+							"description": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- E: Emanation\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder",
 							"type": "array",
 							"minItems": 1,
 							"uniqueItems": true,
@@ -981,13 +983,14 @@
 									"C",
 									"Y",
 									"H",
+									"E",
 									"L",
 									"S",
 									"Q",
 									"W"
 								]
 							},
-							"markdownDescription": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder"
+							"markdownDescription": "By convention, only the effects of the spell cast at its base level are considered when populating these.\n\n- C: Cube\n- E: Emanation\n- H: Hemisphere\n- L: Line\n- MT: Multiple Targets\n- N: Cone\n- Q: Square\n- R: Circle\n- ST: Single Target\n- S: Sphere\n- W: Wall\n- Y: Cylinder"
 						},
 						"miscTags": {
 							"type": "array",
