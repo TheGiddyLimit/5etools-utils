@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"$id": "template.json",
 	"type": "object",
 	"$defs": {
@@ -8,6 +8,7 @@
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
+				"alias": {"$ref": "../util.json#/$defs/alias"},
 				"source": {"$ref": "../util.json#/$defs/source"},
 				"page": {"$ref": "../util.json#/$defs/page"},
 
