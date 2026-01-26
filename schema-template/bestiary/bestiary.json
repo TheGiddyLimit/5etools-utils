@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.58",
+	"version": "1.21.59",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -511,11 +511,11 @@
 										"description": "An item UID, e.g. \"longsword|phb\"",
 										"type": "string"
 									},
-									"quantity": {
-										"type": "integer"
-									}
+									"quantity": {"type": "integer"},
+									"displayName": {"type": "string"}
 								},
-								"required": ["item", "quantity"],
+								"required": ["item"],
+								"minProperties": 2,
 								"additionalProperties": false
 							}
 						]
