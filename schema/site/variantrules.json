@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "variantrules.json",
-	"version": "1.1.14",
+	"version": "1.1.15",
 	"title": "RulesArray",
 	"type": "object",
 	"properties": {
@@ -60,6 +60,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"

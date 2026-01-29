@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.38",
+	"version": "1.17.39",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -157,6 +157,7 @@
 		},
 
 		"otherSources": {
+			"description": "Other sources in which this entity is defined.",
 			"type": "array",
 			"items": {
 				"type": "object",
@@ -170,6 +171,16 @@
 					"source"
 				],
 				"additionalProperties": false
+			},
+			"uniqueItems": true,
+			"minItems": 1
+		},
+
+		"referenceSources": {
+			"description": "Sources which reference this entity (e.g. in bold text).",
+			"type": "array",
+			"items": {
+				"$ref": "util.json#/$defs/source"
 			},
 			"uniqueItems": true,
 			"minItems": 1

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "bastions.json",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"type": "object",
 	"$defs": {
 		"_space": {
@@ -26,6 +26,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -144,6 +147,9 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -266,6 +272,9 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"

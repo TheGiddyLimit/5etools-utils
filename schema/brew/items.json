@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.28",
+	"version": "1.14.29",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -343,6 +343,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -880,6 +883,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -1420,6 +1426,9 @@
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
 						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -1956,6 +1965,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
@@ -2501,6 +2513,9 @@
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
 						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
 						},
@@ -3041,6 +3056,9 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"

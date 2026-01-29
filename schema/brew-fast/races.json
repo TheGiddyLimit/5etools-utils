@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.15",
+	"version": "1.12.16",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -23,6 +23,16 @@
 					"oneOf": [
 						{
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						{
+							"type": "null"
+						}
+					]
+				},
+				"referenceSources": {
+					"oneOf": [
+						{
+							"$ref": "util.json#/$defs/referenceSources"
 						},
 						{
 							"type": "null"
@@ -297,6 +307,16 @@
 					"oneOf": [
 						{
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						{
+							"type": "null"
+						}
+					]
+				},
+				"referenceSources": {
+					"oneOf": [
+						{
+							"$ref": "util.json#/$defs/referenceSources"
 						},
 						{
 							"type": "null"
@@ -662,6 +682,16 @@
 								}
 							]
 						},
+						"referenceSources": {
+							"oneOf": [
+								{
+									"$ref": "util.json#/$defs/referenceSources"
+								},
+								{
+									"type": "null"
+								}
+							]
+						},
 						"additionalSources": {
 							"$ref": "util.json#/$defs/additionalSources"
 						},
@@ -934,6 +964,16 @@
 							"oneOf": [
 								{
 									"$ref": "util.json#/$defs/otherSources"
+								},
+								{
+									"type": "null"
+								}
+							]
+						},
+						"referenceSources": {
+							"oneOf": [
+								{
+									"$ref": "util.json#/$defs/referenceSources"
 								},
 								{
 									"type": "null"
@@ -1218,6 +1258,16 @@
 							"oneOf": [
 								{
 									"$ref": "util.json#/$defs/otherSources"
+								},
+								{
+									"type": "null"
+								}
+							]
+						},
+						"referenceSources": {
+							"oneOf": [
+								{
+									"$ref": "util.json#/$defs/referenceSources"
 								},
 								{
 									"type": "null"
@@ -1509,6 +1559,16 @@
 							"oneOf": [
 								{
 									"$ref": "util.json#/$defs/otherSources"
+								},
+								{
+									"type": "null"
+								}
+							]
+						},
+						"referenceSources": {
+							"oneOf": [
+								{
+									"$ref": "util.json#/$defs/referenceSources"
 								},
 								{
 									"type": "null"

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.59",
+	"version": "1.21.60",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -236,9 +236,8 @@
 					"type": "string",
 					"description": "Sub-source text that is shown when hovered."
 				},
-				"otherSources": {
-					"$ref": "../util.json#/$defs/otherSources"
-				},
+				"otherSources": {"$ref": "../util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "../util.json#/$defs/referenceSources"},
 				"reprintedAs": {
 					"$ref": "../util.json#/$defs/reprintedAs"
 				},

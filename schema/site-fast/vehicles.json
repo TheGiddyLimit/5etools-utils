@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.8.1",
+	"version": "1.8.2",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -191,6 +191,9 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
+				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
 				},
@@ -234,6 +237,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
@@ -595,6 +601,9 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
+				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
 				},
@@ -684,6 +693,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
@@ -779,6 +791,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"

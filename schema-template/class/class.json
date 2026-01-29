@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.12",
+	"version": "2.12.13",
 	"$id": "class.json",
 
 	"type": "object",
@@ -192,9 +192,8 @@
 					}
 				},
 				"isClassFeatureVariant": {"type": "boolean"},
-				"otherSources": {
-					"$ref": "../util.json#/$defs/otherSources"
-				},
+				"otherSources": {"$ref": "../util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "../util.json#/$defs/referenceSources"},
 				"consumes": {"$ref": "../util.json#/$defs/consumesObject"},
 				"$$ifBrew": {
 					"foundrySystem": {
@@ -288,9 +287,8 @@
 					"description": "If this feature should only be (optionally) gained at the next \"gainSubclassFeature\" level, rather than at the level listed on the feature.",
 					"type": "boolean"
 				},
-				"otherSources": {
-					"$ref": "../util.json#/$defs/otherSources"
-				},
+				"otherSources": {"$ref": "../util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "../util.json#/$defs/referenceSources"},
 				"consumes": {"$ref": "../util.json#/$defs/consumesObject"},
 				"$$ifBrew": {
 					"foundrySystem": {
@@ -563,9 +561,8 @@
 					"type": "array",
 					"items": { "$ref": "#/$defs/classTableGroup"}
 				},
-				"otherSources": {
-					"$ref": "../util.json#/$defs/otherSources"
-				},
+				"otherSources": {"$ref": "../util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "../util.json#/$defs/referenceSources"},
 				"additionalSpells": { "$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray" },
 				"hasFluff": {"const": true},
 				"hasFluffImages": {"const": true},
@@ -756,9 +753,8 @@
 				},
 				"alias": {"$ref": "../util.json#/$defs/alias"},
 				"source": {"$ref": "../util.json#/$defs/source"},
-				"otherSources": {
-					"$ref": "../util.json#/$defs/otherSources"
-				},
+				"otherSources": {"$ref": "../util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "../util.json#/$defs/referenceSources"},
 				"edition": {"$ref": "../util-edition.json#/$defs/edition"},
 				"$$ifSite": {
 					"srd": {"$ref": "../util.json#/$defs/srd"},

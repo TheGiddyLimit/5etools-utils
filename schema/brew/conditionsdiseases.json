@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "conditionsdiseases.json",
-	"version": "1.2.12",
+	"version": "1.2.13",
 	"type": "object",
 	"$defs": {
 		"_conditionDiseaseBase": {
@@ -27,6 +27,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"
@@ -106,6 +109,9 @@
 				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"reprintedAs": {
 					"$ref": "util.json#/$defs/reprintedAs"

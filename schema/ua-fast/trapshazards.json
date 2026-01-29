@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.4.8",
+	"version": "1.4.9",
 	"type": "object",
 	"$defs": {
 		"_trapHazardTier": {
@@ -110,6 +110,9 @@
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
 						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"
 						},
@@ -175,6 +178,9 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
 						},
 						"reprintedAs": {
 							"$ref": "util.json#/$defs/reprintedAs"

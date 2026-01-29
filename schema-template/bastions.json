@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "bastions.json",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"type": "object",
 
 	"$defs": {
@@ -21,7 +21,9 @@
 				"name": {"type": "string"},
 				"alias": {"$ref": "util.json#/$defs/alias"},
 				"source": {"$ref": "util.json#/$defs/source"},
+
 				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "util.json#/$defs/referenceSources"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"$$ifSite": {
 					"srd": {"$ref": "util.json#/$defs/srd"},

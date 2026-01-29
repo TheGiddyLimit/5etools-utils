@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.12",
+	"version": "2.12.13",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -241,6 +241,9 @@
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
 				},
+				"referenceSources": {
+					"$ref": "../util.json#/$defs/referenceSources"
+				},
 				"consumes": {
 					"$ref": "../util.json#/$defs/consumesObject"
 				},
@@ -321,6 +324,9 @@
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
 				},
+				"referenceSources": {
+					"$ref": "../util.json#/$defs/referenceSources"
+				},
 				"consumes": {
 					"$ref": "../util.json#/$defs/consumesObject"
 				},
@@ -394,6 +400,9 @@
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "../util.json#/$defs/referenceSources"
 						},
 						"consumes": {
 							"$ref": "../util.json#/$defs/consumesObject"
@@ -476,6 +485,9 @@
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "../util.json#/$defs/referenceSources"
 						},
 						"consumes": {
 							"$ref": "../util.json#/$defs/consumesObject"
@@ -712,6 +724,9 @@
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
 						},
+						"referenceSources": {
+							"$ref": "../util.json#/$defs/referenceSources"
+						},
 						"additionalSpells": {
 							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
@@ -889,6 +904,9 @@
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "../util.json#/$defs/referenceSources"
 						},
 						"additionalSpells": {
 							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
@@ -1068,6 +1086,9 @@
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
 				},
+				"referenceSources": {
+					"$ref": "../util.json#/$defs/referenceSources"
+				},
 				"additionalSpells": {
 					"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 				},
@@ -1223,6 +1244,9 @@
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "../util.json#/$defs/referenceSources"
 						},
 						"edition": {
 							"$ref": "../util-edition.json#/$defs/edition"
@@ -1505,6 +1529,9 @@
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "../util.json#/$defs/referenceSources"
 						},
 						"edition": {
 							"$ref": "../util-edition.json#/$defs/edition"
@@ -1790,6 +1817,9 @@
 				},
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "../util.json#/$defs/referenceSources"
 				},
 				"edition": {
 					"$ref": "../util-edition.json#/$defs/edition"

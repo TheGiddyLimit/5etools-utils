@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.38",
+	"version": "1.17.39",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -94,6 +94,7 @@
 			]
 		},
 		"otherSources": {
+			"description": "Other sources in which this entity is defined.",
 			"type": "array",
 			"items": {
 				"type": "object",
@@ -111,7 +112,18 @@
 				"additionalProperties": false
 			},
 			"uniqueItems": true,
-			"minItems": 1
+			"minItems": 1,
+			"markdownDescription": "Other sources in which this entity is defined."
+		},
+		"referenceSources": {
+			"description": "Sources which reference this entity (e.g. in bold text).",
+			"type": "array",
+			"items": {
+				"$ref": "util.json#/$defs/source"
+			},
+			"uniqueItems": true,
+			"minItems": 1,
+			"markdownDescription": "Sources which reference this entity (e.g. in bold text)."
 		},
 		"additionalSources": {
 			"type": "array",

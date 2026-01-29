@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.18",
+	"version": "1.9.19",
 	"type": "object",
 
 	"$defs" : {
@@ -236,9 +236,8 @@
 							"basicRules2024": {"$ref": "util.json#/$defs/basicRules"}
 						},
 						"legacy": {"$ref": "util.json#/$defs/legacy"},
-						"otherSources": {
-							"$ref": "util.json#/$defs/otherSources"
-						},
+						"otherSources": {"$ref": "util.json#/$defs/otherSources"},
+						"referenceSources": {"$ref": "util.json#/$defs/referenceSources"},
 						"valueMult": {"type": "number"},
 						"valueExpression": {
 							"description": "Expression used to calculate each specific variant's value.",

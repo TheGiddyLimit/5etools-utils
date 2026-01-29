@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.25",
+	"version": "1.9.26",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -199,6 +199,9 @@
 				},
 				"otherSources": {
 					"$ref": "../util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "../util.json#/$defs/referenceSources"
 				},
 				"reprintedAs": {
 					"$ref": "../util.json#/$defs/reprintedAs"
@@ -765,6 +768,9 @@
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "../util.json#/$defs/referenceSources"
 						},
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
@@ -1339,6 +1345,9 @@
 						},
 						"otherSources": {
 							"$ref": "../util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "../util.json#/$defs/referenceSources"
 						},
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"

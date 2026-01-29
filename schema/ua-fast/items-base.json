@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.16",
+	"version": "1.6.17",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -397,6 +397,9 @@
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
+				},
 				"ammoType": {
 					"$ref": "items-shared.json#/$defs/itemAmmoType"
 				},
@@ -732,6 +735,9 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
 						},
 						"ammoType": {
 							"$ref": "items-shared.json#/$defs/itemAmmoType"
@@ -1072,6 +1078,9 @@
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
 						},
 						"ammoType": {
 							"$ref": "items-shared.json#/$defs/itemAmmoType"

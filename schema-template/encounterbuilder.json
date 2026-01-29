@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "encounterbuilder.json",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"type": "object",
 
 	"$defs": {
@@ -109,6 +109,7 @@
 				"name": {"type": "string"},
 				"source": {"$ref": "util.json#/$defs/source"},
 				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "util.json#/$defs/referenceSources"},
 				"page": {"$ref": "util.json#/$defs/page"},
 				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
 

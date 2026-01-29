@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.28",
+	"version": "1.14.29",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -259,9 +259,8 @@
 				"modifySpeed": {
 					"$ref": "items-shared.json#/$defs/itemModifySpeed"
 				},
-				"otherSources": {
-					"$ref": "util.json#/$defs/otherSources"
-				},
+				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "util.json#/$defs/referenceSources"},
 				"$$ifSite": {
 					"srd": {"$ref": "util.json#/$defs/srd"},
 					"srd52": {"$ref": "util.json#/$defs/srd"},
