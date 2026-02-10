@@ -23,9 +23,7 @@
 				},
 				"source": {"$ref": "util.json#/$defs/source"},
 				"page": {"$ref": "util.json#/$defs/page"},
-				"additionalSources": {
-					"$ref": "util.json#/$defs/additionalSources"
-				},
+				"additionalSources": {"$ref": "util.json#/$defs/additionalSources"},
 				"reprintedAs": {"$ref": "util.json#/$defs/reprintedAs"},
 				"baseItem": {
 					"type": "string"

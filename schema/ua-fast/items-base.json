@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.17",
+	"version": "1.6.18",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -184,6 +184,12 @@
 					"$ref": "util.json#/$defs/dataDamageTags"
 				},
 				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"additionalEntries": {
 					"type": "array",
 					"items": {
 						"$ref": "entry.json"
@@ -394,6 +400,9 @@
 				"legacy": {
 					"$ref": "util.json#/$defs/legacy"
 				},
+				"additionalSources": {
+					"$ref": "util.json#/$defs/additionalSources"
+				},
 				"otherSources": {
 					"$ref": "util.json#/$defs/otherSources"
 				},
@@ -523,6 +532,12 @@
 							"$ref": "util.json#/$defs/dataDamageTags"
 						},
 						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"additionalEntries": {
 							"type": "array",
 							"items": {
 								"$ref": "entry.json"
@@ -732,6 +747,9 @@
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
+						},
+						"additionalSources": {
+							"$ref": "util.json#/$defs/additionalSources"
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
@@ -871,6 +889,12 @@
 								"$ref": "entry.json"
 							}
 						},
+						"additionalEntries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
 						"property": {
 							"$ref": "items-shared.json#/$defs/itemPropertyOrWrapperArray"
 						},
@@ -1075,6 +1099,9 @@
 						},
 						"legacy": {
 							"$ref": "util.json#/$defs/legacy"
+						},
+						"additionalSources": {
+							"$ref": "util.json#/$defs/additionalSources"
 						},
 						"otherSources": {
 							"$ref": "util.json#/$defs/otherSources"
