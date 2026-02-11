@@ -1,10 +1,13 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "foundry-items.json",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"type": "object",
 	"properties": {
 		"magicvariant": {
+			"$ref": "util-foundry.json#/$defs/foundrySideDataGenericArray"
+		},
+		"baseitem": {
 			"$ref": "util-foundry.json#/$defs/foundrySideDataGenericArray"
 		},
 		"item": {

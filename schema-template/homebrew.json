@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.11.5",
+	"version": "1.11.6",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -540,6 +540,9 @@
 		},
 		"foundryMagicvariant": {
 			"$ref": "foundry-items.json#/properties/magicvariant"
+		},
+		"foundryBaseitem": {
+			"$ref": "foundry-items.json#/properties/baseitem"
 		},
 		"itemGroup": {
 			"$ref": "items.json#/properties/itemGroup"
