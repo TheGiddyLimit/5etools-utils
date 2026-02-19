@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "magicvariants.json",
-	"version": "1.9.19",
+	"version": "1.9.20",
 	"type": "object",
 	"$defs": {
 		"_magicvariantDataBase": {
@@ -18,6 +18,9 @@
 				},
 				"edition": {
 					"$ref": "util-edition.json#/$defs/edition"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -649,6 +652,9 @@
 				"edition": {
 					"$ref": "util-edition.json#/$defs/edition"
 				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
+				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
 				},
@@ -1278,6 +1284,9 @@
 				},
 				"edition": {
 					"$ref": "util-edition.json#/$defs/edition"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -1914,6 +1923,9 @@
 				},
 				"edition": {
 					"$ref": "util-edition.json#/$defs/edition"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
@@ -2554,6 +2566,9 @@
 				"edition": {
 					"$ref": "util-edition.json#/$defs/edition"
 				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
+				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
 				},
@@ -3190,6 +3205,9 @@
 				},
 				"edition": {
 					"$ref": "util-edition.json#/$defs/edition"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
 				},
 				"type": {
 					"$ref": "items-shared.json#/$defs/itemType"
