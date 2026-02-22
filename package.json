@@ -12,6 +12,8 @@
 		"lib": "./lib"
 	},
 	"bin": {
+		"clean-html": "bin/clean-html.js",
+		"test-file-contents": "bin/test-file-contents.js",
 		"test-json-brew": "bin/test-json-brew.js",
 		"test-json-ua": "bin/test-json-ua.js",
 		"test-file-names": "bin/test-file-names.js",
@@ -43,8 +45,10 @@
 		"ajv-formats": "^3.0.1",
 		"commander": "^14.0.3",
 		"hasha": "^7.0.0",
+		"he": "^1.2.0",
 		"json-source-map": "^0.6.1",
-		"number-precision": "^1.6.0"
+		"number-precision": "^1.6.0",
+		"sanitize-html": "^2.17.1"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
