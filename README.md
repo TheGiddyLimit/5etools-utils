@@ -10,4 +10,4 @@ npx test-json-brew [file] [--dir <dir>]
 npx test-json-ua [file] [--dir <dir>]
 ```
 
-Programmatic: `BrewTester` includes helpers such as `pTestImgDirectories({dirAllowlist, pathImgDir})`.
+And more; see `bin/`.

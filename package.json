@@ -19,7 +19,11 @@
 		"test-file-names": "bin/test-file-names.js",
 		"test-file-locations": "bin/test-file-locations.js",
 		"test-file-props": "bin/test-file-props.js",
-		"test-edition-sources": "bin/test-edition-sources.js"
+		"test-edition-sources": "bin/test-edition-sources.js",
+		"test-img-file-extensions": "bin/test-img-file-extensions.js",
+		"test-img-file-sizes": "bin/test-img-file-sizes.js",
+		"test-img-source-names-brew": "bin/test-img-source-names-brew.js",
+		"test-img-source-names-ua": "bin/test-img-source-names-ua.js"
 	},
 	"scripts": {
 		"build:dangerous:sources": "node node/fetch-5etools-sources.js",

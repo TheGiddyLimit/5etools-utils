@@ -11,15 +11,28 @@ test(
 test(
 	"Test valid homebrew source",
 	() => {
-		expect(UtilSource.isValidHomebrewSorce("AAAAAA")).toBe(true);
-		expect(UtilSource.isValidHomebrewSorce("AAAAA")).toBe(false);
-		expect(UtilSource.isValidHomebrewSorce("AAA:AA")).toBe(false);
-		expect(UtilSource.isValidHomebrewSorce("AAAAA ")).toBe(false);
-		expect(UtilSource.isValidHomebrewSorce(" AAAAA")).toBe(false);
-		expect(UtilSource.isValidHomebrewSorce("A    A")).toBe(true);
+		expect(UtilSource.isValidHomebrewSource("AAAAAA")).toBe(true);
+		expect(UtilSource.isValidHomebrewSource("AAAAA")).toBe(false);
+		expect(UtilSource.isValidHomebrewSource("AAA:AA")).toBe(false);
+		expect(UtilSource.isValidHomebrewSource("AAAAA ")).toBe(false);
+		expect(UtilSource.isValidHomebrewSource(" AAAAA")).toBe(false);
+		expect(UtilSource.isValidHomebrewSource("A    A")).toBe(true);
 
 		// Legacy sources
-		expect(UtilSource.isValidHomebrewSorce("KG")).toBe(true);
-		expect(UtilSource.isValidHomebrewSorce("AS:C")).toBe(true);
+		expect(UtilSource.isValidHomebrewSource("KG")).toBe(true);
+		expect(UtilSource.isValidHomebrewSource("AS:C")).toBe(true);
+	},
+);
+
+test(
+	"Test valid prerelease source",
+	() => {
+		expect(UtilSource.isValidPrereleaseSource("UA2020Feats")).toBe(true);
+		expect(UtilSource.isValidPrereleaseSource("XUA2025Psion")).toBe(true);
+
+		expect(UtilSource.isValidPrereleaseSource("AAAAAA")).toBe(false);
+		expect(UtilSource.isValidPrereleaseSource("KG")).toBe(false);
+		expect(UtilSource.isValidPrereleaseSource("PHB")).toBe(false);
+		expect(UtilSource.isValidPrereleaseSource("UA 2025 Psion")).toBe(false);
 	},
 );
