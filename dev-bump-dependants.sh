@@ -1,0 +1,113 @@
+#!/usr/bin/env bash
+
+# slop ahoy
+# ---
+#  - full bump flow for all dependents:
+#     - 5etools
+#     - homebrew
+#     - homebrew-img
+#     - unearthed-arcana
+#     - unearthed-arcana-img
+#     - plutonium
+# - pulls version from local 5etools-utils/package.json
+# - per-repo guardrails before work:
+#     - repo exists
+#     - not detached HEAD
+#     - active branch matches expected (development/master/main map)
+#     - clean worktree
+# - runs npm install --save-dev 5etools-utils@^<version>
+# - commits package changes as chore: bump dep ver when needed
+# - pushes every repo, including unearthed-arcana-img
+#     - uses tracking upstream if present
+#     - falls back to push -u <remote> <branch> if upstream missing
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+REPOS_ROOT="$(cd -- "$SCRIPT_DIR/.." && pwd)"
+UTILS_DIR="$SCRIPT_DIR"
+COMMIT_MESSAGE="chore: bump dep ver"
+
+UTILS_VERSION="$(node -p "require('$UTILS_DIR/package.json').version")"
+
+REPO_SPECS=(
+	"5etools:development"
+	"homebrew:master"
+	"homebrew-img:main"
+	"unearthed-arcana:master"
+	"unearthed-arcana-img:main"
+	"plutonium:master"
+)
+
+log () { echo "[bump-dependants] $*"; }
+die () { echo "[bump-dependants] ERROR: $*" >&2; exit 1; }
+
+get_repo_dir () {
+	local repo_name="$1"
+	echo "$REPOS_ROOT/$repo_name"
+}
+
+verify_repo_branch_and_state () {
+	local repo_name="$1"
+	local expected_branch="$2"
+	local repo_dir
+	repo_dir="$(get_repo_dir "$repo_name")"
+
+	[[ -d "$repo_dir/.git" ]] || die "Repo '$repo_name' missing at '$repo_dir'"
+
+	local active_branch
+	active_branch="$(git -C "$repo_dir" branch --show-current)"
+	[[ -n "$active_branch" ]] || die "Repo '$repo_name' is in detached HEAD state"
+	[[ "$active_branch" == "$expected_branch" ]] || die "Repo '$repo_name' active branch '$active_branch' != expected '$expected_branch'"
+
+	[[ -z "$(git -C "$repo_dir" status --porcelain)" ]] || die "Repo '$repo_name' has uncommitted changes"
+}
+
+push_repo () {
+	local repo_name="$1"
+	local expected_branch="$2"
+	local repo_dir
+	repo_dir="$(get_repo_dir "$repo_name")"
+
+	if git -C "$repo_dir" rev-parse --abbrev-ref --symbolic-full-name "@{u}" >/dev/null 2>&1; then
+		git -C "$repo_dir" push
+		return
+	fi
+
+	local remote="origin"
+	if ! git -C "$repo_dir" remote | grep -qx "$remote"; then
+		remote="$(git -C "$repo_dir" remote | head -n 1)"
+	fi
+	[[ -n "$remote" ]] || die "Repo '$repo_name' has no configured remotes"
+
+	git -C "$repo_dir" push -u "$remote" "$expected_branch"
+}
+
+log "Bumping dependant project dep vers to ^$UTILS_VERSION..."
+
+for spec in "${REPO_SPECS[@]}"; do
+	IFS=":" read -r repo_name expected_branch <<< "$spec"
+	verify_repo_branch_and_state "$repo_name" "$expected_branch"
+done
+
+for spec in "${REPO_SPECS[@]}"; do
+	IFS=":" read -r repo_name expected_branch <<< "$spec"
+	repo_dir="$(get_repo_dir "$repo_name")"
+
+	log "Updating '$repo_name' on '$expected_branch'..."
+	(
+		cd "$repo_dir"
+		npm install --save-dev "5etools-utils@^$UTILS_VERSION"
+	)
+
+	if git -C "$repo_dir" diff --quiet -- package.json package-lock.json; then
+		log "No package changes in '$repo_name'; skipping commit."
+	else
+		git -C "$repo_dir" add package.json package-lock.json
+		git -C "$repo_dir" commit -m "$COMMIT_MESSAGE"
+	fi
+
+	push_repo "$repo_name" "$expected_branch"
+done
+
+log "Done."
