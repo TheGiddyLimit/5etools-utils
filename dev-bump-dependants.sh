@@ -62,6 +62,10 @@ verify_repo_branch_and_state () {
 	[[ "$active_branch" == "$expected_branch" ]] || die "Repo '$repo_name' active branch '$active_branch' != expected '$expected_branch'"
 
 	[[ -z "$(git -C "$repo_dir" status --porcelain)" ]] || die "Repo '$repo_name' has uncommitted changes"
+
+	pushd "$repo_dir"
+	git pull
+	popd
 }
 
 push_repo () {
