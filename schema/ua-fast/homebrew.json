@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.11.6",
+	"version": "1.11.7",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -312,6 +312,16 @@
 						}
 					},
 					"markdownDescription": "Structure as per &quot;dependencies&quot;. Additional sources to be included when loading the file."
+				},
+				"references": {
+					"description": "A \"soft\" alternative to `\"dependencies\"`, used only for data validation (and may therefore be omitted).\n\nAn array of `[\"<NonSiteJsonSource1>\", ..., \"<NonSiteJsonSourceN>\"]`. Entities from these sources will be made available when running e.g. 5etools' `test-tags.js`.",
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"minItems": 1,
+					"uniqueItems": true,
+					"markdownDescription": "A &quot;soft&quot; alternative to &quot;dependencies&quot;, used only for data validation (and may therefore be omitted).\n\nAn array of [&quot;&lt;NonSiteJsonSource1&gt;&quot;, ..., &quot;&lt;NonSiteJsonSourceN&gt;&quot;]. Entities from these sources will be made available when running e.g. 5etools&apos; test-tags.js."
 				},
 				"internalCopies": {
 					"description": "An array of keys that are copied from within the current document. e.g. \"item\", \"monsterFluff\", \"background\" etc.",
