@@ -7,23 +7,23 @@ if [[ $# -eq 0 ]]; then
     exit 1
 fi
 
+PACK_DEST="$(pwd)/scratch"
+
 echo "Cleaning..."
 
-rm -rf scratch/5etools-utils-*.tgz
-rm -rf scratch/package
+rm -f "${PACK_DEST}"/5etools-utils-*.tgz
+rm -rf "${PACK_DEST}/package"
 
 echo "Building..."
 
 npm run build
-npm pack --pack-destination scratch/
+npm pack --pack-destination "${PACK_DEST}"
 
-echo "Unpacking..."
+echo "Installing..."
 
-tar zxf scratch/5etools-utils-*.tgz -C scratch/
+VERSION=$(node -p "require('./package.json').version")
+pushd "$1"
+npm i "${PACK_DEST}/5etools-utils-${VERSION}.tgz"
+popd
 
-echo "Copying..."
-
-mkdir -p "$1"/node_modules/5etools-utils
-cp -rf scratch/package/* "$1"/node_modules/5etools-utils/
-
-echo "Copied to ${1}/node_modules/5etools-utils/"
+echo "Done!"
