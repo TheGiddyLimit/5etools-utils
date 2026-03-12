@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.39",
+	"version": "1.18.0",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -3666,6 +3666,9 @@
 						"subclassName": {
 							"type": "string"
 						},
+						"subclassShortName": {
+							"type": "string"
+						},
 						"subclassSource": {
 							"$ref": "util.json#/$defs/source"
 						}
@@ -3674,6 +3677,7 @@
 						"className",
 						"classSource",
 						"subclassName",
+						"subclassShortName",
 						"subclassSource"
 					],
 					"additionalProperties": false,
@@ -3692,6 +3696,9 @@
 						"subclassName": {
 							"type": "string"
 						},
+						"subclassShortName": {
+							"type": "string"
+						},
 						"subclassSource": {
 							"$ref": "util.json#/$defs/source"
 						},
@@ -3706,6 +3713,7 @@
 						"className",
 						"classSource",
 						"subclassName",
+						"subclassShortName",
 						"subclassSource",
 						"subSubclassName",
 						"subSubclassSource"

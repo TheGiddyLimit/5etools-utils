@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.17.39",
+	"version": "1.18.0",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -2882,10 +2882,11 @@
 						"className": {"type": "string"},
 						"classSource": {"$ref": "util.json#/$defs/source"},
 						"subclassName": {"type": "string"},
+						"subclassShortName": {"type": "string"},
 						"subclassSource": {"$ref": "util.json#/$defs/source"}
 					},
 					"required": [
-						"className", "classSource", "subclassName", "subclassSource"
+						"className", "classSource", "subclassName", "subclassShortName", "subclassSource"
 					],
 					"additionalProperties": false
 				},
@@ -2896,12 +2897,13 @@
 						"className": {"type": "string"},
 						"classSource": {"$ref": "util.json#/$defs/source"},
 						"subclassName": {"type": "string"},
+						"subclassShortName": {"type": "string"},
 						"subclassSource": {"$ref": "util.json#/$defs/source"},
 						"subSubclassName": {"type": "string"},
 						"subSubclassSource": {"type": "string"}
 					},
 					"required": [
-						"className", "classSource", "subclassName", "subclassSource", "subSubclassName", "subSubclassSource"
+						"className", "classSource", "subclassName", "subclassShortName", "subclassSource", "subSubclassName", "subSubclassSource"
 					],
 					"additionalProperties": false
 				},
