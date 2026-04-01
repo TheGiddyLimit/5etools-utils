@@ -1,0 +1,216 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "patterns.json",
+	"version": "1.0.0",
+	"type": "object",
+
+	"$defs": {
+		"dimension": {
+			"type": "object",
+			"properties": {
+				"mm": {
+					"type": "number",
+					"exclusiveMinimum": 0
+				},
+				"entry": {
+					"$ref": "entry.json"
+				}
+			},
+			"required": [
+				"mm"
+			]
+		},
+
+		"component": {
+			"type": "object",
+			"properties": {
+				"height": {"$ref": "patterns.json#/$defs/dimension"},
+				"width": {"$ref": "patterns.json#/$defs/dimension"},
+				"diameter": {"$ref": "patterns.json#/$defs/dimension"}
+			},
+			"minProperties": 1,
+			"additionalProperties": false
+		},
+
+
+		"patternData": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"alias": {"$ref": "util.json#/$defs/alias"},
+				"source": {"$ref": "util.json#/$defs/source"},
+				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "util.json#/$defs/referenceSources"},
+				"page": {"$ref": "util.json#/$defs/page"},
+
+				"$$ifBrew": {
+					"fluff": {
+						"$ref": "util.json#/$defs/fluffObject"
+					},
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvice": {"$ref": "entry.json"}
+				},
+
+				"instructions": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"yarn": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"hook": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"notions": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+
+				"gauge": {
+					"$ref": "entry.json"
+				},
+
+				"stitches": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"abbreviations": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"notes": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"finishing": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"size": {
+					"anyOf": [
+						{
+							"$ref": "patterns.json#/$defs/component"
+						},
+						{
+							"type": "array",
+							"items": {
+								"$ref": "patterns.json#/$defs/component"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						}
+					]
+				},
+				"sizeNote": {
+					"type": "string"
+				},
+
+				"type": {
+					"type": "string",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
+						"value": [
+							"Amigurumi",
+							"Wearable",
+							"Household Item"
+						]
+					}
+				},
+				"level": {
+					"type": "string",
+					"description": "- B: Beginner \n- I: Intermediate\n- A: Advanced",
+					"enum": [
+						"B",
+						"I",
+						"A"
+					]
+				},
+				"designer": {
+					"type": "string",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
+						"value": [
+							"Alysia Sly",
+							"Sharon Posey",
+							"Lydia Viatoris"
+						]
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+
+		"pattern": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/patternData"
+						},
+						{
+							"required": ["name", "source", "instructions", "yarn", "hook"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/patternData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
+		}
+	},
+
+	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
+		"pattern": {
+			"type": "array",
+			"uniqueItems": true,
+			"minItems": 1,
+			"items": {
+				"$ref": "#/$defs/pattern"
+			}
+		}
+	},
+
+	"required": ["pattern"],
+
+	"additionalProperties": false
+}
