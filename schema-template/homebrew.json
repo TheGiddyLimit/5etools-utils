@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.12.0",
+	"version": "1.13.0",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -676,6 +676,12 @@
 		},
 		"foundryOptionalfeature": {
 			"$ref": "foundry-optionalfeatures.json#/properties/optionalfeature"
+		},
+		"pattern": {
+			"$ref": "patterns.json#/properties/pattern"
+		},
+		"patternFluff": {
+			"$ref": "fluff-patterns.json#/properties/patternFluff"
 		},
 		"psionic": {
 			"$ref": "psionics.json#/properties/psionic"
