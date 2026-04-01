@@ -32,6 +32,71 @@
 			"additionalProperties": false
 		},
 
+		"hook": {
+			"type": "object",
+			"properties": {
+				"entry": {
+					"$ref": "entry.json"
+				},
+				"metric": {
+					"type": "number",
+					"minimum": 2,
+					"maximum": 19,
+					"multipleOf": 0.25
+				},
+				"US":{
+					"type": "string",
+					"enum": [
+						"B-1",
+						"C-2",
+						"D",
+						"D-3",
+						"E-4",
+						"F-5",
+						"G-6",
+						"G",
+						"7",
+						"H-8",
+						"I",
+						"I-9",
+						"J",
+						"J-10",
+						"K-10½",
+						"M-13",
+						"N-15",
+						"P-16",
+						"Q",
+						"S"
+					]
+				},
+				"UK-Canada":{
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 14
+				},
+				"JP":{
+					"type": "string",
+					"enum": [
+						"2/0",
+						"3/0",
+						"4/0",
+						"5/0",
+						"6/0",
+						"7/0",
+						"7.5/0",
+						"8/0",
+						"9/0",
+						"10/0"
+					]
+				}
+			},
+			"required": [
+				"entry",
+				"metric"
+			],
+			"additionalProperties": false
+		},
+
 
 		"patternData": {
 			"type": "object",
@@ -63,11 +128,13 @@
 						"$ref": "entry.json"
 					}
 				},
-				"hook": {
+				"hooks": {
 					"type": "array",
 					"items": {
-						"$ref": "entry.json"
-					}
+						"$ref": "patterns.json#/$defs/hook"
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 
 				"notions": {
@@ -79,7 +146,10 @@
 
 
 				"gauge": {
-					"$ref": "entry.json"
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
 				},
 
 				"stitches": {
@@ -163,6 +233,32 @@
 							"Lydia Viatoris"
 						]
 					}
+				},
+				"seeAlsoCreature": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"creature\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"gelatinous cube|mm\".",
+						"markdownDescription": "UIDs of &quot;creature&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;gelatinous cube|mm&quot;."
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"seeAlsoItem": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"item\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"quiver of ehlonna|dmg\".",
+						"markdownDescription": "UIDs of &quot;item&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;quiver of ehlonna|dmg&quot;."
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
 				}
 			},
 			"additionalProperties": false
@@ -177,7 +273,7 @@
 							"$ref": "#/$defs/patternData"
 						},
 						{
-							"required": ["name", "source", "instructions", "yarn", "hook"]
+							"required": ["name", "source", "instructions", "yarn", "hooks"]
 						}
 					]
 				},
