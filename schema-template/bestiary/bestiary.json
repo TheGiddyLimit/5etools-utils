@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.61",
+	"version": "1.21.62",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1105,6 +1105,7 @@
 							"Damage Absorption",
 							"Death Burst",
 							"Devil's Sight",
+							"Ethereal Sight",
 							"False Appearance",
 							"Fey Ancestry",
 							"Flyby",
