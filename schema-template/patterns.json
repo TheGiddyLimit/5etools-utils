@@ -1,0 +1,299 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "patterns.json",
+	"version": "1.0.0",
+	"type": "object",
+
+	"$defs": {
+		"dimension": {
+			"type": "object",
+			"properties": {
+				"mm": {
+					"type": "number",
+					"exclusiveMinimum": 0
+				},
+				"entry": {
+					"$ref": "entry.json"
+				}
+			},
+			"required": [
+				"mm"
+			]
+		},
+
+		"component": {
+			"type": "object",
+			"properties": {
+				"height": {"$ref": "patterns.json#/$defs/dimension"},
+				"width": {"$ref": "patterns.json#/$defs/dimension"},
+				"length": {"$ref": "patterns.json#/$defs/dimension"},
+				"diameter": {"$ref": "patterns.json#/$defs/dimension"}
+			},
+			"minProperties": 1,
+			"additionalProperties": false
+		},
+
+		"hook": {
+			"type": "object",
+			"properties": {
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					},
+					"minItems": 1
+				},
+				"metric": {
+					"type": "number",
+					"minimum": 2,
+					"maximum": 19,
+					"multipleOf": 0.25
+				},
+				"US":{
+					"type": "string",
+					"enum": [
+						"B-1",
+						"C-2",
+						"D",
+						"D-3",
+						"E-4",
+						"F-5",
+						"G-6",
+						"G",
+						"7",
+						"H-8",
+						"I",
+						"I-9",
+						"J",
+						"J-10",
+						"K-10½",
+						"M-13",
+						"N-15",
+						"P-16",
+						"Q",
+						"S"
+					]
+				}
+			},
+			"required": [
+				"entries",
+				"metric"
+			],
+			"additionalProperties": false
+		},
+
+
+		"patternData": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"alias": {"$ref": "util.json#/$defs/alias"},
+				"source": {"$ref": "util.json#/$defs/source"},
+				"otherSources": {"$ref": "util.json#/$defs/otherSources"},
+				"referenceSources": {"$ref": "util.json#/$defs/referenceSources"},
+				"page": {"$ref": "util.json#/$defs/page"},
+
+				"$$ifBrew": {
+					"fluff": {
+						"$ref": "util.json#/$defs/fluffObject"
+					},
+					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"},
+					"foundryAdvice": {"$ref": "entry.json"}
+				},
+
+				"instructions": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"yarn": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"hooks": {
+					"type": "array",
+					"items": {
+						"$ref": "patterns.json#/$defs/hook"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+
+				"notions": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+
+				"gauge": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"stitches": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"abbreviations": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"notes": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"finishing": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+
+				"size": {
+					"anyOf": [
+						{
+							"$ref": "patterns.json#/$defs/component"
+						},
+						{
+							"type": "object",
+							"patternProperties": {
+								"^[ -a-zA-Z0-9]+$": {
+									"$ref": "patterns.json#/$defs/component"
+								}
+							},
+							"minProperties": 1
+						}
+					]
+				},
+				"sizeNote": {
+					"type": "string"
+				},
+
+				"type": {
+					"type": "string",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
+						"value": [
+							"Amigurumi",
+							"Wearable",
+							"Household Item"
+						]
+					}
+				},
+				"level": {
+					"type": "string",
+					"description": "- B: Beginner \n- I: Intermediate\n- A: Advanced",
+					"enum": [
+						"B",
+						"I",
+						"A"
+					]
+				},
+				"designer": {
+					"type": "string",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
+						"value": [
+							"Alysia Sly",
+							"Lydia Viatoris",
+							"Rebecca Stone",
+							"Sharon Posey"
+						]
+					}
+				},
+				"seeAlsoCreature": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"creature\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"gelatinous cube|mm\".",
+						"markdownDescription": "UIDs of &quot;creature&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;gelatinous cube|mm&quot;."
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"seeAlsoItem": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"item\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"quiver of ehlonna|dmg\".",
+						"markdownDescription": "UIDs of &quot;item&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;quiver of ehlonna|dmg&quot;."
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+
+		"pattern": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/patternData"
+						},
+						{
+							"required": ["name", "source", "instructions", "yarn", "hooks"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/patternData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
+		}
+	},
+
+	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
+		"pattern": {
+			"type": "array",
+			"uniqueItems": true,
+			"minItems": 1,
+			"items": {
+				"$ref": "#/$defs/pattern"
+			}
+		}
+	},
+
+	"required": ["pattern"],
+
+	"additionalProperties": false
+}
