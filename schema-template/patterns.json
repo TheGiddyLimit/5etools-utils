@@ -26,6 +26,7 @@
 			"properties": {
 				"height": {"$ref": "patterns.json#/$defs/dimension"},
 				"width": {"$ref": "patterns.json#/$defs/dimension"},
+				"length": {"$ref": "patterns.json#/$defs/dimension"},
 				"diameter": {"$ref": "patterns.json#/$defs/dimension"}
 			},
 			"minProperties": 1,
@@ -35,8 +36,12 @@
 		"hook": {
 			"type": "object",
 			"properties": {
-				"entry": {
-					"$ref": "entry.json"
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					},
+					"minItems": 1
 				},
 				"metric": {
 					"type": "number",
@@ -68,30 +73,10 @@
 						"Q",
 						"S"
 					]
-				},
-				"UK-Canada":{
-					"type": "integer",
-					"minimum": 0,
-					"maximum": 14
-				},
-				"JP":{
-					"type": "string",
-					"enum": [
-						"2/0",
-						"3/0",
-						"4/0",
-						"5/0",
-						"6/0",
-						"7/0",
-						"7.5/0",
-						"8/0",
-						"9/0",
-						"10/0"
-					]
 				}
 			},
 			"required": [
-				"entry",
+				"entries",
 				"metric"
 			],
 			"additionalProperties": false
@@ -186,12 +171,13 @@
 							"$ref": "patterns.json#/$defs/component"
 						},
 						{
-							"type": "array",
-							"items": {
-								"$ref": "patterns.json#/$defs/component"
+							"type": "object",
+							"patternProperties": {
+								"^[ -a-zA-Z0-9]+$": {
+									"$ref": "patterns.json#/$defs/component"
+								}
 							},
-							"minItems": 1,
-							"uniqueItems": true
+							"minProperties": 1
 						}
 					]
 				},
@@ -229,8 +215,9 @@
 						"key_brew": "examples",
 						"value": [
 							"Alysia Sly",
-							"Sharon Posey",
-							"Lydia Viatoris"
+							"Lydia Viatoris",
+							"Rebecca Stone",
+							"Sharon Posey"
 						]
 					}
 				},
