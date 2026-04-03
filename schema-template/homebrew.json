@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.13.0",
+	"version": "1.14.0",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -784,7 +784,12 @@
 		}
 	},
 	"additionalProperties": false,
-	"required": [
-		"_meta"
-	]
+	"$$if": {
+		"modes": ["ua", "brew"],
+		"value": {
+			"required": [
+				"_meta"
+			]
+		}
+	}
 }
