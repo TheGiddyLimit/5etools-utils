@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.18.0",
+	"version": "1.18.1",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2042,7 +2042,28 @@
 					"featCategory": {
 						"type": "array",
 						"items": {
-							"$ref": "#/$defs/dataFeatCategory"
+							"oneOf": [
+								{
+									"$ref": "#/$defs/dataFeatCategory"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"category": {
+											"$ref": "#/$defs/dataFeatCategory"
+										},
+										"count": {
+											"type": "integer",
+											"minimum": 2
+										}
+									},
+									"required": [
+										"category",
+										"count"
+									],
+									"additionalProperties": false
+								}
+							]
 						},
 						"uniqueItems": true,
 						"minItems": 1
