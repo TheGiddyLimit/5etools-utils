@@ -1479,7 +1479,20 @@
 					"featCategory": {
 						"type": "array",
 						"items": {
-							"$ref": "#/$defs/dataFeatCategory"
+							"oneOf": [
+								{
+									"$ref": "#/$defs/dataFeatCategory"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"category": {"$ref": "#/$defs/dataFeatCategory"},
+										"count": {"type": "integer", "minimum": 2}
+									},
+									"required": ["category", "count"],
+									"additionalProperties": false
+								}
+							]
 						},
 						"uniqueItems": true,
 						"minItems": 1

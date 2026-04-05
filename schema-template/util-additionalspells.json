@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-additionalspells.json",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"title": "Util: Additional Spells",
 
 	"$defs": {
@@ -116,7 +116,9 @@
 				"con": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
 				"int": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
 				"wis": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
-				"cha": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"}
+				"cha": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
+
+				"mod": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"}
 			},
 			"additionalProperties": false
 		},
