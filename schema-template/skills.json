@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "skills.json",
-	"version": "1.0.6",
+	"version": "1.1.0",
 	"type": "object",
 	"$defs": {
-		"skill": {
+		"skillData": {
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
@@ -25,16 +25,39 @@
 					}
 				}
 			},
-			"required": [
-				"name",
-				"source",
-				"entries"
-			],
 			"additionalProperties": false
+		},
+
+		"skill": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/skillData"
+						},
+						{
+							"required": ["name", "source", "entries"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/skillData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 
 	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
 		"skill": {
 			"type": "array",
 			"minItems": 1,
@@ -44,10 +67,6 @@
 			}
 		}
 	},
-
-	"required": [
-		"skill"
-	],
-
+	"required": ["skill"],
 	"additionalProperties": false
 }
