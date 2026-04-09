@@ -1,5 +1,5 @@
-import * as fs from "fs";
-import * as path from "path";
+import fs from "fs";
+import path from "path";
 import {listJsonFiles, readJsonSync} from "../lib/UtilFs.js";
 import MiscUtil from "../lib/UtilMisc.js";
 import {escapeQuotes} from "../lib/UtilString.js";
@@ -188,14 +188,17 @@ class SchemaPreprocessor {
 	}
 
 	static _getDirectoryTranslation ({file}) {
-		return file.startsWith("../") ? "../" : null;
+		file = path.posix.normalize(file);
+
+		if (file.includes(path.posix.sep)) return `${file.split(path.posix.sep).slice(0, -1).join(path.posix.sep)}/`;
+		return null;
 	}
 
 	static _getResolvedRefJson ({root, toMerge, dirSource}) {
 		if (!toMerge.$ref) return toMerge;
 
 		const [file, defPath] = toMerge.$ref.split("#");
-		const pathParts = defPath.split("/").filter(Boolean);
+		const pathParts = defPath.split(path.posix.sep).filter(Boolean);
 
 		if (!file) {
 			const refData = MiscUtil.get(root, ...pathParts);
@@ -203,7 +206,7 @@ class SchemaPreprocessor {
 			return this._getResolvedRefJson({root, toMerge: MiscUtil.copyFast(refData), dirSource});
 		}
 
-		const externalSchema = readJsonSync(path.join(dirSource, file));
+		const externalSchema = readJsonSync(path.posix.join(dirSource, file));
 		const refData = MiscUtil.copyFast(MiscUtil.get(externalSchema, ...pathParts), {safe: true});
 
 		const directoryTranslation = this._getDirectoryTranslation({file});
@@ -234,7 +237,7 @@ class SchemaPreprocessor {
 			const [otherFile, otherPath] = obj.split("#");
 			if (otherFile) {
 				if (state.directoryTranslation && state.directoryTranslation !== this._getDirectoryTranslation({file: otherFile})) {
-					return [`${state.directoryTranslation}${otherFile}`, otherPath].filter(Boolean).join("#");
+					return [path.posix.normalize(`${state.directoryTranslation}${otherFile}`), otherPath].filter(Boolean).join("#");
 				}
 				return obj;
 			}
@@ -263,22 +266,22 @@ class SchemaCompiler {
 
 		filesTemplate
 			.forEach(filePath => {
-				filePath = path.normalize(filePath);
-				const filePathPartRelative = path.relative(DIR_IN, filePath);
+				filePath = path.posix.normalize(filePath);
+				const filePathPartRelative = path.posix.relative(DIR_IN, filePath);
 
 				for (const compileMode of Object.values(COMPILE_MODE)) {
 					for (const isFast of [false, true]) {
-						const dirOut = path.normalize(path.join("schema", `${compileMode}${isFast ? "-fast" : ""}`));
+						const dirOut = path.posix.normalize(path.join("schema", `${compileMode}${isFast ? "-fast" : ""}`));
 
-						const filePathOut = path.join(dirOut, filePathPartRelative);
-						const dirPathOut = path.dirname(filePathOut);
+						const filePathOut = path.posix.join(dirOut, filePathPartRelative);
+						const dirPathOut = path.posix.dirname(filePathOut);
 						fs.mkdirSync(dirPathOut, {recursive: true});
 
 						const compiled = SchemaPreprocessor.preprocess({
 							schema: readJsonSync(filePath),
 							compileMode,
 							isFast,
-							dirSource: path.dirname(filePath),
+							dirSource: path.posix.dirname(filePath),
 						});
 						fs.writeFileSync(filePathOut, JSON.stringify(compiled, null, "\t"), "utf-8");
 					}

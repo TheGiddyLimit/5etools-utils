@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.0.11",
+	"version": "1.1.0",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -693,6 +693,148 @@
 					"const": true
 				}
 			}
+		},
+
+		"copyableProps": {
+			"type":"string",
+			"description": "This is the list of props for which there is a `_copy` implementation. `_copy` may not be declared for props other than these.",
+			"enum": [
+				"monster",
+				"monsterFluff",
+				"legendaryGroup",
+				"class",
+				"classFluff",
+				"subclass",
+				"subclassFluff",
+				"classFeature",
+				"subclassFeature",
+				"spell",
+				"spellFluff",
+				"action",
+				"item",
+				"itemGroup",
+				"baseitem",
+				"itemProperty",
+				"itemType",
+				"itemMastery",
+				"magicvariant",
+				"itemFluff",
+				"background",
+				"backgroundFluff",
+				"charoption",
+				"charoptionFluff",
+				"condition",
+				"conditionFluff",
+				"disease",
+				"diseaseFluff",
+				"status",
+				"statusFluff",
+				"cult",
+				"boon",
+				"deity",
+				"feat",
+				"featFluff",
+				"language",
+				"languageFluff",
+				"object",
+				"objectFluff",
+				"optionalfeature",
+				"optionalfeatureFluff",
+				"psionic",
+				"race",
+				"subrace",
+				"raceFluff",
+				"reward",
+				"recipe",
+				"recipeFluff",
+				"rewardFluff",
+				"table",
+				"trap",
+				"trapFluff",
+				"hazard",
+				"hazardFluff",
+				"variantrule",
+				"vehicle",
+				"vehicleUpgrade",
+				"vehicleFluff",
+				"skill",
+				"sense",
+				"deck",
+				"card",
+				"facility",
+				"facilityFluff",
+				"encounterShape"
+			]
+		},
+
+		"_non-copyableProps": {
+			"type":"string",
+			"description": "This is the list of props for which there is no `_copy` implementation. `includes` may be declared for these as well as for copyableProps.",
+			"enum": [
+				"adventure",
+				"adventureData",
+				"adventure",
+				"adventureData",
+				"foundryMonster",
+				"foundryMonsterAction",
+				"foundryMonsterBonus",
+				"foundryMonsterReaction",
+				"foundryMonsterTrait",
+				"foundryMonsterLegendary",
+				"foundryMonsterMythic",
+				"book",
+				"bookData",
+				"foundryClass",
+				"foundrySubclass",
+				"foundryClassFeature",
+				"foundrySubclassFeature",
+				"roll20Spell",
+				"foundrySpell",
+				"foundryAction",
+				"foundryItem",
+				"foundryMagicvariant",
+				"foundryBaseitem",
+				"itemEntry",
+				"itemTypeAdditionalEntries",
+				"linkedLootTables",
+				"foundryBackgroundFeature",
+				"encounter",
+				"foundryFeat",
+				"makebrewCreatureTrait",
+				"makebrewCreatureAction",
+				"reducedItemProperty",
+				"reducedItemType",
+				"monsterfeatures",
+				"name",
+				"foundryOptionalfeature",
+				"foundryPsionicDisciplineFocus",
+				"foundryPsionicDisciplineActive",
+				"foundryRace",
+				"foundryRaceFeature",
+				"raceFluffMeta",
+				"foundryReward",
+				"foundryVehicleUpgrade",
+				"spellList",
+				"citation"
+			]
+		},
+
+		"includesProps": {
+			"anyOf": [
+				{
+					"$ref": "#/$defs/copyableProps"
+				},
+				{
+					"$ref": "#/$defs/_non-copyableProps"
+				},
+				{
+					"type":"string",
+					"description": "\"Wildcard\" property, which will load all content from a given source. Where possible, narrower properties (those above) should be used instead.\n\n\"*\" is primarily intended for use when hosting locally, to allow for the creation a compact file containing only a `_meta` with an `includes.*` array of all homebrew sources to be loaded.",
+					"enum": [
+						"*"
+					]
+				}
+			]
 		}
 	}
 }

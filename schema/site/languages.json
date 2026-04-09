@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "languages.json",
-	"version": "1.1.18",
+	"version": "1.2.0",
 	"type": "object",
 	"$defs": {
-		"language": {
+		"languageData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -91,14 +91,205 @@
 					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
-			"required": [
-				"name",
-				"source"
-			],
 			"additionalProperties": false
+		},
+		"language": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"typicalSpeakers": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"origin": {
+							"type": "string"
+						},
+						"script": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"standard",
+								"rare",
+								"exotic",
+								"secret"
+							]
+						},
+						"additionalSources": {
+							"$ref": "util.json#/$defs/additionalSources"
+						},
+						"dialects": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"fonts": {
+							"description": "A list of direct URLs to font files.",
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"markdownDescription": "A list of direct URLs to font files."
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"typicalSpeakers": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"origin": {
+							"type": "string"
+						},
+						"script": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"standard",
+								"rare",
+								"exotic",
+								"secret"
+							]
+						},
+						"additionalSources": {
+							"$ref": "util.json#/$defs/additionalSources"
+						},
+						"dialects": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"fonts": {
+							"description": "A list of direct URLs to font files.",
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"markdownDescription": "A list of direct URLs to font files."
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		}
 	},
 	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
 		"language": {
 			"type": "array",
 			"uniqueItems": true,

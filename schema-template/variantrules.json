@@ -1,22 +1,12 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "variantrules.json",
-	"version": "1.1.15",
+	"version": "1.2.0",
 	"title": "RulesArray",
-
 	"type": "object",
-	"properties": {
-		"variantrule": {
-			"type": "array",
-			"minItems": 1,
-			"uniqueItems": true,
-			"items": {"$ref": "#/$defs/variantrule"}
-		}
-	},
-	"additionalProperties": false,
-	"required": ["variantrule"],
+
 	"$defs": {
-		"variantrule": {
+		"variantruleData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -68,12 +58,46 @@
 					"foundryAdvice": {"$ref": "entry.json"}
 				}
 			},
-			"required": [
-				"name",
-				"entries",
-				"source"
-			],
 			"additionalProperties": false
+		},
+
+		"variantrule": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/variantruleData"
+						},
+						{
+							"required": ["name", "source", "entries"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/variantruleData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
-	}
+	},
+
+	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
+		"variantrule": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {"$ref": "#/$defs/variantrule"}
+		}
+	},
+	"required": ["variantrule"],
+	"additionalProperties": false
 }

@@ -1,25 +1,11 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "variantrules.json",
-	"version": "1.1.15",
+	"version": "1.2.0",
 	"title": "RulesArray",
 	"type": "object",
-	"properties": {
-		"variantrule": {
-			"type": "array",
-			"minItems": 1,
-			"uniqueItems": true,
-			"items": {
-				"$ref": "#/$defs/variantrule"
-			}
-		}
-	},
-	"additionalProperties": false,
-	"required": [
-		"variantrule"
-	],
 	"$defs": {
-		"variantrule": {
+		"variantruleData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -80,12 +66,165 @@
 					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
-			"required": [
-				"name",
-				"entries",
-				"source"
-			],
 			"additionalProperties": false
+		},
+		"variantrule": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"ruleType": {
+							"description": "- C: Core\n- O: Optional\n- P: Prerelease\n- V: Variant\n- VO: Variant Optional\n- VV: Variant Variant",
+							"type": "string",
+							"enum": [
+								"C",
+								"O",
+								"V",
+								"VO",
+								"VV"
+							],
+							"markdownDescription": "- C: Core\n- O: Optional\n- P: Prerelease\n- V: Variant\n- VO: Variant Optional\n- VV: Variant Variant"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"additionalSources": {
+							"$ref": "util.json#/$defs/additionalSources"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"entries"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"ruleType": {
+							"description": "- C: Core\n- O: Optional\n- P: Prerelease\n- V: Variant\n- VO: Variant Optional\n- VV: Variant Variant",
+							"type": "string",
+							"enum": [
+								"C",
+								"O",
+								"V",
+								"VO",
+								"VV"
+							],
+							"markdownDescription": "- C: Core\n- O: Optional\n- P: Prerelease\n- V: Variant\n- VO: Variant Optional\n- VV: Variant Variant"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"additionalSources": {
+							"$ref": "util.json#/$defs/additionalSources"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		}
-	}
+	},
+	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
+		"variantrule": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/variantrule"
+			}
+		}
+	},
+	"required": [
+		"variantrule"
+	],
+	"additionalProperties": false
 }
