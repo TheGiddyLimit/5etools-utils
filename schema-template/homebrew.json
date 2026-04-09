@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.12.0",
+	"version": "1.13.0",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -263,6 +263,9 @@
 							"minItems": 1,
 							"uniqueItems": true
 						}
+					},
+					"propertyNames": {
+						"$ref": "util-copy.json#/$defs/copyableProps"
 					}
 				},
 				"includes": {
@@ -277,13 +280,16 @@
 							"minItems": 1,
 							"uniqueItems": true
 						}
+					},
+					"propertyNames": {
+						"$ref": "util-copy.json#/$defs/includesProps"
 					}
 				},
 				"internalCopies": {
 					"description": "An array of keys that are copied from within the current document. e.g. \"item\", \"monsterFluff\", \"background\" etc.",
 					"type": "array",
 					"items": {
-						"type": "string"
+						"$ref": "util-copy.json#/$defs/copyableProps"
 					},
 					"minItems": 1,
 					"uniqueItems": true

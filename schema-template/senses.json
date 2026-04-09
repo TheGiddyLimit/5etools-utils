@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "senses.json",
-	"version": "1.0.5",
+	"version": "1.1.0",
 	"type": "object",
 	"$defs": {
-		"sense": {
+		"senseData": {
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
@@ -24,16 +24,39 @@
 					}
 				}
 			},
-			"required": [
-				"name",
-				"source",
-				"entries"
-			],
 			"additionalProperties": false
+		},
+
+		"sense": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/senseData"
+						},
+						{
+							"required": ["name", "source", "entries"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/senseData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 
 	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
 		"sense": {
 			"type": "array",
 			"minItems": 1,
@@ -43,10 +66,6 @@
 			}
 		}
 	},
-
-	"required": [
-		"sense"
-	],
-
+	"required": ["sense"],
 	"additionalProperties": false
 }

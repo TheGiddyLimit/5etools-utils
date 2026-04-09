@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "encounterbuilder.json",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"type": "object",
 
 	"$defs": {
@@ -103,7 +103,7 @@
 			"additionalProperties": false
 		},
 
-		"encounterShape": {
+		"encounterShapeData": {
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
@@ -121,12 +121,38 @@
 				}
 			},
 			"additionalProperties": false
+		},
+
+		"encounterShape": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/encounterShapeData"
+						},
+						{
+							"required": ["name", "source", "shapeTemplate"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/encounterShapeData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 
 	"properties": {
 		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
-
 		"encounterShape": {
 			"type": "array",
 			"items": {"$ref": "#/$defs/encounterShape"},
@@ -134,10 +160,6 @@
 			"uniqueItems": true
 		}
 	},
-
-	"required": [
-		"encounterShape"
-	],
-
+	"required": ["encounterShape"],
 	"additionalProperties": false
 }

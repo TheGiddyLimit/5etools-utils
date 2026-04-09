@@ -1,11 +1,11 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "objects.json",
-	"version": "1.3.13",
+	"version": "1.4.0",
 	"type": "object",
 
 	"$defs": {
-		"object": {
+		"objectData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -147,19 +147,39 @@
 					}
 				}
 			},
-			"additionalProperties": false,
-			"required": [
-				"name",
-				"source",
-				"size",
-				"objectType",
-				"hp"
-			]
+			"additionalProperties": false
+		},
 
+		"object": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/objectData"
+						},
+						{
+							"required": ["name", "source", "size", "objectType", "hp"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/objectData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 
 	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
 		"object": {
 			"type": "array",
 			"uniqueItems": true,
@@ -169,5 +189,6 @@
 			}
 		}
 	},
+	"required": ["object"],
 	"additionalProperties": false
 }

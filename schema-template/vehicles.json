@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.8.2",
+	"version": "1.9.0",
 	"type": "object",
 
 	"$defs": {
@@ -125,7 +125,7 @@
 			]
 		},
 
-		"vehicleUpgrade": {
+		"vehicleUpgradeData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -159,16 +159,37 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
-			"required": [
-				"name",
-				"entries",
-				"source",
-				"upgradeType"
-			],
 			"additionalProperties": false
 		},
 
-		"vehicleShip": {
+		"vehicleUpgrade": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleUpgradeData"
+						},
+						{
+							"required": ["name", "source", "entries", "upgradeType"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleUpgradeData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
+		},
+
+		"vehicleShipData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -493,11 +514,37 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
-			"required": ["name", "source"],
 			"additionalProperties": false
 		},
 
-		"vehicleSpelljammer": {
+		"vehicleShip": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleShipData"
+						},
+						{
+							"required": ["name", "source"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleShipData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
+		},
+
+		"vehicleSpelljammerData": {
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
@@ -563,11 +610,37 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
-			"required": ["name", "source"],
 			"additionalProperties": false
 		},
 
-		"vehicleElementalAirship": {
+		"vehicleSpelljammer": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleSpelljammerData"
+						},
+						{
+							"required": ["name", "source"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleSpelljammerData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
+		},
+
+		"vehicleElementalAirshipData": {
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
@@ -636,11 +709,37 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
-			"required": ["name", "source"],
 			"additionalProperties": false
 		},
 
-		"vehicleInfernalWarMachine": {
+		"vehicleElementalAirship": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleElementalAirshipData"
+						},
+						{
+							"required": ["name", "source"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleElementalAirshipData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
+		},
+
+		"vehicleInfernalWarMachineData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -810,28 +909,149 @@
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
-			"required": ["name", "source"],
 			"additionalProperties": false
 		},
 
-		"vehicleCreature": {
+		"vehicleInfernalWarMachine": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleInfernalWarMachineData"
+						},
+						{
+							"required": ["name", "source"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleInfernalWarMachineData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
+		},
+
+		"vehicleCreatureData": {
 			"type": "object",
-			"properties": {
-				"vehicleType": {"const": "CREATURE"},
-				"terrain": {"$ref": "#/$defs/vehicleTerrain"}
-			}
+			"$$merge": [
+				{
+					"$ref": "bestiary/bestiary.json#/$defs/creatureData"
+				},
+				{
+					"properties": {
+						"vehicleType": {"const": "CREATURE"},
+						"terrain": {"$ref": "#/$defs/vehicleTerrain"}
+					}
+				}
+			]
+		},
+
+		"vehicleCreature": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleCreatureData"
+						},
+						{
+							"required": [
+								"name",
+								"source",
+								"size",
+								"type",
+
+								"vehicleType",
+								"terrain"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleCreatureData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
+		},
+
+		"vehicleObjectData": {
+			"type": "object",
+			"$$merge": [
+				{
+					"$ref": "objects.json#/$defs/objectData"
+				},
+				{
+					"properties": {
+						"capCrew": {"type": "integer"},
+						"capPassenger": {"type": "integer"},
+						"capCargo": {
+							"type": ["number", "string"]
+						},
+						"dimensions": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"vehicleType": {"const": "OBJECT"},
+						"terrain": {"$ref": "#/$defs/vehicleTerrain"}
+					}
+				}
+			]
 		},
 
 		"vehicleObject": {
-			"type": "object",
-			"properties": {
-				"vehicleType": {"const": "OBJECT"},
-				"terrain": {"$ref": "#/$defs/vehicleTerrain"}
-			}
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleObjectData"
+						},
+						{
+							"required": [
+								"name",
+								"source",
+								"size",
+
+								"vehicleType",
+								"terrain"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/vehicleObjectData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 
 	"properties": {
+		"_meta": {"$ref": "util.json#/$defs/metaBlock"},
 		"vehicle": {
 			"type": "array",
 			"minItems": 1,
@@ -849,5 +1069,6 @@
 			}
 		}
 	},
+	"required": ["vehicle", "vehicleUpgrade"],
 	"additionalProperties": false
 }

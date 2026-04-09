@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "tables.json",
-	"version": "1.1.13",
+	"version": "1.2.0",
 	"type": "object",
 	"$defs": {
 		"tableData": {
@@ -21,15 +21,9 @@
 						"data": {
 							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
 							"type": "object"
-						}
-					}
-				},
-				{"$ref" : "entry.json#/$defs/entryTableBase"},
-				{
-					"properties": {
+						},
 						"type": {
 							"type": "string",
-							"default": "table",
 							"enum": [
 								"table",
 								"tableGroup"
@@ -78,46 +72,69 @@
 									"prop",
 									"uid"
 								]
-							}
+							},
+							"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
 						}
-					},
-					"if": {
-						"properties": {
-							"type":{
-								"const": "tableGroup"
-							}
-						},
-						"required": [
-							"type"
-						]
-					},
-					"then": {
-						"required": [
-							"name",
-							"source",
-							"tables"
-						]
-					},
-					"else": {
-						"required": [
-							"name",
-							"source",
-							"rows"
-						]
-					}
-				}
-			],
-			"properties": {
-				"tables": {
-					"type": "array",
-					"items": {
-						"$ref": "#/$defs/tableData"
 					}
 				},
-				"$$ifBrew": {
-					"foundryImg": {"$ref": "util-foundry.json#/$defs/foundryImg"}
+				{
+					"$ref" : "entry.json#/$defs/entryTableBase"
 				}
-			}
+			]
+		},
+
+		"table": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/tableData"
+						},
+						{
+							"properties": {
+								"type": {
+									"const": "table"
+								}
+							},
+							"required": ["name", "source", "rows"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/tableData"
+						},
+						{
+							"properties": {
+								"type": {
+									"const": "tableGroup"
+								},
+								"tables": {
+									"type": "array",
+									"items": {
+										"$ref": "#/$defs/tableData"
+									}
+								}
+							},
+							"required": ["name", "source", "tables"]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/tableData"
+						},
+						{
+							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 
@@ -127,7 +144,7 @@
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {
-				"$ref": "#/$defs/tableData"
+				"$ref": "#/$defs/table"
 			}
 		},
 		"_meta": {
