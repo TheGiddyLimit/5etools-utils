@@ -829,9 +829,9 @@
 				},
 				{
 					"type":"string",
-					"$comment": "`_meta` is included as it is used by local-hosters to create a very compact file containing only a `_meta` with an includes._meta array of all the homebrew sources they want to load.",
+					"description": "\"Wildcard\" property, which will load all content from a given source. Where possible, narrower properties (those above) should be used instead.\n\n\"*\" is primarily intended for use when hosting locally, to allow for the creation a compact file containing only a `_meta` with an `includes.*` array of all homebrew sources to be loaded.",
 					"enum": [
-						"_meta"
+						"*"
 					]
 				}
 			]

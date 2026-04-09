@@ -1784,6 +1784,7 @@
 
 		"creatureType": {
 			"type": "string",
+			"$comment": "\"vehicle\" added via _Explorer's Guide to Wildemount_, p325",
 			"$$switch_key": {
 				"key_site": "enum",
 				"key_ua": "examples",
