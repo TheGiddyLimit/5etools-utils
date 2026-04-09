@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.1.0",
+	"version": "1.1.1",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -763,7 +763,9 @@
 				"card",
 				"facility",
 				"facilityFluff",
-				"encounterShape"
+				"encounterShape",
+				"pattern",
+				"patternFluff"
 			]
 		},
 
