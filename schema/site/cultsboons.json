@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "cultsboons.json",
-	"version": "1.2.3",
+	"version": "1.3.0",
 	"type": "object",
 	"$defs": {
-		"cult": {
+		"cultData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -80,14 +80,180 @@
 					}
 				}
 			},
-			"required": [
-				"name",
-				"source",
-				"entries"
-			],
 			"additionalProperties": false
 		},
-		"boon": {
+		"cult": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"Demonic",
+								"Diabolical",
+								"Elder Evil",
+								"Elemental"
+							]
+						},
+						"goal": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"cultists": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"signatureSpells": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"entries"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"Demonic",
+								"Diabolical",
+								"Elder Evil",
+								"Elemental"
+							]
+						},
+						"goal": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"cultists": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"signatureSpells": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
+		},
+		"boonData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -146,16 +312,151 @@
 					}
 				}
 			},
-			"required": [
-				"name",
-				"source",
-				"type",
-				"entries"
-			],
 			"additionalProperties": false
+		},
+		"boon": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"Demonic"
+							]
+						},
+						"ability": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"$ref": "entry.json"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"signatureSpells": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"$ref": "entry.json"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"entries": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"$ref": "entry.json"
+							}
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"type",
+						"entries"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"Demonic"
+							]
+						},
+						"ability": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"$ref": "entry.json"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"signatureSpells": {
+							"type": "object",
+							"properties": {
+								"entry": {
+									"$ref": "entry.json"
+								}
+							},
+							"required": [
+								"entry"
+							],
+							"additionalProperties": false
+						},
+						"entries": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		}
 	},
 	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
 		"cult": {
 			"type": "array",
 			"minItems": 1,

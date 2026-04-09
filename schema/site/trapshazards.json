@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "trapshazards.json",
-	"version": "1.4.9",
+	"version": "1.5.0",
 	"type": "object",
 	"$defs": {
 		"_trapHazardTier": {
@@ -78,11 +78,201 @@
 			},
 			"minItems": 1
 		},
+		"trapDataDMG": {
+			"description": "Older format, used in DMG.\n\nExtended to support XDMG.",
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"trapHazType": {
+					"type": "string",
+					"description": "- HAUNT: Haunted Trap\n- MAG: Magical Trap\n- MECH: Mechanical Trap\n- TRP: Trap",
+					"enum": [
+						"MECH",
+						"MAG",
+						"TRP",
+						"HAUNT"
+					],
+					"markdownDescription": "- HAUNT: Haunted Trap\n- MAG: Magical Trap\n- MECH: Mechanical Trap\n- TRP: Trap"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"trigger": {
+					"$ref": "#/$defs/_trapTrigger"
+				},
+				"duration": {
+					"$ref": "util-time.json#/$defs/durationEffect"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"rating": {
+					"$ref": "#/$defs/_trapHazardRating"
+				},
+				"hauntBonus": {
+					"type": "string"
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				}
+			},
+			"additionalProperties": false,
+			"markdownDescription": "Older format, used in DMG.\n\nExtended to support XDMG."
+		},
+		"trapDataXGE": {
+			"description": "XGE \"Traps Revisited\" Simple/Complex traps",
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"trapHazType": {
+					"type": "string",
+					"enum": [
+						"SMPL",
+						"CMPX"
+					]
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"rating": {
+					"$ref": "#/$defs/_trapHazardRating"
+				},
+				"trigger": {
+					"$ref": "#/$defs/_trapTrigger"
+				},
+				"initiative": {
+					"oneOf": [
+						{
+							"type": "integer",
+							"minimum": 1,
+							"maximum": 3
+						}
+					]
+				},
+				"initiativeNote": {
+					"$ref": "entry.json"
+				},
+				"effect": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"eActive": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"eDynamic": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"eConstant": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"countermeasures": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				}
+			},
+			"additionalProperties": false,
+			"markdownDescription": "XGE &quot;Traps Revisited&quot; Simple/Complex traps"
+		},
 		"trap": {
-			"oneOf": [
+			"anyOf": [
 				{
-					"description": "Older format, used in DMG.\n\nExtended to support XDMG.",
 					"type": "object",
+					"description": "Older format, used in DMG.\n\nExtended to support XDMG.",
 					"properties": {
 						"name": {
 							"type": "string"
@@ -157,17 +347,102 @@
 						}
 					},
 					"additionalProperties": false,
+					"markdownDescription": "Older format, used in DMG.\n\nExtended to support XDMG.",
 					"required": [
 						"name",
 						"trapHazType",
 						"source",
 						"entries"
-					],
-					"markdownDescription": "Older format, used in DMG.\n\nExtended to support XDMG."
+					]
 				},
 				{
-					"description": "XGE \"Traps Revisited\" Simple/Complex traps",
 					"type": "object",
+					"description": "Older format, used in DMG.\n\nExtended to support XDMG.",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"trapHazType": {
+							"type": "string",
+							"description": "- HAUNT: Haunted Trap\n- MAG: Magical Trap\n- MECH: Mechanical Trap\n- TRP: Trap",
+							"enum": [
+								"MECH",
+								"MAG",
+								"TRP",
+								"HAUNT"
+							],
+							"markdownDescription": "- HAUNT: Haunted Trap\n- MAG: Magical Trap\n- MECH: Mechanical Trap\n- TRP: Trap"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"trigger": {
+							"$ref": "#/$defs/_trapTrigger"
+						},
+						"duration": {
+							"$ref": "util-time.json#/$defs/durationEffect"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"rating": {
+							"$ref": "#/$defs/_trapHazardRating"
+						},
+						"hauntBonus": {
+							"type": "string"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"markdownDescription": "Older format, used in DMG.\n\nExtended to support XDMG.",
+					"required": [
+						"_copy"
+					]
+				},
+				{
+					"type": "object",
+					"description": "XGE \"Traps Revisited\" Simple/Complex traps",
 					"properties": {
 						"name": {
 							"type": "string"
@@ -274,6 +549,7 @@
 						}
 					},
 					"additionalProperties": false,
+					"markdownDescription": "XGE &quot;Traps Revisited&quot; Simple/Complex traps",
 					"required": [
 						"name",
 						"trapHazType",
@@ -281,12 +557,128 @@
 						"entries",
 						"trigger",
 						"countermeasures"
-					],
-					"markdownDescription": "XGE &quot;Traps Revisited&quot; Simple/Complex traps"
+					]
+				},
+				{
+					"type": "object",
+					"description": "XGE \"Traps Revisited\" Simple/Complex traps",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"trapHazType": {
+							"type": "string",
+							"enum": [
+								"SMPL",
+								"CMPX"
+							]
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"rating": {
+							"$ref": "#/$defs/_trapHazardRating"
+						},
+						"trigger": {
+							"$ref": "#/$defs/_trapTrigger"
+						},
+						"initiative": {
+							"oneOf": [
+								{
+									"type": "integer",
+									"minimum": 1,
+									"maximum": 3
+								}
+							]
+						},
+						"initiativeNote": {
+							"$ref": "entry.json"
+						},
+						"effect": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"eActive": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"eDynamic": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"eConstant": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"countermeasures": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"markdownDescription": "XGE &quot;Traps Revisited&quot; Simple/Complex traps",
+					"required": [
+						"_copy"
+					]
 				}
 			]
 		},
-		"hazard": {
+		"hazardData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -350,15 +742,160 @@
 					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
-			"additionalProperties": false,
-			"required": [
-				"name",
-				"source",
-				"entries"
+			"additionalProperties": false
+		},
+		"hazard": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"trapHazType": {
+							"type": "string",
+							"description": "- ENV: Environmental Hazard\n- EST: Eldritch Storm\n- GEN: Generic\n- WTH: Weather\n- WLD: Wilderness Hazard",
+							"markdownDescription": "- ENV: Environmental Hazard\n- EST: Eldritch Storm\n- GEN: Generic\n- WTH: Weather\n- WLD: Wilderness Hazard",
+							"enum": [
+								"ENV",
+								"EST",
+								"GEN",
+								"WTH",
+								"WLD"
+							]
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"rating": {
+							"$ref": "#/$defs/_trapHazardRating"
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"entries"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"trapHazType": {
+							"type": "string",
+							"description": "- ENV: Environmental Hazard\n- EST: Eldritch Storm\n- GEN: Generic\n- WTH: Weather\n- WLD: Wilderness Hazard",
+							"markdownDescription": "- ENV: Environmental Hazard\n- EST: Eldritch Storm\n- GEN: Generic\n- WTH: Weather\n- WLD: Wilderness Hazard",
+							"enum": [
+								"ENV",
+								"EST",
+								"GEN",
+								"WTH",
+								"WLD"
+							]
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"rating": {
+							"$ref": "#/$defs/_trapHazardRating"
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
 			]
 		}
 	},
 	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
 		"trap": {
 			"type": "array",
 			"minItems": 1,
@@ -376,5 +913,9 @@
 			}
 		}
 	},
+	"required": [
+		"trap",
+		"hazard"
+	],
 	"additionalProperties": false
 }

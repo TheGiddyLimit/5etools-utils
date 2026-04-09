@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "charcreationoptions.json",
-	"version": "1.2.8",
+	"version": "1.3.0",
 	"title": "Character Creation Options",
 	"type": "object",
 	"$defs": {
@@ -18,7 +18,7 @@
 				"SG"
 			]
 		},
-		"charoption": {
+		"charoptionData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -71,16 +71,139 @@
 					"$ref": "util.json#/$defs/basicRules"
 				}
 			},
-			"required": [
-				"name",
-				"entries",
-				"source",
-				"optionType"
-			],
 			"additionalProperties": false
+		},
+		"charoption": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"optionType": {
+							"$comment": "Note that this field supports arbitrary strings for homebrew usage.",
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/optionType"
+							}
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"entries",
+						"optionType"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"optionType": {
+							"$comment": "Note that this field supports arbitrary strings for homebrew usage.",
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/optionType"
+							}
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		}
 	},
 	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
 		"charoption": {
 			"type": "array",
 			"minItems": 1,
@@ -90,5 +213,8 @@
 			}
 		}
 	},
+	"required": [
+		"charoption"
+	],
 	"additionalProperties": false
 }

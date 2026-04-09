@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.18.1",
+	"version": "1.18.2",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2333,6 +2333,7 @@
 		},
 		"creatureType": {
 			"type": "string",
+			"$comment": "\"vehicle\" added via _Explorer's Guide to Wildemount_, p325",
 			"enum": [
 				"aberration",
 				"beast",
@@ -2347,7 +2348,8 @@
 				"monstrosity",
 				"ooze",
 				"plant",
-				"undead"
+				"undead",
+				"vehicle"
 			]
 		},
 		"alignment": {

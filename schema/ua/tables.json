@@ -1,18 +1,12 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "tables.json",
-	"version": "1.1.13",
+	"version": "1.2.0",
 	"type": "object",
 	"$defs": {
 		"tableData": {
 			"type": "object",
 			"properties": {
-				"tables": {
-					"type": "array",
-					"items": {
-						"$ref": "#/$defs/tableData"
-					}
-				},
 				"name": {
 					"type": "string"
 				},
@@ -26,6 +20,60 @@
 					"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
 					"type": "object",
 					"markdownDescription": "A generic object for storing special data for external use-cases. Keys prefixed with &quot;rd-&quot; should be added as &quot;data-&quot; HTML attributes when rendering to HTML."
+				},
+				"type": {
+					"type": "string",
+					"enum": [
+						"table",
+						"tableGroup"
+					]
+				},
+				"legacy": {
+					"$ref": "util.json#/$defs/legacy"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
+				},
+				"chapter": {
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"ordinal": {
+							"type": "object",
+							"properties": {
+								"type": {
+									"type": "string",
+									"enum": [
+										"chapter",
+										"appendix",
+										"part",
+										"episode",
+										"level",
+										"section"
+									]
+								},
+								"identifier": {
+									"type": [
+										"integer",
+										"string"
+									]
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"type",
+								"identifier"
+							]
+						},
+						"index": {
+							"type": "integer"
+						}
+					}
 				},
 				"caption": {
 					"type": "string"
@@ -96,61 +144,6 @@
 					"items": {
 						"$ref": "entry.json"
 					}
-				},
-				"type": {
-					"type": "string",
-					"default": "table",
-					"enum": [
-						"table",
-						"tableGroup"
-					]
-				},
-				"legacy": {
-					"$ref": "util.json#/$defs/legacy"
-				},
-				"otherSources": {
-					"$ref": "util.json#/$defs/otherSources"
-				},
-				"referenceSources": {
-					"$ref": "util.json#/$defs/referenceSources"
-				},
-				"chapter": {
-					"type": "object",
-					"properties": {
-						"name": {
-							"type": "string"
-						},
-						"ordinal": {
-							"type": "object",
-							"properties": {
-								"type": {
-									"type": "string",
-									"enum": [
-										"chapter",
-										"appendix",
-										"part",
-										"episode",
-										"level",
-										"section"
-									]
-								},
-								"identifier": {
-									"type": [
-										"integer",
-										"string"
-									]
-								}
-							},
-							"additionalProperties": false,
-							"required": [
-								"type",
-								"identifier"
-							]
-						},
-						"index": {
-							"type": "integer"
-						}
-					}
 				}
 			},
 			"dependencies": {
@@ -169,31 +162,515 @@
 					}
 				}
 			},
-			"additionalProperties": false,
-			"if": {
-				"properties": {
-					"type": {
-						"const": "tableGroup"
-					}
+			"additionalProperties": false
+		},
+		"table": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
+							"type": "object",
+							"markdownDescription": "A generic object for storing special data for external use-cases. Keys prefixed with &quot;rd-&quot; should be added as &quot;data-&quot; HTML attributes when rendering to HTML."
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"table",
+								"tableGroup"
+							],
+							"const": "table"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"chapter": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"ordinal": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string",
+											"enum": [
+												"chapter",
+												"appendix",
+												"part",
+												"episode",
+												"level",
+												"section"
+											]
+										},
+										"identifier": {
+											"type": [
+												"integer",
+												"string"
+											]
+										}
+									},
+									"additionalProperties": false,
+									"required": [
+										"type",
+										"identifier"
+									]
+								},
+								"index": {
+									"type": "integer"
+								}
+							}
+						},
+						"caption": {
+							"type": "string"
+						},
+						"isStriped": {
+							"type": "boolean"
+						},
+						"isNameGenerator": {
+							"type": "boolean",
+							"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc.",
+							"markdownDescription": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
+						},
+						"style": {
+							"type": "string"
+						},
+						"colLabels": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json#/$defs/_entryTableColLabelItem"
+							}
+						},
+						"colLabelRows": {
+							"type": "array",
+							"items": {
+								"type": "array",
+								"items": {
+									"$ref": "entry.json#/$defs/_entryTableColLabelItem"
+								}
+							},
+							"minItems": 1
+						},
+						"colStyles": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"rowLabels": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"rowStyles": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"rows": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "array",
+										"items": {
+											"$ref": "entry.json"
+										}
+									},
+									{
+										"$ref": "entry.json#/$defs/entryTableRow"
+									}
+								]
+							}
+						},
+						"footnotes": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						}
+					},
+					"dependencies": {
+						"colLabels": {
+							"not": {
+								"required": [
+									"colLabelRows"
+								]
+							}
+						},
+						"colLabelRows": {
+							"not": {
+								"required": [
+									"colLabels"
+								]
+							}
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"rows"
+					]
 				},
-				"required": [
-					"type"
-				]
-			},
-			"then": {
-				"required": [
-					"name",
-					"source",
-					"tables"
-				]
-			},
-			"else": {
-				"required": [
-					"name",
-					"source",
-					"rows"
-				]
-			}
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
+							"type": "object",
+							"markdownDescription": "A generic object for storing special data for external use-cases. Keys prefixed with &quot;rd-&quot; should be added as &quot;data-&quot; HTML attributes when rendering to HTML."
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"table",
+								"tableGroup"
+							],
+							"const": "tableGroup"
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"chapter": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"ordinal": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string",
+											"enum": [
+												"chapter",
+												"appendix",
+												"part",
+												"episode",
+												"level",
+												"section"
+											]
+										},
+										"identifier": {
+											"type": [
+												"integer",
+												"string"
+											]
+										}
+									},
+									"additionalProperties": false,
+									"required": [
+										"type",
+										"identifier"
+									]
+								},
+								"index": {
+									"type": "integer"
+								}
+							}
+						},
+						"caption": {
+							"type": "string"
+						},
+						"isStriped": {
+							"type": "boolean"
+						},
+						"isNameGenerator": {
+							"type": "boolean",
+							"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc.",
+							"markdownDescription": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
+						},
+						"style": {
+							"type": "string"
+						},
+						"colLabels": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json#/$defs/_entryTableColLabelItem"
+							}
+						},
+						"colLabelRows": {
+							"type": "array",
+							"items": {
+								"type": "array",
+								"items": {
+									"$ref": "entry.json#/$defs/_entryTableColLabelItem"
+								}
+							},
+							"minItems": 1
+						},
+						"colStyles": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"rowLabels": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"rowStyles": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"rows": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "array",
+										"items": {
+											"$ref": "entry.json"
+										}
+									},
+									{
+										"$ref": "entry.json#/$defs/entryTableRow"
+									}
+								]
+							}
+						},
+						"footnotes": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"tables": {
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/tableData"
+							}
+						}
+					},
+					"dependencies": {
+						"colLabels": {
+							"not": {
+								"required": [
+									"colLabelRows"
+								]
+							}
+						},
+						"colLabelRows": {
+							"not": {
+								"required": [
+									"colLabels"
+								]
+							}
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"tables"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"description": "A generic object for storing special data for external use-cases. Keys prefixed with \"rd-\" should be added as \"data-\" HTML attributes when rendering to HTML.",
+							"type": "object",
+							"markdownDescription": "A generic object for storing special data for external use-cases. Keys prefixed with &quot;rd-&quot; should be added as &quot;data-&quot; HTML attributes when rendering to HTML."
+						},
+						"type": {
+							"type": "string",
+							"enum": [
+								"table",
+								"tableGroup"
+							]
+						},
+						"legacy": {
+							"$ref": "util.json#/$defs/legacy"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"chapter": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"ordinal": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string",
+											"enum": [
+												"chapter",
+												"appendix",
+												"part",
+												"episode",
+												"level",
+												"section"
+											]
+										},
+										"identifier": {
+											"type": [
+												"integer",
+												"string"
+											]
+										}
+									},
+									"additionalProperties": false,
+									"required": [
+										"type",
+										"identifier"
+									]
+								},
+								"index": {
+									"type": "integer"
+								}
+							}
+						},
+						"caption": {
+							"type": "string"
+						},
+						"isStriped": {
+							"type": "boolean"
+						},
+						"isNameGenerator": {
+							"type": "boolean",
+							"description": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc.",
+							"markdownDescription": "Uses the result rolled to construct a name from multiple columns, such as Prefix, Given, Family, Suffix names etc."
+						},
+						"style": {
+							"type": "string"
+						},
+						"colLabels": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json#/$defs/_entryTableColLabelItem"
+							}
+						},
+						"colLabelRows": {
+							"type": "array",
+							"items": {
+								"type": "array",
+								"items": {
+									"$ref": "entry.json#/$defs/_entryTableColLabelItem"
+								}
+							},
+							"minItems": 1
+						},
+						"colStyles": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"rowLabels": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"rowStyles": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"rows": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "array",
+										"items": {
+											"$ref": "entry.json"
+										}
+									},
+									{
+										"$ref": "entry.json#/$defs/entryTableRow"
+									}
+								]
+							}
+						},
+						"footnotes": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"dependencies": {
+						"colLabels": {
+							"not": {
+								"required": [
+									"colLabelRows"
+								]
+							}
+						},
+						"colLabelRows": {
+							"not": {
+								"required": [
+									"colLabels"
+								]
+							}
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		}
 	},
 	"properties": {
@@ -202,7 +679,7 @@
 			"minItems": 1,
 			"uniqueItems": true,
 			"items": {
-				"$ref": "#/$defs/tableData"
+				"$ref": "#/$defs/table"
 			}
 		},
 		"_meta": {

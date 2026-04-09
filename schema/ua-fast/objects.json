@@ -1,10 +1,10 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "objects.json",
-	"version": "1.3.13",
+	"version": "1.4.0",
 	"type": "object",
 	"$defs": {
-		"object": {
+		"objectData": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -173,17 +173,372 @@
 					"$ref": "util-foundry.json#/$defs/foundryTokenSubjectScale"
 				}
 			},
-			"additionalProperties": false,
-			"required": [
-				"name",
-				"source",
-				"size",
-				"objectType",
-				"hp"
+			"additionalProperties": false
+		},
+		"object": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"size": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/size"
+							},
+							"uniqueItems": true
+						},
+						"creatureType": {
+							"$ref": "util.json#/$defs/creatureType"
+						},
+						"objectType": {
+							"type": "string",
+							"description": "- G: Generic\n- SW: Siege Weapon\n- U: Unknown",
+							"enum": [
+								"GEN",
+								"SW",
+								"U"
+							],
+							"markdownDescription": "- G: Generic\n- SW: Siege Weapon\n- U: Unknown"
+						},
+						"str": {
+							"type": "integer"
+						},
+						"dex": {
+							"type": "integer"
+						},
+						"con": {
+							"type": "integer"
+						},
+						"int": {
+							"type": "integer"
+						},
+						"wis": {
+							"type": "integer"
+						},
+						"cha": {
+							"type": "integer"
+						},
+						"ac": {
+							"oneOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"special": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"special"
+									],
+									"additionalProperties": false
+								}
+							]
+						},
+						"hp": {
+							"oneOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"special": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"special"
+									],
+									"additionalProperties": false
+								}
+							]
+						},
+						"speed": {
+							"$ref": "util.json#/$defs/speed"
+						},
+						"senses": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"resist": {
+							"$ref": "util.json#/$defs/damageResistArray"
+						},
+						"conditionImmune": {
+							"$ref": "util.json#/$defs/conditionImmunityArray"
+						},
+						"immune": {
+							"$ref": "util.json#/$defs/damageImmunityArray"
+						},
+						"vulnerable": {
+							"$ref": "util.json#/$defs/damageVulnerabilityArray"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"actionEntries": {
+							"type": "array",
+							"description": "Actions available with the object, like firing a siege weapon. Uses the normal entries data.",
+							"items": {
+								"$ref": "entry.json"
+							},
+							"markdownDescription": "Actions available with the object, like firing a siege weapon. Uses the normal entries data."
+						},
+						"token": {
+							"$ref": "util-token.json#/$defs/token"
+						},
+						"tokenCredit": {
+							"type": "string"
+						},
+						"tokenCustom": {
+							"const": true
+						},
+						"foundryTokenScale": {
+							"$ref": "util-foundry.json#/$defs/foundryTokenScale"
+						},
+						"altArt": {
+							"$ref": "util-token.json#/$defs/altArt"
+						},
+						"isNpc": {
+							"type": "boolean"
+						},
+						"hasToken": {
+							"type": "boolean"
+						},
+						"hasFluff": {
+							"const": true
+						},
+						"hasFluffImages": {
+							"const": true
+						},
+						"tokenUrl": {
+							"$ref": "util-token.json#/$defs/tokenUrl"
+						},
+						"tokenHref": {
+							"$ref": "util-token.json#/$defs/tokenHref"
+						},
+						"tokenHref3d": {
+							"$ref": "util-token.json#/$defs/tokenHref"
+						},
+						"foundryTokenSubjectHref": {
+							"$ref": "util-token.json#/$defs/tokenHref"
+						},
+						"foundryTokenSubjectScale": {
+							"$ref": "util-foundry.json#/$defs/foundryTokenSubjectScale"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"size",
+						"objectType",
+						"hp"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"size": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/size"
+							},
+							"uniqueItems": true
+						},
+						"creatureType": {
+							"$ref": "util.json#/$defs/creatureType"
+						},
+						"objectType": {
+							"type": "string",
+							"description": "- G: Generic\n- SW: Siege Weapon\n- U: Unknown",
+							"enum": [
+								"GEN",
+								"SW",
+								"U"
+							],
+							"markdownDescription": "- G: Generic\n- SW: Siege Weapon\n- U: Unknown"
+						},
+						"str": {
+							"type": "integer"
+						},
+						"dex": {
+							"type": "integer"
+						},
+						"con": {
+							"type": "integer"
+						},
+						"int": {
+							"type": "integer"
+						},
+						"wis": {
+							"type": "integer"
+						},
+						"cha": {
+							"type": "integer"
+						},
+						"ac": {
+							"oneOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"special": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"special"
+									],
+									"additionalProperties": false
+								}
+							]
+						},
+						"hp": {
+							"oneOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"special": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"special"
+									],
+									"additionalProperties": false
+								}
+							]
+						},
+						"speed": {
+							"$ref": "util.json#/$defs/speed"
+						},
+						"senses": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"resist": {
+							"$ref": "util.json#/$defs/damageResistArray"
+						},
+						"conditionImmune": {
+							"$ref": "util.json#/$defs/conditionImmunityArray"
+						},
+						"immune": {
+							"$ref": "util.json#/$defs/damageImmunityArray"
+						},
+						"vulnerable": {
+							"$ref": "util.json#/$defs/damageVulnerabilityArray"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"actionEntries": {
+							"type": "array",
+							"description": "Actions available with the object, like firing a siege weapon. Uses the normal entries data.",
+							"items": {
+								"$ref": "entry.json"
+							},
+							"markdownDescription": "Actions available with the object, like firing a siege weapon. Uses the normal entries data."
+						},
+						"token": {
+							"$ref": "util-token.json#/$defs/token"
+						},
+						"tokenCredit": {
+							"type": "string"
+						},
+						"tokenCustom": {
+							"const": true
+						},
+						"foundryTokenScale": {
+							"$ref": "util-foundry.json#/$defs/foundryTokenScale"
+						},
+						"altArt": {
+							"$ref": "util-token.json#/$defs/altArt"
+						},
+						"isNpc": {
+							"type": "boolean"
+						},
+						"hasToken": {
+							"type": "boolean"
+						},
+						"hasFluff": {
+							"const": true
+						},
+						"hasFluffImages": {
+							"const": true
+						},
+						"tokenUrl": {
+							"$ref": "util-token.json#/$defs/tokenUrl"
+						},
+						"tokenHref": {
+							"$ref": "util-token.json#/$defs/tokenHref"
+						},
+						"tokenHref3d": {
+							"$ref": "util-token.json#/$defs/tokenHref"
+						},
+						"foundryTokenSubjectHref": {
+							"$ref": "util-token.json#/$defs/tokenHref"
+						},
+						"foundryTokenSubjectScale": {
+							"$ref": "util-foundry.json#/$defs/foundryTokenSubjectScale"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
 			]
 		}
 	},
 	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
 		"object": {
 			"type": "array",
 			"uniqueItems": true,
@@ -193,5 +548,8 @@
 			}
 		}
 	},
+	"required": [
+		"object"
+	],
 	"additionalProperties": false
 }

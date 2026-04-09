@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items-base.json",
-	"version": "1.6.18",
+	"version": "1.7.0",
 	"type": "object",
 	"$defs": {
 		"itemLookupBase": {
@@ -33,6 +33,149 @@
 				},
 				"basicRules2024": {
 					"$ref": "util.json#/$defs/basicRules"
+				}
+			},
+			"additionalProperties": false
+		},
+		"copyBlock_copy_itemLookup": {
+			"type": "object",
+			"properties": {
+				"_mod": {
+					"$ref": "util-copy.json#/$defs/_modObject"
+				},
+				"_templates": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"source": {
+								"$ref": "util.json#/$defs/source"
+							}
+						},
+						"required": [
+							"name",
+							"source"
+						],
+						"additionalProperties": false
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"_preserve": {
+					"type": "object",
+					"patternProperties": {
+						".*": {
+							"const": true
+						}
+					}
+				},
+				"abbreviation": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"abbreviation",
+				"source"
+			]
+		},
+		"copyBlockItemLookup": {
+			"type": "object",
+			"properties": {
+				"_copy": {
+					"$ref": "#/$defs/copyBlock_copy_itemLookup"
+				}
+			},
+			"required": [
+				"_copy"
+			]
+		},
+		"itemPropertyLookup_entries": {
+			"type": "object",
+			"properties": {
+				"abbreviation": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"name": {
+					"type": "string"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"template": {
+					"type": "string"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"itemPropertyLookup_entriesTemplate": {
+			"type": "object",
+			"properties": {
+				"abbreviation": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
+				"name": {
+					"type": "string"
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"template": {
+					"type": "string"
+				},
+				"entriesTemplate": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
 				}
 			},
 			"additionalProperties": false
@@ -119,6 +262,54 @@
 						"template": {
 							"type": "string"
 						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"_copy": {
+							"$ref": "#/$defs/copyBlock_copy_itemLookup"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"abbreviation": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"name": {
+							"type": "string"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"template": {
+							"type": "string"
+						},
 						"entriesTemplate": {
 							"type": "array",
 							"items": {
@@ -131,6 +322,54 @@
 						"abbreviation",
 						"source",
 						"page"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"abbreviation": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
+						},
+						"name": {
+							"type": "string"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"template": {
+							"type": "string"
+						},
+						"entriesTemplate": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"_copy": {
+							"$ref": "#/$defs/copyBlock_copy_itemLookup"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
 					]
 				}
 			]
@@ -1541,6 +1780,129 @@
 					]
 				}
 			]
+		},
+		"itemMasteryData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"prerequisite": {
+					"$ref": "util.json#/$defs/prerequisite"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"srd": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"srd52": {
+					"$ref": "util.json#/$defs/srd"
+				},
+				"basicRules": {
+					"$ref": "util.json#/$defs/basicRules"
+				},
+				"basicRules2024": {
+					"$ref": "util.json#/$defs/basicRules"
+				}
+			},
+			"additionalProperties": false
+		},
+		"itemMastery": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"entries"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"prerequisite": {
+							"$ref": "util.json#/$defs/prerequisite"
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		}
 	},
 	"properties": {
@@ -1574,6 +1936,7 @@
 		"itemEntry": {
 			"type": "array",
 			"minItems": 1,
+			"uniqueItems": true,
 			"items": {
 				"type": "object",
 				"properties": {
@@ -1595,6 +1958,7 @@
 		"itemTypeAdditionalEntries": {
 			"type": "array",
 			"minItems": 1,
+			"uniqueItems": true,
 			"items": {
 				"type": "object",
 				"properties": {
@@ -1620,48 +1984,18 @@
 		"itemMastery": {
 			"type": "array",
 			"minItems": 1,
+			"uniqueItems": true,
 			"items": {
-				"type": "object",
-				"properties": {
-					"name": {
-						"type": "string"
-					},
-					"source": {
-						"$ref": "util.json#/$defs/source"
-					},
-					"page": {
-						"$ref": "util.json#/$defs/page"
-					},
-					"prerequisite": {
-						"$ref": "util.json#/$defs/prerequisite"
-					},
-					"entries": {
-						"type": "array",
-						"items": {
-							"$ref": "entry.json"
-						}
-					},
-					"srd": {
-						"$ref": "util.json#/$defs/srd"
-					},
-					"srd52": {
-						"$ref": "util.json#/$defs/srd"
-					},
-					"basicRules": {
-						"$ref": "util.json#/$defs/basicRules"
-					},
-					"basicRules2024": {
-						"$ref": "util.json#/$defs/basicRules"
-					}
-				},
-				"required": [
-					"name",
-					"source",
-					"entries"
-				],
-				"additionalProperties": false
+				"$ref": "#/$defs/itemMastery"
 			}
 		}
 	},
+	"required": [
+		"baseitem",
+		"itemProperty",
+		"itemType",
+		"itemEntry",
+		"itemTypeAdditionalEntries"
+	],
 	"additionalProperties": false
 }
