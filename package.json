@@ -4,7 +4,16 @@
 	"description": "Shared utilities for the 5etools ecosystem.",
 	"type": "module",
 	"main": "lib/Api.js",
+	"exports": {
+		".": "./lib/Api.js",
+		"./eslint": "./lib/eslint/eslint-plugin-jquery.js",
+		"./eslint/*": "./lib/eslint/*",
+		"./lib/*": "./lib/*",
+		"./schema/*": "./schema/*",
+		"./package.json": "./package.json"
+	},
 	"files": [
+		"bin",
 		"lib",
 		"schema"
 	],
@@ -23,7 +32,8 @@
 		"test-img-file-extensions": "bin/test-img-file-extensions.js",
 		"test-img-file-sizes": "bin/test-img-file-sizes.js",
 		"test-img-source-names-brew": "bin/test-img-source-names-brew.js",
-		"test-img-source-names-ua": "bin/test-img-source-names-ua.js"
+		"test-img-source-names-ua": "bin/test-img-source-names-ua.js",
+		"lint-js-changed": "bin/lint-js-changed.js"
 	},
 	"scripts": {
 		"build:dangerous:sources": "node node/fetch-5etools-sources.js",
@@ -48,16 +58,16 @@
 		"ajv": "^8.18.0",
 		"ajv-formats": "^3.0.1",
 		"commander": "^14.0.3",
+		"eslint": "^10.0.1",
 		"hasha": "^7.0.0",
 		"he": "^1.2.0",
 		"json-source-map": "^0.6.1",
 		"number-precision": "^1.6.0",
-		"sanitize-html": "^2.17.1"
+		"sanitize-html": "^2.17.1",
+		"simple-git": "^3.32.1"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
-		"eslint": "^10.0.1",
-		"jest": "^30.2.0",
-		"simple-git": "^3.32.1"
+		"jest": "^30.2.0"
 	}
 }
