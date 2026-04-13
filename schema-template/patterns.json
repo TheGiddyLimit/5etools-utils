@@ -5,35 +5,50 @@
 	"type": "object",
 
 	"$defs": {
-		"dimension": {
+		"_componentDimension": {
 			"type": "object",
 			"properties": {
 				"mm": {
 					"type": "number",
 					"exclusiveMinimum": 0
 				},
-				"entry": {
-					"$ref": "entry.json"
-				}
+				"entry": {"$ref": "entry.json"}
 			},
 			"required": [
 				"mm"
 			]
 		},
 
-		"component": {
-			"type": "object",
-			"properties": {
-				"height": {"$ref": "patterns.json#/$defs/dimension"},
-				"width": {"$ref": "patterns.json#/$defs/dimension"},
-				"length": {"$ref": "patterns.json#/$defs/dimension"},
-				"diameter": {"$ref": "patterns.json#/$defs/dimension"}
-			},
-			"minProperties": 1,
-			"additionalProperties": false
+		"_component": {
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"height": {"$ref": "patterns.json#/$defs/_componentDimension"},
+						"width": {"$ref": "patterns.json#/$defs/_componentDimension"},
+						"length": {"$ref": "patterns.json#/$defs/_componentDimension"},
+						"diameter": {"$ref": "patterns.json#/$defs/_componentDimension"}
+					},
+					"minProperties": 1,
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"height": {"$ref": "patterns.json#/$defs/_componentDimension"},
+						"width": {"$ref": "patterns.json#/$defs/_componentDimension"},
+						"length": {"$ref": "patterns.json#/$defs/_componentDimension"},
+						"diameter": {"$ref": "patterns.json#/$defs/_componentDimension"},
+						"name": {"type": "string"}
+					},
+					"minProperties": 2,
+					"required": ["name"],
+					"additionalProperties": false
+				}
+			]
 		},
 
-		"hook": {
+		"_hook": {
 			"type": "object",
 			"properties": {
 				"entries": {
@@ -49,7 +64,7 @@
 					"maximum": 19,
 					"multipleOf": 0.25
 				},
-				"US":{
+				"US": {
 					"type": "string",
 					"enum": [
 						"B-1",
@@ -82,7 +97,6 @@
 			"additionalProperties": false
 		},
 
-
 		"patternData": {
 			"type": "object",
 			"properties": {
@@ -103,83 +117,53 @@
 
 				"instructions": {
 					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
+					"items": {"$ref": "entry.json"}
 				},
 				"yarn": {
 					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
+					"items": {"$ref": "entry.json"}
 				},
 				"hooks": {
 					"type": "array",
-					"items": {
-						"$ref": "patterns.json#/$defs/hook"
-					},
+					"items": {"$ref": "patterns.json#/$defs/_hook"},
 					"minItems": 1,
 					"uniqueItems": true
 				},
 
 				"notions": {
 					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
+					"items": {"$ref": "entry.json"}
 				},
 
 
 				"gauge": {
 					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
+					"items": {"$ref": "entry.json"}
 				},
 
 				"stitches": {
 					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
+					"items": {"$ref": "entry.json"}
 				},
 
 				"abbreviations": {
 					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
+					"items": {"$ref": "entry.json"}
 				},
 
 				"notes": {
 					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
+					"items": {"$ref": "entry.json"}
 				},
 
 				"finishing": {
 					"type": "array",
-					"items": {
-						"$ref": "entry.json"
-					}
+					"items": {"$ref": "entry.json"}
 				},
 
 				"size": {
-					"anyOf": [
-						{
-							"$ref": "patterns.json#/$defs/component"
-						},
-						{
-							"type": "object",
-							"patternProperties": {
-								"^[ -a-zA-Z0-9]+$": {
-									"$ref": "patterns.json#/$defs/component"
-								}
-							},
-							"minProperties": 1
-						}
-					]
+					"type": "array",
+					"items": {"$ref": "patterns.json#/$defs/_component"}
 				},
 				"sizeNote": {
 					"type": "string"
@@ -225,7 +209,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"creature\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"gelatinous cube|mm\".",
+						"description": "UIDs of \"creature\"s to be linked in a \"See Also\" footnote.\n\nE.g. \"gelatinous cube|mm\".",
 						"markdownDescription": "UIDs of &quot;creature&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;gelatinous cube|mm&quot;."
 					},
 					"minItems": 1,
@@ -235,18 +219,14 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"description": "UIDs of \"item\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"quiver of ehlonna|dmg\".",
+						"description": "UIDs of \"item\"s to be linked in a \"See Also\" footnote.\n\nE.g. \"quiver of ehlonna|dmg\".",
 						"markdownDescription": "UIDs of &quot;item&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;quiver of ehlonna|dmg&quot;."
 					},
 					"minItems": 1,
 					"uniqueItems": true
 				},
-				"hasFluff": {
-					"type": "boolean"
-				},
-				"hasFluffImages": {
-					"type": "boolean"
-				}
+				"hasFluff": {"type": "boolean"},
+				"hasFluffImages": {"type": "boolean"}
 			},
 			"additionalProperties": false
 		},
