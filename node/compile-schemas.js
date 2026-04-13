@@ -82,6 +82,10 @@ class SchemaPreprocessor {
 						debugger;
 						return;
 					}
+					case "$$comment": {
+						delete obj[k];
+						return;
+					}
 					case "$$merge": return this._recurse_$$merge({root, obj, k, v, compileMode, isFast, dirSource});
 					case "$$ifBrew": return this._recurse_$$ifBrew({root, obj, k, v, compileMode, isFast, dirSource});
 					case "$$ifSite": return this._recurse_$$ifSite({root, obj, k, v, compileMode, isFast, dirSource});

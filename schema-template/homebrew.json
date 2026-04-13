@@ -791,6 +791,7 @@
 	},
 	"additionalProperties": false,
 	"$$if": {
+		"$$comment": "We compile a \"site\" version of this file, which is unused by automated tooling, but may be used by a developer as a convenient \"wildcard\" schema for roughly validating any site JSON file. Avoid requiring \"_meta\" in the \"site\" version, to avoid immediate validation failure on the many site JSON files which do not contain a \"_meta\", but may otherwise be successfully validated using this schema.",
 		"modes": ["ua", "brew"],
 		"value": {
 			"required": [
