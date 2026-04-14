@@ -683,11 +683,11 @@
 		"foundryOptionalfeature": {
 			"$ref": "foundry-optionalfeatures.json#/properties/optionalfeature"
 		},
-		"pattern": {
-			"$ref": "patterns.json#/properties/pattern"
+		"crochetPattern": {
+			"$ref": "homecrafts.json#/properties/crochetPattern"
 		},
-		"patternFluff": {
-			"$ref": "fluff-patterns.json#/properties/patternFluff"
+		"crochetPatternFluff": {
+			"$ref": "fluff-homecrafts.json#/properties/crochetPatternFluff"
 		},
 		"psionic": {
 			"$ref": "psionics.json#/properties/psionic"

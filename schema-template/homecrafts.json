@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "patterns.json",
+	"$id": "homecrafts.json",
 	"version": "1.0.0",
 	"type": "object",
 
@@ -24,10 +24,10 @@
 				{
 					"type": "object",
 					"properties": {
-						"height": {"$ref": "patterns.json#/$defs/_componentDimension"},
-						"width": {"$ref": "patterns.json#/$defs/_componentDimension"},
-						"length": {"$ref": "patterns.json#/$defs/_componentDimension"},
-						"diameter": {"$ref": "patterns.json#/$defs/_componentDimension"}
+						"height": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
+						"width": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
+						"length": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
+						"diameter": {"$ref": "homecrafts.json#/$defs/_componentDimension"}
 					},
 					"minProperties": 1,
 					"additionalProperties": false
@@ -35,10 +35,10 @@
 				{
 					"type": "object",
 					"properties": {
-						"height": {"$ref": "patterns.json#/$defs/_componentDimension"},
-						"width": {"$ref": "patterns.json#/$defs/_componentDimension"},
-						"length": {"$ref": "patterns.json#/$defs/_componentDimension"},
-						"diameter": {"$ref": "patterns.json#/$defs/_componentDimension"},
+						"height": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
+						"width": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
+						"length": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
+						"diameter": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
 						"name": {"type": "string"}
 					},
 					"minProperties": 2,
@@ -97,7 +97,7 @@
 			"additionalProperties": false
 		},
 
-		"patternData": {
+		"crochetPatternData": {
 			"type": "object",
 			"properties": {
 				"name": {"type": "string"},
@@ -125,7 +125,7 @@
 				},
 				"hooks": {
 					"type": "array",
-					"items": {"$ref": "patterns.json#/$defs/_hook"},
+					"items": {"$ref": "homecrafts.json#/$defs/_hook"},
 					"minItems": 1,
 					"uniqueItems": true
 				},
@@ -163,7 +163,7 @@
 
 				"size": {
 					"type": "array",
-					"items": {"$ref": "patterns.json#/$defs/_component"}
+					"items": {"$ref": "homecrafts.json#/$defs/_component"}
 				},
 				"sizeNote": {
 					"type": "string"
@@ -231,13 +231,13 @@
 			"additionalProperties": false
 		},
 
-		"pattern": {
+		"crochetPattern": {
 			"anyOf": [
 				{
 					"type": "object",
 					"$$merge": [
 						{
-							"$ref": "#/$defs/patternData"
+							"$ref": "#/$defs/crochetPatternData"
 						},
 						{
 							"required": ["name", "source", "instructions", "yarn", "hooks"]
@@ -248,7 +248,7 @@
 					"type": "object",
 					"$$merge": [
 						{
-							"$ref": "#/$defs/patternData"
+							"$ref": "#/$defs/crochetPatternData"
 						},
 						{
 							"$ref": "util-copy.json#/$defs/copyBlockGeneric"
@@ -263,17 +263,17 @@
 		"_meta": {
 			"$ref": "util.json#/$defs/metaBlock"
 		},
-		"pattern": {
+		"crochetPattern": {
 			"type": "array",
 			"uniqueItems": true,
 			"minItems": 1,
 			"items": {
-				"$ref": "#/$defs/pattern"
+				"$ref": "#/$defs/crochetPattern"
 			}
 		}
 	},
 
-	"required": ["pattern"],
+	"required": ["crochetPattern"],
 
 	"additionalProperties": false
 }
