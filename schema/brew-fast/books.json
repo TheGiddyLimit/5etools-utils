@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "books.json",
-	"version": "1.2.19",
+	"version": "1.2.20",
 	"type": "object",
 	"properties": {
 		"book": {
@@ -43,6 +43,7 @@
 							"screen",
 							"organized-play",
 							"recipe",
+							"homecraft",
 							"other"
 						],
 						"markdownDescription": "The group under which this book should be listed in the navbar."

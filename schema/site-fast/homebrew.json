@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.13.0",
+	"version": "1.14.0",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -767,6 +767,12 @@
 		"foundryOptionalfeature": {
 			"$ref": "foundry-optionalfeatures.json#/properties/optionalfeature"
 		},
+		"crochetPattern": {
+			"$ref": "homecrafts.json#/properties/crochetPattern"
+		},
+		"crochetPatternFluff": {
+			"$ref": "fluff-homecrafts.json#/properties/crochetPatternFluff"
+		},
 		"psionic": {
 			"$ref": "psionics.json#/properties/psionic"
 		},
@@ -868,8 +874,5 @@
 		}
 	},
 	"additionalProperties": false,
-	"required": [
-		"_meta"
-	],
 	"markdownDescription": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. spell or class"
 }

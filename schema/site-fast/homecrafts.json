@@ -1,0 +1,570 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "homecrafts.json",
+	"version": "1.0.0",
+	"type": "object",
+	"$defs": {
+		"_componentDimension": {
+			"type": "object",
+			"properties": {
+				"mm": {
+					"type": "number",
+					"exclusiveMinimum": 0
+				},
+				"entry": {
+					"$ref": "entry.json"
+				}
+			},
+			"required": [
+				"mm"
+			]
+		},
+		"_component": {
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"height": {
+							"$ref": "homecrafts.json#/$defs/_componentDimension"
+						},
+						"width": {
+							"$ref": "homecrafts.json#/$defs/_componentDimension"
+						}
+					},
+					"minProperties": 1,
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"height": {
+							"$ref": "homecrafts.json#/$defs/_componentDimension"
+						},
+						"width": {
+							"$ref": "homecrafts.json#/$defs/_componentDimension"
+						},
+						"name": {
+							"type": "string"
+						}
+					},
+					"minProperties": 2,
+					"required": [
+						"name"
+					],
+					"additionalProperties": false
+				}
+			]
+		},
+		"_hookNumber": {
+			"description": "Expressed in millimetres.",
+			"type": "number",
+			"minimum": 2,
+			"maximum": 19,
+			"multipleOf": 0.25,
+			"markdownDescription": "Expressed in millimetres."
+		},
+		"_hook": {
+			"oneOf": [
+				{
+					"$ref": "homecrafts.json#/$defs/_hookNumber"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"hooks": {
+							"type": "array",
+							"items": {
+								"$ref": "homecrafts.json#/$defs/_hookNumber"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						}
+					},
+					"required": [
+						"name",
+						"hooks"
+					],
+					"additionalProperties": false
+				}
+			]
+		},
+		"crochetPatternData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"alias": {
+					"$ref": "util.json#/$defs/alias"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"otherSources": {
+					"$ref": "util.json#/$defs/otherSources"
+				},
+				"referenceSources": {
+					"$ref": "util.json#/$defs/referenceSources"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"instructions": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"yarn": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"hooks": {
+					"type": "array",
+					"items": {
+						"$ref": "homecrafts.json#/$defs/_hook"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"notions": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"gauge": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"stitches": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"abbreviations": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"notes": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"finishing": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"size": {
+					"type": "array",
+					"items": {
+						"$ref": "homecrafts.json#/$defs/_component"
+					}
+				},
+				"sizeNote": {
+					"type": "string"
+				},
+				"patternType": {
+					"type": "string",
+					"enum": [
+						"amigurumi",
+						"wearable",
+						"household item"
+					]
+				},
+				"level": {
+					"type": "string",
+					"description": "- B: Beginner \n- I: Intermediate\n- A: Advanced",
+					"enum": [
+						"B",
+						"I",
+						"A"
+					],
+					"markdownDescription": "- B: Beginner \n- I: Intermediate\n- A: Advanced"
+				},
+				"designers": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"Alysia Sly",
+							"Lydia Viatoris",
+							"Rebecca Stone",
+							"Sharon Posey"
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"seeAlsoCreature": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"creature\"s to be linked in a \"See Also\" footnote.\n\nE.g. \"gelatinous cube|mm\".",
+						"markdownDescription": "UIDs of &quot;creature&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;gelatinous cube|mm&quot;."
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"seeAlsoItem": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"description": "UIDs of \"item\"s to be linked in a \"See Also\" footnote.\n\nE.g. \"quiver of ehlonna|dmg\".",
+						"markdownDescription": "UIDs of &quot;item&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;quiver of ehlonna|dmg&quot;."
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"hasFluff": {
+					"type": "boolean"
+				},
+				"hasFluffImages": {
+					"type": "boolean"
+				}
+			},
+			"additionalProperties": false
+		},
+		"crochetPattern": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"instructions": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"yarn": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"hooks": {
+							"type": "array",
+							"items": {
+								"$ref": "homecrafts.json#/$defs/_hook"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"notions": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"gauge": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"stitches": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"abbreviations": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"notes": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"finishing": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"size": {
+							"type": "array",
+							"items": {
+								"$ref": "homecrafts.json#/$defs/_component"
+							}
+						},
+						"sizeNote": {
+							"type": "string"
+						},
+						"patternType": {
+							"type": "string",
+							"enum": [
+								"amigurumi",
+								"wearable",
+								"household item"
+							]
+						},
+						"level": {
+							"type": "string",
+							"description": "- B: Beginner \n- I: Intermediate\n- A: Advanced",
+							"enum": [
+								"B",
+								"I",
+								"A"
+							],
+							"markdownDescription": "- B: Beginner \n- I: Intermediate\n- A: Advanced"
+						},
+						"designers": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"Alysia Sly",
+									"Lydia Viatoris",
+									"Rebecca Stone",
+									"Sharon Posey"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"seeAlsoCreature": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"description": "UIDs of \"creature\"s to be linked in a \"See Also\" footnote.\n\nE.g. \"gelatinous cube|mm\".",
+								"markdownDescription": "UIDs of &quot;creature&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;gelatinous cube|mm&quot;."
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"seeAlsoItem": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"description": "UIDs of \"item\"s to be linked in a \"See Also\" footnote.\n\nE.g. \"quiver of ehlonna|dmg\".",
+								"markdownDescription": "UIDs of &quot;item&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;quiver of ehlonna|dmg&quot;."
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"instructions",
+						"yarn",
+						"hooks"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"alias": {
+							"$ref": "util.json#/$defs/alias"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"otherSources": {
+							"$ref": "util.json#/$defs/otherSources"
+						},
+						"referenceSources": {
+							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"instructions": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"yarn": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"hooks": {
+							"type": "array",
+							"items": {
+								"$ref": "homecrafts.json#/$defs/_hook"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"notions": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"gauge": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"stitches": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"abbreviations": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"notes": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"finishing": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"size": {
+							"type": "array",
+							"items": {
+								"$ref": "homecrafts.json#/$defs/_component"
+							}
+						},
+						"sizeNote": {
+							"type": "string"
+						},
+						"patternType": {
+							"type": "string",
+							"enum": [
+								"amigurumi",
+								"wearable",
+								"household item"
+							]
+						},
+						"level": {
+							"type": "string",
+							"description": "- B: Beginner \n- I: Intermediate\n- A: Advanced",
+							"enum": [
+								"B",
+								"I",
+								"A"
+							],
+							"markdownDescription": "- B: Beginner \n- I: Intermediate\n- A: Advanced"
+						},
+						"designers": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"Alysia Sly",
+									"Lydia Viatoris",
+									"Rebecca Stone",
+									"Sharon Posey"
+								]
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"seeAlsoCreature": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"description": "UIDs of \"creature\"s to be linked in a \"See Also\" footnote.\n\nE.g. \"gelatinous cube|mm\".",
+								"markdownDescription": "UIDs of &quot;creature&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;gelatinous cube|mm&quot;."
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"seeAlsoItem": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"description": "UIDs of \"item\"s to be linked in a \"See Also\" footnote.\n\nE.g. \"quiver of ehlonna|dmg\".",
+								"markdownDescription": "UIDs of &quot;item&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;quiver of ehlonna|dmg&quot;."
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						"hasFluff": {
+							"type": "boolean"
+						},
+						"hasFluffImages": {
+							"type": "boolean"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
+		}
+	},
+	"properties": {
+		"_meta": {
+			"$ref": "util.json#/$defs/metaBlock"
+		},
+		"crochetPattern": {
+			"type": "array",
+			"uniqueItems": true,
+			"minItems": 1,
+			"items": {
+				"$ref": "#/$defs/crochetPattern"
+			}
+		}
+	},
+	"required": [
+		"crochetPattern"
+	],
+	"additionalProperties": false
+}
