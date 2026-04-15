@@ -764,8 +764,8 @@
 				"facility",
 				"facilityFluff",
 				"encounterShape",
-				"pattern",
-				"patternFluff"
+				"crochetPattern",
+				"crochetPatternFluff"
 			]
 		},
 

@@ -25,9 +25,7 @@
 					"type": "object",
 					"properties": {
 						"height": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
-						"width": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
-						"length": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
-						"diameter": {"$ref": "homecrafts.json#/$defs/_componentDimension"}
+						"width": {"$ref": "homecrafts.json#/$defs/_componentDimension"}
 					},
 					"minProperties": 1,
 					"additionalProperties": false
@@ -37,8 +35,6 @@
 					"properties": {
 						"height": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
 						"width": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
-						"length": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
-						"diameter": {"$ref": "homecrafts.json#/$defs/_componentDimension"},
 						"name": {"type": "string"}
 					},
 					"minProperties": 2,
@@ -48,53 +44,39 @@
 			]
 		},
 
+		"_hookNumber": {
+			"description": "Expressed in millimetres.",
+			"type": "number",
+			"minimum": 2,
+			"maximum": 19,
+			"multipleOf": 0.25
+		},
+
 		"_hook": {
-			"type": "object",
-			"properties": {
-				"entries": {
-					"type": "array",
-					"items": {
-						"$ref": "entry.json"
+			"oneOf": [
+				{
+					"$ref": "homecrafts.json#/$defs/_hookNumber"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"hooks": {
+							"type": "array",
+							"items": {"$ref": "homecrafts.json#/$defs/_hookNumber"},
+							"minItems": 1,
+							"uniqueItems": true
+						}
 					},
-					"minItems": 1
-				},
-				"metric": {
-					"type": "number",
-					"minimum": 2,
-					"maximum": 19,
-					"multipleOf": 0.25
-				},
-				"US": {
-					"type": "string",
-					"enum": [
-						"B-1",
-						"C-2",
-						"D",
-						"D-3",
-						"E-4",
-						"F-5",
-						"G-6",
-						"G",
-						"7",
-						"H-8",
-						"I",
-						"I-9",
-						"J",
-						"J-10",
-						"K-10½",
-						"M-13",
-						"N-15",
-						"P-16",
-						"Q",
-						"S"
-					]
+					"required": [
+						"name",
+						"hooks"
+					],
+					"additionalProperties": false
 				}
-			},
-			"required": [
-				"entries",
-				"metric"
-			],
-			"additionalProperties": false
+			]
 		},
 
 		"crochetPatternData": {
@@ -169,16 +151,16 @@
 					"type": "string"
 				},
 
-				"type": {
+				"patternType": {
 					"type": "string",
 					"$$switch_key": {
 						"key_site": "enum",
 						"key_ua": "enum",
 						"key_brew": "examples",
 						"value": [
-							"Amigurumi",
-							"Wearable",
-							"Household Item"
+							"amigurumi",
+							"wearable",
+							"household item"
 						]
 					}
 				},
@@ -191,19 +173,24 @@
 						"A"
 					]
 				},
-				"designer": {
-					"type": "string",
-					"$$switch_key": {
-						"key_site": "enum",
-						"key_ua": "enum",
-						"key_brew": "examples",
-						"value": [
-							"Alysia Sly",
-							"Lydia Viatoris",
-							"Rebecca Stone",
-							"Sharon Posey"
-						]
-					}
+				"designers": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"$$switch_key": {
+							"key_site": "enum",
+							"key_ua": "enum",
+							"key_brew": "examples",
+							"value": [
+								"Alysia Sly",
+								"Lydia Viatoris",
+								"Rebecca Stone",
+								"Sharon Posey"
+							]
+						}
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"seeAlsoCreature": {
 					"type": "array",

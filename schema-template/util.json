@@ -270,6 +270,7 @@
 				"classFeature",
 				"condition",
 				"creature",
+				"crochet",
 				"cult",
 				"deck",
 				"disease",
@@ -282,7 +283,6 @@
 				"legroup",
 				"object",
 				"optfeature",
-				"pattern",
 				"psionic",
 				"race",
 				"recipe",
@@ -311,8 +311,8 @@
 			"type": "string",
 			"enum": [
 				"classFluff",
+				"crochetPatternFluff",
 				"monsterFluff",
-				"patternFluff",
 				"raceFluff"
 			]
 		},
