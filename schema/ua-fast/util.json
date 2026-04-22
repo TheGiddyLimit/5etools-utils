@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.18.2",
+	"version": "1.18.3",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -3075,7 +3075,9 @@
 							"type": "array",
 							"items": {
 								"$ref": "entry.json#/$defs/entryImage"
-							}
+							},
+							"minItems": 1,
+							"uniqueItems": true
 						},
 						{
 							"type": "null"
@@ -3115,7 +3117,9 @@
 										"type": "array",
 										"items": {
 											"$ref": "entry.json#/$defs/entryImage"
-										}
+										},
+										"minItems": 1,
+										"uniqueItems": true
 									},
 									{
 										"type": "null"
@@ -3154,7 +3158,9 @@
 										"type": "array",
 										"items": {
 											"$ref": "entry.json#/$defs/entryImage"
-										}
+										},
+										"minItems": 1,
+										"uniqueItems": true
 									},
 									{
 										"type": "null"

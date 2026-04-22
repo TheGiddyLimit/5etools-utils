@@ -31,7 +31,9 @@
 										"type": "array",
 										"items": {
 											"$ref": "entry.json#/$defs/entryImage"
-										}
+										},
+										"minItems": 1,
+										"uniqueItems": true
 									},
 									{
 										"type": "null"
@@ -70,7 +72,9 @@
 										"type": "array",
 										"items": {
 											"$ref": "entry.json#/$defs/entryImage"
-										}
+										},
+										"minItems": 1,
+										"uniqueItems": true
 									},
 									{
 										"type": "null"
