@@ -42,6 +42,7 @@
 		"test:js": "node --localstorage-file test/localstorage.tmp --experimental-vm-modules node_modules/jest/bin/jest.js",
 		"lint": "npm run lint:js",
 		"lint:js": "eslint lib node test --fix",
+		"lint:js:fast": "node bin/lint-js-changed.js",
 		"preversion": "npm t"
 	},
 	"repository": {
