@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"$id": "template.json",
 	"type": "object",
 	"$defs": {
@@ -59,6 +59,35 @@
 					"properties": {
 						"_root": {
 							"$ref": "bestiary.json#/$defs/creatureData"
+						},
+						"_mod": {
+							"$ref": "../util-copy.json#/$defs/_modObject"
+						}
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"legendaryGroupTemplateData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "../util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "../util.json#/$defs/page"
+				},
+				"ref": {
+					"type": "string"
+				},
+				"apply": {
+					"type": "object",
+					"properties": {
+						"_root": {
+							"$ref": "legendarygroups.json#/$defs/legendaryGroupData"
 						},
 						"_mod": {
 							"$ref": "../util-copy.json#/$defs/_modObject"
@@ -210,6 +239,79 @@
 					]
 				}
 			]
+		},
+		"legendaryGroupTemplate": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "../util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "../util.json#/$defs/page"
+						},
+						"ref": {
+							"type": "string"
+						},
+						"apply": {
+							"type": "object",
+							"properties": {
+								"_root": {
+									"$ref": "legendarygroups.json#/$defs/legendaryGroupData"
+								},
+								"_mod": {
+									"$ref": "../util-copy.json#/$defs/_modObject"
+								}
+							}
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"apply"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"source": {
+							"$ref": "../util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "../util.json#/$defs/page"
+						},
+						"ref": {
+							"type": "string"
+						},
+						"apply": {
+							"type": "object",
+							"properties": {
+								"_root": {
+									"$ref": "legendarygroups.json#/$defs/legendaryGroupData"
+								},
+								"_mod": {
+									"$ref": "../util-copy.json#/$defs/_modObject"
+								}
+							}
+						},
+						"_copy": {
+							"$ref": "../util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
 		}
 	},
 	"properties": {
@@ -222,6 +324,14 @@
 			"uniqueItems": true,
 			"items": {
 				"$ref": "#/$defs/monsterTemplate"
+			}
+		},
+		"legendaryGroupTemplate": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/legendaryGroupTemplate"
 			}
 		}
 	},

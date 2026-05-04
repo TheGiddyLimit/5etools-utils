@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.1.1",
+	"version": "1.1.2",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -535,20 +535,7 @@
 				"_mod": {
 					"$ref": "#/$defs/_modObject"
 				},
-				"_templates": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"name": {"type": "string"},
-							"source": {"$ref": "util.json#/$defs/source"}
-						},
-						"required": ["name", "source"],
-						"additionalProperties": false
-					},
-					"minItems": 1,
-					"uniqueItems": true
-				},
+				"_templates": {"$ref": "#/$defs/_templatesArray"},
 				"_preserve": {
 					"type": "object",
 					"patternProperties": {
@@ -611,6 +598,10 @@
 						"source": {"$ref": "util.json#/$defs/source"},
 
 						"_mod": {"$ref": "#/$defs/_modObject"},
+						"_templates": {
+							"description": "Note that this is currently largely unsupported and unstable, and may be adjusted/removed in future.",
+							"$ref": "#/$defs/_templatesArray"
+						},
 						"_preserve": {
 							"description": "Note that, by default, all properties are preserved for a version. To avoid preserving properties, pass an empty object `{}`.",
 							"$ref": "#/$defs/_preserveObject"
@@ -693,6 +684,21 @@
 					"const": true
 				}
 			}
+		},
+
+		"_templatesArray": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {"type": "string"},
+					"source": {"$ref": "util.json#/$defs/source"}
+				},
+				"required": ["name", "source"],
+				"additionalProperties": false
+			},
+			"minItems": 1,
+			"uniqueItems": true
 		},
 
 		"copyableProps": {

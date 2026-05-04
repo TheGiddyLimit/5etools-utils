@@ -32,25 +32,7 @@
 					"$ref": "util-copy.json#/$defs/_modObject"
 				},
 				"_templates": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string"
-							},
-							"source": {
-								"$ref": "util.json#/$defs/source"
-							}
-						},
-						"required": [
-							"name",
-							"source"
-						],
-						"additionalProperties": false
-					},
-					"minItems": 1,
-					"uniqueItems": true
+					"$ref": "util-copy.json#/$defs/_templatesArray"
 				},
 				"_preserve": {
 					"type": "object",
@@ -1493,25 +1475,7 @@
 					"$ref": "util-copy.json#/$defs/_modObject"
 				},
 				"_templates": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"name": {
-								"type": "string"
-							},
-							"source": {
-								"$ref": "util.json#/$defs/source"
-							}
-						},
-						"required": [
-							"name",
-							"source"
-						],
-						"additionalProperties": false
-					},
-					"minItems": 1,
-					"uniqueItems": true
+					"$ref": "util-copy.json#/$defs/_templatesArray"
 				},
 				"_preserve": {
 					"type": "object",

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"$id": "template.json",
 	"type": "object",
 	"$defs": {
@@ -55,6 +55,26 @@
 			"additionalProperties": false
 		},
 
+		"legendaryGroupTemplateData": {
+			"type": "object",
+			"properties": {
+				"name": {"type": "string"},
+				"source": {"$ref": "../util.json#/$defs/source"},
+				"page": {"$ref": "../util.json#/$defs/page"},
+
+				"ref": {"type": "string"},
+
+				"apply": {
+					"type": "object",
+					"properties": {
+						"_root": {"$ref": "legendarygroups.json#/$defs/legendaryGroupData"},
+						"_mod": {"$ref": "../util-copy.json#/$defs/_modObject"}
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+
 		"monsterTemplate": {
 			"anyOf": [
 				{
@@ -84,6 +104,37 @@
 					]
 				}
 			]
+		},
+
+		"legendaryGroupTemplate": {
+			"anyOf": [
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/legendaryGroupTemplateData"
+						},
+						{
+							"required": [
+								"name",
+								"source",
+								"apply"
+							]
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{
+							"$ref": "#/$defs/legendaryGroupTemplateData"
+						},
+						{
+							"$ref": "../util-copy.json#/$defs/copyBlockGeneric"
+						}
+					]
+				}
+			]
 		}
 	},
 
@@ -97,6 +148,14 @@
 			"uniqueItems": true,
 			"items": {
 				"$ref": "#/$defs/monsterTemplate"
+			}
+		},
+		"legendaryGroupTemplate": {
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"$ref": "#/$defs/legendaryGroupTemplate"
 			}
 		}
 	},
