@@ -19,19 +19,25 @@
 					"type": "array",
 					"items": {
 						"$ref": "../entry.json"
-					}
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"regionalEffects": {
 					"type": "array",
 					"items": {
 						"$ref": "../entry.json"
-					}
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"mythicEncounter": {
 					"type": "array",
 					"items": {
 						"$ref": "../entry.json"
-					}
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"_versions": {"$ref": "../util-copy.json#/$defs/versionsArray"}
 			},
