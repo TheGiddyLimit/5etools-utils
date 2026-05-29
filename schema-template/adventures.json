@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.34",
+	"version": "1.10.35",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -148,6 +148,7 @@
 								"Animated Series",
 								"Dragon Delves",
 								"Forgotten Realms",
+								"International Day of Play",
 								"Miscellaneous"
 							]
 						}
