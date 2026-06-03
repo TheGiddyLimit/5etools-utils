@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.18.3",
+	"version": "1.18.4",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2519,10 +2519,11 @@
 		},
 		"dataFeatCategory": {
 			"type": "string",
-			"description": "- D: Dragonmark\n- G: General\n- O: Origin\n- FS: Fighting Style\n- FS:P: Fighting Style (Paladin)\n- FS:R: Fighting Style (Ranger)\n- EB: Epic Boon",
-			"markdownDescription": "- D: Dragonmark\n- G: General\n- O: Origin\n- FS: Fighting Style\n- FS:P: Fighting Style (Paladin)\n- FS:R: Fighting Style (Ranger)\n- EB: Epic Boon",
+			"description": "- D: Dragonmark\n- DG: Dark Gift\n- G: General\n- O: Origin\n- FS: Fighting Style\n- FS:P: Fighting Style (Paladin)\n- FS:R: Fighting Style (Ranger)\n- EB: Epic Boon",
+			"markdownDescription": "- D: Dragonmark\n- DG: Dark Gift\n- G: General\n- O: Origin\n- FS: Fighting Style\n- FS:P: Fighting Style (Paladin)\n- FS:R: Fighting Style (Ranger)\n- EB: Epic Boon",
 			"examples": [
 				"D",
+				"DG",
 				"G",
 				"O",
 				"FS",
