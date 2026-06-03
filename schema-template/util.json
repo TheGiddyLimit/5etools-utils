@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.18.4",
+	"version": "1.18.5",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1718,7 +1718,8 @@
 								"value": [
 									"Dragonlance",
 									"Planescape",
-									"Eberron"
+									"Eberron",
+									"Ravenloft"
 								]
 							}
 						},
