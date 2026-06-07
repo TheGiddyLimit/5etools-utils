@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.18.5",
+	"version": "1.18.6",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2235,6 +2235,21 @@
 										"martial"
 									],
 									"markdownDescription": "All &lt;simple|martial&gt; weapons."
+								},
+								"skill": {
+									"oneOf": [
+										{
+											"const": true
+										},
+										{
+											"type": "array",
+											"items": {
+												"$ref": "#/$defs/skillNameLower"
+											},
+											"minItems": 1,
+											"uniqueItems": true
+										}
+									]
 								}
 							},
 							"additionalProperties": false

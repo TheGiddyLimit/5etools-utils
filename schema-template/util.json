@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.18.5",
+	"version": "1.18.6",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1676,6 +1676,17 @@
 									"description": "All <simple|martial> weapons.",
 									"type": "string",
 									"enum": ["simple", "martial"]
+								},
+								"skill": {
+									"oneOf": [
+										{"const": true},
+										{
+											"type": "array",
+											"items": {"$ref": "#/$defs/skillNameLower"},
+											"minItems": 1,
+											"uniqueItems": true
+										}
+									]
 								}
 							},
 							"additionalProperties": false
