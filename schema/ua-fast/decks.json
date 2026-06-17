@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "decks.json",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"type": "object",
 	"$defs": {
 		"deckData": {
@@ -21,6 +21,9 @@
 				},
 				"referenceSources": {
 					"$ref": "util.json#/$defs/referenceSources"
+				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
 				},
 				"page": {
 					"$ref": "util.json#/$defs/page"
@@ -92,6 +95,9 @@
 						},
 						"referenceSources": {
 							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -166,6 +172,9 @@
 						},
 						"referenceSources": {
 							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"page": {
 							"$ref": "util.json#/$defs/page"
@@ -244,6 +253,9 @@
 				"referenceSources": {
 					"$ref": "util.json#/$defs/referenceSources"
 				},
+				"reprintedAs": {
+					"$ref": "util.json#/$defs/reprintedAs"
+				},
 				"set": {
 					"type": "string"
 				},
@@ -293,6 +305,9 @@
 						},
 						"referenceSources": {
 							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"set": {
 							"type": "string"
@@ -346,6 +361,9 @@
 						},
 						"referenceSources": {
 							"$ref": "util.json#/$defs/referenceSources"
+						},
+						"reprintedAs": {
+							"$ref": "util.json#/$defs/reprintedAs"
 						},
 						"set": {
 							"type": "string"
