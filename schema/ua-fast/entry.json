@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.18",
+	"version": "1.9.19",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -3674,59 +3674,8 @@
 		},
 		"entrySpellcasting_frequency": {
 			"type": "object",
-			"properties": {
-				"1": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"2": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"3": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"4": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"5": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"6": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"7": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"8": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"9": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"9e": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"8e": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"7e": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"6e": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"5e": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"4e": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"3e": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"2e": {
-					"$ref": "#/$defs/_arrayOfSpell"
-				},
-				"1e": {
+			"patternProperties": {
+				"^[1-9]{1,2}e?$": {
 					"$ref": "#/$defs/_arrayOfSpell"
 				}
 			},
