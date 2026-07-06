@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.62",
+	"version": "1.21.63",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -542,7 +542,12 @@
 						}
 					},
 					"additionalProperties": false,
-					"minProperties": 1
+					"minProperties": 1,
+					"patternProperties": {
+						"^[^|]+\\|.+$": {
+							"type": "string"
+						}
+					}
 				},
 				"tool": {
 					"type": "object",
@@ -1901,7 +1906,12 @@
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"patternProperties": {
+								"^[^|]+\\|.+$": {
+									"type": "string"
+								}
+							}
 						},
 						"tool": {
 							"type": "object",
@@ -3265,7 +3275,12 @@
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"patternProperties": {
+								"^[^|]+\\|.+$": {
+									"type": "string"
+								}
+							}
 						},
 						"tool": {
 							"type": "object",

@@ -3421,7 +3421,12 @@
 						}
 					},
 					"additionalProperties": false,
-					"minProperties": 1
+					"minProperties": 1,
+					"patternProperties": {
+						"^[^|]+\\|.+$": {
+							"type": "string"
+						}
+					}
 				},
 				"tool": {
 					"type": "object",
@@ -4786,7 +4791,12 @@
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"patternProperties": {
+								"^[^|]+\\|.+$": {
+									"type": "string"
+								}
+							}
 						},
 						"tool": {
 							"type": "object",
@@ -6157,7 +6167,12 @@
 								}
 							},
 							"additionalProperties": false,
-							"minProperties": 1
+							"minProperties": 1,
+							"patternProperties": {
+								"^[^|]+\\|.+$": {
+									"type": "string"
+								}
+							}
 						},
 						"tool": {
 							"type": "object",

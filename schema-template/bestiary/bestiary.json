@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.62",
+	"version": "1.21.63",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -421,6 +421,11 @@
 								"description": "For use in homebrew.",
 								"$ref": "../entry.json"
 							}
+						}
+					},
+					"$$ifBrew": {
+						"patternProperties": {
+							"^[^|]+\\|.+$": {"type": "string"}
 						}
 					},
 					"additionalProperties": false,
