@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.9.0",
+	"version": "1.9.1",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -680,6 +680,9 @@
 				"hasFluffImages": {
 					"type": "boolean"
 				},
+				"initiative": {
+					"type": "integer"
+				},
 				"fluff": {
 					"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
 					"$ref": "util.json#/$defs/fluffObject",
@@ -1078,6 +1081,9 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"initiative": {
+							"type": "integer"
 						},
 						"fluff": {
 							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
@@ -1479,6 +1485,9 @@
 						},
 						"hasFluffImages": {
 							"type": "boolean"
+						},
+						"initiative": {
+							"type": "integer"
 						},
 						"fluff": {
 							"description": "This is intended to be used for Homebrew only - site data should include a fluff file per source",
