@@ -22,7 +22,7 @@
 #     - uses tracking upstream if present
 #     - falls back to push -u <remote> <branch> if upstream missing
 
-set -euo pipefail
+set -Eeuo pipefail
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 REPOS_ROOT="$(cd -- "$SCRIPT_DIR/.." && pwd)"
