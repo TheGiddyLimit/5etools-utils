@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.19",
+	"version": "1.9.20",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -36,6 +36,16 @@
 			"enum": [
 				"inset",
 				"narrow"
+			]
+		},
+		"_entryStatblockSlotSize": {
+			"type": "string",
+			"enum": [
+				"extraSmall",
+				"small",
+				"medium",
+				"large",
+				"extraLarge"
 			]
 		},
 		"_entryDataData": {
@@ -125,6 +135,9 @@
 				},
 				"style": {
 					"$ref": "#/$defs/_entryDataStyle"
+				},
+				"slotSize": {
+					"$ref": "#/$defs/_entryStatblockSlotSize"
 				},
 				"collapsed": {
 					"const": true
@@ -3101,6 +3114,9 @@
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
 						},
+						"slotSize": {
+							"$ref": "#/$defs/_entryStatblockSlotSize"
+						},
 						"collapsed": {
 							"const": true
 						},
@@ -3145,6 +3161,9 @@
 						},
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"slotSize": {
+							"$ref": "#/$defs/_entryStatblockSlotSize"
 						},
 						"collapsed": {
 							"const": true
@@ -3194,6 +3213,9 @@
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
 						},
+						"slotSize": {
+							"$ref": "#/$defs/_entryStatblockSlotSize"
+						},
 						"collapsed": {
 							"const": true
 						},
@@ -3241,6 +3263,9 @@
 						},
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"slotSize": {
+							"$ref": "#/$defs/_entryStatblockSlotSize"
 						},
 						"collapsed": {
 							"const": true
@@ -3290,6 +3315,9 @@
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
 						},
+						"slotSize": {
+							"$ref": "#/$defs/_entryStatblockSlotSize"
+						},
 						"collapsed": {
 							"const": true
 						},
@@ -3334,6 +3362,9 @@
 						},
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"slotSize": {
+							"$ref": "#/$defs/_entryStatblockSlotSize"
 						},
 						"collapsed": {
 							"const": true
@@ -3392,6 +3423,9 @@
 						},
 						"style": {
 							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"slotSize": {
+							"$ref": "#/$defs/_entryStatblockSlotSize"
 						},
 						"collapsed": {
 							"const": true

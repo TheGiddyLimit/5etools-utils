@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.19",
+	"version": "1.9.20",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -27,6 +27,10 @@
 
 		"_entryDataStyle": {
 			"type": "string", "enum":  ["inset", "narrow"]
+		},
+
+		"_entryStatblockSlotSize": {
+			"type": "string", "enum":  ["extraSmall", "small", "medium", "large", "extraLarge"]
 		},
 
 		"_entryDataData": {
@@ -74,6 +78,7 @@
 						"source": {"$ref": "util.json#/$defs/source"},
 						"hash": {"type": "string"},
 						"style": {"$ref": "#/$defs/_entryDataStyle"},
+						"slotSize": {"$ref": "#/$defs/_entryStatblockSlotSize"},
 						"collapsed": {"const": true}
 					}
 				}
