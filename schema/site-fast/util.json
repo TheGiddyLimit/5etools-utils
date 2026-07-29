@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.18.6",
+	"version": "1.19.0",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2442,8 +2442,8 @@
 		},
 		"dataOptionalfeatureType": {
 			"type": "string",
-			"description": "- AF: Alchemical Formula\n- AI: Artificer Infusion\n- AS: Arcane Shot\n- AS:V1-UA: Arcane Shot, V1 (UA)\n- AS:V2-UA: Arcane Shot, V2 (UA)\n- ED: Elemental Discipline\n- EI: Eldritch Invocation\n- FS:B: Fighting Style; Bard\n- FS:F: Fighting Style; Fighter\n- FS:P: Fighting Style; Paladin\n- FS:R: Fighting Style; Ranger\n- IWM:A: Infernal War Machine Upgrade, Armor\n- IWM:G: Infernal War Machine Upgrade, Gadget\n- IWM:W: Infernal War Machine Variant, Weapon\n- MM: Metamagic\n- MV: Maneuver\n- MV:B: Maneuver, Battle Master\n- MV:C2-UA: Maneuver, Cavalier V2 (UA)\n- OR: Onomancy Resonant\n- OTH: Other\n- PB: Pact Boon\n- RN: Rune Knight Rune\n- RP: Renown Perk\n- SHP:F: Ship Upgrade, Figurehead\n- SHP:H: Ship Upgrade, Hull\n- SHP:M: Ship Upgrade, Movement\n- SHP:O: Ship Upgrade, Miscellaneous\n- SHP:W: Ship Upgrade, Weapon\n- TT: Traveler's Trick",
-			"markdownDescription": "- AF: Alchemical Formula\n- AI: Artificer Infusion\n- AS: Arcane Shot\n- AS:V1-UA: Arcane Shot, V1 (UA)\n- AS:V2-UA: Arcane Shot, V2 (UA)\n- ED: Elemental Discipline\n- EI: Eldritch Invocation\n- FS:B: Fighting Style; Bard\n- FS:F: Fighting Style; Fighter\n- FS:P: Fighting Style; Paladin\n- FS:R: Fighting Style; Ranger\n- IWM:A: Infernal War Machine Upgrade, Armor\n- IWM:G: Infernal War Machine Upgrade, Gadget\n- IWM:W: Infernal War Machine Variant, Weapon\n- MM: Metamagic\n- MV: Maneuver\n- MV:B: Maneuver, Battle Master\n- MV:C2-UA: Maneuver, Cavalier V2 (UA)\n- OR: Onomancy Resonant\n- OTH: Other\n- PB: Pact Boon\n- RN: Rune Knight Rune\n- RP: Renown Perk\n- SHP:F: Ship Upgrade, Figurehead\n- SHP:H: Ship Upgrade, Hull\n- SHP:M: Ship Upgrade, Movement\n- SHP:O: Ship Upgrade, Miscellaneous\n- SHP:W: Ship Upgrade, Weapon\n- TT: Traveler&apos;s Trick",
+			"description": "- AF: Alchemical Formula\n- AI: Artificer Infusion\n- AS: Arcane Shot\n- AS:V1-UA: Arcane Shot, V1 (UA)\n- AS:V2-UA: Arcane Shot, V2 (UA)\n- ED: Elemental Discipline\n- EI: Eldritch Invocation\n- FS:B: Fighting Style; Bard\n- FS:F: Fighting Style; Fighter\n- FS:P: Fighting Style; Paladin\n- FS:R: Fighting Style; Ranger\n- MM: Metamagic\n- MV: Maneuver\n- MV:B: Maneuver, Battle Master\n- MV:C2-UA: Maneuver, Cavalier V2 (UA)\n- OR: Onomancy Resonant\n- OTH: Other\n- PB: Pact Boon\n- RN: Rune Knight Rune\n- RP: Renown Perk\n- TT: Traveler's Trick",
+			"markdownDescription": "- AF: Alchemical Formula\n- AI: Artificer Infusion\n- AS: Arcane Shot\n- AS:V1-UA: Arcane Shot, V1 (UA)\n- AS:V2-UA: Arcane Shot, V2 (UA)\n- ED: Elemental Discipline\n- EI: Eldritch Invocation\n- FS:B: Fighting Style; Bard\n- FS:F: Fighting Style; Fighter\n- FS:P: Fighting Style; Paladin\n- FS:R: Fighting Style; Ranger\n- MM: Metamagic\n- MV: Maneuver\n- MV:B: Maneuver, Battle Master\n- MV:C2-UA: Maneuver, Cavalier V2 (UA)\n- OR: Onomancy Resonant\n- OTH: Other\n- PB: Pact Boon\n- RN: Rune Knight Rune\n- RP: Renown Perk\n- TT: Traveler&apos;s Trick",
 			"enum": [
 				"ED",
 				"EI",
@@ -2461,6 +2461,18 @@
 				"AS",
 				"PB",
 				"AI",
+				"OR",
+				"RN",
+				"AF",
+				"TT",
+				"RP"
+			]
+		},
+		"dataVehicleUpgradeType": {
+			"type": "string",
+			"description": "- IWM:A: Infernal War Machine Upgrade, Armor\n- IWM:G: Infernal War Machine Upgrade, Gadget\n- IWM:W: Infernal War Machine Variant, Weapon\n- SHP:F: Ship Upgrade, Figurehead\n- SHP:H: Ship Upgrade, Hull\n- SHP:M: Ship Upgrade, Movement\n- SHP:O: Ship Upgrade, Miscellaneous\n- SHP:W: Ship Upgrade, Weapon",
+			"markdownDescription": "- IWM:A: Infernal War Machine Upgrade, Armor\n- IWM:G: Infernal War Machine Upgrade, Gadget\n- IWM:W: Infernal War Machine Variant, Weapon\n- SHP:F: Ship Upgrade, Figurehead\n- SHP:H: Ship Upgrade, Hull\n- SHP:M: Ship Upgrade, Movement\n- SHP:O: Ship Upgrade, Miscellaneous\n- SHP:W: Ship Upgrade, Weapon",
+			"enum": [
 				"SHP:H",
 				"SHP:M",
 				"SHP:W",
@@ -2468,12 +2480,7 @@
 				"SHP:O",
 				"IWM:W",
 				"IWM:A",
-				"IWM:G",
-				"OR",
-				"RN",
-				"AF",
-				"TT",
-				"RP"
+				"IWM:G"
 			]
 		},
 		"dataFeatCategory": {

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.14.0",
+	"version": "1.14.1",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -156,6 +156,15 @@
 				"optionalFeatureTypes": {
 					"type": "object",
 					"description": "Object names are optional feature \"type\" shorthands (e.g. \"EI\" for \"Eldritch Invocation\" which will be displayed in the list view as a sortable column",
+					"patternProperties": {
+						".*": {
+							"type": "string"
+						}
+					}
+				},
+				"vehicleUpgradeTypes": {
+					"type": "object",
+					"description": "Object names are vehicle upgrade \"type\" shorthands (e.g. \"SHP:H\" for \"Ship Upgrade, Hull\" which will be displayed in the list view as a sortable column",
 					"patternProperties": {
 						".*": {
 							"type": "string"
