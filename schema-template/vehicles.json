@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.10.0",
+	"version": "1.10.1",
 	"type": "object",
 
 	"$defs": {
@@ -150,6 +150,7 @@
 					},
 					"minItems": 1
 				},
+				"cost": {"$ref": "#/$defs/_vehicleCost"},
 				"hasFluff": {"type": "boolean"},
 				"hasFluffImages": {"type": "boolean"}
 			},
