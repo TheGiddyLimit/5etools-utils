@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "vehicles.json",
-	"version": "1.10.1",
+	"version": "1.10.2",
 	"type": "object",
 	"$defs": {
 		"vehicleTerrain": {
@@ -205,7 +205,8 @@
 					"items": {
 						"$ref": "util.json#/$defs/dataVehicleUpgradeType"
 					},
-					"minItems": 1
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"cost": {
 					"$ref": "#/$defs/_vehicleCost"
@@ -256,7 +257,8 @@
 							"items": {
 								"$ref": "util.json#/$defs/dataVehicleUpgradeType"
 							},
-							"minItems": 1
+							"minItems": 1,
+							"uniqueItems": true
 						},
 						"cost": {
 							"$ref": "#/$defs/_vehicleCost"
@@ -311,7 +313,8 @@
 							"items": {
 								"$ref": "util.json#/$defs/dataVehicleUpgradeType"
 							},
-							"minItems": 1
+							"minItems": 1,
+							"uniqueItems": true
 						},
 						"cost": {
 							"$ref": "#/$defs/_vehicleCost"
