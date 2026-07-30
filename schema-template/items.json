@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "items.json",
-	"version": "1.14.29",
+	"version": "1.14.30",
 	"type": "object",
 	"$defs": {
 		"itemData": {
@@ -320,14 +320,18 @@
 					"items": {
 						"type": "string",
 						"description": "UIDs of \"deck\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"deck of many things|dmg\"."
-					}
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"seeAlsoVehicle": {
 					"type": "array",
 					"items": {
 						"type": "string",
 						"description": "UIDs of \"vehicle\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"rowboat|gos\"."
-					}
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"reqAttuneTags": {
 					"$ref": "util.json#/$defs/reqAttuneTags"

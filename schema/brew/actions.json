@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "actions.json",
-	"version": "1.2.8",
+	"version": "1.2.9",
 	"type": "object",
 	"$defs": {
 		"action": {
@@ -67,7 +67,9 @@
 						"type": "string",
 						"description": "UIDs of \"action\"s to be linked in a \"See Also\" footnote.\n\nEx.: \"disarm|dmg\".",
 						"markdownDescription": "UIDs of &quot;action&quot;s to be linked in a &quot;See Also&quot; footnote.\n\nEx.: &quot;disarm|dmg&quot;."
-					}
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"foundrySystem": {
 					"$ref": "util-foundry.json#/$defs/foundrySystemObject"
