@@ -38,3 +38,4 @@ jobs:
           npm publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VET_CI_IS_VERBOSE_ERRORS_JSON: 1
