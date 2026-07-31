@@ -10,6 +10,7 @@
 #     - unearthed-arcana
 #     - unearthed-arcana-img
 #     - plutonium
+#     - plutonium-utils
 # - pulls version from local 5etools-utils/package.json
 # - per-repo guardrails before work:
 #     - repo exists
@@ -38,6 +39,7 @@ REPO_SPECS=(
 	"unearthed-arcana:master"
 	"unearthed-arcana-img:main"
 	"plutonium:master"
+	"plutonium-utils:master"
 )
 
 log () { echo "[bump-dependants] $*"; }
