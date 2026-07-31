@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.0",
+	"version": "1.19.1",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -2034,7 +2034,8 @@
 								"additionalProperties": false,
 								"required": ["from"]
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				]
 			},
@@ -2108,7 +2109,8 @@
 								"additionalProperties": false,
 								"required": ["from"]
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				]
 			},
@@ -2182,7 +2184,8 @@
 								"additionalProperties": false,
 								"required": ["from"]
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				]
 			},
@@ -2257,7 +2260,8 @@
 								"additionalProperties": false,
 								"required": ["from"]
 							}
-						}
+						},
+						"additionalProperties": false
 					}
 				]
 			},
