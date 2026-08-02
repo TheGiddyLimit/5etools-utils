@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.13",
+	"version": "2.12.14",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -467,6 +467,15 @@
 				}
 			]
 		},
+		"_proficiencies_armor": {
+			"type": "string",
+			"enum": [
+				"light",
+				"medium",
+				"heavy",
+				"shield"
+			]
+		},
 		"proficiencies": {
 			"type": "object",
 			"properties": {
@@ -475,26 +484,13 @@
 					"items": {
 						"oneOf": [
 							{
-								"type": "string",
-								"enum": [
-									"light",
-									"medium",
-									"heavy",
-									"shield"
-								]
+								"$ref": "#/$defs/_proficiencies_armor"
 							},
 							{
 								"type": "object",
 								"properties": {
 									"proficiency": {
-										"type": "string",
-										"enum": [
-											"light",
-											"medium",
-											"heavy",
-											"shield",
-											"special"
-										]
+										"$ref": "#/$defs/_proficiencies_armor"
 									},
 									"full": {
 										"description": "The complete text for this proficiency.",
@@ -509,6 +505,11 @@
 							}
 						]
 					}
+				},
+				"armorProficiencies": {
+					"description": "Well-structured armor proficiency data, used by e.g. Plutonium.",
+					"$ref": "../util.json#/$defs/armorProficiencies",
+					"markdownDescription": "Well-structured armor proficiency data, used by e.g. Plutonium."
 				},
 				"weapons": {
 					"type": "array",

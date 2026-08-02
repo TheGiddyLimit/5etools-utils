@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.1",
+	"version": "1.19.2",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -1287,6 +1287,11 @@
 						"const": true
 					},
 					"shield": {
+						"const": true
+					}
+				},
+				"patternProperties": {
+					"^[^|]+\\|.+$": {
 						"const": true
 					}
 				},
