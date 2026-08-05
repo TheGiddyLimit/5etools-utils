@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.9.20",
+	"version": "1.10.00",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -30,7 +30,7 @@
 		},
 
 		"_entryStatblockSlotSize": {
-			"type": "string", "enum":  ["extraSmall", "small", "medium", "large", "extraLarge"]
+			"type": "string", "enum":  ["120", "200", "360", "600", "800", "1000"]
 		},
 
 		"_entryDataData": {
