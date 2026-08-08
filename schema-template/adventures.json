@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventures.json",
-	"version": "1.10.35",
+	"version": "1.10.36",
 	"type": "object",
 	"properties": {
 		"adventure": {
@@ -96,6 +96,7 @@
 						"type": "integer"
 					},
 					"cover": {"$ref": "corpus-shared.json#/$defs/corpusCover"},
+					"coverCredit": {"$ref": "corpus-shared.json#/$defs/corpusCoverCredit"},
 					"storyline": {
 						"type": "string",
 						"$$switch_key": {

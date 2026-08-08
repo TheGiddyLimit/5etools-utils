@@ -1,13 +1,15 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "corpus-shared.json",
-	"version": "1.0.1",
+	"version": "1.0.2",
 
 	"$defs": {
 		"corpusCover": {
 			"description": "A link to an image. Preferred sizes are 300 x 300px or 600 x 600px.",
 			"$ref": "entry.json#/$defs/mediaHref"
 		},
+
+		"corpusCoverCredit": {"type": "string"},
 
 		"corpusContents": {
 			"description": "The linked Table of Contents of the corpus.",
