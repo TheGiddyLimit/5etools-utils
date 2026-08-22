@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "spells.json",
-	"version": "1.9.27",
+	"version": "1.9.28",
 	"title": "Spells",
 	"type": "object",
 	"$defs": {
@@ -283,7 +283,7 @@
 				},
 				"miscTags": {
 					"type": "array",
-					"description": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action",
+					"description": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- BO: Burns Objects\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action",
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
@@ -291,6 +291,7 @@
 						"enum": [
 							"AAD",
 							"ADV",
+							"BO",
 							"DFT",
 							"FMV",
 							"HL",
@@ -313,7 +314,7 @@
 							"UBA"
 						]
 					},
-					"markdownDescription": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action"
+					"markdownDescription": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- BO: Burns Objects\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action"
 				},
 				"affectsCreatureType": {
 					"type": "array",
@@ -809,7 +810,7 @@
 						},
 						"miscTags": {
 							"type": "array",
-							"description": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action",
+							"description": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- BO: Burns Objects\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action",
 							"minItems": 1,
 							"uniqueItems": true,
 							"items": {
@@ -817,6 +818,7 @@
 								"enum": [
 									"AAD",
 									"ADV",
+									"BO",
 									"DFT",
 									"FMV",
 									"HL",
@@ -839,7 +841,7 @@
 									"UBA"
 								]
 							},
-							"markdownDescription": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action"
+							"markdownDescription": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- BO: Burns Objects\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action"
 						},
 						"affectsCreatureType": {
 							"type": "array",
@@ -1343,7 +1345,7 @@
 						},
 						"miscTags": {
 							"type": "array",
-							"description": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action",
+							"description": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- BO: Burns Objects\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action",
 							"minItems": 1,
 							"uniqueItems": true,
 							"items": {
@@ -1351,6 +1353,7 @@
 								"enum": [
 									"AAD",
 									"ADV",
+									"BO",
 									"DFT",
 									"FMV",
 									"HL",
@@ -1373,7 +1376,7 @@
 									"UBA"
 								]
 							},
-							"markdownDescription": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action"
+							"markdownDescription": "- AAD: Additional Attack Damage\n- ADV: Grants Advantage\n- BO: Burns Objects\n- DFT: Difficult Terrain\n- FMV: Forced Movement\n- HL: Healing\n- LGT: Creates Light\n- LGTS: Creates Sunlight\n- MAC: Modifies AC\n- OBJ: Affects Objects\n- OBS: Obscures Vision\n- PIR: Permanent If Repeated\n- PRM: Permanent Effects\n- PS: Plane Shifting\n- RO: Rollable Effects\n- SCL: Scaling Effects\n- SCT: Scaling Targets\n- SMN: Summons Creature\n- SGT: Requires Sight\n- THP: Grants Temporary Hit Points\n- TP: Teleportation\n- UA: Uses Action\n- UBA: Uses Bonus Action"
 						},
 						"affectsCreatureType": {
 							"type": "array",
