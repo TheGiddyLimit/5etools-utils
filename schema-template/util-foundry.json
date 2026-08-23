@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.9",
+	"version": "1.1.10",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -583,6 +583,7 @@
 
 				"name": {"type": "string"},
 				"img": {"type": "string"},
+				"showIcon": {"type": "integer", "enum": [0, 2]},
 				"description": {"type": "string"},
 				"descriptionEntries": {
 					"type": "array",
