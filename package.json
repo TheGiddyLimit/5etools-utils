@@ -39,7 +39,7 @@
 		"build:dangerous:sources": "node node/fetch-5etools-sources.js",
 		"build": "node node/compile-schemas.js",
 		"test": "npm run lint:js && npm run test:js",
-		"test:js": "node --localstorage-file test/localstorage.tmp --experimental-vm-modules node_modules/jest/bin/jest.js",
+		"test:js": "node --disable-warning=ExperimentalWarning --localstorage-file test/localstorage.tmp --experimental-vm-modules node_modules/jest/bin/jest.js",
 		"lint": "npm run lint:js",
 		"lint:js": "eslint lib node test --fix",
 		"lint:js:fast": "node bin/lint-js-changed.js",
