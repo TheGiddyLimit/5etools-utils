@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.10",
+	"version": "1.1.11",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -187,7 +187,17 @@
 		"_foundryIdRef": {
 			"type": "object",
 			"properties": {
-				"foundryId": {"$ref": "#/$defs/foundryIdShort"}
+				"foundryId": {"$ref": "#/$defs/foundryIdShort"},
+				"level": {
+					"type": "object",
+					"properties": {
+						"min": {"type": "integer"},
+						"max": {"type": "integer"}
+					},
+					"additionalProperties": false,
+					"minProperties": 1
+				},
+				"onSave": {"type": "boolean"}
 			},
 			"required": ["foundryId"]
 		},
