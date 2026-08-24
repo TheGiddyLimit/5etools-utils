@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.1.11",
+	"version": "1.1.12",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -170,6 +170,25 @@
 				"viol",
 				"weaver",
 				"woodcarver"
+			]
+		},
+		"_foundryConsumesName": {
+			"description": "Foundry-specific consumption links. Consider upgrading to \"consumesName\" in future.",
+			"markdownDescription": "Foundry-specific consumption links. Consider upgrading to &quot;consumesName&quot; in future.",
+			"type": "string",
+			"enum": [
+				"Bardic Inspiration",
+				"Superiority Die",
+				"Ki",
+				"Channel Divinity",
+				"Psionic Energy Die",
+				"Wild Shape",
+				"Sorcery Point",
+				"Arcane Shot",
+				"Focus Point",
+				"Favored Enemy",
+				"Innate Sorcery",
+				"Soul Trinket"
 			]
 		},
 		"_foundryIdRef": {
@@ -509,7 +528,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -607,7 +626,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -708,7 +727,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -809,7 +828,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -910,7 +929,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -1032,7 +1051,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -1133,7 +1152,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -1242,7 +1261,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -1394,7 +1413,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -1498,7 +1517,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -1610,7 +1629,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [
@@ -1714,7 +1733,7 @@
 														"type": "object",
 														"properties": {
 															"name": {
-																"$ref": "util.json#/$defs/consumesName"
+																"$ref": "#/$defs/_foundryConsumesName"
 															}
 														},
 														"required": [

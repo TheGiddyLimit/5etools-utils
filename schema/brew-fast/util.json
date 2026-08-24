@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.2",
+	"version": "1.19.3",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -3031,6 +3031,7 @@
 		"consumesName": {
 			"type": "string",
 			"examples": [
+				"Bardic Inspiration",
 				"Superiority Die",
 				"Ki",
 				"Channel Divinity",

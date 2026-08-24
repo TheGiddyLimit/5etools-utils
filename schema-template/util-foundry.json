@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.11",
+	"version": "1.1.12",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -182,7 +182,28 @@
 				"viol",
 				"weaver",
 				"woodcarver"
-			]		},
+			]
+		},
+
+		"_foundryConsumesName": {
+			"description": "Foundry-specific consumption links. Consider upgrading to \"consumesName\" in future.",
+			"$$merge": [
+				{"$ref": "util.json#/$defs/consumesName"},
+				{
+					"type": "string",
+					"$$switch_key": {
+						"key_site": "enum",
+						"key_ua": "enum",
+						"key_brew": "examples",
+						"value": [
+							"Favored Enemy",
+							"Innate Sorcery",
+							"Soul Trinket"
+						]
+					}
+				}
+			]
+		},
 
 		"_foundryIdRef": {
 			"type": "object",
@@ -336,7 +357,7 @@
 													"consumes": {
 														"type": "object",
 														"properties": {
-															"name": {"$ref": "util.json#/$defs/consumesName"}
+															"name": {"$ref": "#/$defs/_foundryConsumesName"}
 														},
 														"required": ["name"],
 														"additionalProperties": false
