@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.10.00",
+	"version": "1.10.1",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -4306,46 +4306,100 @@
 			"additionalProperties": false
 		},
 		"entryWrapped": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string"
+			"oneOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "wrapper"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"wrapped": {
+							"$ref": "#"
+						}
+					},
+					"required": [
+						"type",
+						"wrapped"
+					],
+					"additionalProperties": false
 				},
-				"type": {
-					"type": "string",
-					"const": "wrapper"
-				},
-				"source": {
-					"$ref": "util.json#/$defs/source"
-				},
-				"page": {
-					"$ref": "util.json#/$defs/page"
-				},
-				"data": {
-					"$ref": "#/$defs/_entryDataData"
-				},
-				"id": {
-					"type": "string"
-				},
-				"srd": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"srd52": {
-					"$ref": "util.json#/$defs/srd"
-				},
-				"basicRules": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"basicRules2024": {
-					"$ref": "util.json#/$defs/basicRules"
-				},
-				"wrapped": {}
-			},
-			"required": [
-				"type",
-				"wrapped"
-			],
-			"additionalProperties": false
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "wrapper"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"srd": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"srd52": {
+							"$ref": "util.json#/$defs/srd"
+						},
+						"basicRules": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"basicRules2024": {
+							"$ref": "util.json#/$defs/basicRules"
+						},
+						"wrappeds": {
+							"type": "array",
+							"items": {
+								"$ref": "#"
+							},
+							"minItems": 1
+						}
+					},
+					"required": [
+						"type",
+						"wrappeds"
+					],
+					"additionalProperties": false
+				}
+			]
 		},
 		"dataDamImmune": {
 			"oneOf": [

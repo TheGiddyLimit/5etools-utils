@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.10.00",
+	"version": "1.10.1",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2566,16 +2566,38 @@
 			"additionalProperties": false
 		},
 		"entryWrapped": {
-			"type": "object",
-			"$$merge": [
-				{"$ref" : "#/$defs/entry"},
+			"oneOf": [
 				{
-					"properties": {
-						"type": {"const": "wrapper"},
-						"wrapped": {}
-					},
-					"required": ["wrapped"],
-					"additionalProperties": false
+					"type": "object",
+					"$$merge": [
+						{"$ref" : "#/$defs/entry"},
+						{
+							"properties": {
+								"type": {"const": "wrapper"},
+								"wrapped": {"$ref": "#"}
+							},
+							"required": ["wrapped"],
+							"additionalProperties": false
+						}
+					]
+				},
+				{
+					"type": "object",
+					"$$merge": [
+						{"$ref" : "#/$defs/entry"},
+						{
+							"properties": {
+								"type": {"const": "wrapper"},
+								"wrappeds": {
+									"type": "array",
+									"items": {"$ref": "#"},
+									"minItems": 1
+								}
+							},
+							"required": ["wrappeds"],
+							"additionalProperties": false
+						}
+					]
 				}
 			]
 		},
