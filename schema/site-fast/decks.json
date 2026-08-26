@@ -1,9 +1,112 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "decks.json",
-	"version": "1.0.7",
+	"version": "1.0.9",
 	"type": "object",
 	"$defs": {
+		"_deckSpreadOutcomesCardMap": {
+			"type": "object",
+			"propertyNames": {
+				"pattern": "^[^A-Z|]+\\|[^A-Z|]+\\|[^A-Z|]+$"
+			},
+			"additionalProperties": {
+				"type": "string"
+			},
+			"minProperties": 1
+		},
+		"_deckSpreadOutcomesCorpusMap": {
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "#/$defs/_deckSpreadOutcomesCardMap"
+			},
+			"minProperties": 1
+		},
+		"_deckSpreadOutcomes": {
+			"type": "object",
+			"properties": {
+				"adventure": {
+					"$ref": "#/$defs/_deckSpreadOutcomesCorpusMap"
+				},
+				"book": {
+					"$ref": "#/$defs/_deckSpreadOutcomesCorpusMap"
+				}
+			},
+			"minProperties": 1,
+			"additionalProperties": false
+		},
+		"_deckSpreadPosition": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					},
+					"minItems": 1
+				},
+				"suits": {
+					"$comment": "The suits this position may draw from; `null` matches cards which have no suit. Omit to draw from the whole deck.",
+					"type": "array",
+					"items": {
+						"type": [
+							"string",
+							"null"
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"outcomes": {
+					"$comment": "Card outcomes specific to this position. These override spread-level outcomes.",
+					"$ref": "#/$defs/_deckSpreadOutcomes"
+				}
+			},
+			"required": [
+				"name",
+				"entries"
+			],
+			"additionalProperties": false
+		},
+		"_deckSpread": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"positions": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/_deckSpreadPosition"
+					},
+					"minItems": 1
+				},
+				"outcomes": {
+					"$comment": "Card outcomes shared by all positions.",
+					"$ref": "#/$defs/_deckSpreadOutcomes"
+				}
+			},
+			"required": [
+				"name",
+				"source",
+				"positions"
+			],
+			"additionalProperties": false
+		},
 		"deckData": {
 			"type": "object",
 			"properties": {
@@ -64,6 +167,14 @@
 					"items": {
 						"$ref": "entry.json"
 					}
+				},
+				"spreads": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/_deckSpread"
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"back": {
 					"$ref": "entry.json#/$defs/entryImage"
@@ -150,6 +261,14 @@
 							"items": {
 								"$ref": "entry.json"
 							}
+						},
+						"spreads": {
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/_deckSpread"
+							},
+							"minItems": 1,
+							"uniqueItems": true
 						},
 						"back": {
 							"$ref": "entry.json#/$defs/entryImage"
@@ -239,6 +358,14 @@
 							"items": {
 								"$ref": "entry.json"
 							}
+						},
+						"spreads": {
+							"type": "array",
+							"items": {
+								"$ref": "#/$defs/_deckSpread"
+							},
+							"minItems": 1,
+							"uniqueItems": true
 						},
 						"back": {
 							"$ref": "entry.json#/$defs/entryImage"
