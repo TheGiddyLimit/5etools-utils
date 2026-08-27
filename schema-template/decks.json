@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "decks.json",
-	"version": "1.0.9",
+	"version": "1.1.0",
 	"type": "object",
 
 	"$defs": {
@@ -35,6 +35,15 @@
 			"minProperties": 1,
 			"additionalProperties": false
 		},
+		"_deckSpreadSeeAlsoHeader": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"description": "UIDs of adventure/book headers to be linked as a footnote.\n\nE.g. \"Fortunes of Ravenloft|CoS|2|Fortunes of Ravenloft\"."
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		},
 
 		"_deckSpreadPosition": {
 			"type": "object",
@@ -50,11 +59,9 @@
 					"minItems": 1
 				},
 				"suits": {
-					"$comment": "The suits this position may draw from; `null` matches cards which have no suit. Omit to draw from the whole deck.",
+					"$comment": "The suits this position may draw from; \"None\" matches cards which have no suit. Omit to draw from the whole deck.",
 					"type": "array",
-					"items": {
-						"type": ["string", "null"]
-					},
+					"items": {"type": "string"},
 					"minItems": 1,
 					"uniqueItems": true
 				},
@@ -63,7 +70,7 @@
 					"$ref": "#/$defs/_deckSpreadOutcomes"
 				}
 			},
-			"required": ["name", "entries"],
+			"required": ["entries"],
 			"additionalProperties": false
 		},
 
@@ -78,6 +85,12 @@
 					"items": {
 						"$ref": "entry.json"
 					}
+				},
+				"seeAlsoAdventureHeader": {
+					"$ref": "#/$defs/_deckSpreadSeeAlsoHeader"
+				},
+				"seeAlsoBookHeader": {
+					"$ref": "#/$defs/_deckSpreadSeeAlsoHeader"
 				},
 				"positions": {
 					"type": "array",
