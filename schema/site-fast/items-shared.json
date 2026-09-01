@@ -3,7 +3,7 @@
 	"$id": "items-shared.json",
 	"title": "Shared Item Schema",
 	"description": "Shared item definitions to be used in item schemas.",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"$defs": {
 		"_itemModifySpeedEqual": {
 			"type": "string",
@@ -236,9 +236,9 @@
 			]
 		},
 		"itemProperty": {
-			"description": "- 2H: Two-Handed\n- 2H|XPHB: Two-Handed\n- A: Ammunition\n- A|XPHB: Ammunition\n- AF|DMG: Ammunition (futuristic)\n- AF|XDMG: Ammunition (futuristic)\n- BF|DMG: Burst Fire\n- BF|XDMG: Burst Fire\n- F: Finesse\n- F|XPHB: Finesse\n- H: Heavy\n- H|XPHB: Heavy\n- L: Light\n- L|XPHB: Light\n- LD: Loading\n- LD|XPHB: Loading\n- OTH: Other\n- R: Reach\n- R|XPHB: Reach\n- RLD: Reload\n- RLD|XDMG: Reload\n- S: Special\n- T: Thrown\n- T|XPHB: Thrown\n- V: Versatile\n- V|XPHB: Versatile\n- Vst|EGW: Vestige of Divergence",
+			"description": "- 2H: Two-Handed\n- 2H|XPHB: Two-Handed\n- A: Ammunition\n- A|XPHB: Ammunition\n- AF|DMG: Ammunition (futuristic)\n- AF|XDMG: Ammunition (futuristic)\n- BF|DMG: Burst Fire\n- BF|XDMG: Burst Fire\n- Evo|AU: Evolving Item\n- F: Finesse\n- F|XPHB: Finesse\n- H: Heavy\n- H|XPHB: Heavy\n- L: Light\n- L|XPHB: Light\n- LD: Loading\n- LD|XPHB: Loading\n- OTH: Other\n- R: Reach\n- R|XPHB: Reach\n- RLD: Reload\n- RLD|XDMG: Reload\n- S: Special\n- T: Thrown\n- T|XPHB: Thrown\n- V: Versatile\n- V|XPHB: Versatile\n- Vst|EGW: Vestige of Divergence",
 			"type": "string",
-			"markdownDescription": "- 2H: Two-Handed\n- 2H|XPHB: Two-Handed\n- A: Ammunition\n- A|XPHB: Ammunition\n- AF|DMG: Ammunition (futuristic)\n- AF|XDMG: Ammunition (futuristic)\n- BF|DMG: Burst Fire\n- BF|XDMG: Burst Fire\n- F: Finesse\n- F|XPHB: Finesse\n- H: Heavy\n- H|XPHB: Heavy\n- L: Light\n- L|XPHB: Light\n- LD: Loading\n- LD|XPHB: Loading\n- OTH: Other\n- R: Reach\n- R|XPHB: Reach\n- RLD: Reload\n- RLD|XDMG: Reload\n- S: Special\n- T: Thrown\n- T|XPHB: Thrown\n- V: Versatile\n- V|XPHB: Versatile\n- Vst|EGW: Vestige of Divergence",
+			"markdownDescription": "- 2H: Two-Handed\n- 2H|XPHB: Two-Handed\n- A: Ammunition\n- A|XPHB: Ammunition\n- AF|DMG: Ammunition (futuristic)\n- AF|XDMG: Ammunition (futuristic)\n- BF|DMG: Burst Fire\n- BF|XDMG: Burst Fire\n- Evo|AU: Evolving Item\n- F: Finesse\n- F|XPHB: Finesse\n- H: Heavy\n- H|XPHB: Heavy\n- L: Light\n- L|XPHB: Light\n- LD: Loading\n- LD|XPHB: Loading\n- OTH: Other\n- R: Reach\n- R|XPHB: Reach\n- RLD: Reload\n- RLD|XDMG: Reload\n- S: Special\n- T: Thrown\n- T|XPHB: Thrown\n- V: Versatile\n- V|XPHB: Versatile\n- Vst|EGW: Vestige of Divergence",
 			"enum": [
 				"2H",
 				"2H|XPHB",
@@ -248,6 +248,7 @@
 				"AF|XDMG",
 				"BF|DMG",
 				"BF|XDMG",
+				"Evo|AU",
 				"F",
 				"F|XPHB",
 				"H",
