@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.10.1",
+	"version": "1.10.2",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -3227,6 +3227,67 @@
 						"type",
 						"tag",
 						"abbreviation"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "statblock"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"displayName": {
+							"type": "string"
+						},
+						"hash": {
+							"type": "string"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"slotSize": {
+							"$ref": "#/$defs/_entryStatblockSlotSize"
+						},
+						"collapsed": {
+							"const": true
+						},
+						"tag": {
+							"const": "subclass"
+						},
+						"shortName": {
+							"type": "string"
+						},
+						"className": {
+							"type": "string"
+						},
+						"classSource": {
+							"$ref": "util.json#/$defs/source"
+						}
+					},
+					"required": [
+						"type",
+						"tag",
+						"name",
+						"shortName",
+						"source",
+						"className",
+						"classSource"
 					],
 					"additionalProperties": false
 				},
