@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.3",
+	"version": "1.19.4",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1761,13 +1761,22 @@
 								"key_ua": "enum",
 								"key_brew": "examples",
 								"value": [
+									"Bejeweled Conclave",
+									"Bringers of Cosmic Dawn",
+									"Covenant of the Grave",
+									"Crucible Keepers",
 									"Cult of the Dragon",
 									"Emerald Enclave",
 									"Harpers",
+									"Horizon Weavers",
 									"Lords' Alliance",
+									"Ninth Quill",
 									"Order of the Gauntlet",
+									"Phantasmic Circus",
 									"Purple Dragon Knights",
 									"Red Wizards",
+									"Seers of Sea and Sky",
+									"Sheltering Hands",
 									"Zhentarim"
 								]
 							}
