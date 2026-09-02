@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "corpus-shared.json",
-	"version": "1.0.3",
+	"version": "1.0.4",
 
 	"$defs": {
 		"corpusCover": {
@@ -36,15 +36,23 @@
 										"source": {"$ref": "util.json#/$defs/source"},
 										"depth": {"type": "integer"},
 										"statblock": {"const": true},
+										"tag": {"type": "string"},
+										"uid": {"type": "string"},
 										"index": {
 											"description": "The relative index of this header in the current chapter, i.e. if \"Treasure\" appears twice and you wish the contents entry to link to the second instance, set the \"index\" to 1.",
 											"type": "integer"
 										}
 									},
-									"additionalProperties": false,
 									"required": [
 										"header"
-									]
+									],
+									"dependentRequired": {
+										"source": ["statblock"],
+
+										"tag": ["statblock", "uid"],
+										"uid": ["statblock", "tag"]
+									},
+									"additionalProperties": false
 								}
 							]
 						}
