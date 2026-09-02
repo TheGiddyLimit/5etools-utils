@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.10.1",
+	"version": "1.10.2",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2242,6 +2242,23 @@
 					]
 				},
 
+				{
+					"type": "object",
+					"$$merge": [
+						{"$ref" : "#/$defs/_entryStatblockBase"},
+						{
+							"properties": {
+								"tag": {"const": "subclass"},
+								"name": {"type": "string"},
+								"shortName": {"type": "string"},
+								"className": {"type": "string"},
+								"classSource": {"$ref": "util.json#/$defs/source"}
+							},
+							"required": ["tag", "name", "shortName", "source", "className", "classSource"],
+							"additionalProperties": false
+						}
+					]
+				},
 				{
 					"type": "object",
 					"$$merge": [
