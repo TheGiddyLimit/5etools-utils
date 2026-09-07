@@ -135,12 +135,16 @@
 				"LFL",
 				"EFA",
 				"FFotR",
+				"RHW",
+				"AU",
+				"AUD",
 				"TD",
 				"Screen",
 				"ScreenWildernessKit",
 				"ScreenDungeonKit",
 				"ScreenSpelljammer",
 				"XScreen",
+				"XScreenRHW",
 				"HF",
 				"HFFotM",
 				"HFStCM",
@@ -184,7 +188,9 @@
 				"MCV3MC",
 				"MCV4EC",
 				"MisMV1",
-				"AATM"
+				"AATM",
+				"CaBoMP",
+				"BQDD"
 			]
 		},
 		"sourcesLegacy": {
@@ -378,12 +384,18 @@
 				"LFL",
 				"EFA",
 				"FFotR",
+				"RHW",
+				"AU",
+				"AUD",
 				"XScreen",
+				"XScreenRHW",
 				"HFDoMM",
 				"UtHftLH",
 				"ScoEE",
 				"HBTD",
-				"BQGT"
+				"BQGT",
+				"CaBoMP",
+				"BQDD"
 			]
 		}
 	}
