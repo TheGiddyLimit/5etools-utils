@@ -60,7 +60,7 @@
 		"ajv": "^8.18.0",
 		"ajv-formats": "^3.0.1",
 		"commander": "^14.0.3",
-		"eslint": "^10.0.1",
+		"eslint": "^10.10.0",
 		"hasha": "^7.0.0",
 		"he": "^1.2.0",
 		"json-source-map": "^0.6.1",

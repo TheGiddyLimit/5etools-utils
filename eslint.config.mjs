@@ -102,6 +102,7 @@ const rules = {
 		"error",
 		{
 			"newIsCap": true,
+			"newIsCapExceptions": ["constructor"],
 			"capIsNew": false,
 		},
 	],
