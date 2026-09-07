@@ -6,7 +6,6 @@
 	"main": "lib/Api.js",
 	"exports": {
 		".": "./lib/Api.js",
-		"./eslint": "./lib/eslint/eslint-plugin-jquery.js",
 		"./eslint/*": "./lib/eslint/*",
 		"./lib/*": "./lib/*",
 		"./schema/*": "./schema/*",
@@ -34,6 +33,7 @@
 		"test-img-file-sizes": "bin/test-img-file-sizes.js",
 		"test-img-source-names-brew": "bin/test-img-source-names-brew.js",
 		"test-img-source-names-ua": "bin/test-img-source-names-ua.js",
+		"vet-eslint": "bin/lint-js.js",
 		"lint-js-changed": "bin/lint-js-changed.js"
 	},
 	"scripts": {
@@ -42,7 +42,7 @@
 		"test": "npm run lint:js && npm run test:js",
 		"test:js": "node --disable-warning=ExperimentalWarning --localstorage-file test/localstorage.tmp --experimental-vm-modules node_modules/jest/bin/jest.js",
 		"lint": "npm run lint:js",
-		"lint:js": "eslint lib node test --fix",
+		"lint:js": "node bin/lint-js.js lib node test --fix",
 		"lint:js:fast": "node bin/lint-js-changed.js",
 		"preversion": "npm t"
 	},
@@ -57,10 +57,12 @@
 	},
 	"homepage": "https://github.com/TheGiddyLimit/5etools-utils#readme",
 	"dependencies": {
+		"@eslint/js": "^10.0.1",
 		"ajv": "^8.18.0",
 		"ajv-formats": "^3.0.1",
 		"commander": "^14.0.3",
 		"eslint": "^10.10.0",
+		"globals": "^17.4.0",
 		"hasha": "^7.0.0",
 		"he": "^1.2.0",
 		"json-source-map": "^0.6.1",
@@ -69,7 +71,6 @@
 		"simple-git": "^3.36.0"
 	},
 	"devDependencies": {
-		"@eslint/js": "^10.0.1",
 		"jest": "^30.2.0"
 	}
 }
