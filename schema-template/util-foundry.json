@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.12",
+	"version": "1.1.13",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -781,6 +781,9 @@
 				"img": {"type": "string"},
 				"advancement": {"$ref": "util-foundry.json#/$defs/foundryAdvancementsArray"},
 
+				"ignoreSrdActivities": {"const": true},
+				"ignoreSrdEffects": {"const": true},
+
 				"migrationVersion": {"type": "integer"},
 
 				"_merge": {"$ref": "#/$defs/foundryMergeObject"}
@@ -809,8 +812,6 @@
 					"properties": {
 						"entries": {"type": "array", "items": {"$ref": "entry.json"}},
 						"isIgnored": {"const": true},
-						"ignoreSrdActivities": {"const": true},
-						"ignoreSrdEffects": {"const": true},
 
 						"subEntities": {"$ref": "#/$defs/foundrySubEntitiesObject"}
 					}

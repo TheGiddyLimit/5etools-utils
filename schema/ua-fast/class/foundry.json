@@ -46,6 +46,12 @@
 					"advancement": {
 						"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"
 					},
+					"ignoreSrdActivities": {
+						"const": true
+					},
+					"ignoreSrdEffects": {
+						"const": true
+					},
 					"migrationVersion": {
 						"type": "integer"
 					},
@@ -74,12 +80,6 @@
 						"type": "boolean"
 					},
 					"isIgnored": {
-						"const": true
-					},
-					"ignoreSrdActivities": {
-						"const": true
-					},
-					"ignoreSrdEffects": {
 						"const": true
 					},
 					"actorTokenMod": {
@@ -146,6 +146,12 @@
 					"advancement": {
 						"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"
 					},
+					"ignoreSrdActivities": {
+						"const": true
+					},
+					"ignoreSrdEffects": {
+						"const": true
+					},
 					"migrationVersion": {
 						"type": "integer"
 					},
@@ -183,12 +189,6 @@
 						"type": "boolean"
 					},
 					"isIgnored": {
-						"const": true
-					},
-					"ignoreSrdActivities": {
-						"const": true
-					},
-					"ignoreSrdEffects": {
 						"const": true
 					},
 					"actorTokenMod": {
@@ -251,6 +251,12 @@
 					"advancement": {
 						"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"
 					},
+					"ignoreSrdActivities": {
+						"const": true
+					},
+					"ignoreSrdEffects": {
+						"const": true
+					},
 					"migrationVersion": {
 						"type": "integer"
 					},
@@ -288,12 +294,6 @@
 						"type": "boolean"
 					},
 					"isIgnored": {
-						"const": true
-					},
-					"ignoreSrdActivities": {
-						"const": true
-					},
-					"ignoreSrdEffects": {
 						"const": true
 					},
 					"actorTokenMod": {
@@ -358,6 +358,12 @@
 					"advancement": {
 						"$ref": "../util-foundry.json#/$defs/foundryAdvancementsArray"
 					},
+					"ignoreSrdActivities": {
+						"const": true
+					},
+					"ignoreSrdEffects": {
+						"const": true
+					},
 					"migrationVersion": {
 						"type": "integer"
 					},
@@ -401,12 +407,6 @@
 						"type": "boolean"
 					},
 					"isIgnored": {
-						"const": true
-					},
-					"ignoreSrdActivities": {
-						"const": true
-					},
-					"ignoreSrdEffects": {
 						"const": true
 					},
 					"actorTokenMod": {

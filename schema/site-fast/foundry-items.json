@@ -54,6 +54,12 @@
 					"advancement": {
 						"$ref": "util-foundry.json#/$defs/foundryAdvancementsArray"
 					},
+					"ignoreSrdActivities": {
+						"const": true
+					},
+					"ignoreSrdEffects": {
+						"const": true
+					},
 					"migrationVersion": {
 						"type": "integer"
 					},
