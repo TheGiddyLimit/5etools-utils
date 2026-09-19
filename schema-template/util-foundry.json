@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.13",
+	"version": "1.1.14",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -563,6 +563,18 @@
 			]
 		},
 
+		"_foundryActivityObject_teleport": {
+			"$$merge": [
+				{"$ref": "#/$defs/_foundryActivityObject_base"},
+				{
+					"type": "object",
+					"properties": {
+						"type": {"const": "teleport"}
+					}
+				}
+			]
+		},
+
 		"_foundryActivityObject_forward": {
 			"$$merge": [
 				{"$ref": "#/$defs/_foundryActivityObject_base"},
@@ -599,6 +611,7 @@
 				{"$ref": "#/$defs/_foundryActivityObject_summon"},
 				{"$ref": "#/$defs/_foundryActivityObject_enchant"},
 				{"$ref": "#/$defs/_foundryActivityObject_transform"},
+				{"$ref": "#/$defs/_foundryActivityObject_teleport"},
 				{"$ref": "#/$defs/_foundryActivityObject_utility"},
 				{"$ref": "#/$defs/_foundryActivityObject_forward"}
 			]
