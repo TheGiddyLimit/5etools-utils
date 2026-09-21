@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.1.15",
+	"version": "1.2.0",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -479,7 +479,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -488,6 +490,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -585,7 +592,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -594,6 +603,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -694,7 +708,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -703,6 +719,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -803,7 +824,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -812,6 +835,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -912,7 +940,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -921,6 +951,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -1042,7 +1077,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -1051,6 +1088,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -1151,7 +1193,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -1160,6 +1204,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -1268,7 +1317,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -1277,6 +1328,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -1428,7 +1484,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -1437,6 +1495,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -1540,7 +1603,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -1549,6 +1614,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -1660,7 +1730,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -1669,6 +1741,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -1769,7 +1846,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -1778,6 +1857,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
@@ -1881,7 +1965,9 @@
 					"type": "string"
 				},
 				"description": {
-					"type": "object"
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
 				},
 				"descriptionEntries": {
 					"description": "If supplied, will be used to populate \"description.value\".",
@@ -1890,6 +1976,11 @@
 						"$ref": "entry.json"
 					},
 					"markdownDescription": "If supplied, will be used to populate &quot;description.value&quot;."
+				},
+				"descriptionChat": {
+					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
+					"type": "string",
+					"markdownDescription": "If supplied, will be used to populate &quot;description.chatFlavor&quot;."
 				},
 				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
