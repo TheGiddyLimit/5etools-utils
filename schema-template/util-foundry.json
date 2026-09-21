@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.1.14",
+	"version": "1.1.15",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -324,6 +324,11 @@
 				"img": {"type": "string"},
 				"description": {"type": "object"},
 				"descriptionEntries": {
+					"description": "If supplied, will be used to populate \"description.value\".",
+					"type": "array",
+					"items": {"$ref": "entry.json"}
+				},
+				"descriptionEntriesChat": {
 					"description": "If supplied, will be used to populate \"description.chatFlavor\".",
 					"type": "array",
 					"items": {"$ref": "entry.json"}
