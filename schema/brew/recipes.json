@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "recipes.json",
-	"version": "1.5.11",
+	"version": "1.5.12",
 	"type": "object",
 	"$defs": {
 		"recipeData": {
@@ -151,6 +151,8 @@
 				},
 				"miscTags": {
 					"type": "array",
+					"uniqueItems": true,
+					"minItems": 1,
 					"items": {
 						"type": "string",
 						"enum": [
@@ -161,6 +163,8 @@
 				},
 				"allergenGroups": {
 					"type": "array",
+					"uniqueItems": true,
+					"minItems": 1,
 					"description": "One of the 14 major food allergens; see https://erudus.com/food-allergens for more information.",
 					"items": {
 						"type": "string",
@@ -185,6 +189,8 @@
 				},
 				"dishTypes": {
 					"type": "array",
+					"uniqueItems": true,
+					"minItems": 1,
 					"items": {
 						"type": "string",
 						"examples": [
@@ -371,6 +377,8 @@
 						},
 						"miscTags": {
 							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
 							"items": {
 								"type": "string",
 								"enum": [
@@ -381,6 +389,8 @@
 						},
 						"allergenGroups": {
 							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
 							"description": "One of the 14 major food allergens; see https://erudus.com/food-allergens for more information.",
 							"items": {
 								"type": "string",
@@ -405,6 +415,8 @@
 						},
 						"dishTypes": {
 							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
 							"items": {
 								"type": "string",
 								"examples": [
@@ -595,6 +607,8 @@
 						},
 						"miscTags": {
 							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
 							"items": {
 								"type": "string",
 								"enum": [
@@ -605,6 +619,8 @@
 						},
 						"allergenGroups": {
 							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
 							"description": "One of the 14 major food allergens; see https://erudus.com/food-allergens for more information.",
 							"items": {
 								"type": "string",
@@ -629,6 +645,8 @@
 						},
 						"dishTypes": {
 							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
 							"items": {
 								"type": "string",
 								"examples": [
