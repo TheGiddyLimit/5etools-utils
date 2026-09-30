@@ -1,9 +1,29 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "corpus-shared.json",
-	"version": "1.0.4",
+	"version": "1.0.5",
 
 	"$defs": {
+		"wrappedAdventureBookDataArray": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {"$ref": "util.json#/$defs/corpusId"},
+					"source": {"$ref": "util.json#/$defs/source"},
+					"data": {
+						"$$ifNotFast": {
+							"$ref": "util.json#/$defs/adventureBookData"
+						}
+					}
+				},
+				"required": ["id", "source", "data"],
+				"additionalProperties": false
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		},
+
 		"corpusCover": {
 			"description": "A link to an image. Preferred sizes are 300 x 300px or 600 x 600px.",
 			"$ref": "entry.json#/$defs/mediaHref"

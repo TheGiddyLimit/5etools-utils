@@ -1,32 +1,9 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.14.1",
+	"version": "1.14.2",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
-		"wrappedAdventureBookDataArray": {
-			"type": "array",
-			"items": {
-				"type": "object",
-				"properties": {
-					"id": {
-						"$ref": "util.json#/$defs/corpusId"
-					},
-					"source": {
-						"$ref": "util.json#/$defs/source"
-					},
-					"data": {}
-				},
-				"required": [
-					"id",
-					"source",
-					"data"
-				],
-				"additionalProperties": false
-			},
-			"minItems": 1,
-			"uniqueItems": true
-		},
 		"_meta": {
 			"description": "Metadata for the included data arrays",
 			"type": "object",
@@ -552,7 +529,7 @@
 			"$ref": "adventures.json#/properties/adventure"
 		},
 		"adventureData": {
-			"$ref": "#/$defs/wrappedAdventureBookDataArray"
+			"$ref": "corpus-shared.json#/$defs/wrappedAdventureBookDataArray"
 		},
 		"monster": {
 			"$ref": "bestiary/bestiary.json#/properties/monster"
@@ -588,7 +565,7 @@
 			"$ref": "books.json#/properties/book"
 		},
 		"bookData": {
-			"$ref": "#/$defs/wrappedAdventureBookDataArray"
+			"$ref": "corpus-shared.json#/$defs/wrappedAdventureBookDataArray"
 		},
 		"class": {
 			"$ref": "class/class.json#/properties/class"

@@ -1,12 +1,15 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "adventure.json",
-	"version": "1.2.0",
+	"version": "1.3.0",
 	"type": "object",
 	"properties": {
-		"data": {
-			"$ref": "../util.json#/$defs/adventureBookData"
+		"adventureData": {
+			"$ref": "../corpus-shared.json#/$defs/wrappedAdventureBookDataArray"
 		}
 	},
+	"required": [
+		"adventureData"
+	],
 	"additionalProperties": false
 }
