@@ -3,7 +3,7 @@
 	"$id": "util-copy.json",
 
 	"title": "Util: Copy",
-	"version": "1.1.2",
+	"version": "1.1.3",
 
 	"$defs": {
 		"_mod_renameArr_rename": {
@@ -707,6 +707,7 @@
 			"enum": [
 				"monster",
 				"monsterFluff",
+				"monsterTemplate",
 				"legendaryGroup",
 				"class",
 				"classFluff",
@@ -748,6 +749,7 @@
 				"optionalfeatureFluff",
 				"psionic",
 				"race",
+				"raceFeature",
 				"subrace",
 				"raceFluff",
 				"reward",

@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.5",
+	"version": "1.19.6",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -17,12 +17,10 @@
 			"type": "object",
 			"properties": {
 				"dependencies": {
-					"type": "object",
-					"patternProperties": {
-						"^[a-zA-Z]+$": {
-							"$ref": "#/$defs/metaDependenciesArray"
-						}
-					}
+					"$ref": "util-meta.json#/$defs/dependencies"
+				},
+				"internalCopies": {
+					"$ref": "util-meta.json#/$defs/internalCopies"
 				},
 				"otherSources": {
 					"type": "object",
@@ -34,7 +32,9 @@
 						}
 					}
 				}
-			}
+			},
+			"additionalProperties": false,
+			"minProperties": 1
 		},
 		"url": {
 			"type": "string",

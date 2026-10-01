@@ -1,0 +1,36 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "util-meta.json",
+	"version": "1.0.0",
+	"title": "Util: Meta",
+	"$defs": {
+		"dependencies": {
+			"description": "A map of `\"<data property>\": [\"<JsonSource1>\", ..., \"<JsonSourceN>\"]`. Entities from these sources can then be extended/referenced in this file.\n\nNote: when copying classes/subclasses/class features/subclass features, the array should consist of \"<classIdentifier1>\", ..., \"<classIdentifierN>\" items, where \"classIdentifierN\" matches the keys in \"5etools/data/class/index.json\" (when copying class/etc. homebrew, normal \"source\"-based linking applies).",
+			"type": "object",
+			"patternProperties": {
+				"^[a-zA-Z]+$": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				}
+			},
+			"propertyNames": {
+				"$ref": "util-copy.json#/$defs/copyableProps"
+			},
+			"markdownDescription": "A map of &quot;&lt;data property&gt;&quot;: [&quot;&lt;JsonSource1&gt;&quot;, ..., &quot;&lt;JsonSourceN&gt;&quot;]. Entities from these sources can then be extended/referenced in this file.\n\nNote: when copying classes/subclasses/class features/subclass features, the array should consist of &quot;&lt;classIdentifier1&gt;&quot;, ..., &quot;&lt;classIdentifierN&gt;&quot; items, where &quot;classIdentifierN&quot; matches the keys in &quot;5etools/data/class/index.json&quot; (when copying class/etc. homebrew, normal &quot;source&quot;-based linking applies)."
+		},
+		"internalCopies": {
+			"description": "An array of keys that are copied from within the current document. e.g. \"item\", \"monsterFluff\", \"background\" etc.",
+			"type": "array",
+			"items": {
+				"$ref": "util-copy.json#/$defs/copyableProps"
+			},
+			"minItems": 1,
+			"uniqueItems": true,
+			"markdownDescription": "An array of keys that are copied from within the current document. e.g. &quot;item&quot;, &quot;monsterFluff&quot;, &quot;background&quot; etc."
+		}
+	}
+}
