@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.14.3",
+	"version": "1.15.0",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 
@@ -681,9 +681,6 @@
 		},
 		"raceFluff": {
 			"$ref": "fluff-races.json#/properties/raceFluff"
-		},
-		"raceFluffMeta": {
-			"$ref": "fluff-races.json#/properties/raceFluffMeta"
 		},
 		"recipe": {
 			"$ref": "recipes.json#/properties/recipe"
