@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.11.0",
+	"version": "1.11.1",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -1149,175 +1149,358 @@
 			"additionalProperties": false
 		},
 		"abilityGeneric": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string"
+			"anyOf": [
+				{
+					"type": "object",
+					"deprecated": true,
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "abilityGeneric"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"text": {
+							"type": "string"
+						},
+						"attributes": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/abilityScoreAbbreviation"
+							}
+						}
+					},
+					"required": [
+						"type",
+						"text"
+					],
+					"additionalProperties": false
 				},
-				"type": {
-					"type": "string",
-					"const": "abilityGeneric"
-				},
-				"source": {
-					"$ref": "util.json#/$defs/source"
-				},
-				"page": {
-					"$ref": "util.json#/$defs/page"
-				},
-				"data": {
-					"$ref": "#/$defs/_entryDataData"
-				},
-				"id": {
-					"type": "string"
-				},
-				"text": {
-					"type": "string"
-				},
-				"attributes": {
-					"type": "array",
-					"items": {
-						"$ref": "util.json#/$defs/abilityScoreAbbreviation"
-					}
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "abilityGeneric"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"entry": {
+							"type": "string"
+						},
+						"attributes": {
+							"type": "array",
+							"items": {
+								"$ref": "util.json#/$defs/abilityScoreAbbreviation"
+							}
+						}
+					},
+					"required": [
+						"type",
+						"entry"
+					],
+					"additionalProperties": false
 				}
-			},
-			"required": [
-				"type",
-				"text"
 			],
-			"additionalProperties": false
+			"$comment": "Ditto \"entryStatblockInline\"."
 		},
 		"entryLink": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string"
-				},
-				"type": {
-					"type": "string",
-					"const": "link"
-				},
-				"source": {
-					"$ref": "util.json#/$defs/source"
-				},
-				"page": {
-					"$ref": "util.json#/$defs/page"
-				},
-				"data": {
-					"$ref": "#/$defs/_entryDataData"
-				},
-				"id": {
-					"type": "string"
-				},
-				"text": {
-					"type": "string"
-				},
-				"href": {
-					"oneOf": [
-						{
-							"type": "object",
-							"properties": {
-								"type": {
-									"const": "internal"
-								},
-								"path": {
-									"type": "string"
-								},
-								"hash": {
-									"type": "string"
-								},
-								"hashPreEncoded": {
-									"type": "boolean"
-								},
-								"subhashes": {
-									"type": "array",
-									"items": {
-										"oneOf": [
-											{
-												"type": "object",
-												"properties": {
-													"key": {
-														"type": "string"
-													},
-													"values": {
-														"type": "array",
-														"items": {
-															"type": "string"
-														}
-													},
-													"preEncoded": {
-														"type": "boolean"
-													}
-												},
-												"required": [
-													"key",
-													"values"
-												],
-												"additionalProperties": false
-											},
-											{
-												"type": "object",
-												"properties": {
-													"key": {
-														"type": "string"
-													},
-													"value": {
-														"type": "string"
-													},
-													"preEncoded": {
-														"type": "boolean"
-													}
-												},
-												"required": [
-													"key",
-													"value"
-												],
-												"additionalProperties": false
-											}
-										]
-									}
-								},
-								"hover": {
+			"anyOf": [
+				{
+					"type": "object",
+					"deprecated": true,
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "link"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"text": {
+							"type": "string"
+						},
+						"href": {
+							"oneOf": [
+								{
 									"type": "object",
 									"properties": {
-										"page": {
-											"$ref": "util.json#/$defs/page"
+										"type": {
+											"const": "internal"
 										},
-										"source": {
-											"$ref": "util.json#/$defs/source"
+										"path": {
+											"type": "string"
 										},
 										"hash": {
-											"description": "Optional; overrides the href hash for hover handlers.",
-											"type": "string",
-											"markdownDescription": "Optional; overrides the href hash for hover handlers."
+											"type": "string"
 										},
 										"hashPreEncoded": {
 											"type": "boolean"
+										},
+										"subhashes": {
+											"type": "array",
+											"items": {
+												"oneOf": [
+													{
+														"type": "object",
+														"properties": {
+															"key": {
+																"type": "string"
+															},
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "string"
+																}
+															},
+															"preEncoded": {
+																"type": "boolean"
+															}
+														},
+														"required": [
+															"key",
+															"values"
+														],
+														"additionalProperties": false
+													},
+													{
+														"type": "object",
+														"properties": {
+															"key": {
+																"type": "string"
+															},
+															"value": {
+																"type": "string"
+															},
+															"preEncoded": {
+																"type": "boolean"
+															}
+														},
+														"required": [
+															"key",
+															"value"
+														],
+														"additionalProperties": false
+													}
+												]
+											}
+										},
+										"hover": {
+											"type": "object",
+											"properties": {
+												"page": {
+													"$ref": "util.json#/$defs/page"
+												},
+												"source": {
+													"$ref": "util.json#/$defs/source"
+												},
+												"hash": {
+													"description": "Optional; overrides the href hash for hover handlers.",
+													"type": "string",
+													"markdownDescription": "Optional; overrides the href hash for hover handlers."
+												},
+												"hashPreEncoded": {
+													"type": "boolean"
+												}
+											},
+											"additionalProperties": false,
+											"required": [
+												"page",
+												"source"
+											]
 										}
 									},
-									"additionalProperties": false,
 									"required": [
-										"page",
-										"source"
-									]
+										"path"
+									],
+									"additionalProperties": false
+								},
+								{
+									"$ref": "#/$defs/mediaHrefExternal"
 								}
-							},
-							"required": [
-								"path"
-							],
-							"additionalProperties": false
-						},
-						{
-							"$ref": "#/$defs/mediaHrefExternal"
+							]
 						}
-					]
+					},
+					"required": [
+						"type",
+						"text",
+						"href"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string",
+							"const": "link"
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"data": {
+							"$ref": "#/$defs/_entryDataData"
+						},
+						"id": {
+							"type": "string"
+						},
+						"entry": {
+							"type": "string"
+						},
+						"href": {
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"type": {
+											"const": "internal"
+										},
+										"path": {
+											"type": "string"
+										},
+										"hash": {
+											"type": "string"
+										},
+										"hashPreEncoded": {
+											"type": "boolean"
+										},
+										"subhashes": {
+											"type": "array",
+											"items": {
+												"oneOf": [
+													{
+														"type": "object",
+														"properties": {
+															"key": {
+																"type": "string"
+															},
+															"values": {
+																"type": "array",
+																"items": {
+																	"type": "string"
+																}
+															},
+															"preEncoded": {
+																"type": "boolean"
+															}
+														},
+														"required": [
+															"key",
+															"values"
+														],
+														"additionalProperties": false
+													},
+													{
+														"type": "object",
+														"properties": {
+															"key": {
+																"type": "string"
+															},
+															"value": {
+																"type": "string"
+															},
+															"preEncoded": {
+																"type": "boolean"
+															}
+														},
+														"required": [
+															"key",
+															"value"
+														],
+														"additionalProperties": false
+													}
+												]
+											}
+										},
+										"hover": {
+											"type": "object",
+											"properties": {
+												"page": {
+													"$ref": "util.json#/$defs/page"
+												},
+												"source": {
+													"$ref": "util.json#/$defs/source"
+												},
+												"hash": {
+													"description": "Optional; overrides the href hash for hover handlers.",
+													"type": "string",
+													"markdownDescription": "Optional; overrides the href hash for hover handlers."
+												},
+												"hashPreEncoded": {
+													"type": "boolean"
+												}
+											},
+											"additionalProperties": false,
+											"required": [
+												"page",
+												"source"
+											]
+										}
+									},
+									"required": [
+										"path"
+									],
+									"additionalProperties": false
+								},
+								{
+									"$ref": "#/$defs/mediaHrefExternal"
+								}
+							]
+						}
+					},
+					"required": [
+						"type",
+						"entry",
+						"href"
+					],
+					"additionalProperties": false
 				}
-			},
-			"required": [
-				"type",
-				"text",
-				"href"
 			],
-			"additionalProperties": false
+			"$comment": "Ditto \"entryStatblockInline\"."
 		},
 		"entryOptFeature": {
 			"description": "For e.g. Eldritch Invocations which require prerequisite text. Deprecated; prefer \"refOptionalfeature\" or \"statblock\" entries instead.",
