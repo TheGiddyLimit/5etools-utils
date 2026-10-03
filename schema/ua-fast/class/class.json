@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.12.14",
+	"version": "2.13.0",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -1444,43 +1444,7 @@
 							"$ref": "../util.json#/$defs/page"
 						},
 						"fluff": {
-							"oneOf": [
-								{
-									"$ref": "../util.json#/$defs/fluffObject"
-								},
-								{
-									"deprecated": true,
-									"type": "array",
-									"items": {
-										"type": "object",
-										"properties": {
-											"name": {
-												"type": "string"
-											},
-											"entries": {
-												"type": "array",
-												"items": {
-													"$ref": "../entry.json"
-												}
-											},
-											"page": {
-												"$ref": "../util.json#/$defs/page"
-											},
-											"source": {
-												"$ref": "../util.json#/$defs/source"
-											},
-											"type": {
-												"type": "string"
-											}
-										},
-										"required": [
-											"entries",
-											"source"
-										],
-										"additionalProperties": false
-									}
-								}
-							]
+							"$ref": "../util.json#/$defs/fluffObject"
 						},
 						"additionalSpells": {
 							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
@@ -1727,43 +1691,7 @@
 							"$ref": "../util.json#/$defs/page"
 						},
 						"fluff": {
-							"oneOf": [
-								{
-									"$ref": "../util.json#/$defs/fluffObject"
-								},
-								{
-									"deprecated": true,
-									"type": "array",
-									"items": {
-										"type": "object",
-										"properties": {
-											"name": {
-												"type": "string"
-											},
-											"entries": {
-												"type": "array",
-												"items": {
-													"$ref": "../entry.json"
-												}
-											},
-											"page": {
-												"$ref": "../util.json#/$defs/page"
-											},
-											"source": {
-												"$ref": "../util.json#/$defs/source"
-											},
-											"type": {
-												"type": "string"
-											}
-										},
-										"required": [
-											"entries",
-											"source"
-										],
-										"additionalProperties": false
-									}
-								}
-							]
+							"$ref": "../util.json#/$defs/fluffObject"
 						},
 						"additionalSpells": {
 							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
@@ -2013,43 +1941,7 @@
 					"$ref": "../util.json#/$defs/page"
 				},
 				"fluff": {
-					"oneOf": [
-						{
-							"$ref": "../util.json#/$defs/fluffObject"
-						},
-						{
-							"deprecated": true,
-							"type": "array",
-							"items": {
-								"type": "object",
-								"properties": {
-									"name": {
-										"type": "string"
-									},
-									"entries": {
-										"type": "array",
-										"items": {
-											"$ref": "../entry.json"
-										}
-									},
-									"page": {
-										"$ref": "../util.json#/$defs/page"
-									},
-									"source": {
-										"$ref": "../util.json#/$defs/source"
-									},
-									"type": {
-										"type": "string"
-									}
-								},
-								"required": [
-									"entries",
-									"source"
-								],
-								"additionalProperties": false
-							}
-						}
-					]
+					"$ref": "../util.json#/$defs/fluffObject"
 				},
 				"additionalSpells": {
 					"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
