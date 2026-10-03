@@ -1,9 +1,141 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "fluff-races.json",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"type": "object",
 	"$defs": {
+		"raceFluffMetaData": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"preserveName": {
+					"const": true
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"images": {
+					"oneOf": [
+						{
+							"type": "array",
+							"items": {
+								"$ref": "entry.json#/$defs/entryImage"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
+						{
+							"type": "null"
+						}
+					]
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				}
+			},
+			"additionalProperties": false
+		},
+		"raceFluffMeta": {
+			"anyOf": [
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"preserveName": {
+							"const": true
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"images": {
+							"oneOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "entry.json#/$defs/entryImage"
+									},
+									"minItems": 1,
+									"uniqueItems": true
+								},
+								{
+									"type": "null"
+								}
+							]
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"name",
+						"source",
+						"entries"
+					]
+				},
+				{
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"preserveName": {
+							"const": true
+						},
+						"source": {
+							"$ref": "util.json#/$defs/source"
+						},
+						"images": {
+							"oneOf": [
+								{
+									"type": "array",
+									"items": {
+										"$ref": "entry.json#/$defs/entryImage"
+									},
+									"minItems": 1,
+									"uniqueItems": true
+								},
+								{
+									"type": "null"
+								}
+							]
+						},
+						"entries": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							}
+						},
+						"page": {
+							"$ref": "util.json#/$defs/page"
+						},
+						"_copy": {
+							"$ref": "util-copy.json#/$defs/copyBlock_copy_generic"
+						}
+					},
+					"additionalProperties": false,
+					"required": [
+						"_copy"
+					]
+				}
+			]
+		},
 		"raceFluffData": {
 			"type": "object",
 			"properties": {
@@ -141,14 +273,11 @@
 			}
 		},
 		"raceFluffMeta": {
-			"type": "object",
-			"properties": {
-				"uncommon": {
-					"$ref": "entry.json"
-				},
-				"monstrous": {
-					"$ref": "entry.json"
-				}
+			"type": "array",
+			"uniqueItems": true,
+			"minItems": 1,
+			"items": {
+				"$ref": "#/$defs/raceFluffMeta"
 			}
 		},
 		"_meta": {
