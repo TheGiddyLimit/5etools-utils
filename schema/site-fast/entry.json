@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.10.2",
+	"version": "1.11.0",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -2680,7 +2680,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2709,7 +2710,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2738,7 +2740,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2767,7 +2770,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2796,7 +2800,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2825,7 +2830,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2854,7 +2860,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2883,7 +2890,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2912,7 +2920,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2941,7 +2950,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2970,7 +2980,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -2999,7 +3010,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3028,7 +3040,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3057,7 +3070,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3086,7 +3100,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3115,7 +3130,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3144,7 +3160,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3173,7 +3190,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3202,7 +3220,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3231,7 +3250,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3260,7 +3280,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3289,7 +3310,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3318,7 +3340,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3347,7 +3370,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3376,7 +3400,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3405,7 +3430,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3434,7 +3460,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3463,7 +3490,8 @@
 						"dataType",
 						"data"
 					],
-					"additionalProperties": false
+					"additionalProperties": false,
+					"deprecated": true
 				},
 				{
 					"type": "object",
@@ -3492,9 +3520,854 @@
 						"dataType",
 						"data"
 					],
+					"additionalProperties": false,
+					"deprecated": true
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "monster"
+						},
+						"statblockData": {
+							"$ref": "bestiary/bestiary.json#/$defs/creature"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "legendaryGroup"
+						},
+						"statblockData": {
+							"$ref": "bestiary/legendarygroups.json#/$defs/legendaryGroup"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "spell"
+						},
+						"statblockData": {
+							"$ref": "spells/spells.json#/$defs/spell"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "action"
+						},
+						"statblockData": {
+							"$ref": "actions.json#/$defs/action"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "item"
+						},
+						"statblockData": {
+							"$ref": "items.json#/$defs/item"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "background"
+						},
+						"statblockData": {
+							"$ref": "backgrounds.json#/$defs/background"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "charoption"
+						},
+						"statblockData": {
+							"$ref": "charcreationoptions.json#/$defs/charoption"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "condition"
+						},
+						"statblockData": {
+							"$ref": "conditionsdiseases.json#/$defs/condition"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "disease"
+						},
+						"statblockData": {
+							"$ref": "conditionsdiseases.json#/$defs/disease"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "status"
+						},
+						"statblockData": {
+							"$ref": "conditionsdiseases.json#/$defs/status"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "cult"
+						},
+						"statblockData": {
+							"$ref": "cultsboons.json#/$defs/cult"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "boon"
+						},
+						"statblockData": {
+							"$ref": "cultsboons.json#/$defs/boon"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "deity"
+						},
+						"statblockData": {
+							"$ref": "deities.json#/$defs/deity"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "feat"
+						},
+						"statblockData": {
+							"$ref": "feats.json#/$defs/feat"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "language"
+						},
+						"statblockData": {
+							"$ref": "languages.json#/$defs/language"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "object"
+						},
+						"statblockData": {
+							"$ref": "objects.json#/$defs/object"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "optionalfeature"
+						},
+						"statblockData": {
+							"$ref": "optionalfeatures.json#/$defs/optionalfeature"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "psionic"
+						},
+						"statblockData": {
+							"$ref": "psionics.json#/$defs/psionic"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "race"
+						},
+						"statblockData": {
+							"$ref": "races.json#/$defs/race"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "recipe"
+						},
+						"statblockData": {
+							"$ref": "recipes.json#/$defs/recipe"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "reward"
+						},
+						"statblockData": {
+							"$ref": "rewards.json#/$defs/reward"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "table"
+						},
+						"statblockData": {
+							"$ref": "tables.json#/$defs/tableData"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "trap"
+						},
+						"statblockData": {
+							"$ref": "trapshazards.json#/$defs/trap"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "hazard"
+						},
+						"statblockData": {
+							"$ref": "trapshazards.json#/$defs/hazard"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "variantrule"
+						},
+						"statblockData": {
+							"$ref": "variantrules.json#/$defs/variantrule"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "vehicle"
+						},
+						"statblockData": {
+							"$ref": "vehicles.json#/$defs/vehicle"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "vehicleUpgrade"
+						},
+						"statblockData": {
+							"$ref": "vehicles.json#/$defs/vehicleUpgrade"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "skill"
+						},
+						"statblockData": {
+							"$ref": "skills.json#/$defs/skill"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
+					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"type": {
+							"const": "statblockInline"
+						},
+						"dependencies": {
+							"$ref": "util.json#/$defs/metaDependenciesArray"
+						},
+						"statblockType": {
+							"const": "sense"
+						},
+						"statblockData": {
+							"$ref": "senses.json#/$defs/sense"
+						},
+						"style": {
+							"$ref": "#/$defs/_entryDataStyle"
+						},
+						"collapsed": {
+							"const": true
+						}
+					},
+					"required": [
+						"type",
+						"statblockType",
+						"statblockData"
+					],
 					"additionalProperties": false
 				}
-			]
+			],
+			"description": "Inline statblocks use statblockType and statblockData. The legacy dataType and data fields are deprecated but remain supported for existing homebrew.",
+			"$comment": "Deprecated legacy branches first; renamed branches second. Remove the first half when legacy support is dropped.",
+			"markdownDescription": "Inline statblocks use statblockType and statblockData. The legacy dataType and data fields are deprecated but remain supported for existing homebrew."
 		},
 		"entryStatblock": {
 			"oneOf": [
