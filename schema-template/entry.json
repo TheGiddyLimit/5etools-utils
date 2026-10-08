@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.11.1",
+	"version": "1.11.2",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -189,34 +189,27 @@
 				}
 			]
 		},
-		"$$ifBrew": {
-			"entryHomebrew": {
-				"type": "object",
-				"$$merge": [
-					{"$ref" : "#/$defs/entry"},
-					{
-						"properties": {
-							"type": {"const": "homebrew"},
-							"entries": {
-								"type": "array",
-								"items": {
-									"$ref": "#"
-								}
-							},
-							"movedTo": {
-								"$ref": "#"
-							},
-							"oldEntries": {
-								"type": "array",
-								"items": {
-									"$ref": "#"
-								}
-							}
+		"entryHomebrew": {
+			"$comment": "Note that this is intended as homebrew-only, but, is made available everywhere to support samples.",
+			"type": "object",
+			"$$merge": [
+				{"$ref" : "#/$defs/entry"},
+				{
+					"properties": {
+						"type": {"const": "homebrew"},
+						"entries": {
+							"type": "array",
+							"items": {"$ref": "#"}
 						},
-						"additionalProperties": false
-					}
-				]
-			}
+						"movedTo": {"$ref": "#"},
+						"oldEntries": {
+							"type": "array",
+							"items": {"$ref": "#"}
+						}
+					},
+					"additionalProperties": false
+				}
+			]
 		},
 		"entryQuote": {
 			"type": "object",
@@ -3691,7 +3684,7 @@
 	"anyOf": [
 		{"$ref": "#/$defs/entrySection"},
 		{"$ref": "#/$defs/entryEntries"},
-		{"$$ifBrew_item": {"$ref": "#/$defs/entryHomebrew"}},
+		{"$ref": "#/$defs/entryHomebrew"},
 		{"$ref": "#/$defs/entryQuote"},
 		{"$ref": "#/$defs/entryInlineEntries"},
 		{"$ref": "#/$defs/entryEntriesInlineEntries"},

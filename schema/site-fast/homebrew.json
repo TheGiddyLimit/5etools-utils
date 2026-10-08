@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.15.0",
+	"version": "1.15.1",
 	"type": "object",
 	"description": "Homebrew for 5etools. Should include arrays titled similarly to the main site data, e.g. `spell` or `class`",
 	"$defs": {
@@ -833,6 +833,10 @@
 		},
 		"encounterShape": {
 			"$ref": "encounterbuilder.json#/properties/encounterShape"
+		},
+		"renderdemo": {
+			"$comment": "(Provided for completion's sake, please ignore)",
+			"$ref": "renderdemo.json#/properties/renderdemo"
 		}
 	},
 	"additionalProperties": false,

@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.11.1",
+	"version": "1.11.2",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -301,6 +301,50 @@
 			"required": [
 				"type",
 				"entries"
+			],
+			"additionalProperties": false
+		},
+		"entryHomebrew": {
+			"$comment": "Note that this is intended as homebrew-only, but, is made available everywhere to support samples.",
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string",
+					"const": "homebrew"
+				},
+				"source": {
+					"$ref": "util.json#/$defs/source"
+				},
+				"page": {
+					"$ref": "util.json#/$defs/page"
+				},
+				"data": {
+					"$ref": "#/$defs/_entryDataData"
+				},
+				"id": {
+					"type": "string"
+				},
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "#"
+					}
+				},
+				"movedTo": {
+					"$ref": "#"
+				},
+				"oldEntries": {
+					"type": "array",
+					"items": {
+						"$ref": "#"
+					}
+				}
+			},
+			"required": [
+				"type"
 			],
 			"additionalProperties": false
 		},
@@ -5063,49 +5107,6 @@
 					]
 				}
 			]
-		},
-		"entryHomebrew": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string"
-				},
-				"type": {
-					"type": "string",
-					"const": "homebrew"
-				},
-				"source": {
-					"$ref": "util.json#/$defs/source"
-				},
-				"page": {
-					"$ref": "util.json#/$defs/page"
-				},
-				"data": {
-					"$ref": "#/$defs/_entryDataData"
-				},
-				"id": {
-					"type": "string"
-				},
-				"entries": {
-					"type": "array",
-					"items": {
-						"$ref": "#"
-					}
-				},
-				"movedTo": {
-					"$ref": "#"
-				},
-				"oldEntries": {
-					"type": "array",
-					"items": {
-						"$ref": "#"
-					}
-				}
-			},
-			"required": [
-				"type"
-			],
-			"additionalProperties": false
 		}
 	},
 	"anyOf": [
