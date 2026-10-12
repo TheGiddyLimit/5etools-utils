@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.6",
+	"version": "1.19.7",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -847,7 +847,9 @@
 			"minItems": 1
 		},
 
-		"weaponProficiencies": {
+		"weaponProficiencies": {"$ref": "#/$defs/_weaponProficiencies"},
+
+		"_weaponProficiencies": {
 			"type": "array",
 			"items": {
 				"type": "object",
@@ -890,6 +892,25 @@
 			},
 			"uniqueItems": true,
 			"minItems": 1
+		},
+
+		"itemMasteries": {
+			"description": "Use \"true\" to match \"weaponProficiencies\".",
+			"anyOf": [
+				{"$ref": "#/$defs/_weaponProficiencies"},
+				{"const": true}
+			]
+		},
+
+		"itemMasteriesProgression": {
+			"type": "object",
+			"properties": {
+				"*": {"type": "integer"}
+			},
+			"patternProperties": {
+				"^\\d+$": {"type": "integer"}
+			},
+			"additionalProperties": false
 		},
 
 		"armorProficiencies": {

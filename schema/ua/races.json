@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "races.json",
-	"version": "1.12.16",
+	"version": "1.12.17",
 	"type": "object",
 	"$defs": {
 		"sharedData": {
@@ -129,6 +129,12 @@
 				},
 				"weaponProficiencies": {
 					"$ref": "util.json#/$defs/weaponProficiencies"
+				},
+				"itemMasteries": {
+					"$ref": "util.json#/$defs/itemMasteries"
+				},
+				"itemMasteriesProgression": {
+					"$ref": "util.json#/$defs/itemMasteriesProgression"
 				},
 				"armorProficiencies": {
 					"$ref": "util.json#/$defs/armorProficiencies"
@@ -392,6 +398,12 @@
 				},
 				"weaponProficiencies": {
 					"$ref": "util.json#/$defs/weaponProficiencies"
+				},
+				"itemMasteries": {
+					"$ref": "util.json#/$defs/itemMasteries"
+				},
+				"itemMasteriesProgression": {
+					"$ref": "util.json#/$defs/itemMasteriesProgression"
 				},
 				"armorProficiencies": {
 					"$ref": "util.json#/$defs/armorProficiencies"
@@ -741,6 +753,12 @@
 						"weaponProficiencies": {
 							"$ref": "util.json#/$defs/weaponProficiencies"
 						},
+						"itemMasteries": {
+							"$ref": "util.json#/$defs/itemMasteries"
+						},
+						"itemMasteriesProgression": {
+							"$ref": "util.json#/$defs/itemMasteriesProgression"
+						},
 						"armorProficiencies": {
 							"$ref": "util.json#/$defs/armorProficiencies"
 						},
@@ -1007,6 +1025,12 @@
 						},
 						"weaponProficiencies": {
 							"$ref": "util.json#/$defs/weaponProficiencies"
+						},
+						"itemMasteries": {
+							"$ref": "util.json#/$defs/itemMasteries"
+						},
+						"itemMasteriesProgression": {
+							"$ref": "util.json#/$defs/itemMasteriesProgression"
 						},
 						"armorProficiencies": {
 							"$ref": "util.json#/$defs/armorProficiencies"
@@ -1280,6 +1304,12 @@
 						},
 						"weaponProficiencies": {
 							"$ref": "util.json#/$defs/weaponProficiencies"
+						},
+						"itemMasteries": {
+							"$ref": "util.json#/$defs/itemMasteries"
+						},
+						"itemMasteriesProgression": {
+							"$ref": "util.json#/$defs/itemMasteriesProgression"
 						},
 						"armorProficiencies": {
 							"$ref": "util.json#/$defs/armorProficiencies"
@@ -1559,6 +1589,12 @@
 						},
 						"weaponProficiencies": {
 							"$ref": "util.json#/$defs/weaponProficiencies"
+						},
+						"itemMasteries": {
+							"$ref": "util.json#/$defs/itemMasteries"
+						},
+						"itemMasteriesProgression": {
+							"$ref": "util.json#/$defs/itemMasteriesProgression"
 						},
 						"armorProficiencies": {
 							"$ref": "util.json#/$defs/armorProficiencies"

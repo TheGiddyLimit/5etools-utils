@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "feats.json",
-	"version": "1.7.14",
+	"version": "1.7.15",
 	"type": "object",
 	"$defs": {
 		"featData": {
@@ -66,6 +66,12 @@
 				},
 				"weaponProficiencies": {
 					"$ref": "util.json#/$defs/weaponProficiencies"
+				},
+				"itemMasteries": {
+					"$ref": "util.json#/$defs/itemMasteries"
+				},
+				"itemMasteriesProgression": {
+					"$ref": "util.json#/$defs/itemMasteriesProgression"
 				},
 				"armorProficiencies": {
 					"$ref": "util.json#/$defs/armorProficiencies"
@@ -209,6 +215,12 @@
 						},
 						"weaponProficiencies": {
 							"$ref": "util.json#/$defs/weaponProficiencies"
+						},
+						"itemMasteries": {
+							"$ref": "util.json#/$defs/itemMasteries"
+						},
+						"itemMasteriesProgression": {
+							"$ref": "util.json#/$defs/itemMasteriesProgression"
 						},
 						"armorProficiencies": {
 							"$ref": "util.json#/$defs/armorProficiencies"
@@ -355,6 +367,12 @@
 						},
 						"weaponProficiencies": {
 							"$ref": "util.json#/$defs/weaponProficiencies"
+						},
+						"itemMasteries": {
+							"$ref": "util.json#/$defs/itemMasteries"
+						},
+						"itemMasteriesProgression": {
+							"$ref": "util.json#/$defs/itemMasteriesProgression"
 						},
 						"armorProficiencies": {
 							"$ref": "util.json#/$defs/armorProficiencies"

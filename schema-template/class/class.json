@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.13.0",
+	"version": "2.13.1",
 	"$id": "class.json",
 
 	"type": "object",
@@ -217,6 +217,10 @@
 					"weaponProficiencies": {
 						"$ref": "../util.json#/$defs/weaponProficiencies"
 					},
+					"itemMasteries": {
+						"$ref": "../util.json#/$defs/itemMasteries"
+					},
+					"itemMasteriesProgression": {"$ref": "../util.json#/$defs/itemMasteriesProgression"},
 					"armorProficiencies": {
 						"$ref": "../util.json#/$defs/armorProficiencies"
 					},
@@ -312,6 +316,10 @@
 					"weaponProficiencies": {
 						"$ref": "../util.json#/$defs/weaponProficiencies"
 					},
+					"itemMasteries": {
+						"$ref": "../util.json#/$defs/itemMasteries"
+					},
+					"itemMasteriesProgression": {"$ref": "../util.json#/$defs/itemMasteriesProgression"},
 					"armorProficiencies": {
 						"$ref": "../util.json#/$defs/armorProficiencies"
 					},
@@ -439,6 +447,10 @@
 					"description": "Well-structured weapon proficiency data, used by e.g. Plutonium.",
 					"$ref": "../util.json#/$defs/weaponProficiencies"
 				},
+				"itemMasteries": {
+					"$ref": "../util.json#/$defs/itemMasteries"
+				},
+				"itemMasteriesProgression": {"$ref": "../util.json#/$defs/itemMasteriesProgression"},
 				"tools": {
 					"type": "array",
 					"items": {
@@ -886,6 +898,8 @@
 				"spellsKnownProgressionFixedByLevel": {"$ref": "#/$defs/spellsKnownProgressionFixedByLevel"},
 				"optionalfeatureProgression": {"$ref": "../util.json#/$defs/optionalfeatureProgression"},
 				"featProgression": {"$ref": "../util.json#/$defs/featProgression"},
+				"itemMasteries": {"$ref": "../util.json#/$defs/itemMasteries"},
+				"itemMasteriesProgression": {"$ref": "../util.json#/$defs/itemMasteriesProgression"},
 				"classFeatures": {
 					"type": "array",
 					"description": "Format: \" name | className | classSource | level | source \" , PHB is assumed as classSource and featureSource is assumed to be the same as classSource.",

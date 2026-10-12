@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.6",
+	"version": "1.19.7",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -1218,6 +1218,9 @@
 			"minItems": 1
 		},
 		"weaponProficiencies": {
+			"$ref": "#/$defs/_weaponProficiencies"
+		},
+		"_weaponProficiencies": {
 			"type": "array",
 			"items": {
 				"type": "object",
@@ -1275,6 +1278,32 @@
 			},
 			"uniqueItems": true,
 			"minItems": 1
+		},
+		"itemMasteries": {
+			"description": "Use \"true\" to match \"weaponProficiencies\".",
+			"anyOf": [
+				{
+					"$ref": "#/$defs/_weaponProficiencies"
+				},
+				{
+					"const": true
+				}
+			],
+			"markdownDescription": "Use &quot;true&quot; to match &quot;weaponProficiencies&quot;."
+		},
+		"itemMasteriesProgression": {
+			"type": "object",
+			"properties": {
+				"*": {
+					"type": "integer"
+				}
+			},
+			"patternProperties": {
+				"^\\d+$": {
+					"type": "integer"
+				}
+			},
+			"additionalProperties": false
 		},
 		"armorProficiencies": {
 			"type": "array",

@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.2.0",
+	"version": "1.2.1",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -19,6 +19,10 @@
 				"weaponProficiencies": {
 					"$ref": "util.json#/$defs/weaponProficiencies"
 				},
+				"itemMasteries": {
+					"$ref": "util.json#/$defs/itemMasteries"
+				},
+				"itemMasteriesProgression": {"$ref": "util.json#/$defs/itemMasteriesProgression"},
 				"armorProficiencies": {
 					"$ref": "util.json#/$defs/armorProficiencies"
 				},
