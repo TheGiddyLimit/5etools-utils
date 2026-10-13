@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.13.1",
+	"version": "2.13.2",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -541,12 +541,6 @@
 					"description": "Well-structured weapon proficiency data, used by e.g. Plutonium.",
 					"$ref": "../util.json#/$defs/weaponProficiencies",
 					"markdownDescription": "Well-structured weapon proficiency data, used by e.g. Plutonium."
-				},
-				"itemMasteries": {
-					"$ref": "../util.json#/$defs/itemMasteries"
-				},
-				"itemMasteriesProgression": {
-					"$ref": "../util.json#/$defs/itemMasteriesProgression"
 				},
 				"tools": {
 					"type": "array",
