@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.63",
+	"version": "1.21.64",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1171,7 +1171,8 @@
 							"planar, pandemonium",
 							"planar, limbo",
 							"planar, mechanus",
-							"planar, outlands"
+							"planar, outlands",
+							"planar, twisting nether"
 						]
 					}
 				},
@@ -2564,7 +2565,8 @@
 									"planar, pandemonium",
 									"planar, limbo",
 									"planar, mechanus",
-									"planar, outlands"
+									"planar, outlands",
+									"planar, twisting nether"
 								]
 							}
 						},
@@ -3962,7 +3964,8 @@
 									"planar, pandemonium",
 									"planar, limbo",
 									"planar, mechanus",
-									"planar, outlands"
+									"planar, outlands",
+									"planar, twisting nether"
 								]
 							}
 						},
