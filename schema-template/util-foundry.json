@@ -3,7 +3,7 @@
 	"$id": "util-foundry.json",
 
 	"title": "Util: Foundry",
-	"version": "1.2.1",
+	"version": "1.3.0",
 
 	"$defs" : {
 		"entryDataObject": {
@@ -526,6 +526,12 @@
 													"effect": {
 														"type": "array",
 														"items": {"$ref": "#/$defs/_foundryIdRef"}
+													},
+													"item": {
+														"type": "array",
+														"items": {"type": "string", "minLength": 1},
+														"minItems": 1,
+														"uniqueItems": true
 													}
 												},
 												"minProperties": 1
@@ -637,7 +643,7 @@
 			"type": "object",
 			"properties": {
 				"foundryId": {
-					"description": "Use only when required. For example, when linking an \"enchantmentRiderParent\".",
+					"description": "Use only when required. For example, linking from an activity profile/enchantment rider.",
 					"$ref": "#/$defs/foundryIdShort"
 				},
 
@@ -713,9 +719,44 @@
 				"disabled": {"const": true},
 				"transfer": {"const": true},
 
+				"system": {
+					"type": "object",
+					"properties": {
+						"rider": {
+							"type": "object",
+							"properties": {
+								"activities": {
+									"type": "array",
+									"items": {"$ref": "#/$defs/foundryId"},
+									"minItems": 1,
+									"uniqueItems": true
+								},
+
+								"effects": {
+									"type": "array",
+									"items": {"type": "string", "minLength": 1},
+									"minItems": 1,
+									"uniqueItems": true
+								},
+
+								"items": {
+									"type": "array",
+									"items": {"type": "string", "minLength": 1},
+									"minItems": 1,
+									"uniqueItems": true
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						}
+					},
+					"required": ["rider"],
+					"additionalProperties": false
+				},
+
 				"enchantmentLevelMin": {"type": "number", "minimum": 0, "maximum": 20},
 				"enchantmentLevelMax": {"type": "number", "minimum": 0, "maximum": 20},
-				"enchantmentRiderParent": {"$ref": "#/$defs/foundryIdShort"},
+
 				"type": {
 					"type": "string",
 					"enum": ["enchantment"]
@@ -738,6 +779,15 @@
 						{"type": "object", "required": ["statuses"]}
 					]
 				},
+
+				{
+					"description": "An enchantment with direct riders (dnd5e 6.1.x+).",
+					"allOf": [
+						{"$ref": "#/$defs/_foundryEffectObject"},
+						{"type": "object", "required": ["type", "system"]}
+					]
+				},
+
 				{
 					"description": "An effect with no functional changes, but a name. Should only be used for effects which cannot be otherwise automated.",
 					"allOf": [
