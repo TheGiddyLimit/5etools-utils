@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.13.2",
+	"version": "2.13.3",
 	"$id": "class.json",
 
 	"type": "object",
@@ -576,6 +576,7 @@
 				"otherSources": {"$ref": "../util.json#/$defs/otherSources"},
 				"referenceSources": {"$ref": "../util.json#/$defs/referenceSources"},
 				"additionalSpells": { "$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray" },
+				"_versions": {"$ref": "../util-copy.json#/$defs/versionsArray"},
 				"hasFluff": {"const": true},
 				"hasFluffImages": {"const": true},
 				"$$if": {
@@ -925,6 +926,7 @@
 				"page": {"$ref": "../util.json#/$defs/page"},
 				"fluff": {"$ref": "../util.json#/$defs/fluffObject"},
 				"additionalSpells": { "$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray" },
+				"_versions": {"$ref": "../util-copy.json#/$defs/versionsArray"},
 				"hasFluff": {"const": true},
 				"hasFluffImages": {"const": true},
 				"$$if": {

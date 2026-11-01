@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.13.2",
+	"version": "2.13.3",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -899,6 +899,9 @@
 						"additionalSpells": {
 							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
+						"_versions": {
+							"$ref": "../util-copy.json#/$defs/versionsArray"
+						},
 						"hasFluff": {
 							"const": true
 						},
@@ -1113,6 +1116,9 @@
 						"additionalSpells": {
 							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
+						"_versions": {
+							"$ref": "../util-copy.json#/$defs/versionsArray"
+						},
 						"hasFluff": {
 							"const": true
 						},
@@ -1326,6 +1332,9 @@
 				},
 				"additionalSpells": {
 					"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
+				},
+				"_versions": {
+					"$ref": "../util-copy.json#/$defs/versionsArray"
 				},
 				"hasFluff": {
 					"const": true
@@ -1730,6 +1739,9 @@
 						"additionalSpells": {
 							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
 						},
+						"_versions": {
+							"$ref": "../util-copy.json#/$defs/versionsArray"
+						},
 						"hasFluff": {
 							"const": true
 						},
@@ -2007,6 +2019,9 @@
 						},
 						"additionalSpells": {
 							"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
+						},
+						"_versions": {
+							"$ref": "../util-copy.json#/$defs/versionsArray"
 						},
 						"hasFluff": {
 							"const": true
@@ -2288,6 +2303,9 @@
 				},
 				"additionalSpells": {
 					"$ref": "../util-additionalspells.json#/$defs/additionalSpellsArray"
+				},
+				"_versions": {
+					"$ref": "../util-copy.json#/$defs/versionsArray"
 				},
 				"hasFluff": {
 					"const": true
