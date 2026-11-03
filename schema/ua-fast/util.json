@@ -3,7 +3,7 @@
 	"$id": "util.json",
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.8",
+	"version": "1.19.9",
 	"$defs": {
 		"metaDependenciesArray": {
 			"type": "array",
@@ -2356,7 +2356,8 @@
 								"Dragonlance",
 								"Planescape",
 								"Eberron",
-								"Ravenloft"
+								"Ravenloft",
+								"World of Warcraft"
 							]
 						},
 						"uniqueItems": true,
