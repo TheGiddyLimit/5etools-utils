@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.64",
+	"version": "1.21.65",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -1040,6 +1040,7 @@
 								"planar, mechanus",
 								"planar, outlands",
 
+								"planar, emerald dream",
 								"planar, twisting nether"
 							]
 						}
