@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.10",
+	"version": "1.19.11",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -2407,7 +2407,9 @@
 					"Wild Shape",
 					"Sorcery Point",
 					"Arcane Shot",
-					"Focus Point"
+					"Focus Point",
+					"Rage",
+					"Soul Fragment"
 				]
 			}
 		},
