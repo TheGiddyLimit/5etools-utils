@@ -2772,14 +2772,7 @@
 								"type": {
 									"oneOf": [
 										{
-											"anyOf": [
-												{
-													"$ref": "util.json#/$defs/creatureType"
-												},
-												{
-													"const": "special"
-												}
-											]
+											"$ref": "util.json#/$defs/creatureType"
 										},
 										{
 											"type": "object",
@@ -4195,14 +4188,7 @@
 										"type": {
 											"oneOf": [
 												{
-													"anyOf": [
-														{
-															"$ref": "util.json#/$defs/creatureType"
-														},
-														{
-															"const": "special"
-														}
-													]
+													"$ref": "util.json#/$defs/creatureType"
 												},
 												{
 													"type": "object",
@@ -5624,14 +5610,7 @@
 										"type": {
 											"oneOf": [
 												{
-													"anyOf": [
-														{
-															"$ref": "util.json#/$defs/creatureType"
-														},
-														{
-															"const": "special"
-														}
-													]
+													"$ref": "util.json#/$defs/creatureType"
 												},
 												{
 													"type": "object",

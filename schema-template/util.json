@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.19.9",
+	"version": "1.19.10",
 
 	"$defs" : {
 		"metaDependenciesArray": {
@@ -1865,7 +1865,9 @@
 					"plant",
 					"undead",
 
-					"vehicle"
+					"vehicle",
+
+					"special"
 				]
 			}
 		},

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.66",
+	"version": "1.21.67",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -135,12 +135,7 @@
 							"properties": {
 								"type": {
 									"oneOf": [
-										{
-											"anyOf": [
-												{"$ref": "../util.json#/$defs/creatureType"},
-												{"const": "special"}
-											]
-										},
+										{"$ref": "../util.json#/$defs/creatureType"},
 										{
 											"type": "object",
 											"properties": {
