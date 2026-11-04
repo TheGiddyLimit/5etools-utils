@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.13.4",
+	"version": "2.13.5",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -1267,6 +1267,15 @@
 						"reskinOf": {
 							"$ref": "../util.json#/$defs/reprintedAs"
 						},
+						"includeSubclassesFrom": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"minLength": 1
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						},
 						"classGroup": {
 							"type": "array",
 							"items": {
@@ -1528,6 +1537,15 @@
 						},
 						"reskinOf": {
 							"$ref": "../util.json#/$defs/reprintedAs"
+						},
+						"includeSubclassesFrom": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"minLength": 1
+							},
+							"minItems": 1,
+							"uniqueItems": true
 						},
 						"classGroup": {
 							"type": "array",
@@ -1793,6 +1811,15 @@
 				},
 				"reskinOf": {
 					"$ref": "../util.json#/$defs/reprintedAs"
+				},
+				"includeSubclassesFrom": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				},
 				"classGroup": {
 					"type": "array",
