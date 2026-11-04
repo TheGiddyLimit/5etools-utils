@@ -3057,7 +3057,14 @@
 								"type": {
 									"oneOf": [
 										{
-											"$ref": "util.json#/$defs/creatureType"
+											"anyOf": [
+												{
+													"$ref": "util.json#/$defs/creatureType"
+												},
+												{
+													"const": "special"
+												}
+											]
 										},
 										{
 											"type": "object",
@@ -3075,6 +3082,9 @@
 											]
 										}
 									]
+								},
+								"typeHidden": {
+									"const": true
 								},
 								"swarmSize": {
 									"$ref": "util.json#/$defs/size",
@@ -3166,6 +3176,9 @@
 						}
 					]
 				},
+				"typeNote": {
+					"type": "string"
+				},
 				"source": {
 					"$ref": "util.json#/$defs/source"
 				},
@@ -3211,6 +3224,9 @@
 								},
 								"formula": {
 									"type": "string"
+								},
+								"isTemporary": {
+									"const": true
 								}
 							},
 							"required": [
@@ -3224,6 +3240,9 @@
 							"properties": {
 								"special": {
 									"type": "string"
+								},
+								"isTemporary": {
+									"const": true
 								}
 							},
 							"required": [
@@ -3436,9 +3455,7 @@
 							}
 						},
 						"special": {
-							"description": "For use in homebrew.",
-							"$ref": "entry.json",
-							"markdownDescription": "For use in homebrew."
+							"$ref": "entry.json"
 						}
 					},
 					"additionalProperties": false,
@@ -4429,7 +4446,14 @@
 										"type": {
 											"oneOf": [
 												{
-													"$ref": "util.json#/$defs/creatureType"
+													"anyOf": [
+														{
+															"$ref": "util.json#/$defs/creatureType"
+														},
+														{
+															"const": "special"
+														}
+													]
 												},
 												{
 													"type": "object",
@@ -4447,6 +4471,9 @@
 													]
 												}
 											]
+										},
+										"typeHidden": {
+											"const": true
 										},
 										"swarmSize": {
 											"$ref": "util.json#/$defs/size",
@@ -4538,6 +4565,9 @@
 								}
 							]
 						},
+						"typeNote": {
+							"type": "string"
+						},
 						"source": {
 							"$ref": "util.json#/$defs/source"
 						},
@@ -4583,6 +4613,9 @@
 										},
 										"formula": {
 											"type": "string"
+										},
+										"isTemporary": {
+											"const": true
 										}
 									},
 									"required": [
@@ -4596,6 +4629,9 @@
 									"properties": {
 										"special": {
 											"type": "string"
+										},
+										"isTemporary": {
+											"const": true
 										}
 									},
 									"required": [
@@ -4808,9 +4844,7 @@
 									}
 								},
 								"special": {
-									"description": "For use in homebrew.",
-									"$ref": "entry.json",
-									"markdownDescription": "For use in homebrew."
+									"$ref": "entry.json"
 								}
 							},
 							"additionalProperties": false,
@@ -5807,7 +5841,14 @@
 										"type": {
 											"oneOf": [
 												{
-													"$ref": "util.json#/$defs/creatureType"
+													"anyOf": [
+														{
+															"$ref": "util.json#/$defs/creatureType"
+														},
+														{
+															"const": "special"
+														}
+													]
 												},
 												{
 													"type": "object",
@@ -5825,6 +5866,9 @@
 													]
 												}
 											]
+										},
+										"typeHidden": {
+											"const": true
 										},
 										"swarmSize": {
 											"$ref": "util.json#/$defs/size",
@@ -5916,6 +5960,9 @@
 								}
 							]
 						},
+						"typeNote": {
+							"type": "string"
+						},
 						"source": {
 							"$ref": "util.json#/$defs/source"
 						},
@@ -5961,6 +6008,9 @@
 										},
 										"formula": {
 											"type": "string"
+										},
+										"isTemporary": {
+											"const": true
 										}
 									},
 									"required": [
@@ -5974,6 +6024,9 @@
 									"properties": {
 										"special": {
 											"type": "string"
+										},
+										"isTemporary": {
+											"const": true
 										}
 									},
 									"required": [
@@ -6186,9 +6239,7 @@
 									}
 								},
 								"special": {
-									"description": "For use in homebrew.",
-									"$ref": "entry.json",
-									"markdownDescription": "For use in homebrew."
+									"$ref": "entry.json"
 								}
 							},
 							"additionalProperties": false,

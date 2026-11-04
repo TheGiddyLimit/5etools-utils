@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.65",
+	"version": "1.21.66",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -157,7 +157,14 @@
 								"type": {
 									"oneOf": [
 										{
-											"$ref": "../util.json#/$defs/creatureType"
+											"anyOf": [
+												{
+													"$ref": "../util.json#/$defs/creatureType"
+												},
+												{
+													"const": "special"
+												}
+											]
 										},
 										{
 											"type": "object",
@@ -175,6 +182,9 @@
 											]
 										}
 									]
+								},
+								"typeHidden": {
+									"const": true
 								},
 								"swarmSize": {
 									"$ref": "../util.json#/$defs/size",
@@ -266,6 +276,9 @@
 						}
 					]
 				},
+				"typeNote": {
+					"type": "string"
+				},
 				"source": {
 					"$ref": "../util.json#/$defs/source"
 				},
@@ -311,6 +324,9 @@
 								},
 								"formula": {
 									"type": "string"
+								},
+								"isTemporary": {
+									"const": true
 								}
 							},
 							"required": [
@@ -324,6 +340,9 @@
 							"properties": {
 								"special": {
 									"type": "string"
+								},
+								"isTemporary": {
+									"const": true
 								}
 							},
 							"required": [
@@ -529,6 +548,9 @@
 									}
 								}
 							}
+						},
+						"special": {
+							"$ref": "../entry.json"
 						}
 					},
 					"additionalProperties": false,
@@ -1552,7 +1574,14 @@
 										"type": {
 											"oneOf": [
 												{
-													"$ref": "../util.json#/$defs/creatureType"
+													"anyOf": [
+														{
+															"$ref": "../util.json#/$defs/creatureType"
+														},
+														{
+															"const": "special"
+														}
+													]
 												},
 												{
 													"type": "object",
@@ -1570,6 +1599,9 @@
 													]
 												}
 											]
+										},
+										"typeHidden": {
+											"const": true
 										},
 										"swarmSize": {
 											"$ref": "../util.json#/$defs/size",
@@ -1661,6 +1693,9 @@
 								}
 							]
 						},
+						"typeNote": {
+							"type": "string"
+						},
 						"source": {
 							"$ref": "../util.json#/$defs/source"
 						},
@@ -1706,6 +1741,9 @@
 										},
 										"formula": {
 											"type": "string"
+										},
+										"isTemporary": {
+											"const": true
 										}
 									},
 									"required": [
@@ -1719,6 +1757,9 @@
 									"properties": {
 										"special": {
 											"type": "string"
+										},
+										"isTemporary": {
+											"const": true
 										}
 									},
 									"required": [
@@ -1924,6 +1965,9 @@
 											}
 										}
 									}
+								},
+								"special": {
+									"$ref": "../entry.json"
 								}
 							},
 							"additionalProperties": false,
@@ -2952,7 +2996,14 @@
 										"type": {
 											"oneOf": [
 												{
-													"$ref": "../util.json#/$defs/creatureType"
+													"anyOf": [
+														{
+															"$ref": "../util.json#/$defs/creatureType"
+														},
+														{
+															"const": "special"
+														}
+													]
 												},
 												{
 													"type": "object",
@@ -2970,6 +3021,9 @@
 													]
 												}
 											]
+										},
+										"typeHidden": {
+											"const": true
 										},
 										"swarmSize": {
 											"$ref": "../util.json#/$defs/size",
@@ -3061,6 +3115,9 @@
 								}
 							]
 						},
+						"typeNote": {
+							"type": "string"
+						},
 						"source": {
 							"$ref": "../util.json#/$defs/source"
 						},
@@ -3106,6 +3163,9 @@
 										},
 										"formula": {
 											"type": "string"
+										},
+										"isTemporary": {
+											"const": true
 										}
 									},
 									"required": [
@@ -3119,6 +3179,9 @@
 									"properties": {
 										"special": {
 											"type": "string"
+										},
+										"isTemporary": {
+											"const": true
 										}
 									},
 									"required": [
@@ -3324,6 +3387,9 @@
 											}
 										}
 									}
+								},
+								"special": {
+									"$ref": "../entry.json"
 								}
 							},
 							"additionalProperties": false,

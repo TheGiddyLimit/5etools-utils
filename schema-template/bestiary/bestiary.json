@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.65",
+	"version": "1.21.66",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -136,7 +136,10 @@
 								"type": {
 									"oneOf": [
 										{
-											"$ref": "../util.json#/$defs/creatureType"
+											"anyOf": [
+												{"$ref": "../util.json#/$defs/creatureType"},
+												{"const": "special"}
+											]
 										},
 										{
 											"type": "object",
@@ -153,6 +156,7 @@
 										}
 									]
 								},
+								"typeHidden": {"const": true},
 								"swarmSize": {
 									"$ref": "../util.json#/$defs/size",
 									"description": "Size of the individual creatures that make up the swarm."
@@ -231,6 +235,7 @@
 						}
 					]
 				},
+				"typeNote": {"type": "string"},
 				"source": {"$ref": "../util.json#/$defs/source"},
 				"sourceSub": {
 					"type": "string",
@@ -263,7 +268,8 @@
 							"type": "object",
 							"properties": {
 								"average": {"type": "integer"},
-								"formula": {"type": "string"}
+								"formula": {"type": "string"},
+								"isTemporary": {"const": true}
 							},
 							"required": ["average", "formula"],
 							"additionalProperties": false
@@ -271,9 +277,8 @@
 						{
 							"type": "object",
 							"properties": {
-								"special": {
-									"type": "string"
-								}
+								"special": {"type": "string"},
+								"isTemporary": {"const": true}
 							},
 							"required": ["special"],
 							"additionalProperties": false
@@ -416,12 +421,7 @@
 								}
 							}
 						},
-						"$$ifBrew": {
-							"special": {
-								"description": "For use in homebrew.",
-								"$ref": "../entry.json"
-							}
-						}
+						"special": {"$ref": "../entry.json"}
 					},
 					"$$ifBrew": {
 						"patternProperties": {
