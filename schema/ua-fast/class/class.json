@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "2.13.3",
+	"version": "2.13.4",
 	"$id": "class.json",
 	"type": "object",
 	"$defs": {
@@ -1264,6 +1264,9 @@
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
 						},
+						"reskinOf": {
+							"$ref": "../util.json#/$defs/reprintedAs"
+						},
 						"classGroup": {
 							"type": "array",
 							"items": {
@@ -1277,6 +1280,9 @@
 							}
 						},
 						"isSidekick": {
+							"const": true
+						},
+						"isHero": {
 							"const": true
 						},
 						"hd": {
@@ -1520,6 +1526,9 @@
 						"reprintedAs": {
 							"$ref": "../util.json#/$defs/reprintedAs"
 						},
+						"reskinOf": {
+							"$ref": "../util.json#/$defs/reprintedAs"
+						},
 						"classGroup": {
 							"type": "array",
 							"items": {
@@ -1533,6 +1542,9 @@
 							}
 						},
 						"isSidekick": {
+							"const": true
+						},
+						"isHero": {
 							"const": true
 						},
 						"hd": {
@@ -1779,6 +1791,9 @@
 				"reprintedAs": {
 					"$ref": "../util.json#/$defs/reprintedAs"
 				},
+				"reskinOf": {
+					"$ref": "../util.json#/$defs/reprintedAs"
+				},
 				"classGroup": {
 					"type": "array",
 					"items": {
@@ -1792,6 +1807,9 @@
 					}
 				},
 				"isSidekick": {
+					"const": true
+				},
+				"isHero": {
 					"const": true
 				},
 				"hd": {
