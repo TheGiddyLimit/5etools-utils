@@ -1,0 +1,20 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "renderdemo-validation.json",
+	"version": "1.0.0",
+	"title": "Renderer Demo Input Validation",
+	"description": "For use in \"renderdemo\" page validation.",
+	"if": {
+		"type": "object",
+		"required": [
+			"_meta"
+		]
+	},
+	"then": {
+		"$ref": "homebrew.json"
+	},
+	"else": {
+		"$ref": "entry.json"
+	},
+	"markdownDescription": "For use in &quot;renderdemo&quot; page validation."
+}
