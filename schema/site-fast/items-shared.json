@@ -443,13 +443,15 @@
 		"itemMiscTags": {
 			"type": "array",
 			"items": {
-				"description": "- CF/W: Creates Food/Water\n- CNS: Consumable\n- TT: Trinket Table",
+				"description": "- CF/W: Creates Food/Water\n- CNS: Consumable\n- DRK: Drink\n- FOD: Food\n- TT: Trinket Table",
 				"enum": [
 					"CF/W",
 					"CNS",
+					"DRK",
+					"FOD",
 					"TT"
 				],
-				"markdownDescription": "- CF/W: Creates Food/Water\n- CNS: Consumable\n- TT: Trinket Table"
+				"markdownDescription": "- CF/W: Creates Food/Water\n- CNS: Consumable\n- DRK: Drink\n- FOD: Food\n- TT: Trinket Table"
 			}
 		},
 		"itemAbility": {
