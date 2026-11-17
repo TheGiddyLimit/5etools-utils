@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.12.0",
+	"version": "1.12.1",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -2602,7 +2602,7 @@
 				"blocks": {
 					"type": "array",
 					"items": {
-						"$ref": "#/$defs/entry"
+						"$ref": "#"
 					}
 				}
 			},
@@ -2649,7 +2649,7 @@
 				"entries": {
 					"type": "array",
 					"items": {
-						"$ref": "#/$defs/entry"
+						"$ref": "#"
 					}
 				}
 			},
