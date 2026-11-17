@@ -4,7 +4,7 @@
 
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.12.1",
+	"version": "1.12.2",
 
 	"$defs" : {
 		"_arrayOfSpell": {
@@ -2539,7 +2539,7 @@
 		"entrySpellcasting_frequency": {
 			"type": "object",
 			"patternProperties": {
-				"^[1-9]{1,2}e?$": {"$ref": "#/$defs/_arrayOfSpell"}
+				"^[1-9][0-9]?e?$": {"$ref": "#/$defs/_arrayOfSpell"}
 			},
 			"additionalProperties": false
 		},

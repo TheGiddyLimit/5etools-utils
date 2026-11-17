@@ -3,7 +3,7 @@
 	"$id": "entry.json",
 	"title": "Entry",
 	"description": "A recursively renderable object.",
-	"version": "1.12.1",
+	"version": "1.12.2",
 	"$defs": {
 		"_arrayOfSpell": {
 			"type": "array",
@@ -3815,7 +3815,7 @@
 		"entrySpellcasting_frequency": {
 			"type": "object",
 			"patternProperties": {
-				"^[1-9]{1,2}e?$": {
+				"^[1-9][0-9]?e?$": {
 					"$ref": "#/$defs/_arrayOfSpell"
 				}
 			},

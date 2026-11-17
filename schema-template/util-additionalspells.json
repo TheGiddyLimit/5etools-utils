@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-additionalspells.json",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"title": "Util: Additional Spells",
 
 	"$defs": {
@@ -86,7 +86,7 @@
 		"_additionalSpellRechargeObject": {
 			"type": "object",
 			"patternProperties": {
-				"^[1-9]{1,2}e?$": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"}
+				"^[1-9][0-9]?e?$": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"}
 			},
 			"properties": {
 				"pb": {"$ref": "#/$defs/_additionalSpellArrayOfStringOrFilterObject"},
