@@ -2,7 +2,7 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$id": "util-foundry.json",
 	"title": "Util: Foundry",
-	"version": "1.3.1",
+	"version": "1.3.2",
 	"$defs": {
 		"entryDataObject": {
 			"description": "Additional \"5etools-type\" data to be stored on the entry.",
@@ -1064,7 +1064,14 @@
 							}
 						},
 						"ability": {
-							"$ref": "util.json#/$defs/abilityScoreAbbreviation"
+							"oneOf": [
+								{
+									"$ref": "util.json#/$defs/abilityScoreAbbreviation"
+								},
+								{
+									"const": "spellcasting"
+								}
+							]
 						}
 					}
 				}
@@ -1602,6 +1609,15 @@
 				},
 				"profiles": {
 					"$ref": "#/$defs/_foundryActivityProfiles"
+				},
+				"creatureSizes": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					},
+					"minItems": 1,
+					"uniqueItems": true
 				}
 			},
 			"required": [
@@ -2175,6 +2191,35 @@
 								"type": [
 									"string",
 									"integer"
+								]
+							},
+							"conditions": {
+								"oneOf": [
+									{
+										"type": "object",
+										"minProperties": 1
+									},
+									{
+										"type": "array",
+										"minItems": 1,
+										"items": {
+											"type": "object"
+										}
+									}
+								]
+							},
+							"replacement": {
+								"enum": [
+									"origin",
+									"target"
+								]
+							},
+							"phase": {
+								"type": "string",
+								"minLength": 1,
+								"examples": [
+									"initial",
+									"final"
 								]
 							}
 						},
