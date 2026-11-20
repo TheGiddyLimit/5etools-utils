@@ -3779,6 +3779,9 @@
 				"legendaryActionsLair": {
 					"$ref": "bestiary/bestiary.json#/$defs/_legendaryActions"
 				},
+				"legendaryActionsLairCondition": {
+					"type": "string"
+				},
 				"legendaryHeader": {
 					"type": "array",
 					"minItems": 1,
@@ -5160,6 +5163,9 @@
 						},
 						"legendaryActionsLair": {
 							"$ref": "bestiary/bestiary.json#/$defs/_legendaryActions"
+						},
+						"legendaryActionsLairCondition": {
+							"type": "string"
 						},
 						"legendaryHeader": {
 							"type": "array",
@@ -6548,6 +6554,9 @@
 						},
 						"legendaryActionsLair": {
 							"$ref": "bestiary/bestiary.json#/$defs/_legendaryActions"
+						},
+						"legendaryActionsLairCondition": {
+							"type": "string"
 						},
 						"legendaryHeader": {
 							"type": "array",

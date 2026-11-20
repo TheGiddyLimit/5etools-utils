@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"version": "1.21.67",
+	"version": "1.21.68",
 	"title": "Bestiary Schema",
 	"$id": "bestiary.json",
 	"type": "object",
@@ -878,6 +878,9 @@
 				},
 				"legendaryActionsLair": {
 					"$ref": "#/$defs/_legendaryActions"
+				},
+				"legendaryActionsLairCondition": {
+					"type": "string"
 				},
 				"legendaryHeader": {
 					"type": "array",
@@ -2254,6 +2257,9 @@
 						},
 						"legendaryActionsLair": {
 							"$ref": "#/$defs/_legendaryActions"
+						},
+						"legendaryActionsLairCondition": {
+							"type": "string"
 						},
 						"legendaryHeader": {
 							"type": "array",
@@ -3635,6 +3641,9 @@
 						},
 						"legendaryActionsLair": {
 							"$ref": "#/$defs/_legendaryActions"
+						},
+						"legendaryActionsLairCondition": {
+							"type": "string"
 						},
 						"legendaryHeader": {
 							"type": "array",
